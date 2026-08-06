@@ -1,1 +1,0 @@
-const t="09-strings-string-methods-07",o="IndexOf",s="console.log('hello world'.indexOf('world'));",e="console.log('hello world'.indexOf('world'));",n=[{input:[],expected:"6"}],i=["indexOf returns index","Position of substring"],d={id:t,title:o,starterCode:s,solution:e,tests:n,hints:i};export{d as default,i as hints,t as id,e as solution,s as starterCode,n as tests,o as title};

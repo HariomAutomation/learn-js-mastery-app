@@ -1,1 +1,0 @@
-const t="02-data-types-coercion-truthy-falsy-12",o="String to number coercion with -",s='console.log("5" - 3);',e='console.log("5" - 3);',n=[{input:[],expected:"2"}],c=["- always does math","The string is converted to a number"],i={id:t,title:o,starterCode:s,solution:e,tests:n,hints:c};export{i as default,c as hints,t as id,e as solution,s as starterCode,n as tests,o as title};

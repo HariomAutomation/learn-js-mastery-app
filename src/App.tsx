@@ -64,7 +64,7 @@ export default function App() {
       setExercises([])
       return
     }
-    loadExercisesForLesson(currentLesson).then(setExercises)
+    setExercises(loadExercisesForLesson(currentLesson))
   }, [currentLesson])
 
   useEffect(() => {

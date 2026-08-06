@@ -1,1 +1,0 @@
-const t="02-data-types-primitive-types-48",e="Create character from code",o="console.log();",s="console.log(String.fromCharCode(65));",i=[{input:[],expected:"A"}],r=["String.fromCharCode creates from code","65 is 'A' in ASCII"],n={id:t,title:e,starterCode:o,solution:s,tests:i,hints:r};export{n as default,r as hints,t as id,s as solution,o as starterCode,i as tests,e as title};

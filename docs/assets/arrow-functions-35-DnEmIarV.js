@@ -1,3 +1,0 @@
-const e="06-functions-arrow-functions-35",o="Arrow Default Params",t="const greet = (name = 'World', greeting = 'Hello') => `${greeting}, ${name}!`;\nconsole.log(greet());\nconsole.log(greet('Alice'));\nconsole.log(greet('Bob', 'Hi'));",n="const greet = (name = 'World', greeting = 'Hello') => `${greeting}, ${name}!`;\nconsole.log(greet());\nconsole.log(greet('Alice'));\nconsole.log(greet('Bob', 'Hi'));",l=[{input:[],expected:`Hello, World!
-Hello, Alice!
-Hi, Bob!`}],s=["Multiple defaults","Override one at a time"],r={id:e,title:o,starterCode:t,solution:n,tests:l,hints:s};export{r as default,s as hints,e as id,n as solution,t as starterCode,l as tests,o as title};

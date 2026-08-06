@@ -1,1 +1,0 @@
-const t="09-strings-string-basics-32",s="IndexOf",o="console.log('hello world'.indexOf('world'));",n="console.log('hello world'.indexOf('world'));",e=[{input:[],expected:"6"}],i=["indexOf returns index","-1 if not found"],l={id:t,title:s,starterCode:o,solution:n,tests:e,hints:i};export{l as default,i as hints,t as id,n as solution,o as starterCode,e as tests,s as title};

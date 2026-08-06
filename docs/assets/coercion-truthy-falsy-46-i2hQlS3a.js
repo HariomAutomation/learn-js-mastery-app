@@ -1,1 +1,0 @@
-const t="02-data-types-coercion-truthy-falsy-46",o="Exponentiation with string",s='console.log("2" ** 3);',e='console.log("2" ** 3);',n=[{input:[],expected:"8"}],i=["** does math","2^3 = 8"],c={id:t,title:o,starterCode:s,solution:e,tests:n,hints:i};export{c as default,i as hints,t as id,e as solution,s as starterCode,n as tests,o as title};

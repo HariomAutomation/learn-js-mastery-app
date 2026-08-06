@@ -1,1 +1,0 @@
-const t="09-strings-string-methods-40",e="Repeat Large",s="console.log('ab'.repeat(3));",o="console.log('ab'.repeat(3));",n=[{input:[],expected:"ababab"}],a=["Repeat string","Concatenate"],i={id:t,title:e,starterCode:s,solution:o,tests:n,hints:a};export{i as default,a as hints,t as id,o as solution,s as starterCode,n as tests,e as title};

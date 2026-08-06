@@ -1,1 +1,0 @@
-const t="02-data-types-coercion-truthy-falsy-31",o="Boolean of empty array",e="console.log(Boolean([]));",s="console.log(Boolean([]));",n=[{input:[],expected:"true"}],r=["Arrays are objects","All objects are truthy"],a={id:t,title:o,starterCode:e,solution:s,tests:n,hints:r};export{a as default,r as hints,t as id,s as solution,e as starterCode,n as tests,o as title};

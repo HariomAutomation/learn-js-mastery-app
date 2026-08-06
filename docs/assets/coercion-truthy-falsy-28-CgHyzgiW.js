@@ -1,1 +1,0 @@
-const t="02-data-types-coercion-truthy-falsy-28",o="null coerces to 0 in arithmetic",s="console.log(null + 5);",e="console.log(null + 5);",n=[{input:[],expected:"5"}],l=["null converts to 0","0 + 5 = 5"],c={id:t,title:o,starterCode:s,solution:e,tests:n,hints:l};export{c as default,l as hints,t as id,e as solution,s as starterCode,n as tests,o as title};

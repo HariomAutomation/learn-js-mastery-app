@@ -1,1 +1,0 @@
-const t="02-data-types-coercion-truthy-falsy-30",o="Empty string coerces to 0",s='console.log("" - 5);',e='console.log("" - 5);',n=[{input:[],expected:"-5"}],c=["Empty string converts to 0","0 - 5 = -5"],i={id:t,title:o,starterCode:s,solution:e,tests:n,hints:c};export{i as default,c as hints,t as id,e as solution,s as starterCode,n as tests,o as title};

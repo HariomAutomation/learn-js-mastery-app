@@ -1,1 +1,0 @@
-const t="09-strings-string-methods-08",o="IndexOf Not Found",s="console.log('hello'.indexOf('xyz'));",n="console.log('hello'.indexOf('xyz'));",e=[{input:[],expected:"-1"}],i=["-1 when not found","No match"],d={id:t,title:o,starterCode:s,solution:n,tests:e,hints:i};export{d as default,i as hints,t as id,n as solution,s as starterCode,e as tests,o as title};

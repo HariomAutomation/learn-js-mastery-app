@@ -1,1 +1,0 @@
-const t="09-strings-string-basics-27",s="PadStart",n="console.log('42'.padStart(5, '0'));",o="console.log('42'.padStart(5, '0'));",i=[{input:[],expected:"00042"}],a=["padStart adds padding","At beginning"],e={id:t,title:s,starterCode:n,solution:o,tests:i,hints:a};export{e as default,a as hints,t as id,o as solution,n as starterCode,i as tests,s as title};

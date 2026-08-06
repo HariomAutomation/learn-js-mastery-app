@@ -1,1 +1,0 @@
-const s="09-strings-string-basics-17",t="Raw String",o="console.log(String.raw`Hello\\nWorld`);",e="console.log(String.raw`Hello\\nWorld`);",n=[{input:[],expected:"Hello\\nWorld"}],r=["raw preserves escapes","No processing"],i={id:s,title:t,starterCode:o,solution:e,tests:n,hints:r};export{i as default,r as hints,s as id,e as solution,o as starterCode,n as tests,t as title};

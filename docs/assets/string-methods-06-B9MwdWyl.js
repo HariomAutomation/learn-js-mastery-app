@@ -1,1 +1,0 @@
-const t="09-strings-string-methods-06",s="EndsWith",o="console.log('hello world'.endsWith('world'));",e="console.log('hello world'.endsWith('world'));",n=[{input:[],expected:"true"}],d=["endsWith checks suffix","At end"],i={id:t,title:s,starterCode:o,solution:e,tests:n,hints:d};export{i as default,d as hints,t as id,e as solution,o as starterCode,n as tests,s as title};

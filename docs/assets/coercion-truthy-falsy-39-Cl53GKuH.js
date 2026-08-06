@@ -1,1 +1,0 @@
-const t="02-data-types-coercion-truthy-falsy-39",o="Double NOT preserves truthiness",s="console.log(!!42);",e="console.log(!!42);",n=[{input:[],expected:"true"}],c=["42 is truthy","!! converts to boolean"],r={id:t,title:o,starterCode:s,solution:e,tests:n,hints:c};export{r as default,c as hints,t as id,e as solution,s as starterCode,n as tests,o as title};

@@ -1,1 +1,0 @@
-const t="09-strings-string-methods-04",s="Includes Empty",e="console.log('hello'.includes(''));",o="console.log('hello'.includes(''));",n=[{input:[],expected:"true"}],l=["Empty string always included","Edge case"],i={id:t,title:s,starterCode:e,solution:o,tests:n,hints:l};export{i as default,l as hints,t as id,o as solution,e as starterCode,n as tests,s as title};

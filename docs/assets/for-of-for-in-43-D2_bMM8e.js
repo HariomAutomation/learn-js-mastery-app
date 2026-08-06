@@ -1,3 +1,0 @@
-const t="05-loops-for-of-for-in-43",n="For...Of Array Entries",o="const fruits = ['apple', 'banana', 'cherry'];\nfor (const [idx, fruit] of fruits.entries()) {\n  console.log(`${idx + 1}. ${fruit}`);\n}",r="const fruits = ['apple', 'banana', 'cherry'];\nfor (const [idx, fruit] of fruits.entries()) {\n  console.log(`${idx + 1}. ${fruit}`);\n}",s=[{input:[],expected:`1. apple
-2. banana
-3. cherry`}],e=["Use entries() for index","Add 1 for numbering"],i={id:t,title:n,starterCode:o,solution:r,tests:s,hints:e};export{i as default,e as hints,t as id,r as solution,o as starterCode,s as tests,n as title};

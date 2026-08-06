@@ -1,1 +1,0 @@
-const t="09-strings-string-methods-48",s="IndexOf From",o="console.log('abcabc'.indexOf('b', 2));",e="console.log('abcabc'.indexOf('b', 2));",n=[{input:[],expected:"4"}],i=["indexOf from index","Skip first match"],c={id:t,title:s,starterCode:o,solution:e,tests:n,hints:i};export{c as default,i as hints,t as id,e as solution,o as starterCode,n as tests,s as title};

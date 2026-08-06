@@ -1,1 +1,0 @@
-const t="01-variables-declarations-variables-intro-10",o="Exponentiation operator",s="console.log(2 ** 10)",e="console.log(2 ** 10)",n=[{input:[],expected:"1024"}],i=["** is power operator"],r={id:t,title:o,starterCode:s,solution:e,tests:n,hints:i};export{r as default,i as hints,t as id,e as solution,s as starterCode,n as tests,o as title};

@@ -1,1 +1,0 @@
-const t="09-strings-string-methods-37",o="Search Not Found",s="console.log('hello'.search(/xyz/));",e="console.log('hello'.search(/xyz/));",n=[{input:[],expected:"-1"}],c=["-1 when not found","No match"],l={id:t,title:o,starterCode:s,solution:e,tests:n,hints:c};export{l as default,c as hints,t as id,e as solution,s as starterCode,n as tests,o as title};

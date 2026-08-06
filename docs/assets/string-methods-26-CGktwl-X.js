@@ -1,1 +1,0 @@
-const t="09-strings-string-methods-26",s="ToLowerCase",o="console.log('HELLO'.toLowerCase());",e="console.log('HELLO'.toLowerCase());",n=[{input:[],expected:"hello"}],l=["All lowercase","New string"],i={id:t,title:s,starterCode:o,solution:e,tests:n,hints:l};export{i as default,l as hints,t as id,e as solution,o as starterCode,n as tests,s as title};

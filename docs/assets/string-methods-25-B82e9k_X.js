@@ -1,1 +1,0 @@
-const t="09-strings-string-methods-25",s="ToUpperCase",e="console.log('hello'.toUpperCase());",o="console.log('hello'.toUpperCase());",n=[{input:[],expected:"HELLO"}],l=["All uppercase","New string"],i={id:t,title:s,starterCode:e,solution:o,tests:n,hints:l};export{i as default,l as hints,t as id,o as solution,e as starterCode,n as tests,s as title};

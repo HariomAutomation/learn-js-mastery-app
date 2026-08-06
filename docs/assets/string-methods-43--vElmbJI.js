@@ -1,1 +1,0 @@
-const t="09-strings-string-methods-43",s="Trim Only Spaces",o="console.log('\\t hello \\t'.trim());",e="console.log('\\t hello \\t'.trim());",l=[{input:[],expected:"hello"}],n=["Trim removes all whitespace","Tabs too"],i={id:t,title:s,starterCode:o,solution:e,tests:l,hints:n};export{i as default,n as hints,t as id,e as solution,o as starterCode,l as tests,s as title};

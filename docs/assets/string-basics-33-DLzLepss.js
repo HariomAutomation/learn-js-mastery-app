@@ -1,1 +1,0 @@
-const t="09-strings-string-basics-33",s="LastIndexOf",n="console.log('abcabc'.lastIndexOf('b'));",e="console.log('abcabc'.lastIndexOf('b'));",o=[{input:[],expected:"4"}],c=["lastIndexOf from end","Last occurrence"],a={id:t,title:s,starterCode:n,solution:e,tests:o,hints:c};export{a as default,c as hints,t as id,e as solution,n as starterCode,o as tests,s as title};

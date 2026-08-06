@@ -1,1 +1,0 @@
-const t="02-data-types-coercion-truthy-falsy-42",s="Minus with string and number",o='console.log("10" - 3);',e='console.log("10" - 3);',n=[{input:[],expected:"7"}],i=["- always does math","String is converted to number"],c={id:t,title:s,starterCode:o,solution:e,tests:n,hints:i};export{c as default,i as hints,t as id,e as solution,o as starterCode,n as tests,s as title};

@@ -1,1 +1,0 @@
-const t="09-strings-string-methods-44",o="Trim Unicode",s="console.log('\\u00A0hello\\u00A0'.trim());",e="console.log('\\u00A0hello\\u00A0'.trim());",n=[{input:[],expected:"hello"}],i=["Unicode whitespace","Non-breaking space"],l={id:t,title:o,starterCode:s,solution:e,tests:n,hints:i};export{l as default,i as hints,t as id,e as solution,s as starterCode,n as tests,o as title};

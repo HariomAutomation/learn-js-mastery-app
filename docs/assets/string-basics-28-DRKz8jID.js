@@ -1,1 +1,0 @@
-const t="09-strings-string-basics-28",s="PadEnd",n="console.log('hi'.padEnd(10, '.'));",o="console.log('hi'.padEnd(10, '.'));",d=[{input:[],expected:"hi........"}],i=["padEnd adds padding","At end"],e={id:t,title:s,starterCode:n,solution:o,tests:d,hints:i};export{e as default,i as hints,t as id,o as solution,n as starterCode,d as tests,s as title};

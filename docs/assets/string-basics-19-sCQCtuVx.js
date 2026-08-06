@@ -1,1 +1,0 @@
-const t="09-strings-string-basics-19",e="LocaleCompare",o="console.log('apple'.localeCompare('banana'));",s="console.log('apple'.localeCompare('banana'));",a=[{input:[],expected:"-1"}],n=["Negative if before","Locale-aware sort"],l={id:t,title:e,starterCode:o,solution:s,tests:a,hints:n};export{l as default,n as hints,t as id,s as solution,o as starterCode,a as tests,e as title};
