@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-46",
+  "title": "classList ForEach",
+  "starterCode": "const el = document.querySelector('.box');\nlet classes = [];\nel.classList.forEach(c => classes.push(c));\nconsole.log(classes.join(','));",
+  "solution": "const el = document.querySelector('.box');\nlet classes = [];\nel.classList.forEach(c => classes.push(c));\nconsole.log(classes.join(','));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "box"
+    }
+  ],
+  "hints": [
+    "forEach iterates over each class",
+    "Join array to see all classes"
+  ]
+}

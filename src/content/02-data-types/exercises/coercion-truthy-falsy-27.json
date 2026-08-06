@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-27",
+  "title": "Boolean coercion in arithmetic",
+  "starterCode": "console.log(true + true);",
+  "solution": "console.log(true + true);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2"
+    }
+  ],
+  "hints": [
+    "true converts to 1",
+    "1 + 1 = 2"
+  ]
+}

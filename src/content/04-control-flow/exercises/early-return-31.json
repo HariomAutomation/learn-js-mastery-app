@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-early-return-31",
+  "title": "Early return arrays - not array",
+  "starterCode": "function getFirstThree(arr) {\n  if (!Array.isArray(arr)) return [];\n  return arr.slice(0, 3);\n}\nconsole.log(getFirstThree('hello'));",
+  "solution": "function getFirstThree(arr) {\n  if (!Array.isArray(arr)) return [];\n  return arr.slice(0, 3);\n}\nconsole.log(getFirstThree('hello'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": ""
+    }
+  ],
+  "hints": [
+    "'hello' is not an array",
+    "Returns empty array"
+  ]
+}

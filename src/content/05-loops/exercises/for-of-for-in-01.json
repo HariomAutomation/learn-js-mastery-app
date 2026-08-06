@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-01",
+  "title": "For...Of Arrays",
+  "starterCode": "const arr = [1, 2, 3];\nfor (const val of arr) {\n  console.log(val);\n}",
+  "solution": "const arr = [1, 2, 3];\nfor (const val of arr) {\n  console.log(val);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1\n2\n3"
+    }
+  ],
+  "hints": [
+    "Use 'of' for values",
+    "const declares loop variable"
+  ]
+}

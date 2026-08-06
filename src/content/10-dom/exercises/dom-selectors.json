@@ -1,0 +1,12 @@
+{
+  "id": "10-dom-dom-selectors",
+  "title": "DOM selectors samjho — element dhoondna",
+  "starterCode": "// DOM simulation — HTML elements ko string se represent karo\nconst html = '<div class=\"container\"><p id=\"greeting\">Hello</p><p class=\"text\">World</p></div>'\n\n// 1. Class based selector — .text wala paragraph dhundho\n// simulate: html mein se class=\"text\" wala tag nikalo\nconst allParagraphs = // html se saare <p> tags nikalo (regex ya string methods)\nconsole.log(allParagraphs) // [\"<p id=\\\"greeting\\\">Hello</p>\", \"<p class=\\\"text\\\">World</p>\"]\n\n// 2. ID based selector — #greeting wala element dhundho\nconst greetingEl = // html mein se id=\"greeting\" wala element nikalo\nconsole.log(greetingEl) // \"<p id=\\\"greeting\\\">Hello</p>\"\n\n// 3. textContent nikalo — greeting element ka text\nconst text = // greetingEl ke andar ka text nikalo (Hello)\nconsole.log(text) // \"Hello\"",
+  "solution": "const html = '<div class=\"container\"><p id=\"greeting\">Hello</p><p class=\"text\">World</p></div>'\nconst allParagraphs = html.match(/<p[^>]*>[^<]*<\\/p>/g)\nconsole.log(allParagraphs)\nconst greetingEl = html.match(/<p id=\"greeting\">[^<]*<\\/p>/)[0]\nconsole.log(greetingEl)\nconst text = greetingEl.replace(/<[^>]*>/g, \"\")\nconsole.log(text)",
+  "tests": [{ "input": [], "expected": "[\"<p id=\\\"greeting\\\">Hello</p>\", \"<p class=\\\"text\\\">World</p>\"]\n<p id=\"greeting\">Hello</p>\nHello" }],
+  "hints": [
+    "Regex se tags dhundho: /<p[^>]*>[^<]*<\\/p>/g — saare <p> tags match honge",
+    "ID selector: id=\"greeting\" wala specific pattern match karo",
+    "Text content nikalne ke liye <tags> hatao — replace(/<[^>]*>/g, \"\")"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-37",
+  "title": "Mouse Position",
+  "starterCode": "document.addEventListener('mousemove', function(e) {\n  console.log(e.clientX + ',' + e.clientY);\n});",
+  "solution": "document.addEventListener('mousemove', function(e) {\n  console.log(e.clientX + ',' + e.clientY);\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "100,200"
+    }
+  ],
+  "hints": [
+    "clientX/Y gives viewport coordinates",
+    "Fires on every mouse move"
+  ]
+}

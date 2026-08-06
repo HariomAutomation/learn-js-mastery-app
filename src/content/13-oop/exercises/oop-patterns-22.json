@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-22",
+  "title": "Flyweight",
+  "starterCode": "const flyweights = {};\nfunction getFlyweight(key) {\n  if (!flyweights[key]) flyweights[key] = { key };\n  return flyweights[key];\n}\nconst a = getFlyweight('a');\nconst b = getFlyweight('a');\nconsole.log(a === b);",
+  "solution": "const flyweights = {};\nfunction getFlyweight(key) {\n  if (!flyweights[key]) flyweights[key] = { key };\n  return flyweights[key];\n}\nconst a = getFlyweight('a');\nconst b = getFlyweight('a');\nconsole.log(a === b);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "Share common state",
+    "Cache objects by key"
+  ]
+}

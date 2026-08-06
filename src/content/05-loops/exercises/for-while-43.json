@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-while-43",
+  "title": "Fibonacci Array",
+  "starterCode": "const n = 7;\nconst fib = [0, 1];\nfor (let i = 2; i < n; i++) {\n  fib.push(fib[i-1] + fib[i-2]);\n}\nconsole.log(fib);",
+  "solution": "const n = 7;\nconst fib = [0, 1];\nfor (let i = 2; i < n; i++) {\n  fib.push(fib[i-1] + fib[i-2]);\n}\nconsole.log(fib);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 0, 1, 1, 2, 3, 5, 8 ]"
+    }
+  ],
+  "hints": [
+    "Start with [0, 1]",
+    "Sum previous two"
+  ]
+}

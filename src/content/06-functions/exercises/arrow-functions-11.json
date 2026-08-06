@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-11",
+  "title": "Arrow Constructor Error",
+  "starterCode": "try {\n  const Foo = () => {};\n  new Foo();\n} catch (e) {\n  console.log('Error: Cannot use new with arrow');\n}",
+  "solution": "try {\n  const Foo = () => {};\n  new Foo();\n} catch (e) {\n  console.log('Error: Cannot use new with arrow');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Error: Cannot use new with arrow"
+    }
+  ],
+  "hints": [
+    "Arrow functions can't be constructors",
+    "new throws error"
+  ]
+}

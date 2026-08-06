@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-20",
+  "title": "importNode",
+  "starterCode": "const doc = document;\nconst div = document.createElement('div');\nconst imported = doc.importNode(div, false);\nconsole.log(imported.ownerDocument === doc);",
+  "solution": "const doc = document;\nconst div = document.createElement('div');\nconst imported = doc.importNode(div, false);\nconsole.log(imported.ownerDocument === doc);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "importNode copies node from another document",
+    "Does not add to DOM"
+  ]
+}

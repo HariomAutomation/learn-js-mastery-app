@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-function-basics-08",
+  "title": "Void Function",
+  "starterCode": "function logMessage(msg) {\n  console.log('Log: ' + msg);\n}\nlogMessage('test');",
+  "solution": "function logMessage(msg) {\n  console.log('Log: ' + msg);\n}\nlogMessage('test');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Log: test"
+    }
+  ],
+  "hints": [
+    "No return needed",
+    "Side effect only"
+  ]
+}

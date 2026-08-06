@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-03",
+  "title": "Check typeof an object",
+  "starterCode": "const obj = { a: 1 };\nconsole.log();",
+  "solution": "const obj = { a: 1 };\nconsole.log(typeof obj);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "object"
+    }
+  ],
+  "hints": [
+    "typeof returns 'object' for objects",
+    "Objects and arrays both return 'object'"
+  ]
+}

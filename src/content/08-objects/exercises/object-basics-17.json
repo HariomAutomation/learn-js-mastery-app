@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-17",
+  "title": "Keys Sort",
+  "starterCode": "const obj = {c: 3, a: 1, b: 2};\nconst sorted = Object.keys(obj).sort().reduce((acc, key) => ({...acc, [key]: obj[key]}), {});\nconsole.log(sorted);",
+  "solution": "const obj = {c: 3, a: 1, b: 2};\nconst sorted = Object.keys(obj).sort().reduce((acc, key) => ({...acc, [key]: obj[key]}), {});\nconsole.log(sorted);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{ a: 1, b: 2, c: 3 }"
+    }
+  ],
+  "hints": [
+    "Sort keys alphabetically",
+    "Rebuild object"
+  ]
+}

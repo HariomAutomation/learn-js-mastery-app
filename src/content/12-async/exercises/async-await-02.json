@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-02",
+  "title": "Await Expression",
+  "starterCode": "async function getValue() {\n  const promise = Promise.resolve(42);\n  const value = await promise;\n  console.log(value);\n}\ngetValue();",
+  "solution": "async function getValue() {\n  const promise = Promise.resolve(42);\n  const value = await promise;\n  console.log(value);\n}\ngetValue();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "42"
+    }
+  ],
+  "hints": [
+    "await pauses until promise resolves",
+    "Returns the resolved value"
+  ]
+}

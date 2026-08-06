@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-42",
+  "title": "closest with ID Selector",
+  "starterCode": "const el = document.querySelector('.nested');\nconst found = el.closest('#container');\nconsole.log(found);",
+  "solution": "const el = document.querySelector('.nested');\nconst found = el.closest('#container');\nconsole.log(found);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "null"
+    }
+  ],
+  "hints": [
+    "closest works with any CSS selector",
+    "Including ID selectors"
+  ]
+}

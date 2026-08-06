@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-28",
+  "title": "Check typeof null (the famous bug)",
+  "starterCode": "console.log(typeof null);",
+  "solution": "console.log(typeof null);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "object"
+    }
+  ],
+  "hints": [
+    "This is a known bug in JavaScript",
+    "It's been around since the beginning"
+  ]
+}

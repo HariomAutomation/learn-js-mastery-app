@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-13",
+  "title": "setAttribute Boolean",
+  "starterCode": "const el = document.querySelector('input');\nel.setAttribute('disabled', '');\nconsole.log(el.disabled);",
+  "solution": "const el = document.querySelector('input');\nel.setAttribute('disabled', '');\nconsole.log(el.disabled);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "Empty string enables boolean attribute",
+    "Check the property directly"
+  ]
+}

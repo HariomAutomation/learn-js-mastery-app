@@ -1,0 +1,57 @@
+[
+  {
+    "question": "Class vs Prototype — JavaScript mein actual inheritance kya use karta hai?",
+    "options": [
+      "Prototype-based — class sirf syntactic sugar hai",
+      "Class-based — class asli inheritance hai",
+      "Dono alag hain",
+      "JavaScript mein inheritance nahi hai"
+    ],
+    "correctIndex": 0,
+    "explanation": "JavaScript fundamentally prototypal inheritance based hai. Classes sirf syntactic sugar hain — under the hood sab prototypes pe kaam hota hai. __proto__ chain real inheritance hai."
+  },
+  {
+    "question": "'this' ka value kaise determine hota hai?",
+    "options": [
+      "Call site se — jahan function call hota hai usse decide hota hai",
+      "Function definition se",
+      "Variable declaration se",
+      "Hamesha window hai"
+    ],
+    "correctIndex": 0,
+    "explanation": "'this' ka value call site pe depend karta hai — kaise call hua (method, function, new, arrow, bind). Default binding = window, method binding = object, new binding = naya object."
+  },
+  {
+    "question": "get/set accessor methods kab useful hote hain?",
+    "options": [
+      "Property access pe custom logic chalani ho — validation, computed values",
+      "Sirf data store karna ho",
+      "Arrays ko manage karna ho",
+      "Functions optimize karna ho"
+    ],
+    "correctIndex": 0,
+    "explanation": "Getter/setter se property jaisa access hota hai but under logic hota hai — validation, transformation, lazy computation. obj.name se get, obj.name = 'x' se set."
+  },
+  {
+    "question": "Composition vs Inheritance — kab kya prefer karo?",
+    "options": [
+      "Composition — 'has-a' relationship, flexibility. Inheritance — 'is-a' relationship",
+      "Hamesha inheritance better hai",
+      "Hamesha composition better hai",
+      "Dono same hain"
+    ],
+    "correctIndex": 0,
+    "explanation": "Inheritance: Dog IS-A Animal. Composition: Car HAS-A Engine. Composition zyada flexible hai — tight coupling nahi hota, test karna aasan hai. Modern JS mein composition zyada preferred hai."
+  },
+  {
+    "question": "OOP ke 4 pillars kaunse hain?",
+    "options": [
+      "Encapsulation, Abstraction, Inheritance, Polymorphism",
+      "Variables, Functions, Objects, Arrays",
+      "Create, Read, Update, Delete",
+      "HTML, CSS, JS, DOM"
+    ],
+    "correctIndex": 0,
+    "explanation": "4 pillars: Encapsulation (data + methods bundled), Abstraction (complex details hidden), Inheritance (code reuse), Polymorphism (same interface, different behavior)."
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-33",
+  "title": "Promise.all Mixed",
+  "starterCode": "Promise.all([\n  Promise.resolve(1),\n  new Promise(r => setTimeout(() => r(2), 10)),\n  Promise.resolve(3)\n]).then(v => console.log(v));",
+  "solution": "Promise.all([\n  Promise.resolve(1),\n  new Promise(r => setTimeout(() => r(2), 10)),\n  Promise.resolve(3)\n]).then(v => console.log(v));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1,2,3"
+    }
+  ],
+  "hints": [
+    "Mix of sync and async promises",
+    "All results in order"
+  ]
+}

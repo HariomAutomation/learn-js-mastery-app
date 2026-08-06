@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-49",
+  "title": "querySelector Context",
+  "starterCode": "// You can pass context as second argument\nconsole.log(\"context parameter\");",
+  "solution": "// You can pass context as second argument\nconsole.log(\"context parameter\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "context parameter"
+    }
+  ],
+  "hints": [
+    "querySelector accepts optional context",
+    "Limits search to subtree"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-methods-15",
+  "title": "Replace Regex",
+  "starterCode": "const str = 'hello world';\nconsole.log(str.replace(/o/g, '0'));",
+  "solution": "const str = 'hello world';\nconsole.log(str.replace(/o/g, '0'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hell0 w0rld"
+    }
+  ],
+  "hints": [
+    "Regex global replace",
+    "All matches"
+  ]
+}

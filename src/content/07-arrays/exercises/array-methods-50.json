@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-methods-50",
+  "title": "Every Check",
+  "starterCode": "const arr = [2, 4, 6, 8];\nconst allEven = arr.every(x => x % 2 === 0);\nconsole.log(allEven);",
+  "solution": "const arr = [2, 4, 6, 8];\nconst allEven = arr.every(x => x % 2 === 0);\nconsole.log(allEven);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "every checks if all match",
+    "Returns boolean"
+  ]
+}

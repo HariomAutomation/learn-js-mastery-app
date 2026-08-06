@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-43",
+  "title": "Delegation with Class",
+  "starterCode": "const container = document.querySelector('.container');\ncontainer.addEventListener('click', function(e) {\n  if (e.target.classList.contains('btn')) {\n    console.log('button class found');\n  }\n});",
+  "solution": "const container = document.querySelector('.container');\ncontainer.addEventListener('click', function(e) {\n  if (e.target.classList.contains('btn')) {\n    console.log('button class found');\n  }\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "button class found"
+    }
+  ],
+  "hints": [
+    "classList.contains checks class",
+    "Use for class-based delegation"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-27",
+  "title": "For...In Own Keys Only",
+  "starterCode": "function Person(name) { this.name = name; }\nPerson.prototype.age = 25;\nconst p = new Person('John');\nfor (const key in p) {\n  if (p.hasOwnProperty(key)) {\n    console.log(key);\n  }\n}",
+  "solution": "function Person(name) { this.name = name; }\nPerson.prototype.age = 25;\nconst p = new Person('John');\nfor (const key in p) {\n  if (p.hasOwnProperty(key)) {\n    console.log(key);\n  }\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "name"
+    }
+  ],
+  "hints": [
+    "prototype properties are inherited",
+    "hasOwnProperty filters them"
+  ]
+}

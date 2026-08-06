@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-10",
+  "title": "children Property",
+  "starterCode": "const el = document.querySelector('ul');\nconsole.log(el.children.length);",
+  "solution": "const el = document.querySelector('ul');\nconsole.log(el.children.length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "0"
+    }
+  ],
+  "hints": [
+    "children returns only element nodes",
+    "Check the length property"
+  ]
+}

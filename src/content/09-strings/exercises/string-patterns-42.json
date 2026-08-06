@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-42",
+  "title": "Compress String",
+  "starterCode": "function compress(str) {\n  let result = '';\n  let count = 1;\n  for (let i = 1; i <= str.length; i++) {\n    if (str[i] === str[i-1]) count++;\n    else { result += str[i-1] + (count > 1 ? count : ''); count = 1; }\n  }\n  return result;\n}\nconsole.log(compress('aaabbbcc'));",
+  "solution": "function compress(str) {\n  let result = '';\n  let count = 1;\n  for (let i = 1; i <= str.length; i++) {\n    if (str[i] === str[i-1]) count++;\n    else { result += str[i-1] + (count > 1 ? count : ''); count = 1; }\n  }\n  return result;\n}\nconsole.log(compress('aaabbbcc'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "a3b3c2"
+    }
+  ],
+  "hints": [
+    "Count consecutive",
+    "Skip count if 1"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "07-arrays-map-filter-reduce",
+  "title": "map, filter, reduce se data transform",
+  "starterCode": "const students = [\n  { name: \"Riya\", marks: 85 },\n  { name: \"Aman\", marks: 42 },\n  { name: \"Priya\", marks: 91 },\n  { name: \"Vikram\", marks: 67 },\n  { name: \"Neha\", marks: 55 }\n]\n\n// 1. map — sirf names ka array banao\nconst names = students.map(s => s.name)\nconsole.log(names)\n\n// 2. filter — jo pass hue (marks >= 50)\nconst passed = students.filter(s => s.marks >= 50)\nconsole.log(passed.map(s => s.name))\n\n// 3. reduce — average marks nikalo\nconst avg = students.reduce((sum, s) => sum + s.marks, 0) / students.length\nconsole.log(\"Average:\", avg)\n",
+  "solution": "const students = [\n  { name: \"Riya\", marks: 85 },\n  { name: \"Aman\", marks: 42 },\n  { name: \"Priya\", marks: 91 },\n  { name: \"Vikram\", marks: 67 },\n  { name: \"Neha\", marks: 55 }\n]\nconst names = students.map(s => s.name)\nconsole.log(names)\nconst passed = students.filter(s => s.marks >= 50)\nconsole.log(passed.map(s => s.name))\nconst avg = students.reduce((sum, s) => sum + s.marks, 0) / students.length\nconsole.log(\"Average:\", avg)",
+  "tests": [{ "input": [], "expected": "[\"Riya\", \"Aman\", \"Priya\", \"Vikram\", \"Neha\"]\n[\"Riya\", \"Priya\", \"Vikram\", \"Neha\"]\nAverage: 68" }],
+  "hints": [
+    "map = har element ko transform karo",
+    "filter = condition lagao, sirf true wale raho",
+    "reduce = ek value mein accumulate karo"
+  ]
+}

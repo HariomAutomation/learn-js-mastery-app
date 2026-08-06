@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-14",
+  "title": "Store Infinity",
+  "starterCode": "const big = ;\nconsole.log(big);",
+  "solution": "const big = Infinity;\nconsole.log(big);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Infinity"
+    }
+  ],
+  "hints": [
+    "JavaScript has a special value for infinity",
+    "It's a global property, not a string"
+  ]
+}

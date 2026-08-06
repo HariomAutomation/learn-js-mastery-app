@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-25",
+  "title": "Await Timeout",
+  "starterCode": "function delay(ms) {\n  return new Promise(r => setTimeout(r, ms));\n}\nasync function wait() {\n  await delay(10);\n  console.log('waited');\n}\nwait();",
+  "solution": "function delay(ms) {\n  return new Promise(r => setTimeout(r, ms));\n}\nasync function wait() {\n  await delay(10);\n  console.log('waited');\n}\nwait();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "waited"
+    }
+  ],
+  "hints": [
+    "Create delay function",
+    "Await the delay"
+  ]
+}

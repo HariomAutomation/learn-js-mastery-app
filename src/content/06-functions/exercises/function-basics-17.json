@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-function-basics-17",
+  "title": "Apply Method",
+  "starterCode": "function sum(a, b) {\n  return a + b;\n}\nconsole.log(sum.apply(null, [5, 10]));",
+  "solution": "function sum(a, b) {\n  return a + b;\n}\nconsole.log(sum.apply(null, [5, 10]));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "15"
+    }
+  ],
+  "hints": [
+    "apply() takes array",
+    "null for no context"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-12",
+  "title": "This Binding Patterns",
+  "starterCode": "const obj = {\n  name: 'John',\n  regular() { console.log(this.name); },\n  arrow: () => { console.log(this.name); }\n};\nobj.regular();",
+  "solution": "const obj = {\n  name: 'John',\n  regular() { console.log(this.name); },\n  arrow: () => { console.log(this.name); }\n};\nobj.regular();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "John"
+    }
+  ],
+  "hints": [
+    "Regular function: this is obj",
+    "Arrow: this is enclosing scope"
+  ]
+}

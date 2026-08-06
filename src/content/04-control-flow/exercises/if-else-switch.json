@@ -1,0 +1,11 @@
+{
+  "id": "04-control-flow-if-else-switch",
+  "title": "Grader + day-of-week switch",
+  "starterCode": "// 1. if/else if se grade:\nlet marks = 78\n// 90+=A, 80+=B, 70+=C, 50+=D, else F\nlet grade = \"\"\n\n// Yahan if/else if likho\nconsole.log(grade)\n\n// 2. switch se day number se naam:\nlet dayNum = 5\nlet day = \"\" // 1=Monday ... 7=Sunday\n// switch likho\nconsole.log(day)\n",
+  "solution": "let marks = 78\nlet grade;\nif (marks >= 90) grade = \"A\"\nelse if (marks >= 80) grade = \"B\"\nelse if (marks >= 70) grade = \"C\"\nelse if (marks >= 50) grade = \"D\"\nelse grade = \"F\"\nconsole.log(grade) // C\nlet dayNum = 5\nlet day;\nswitch (dayNum) {\n  case 1: day = \"Monday\"; break\n  case 2: day = \"Tuesday\"; break\n  case 3: day = \"Wednesday\"; break\n  case 4: day = \"Thursday\"; break\n  case 5: day = \"Friday\"; break\n  case 6: day = \"Saturday\"; break\n  case 7: day = \"Sunday\"; break\n  default: day = \"Invalid\"\n}\nconsole.log(day) // Friday",
+  "tests": [{ "input": [], "expected": "C" }],
+  "hints": [
+    "if/else if top-down — pehle highest",
+    "switch mein break zaroori — fall-through rokta hai"
+  ]
+}

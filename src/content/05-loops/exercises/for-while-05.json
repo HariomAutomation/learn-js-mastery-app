@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-while-05",
+  "title": "Break Statement",
+  "starterCode": "for (let i = 0; i < 10; i++) {\n  if (i === 5) break;\n  console.log(i);\n}",
+  "solution": "for (let i = 0; i < 10; i++) {\n  if (i === 5) break;\n  console.log(i);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "0\n1\n2\n3\n4"
+    }
+  ],
+  "hints": [
+    "Use break to exit loop",
+    "Check condition before break"
+  ]
+}

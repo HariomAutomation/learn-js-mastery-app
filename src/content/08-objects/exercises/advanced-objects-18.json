@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-18",
+  "title": "Seal",
+  "starterCode": "const obj = Object.seal({a: 1, b: 2});\ndel obj.a;\nconsole.log(obj.a);\nobj.c = 3;\nconsole.log(Object.keys(obj));",
+  "solution": "const obj = Object.seal({a: 1, b: 2});\ndel obj.a;\nconsole.log(obj.a);\nobj.c = 3;\nconsole.log(Object.keys(obj));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1\n[ 'a', 'b' ]"
+    }
+  ],
+  "hints": [
+    "Seal prevents delete",
+    "Cannot add properties"
+  ]
+}

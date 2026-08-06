@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-20",
+  "title": "Search Filter Debounce",
+  "starterCode": "// Debounce search input\nconsole.log(\"debounced search pattern\");",
+  "solution": "// Debounce search input\nconsole.log(\"debounced search pattern\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "debounced search pattern"
+    }
+  ],
+  "hints": [
+    "Wait before filtering",
+    "Use setTimeout/clearTimeout"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-38",
+  "title": "Fetch Promise Chain",
+  "starterCode": "// fetch(url).then(checkStatus).then(parseJSON).then(handleData)\nconsole.log(\"promise chain pattern\");",
+  "solution": "// fetch(url).then(checkStatus).then(parseJSON).then(handleData)\nconsole.log(\"promise chain pattern\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "promise chain pattern"
+    }
+  ],
+  "hints": [
+    "Chain .then() calls",
+    "Each step transforms data"
+  ]
+}

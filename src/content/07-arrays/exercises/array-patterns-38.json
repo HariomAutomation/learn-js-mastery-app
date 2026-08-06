@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-patterns-38",
+  "title": "Compact Undefined",
+  "starterCode": "const arr = [1, undefined, 2, undefined, 3];\nconst compact = arr.filter(x => x !== undefined);\nconsole.log(compact);",
+  "solution": "const arr = [1, undefined, 2, undefined, 3];\nconst compact = arr.filter(x => x !== undefined);\nconsole.log(compact);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 1, 2, 3 ]"
+    }
+  ],
+  "hints": [
+    "Filter out undefined",
+    "Explicit check"
+  ]
+}

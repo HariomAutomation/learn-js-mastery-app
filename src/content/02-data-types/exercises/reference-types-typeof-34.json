@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-34",
+  "title": "Function is callable object",
+  "starterCode": "const fn = function() {};\nconsole.log();",
+  "solution": "const fn = function() {};\nconsole.log(typeof fn);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "function"
+    }
+  ],
+  "hints": [
+    "Functions are special objects",
+    "typeof returns 'function'"
+  ]
+}

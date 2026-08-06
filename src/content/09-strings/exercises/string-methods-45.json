@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-methods-45",
+  "title": "Pad Custom Char",
+  "starterCode": "console.log('hello'.padStart(10, '-'));\nconsole.log('hello'.padEnd(10, '-'));",
+  "solution": "console.log('hello'.padStart(10, '-'));\nconsole.log('hello'.padEnd(10, '-'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "-----hello\nhello-----"
+    }
+  ],
+  "hints": [
+    "Custom pad character",
+    "Dash"
+  ]
+}

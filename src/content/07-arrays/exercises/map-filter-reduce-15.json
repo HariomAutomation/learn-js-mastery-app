@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-15",
+  "title": "Filter Number",
+  "starterCode": "const arr = [1, 'two', 3, 'four', 5];\nconst nums = arr.____(x => typeof x === 'number');\nconsole.log(nums);",
+  "solution": "const arr = [1, 'two', 3, 'four', 5];\nconst nums = arr.filter(x => typeof x === 'number');\nconsole.log(nums);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 1, 3, 5 ]"
+    }
+  ],
+  "hints": [
+    "Check typeof",
+    "Keep only numbers"
+  ]
+}

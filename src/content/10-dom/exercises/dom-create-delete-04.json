@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-04",
+  "title": "insertBefore",
+  "starterCode": "const list = document.createElement('ul');\nconst item1 = document.createElement('li');\nlist.appendChild(item1);\nconst item2 = document.createElement('li');\nlist.insertBefore(item2, item1);\nconsole.log(list.children[0] === item2);",
+  "solution": "const list = document.createElement('ul');\nconst item1 = document.createElement('li');\nlist.appendChild(item1);\nconst item2 = document.createElement('li');\nlist.insertBefore(item2, item1);\nconsole.log(list.children[0] === item2);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "insertBefore(newNode, referenceNode)",
+    "New node is placed before reference"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-49",
+  "title": "Default Regex",
+  "starterCode": "const obj = {};\nconst {pattern = /test/, flags = 'g'} = obj;\nconsole.log(pattern.flags);",
+  "solution": "const obj = {};\nconst {pattern = /test/, flags = 'g'} = obj;\nconsole.log(pattern.flags);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "g"
+    }
+  ],
+  "hints": [
+    "Default regex value",
+    "Access flags property"
+  ]
+}

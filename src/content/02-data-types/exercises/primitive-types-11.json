@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-11",
+  "title": "Create an integer variable",
+  "starterCode": "const count = ;\nconsole.log(count);",
+  "solution": "const count = 42;\nconsole.log(count);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "42"
+    }
+  ],
+  "hints": [
+    "Integers are whole numbers",
+    "No quotes needed for numbers"
+  ]
+}

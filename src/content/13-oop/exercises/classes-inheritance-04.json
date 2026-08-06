@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-04",
+  "title": "Static Methods",
+  "starterCode": "class MathUtil {\n  static add(a, b) {\n    // TODO: return sum\n  }\n}\nconsole.log(MathUtil.add(2, 3));",
+  "solution": "class MathUtil {\n  static add(a, b) {\n    return a + b;\n  }\n}\nconsole.log(MathUtil.add(2, 3));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "5"
+    }
+  ],
+  "hints": [
+    "static methods are on the class",
+    "No need to instantiate"
+  ]
+}

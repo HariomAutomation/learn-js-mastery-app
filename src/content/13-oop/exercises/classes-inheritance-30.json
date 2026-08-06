@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-30",
+  "title": "Patterns Complete",
+  "starterCode": "// Factory, Singleton, Observer patterns with classes\nconsole.log(\"class patterns complete\");",
+  "solution": "// Factory, Singleton, Observer patterns with classes\nconsole.log(\"class patterns complete\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "class patterns complete"
+    }
+  ],
+  "hints": [
+    "Review all class patterns",
+    "Practice building classes"
+  ]
+}

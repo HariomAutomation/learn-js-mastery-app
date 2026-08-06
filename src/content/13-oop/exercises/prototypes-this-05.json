@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-05",
+  "title": "This in Arrow",
+  "starterCode": "const obj = {\n  name: 'John',\n  greet: () => {\n    console.log(this.name);\n  }\n};\nobj.greet();",
+  "solution": "const obj = {\n  name: 'John',\n  greet: () => {\n    console.log(this.name);\n  }\n};\nobj.greet();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "undefined"
+    }
+  ],
+  "hints": [
+    "Arrow functions don't bind this",
+    "this is lexical (enclosing scope)"
+  ]
+}

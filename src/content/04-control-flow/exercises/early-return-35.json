@@ -1,0 +1,17 @@
+{
+  "id": "04-control-flow-early-return-35",
+  "title": "Early return boolean",
+  "starterCode": "function isAdult(age) {\n  if (typeof age !== 'number') return false;\n  if (age < 0) return false;\n  return age >= 18;\n}\nconsole.log(isAdult(25));",
+  "solution": "function isAdult(age) {\n  if (typeof age !== 'number') return false;\n  if (age < 0) return false;\n  return age >= 18;\n}\nconsole.log(isAdult(25));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "age is a number",
+    "age is positive",
+    "25 >= 18 is true"
+  ]
+}

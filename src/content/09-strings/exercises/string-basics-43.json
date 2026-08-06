@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-43",
+  "title": "Trim Practice",
+  "starterCode": "console.log('  hello  '.trim());\nconsole.log('  hello  '.trimStart());\nconsole.log('  hello  '.trimEnd());",
+  "solution": "console.log('  hello  '.trim());\nconsole.log('  hello  '.trimStart());\nconsole.log('  hello  '.trimEnd());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hello\nhello  \n  hello"
+    }
+  ],
+  "hints": [
+    "trim all, start, end",
+    "Remove whitespace"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-while-33",
+  "title": "Number Triangle",
+  "starterCode": "for (let i = 1; i <= 5; i++) {\n  let row = '';\n  for (let j = 1; j <= i; j++) {\n    row += j + ' ';\n  }\n  console.log(row);\n}",
+  "solution": "for (let i = 1; i <= 5; i++) {\n  let row = '';\n  for (let j = 1; j <= i; j++) {\n    row += j + ' ';\n  }\n  console.log(row);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1 \n1 2 \n1 2 3 \n1 2 3 4 \n1 2 3 4 5 "
+    }
+  ],
+  "hints": [
+    "Print j instead of star",
+    "j goes from 1 to i"
+  ]
+}

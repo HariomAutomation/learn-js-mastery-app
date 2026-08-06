@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-20",
+  "title": "const block scope",
+  "starterCode": "if (true) {\n  const x = 10\n  console.log(x)\n}\nconsole.log(typeof x)",
+  "solution": "if (true) {\n  const x = 10\n  console.log(x)\n}\nconsole.log(typeof x)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10\nundefined"
+    }
+  ],
+  "hints": [
+    "const is block-scoped"
+  ]
+}

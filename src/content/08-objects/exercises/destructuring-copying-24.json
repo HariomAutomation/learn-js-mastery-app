@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-24",
+  "title": "Default Object",
+  "starterCode": "const {name = 'World', age = 0} = {};\nconsole.log(name, age);",
+  "solution": "const {name = 'World', age = 0} = {};\nconsole.log(name, age);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "World 0"
+    }
+  ],
+  "hints": [
+    "Defaults for missing props",
+    "Empty object"
+  ]
+}

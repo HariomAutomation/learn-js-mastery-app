@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-patterns-07",
+  "title": "Rotate Left",
+  "starterCode": "const arr = [1, 2, 3, 4, 5];\nconst rotated = arr.slice(1).concat(arr.slice(0, 1));\nconsole.log(rotated);",
+  "solution": "const arr = [1, 2, 3, 4, 5];\nconst rotated = arr.slice(1).concat(arr.slice(0, 1));\nconsole.log(rotated);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 2, 3, 4, 5, 1 ]"
+    }
+  ],
+  "hints": [
+    "Slice from index 1",
+    "Concat first element"
+  ]
+}

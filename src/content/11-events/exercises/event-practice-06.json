@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-06",
+  "title": "Drag and Drop",
+  "starterCode": "// dragstart, dragover, drop events\nconsole.log(\"drag and drop pattern\");",
+  "solution": "// dragstart, dragover, drop events\nconsole.log(\"drag and drop pattern\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "drag and drop pattern"
+    }
+  ],
+  "hints": [
+    "Set dataTransfer in dragstart",
+    "preventDefault in dragover"
+  ]
+}

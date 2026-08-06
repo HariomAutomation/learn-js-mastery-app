@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-30",
+  "title": "attribute Check",
+  "starterCode": "const el = document.querySelector('input');\nconsole.log(el.hasAttribute('type'));",
+  "solution": "const el = document.querySelector('input');\nconsole.log(el.hasAttribute('type'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "false"
+    }
+  ],
+  "hints": [
+    "hasAttribute checks attribute existence",
+    "Returns true or false"
+  ]
+}

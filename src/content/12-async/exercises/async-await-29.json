@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-29",
+  "title": "Async Pattern",
+  "starterCode": "async function fetchUser(id) {\n  return await Promise.resolve({ id, name: 'User' + id });\n}\nasync function main() {\n  const user = await fetchUser(1);\n  console.log(user.name);\n}\nmain();",
+  "solution": "async function fetchUser(id) {\n  return await Promise.resolve({ id, name: 'User' + id });\n}\nasync function main() {\n  const user = await fetchUser(1);\n  console.log(user.name);\n}\nmain();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "User1"
+    }
+  ],
+  "hints": [
+    "Async function returns promise",
+    "Await to get result"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-12",
+  "title": "String to number coercion with -",
+  "starterCode": "console.log(\"5\" - 3);",
+  "solution": "console.log(\"5\" - 3);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2"
+    }
+  ],
+  "hints": [
+    "- always does math",
+    "The string is converted to a number"
+  ]
+}

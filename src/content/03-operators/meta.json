@@ -1,0 +1,8 @@
+{
+  "id": "03-operators",
+  "title": "Operators",
+  "order": 3,
+  "description": "Arithmetic, comparison, logical, unary, ternary — sab operators ka complete guide.",
+  "prerequisites": ["02-data-types"],
+  "lessonCount": 2
+}

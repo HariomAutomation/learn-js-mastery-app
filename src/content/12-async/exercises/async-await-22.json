@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-22",
+  "title": "Parallel Promises",
+  "starterCode": "async function parallel() {\n  const results = await Promise.all([\n    Promise.resolve('a'),\n    Promise.resolve('b'),\n    Promise.resolve('c')\n  ]);\n  console.log(results.join(''));\n}\nparallel();",
+  "solution": "async function parallel() {\n  const results = await Promise.all([\n    Promise.resolve('a'),\n    Promise.resolve('b'),\n    Promise.resolve('c')\n  ]);\n  console.log(results.join(''));\n}\nparallel();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "abc"
+    }
+  ],
+  "hints": [
+    "Promise.all for parallel",
+    "Join results"
+  ]
+}

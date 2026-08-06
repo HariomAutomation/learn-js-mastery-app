@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-variables-intro-31",
+  "title": "Structured clone deep copy",
+  "starterCode": "const original = { a: { b: 1 } }\nconst copy = structuredClone(original)\ncopy.a.b = 99\nconsole.log(original.a.b)",
+  "solution": "const original = { a: { b: 1 } }\nconst copy = structuredClone(original)\ncopy.a.b = 99\nconsole.log(original.a.b)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1"
+    }
+  ],
+  "hints": [
+    "structuredClone creates deep copy"
+  ]
+}

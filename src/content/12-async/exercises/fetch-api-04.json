@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-04",
+  "title": "Response Status",
+  "starterCode": "// response.status is HTTP status code\nconsole.log(\"200 = success, 404 = not found\");",
+  "solution": "// response.status is HTTP status code\nconsole.log(\"200 = success, 404 = not found\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "200 = success, 404 = not found"
+    }
+  ],
+  "hints": [
+    "status is numeric code",
+    "2xx means success"
+  ]
+}

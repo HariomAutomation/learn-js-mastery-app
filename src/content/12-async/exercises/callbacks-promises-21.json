@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-21",
+  "title": "Executor Function",
+  "starterCode": "const p = new Promise((resolve, reject) => {\n  resolve('executor result');\n});\np.then(r => console.log(r));",
+  "solution": "const p = new Promise((resolve, reject) => {\n  resolve('executor result');\n});\np.then(r => console.log(r));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "executor result"
+    }
+  ],
+  "hints": [
+    "Executor runs immediately",
+    "Calls resolve or reject"
+  ]
+}

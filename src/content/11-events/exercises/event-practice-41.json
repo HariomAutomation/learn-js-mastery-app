@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-41",
+  "title": "Event Options",
+  "starterCode": "// once: auto-remove, passive: no preventDefault\nconsole.log(\"once and passive options\");",
+  "solution": "// once: auto-remove, passive: no preventDefault\nconsole.log(\"once and passive options\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "once and passive options"
+    }
+  ],
+  "hints": [
+    "once removes listener after first fire",
+    "passive for scroll performance"
+  ]
+}

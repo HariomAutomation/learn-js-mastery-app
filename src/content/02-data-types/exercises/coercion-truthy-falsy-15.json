@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-15",
+  "title": "Double NOT for boolean conversion",
+  "starterCode": "console.log(!!\"hello\");",
+  "solution": "console.log(!!\"hello\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "! converts to boolean and negates",
+    "Double NOT restores original truthiness"
+  ]
+}

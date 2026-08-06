@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-11",
+  "title": "Class Patterns",
+  "starterCode": "// Classes are syntactic sugar over prototypes\nclass Foo {}\nconst f = new Foo();\nconsole.log(typeof f);",
+  "solution": "// Classes are syntactic sugar over prototypes\nclass Foo {}\nconst f = new Foo();\nconsole.log(typeof f);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "object"
+    }
+  ],
+  "hints": [
+    "Classes create objects",
+    "Same as function constructors"
+  ]
+}

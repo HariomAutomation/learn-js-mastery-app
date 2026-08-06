@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-30",
+  "title": "Practice 1",
+  "starterCode": "const user = {name: 'Alice', age: 25, active: true};\nconsole.log(user.hasOwnProperty('name'));\nconsole.log(user.age);",
+  "solution": "const user = {name: 'Alice', age: 25, active: true};\nconsole.log(user.hasOwnProperty('name'));\nconsole.log(user.age);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true\n25"
+    }
+  ],
+  "hints": [
+    "hasOwnProperty check",
+    "Dot notation access"
+  ]
+}

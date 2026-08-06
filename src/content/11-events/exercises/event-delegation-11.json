@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-11",
+  "title": "Cleanup Pattern",
+  "starterCode": "function handleClick(e) {\n  console.log(e.target.textContent);\n}\nconst list = document.querySelector('ul');\nlist.addEventListener('click', handleClick);\nlist.removeEventListener('click', handleClick);\nconsole.log('cleaned up');",
+  "solution": "function handleClick(e) {\n  console.log(e.target.textContent);\n}\nconst list = document.querySelector('ul');\nlist.addEventListener('click', handleClick);\nlist.removeEventListener('click', handleClick);\nconsole.log('cleaned up');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "cleaned up"
+    }
+  ],
+  "hints": [
+    "Named function can be removed",
+    "Same reference must be passed"
+  ]
+}

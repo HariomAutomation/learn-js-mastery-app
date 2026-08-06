@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-methods-18",
+  "title": "Join",
+  "starterCode": "const arr = ['hello', 'world'];\nconsole.log(arr.____(' '));",
+  "solution": "const arr = ['hello', 'world'];\nconsole.log(arr.join(' '));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hello world"
+    }
+  ],
+  "hints": [
+    "join concatenates elements",
+    "Separator between items"
+  ]
+}

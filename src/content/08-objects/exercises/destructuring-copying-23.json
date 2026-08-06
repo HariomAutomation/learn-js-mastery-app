@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-23",
+  "title": "Rest Array",
+  "starterCode": "const arr = [1, 2, 3, 4];\nconst [head, ...tail] = arr;\nconsole.log(head);\nconsole.log(tail);",
+  "solution": "const arr = [1, 2, 3, 4];\nconst [head, ...tail] = arr;\nconsole.log(head);\nconsole.log(tail);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1\n[ 2, 3, 4 ]"
+    }
+  ],
+  "hints": [
+    "First element separate",
+    "Rest collects rest"
+  ]
+}

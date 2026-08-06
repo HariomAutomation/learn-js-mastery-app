@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-early-return-17",
+  "title": "Early return in loop - no match",
+  "starterCode": "function hasNegative(arr) {\n  for (const num of arr) {\n    if (num < 0) return true;\n  }\n  return false;\n}\nconsole.log(hasNegative([1, 2, 3, 4]));",
+  "solution": "function hasNegative(arr) {\n  for (const num of arr) {\n    if (num < 0) return true;\n  }\n  return false;\n}\nconsole.log(hasNegative([1, 2, 3, 4]));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "false"
+    }
+  ],
+  "hints": [
+    "No negative numbers found",
+    "Returns false after loop"
+  ]
+}

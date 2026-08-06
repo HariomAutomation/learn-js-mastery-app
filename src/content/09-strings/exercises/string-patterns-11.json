@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-11",
+  "title": "Count Consonants",
+  "starterCode": "function countConsonants(str) {\n  return (str.match(/[^aeiou\\W\\d]/gi) || []).length;\n}\nconsole.log(countConsonants('hello world'));",
+  "solution": "function countConsonants(str) {\n  return (str.match(/[^aeiou\\W\\d]/gi) || []).length;\n}\nconsole.log(countConsonants('hello world'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "7"
+    }
+  ],
+  "hints": [
+    "Non-vowel letters",
+    "Match consonants"
+  ]
+}

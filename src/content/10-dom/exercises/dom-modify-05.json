@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-05",
+  "title": "classList add",
+  "starterCode": "const el = document.querySelector('.box');\nel.classList.add('highlight');\nconsole.log(el.classList.contains('highlight'));",
+  "solution": "const el = document.querySelector('.box');\nel.classList.add('highlight');\nconsole.log(el.classList.contains('highlight'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "classList.add adds a class",
+    "classList.contains checks membership"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-08",
+  "title": "Await in Loop",
+  "starterCode": "async function loop() {\n  const results = [];\n  for (let i = 0; i < 3; i++) {\n    const val = await Promise.resolve(i);\n    results.push(val);\n  }\n  console.log(results);\n}\nloop();",
+  "solution": "async function loop() {\n  const results = [];\n  for (let i = 0; i < 3; i++) {\n    const val = await Promise.resolve(i);\n    results.push(val);\n  }\n  console.log(results);\n}\nloop();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "0,1,2"
+    }
+  ],
+  "hints": [
+    "Await pauses loop",
+    "Sequential execution in loop"
+  ]
+}

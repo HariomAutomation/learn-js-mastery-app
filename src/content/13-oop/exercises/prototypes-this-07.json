@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-07",
+  "title": "Apply Method",
+  "starterCode": "function greet(greeting, punct) {\n  console.log(greeting + ' ' + this.name + punct);\n}\ngreet.apply({ name: 'John' }, ['Hello', '!']);",
+  "solution": "function greet(greeting, punct) {\n  console.log(greeting + ' ' + this.name + punct);\n}\ngreet.apply({ name: 'John' }, ['Hello', '!']);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hello John!"
+    }
+  ],
+  "hints": [
+    "apply takes args as array",
+    "Same as call but with array"
+  ]
+}

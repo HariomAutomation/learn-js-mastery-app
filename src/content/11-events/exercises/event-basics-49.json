@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-49",
+  "title": "EventListener Options",
+  "starterCode": "// Options: capture, once, passive, signal\nconsole.log(\"4 options available\");",
+  "solution": "// Options: capture, once, passive, signal\nconsole.log(\"4 options available\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "4 options available"
+    }
+  ],
+  "hints": [
+    "Third argument can be options object",
+    "capture, once, passive, signal"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-13",
+  "title": "POST Request",
+  "starterCode": "// fetch(url, { method: 'POST', body: data })\nconsole.log(\"method: POST for creating\");",
+  "solution": "// fetch(url, { method: 'POST', body: data })\nconsole.log(\"method: POST for creating\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "method: POST for creating"
+    }
+  ],
+  "hints": [
+    "POST sends data to server",
+    "Include body with data"
+  ]
+}

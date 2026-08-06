@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-28",
+  "title": "Filter Entries",
+  "starterCode": "const obj = {a: 1, b: 2, c: 3, d: 4};\nconst result = {};\nfor (const [k, v] of Object.entries(obj)) {\n  if (v % 2 === 0) result[k] = v;\n}\nconsole.log(result);",
+  "solution": "const obj = {a: 1, b: 2, c: 3, d: 4};\nconst result = {};\nfor (const [k, v] of Object.entries(obj)) {\n  if (v % 2 === 0) result[k] = v;\n}\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{ b: 2, d: 4 }"
+    }
+  ],
+  "hints": [
+    "Loop and check condition",
+    "Keep even values"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-26",
+  "title": "Pointer Delegation",
+  "starterCode": "const list = document.querySelector('ul');\nlist.addEventListener('pointerdown', function(e) {\n  if (e.target.tagName === 'LI') {\n    console.log('pointer');\n  }\n});",
+  "solution": "const list = document.querySelector('ul');\nlist.addEventListener('pointerdown', function(e) {\n  if (e.target.tagName === 'LI') {\n    console.log('pointer');\n  }\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "pointer"
+    }
+  ],
+  "hints": [
+    "Pointer events unify input types",
+    "Same delegation pattern"
+  ]
+}

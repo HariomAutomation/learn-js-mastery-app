@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-patterns-13",
+  "title": "Partition",
+  "starterCode": "function partition(arr, predicate) {\n  return arr.reduce((acc, x) => {\n    acc[predicate(x) ? 0 : 1].push(x);\n    return acc;\n}, [[], []]);\n}\nconsole.log(partition([1,2,3,4,5], x => x > 3));",
+  "solution": "function partition(arr, predicate) {\n  return arr.reduce((acc, x) => {\n    acc[predicate(x) ? 0 : 1].push(x);\n    return acc;\n  }, [[], []]);\n}\nconsole.log(partition([1,2,3,4,5], x => x > 3));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ [ 4, 5 ], [ 1, 2, 3 ] ]"
+    }
+  ],
+  "hints": [
+    "Two buckets",
+    "true goes first"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-35",
+  "title": "Space string is truthy",
+  "starterCode": "console.log(Boolean(\" \"));",
+  "solution": "console.log(Boolean(\" \"));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "A space is a character",
+    "Non-empty strings are truthy"
+  ]
+}

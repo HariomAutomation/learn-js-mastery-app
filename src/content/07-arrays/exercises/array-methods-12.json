@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-methods-12",
+  "title": "Find",
+  "starterCode": "const nums = [1, 2, 3, 4, 5];\nconst found = nums.____(x => x > 3);\nconsole.log(found);",
+  "solution": "const nums = [1, 2, 3, 4, 5];\nconst found = nums.find(x => x > 3);\nconsole.log(found);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "4"
+    }
+  ],
+  "hints": [
+    "find returns first match",
+    "Returns undefined if none"
+  ]
+}

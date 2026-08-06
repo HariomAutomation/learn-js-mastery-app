@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-31",
+  "title": "Copy with Assign",
+  "starterCode": "const obj = {a: 1, b: 2};\nconst copy = Object.assign({}, obj);\ncopy.a = 10;\nconsole.log(obj.a);\nconsole.log(copy.a);",
+  "solution": "const obj = {a: 1, b: 2};\nconst copy = Object.assign({}, obj);\ncopy.a = 10;\nconsole.log(obj.a);\nconsole.log(copy.a);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1\n10"
+    }
+  ],
+  "hints": [
+    "Object.assign creates clone",
+    "Independent copy"
+  ]
+}

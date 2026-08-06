@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-methods-04",
+  "title": "Includes Empty",
+  "starterCode": "console.log('hello'.includes(''));",
+  "solution": "console.log('hello'.includes(''));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "Empty string always included",
+    "Edge case"
+  ]
+}

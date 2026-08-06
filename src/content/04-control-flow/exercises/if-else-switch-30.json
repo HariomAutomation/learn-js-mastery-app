@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-30",
+  "title": "Nested switch with fallthrough",
+  "starterCode": "const x = 1;\nconst y = 1;\nswitch (x) {\n  case 1:\n    console.log('x=1');\n  case 2:\n    console.log('x=2');\n    break;\n  default:\n    console.log('other');\n}",
+  "solution": "const x = 1;\nconst y = 1;\nswitch (x) {\n  case 1:\n    console.log('x=1');\n  case 2:\n    console.log('x=2');\n    break;\n  default:\n    console.log('other');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "x=1\nx=2"
+    }
+  ],
+  "hints": [
+    "case 1 has no break",
+    "Falls through to case 2"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-42",
+  "title": "Instanceof",
+  "starterCode": "function Dog() {}\nconst d = new Dog();\nconsole.log(d instanceof Dog);",
+  "solution": "function Dog() {}\nconst d = new Dog();\nconsole.log(d instanceof Dog);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "instanceof checks prototype chain",
+    "Returns boolean"
+  ]
+}

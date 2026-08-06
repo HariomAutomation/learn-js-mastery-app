@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-43",
+  "title": "Arrow Template Literal",
+  "starterCode": "const name = 'World';\nconst greet = () => `Hello, ${name}!`;\nconsole.log(greet());",
+  "solution": "const name = 'World';\nconst greet = () => `Hello, ${name}!`;\nconsole.log(greet());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hello, World!"
+    }
+  ],
+  "hints": [
+    "Template literal",
+    "Implicit return"
+  ]
+}

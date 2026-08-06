@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-36",
+  "title": "Number 0 is falsy but '0' is truthy",
+  "starterCode": "console.log(0 == \"0\", 0 === \"0\");",
+  "solution": "console.log(0 == \"0\", 0 === \"0\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true false"
+    }
+  ],
+  "hints": [
+    "== does type coercion",
+    "=== does not"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-var-let-const-20",
+  "title": "let block boundary",
+  "starterCode": "let x = 1\n{\n  let x = 2\n  console.log(x)\n}\nconsole.log(x)",
+  "solution": "let x = 1\n{\n  let x = 2\n  console.log(x)\n}\nconsole.log(x)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2\n1"
+    }
+  ],
+  "hints": [
+    "Block let is separate from outer"
+  ]
+}

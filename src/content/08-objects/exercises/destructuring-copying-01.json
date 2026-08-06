@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-01",
+  "title": "Object Destructuring",
+  "starterCode": "const obj = {name: 'Alice', age: 25};\nconst {name, age} = obj;\nconsole.log(name, age);",
+  "solution": "const obj = {name: 'Alice', age: 25};\nconst {name, age} = obj;\nconsole.log(name, age);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Alice 25"
+    }
+  ],
+  "hints": [
+    "Destructure with curly braces",
+    "Extract properties"
+  ]
+}

@@ -1,0 +1,57 @@
+[
+  {
+    "question": "JavaScript kyun single-threaded hai phir bhi async kaam karta hai?",
+    "options": [
+      "Event loop ki wajah se — background mein kaam hota hai",
+      "Multiple threads hain hidden mein",
+      "Async nahi hota actually",
+      "Node.js help karta hai"
+    ],
+    "correctIndex": 0,
+    "explanation": "JS single-threaded hai but Event Loop + Web APIs/Node APIs se async kaam hota hai. Callbacks queue mein jaate hain, event loop unhe process karta hai jab main thread free ho."
+  },
+  {
+    "question": "setTimeout(callback, 1000) hamesha exactly 1 second baad chalta hai?",
+    "options": [
+      "Nahi — 1 second MINIMUM hai, main thread busy ho toh delay hota hai",
+      "Haan — hamesha 1 second",
+      "0 second baad chalta hai",
+      "2 second baad chalta hai"
+    ],
+    "correctIndex": 0,
+    "explanation": "setTimeout minimum delay deta hai. Main thread pe bahut kaam hai toh callback baad mein chalega. Callback queue mein wait karta hai jab tak call stack khali na ho."
+  },
+  {
+    "question": "Microtask queue (Promises) vs Macrotask queue (setTimeout) — kaunsa pehle chalta hai?",
+    "options": [
+      "Microtask (Promises) pehle chalta hai",
+      "Macrotask (setTimeout) pehle chalta hai",
+      "Dono same time pe chalte hain",
+      "Depends karta hai"
+    ],
+    "correctIndex": 0,
+    "explanation": "Microtasks (Promise callbacks, queueMicrotask) ko priority milti hai. Har macrotask ke baad saare microtasks complete hote hain. Isliye Promises setTimeout se fast complete hote hain."
+  },
+  {
+    "question": "Promise.allSettled vs Promise.all mein kya farq hai?",
+    "options": [
+      "allSettled kabhi reject nahi hota — sab results deta hai, all reject pe error deta hai",
+      "Dono same hain",
+      "allSettled fast hai",
+      "all kabhi fail nahi hota"
+    ],
+    "correctIndex": 0,
+    "explanation": "Promise.allSettled() saare promises ke results deta hai — fulfilled ya rejected status ke saath. Ek bhi fail ho toh bhi error nahi aata. Promise.all mein ek bhi reject = error."
+  },
+  {
+    "question": "Async code mein race condition kya hoti hai?",
+    "options": [
+      "Do operations ek saath chal rahe hain aur order unpredictable hai",
+      "Code fast chalta hai",
+      "Promise pending rehta hai",
+      "Callback miss ho jaata hai"
+    ],
+    "correctIndex": 0,
+    "explanation": "Race condition: do async operations same data pe kaam kar rahe hain aur result depend karta hai kaun pehle complete hua. Locking, sequencing, ya AbortController se solve karo."
+  }
+]

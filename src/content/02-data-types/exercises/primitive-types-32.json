@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-32",
+  "title": "Convert number to string with String()",
+  "starterCode": "const num = 42;\nconst str = ;\nconsole.log(str + 8);",
+  "solution": "const num = 42;\nconst str = String(num);\nconsole.log(str + 8);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "428"
+    }
+  ],
+  "hints": [
+    "String() converts to a string",
+    "String + number concatenates"
+  ]
+}

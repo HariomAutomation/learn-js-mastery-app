@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-variables-intro-17",
+  "title": "Infinity and NaN",
+  "starterCode": "console.log(typeof Infinity)\nconsole.log(typeof NaN)",
+  "solution": "console.log(typeof Infinity)\nconsole.log(typeof NaN)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "number\nnumber"
+    }
+  ],
+  "hints": [
+    "Both are typeof 'number'"
+  ]
+}

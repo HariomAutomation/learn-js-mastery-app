@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-19",
+  "title": "setPrototypeOf",
+  "starterCode": "const obj = { a: 1 };\nconst child = {};\nObject.setPrototypeOf(child, obj);\nconsole.log(child.a);",
+  "solution": "const obj = { a: 1 };\nconst child = {};\nObject.setPrototypeOf(child, obj);\nconsole.log(child.a);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1"
+    }
+  ],
+  "hints": [
+    "setPrototypeOf changes prototype",
+    "Child can access parent properties"
+  ]
+}

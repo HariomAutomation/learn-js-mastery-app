@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-06",
+  "title": "Arrow In Map",
+  "starterCode": "const nums = [1, 2, 3];\nconst doubled = nums.map(x => x * 2);\nconsole.log(doubled);",
+  "solution": "const nums = [1, 2, 3];\nconst doubled = nums.map(x => x * 2);\nconsole.log(doubled);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 2, 4, 6 ]"
+    }
+  ],
+  "hints": [
+    "Arrow callback for map",
+    "Return transformed value"
+  ]
+}

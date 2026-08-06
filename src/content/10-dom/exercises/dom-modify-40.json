@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-40",
+  "title": "style Object Keys",
+  "starterCode": "const el = document.querySelector('.box');\nel.style.color = 'red';\nel.style.margin = '10px';\nconsole.log(Object.keys(el.style).length);",
+  "solution": "const el = document.querySelector('.box');\nel.style.color = 'red';\nel.style.margin = '10px';\nconsole.log(Object.keys(el.style).length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2"
+    }
+  ],
+  "hints": [
+    "Each inline style is a key",
+    "Count the keys with Object.keys"
+  ]
+}

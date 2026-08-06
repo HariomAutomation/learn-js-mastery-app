@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-12",
+  "title": "previousElementSibling",
+  "starterCode": "const el = document.querySelector('.last');\nconsole.log(el.previousElementSibling);",
+  "solution": "const el = document.querySelector('.last');\nconsole.log(el.previousElementSibling);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "null"
+    }
+  ],
+  "hints": [
+    "Returns the previous sibling element",
+    "Returns null if first child"
+  ]
+}

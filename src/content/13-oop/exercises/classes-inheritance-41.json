@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-41",
+  "title": "Method Override",
+  "starterCode": "class Base {\n  toString() { return 'Base'; }\n}\nclass Child extends Base {\n  toString() { return 'Child'; }\n}\nconsole.log(new Child().toString());",
+  "solution": "class Base {\n  toString() { return 'Base'; }\n}\nclass Child extends Base {\n  toString() { return 'Child'; }\n}\nconsole.log(new Child().toString());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Child"
+    }
+  ],
+  "hints": [
+    "Override by same method name",
+    "Child version is called"
+  ]
+}

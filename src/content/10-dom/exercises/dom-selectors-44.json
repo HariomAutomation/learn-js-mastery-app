@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-44",
+  "title": "querySelector Limitations",
+  "starterCode": "// querySelectorAll returns static NodeList\nconsole.log(\"static\");",
+  "solution": "// querySelectorAll returns static NodeList\nconsole.log(\"static\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "static"
+    }
+  ],
+  "hints": [
+    "Static means it doesn't auto-update",
+    "Unlike HTMLCollection"
+  ]
+}

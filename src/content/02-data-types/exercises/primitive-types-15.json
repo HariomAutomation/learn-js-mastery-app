@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-15",
+  "title": "Store negative Infinity",
+  "starterCode": "const small = ;\nconsole.log(small);",
+  "solution": "const small = -Infinity;\nconsole.log(small);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "-Infinity"
+    }
+  ],
+  "hints": [
+    "Just add a minus before Infinity",
+    "It represents the smallest possible value"
+  ]
+}

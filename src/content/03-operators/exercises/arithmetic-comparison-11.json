@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-arithmetic-comparison-11",
+  "title": "Addition with string concatenation",
+  "starterCode": "const result = \"5\" + 3;\nconsole.log(result);",
+  "solution": "const result = \"5\" + 3;\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "53"
+    }
+  ],
+  "hints": [
+    "When one operand is a string, + concatenates",
+    "The result is a string, not a number"
+  ]
+}

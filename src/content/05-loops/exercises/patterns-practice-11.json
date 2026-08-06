@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-patterns-practice-11",
+  "title": "Right Triangle Stars",
+  "starterCode": "for (let i = 1; i <= 5; i++) {\n  console.log('*'.repeat(i));\n}",
+  "solution": "for (let i = 1; i <= 5; i++) {\n  console.log('*'.repeat(i));\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "*\n**\n***\n****\n*****"
+    }
+  ],
+  "hints": [
+    "Use repeat()",
+    "i stars per row"
+  ]
+}

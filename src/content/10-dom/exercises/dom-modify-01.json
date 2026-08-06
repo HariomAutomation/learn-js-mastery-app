@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-01",
+  "title": "textContent Property",
+  "starterCode": "const el = document.querySelector('p');\nel.textContent = 'Hello';\nconsole.log(el.textContent);",
+  "solution": "const el = document.querySelector('p');\nel.textContent = 'Hello';\nconsole.log(el.textContent);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hello"
+    }
+  ],
+  "hints": [
+    "textContent sets text content",
+    "Returns the text content"
+  ]
+}

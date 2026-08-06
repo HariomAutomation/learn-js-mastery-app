@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-40",
+  "title": "Event Bubbling",
+  "starterCode": "// Events bubble up from target to document\nconsole.log(\"events bubble up\");",
+  "solution": "// Events bubble up from target to document\nconsole.log(\"events bubble up\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "events bubble up"
+    }
+  ],
+  "hints": [
+    "Default phase is bubbling",
+    "Goes from target to root"
+  ]
+}

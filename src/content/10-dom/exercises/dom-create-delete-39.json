@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-39",
+  "title": "append to Empty",
+  "starterCode": "const el = document.createElement('div');\nel.append('First');\nconsole.log(el.textContent);",
+  "solution": "const el = document.createElement('div');\nel.append('First');\nconsole.log(el.textContent);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "First"
+    }
+  ],
+  "hints": [
+    "append adds to end",
+    "Same as prepend on empty element"
+  ]
+}

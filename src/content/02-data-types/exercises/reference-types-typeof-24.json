@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-24",
+  "title": "typeof of array is object",
+  "starterCode": "const arr = [];\nconsole.log();",
+  "solution": "const arr = [];\nconsole.log(typeof arr);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "object"
+    }
+  ],
+  "hints": [
+    "Arrays are objects in JS",
+    "Use Array.isArray for proper check"
+  ]
+}

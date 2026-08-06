@@ -1,0 +1,8 @@
+{
+  "id": "13-oop",
+  "title": "OOP in JavaScript",
+  "order": 13,
+  "description": "Classes, inheritance, prototypes, and design patterns",
+  "prerequisites": ["06-functions", "08-objects"],
+  "lessonCount": 3
+}

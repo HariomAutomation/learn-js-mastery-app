@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-25",
+  "title": "Object Entries Sum",
+  "starterCode": "const prices = {apple: 2, banana: 3, orange: 4};\nlet total = 0;\nfor (const [fruit, price] of Object.entries(prices)) {\n  total += price;\n}\nconsole.log(total);",
+  "solution": "const prices = {apple: 2, banana: 3, orange: 4};\nlet total = 0;\nfor (const [fruit, price] of Object.entries(prices)) {\n  total += price;\n}\nconsole.log(total);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "9"
+    }
+  ],
+  "hints": [
+    "Use Object.entries()",
+    "Sum the prices"
+  ]
+}

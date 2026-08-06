@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-44",
+  "title": "Logical OR default pattern",
+  "starterCode": "function greet(name) {\n  const displayName = name || 'Guest';\n  return `Hello, ${displayName}!`;\n}\nconsole.log(greet(''));",
+  "solution": "function greet(name) {\n  const displayName = name || 'Guest';\n  return `Hello, ${displayName}!`;\n}\nconsole.log(greet(''));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hello, Guest!"
+    }
+  ],
+  "hints": [
+    "'' is falsy",
+    "|| returns 'Guest'"
+  ]
+}

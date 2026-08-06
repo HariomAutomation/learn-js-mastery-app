@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-03",
+  "title": "For...Of Maps",
+  "starterCode": "const map = new Map([['a', 1], ['b', 2]]);\nfor (const [key, value] of map) {\n  console.log(key + ': ' + value);\n}",
+  "solution": "const map = new Map([['a', 1], ['b', 2]]);\nfor (const [key, value] of map) {\n  console.log(key + ': ' + value);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "a: 1\nb: 2"
+    }
+  ],
+  "hints": [
+    "Map entries are [key, value]",
+    "Destructure in loop"
+  ]
+}

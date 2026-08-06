@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-variables-intro-07",
+  "title": "String to number conversion",
+  "starterCode": "const str = \"42\"\nconsole.log(Number(str) + 8)",
+  "solution": "const str = \"42\"\nconsole.log(Number(str) + 8)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "50"
+    }
+  ],
+  "hints": [
+    "Use Number() to convert"
+  ]
+}

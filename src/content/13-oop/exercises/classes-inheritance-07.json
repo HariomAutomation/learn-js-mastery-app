@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-07",
+  "title": "Method Overriding",
+  "starterCode": "class Shape {\n  area() { return 0; }\n}\nclass Circle extends Shape {\n  constructor(r) { super(); this.r = r; }\n  area() {\n    // TODO: return πr²\n  }\n}\nconsole.log(new Circle(5).area());",
+  "solution": "class Shape {\n  area() { return 0; }\n}\nclass Circle extends Shape {\n  constructor(r) { super(); this.r = r; }\n  area() {\n    return Math.PI * this.r * this.r;\n  }\n}\nconsole.log(new Circle(5).area());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "78.53981633974483"
+    }
+  ],
+  "hints": [
+    "Override parent method",
+    "Use Math.PI for π"
+  ]
+}

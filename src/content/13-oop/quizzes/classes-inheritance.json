@@ -1,0 +1,57 @@
+[
+  {
+    "question": "JavaScript class mein constructor() kya karta hai?",
+    "options": [
+      "Naya object create hone pe automatically call hota hai — initialization",
+      "Class ko destroy karta hai",
+      "Methods define karta hai",
+      "Variable declare karta hai"
+    ],
+    "correctIndex": 0,
+    "explanation": "constructor() method new keyword se object banate waqt automatically call hota hai. Ismein initial properties set karte ho — this.name = name jaisa."
+  },
+  {
+    "question": "extends keyword kya karta hai?",
+    "options": [
+      "Ek class ko doosri class se inherit karata hai",
+      "Class ko block banata hai",
+      "Methods add karta hai",
+      "Object create karta hai"
+    ],
+    "correctIndex": 0,
+    "explanation": "extends se child class parent ki saari properties aur methods inherit karti hai. class Dog extends Animal — Dog mein Animal ke sab kuch hoga."
+  },
+  {
+    "question": "super() keyword class mein kab use hota hai?",
+    "options": [
+      "Child class constructor mein — parent constructor call karne ke liye",
+      "Parent class mein",
+      "Methods ke andar",
+      "Class ke bahar"
+    ],
+    "correctIndex": 0,
+    "explanation": "Child class mein constructor mein pehle super() call karna zaroori hai — parent ka constructor chalega tabhi parent ki properties initialize hongi. super.method() se parent methods call hote hain."
+  },
+  {
+    "question": "Class mein method syntax kaisa hota hai?",
+    "options": [
+      "methodName() { } — function keyword nahi chahiye",
+      "function methodName() { }",
+      "methodName: function() { }",
+      "def methodName(): { }"
+    ],
+    "correctIndex": 0,
+    "explanation": "Class mein shorthand method syntax hota hai — sirf naam aur braces. Function keyword, commas, ya colon nahi chahiye. get/set bhi use kar sakte ho."
+  },
+  {
+    "question": "Static method kab use hota hai?",
+    "options": [
+      "Class pe directly call hota hai — instance ki zaroorat nahi",
+      "Har instance pe call hota hai",
+      "Constructor mein chalta hai",
+      "Inheritance mein use hota hai"
+    ],
+    "correctIndex": 0,
+    "explanation": "static method class pe directly call hota hai — Math.sqrt() jaisa. Instance pe nahi chalta. Utility functions, factory methods, configuration ke liye use hota hai."
+  }
+]

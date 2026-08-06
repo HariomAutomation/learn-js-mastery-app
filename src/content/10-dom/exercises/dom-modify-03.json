@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-03",
+  "title": "setAttribute Method",
+  "starterCode": "const el = document.querySelector('a');\nel.setAttribute('href', 'https://example.com');\nconsole.log(el.getAttribute('href'));",
+  "solution": "const el = document.querySelector('a');\nel.setAttribute('href', 'https://example.com');\nconsole.log(el.getAttribute('href'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "https://example.com"
+    }
+  ],
+  "hints": [
+    "setAttribute takes attribute name and value",
+    "Use getAttribute to read"
+  ]
+}

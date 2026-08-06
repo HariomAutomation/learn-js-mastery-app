@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-33",
+  "title": "Fetch Error Check",
+  "starterCode": "// async function fetchData(url) {\n//   const res = await fetch(url);\n//   if (!res.ok) throw new Error(res.statusText);\n//   return res.json();\n// }\nconsole.log(\"check res.ok\");",
+  "solution": "// async function fetchData(url) {\n//   const res = await fetch(url);\n//   if (!res.ok) throw new Error(res.statusText);\n//   return res.json();\n// }\nconsole.log(\"check res.ok\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "check res.ok"
+    }
+  ],
+  "hints": [
+    "res.ok is false for HTTP errors",
+    "Throw on non-2xx status"
+  ]
+}

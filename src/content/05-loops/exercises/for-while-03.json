@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-while-03",
+  "title": "While Loop Basics",
+  "starterCode": "let i = 0;\nwhile (i < 5) {\n  console.log(i);\n  i++;\n}",
+  "solution": "let i = 0;\nwhile (i < 5) {\n  console.log(i);\n  i++;\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "0\n1\n2\n3\n4"
+    }
+  ],
+  "hints": [
+    "Initialize counter before loop",
+    "Increment inside loop"
+  ]
+}

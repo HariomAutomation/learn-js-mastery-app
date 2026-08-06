@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-methods-02",
+  "title": "At Negative",
+  "starterCode": "const str = 'hello';\nconsole.log(str.at(-1));",
+  "solution": "const str = 'hello';\nconsole.log(str.at(-1));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "o"
+    }
+  ],
+  "hints": [
+    "at() supports negative",
+    "Last character"
+  ]
+}

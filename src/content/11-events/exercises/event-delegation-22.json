@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-22",
+  "title": "Event Bus",
+  "starterCode": "const bus = {\n  events: {},\n  on(e, fn) { (this.events[e] = this.events[e] || []).push(fn); },\n  emit(e, d) { (this.events[e] || []).forEach(fn => fn(d)); }\n};\nbus.on('message', (m) => console.log(m));\nbus.emit('message', 'hello');",
+  "solution": "const bus = {\n  events: {},\n  on(e, fn) { (this.events[e] = this.events[e] || []).push(fn); },\n  emit(e, d) { (this.events[e] || []).forEach(fn => fn(d)); }\n};\nbus.on('message', (m) => console.log(m));\nbus.emit('message', 'hello');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hello"
+    }
+  ],
+  "hints": [
+    "Simple pub/sub object",
+    "on registers, emit triggers"
+  ]
+}

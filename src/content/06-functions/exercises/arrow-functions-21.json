@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-21",
+  "title": "Concise Body",
+  "starterCode": "const isEven = n => n % 2 === 0;\nconsole.log(isEven(4));\nconsole.log(isEven(3));",
+  "solution": "const isEven = n => n % 2 === 0;\nconsole.log(isEven(4));\nconsole.log(isEven(3));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true\nfalse"
+    }
+  ],
+  "hints": [
+    "Implicit return",
+    "No braces"
+  ]
+}

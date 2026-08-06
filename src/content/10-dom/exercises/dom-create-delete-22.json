@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-22",
+  "title": "appendChild Return",
+  "starterCode": "const parent = document.createElement('div');\nconst child = document.createElement('span');\nconst returned = parent.appendChild(child);\nconsole.log(returned === child);",
+  "solution": "const parent = document.createElement('div');\nconst child = document.createElement('span');\nconst returned = parent.appendChild(child);\nconsole.log(returned === child);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "appendChild returns the appended child",
+    "Same reference is returned"
+  ]
+}

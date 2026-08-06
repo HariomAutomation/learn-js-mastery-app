@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-32",
+  "title": "Promise Chain Value",
+  "starterCode": "Promise.resolve(10)\n  .then(x => x * 2)\n  .then(x => x + 5)\n  .then(x => console.log(x));",
+  "solution": "Promise.resolve(10)\n  .then(x => x * 2)\n  .then(x => x + 5)\n  .then(x => console.log(x));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "25"
+    }
+  ],
+  "hints": [
+    "10 * 2 = 20",
+    "20 + 5 = 25"
+  ]
+}

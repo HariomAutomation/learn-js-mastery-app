@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-06",
+  "title": "Rest in Destructuring",
+  "starterCode": "const obj = {a: 1, b: 2, c: 3, d: 4};\nconst {a, b, ...rest} = obj;\nconsole.log(rest);",
+  "solution": "const obj = {a: 1, b: 2, c: 3, d: 4};\nconst {a, b, ...rest} = obj;\nconsole.log(rest);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{ c: 3, d: 4 }"
+    }
+  ],
+  "hints": [
+    "Rest collects remaining",
+    "Spread into rest"
+  ]
+}

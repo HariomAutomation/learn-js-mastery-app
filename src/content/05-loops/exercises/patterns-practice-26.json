@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-patterns-practice-26",
+  "title": "Star Diamond",
+  "starterCode": "for (let i = 0; i < 5; i++) {\n  let stars = i < 3 ? 2*i+1 : 2*(4-i)+1;\n  let spaces = ' '.repeat(2-Math.abs(i-2));\n  console.log(spaces + '*'.repeat(stars));\n}",
+  "solution": "for (let i = 0; i < 5; i++) {\n  let stars = i < 3 ? 2*i+1 : 2*(4-i)+1;\n  let spaces = ' '.repeat(2-Math.abs(i-2));\n  console.log(spaces + '*'.repeat(stars));\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "  *\n ***\n*****\n ***\n  *"
+    }
+  ],
+  "hints": [
+    "Calculate stars per row",
+    "Add leading spaces"
+  ]
+}

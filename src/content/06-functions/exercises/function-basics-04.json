@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-function-basics-04",
+  "title": "Multiple Parameters",
+  "starterCode": "function multiply(a, b, c) {\n  return a * b * c;\n}\nconsole.log(multiply(2, 3, 4));",
+  "solution": "function multiply(a, b, c) {\n  return a * b * c;\n}\nconsole.log(multiply(2, 3, 4));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "24"
+    }
+  ],
+  "hints": [
+    "Three parameters",
+    "Multiply all"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-arithmetic-comparison-01",
+  "title": "Add two numbers",
+  "starterCode": "const result = 5 + 3;\nconsole.log(result);",
+  "solution": "const result = 5 + 3;\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "8"
+    }
+  ],
+  "hints": [
+    "Use the + operator",
+    "Both operands are numbers"
+  ]
+}

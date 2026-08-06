@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-10",
+  "title": "Use instanceof for type checking",
+  "starterCode": "const d = new Date();\nconsole.log();",
+  "solution": "const d = new Date();\nconsole.log(d instanceof Date);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "instanceof checks prototype chain",
+    "Returns true for Date objects"
+  ]
+}

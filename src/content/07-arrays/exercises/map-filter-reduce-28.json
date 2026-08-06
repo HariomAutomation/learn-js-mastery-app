@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-28",
+  "title": "Filter Truthy",
+  "starterCode": "const arr = [0, 1, false, 2, '', 3];\nconst truthy = arr.____(Boolean);\nconsole.log(truthy);",
+  "solution": "const arr = [0, 1, false, 2, '', 3];\nconst truthy = arr.filter(Boolean);\nconsole.log(truthy);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 1, 2, 3 ]"
+    }
+  ],
+  "hints": [
+    "Boolean as callback",
+    "Filters falsy values"
+  ]
+}

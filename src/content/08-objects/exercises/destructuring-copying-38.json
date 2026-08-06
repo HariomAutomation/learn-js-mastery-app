@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-38",
+  "title": "Merge Objects",
+  "starterCode": "const obj = {};\nObject.assign(obj, {a: 1}, {b: 2}, {a: 3});\nconsole.log(obj);",
+  "solution": "const obj = {};\nObject.assign(obj, {a: 1}, {b: 2}, {a: 3});\nconsole.log(obj);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{ a: 3, b: 2 }"
+    }
+  ],
+  "hints": [
+    "Object.assign with multiple",
+    "Later overrides"
+  ]
+}

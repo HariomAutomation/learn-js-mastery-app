@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-33",
+  "title": "Arrow Conditional",
+  "starterCode": "const classify = x => x > 0 ? 'positive' : x < 0 ? 'negative' : 'zero';\nconsole.log(classify(5));\nconsole.log(classify(-3));\nconsole.log(classify(0));",
+  "solution": "const classify = x => x > 0 ? 'positive' : x < 0 ? 'negative' : 'zero';\nconsole.log(classify(5));\nconsole.log(classify(-3));\nconsole.log(classify(0));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "positive\nnegative\nzero"
+    }
+  ],
+  "hints": [
+    "Nested ternary",
+    "Return string"
+  ]
+}

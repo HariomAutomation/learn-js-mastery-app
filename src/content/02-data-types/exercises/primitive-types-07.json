@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-07",
+  "title": "Get the length of a string",
+  "starterCode": "const word = \"JavaScript\";\nconst len = ;\nconsole.log(len);",
+  "solution": "const word = \"JavaScript\";\nconst len = word.length;\nconsole.log(len);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10"
+    }
+  ],
+  "hints": [
+    "Strings have a .length property",
+    "Access it with dot notation"
+  ]
+}

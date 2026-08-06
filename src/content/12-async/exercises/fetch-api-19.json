@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-19",
+  "title": "Fetch ArrayBuffer",
+  "starterCode": "// response.arrayBuffer() for binary\nconsole.log(\"arrayBuffer() returns ArrayBuffer\");",
+  "solution": "// response.arrayBuffer() for binary\nconsole.log(\"arrayBuffer() returns ArrayBuffer\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "arrayBuffer() returns ArrayBuffer"
+    }
+  ],
+  "hints": [
+    "ArrayBuffer is fixed-length binary",
+    "Use for typed arrays"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-27",
+  "title": "before Multiple",
+  "starterCode": "const container = document.createElement('div');\nconst ref = document.createElement('p');\ncontainer.appendChild(ref);\nref.before('X', 'Y');\nconsole.log(container.childNodes.length);",
+  "solution": "const container = document.createElement('div');\nconst ref = document.createElement('p');\ncontainer.appendChild(ref);\nref.before('X', 'Y');\nconsole.log(container.childNodes.length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3"
+    }
+  ],
+  "hints": [
+    "before can take multiple arguments",
+    "Adds all before reference"
+  ]
+}

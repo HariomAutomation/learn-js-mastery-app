@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-patterns-46",
+  "title": "Zip Longest Fill",
+  "starterCode": "function zipLongestFill(a, b, fill = null) {\n  const maxLen = Math.max(a.length, b.length);\n  return Array.from({length: maxLen}, (_, i) => [a[i] ?? fill, b[i] ?? fill]);\n}\nconsole.log(zipLongestFill([1,2], ['a','b','c','d']));",
+  "solution": "function zipLongestFill(a, b, fill = null) {\n  const maxLen = Math.max(a.length, b.length);\n  return Array.from({length: maxLen}, (_, i) => [a[i] ?? fill, b[i] ?? fill]);\n}\nconsole.log(zipLongestFill([1,2], ['a','b','c','d']));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ [ 1, 'a' ], [ 2, 'b' ], [ null, 'c' ], [ null, 'd' ] ]"
+    }
+  ],
+  "hints": [
+    "Nullish coalescing ??",
+    "Array.from with map"
+  ]
+}

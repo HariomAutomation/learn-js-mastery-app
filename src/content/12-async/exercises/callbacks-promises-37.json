@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-37",
+  "title": "Promise.all Array Methods",
+  "starterCode": "const nums = [1, 2, 3, 4, 5];\nPromise.all(nums.map(n => Promise.resolve(n * 2)))\n  .then(doubled => console.log(doubled));",
+  "solution": "const nums = [1, 2, 3, 4, 5];\nPromise.all(nums.map(n => Promise.resolve(n * 2)))\n  .then(doubled => console.log(doubled));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2,4,6,8,10"
+    }
+  ],
+  "hints": [
+    "Map array to promises",
+    "Use Promise.all on mapped array"
+  ]
+}

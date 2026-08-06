@@ -1,0 +1,12 @@
+{
+  "id": "11-events-event-delegation",
+  "title": "Event delegation — parent pe event handle karo",
+  "starterCode": "// Event delegation simulation — parent pe event handle karo\n\n// 1. List items mein se sirf <li> pe click handle karo\nconst elements = [\n  { tag: \"div\", text: \"Header\" },\n  { tag: \"li\", text: \"Item 1\" },\n  { tag: \"li\", text: \"Item 2\" },\n  { tag: \"span\", text: \"Footer\" },\n  { tag: \"li\", text: \"Item 3\" }\n]\n\n// sirf li elements ko click karo (simulate)\nconst clickedItems = elements\n  .filter(el => // your code here\n  .map(el => el.text)\nconsole.log(clickedItems) // [\"Item 1\", \"Item 2\", \"Item 3\"]\n\n// 2. Data attribute se action dhundho\nconst buttons = [\n  { tag: \"button\", action: \"save\", text: \"Save\" },\n  { tag: \"button\", action: \"delete\", text: \"Delete\" },\n  { tag: \"button\", action: \"save\", text: \"Save Draft\" },\n  { tag: \"button\", action: \"edit\", text: \"Edit\" }\n]\n\nconst saveButtons = buttons.filter(btn => // action === \"save\"\nconsole.log(saveButtons.map(b => b.text)) // [\"Save\", \"Save Draft\"]\n\n// 3. Event target dhundho — kis element pe event hua\nconst event = { target: { id: \"submit-btn\", className: \"primary\" } }\nconst targetId = // event.target ka id nikalo\nconsole.log(targetId) // \"submit-btn\"",
+  "solution": "const elements = [\n  { tag: \"div\", text: \"Header\" },\n  { tag: \"li\", text: \"Item 1\" },\n  { tag: \"li\", text: \"Item 2\" },\n  { tag: \"span\", text: \"Footer\" },\n  { tag: \"li\", text: \"Item 3\" }\n]\nconst clickedItems = elements\n  .filter(el => el.tag === \"li\")\n  .map(el => el.text)\nconsole.log(clickedItems)\n\nconst buttons = [\n  { tag: \"button\", action: \"save\", text: \"Save\" },\n  { tag: \"button\", action: \"delete\", text: \"Delete\" },\n  { tag: \"button\", action: \"save\", text: \"Save Draft\" },\n  { tag: \"button\", action: \"edit\", text: \"Edit\" }\n]\nconst saveButtons = buttons.filter(btn => btn.action === \"save\")\nconsole.log(saveButtons.map(b => b.text))\n\nconst event = { target: { id: \"submit-btn\", className: \"primary\" } }\nconst targetId = event.target.id\nconsole.log(targetId)",
+  "tests": [{ "input": [], "expected": "[\"Item 1\", \"Item 2\", \"Item 3\"]\n[\"Save\", \"Save Draft\"]\nsubmit-btn" }],
+  "hints": [
+    "Event delegation: parent pe event lagao, filter se sahi child dhundho",
+    "Data attributes se action identify karo — jaise data-action=\"save\"",
+    "event.target se pata chalta hai ki exact kis element pe event hua"
+  ]
+}

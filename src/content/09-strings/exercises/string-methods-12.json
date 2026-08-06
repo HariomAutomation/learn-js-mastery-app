@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-methods-12",
+  "title": "Slice Wrap",
+  "starterCode": "console.log('hello'.slice(1, 10));",
+  "solution": "console.log('hello'.slice(1, 10));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "ello"
+    }
+  ],
+  "hints": [
+    "End beyond length ok",
+    "Clamps to end"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-08",
+  "title": "Object.entries()",
+  "starterCode": "const obj = {x: 1, y: 2};\nfor (const [key, val] of Object.entries(obj)) {\n  console.log(key + '=' + val);\n}",
+  "solution": "const obj = {x: 1, y: 2};\nfor (const [key, val] of Object.entries(obj)) {\n  console.log(key + '=' + val);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "x=1\ny=2"
+    }
+  ],
+  "hints": [
+    "Object.entries() returns [key, value] pairs",
+    "Use with for...of"
+  ]
+}

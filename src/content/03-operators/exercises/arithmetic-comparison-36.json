@@ -1,0 +1,15 @@
+{
+  "id": "03-operators-arithmetic-comparison-36",
+  "title": "Math.abs",
+  "starterCode": "const result = Math.abs(-7);\nconsole.log(result);",
+  "solution": "const result = Math.abs(-7);\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "7"
+    }
+  ],
+  "hints": [
+    "Math.abs returns the absolute value"
+  ]
+}

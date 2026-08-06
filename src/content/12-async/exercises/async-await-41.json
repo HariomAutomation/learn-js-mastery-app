@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-41",
+  "title": "Error Propagation",
+  "starterCode": "async function fail() { throw new Error('boom'); }\nasync function caller() {\n  try { await fail(); }\n  catch (e) { console.log(e.message); }\n}\ncaller();",
+  "solution": "async function fail() { throw new Error('boom'); }\nasync function caller() {\n  try { await fail(); }\n  catch (e) { console.log(e.message); }\n}\ncaller();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "boom"
+    }
+  ],
+  "hints": [
+    "Errors propagate up",
+    "Catch with try/catch"
+  ]
+}

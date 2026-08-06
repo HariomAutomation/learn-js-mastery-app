@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-15",
+  "title": "CharCodeAt",
+  "starterCode": "const str = 'A';\nconsole.log(str.charCodeAt(0));",
+  "solution": "const str = 'A';\nconsole.log(str.charCodeAt(0));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "65"
+    }
+  ],
+  "hints": [
+    "Unicode code point",
+    "A is 65"
+  ]
+}

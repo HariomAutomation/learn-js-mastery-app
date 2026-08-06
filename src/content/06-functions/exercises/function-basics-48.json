@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-function-basics-48",
+  "title": "Reducer Pattern",
+  "starterCode": "function createReducer(accumulator, initial) {\n  return (arr) => arr.reduce(accumulator, initial);\n}\nconst sum = createReducer((a, b) => a + b, 0);\nconsole.log(sum([1, 2, 3, 4]));",
+  "solution": "function createReducer(accumulator, initial) {\n  return (arr) => arr.reduce(accumulator, initial);\n}\nconst sum = createReducer((a, b) => a + b, 0);\nconsole.log(sum([1, 2, 3, 4]));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10"
+    }
+  ],
+  "hints": [
+    "Return reducer function",
+    "Use reduce inside"
+  ]
+}

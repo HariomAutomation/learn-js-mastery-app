@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-methods-30",
+  "title": "Pad Short",
+  "starterCode": "console.log('hello'.padStart(3));",
+  "solution": "console.log('hello'.padStart(3));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hello"
+    }
+  ],
+  "hints": [
+    "Already longer",
+    "No padding"
+  ]
+}

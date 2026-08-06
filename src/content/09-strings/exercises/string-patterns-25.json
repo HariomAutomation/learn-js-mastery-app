@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-25",
+  "title": "Isomorphic Strings",
+  "starterCode": "function isIsomorphic(s, t) {\n  if (s.length !== t.length) return false;\n  const mapST = {}, mapTS = {};\n  for (let i = 0; i < s.length; i++) {\n    if (mapST[s[i]] && mapST[s[i]] !== t[i]) return false;\n    if (mapTS[t[i]] && mapTS[t[i]] !== s[i]) return false;\n    mapST[s[i]] = t[i];\n    mapTS[t[i]] = s[i];\n  }\n  return true;\n}\nconsole.log(isIsomorphic('egg', 'add'));\nconsole.log(isIsomorphic('foo', 'bar'));",
+  "solution": "function isIsomorphic(s, t) {\n  if (s.length !== t.length) return false;\n  const mapST = {}, mapTS = {};\n  for (let i = 0; i < s.length; i++) {\n    if (mapST[s[i]] && mapST[s[i]] !== t[i]) return false;\n    if (mapTS[t[i]] && mapTS[t[i]] !== s[i]) return false;\n    mapST[s[i]] = t[i];\n    mapTS[t[i]] = s[i];\n  }\n  return true;\n}\nconsole.log(isIsomorphic('egg', 'add'));\nconsole.log(isIsomorphic('foo', 'bar'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true\nfalse"
+    }
+  ],
+  "hints": [
+    "Two-way mapping",
+    "Check consistency"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-variables-intro-01",
+  "title": "Declare and log a variable",
+  "starterCode": "const x = 10\nconsole.log(x)",
+  "solution": "const x = 10\nconsole.log(x)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10"
+    }
+  ],
+  "hints": [
+    "Use const for constants"
+  ]
+}

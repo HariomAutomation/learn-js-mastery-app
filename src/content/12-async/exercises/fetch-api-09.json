@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-09",
+  "title": "Fetch Headers",
+  "starterCode": "// Set headers in fetch options\nconsole.log(\"headers: { 'Content-Type': 'application/json' }\");",
+  "solution": "// Set headers in fetch options\nconsole.log(\"headers: { 'Content-Type': 'application/json' }\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "headers: { 'Content-Type': 'application/json' }"
+    }
+  ],
+  "hints": [
+    "Headers object in options",
+    "Set Content-Type for JSON"
+  ]
+}

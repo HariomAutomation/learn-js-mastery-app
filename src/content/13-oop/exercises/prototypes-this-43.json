@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-43",
+  "title": "This Lost Fix",
+  "starterCode": "const obj = {\n  name: 'lost',\n  getName() { return this.name; }\n};\nconst fn = obj.getName.bind(obj);\nconsole.log(fn());",
+  "solution": "const obj = {\n  name: 'lost',\n  getName() { return this.name; }\n};\nconst fn = obj.getName.bind(obj);\nconsole.log(fn());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "lost"
+    }
+  ],
+  "hints": [
+    "bind fixes lost this",
+    "Returns bound function"
+  ]
+}

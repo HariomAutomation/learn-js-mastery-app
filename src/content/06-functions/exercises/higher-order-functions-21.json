@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-higher-order-functions-21",
+  "title": "Flow Functions",
+  "starterCode": "const flow = (...fns) => (x) => fns.reduce((v, f) => f(v), x);\nconst add1 = x => x + 1;\nconst double = x => x * 2;\nconst negate = x => -x;\nconst process = flow(add1, double, negate);\nconsole.log(process(3));",
+  "solution": "const flow = (...fns) => (x) => fns.reduce((v, f) => f(v), x);\nconst add1 = x => x + 1;\nconst double = x => x * 2;\nconst negate = x => -x;\nconst process = flow(add1, double, negate);\nconsole.log(process(3));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "-8"
+    }
+  ],
+  "hints": [
+    "Left to right execution",
+    "Like pipe"
+  ]
+}

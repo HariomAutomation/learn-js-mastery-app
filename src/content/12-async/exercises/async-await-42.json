@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-42",
+  "title": "Parallel Await",
+  "starterCode": "async function parallel() {\n  const [a, b] = await Promise.all([\n    Promise.resolve(1),\n    Promise.resolve(2)\n  ]);\n  console.log(a + b);\n}\nparallel();",
+  "solution": "async function parallel() {\n  const [a, b] = await Promise.all([\n    Promise.resolve(1),\n    Promise.resolve(2)\n  ]);\n  console.log(a + b);\n}\nparallel();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3"
+    }
+  ],
+  "hints": [
+    "Promise.all runs in parallel",
+    "Destructure results"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-28",
+  "title": "Default Function",
+  "starterCode": "function createUser({name = 'Anonymous', age = 0} = {}) {\n  return {name, age};\n}\nconsole.log(createUser());\nconsole.log(createUser({name: 'Alice'}));",
+  "solution": "function createUser({name = 'Anonymous', age = 0} = {}) {\n  return {name, age};\n}\nconsole.log(createUser());\nconsole.log(createUser({name: 'Alice'}));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{ name: 'Anonymous', age: 0 }\n{ name: 'Alice', age: 0 }"
+    }
+  ],
+  "hints": [
+    "Default param and object",
+    "Handle no args"
+  ]
+}

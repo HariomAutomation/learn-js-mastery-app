@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-23",
+  "title": "Repository",
+  "starterCode": "class Repository {\n  constructor() { this.items = []; }\n  add(item) { this.items.push(item); }\n  findById(id) { return this.items.find(i => i.id === id); }\n  findAll() { return this.items; }\n}\nconst repo = new Repository();\nrepo.add({ id: 1, name: 'John' });\nconsole.log(repo.findById(1).name);",
+  "solution": "class Repository {\n  constructor() { this.items = []; }\n  add(item) { this.items.push(item); }\n  findById(id) { return this.items.find(i => i.id === id); }\n  findAll() { return this.items; }\n}\nconst repo = new Repository();\nrepo.add({ id: 1, name: 'John' });\nconsole.log(repo.findById(1).name);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "John"
+    }
+  ],
+  "hints": [
+    "Centralized data access",
+    "CRUD operations"
+  ]
+}

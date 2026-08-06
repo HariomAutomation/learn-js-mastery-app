@@ -1,0 +1,17 @@
+{
+  "id": "04-control-flow-early-return-39",
+  "title": "Early return with default - empty",
+  "starterCode": "function greet(name = 'Guest') {\n  if (!name) return 'Hello, stranger!';\n  return `Hello, ${name}!`;\n}\nconsole.log(greet(''));",
+  "solution": "function greet(name = 'Guest') {\n  if (!name) return 'Hello, stranger!';\n  return `Hello, ${name}!`;\n}\nconsole.log(greet(''));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hello, stranger!"
+    }
+  ],
+  "hints": [
+    "'' overrides default",
+    "'' is falsy",
+    "Guard triggers"
+  ]
+}

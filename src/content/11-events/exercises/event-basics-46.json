@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-46",
+  "title": "Event Stop Propagation Check",
+  "starterCode": "const btn = document.querySelector('button');\nbtn.addEventListener('click', function(e) {\n  console.log(e.cancelBubble);\n});",
+  "solution": "const btn = document.querySelector('button');\nbtn.addEventListener('click', function(e) {\n  console.log(e.cancelBubble);\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "false"
+    }
+  ],
+  "hints": [
+    "cancelBubble is legacy stopPropagation",
+    "False by default"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-variables-intro-27",
+  "title": "Optional chaining",
+  "starterCode": "const user = { addr: { city: \"NY\" } }\nconsole.log(user?.addr?.city)\nconsole.log(user?.addr?.zip)",
+  "solution": "const user = { addr: { city: \"NY\" } }\nconsole.log(user?.addr?.city)\nconsole.log(user?.addr?.zip)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "NY\nundefined"
+    }
+  ],
+  "hints": [
+    "?. returns undefined if null/undefined"
+  ]
+}

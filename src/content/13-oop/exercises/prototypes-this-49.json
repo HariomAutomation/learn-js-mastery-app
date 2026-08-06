@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-49",
+  "title": "This in Class",
+  "starterCode": "class Counter {\n  constructor() { this.count = 0; }\n  increment() { this.count++; return this; }\n}\nconst c = new Counter();\nc.increment().increment();\nconsole.log(c.count);",
+  "solution": "class Counter {\n  constructor() { this.count = 0; }\n  increment() { this.count++; return this; }\n}\nconst c = new Counter();\nc.increment().increment();\nconsole.log(c.count);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2"
+    }
+  ],
+  "hints": [
+    "Class methods use this",
+    "Return this for chaining"
+  ]
+}

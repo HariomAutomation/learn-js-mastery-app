@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-23",
+  "title": "Pointer Events",
+  "starterCode": "const el = document.querySelector('.pointer');\nel.addEventListener('pointerdown', function(e) {\n  console.log('pointer down');\n});",
+  "solution": "const el = document.querySelector('.pointer');\nel.addEventListener('pointerdown', function(e) {\n  console.log('pointer down');\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "pointer down"
+    }
+  ],
+  "hints": [
+    "Pointer events unify mouse and touch",
+    "pointerdown is like mousedown"
+  ]
+}

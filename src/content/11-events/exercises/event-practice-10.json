@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-10",
+  "title": "Resize Handler",
+  "starterCode": "// Window resize for responsive behavior\nconsole.log(\"resize handler pattern\");",
+  "solution": "// Window resize for responsive behavior\nconsole.log(\"resize handler pattern\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "resize handler pattern"
+    }
+  ],
+  "hints": [
+    "Debounce resize events",
+    "Check window.innerWidth"
+  ]
+}

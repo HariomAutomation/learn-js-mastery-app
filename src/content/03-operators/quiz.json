@@ -1,0 +1,43 @@
+[
+  {
+    "question": "\"10\" - 1 ka output kya hoga?",
+    "options": ["9", "\"101\"", "\"9\"", "NaN"],
+    "correctIndex": 0,
+    "explanation": "Subtraction string ko number mein convert karta hai. \"10\" - 1 = 9."
+  },
+  {
+    "question": "5 != \"5\" aur 5 !== \"5\" ka result kya hoga?",
+    "options": ["Dono true", "Dono false", "!= false, !== true", "!= true, !== false"],
+    "correctIndex": 2,
+    "explanation": "!= loose comparison (false — same value), !== strict comparison (true — different types)."
+  },
+  {
+    "question": "Ternary operator ka syntax kya hai?",
+    "options": [
+      "condition : trueVal ? falseVal",
+      "condition ? trueVal : falseVal",
+      "if condition ? trueVal : falseVal",
+      "condition -> trueVal else falseVal"
+    ],
+    "correctIndex": 1,
+    "explanation": "condition ? valueIfTrue : valueIfFalse — ternary ka syntax."
+  },
+  {
+    "question": "!!\"hello\" ka output kya hoga?",
+    "options": ["\"hello\"", "true", "false", "undefined"],
+    "correctIndex": 1,
+    "explanation": "!! value ko boolean mein convert karta hai. \"hello\" truthy hai, to true."
+  },
+  {
+    "question": "Short-circuit evaluation mein 'false && kuchBhi' ka result kya hoga?",
+    "options": ["kuchBhi", "false", "true", "undefined"],
+    "correctIndex": 1,
+    "explanation": "&& mein pehle false mila to baaki check nahi hota. Result pehla falsy value hota hai — yahan false."
+  },
+  {
+    "question": "\"default\" || \"fallback\" ka result kya hoga?",
+    "options": ["\"fallback\"", "\"default\"", "true", "false"],
+    "correctIndex": 1,
+    "explanation": "|| mein pehla truthy value return hota hai. \"default\" truthy hai to woh result hoga."
+  }
+]

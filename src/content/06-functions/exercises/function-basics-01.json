@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-function-basics-01",
+  "title": "Function Declaration",
+  "starterCode": "function greet() {\n  console.log('Hello!');\n}\ngreet();",
+  "solution": "function greet() {\n  console.log('Hello!');\n}\ngreet();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hello!"
+    }
+  ],
+  "hints": [
+    "Use function keyword",
+    "Call function after"
+  ]
+}

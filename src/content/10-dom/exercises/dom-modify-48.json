@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-48",
+  "title": "textContent Preserve Tags",
+  "starterCode": "const el = document.querySelector('div');\nel.textContent = '<p>Text</p>';\nconsole.log(el.querySelector('p'));",
+  "solution": "const el = document.querySelector('div');\nel.textContent = '<p>Text</p>';\nconsole.log(el.querySelector('p'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "null"
+    }
+  ],
+  "hints": [
+    "textContent does not create DOM nodes",
+    "Use innerHTML for that"
+  ]
+}

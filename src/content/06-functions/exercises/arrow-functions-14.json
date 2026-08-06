@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-14",
+  "title": "Return Object Arrow",
+  "starterCode": "const makeUser = (name) => ({ name });\nconst user = makeUser('Bob');\nconsole.log(user.name);",
+  "solution": "const makeUser = (name) => ({ name });\nconst user = makeUser('Bob');\nconsole.log(user.name);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Bob"
+    }
+  ],
+  "hints": [
+    "Wrap object in parens",
+    "Implicit return object"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-var-let-const-36",
+  "title": "const reference check 2",
+  "starterCode": "const a = [1, 2]\nconst b = a\nb.push(3)\nconsole.log(a.length)",
+  "solution": "const a = [1, 2]\nconst b = a\nb.push(3)\nconsole.log(a.length)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3"
+    }
+  ],
+  "hints": [
+    "Same reference"
+  ]
+}

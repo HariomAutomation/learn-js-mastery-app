@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-01",
+  "title": "Logical AND with truthy values",
+  "starterCode": "const result = true && 42;\nconsole.log(result);",
+  "solution": "const result = true && 42;\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "42"
+    }
+  ],
+  "hints": [
+    "&& returns first falsy or last value",
+    "Both are truthy, so returns last"
+  ]
+}

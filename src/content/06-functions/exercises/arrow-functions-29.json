@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-29",
+  "title": "Arrow Find Index",
+  "starterCode": "const arr = [10, 20, 30, 40];\nconst idx = arr.findIndex(x => x === 30);\nconsole.log(idx);",
+  "solution": "const arr = [10, 20, 30, 40];\nconst idx = arr.findIndex(x => x === 30);\nconsole.log(idx);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2"
+    }
+  ],
+  "hints": [
+    "findIndex returns index",
+    "Arrow callback"
+  ]
+}

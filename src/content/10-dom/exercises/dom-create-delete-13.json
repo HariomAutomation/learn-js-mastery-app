@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-13",
+  "title": "replaceChild",
+  "starterCode": "const parent = document.createElement('div');\nconst old = document.createElement('p');\nparent.appendChild(old);\nconst newEl = document.createElement('span');\nparent.replaceChild(newEl, old);\nconsole.log(parent.children[0].tagName);",
+  "solution": "const parent = document.createElement('div');\nconst old = document.createElement('p');\nparent.appendChild(old);\nconst newEl = document.createElement('span');\nparent.replaceChild(newEl, old);\nconsole.log(parent.children[0].tagName);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "SPAN"
+    }
+  ],
+  "hints": [
+    "replaceChild(newNode, oldNode)",
+    "Check the tag of remaining child"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-09",
+  "title": "parentElement Property",
+  "starterCode": "const el = document.querySelector('.child');\nconsole.log(el.parentElement);",
+  "solution": "const el = document.querySelector('.child');\nconsole.log(el.parentElement);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "null"
+    }
+  ],
+  "hints": [
+    "parentElement returns the parent node",
+    "Returns null if no parent exists"
+  ]
+}

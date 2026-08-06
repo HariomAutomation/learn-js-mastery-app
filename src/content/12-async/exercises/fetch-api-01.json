@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-01",
+  "title": "Fetch GET",
+  "starterCode": "// fetch() makes HTTP requests\nconsole.log(\"fetch returns a Promise\");",
+  "solution": "// fetch() makes HTTP requests\nconsole.log(\"fetch returns a Promise\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "fetch returns a Promise"
+    }
+  ],
+  "hints": [
+    "fetch() is built into browsers",
+    "Returns a Promise"
+  ]
+}

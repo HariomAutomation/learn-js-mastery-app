@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-35",
+  "title": "Toggle Class on Click",
+  "starterCode": "const box = document.querySelector('.box');\nbox.addEventListener('click', function() {\n  this.classList.toggle('active');\n  console.log(this.classList.contains('active'));\n});",
+  "solution": "const box = document.querySelector('.box');\nbox.addEventListener('click', function() {\n  this.classList.toggle('active');\n  console.log(this.classList.contains('active'));\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "classList.toggle adds/removes class",
+    "Check if active after toggle"
+  ]
+}

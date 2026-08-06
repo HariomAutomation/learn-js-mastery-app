@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-function-basics-26",
+  "title": "Purity Test",
+  "starterCode": "function add(a, b) {\n  return a + b;\n}\nconsole.log(add(2, 3) === add(2, 3));",
+  "solution": "function add(a, b) {\n  return a + b;\n}\nconsole.log(add(2, 3) === add(2, 3));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "Same input gives same output",
+    "No side effects"
+  ]
+}

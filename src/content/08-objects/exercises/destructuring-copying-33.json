@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-33",
+  "title": "Default Value Types",
+  "starterCode": "const {a = 1, b = 'hello', c = [1, 2], d = {x: 1}} = {};\nconsole.log(a, b, c.length, d.x);",
+  "solution": "const {a = 1, b = 'hello', c = [1, 2], d = {x: 1}} = {};\nconsole.log(a, b, c.length, d.x);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1 hello 2 1"
+    }
+  ],
+  "hints": [
+    "Different default types",
+    "All work as defaults"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-03",
+  "title": "Singleton",
+  "starterCode": "class Database {\n  static instance;\n  constructor() {\n    if (Database.instance) return Database.instance;\n    Database.instance = this;\n    this.connected = true;\n  }\n}\nconst db1 = new Database();\nconst db2 = new Database();\nconsole.log(db1 === db2);",
+  "solution": "class Database {\n  static instance;\n  constructor() {\n    if (Database.instance) return Database.instance;\n    Database.instance = this;\n    this.connected = true;\n  }\n}\nconst db1 = new Database();\nconst db2 = new Database();\nconsole.log(db1 === db2);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "Singleton has one instance",
+    "Check if instance exists"
+  ]
+}

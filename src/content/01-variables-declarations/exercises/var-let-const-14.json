@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-var-let-const-14",
+  "title": "let not hoisted value",
+  "starterCode": "try {\n  console.log(x)\n  let x = 5\n} catch(e) {\n  console.log(\"error\")\n}",
+  "solution": "try {\n  console.log(x)\n  let x = 5\n} catch(e) {\n  console.log(\"error\")\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "error"
+    }
+  ],
+  "hints": [
+    "let is not initialized before declaration"
+  ]
+}

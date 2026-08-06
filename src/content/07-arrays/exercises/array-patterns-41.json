@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-patterns-41",
+  "title": "Flatten Reduce",
+  "starterCode": "const arr = [[1, 2], [3, 4], [5, 6]];\nconst flat = arr.reduce((acc, curr) => acc.concat(curr), []);\nconsole.log(flat);",
+  "solution": "const arr = [[1, 2], [3, 4], [5, 6]];\nconst flat = arr.reduce((acc, curr) => acc.concat(curr), []);\nconsole.log(flat);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 1, 2, 3, 4, 5, 6 ]"
+    }
+  ],
+  "hints": [
+    "Reduce with concat",
+    "Flatten one level"
+  ]
+}

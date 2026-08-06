@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-34",
+  "title": "Fetch Headers Iterate",
+  "starterCode": "// for (const [key, value] of response.headers) {\n//   console.log(key, value);\n// }\nconsole.log(\"iterate response headers\");",
+  "solution": "// for (const [key, value] of response.headers) {\n//   console.log(key, value);\n// }\nconsole.log(\"iterate response headers\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "iterate response headers"
+    }
+  ],
+  "hints": [
+    "Headers is iterable",
+    "Use for...of to iterate"
+  ]
+}

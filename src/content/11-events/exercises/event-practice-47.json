@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-47",
+  "title": "Swipe Detection",
+  "starterCode": "// touchstart + touchmove for swipe\nconsole.log(\"swipe gesture pattern\");",
+  "solution": "// touchstart + touchmove for swipe\nconsole.log(\"swipe gesture pattern\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "swipe gesture pattern"
+    }
+  ],
+  "hints": [
+    "Track touch positions",
+    "Calculate distance and direction"
+  ]
+}

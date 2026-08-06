@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-41",
+  "title": "classList Entries",
+  "starterCode": "const el = document.querySelector('.box');\nconst entries = [...el.classList.entries()];\nconsole.log(entries.length);",
+  "solution": "const el = document.querySelector('.box');\nconst entries = [...el.classList.entries()];\nconsole.log(entries.length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1"
+    }
+  ],
+  "hints": [
+    "entries returns index-class pairs",
+    "Spread to array to get length"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-12",
+  "title": "CamelCase",
+  "starterCode": "function camelCase(str) {\n  return str.replace(/[^a-zA-Z0-9]+(.)/g, (_, c) => c.toUpperCase());\n}\nconsole.log(camelCase('hello world'));",
+  "solution": "function camelCase(str) {\n  return str.replace(/[^a-zA-Z0-9]+(.)/g, (_, c) => c.toUpperCase());\n}\nconsole.log(camelCase('hello world'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "helloWorld"
+    }
+  ],
+  "hints": [
+    "Replace separator + char",
+    "Capitalize after sep"
+  ]
+}

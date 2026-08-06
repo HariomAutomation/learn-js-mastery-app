@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-03",
+  "title": "Promise Creation",
+  "starterCode": "const promise = new Promise((resolve, reject) => {\n  // TODO: resolve the promise\n  resolve('done');\n});\npromise.then(result => console.log(result));",
+  "solution": "const promise = new Promise((resolve, reject) => {\n  resolve('done');\n});\npromise.then(result => console.log(result));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "done"
+    }
+  ],
+  "hints": [
+    "Promise constructor takes executor",
+    "resolve() fulfills the promise"
+  ]
+}

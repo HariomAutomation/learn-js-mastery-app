@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-45",
+  "title": "If with NaN check",
+  "starterCode": "const value = NaN;\nif (Number.isNaN(value)) {\n  console.log('is NaN');\n} else {\n  console.log('not NaN');\n}",
+  "solution": "const value = NaN;\nif (Number.isNaN(value)) {\n  console.log('is NaN');\n} else {\n  console.log('not NaN');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "is NaN"
+    }
+  ],
+  "hints": [
+    "Number.isNaN checks for NaN",
+    "value is NaN"
+  ]
+}

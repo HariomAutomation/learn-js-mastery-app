@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-patterns-practice-10",
+  "title": "Hollow Rectangle",
+  "starterCode": "for (let i = 0; i < 4; i++) {\n  let row = '';\n  for (let j = 0; j < 6; j++) {\n    if (i === 0 || i === 3 || j === 0 || j === 5) {\n      row += '#';\n    } else {\n      row += ' ';\n    }\n  }\n  console.log(row);\n}",
+  "solution": "for (let i = 0; i < 4; i++) {\n  let row = '';\n  for (let j = 0; j < 6; j++) {\n    if (i === 0 || i === 3 || j === 0 || j === 5) {\n      row += '#';\n    } else {\n      row += ' ';\n    }\n  }\n  console.log(row);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "######\n#    #\n#    #\n######"
+    }
+  ],
+  "hints": [
+    "Print # on borders",
+    "Spaces inside"
+  ]
+}

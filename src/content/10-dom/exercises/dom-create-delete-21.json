@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-21",
+  "title": "create Text Node",
+  "starterCode": "const parent = document.createElement('div');\nconst textNode = document.createTextNode('Hello');\nparent.appendChild(textNode);\nconsole.log(parent.textContent);",
+  "solution": "const parent = document.createElement('div');\nconst textNode = document.createTextNode('Hello');\nparent.appendChild(textNode);\nconsole.log(parent.textContent);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hello"
+    }
+  ],
+  "hints": [
+    "createTextNode creates a text node",
+    "appendChild adds it to parent"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-29",
+  "title": "scope chain lookup order",
+  "starterCode": "var x = 1\nfunction a() {\n  console.log(x)\n}\nfunction b() {\n  var x = 2\n  a()\n}\nb()",
+  "solution": "var x = 1\nfunction a() {\n  console.log(x)\n}\nfunction b() {\n  var x = 2\n  a()\n}\nb()",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1"
+    }
+  ],
+  "hints": [
+    "a looks at its own scope chain, not b's"
+  ]
+}

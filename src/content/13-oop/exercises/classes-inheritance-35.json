@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-35",
+  "title": "Super Constructor",
+  "starterCode": "class Base {\n  constructor(x) { this.x = x; }\n}\nclass Child extends Base {\n  constructor(x, y) {\n    super(x);\n    this.y = y;\n  }\n}\nconst c = new Child(1, 2);\nconsole.log(c.x + c.y);",
+  "solution": "class Base {\n  constructor(x) { this.x = x; }\n}\nclass Child extends Base {\n  constructor(x, y) {\n    super(x);\n    this.y = y;\n  }\n}\nconst c = new Child(1, 2);\nconsole.log(c.x + c.y);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3"
+    }
+  ],
+  "hints": [
+    "super() must be called first",
+    "Then set own properties"
+  ]
+}

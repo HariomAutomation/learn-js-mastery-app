@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-26",
+  "title": "innerHTML Create Elements",
+  "starterCode": "const el = document.querySelector('.container');\nel.innerHTML = '<p>Para 1</p><p>Para 2</p>';\nconsole.log(el.children.length);",
+  "solution": "const el = document.querySelector('.container');\nel.innerHTML = '<p>Para 1</p><p>Para 2</p>';\nconsole.log(el.children.length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2"
+    }
+  ],
+  "hints": [
+    "innerHTML creates DOM elements",
+    "Check children length"
+  ]
+}

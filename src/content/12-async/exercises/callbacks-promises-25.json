@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-25",
+  "title": "AllSettled Status",
+  "starterCode": "Promise.allSettled([\n  Promise.resolve('ok'),\n  Promise.reject('fail')\n]).then(results => {\n  console.log(results[0].status + ' ' + results[1].status);\n});",
+  "solution": "Promise.allSettled([\n  Promise.resolve('ok'),\n  Promise.reject('fail')\n]).then(results => {\n  console.log(results[0].status + ' ' + results[1].status);\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "fulfilled rejected"
+    }
+  ],
+  "hints": [
+    "status is 'fulfilled' or 'rejected'",
+    "Check each result's status"
+  ]
+}

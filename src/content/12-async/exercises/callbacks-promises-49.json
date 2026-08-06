@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-49",
+  "title": "Promise.all Settled Order",
+  "starterCode": "Promise.allSettled([\n  Promise.resolve(1),\n  Promise.reject(2),\n  Promise.resolve(3)\n]).then(r => console.log(r.map(x => x.status)));",
+  "solution": "Promise.allSettled([\n  Promise.resolve(1),\n  Promise.reject(2),\n  Promise.resolve(3)\n]).then(r => console.log(r.map(x => x.status)));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "fulfilled,rejected,fulfilled"
+    }
+  ],
+  "hints": [
+    "Results maintain input order",
+    "Each has status property"
+  ]
+}

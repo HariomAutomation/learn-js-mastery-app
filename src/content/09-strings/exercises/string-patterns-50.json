@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-50",
+  "title": "Count Substrings",
+  "starterCode": "function countSubstrings(s, t) {\n  let count = 0;\n  for (let i = 0; i <= s.length - t.length; i++) {\n    if (s.substring(i, i + t.length) === t) count++;\n  }\n  return count;\n}\nconsole.log(countSubstrings('abcabc', 'abc'));",
+  "solution": "function countSubstrings(s, t) {\n  let count = 0;\n  for (let i = 0; i <= s.length - t.length; i++) {\n    if (s.substring(i, i + t.length) === t) count++;\n  }\n  return count;\n}\nconsole.log(countSubstrings('abcabc', 'abc'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2"
+    }
+  ],
+  "hints": [
+    "Slide window over string",
+    "Count exact matches"
+  ]
+}

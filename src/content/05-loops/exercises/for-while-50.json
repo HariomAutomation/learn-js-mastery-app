@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-while-50",
+  "title": "For Loop Even Numbers",
+  "starterCode": "for (let i = 2; i <= 10; i += 2) {\n  console.log(i);\n}",
+  "solution": "for (let i = 2; i <= 10; i += 2) {\n  console.log(i);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2\n4\n6\n8\n10"
+    }
+  ],
+  "hints": [
+    "Start at 2",
+    "Increment by 2"
+  ]
+}

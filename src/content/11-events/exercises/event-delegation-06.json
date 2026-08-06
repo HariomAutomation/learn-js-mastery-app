@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-06",
+  "title": "stopPropagation Effect",
+  "starterCode": "const inner = document.querySelector('.inner');\ninner.addEventListener('click', function(e) {\n  e.stopPropagation();\n  console.log('inner only');\n});",
+  "solution": "const inner = document.querySelector('.inner');\ninner.addEventListener('click', function(e) {\n  e.stopPropagation();\n  console.log('inner only');\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "inner only"
+    }
+  ],
+  "hints": [
+    "stopPropagation stops event bubbling",
+    "Parent handlers won't fire"
+  ]
+}

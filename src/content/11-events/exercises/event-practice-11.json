@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-11",
+  "title": "Double Click Edit",
+  "starterCode": "// dblclick to enter edit mode\nconsole.log(\"double click edit pattern\");",
+  "solution": "// dblclick to enter edit mode\nconsole.log(\"double click edit pattern\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "double click edit pattern"
+    }
+  ],
+  "hints": [
+    "dblclick event on element",
+    "Replace with input on double click"
+  ]
+}

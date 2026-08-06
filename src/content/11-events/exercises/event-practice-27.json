@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-27",
+  "title": "Lazy Load",
+  "starterCode": "// Intersection Observer for lazy loading\nconsole.log(\"lazy load pattern\");",
+  "solution": "// Intersection Observer for lazy loading\nconsole.log(\"lazy load pattern\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "lazy load pattern"
+    }
+  ],
+  "hints": [
+    "Use IntersectionObserver",
+    "Load when element enters viewport"
+  ]
+}

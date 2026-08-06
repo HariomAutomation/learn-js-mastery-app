@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-closures-iife-15",
+  "title": "Counter Increment Decrement",
+  "starterCode": "function createCounter(start = 0) {\n  let count = start;\n  return {\n    inc: () => ++count,\n    dec: () => --count,\n    val: () => count\n  };\n}\nconst c = createCounter(10);\nc.inc();\nc.inc();\nc.dec();\nconsole.log(c.val());",
+  "solution": "function createCounter(start = 0) {\n  let count = start;\n  return {\n    inc: () => ++count,\n    dec: () => --count,\n    val: () => count\n  };\n}\nconst c = createCounter(10);\nc.inc();\nc.inc();\nc.dec();\nconsole.log(c.val());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "11"
+    }
+  ],
+  "hints": [
+    "Start with parameter",
+    "Methods modify count"
+  ]
+}

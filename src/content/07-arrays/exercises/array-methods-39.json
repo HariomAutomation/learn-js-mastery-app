@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-methods-39",
+  "title": "Sort Descending",
+  "starterCode": "const arr = [5, 2, 8, 1, 9];\narr.____((a, b) => b - a);\nconsole.log(arr);",
+  "solution": "const arr = [5, 2, 8, 1, 9];\narr.sort((a, b) => b - a);\nconsole.log(arr);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 9, 8, 5, 2, 1 ]"
+    }
+  ],
+  "hints": [
+    "b - a for descending",
+    "Reverse compare order"
+  ]
+}

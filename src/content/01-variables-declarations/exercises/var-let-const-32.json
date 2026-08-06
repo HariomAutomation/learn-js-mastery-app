@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-var-let-const-32",
+  "title": "let inside block",
+  "starterCode": "{\n  let x = 10\n}\nconsole.log(typeof x)",
+  "solution": "{\n  let x = 10\n}\nconsole.log(typeof x)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "undefined"
+    }
+  ],
+  "hints": [
+    "let is block-scoped"
+  ]
+}

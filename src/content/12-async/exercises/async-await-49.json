@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-49",
+  "title": "Async Reduce",
+  "starterCode": "async function reduceAsync(arr, fn, init) {\n  let acc = init;\n  for (const item of arr) acc = await fn(acc, item);\n  return acc;\n}\nreduceAsync([1, 2, 3], async (a, b) => a + b, 0)\n  .then(r => console.log(r));",
+  "solution": "async function reduceAsync(arr, fn, init) {\n  let acc = init;\n  for (const item of arr) acc = await fn(acc, item);\n  return acc;\n}\nreduceAsync([1, 2, 3], async (a, b) => a + b, 0)\n  .then(r => console.log(r));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "6"
+    }
+  ],
+  "hints": [
+    "Sequential reduction",
+    "Await each step"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-44",
+  "title": "Complete 7",
+  "starterCode": "const obj = {x: 10, y: 20};\nconsole.log(JSON.stringify(obj));",
+  "solution": "const obj = {x: 10, y: 20};\nconsole.log(JSON.stringify(obj));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{\"x\":10,\"y\":20}"
+    }
+  ],
+  "hints": [
+    "JSON.stringify serializes",
+    "Returns string"
+  ]
+}

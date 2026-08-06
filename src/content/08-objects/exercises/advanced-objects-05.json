@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-05",
+  "title": "Property Descriptors",
+  "starterCode": "const obj = {};\nObject.defineProperty(obj, 'x', {value: 10, writable: false});\nobj.x = 20;\nconsole.log(obj.x);",
+  "solution": "const obj = {};\nObject.defineProperty(obj, 'x', {value: 10, writable: false});\nobj.x = 20;\nconsole.log(obj.x);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10"
+    }
+  ],
+  "hints": [
+    "writable prevents change",
+    "Assignment fails"
+  ]
+}

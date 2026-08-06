@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-45",
+  "title": "Event Prevent Default Check",
+  "starterCode": "const link = document.querySelector('a');\nlink.addEventListener('click', function(e) {\n  const prevented = e.defaultPrevented;\n  console.log(prevented);\n});",
+  "solution": "const link = document.querySelector('a');\nlink.addEventListener('click', function(e) {\n  const prevented = e.defaultPrevented;\n  console.log(prevented);\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "false"
+    }
+  ],
+  "hints": [
+    "defaultPrevented checks if prevented",
+    "False until preventDefault called"
+  ]
+}

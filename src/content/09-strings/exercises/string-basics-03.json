@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-03",
+  "title": "Template Literals",
+  "starterCode": "const name = 'Alice';\nconst msg = ____;\nconsole.log(msg);",
+  "solution": "const name = 'Alice';\nconst msg = `Hello, ${name}!`;\nconsole.log(msg);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hello, Alice!"
+    }
+  ],
+  "hints": [
+    "Use backticks",
+    "Interpolate with ${}"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-variables-intro-11",
+  "title": "Augmented assignment",
+  "starterCode": "let x = 10\nx += 5\nx -= 3\nconsole.log(x)",
+  "solution": "let x = 10\nx += 5\nx -= 3\nconsole.log(x)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "12"
+    }
+  ],
+  "hints": [
+    "+= adds, -= subtracts"
+  ]
+}

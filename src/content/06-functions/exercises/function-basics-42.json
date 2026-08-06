@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-function-basics-42",
+  "title": "Tap Function",
+  "starterCode": "function tap(fn) {\n  return (value) => {\n    fn(value);\n    return value;\n  };\n}\nconst log = tap(x => console.log('Logged:', x));\nconst result = log(42);\nconsole.log('Result:', result);",
+  "solution": "function tap(fn) {\n  return (value) => {\n    fn(value);\n    return value;\n  };\n}\nconst log = tap(x => console.log('Logged:', x));\nconst result = log(42);\nconsole.log('Result:', result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Logged: 42\nResult: 42"
+    }
+  ],
+  "hints": [
+    "Side effect then return",
+    "Useful for debugging"
+  ]
+}

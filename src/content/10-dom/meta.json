@@ -1,0 +1,8 @@
+{
+  "id": "10-dom",
+  "title": "DOM Manipulation",
+  "order": 10,
+  "description": "Select, create, modify, and delete DOM elements",
+  "prerequisites": ["09-strings"],
+  "lessonCount": 3
+}

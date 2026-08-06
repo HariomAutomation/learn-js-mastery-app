@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-patterns-practice-37",
+  "title": "Factorial Recursive",
+  "starterCode": "function factorial(n) {\n  if (n <= 1) return 1;\n  return n * factorial(n - 1);\n}\nconsole.log(factorial(6));",
+  "solution": "function factorial(n) {\n  if (n <= 1) return 1;\n  return n * factorial(n - 1);\n}\nconsole.log(factorial(6));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "720"
+    }
+  ],
+  "hints": [
+    "Base case: n <= 1",
+    "Recursive call"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-14",
+  "title": "lastElementChild",
+  "starterCode": "const el = document.querySelector('.parent');\nconsole.log(el.lastElementChild);",
+  "solution": "const el = document.querySelector('.parent');\nconsole.log(el.lastElementChild);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "null"
+    }
+  ],
+  "hints": [
+    "Returns last child that is an element",
+    "Opposite of firstElementChild"
+  ]
+}

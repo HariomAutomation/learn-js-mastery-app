@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-function-basics-19",
+  "title": "IIFE",
+  "starterCode": "(function() {\n  console.log('Immediately invoked!');\n})();",
+  "solution": "(function() {\n  console.log('Immediately invoked!');\n})();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Immediately invoked!"
+    }
+  ],
+  "hints": [
+    "Wrap in parentheses",
+    "Call immediately ()"
+  ]
+}

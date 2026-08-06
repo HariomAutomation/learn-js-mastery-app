@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-09",
+  "title": "Prototype Methods",
+  "starterCode": "function Person(name) {\n  this.name = name;\n}\nPerson.prototype.greet = function() {\n  return 'Hello ' + this.name;\n};\nconst p = new Person('John');\nconsole.log(p.greet());",
+  "solution": "function Person(name) {\n  this.name = name;\n}\nPerson.prototype.greet = function() {\n  return 'Hello ' + this.name;\n};\nconst p = new Person('John');\nconsole.log(p.greet());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hello John"
+    }
+  ],
+  "hints": [
+    "Methods go on prototype",
+    "Shared across instances"
+  ]
+}

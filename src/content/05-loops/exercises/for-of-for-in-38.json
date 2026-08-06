@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-38",
+  "title": "For...Of Array Reverse",
+  "starterCode": "const arr = [10, 20, 30, 40];\nfor (const val of [...arr].reverse()) {\n  console.log(val);\n}",
+  "solution": "const arr = [10, 20, 30, 40];\nfor (const val of [...arr].reverse()) {\n  console.log(val);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "40\n30\n20\n10"
+    }
+  ],
+  "hints": [
+    "Spread to copy array",
+    "Reverse before iterating"
+  ]
+}

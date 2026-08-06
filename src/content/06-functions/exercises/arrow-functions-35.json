@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-35",
+  "title": "Arrow Default Params",
+  "starterCode": "const greet = (name = 'World', greeting = 'Hello') => `${greeting}, ${name}!`;\nconsole.log(greet());\nconsole.log(greet('Alice'));\nconsole.log(greet('Bob', 'Hi'));",
+  "solution": "const greet = (name = 'World', greeting = 'Hello') => `${greeting}, ${name}!`;\nconsole.log(greet());\nconsole.log(greet('Alice'));\nconsole.log(greet('Bob', 'Hi'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hello, World!\nHello, Alice!\nHi, Bob!"
+    }
+  ],
+  "hints": [
+    "Multiple defaults",
+    "Override one at a time"
+  ]
+}

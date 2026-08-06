@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-16",
+  "title": "Custom Events",
+  "starterCode": "const event = new CustomEvent('userLogin', { detail: { name: 'John' } });\ndocument.addEventListener('userLogin', function(e) {\n  console.log(e.detail.name);\n});\ndocument.dispatchEvent(event);",
+  "solution": "const event = new CustomEvent('userLogin', { detail: { name: 'John' } });\ndocument.addEventListener('userLogin', function(e) {\n  console.log(e.detail.name);\n});\ndocument.dispatchEvent(event);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "John"
+    }
+  ],
+  "hints": [
+    "CustomEvent creates custom events",
+    "detail carries custom data"
+  ]
+}

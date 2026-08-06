@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-42",
+  "title": "AbortController Events",
+  "starterCode": "const controller = new AbortController();\ndocument.addEventListener('click', () => {}, { signal: controller.signal });\ncontroller.abort();\nconsole.log('aborted');",
+  "solution": "const controller = new AbortController();\ndocument.addEventListener('click', () => {}, { signal: controller.signal });\ncontroller.abort();\nconsole.log('aborted');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "aborted"
+    }
+  ],
+  "hints": [
+    "AbortController removes signal listeners",
+    "Pass signal option"
+  ]
+}

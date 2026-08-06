@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-var-let-const-16",
+  "title": "var while scope",
+  "starterCode": "var i = 0\nwhile (i < 3) {\n  var result = i\n  i++\n}\nconsole.log(result)",
+  "solution": "var i = 0\nwhile (i < 3) {\n  var result = i\n  i++\n}\nconsole.log(result)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2"
+    }
+  ],
+  "hints": [
+    "var leaks out of loop"
+  ]
+}

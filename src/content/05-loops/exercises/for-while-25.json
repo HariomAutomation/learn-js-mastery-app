@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-while-25",
+  "title": "Build String In Loop",
+  "starterCode": "let result = \"\";\nfor (let i = 65; i < 70; i++) {\n  result += String.fromCharCode(i);\n}\nconsole.log(result);",
+  "solution": "let result = \"\";\nfor (let i = 65; i < 70; i++) {\n  result += String.fromCharCode(i);\n}\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "ABCDE"
+    }
+  ],
+  "hints": [
+    "ASCII A is 65",
+    "Use String.fromCharCode()"
+  ]
+}

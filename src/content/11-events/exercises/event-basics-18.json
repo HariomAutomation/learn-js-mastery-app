@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-18",
+  "title": "Contextmenu Event",
+  "starterCode": "document.addEventListener('contextmenu', function(e) {\n  e.preventDefault();\n  console.log('right clicked');\n});",
+  "solution": "document.addEventListener('contextmenu', function(e) {\n  e.preventDefault();\n  console.log('right clicked');\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "right clicked"
+    }
+  ],
+  "hints": [
+    "Fires on right-click",
+    "Use preventDefault to block menu"
+  ]
+}

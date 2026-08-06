@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-patterns-practice-31",
+  "title": "Nested Loop Pattern",
+  "starterCode": "for (let i = 1; i <= 4; i++) {\n  let row = '';\n  for (let j = 1; j <= i; j++) {\n    row += j;\n  }\n  console.log(row);\n}",
+  "solution": "for (let i = 1; i <= 4; i++) {\n  let row = '';\n  for (let j = 1; j <= i; j++) {\n    row += j;\n  }\n  console.log(row);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1\n12\n123\n1234"
+    }
+  ],
+  "hints": [
+    "Inner loop up to i",
+    "Append j"
+  ]
+}

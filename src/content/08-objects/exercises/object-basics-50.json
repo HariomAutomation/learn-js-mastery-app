@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-50",
+  "title": "Spread Override",
+  "starterCode": "const defaults = {color: 'red', size: 'medium'};\nconst custom = {size: 'large'};\nconst result = {...defaults, ...custom};\nconsole.log(result.color, result.size);",
+  "solution": "const defaults = {color: 'red', size: 'medium'};\nconst custom = {size: 'large'};\nconst result = {...defaults, ...custom};\nconsole.log(result.color, result.size);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "red large"
+    }
+  ],
+  "hints": [
+    "Spread merge",
+    "Override specific"
+  ]
+}

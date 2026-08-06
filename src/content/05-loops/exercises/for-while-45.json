@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-while-45",
+  "title": "Reverse String With Index",
+  "starterCode": "const str = \"abcde\";\nlet result = \"\";\nfor (let i = str.length - 1; i >= 0; i--) {\n  result += str[i];\n}\nconsole.log(result);",
+  "solution": "const str = \"abcde\";\nlet result = \"\";\nfor (let i = str.length - 1; i >= 0; i--) {\n  result += str[i];\n}\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "edcba"
+    }
+  ],
+  "hints": [
+    "Start at str.length - 1",
+    "Decrement to 0"
+  ]
+}

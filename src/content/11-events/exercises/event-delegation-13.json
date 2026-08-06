@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-13",
+  "title": "Passive Scroll",
+  "starterCode": "window.addEventListener('scroll', function() {\n  console.log('scrolling');\n}, { passive: true });\nconsole.log('passive scroll');",
+  "solution": "window.addEventListener('scroll', function() {\n  console.log('scrolling');\n}, { passive: true });\nconsole.log('passive scroll');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "passive scroll"
+    }
+  ],
+  "hints": [
+    "passive: true for scroll performance",
+    "Browser doesn't wait for preventDefault"
+  ]
+}

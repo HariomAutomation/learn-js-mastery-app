@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-21",
+  "title": "removeAttribute Check",
+  "starterCode": "const el = document.querySelector('button');\nel.removeAttribute('type');\nconsole.log(el.hasAttribute('type'));",
+  "solution": "const el = document.querySelector('button');\nel.removeAttribute('type');\nconsole.log(el.hasAttribute('type'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "false"
+    }
+  ],
+  "hints": [
+    "removeAttribute removes the attribute",
+    "hasAttribute returns false"
+  ]
+}

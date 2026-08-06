@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-24",
+  "title": "Once Option",
+  "starterCode": "const btn = document.querySelector('button');\nbtn.addEventListener('click', function() {\n  console.log('clicked once');\n}, { once: true });\nconsole.log('listener with once option');",
+  "solution": "const btn = document.querySelector('button');\nbtn.addEventListener('click', function() {\n  console.log('clicked once');\n}, { once: true });\nconsole.log('listener with once option');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "listener with once option"
+    }
+  ],
+  "hints": [
+    "once: true removes listener after first call",
+    "Third argument is options object"
+  ]
+}

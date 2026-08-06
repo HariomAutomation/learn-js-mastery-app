@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-07",
+  "title": "Keyup Event",
+  "starterCode": "document.addEventListener('keyup', function(e) {\n  console.log(e.type);\n});",
+  "solution": "document.addEventListener('keyup', function(e) {\n  console.log(e.type);\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "keyup"
+    }
+  ],
+  "hints": [
+    "Fires when key is released",
+    "Event type is 'keyup'"
+  ]
+}

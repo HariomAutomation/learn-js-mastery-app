@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-40",
+  "title": "Reverse Vowels",
+  "starterCode": "function reverseVowels(str) {\n  const arr = str.split('');\n  let l = 0, r = arr.length - 1;\n  const vowels = 'aeiouAEIOU';\n  while (l < r) {\n    while (l < r && !vowels.includes(arr[l])) l++;\n    while (l < r && !vowels.includes(arr[r])) r--;\n    [arr[l], arr[r]] = [arr[r], arr[l]];\n    l++; r--;\n  }\n  return arr.join('');\n}\nconsole.log(reverseVowels('hello'));",
+  "solution": "function reverseVowels(str) {\n  const arr = str.split('');\n  let l = 0, r = arr.length - 1;\n  const vowels = 'aeiouAEIOU';\n  while (l < r) {\n    while (l < r && !vowels.includes(arr[l])) l++;\n    while (l < r && !vowels.includes(arr[r])) r--;\n    [arr[l], arr[r]] = [arr[r], arr[l]];\n    l++; r--;\n  }\n  return arr.join('');\n}\nconsole.log(reverseVowels('hello'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "holle"
+    }
+  ],
+  "hints": [
+    "Two pointer swap",
+    "Only swap vowels"
+  ]
+}

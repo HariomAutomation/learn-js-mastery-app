@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-01",
+  "title": "Todo List Events",
+  "starterCode": "// Adding items, toggling complete, deleting\nconsole.log(\"todo list with events\");",
+  "solution": "// Adding items, toggling complete, deleting\nconsole.log(\"todo list with events\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "todo list with events"
+    }
+  ],
+  "hints": [
+    "Use addEventListener for interactions",
+    "Event delegation for dynamic items"
+  ]
+}

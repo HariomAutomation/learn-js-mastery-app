@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-while-34",
+  "title": "Fibonacci Loop",
+  "starterCode": "let a = 0, b = 1;\nfor (let i = 0; i < 7; i++) {\n  console.log(a);\n  let temp = a;\n  a = b;\n  b = temp + b;\n}",
+  "solution": "let a = 0, b = 1;\nfor (let i = 0; i < 7; i++) {\n  console.log(a);\n  let temp = a;\n  a = b;\n  b = temp + b;\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "0\n1\n1\n2\n3\n5\n8"
+    }
+  ],
+  "hints": [
+    "Start with 0 and 1",
+    "Swap and add"
+  ]
+}

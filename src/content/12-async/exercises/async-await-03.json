@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-03",
+  "title": "Try/Catch Async",
+  "starterCode": "async function risky() {\n  try {\n    await Promise.reject('error');\n  } catch (err) {\n    console.log(err);\n  }\n}\nrisky();",
+  "solution": "async function risky() {\n  try {\n    await Promise.reject('error');\n  } catch (err) {\n    console.log(err);\n  }\n}\nrisky();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "error"
+    }
+  ],
+  "hints": [
+    "Use try/catch with await",
+    "catch handles rejected promise"
+  ]
+}

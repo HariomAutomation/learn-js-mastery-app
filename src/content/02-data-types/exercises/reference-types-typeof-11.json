@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-11",
+  "title": "Shallow copy with spread operator",
+  "starterCode": "const original = { a: 1, b: 2 };\nconst copy = ;\nconsole.log(copy);",
+  "solution": "const original = { a: 1, b: 2 };\nconst copy = { ...original };\nconsole.log(copy);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{ a: 1, b: 2 }"
+    }
+  ],
+  "hints": [
+    "... spreads the properties",
+    "Creates a new object"
+  ]
+}

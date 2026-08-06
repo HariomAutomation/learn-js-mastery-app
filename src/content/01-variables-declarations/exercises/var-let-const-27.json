@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-var-let-const-27",
+  "title": "const swap impossible",
+  "starterCode": "const a = 1, b = 2\ntry {\n  [a, b] = [b, a]\n} catch(e) {\n  console.log(\"error\")\n}",
+  "solution": "const a = 1, b = 2\ntry {\n  [a, b] = [b, a]\n} catch(e) {\n  console.log(\"error\")\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "error"
+    }
+  ],
+  "hints": [
+    "const cannot be reassigned"
+  ]
+}

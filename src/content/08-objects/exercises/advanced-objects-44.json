@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-44",
+  "title": "DefineProperties",
+  "starterCode": "const obj = {};\nObject.defineProperties(obj, {\n  x: {value: 1, writable: true},\n  y: {value: 2, writable: true}\n});\nconsole.log(obj.x + obj.y);",
+  "solution": "const obj = {};\nObject.defineProperties(obj, {\n  x: {value: 1, writable: true},\n  y: {value: 2, writable: true}\n});\nconsole.log(obj.x + obj.y);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3"
+    }
+  ],
+  "hints": [
+    "defineProperties multiple",
+    "Set at once"
+  ]
+}

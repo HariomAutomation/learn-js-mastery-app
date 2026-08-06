@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-methods-29",
+  "title": "PadEnd",
+  "starterCode": "console.log('hi'.padEnd(10, '.'));",
+  "solution": "console.log('hi'.padEnd(10, '.'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hi........"
+    }
+  ],
+  "hints": [
+    "Pad with dots",
+    "At end"
+  ]
+}

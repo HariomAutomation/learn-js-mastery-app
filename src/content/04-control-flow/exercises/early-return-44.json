@@ -1,0 +1,17 @@
+{
+  "id": "04-control-flow-early-return-44",
+  "title": "Multiple early returns in loop",
+  "starterCode": "function findFirstNegative(arr) {\n  for (const num of arr) {\n    if (typeof num !== 'number') continue;\n    if (num < 0) return num;\n  }\n  return null;\n}\nconsole.log(findFirstNegative([1, 'a', -3, 4]));",
+  "solution": "function findFirstNegative(arr) {\n  for (const num of arr) {\n    if (typeof num !== 'number') continue;\n    if (num < 0) return num;\n  }\n  return null;\n}\nconsole.log(findFirstNegative([1, 'a', -3, 4]));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "-3"
+    }
+  ],
+  "hints": [
+    "1 is number, not negative",
+    "'a' is not number, skip",
+    "-3 is number and negative"
+  ]
+}

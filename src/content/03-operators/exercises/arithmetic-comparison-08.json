@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-arithmetic-comparison-08",
+  "title": "Pre increment",
+  "starterCode": "let x = 5;\nconst result = ++x;\nconsole.log(result);",
+  "solution": "let x = 5;\nconst result = ++x;\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "6"
+    }
+  ],
+  "hints": [
+    "Pre increment increments THEN returns value",
+    "x is 6, and result is 6"
+  ]
+}

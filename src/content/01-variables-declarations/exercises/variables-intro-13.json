@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-variables-intro-13",
+  "title": "Array destructuring",
+  "starterCode": "const [a, b, c] = [10, 20, 30]\nconsole.log(a, c)",
+  "solution": "const [a, b, c] = [10, 20, 30]\nconsole.log(a, c)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10 30"
+    }
+  ],
+  "hints": [
+    "Destructure by position"
+  ]
+}

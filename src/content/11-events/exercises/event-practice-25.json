@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-25",
+  "title": "Canvas Basics",
+  "starterCode": "// Mouse events for canvas drawing\nconsole.log(\"canvas drawing pattern\");",
+  "solution": "// Mouse events for canvas drawing\nconsole.log(\"canvas drawing pattern\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "canvas drawing pattern"
+    }
+  ],
+  "hints": [
+    "mousedown to start, mousemove to draw",
+    "mouseup to stop"
+  ]
+}

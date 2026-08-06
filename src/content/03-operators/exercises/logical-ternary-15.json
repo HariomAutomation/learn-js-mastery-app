@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-15",
+  "title": "Nullish vs OR with empty string",
+  "starterCode": "const result = '' ?? 'default';\nconsole.log(result);",
+  "solution": "const result = '' ?? 'default';\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": ""
+    }
+  ],
+  "hints": [
+    "?? only triggers on null/undefined",
+    "Empty string is not null or undefined"
+  ]
+}

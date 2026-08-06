@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-49",
+  "title": "style Display Toggle",
+  "starterCode": "const el = document.querySelector('.box');\nel.style.display = 'none';\nconsole.log(el.style.display);",
+  "solution": "const el = document.querySelector('.box');\nel.style.display = 'none';\nconsole.log(el.style.display);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "none"
+    }
+  ],
+  "hints": [
+    "display: none hides element",
+    "Inline style hides it"
+  ]
+}

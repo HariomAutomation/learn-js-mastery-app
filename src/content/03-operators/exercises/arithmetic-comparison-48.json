@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-arithmetic-comparison-48",
+  "title": "Negative NaN check",
+  "starterCode": "const result = isNaN(NaN);\nconsole.log(result);",
+  "solution": "const result = isNaN(NaN);\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "NaN is the only value not equal to itself",
+    "isNaN returns true for NaN"
+  ]
+}

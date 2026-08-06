@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-47",
+  "title": "Event Target ID",
+  "starterCode": "const btn = document.querySelector('#myButton');\nbtn.addEventListener('click', function(e) {\n  console.log(e.target.id);\n});",
+  "solution": "const btn = document.querySelector('#myButton');\nbtn.addEventListener('click', function(e) {\n  console.log(e.target.id);\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "myButton"
+    }
+  ],
+  "hints": [
+    "target.id gives the element's id",
+    "Same as element's id attribute"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-26",
+  "title": "Key Value Pair",
+  "starterCode": "const obj = {name: 'Bob', job: 'dev'};\nfor (const [k, v] of Object.entries(obj)) {\n  console.log(k + ' = ' + v);\n}",
+  "solution": "const obj = {name: 'Bob', job: 'dev'};\nfor (const [k, v] of Object.entries(obj)) {\n  console.log(k + ' = ' + v);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "name = Bob\njob = dev"
+    }
+  ],
+  "hints": [
+    "Destructure entries",
+    "Format output"
+  ]
+}

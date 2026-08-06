@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-38",
+  "title": "Descriptor Get Set",
+  "starterCode": "const obj = {};\nlet _val = 0;\nObject.defineProperty(obj, 'val', {\n  get() { return _val; },\n  set(v) { _val = v; },\n  enumerable: true\n});\nobj.val = 42;\nconsole.log(obj.val);",
+  "solution": "const obj = {};\nlet _val = 0;\nObject.defineProperty(obj, 'val', {\n  get() { return _val; },\n  set(v) { _val = v; },\n  enumerable: true\n});\nobj.val = 42;\nconsole.log(obj.val);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "42"
+    }
+  ],
+  "hints": [
+    "Define getter/setter",
+    "External variable"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-03",
+  "title": "appendChild",
+  "starterCode": "const parent = document.createElement('div');\nconst child = document.createElement('p');\nparent.appendChild(child);\nconsole.log(parent.children.length);",
+  "solution": "const parent = document.createElement('div');\nconst child = document.createElement('p');\nparent.appendChild(child);\nconsole.log(parent.children.length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1"
+    }
+  ],
+  "hints": [
+    "appendChild adds child to parent",
+    "Check children length"
+  ]
+}

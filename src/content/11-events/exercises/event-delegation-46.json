@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-46",
+  "title": "Delegation Event Phase",
+  "starterCode": "// Delegation uses bubbling phase by default\nconsole.log(\"bubbling phase for delegation\");",
+  "solution": "// Delegation uses bubbling phase by default\nconsole.log(\"bubbling phase for delegation\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "bubbling phase for delegation"
+    }
+  ],
+  "hints": [
+    "Default is bubbling phase",
+    "Capture phase also works"
+  ]
+}

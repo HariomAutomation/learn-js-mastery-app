@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-46",
+  "title": "Mediator Pattern",
+  "starterCode": "class Room {\n  constructor() { this.users = []; }\n  join(u) { this.users.push(u); }\n  send(msg, sender) {\n    this.users.filter(u => u !== sender).forEach(u => u.receive(msg));\n  }\n}\nclass User {\n  constructor(n, r) { this.name = n; r.join(this); this.room = r; }\n  send(m) { this.room.send(m, this); }\n  receive(m) { console.log(this.name + ': ' + m); }\n}\nconst r = new Room();\nconst u1 = new User('A', r);\nconst u2 = new User('B', r);\nu1.send('hi');",
+  "solution": "class Room {\n  constructor() { this.users = []; }\n  join(u) { this.users.push(u); }\n  send(msg, sender) {\n    this.users.filter(u => u !== sender).forEach(u => u.receive(msg));\n  }\n}\nclass User {\n  constructor(n, r) { this.name = n; r.join(this); this.room = r; }\n  send(m) { this.room.send(m, this); }\n  receive(m) { console.log(this.name + ': ' + m); }\n}\nconst r = new Room();\nconst u1 = new User('A', r);\nconst u2 = new User('B', r);\nu1.send('hi');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "B: hi"
+    }
+  ],
+  "hints": [
+    "Mediator coordinates communication",
+    "Users don't talk directly"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-25",
+  "title": "Fetch Progress",
+  "starterCode": "// ReadableStream for progress tracking\nconsole.log(\"use ReadableStream for progress\");",
+  "solution": "// ReadableStream for progress tracking\nconsole.log(\"use ReadableStream for progress\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "use ReadableStream for progress"
+    }
+  ],
+  "hints": [
+    "response.body is ReadableStream",
+    "Track bytes received"
+  ]
+}

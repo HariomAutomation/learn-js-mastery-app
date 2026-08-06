@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-02",
+  "title": "createTextNode",
+  "starterCode": "const text = document.createTextNode('Hello');\nconsole.log(text.textContent);",
+  "solution": "const text = document.createTextNode('Hello');\nconsole.log(text.textContent);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hello"
+    }
+  ],
+  "hints": [
+    "createTextNode creates a text node",
+    "textContent reads the text"
+  ]
+}

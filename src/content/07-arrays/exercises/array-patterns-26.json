@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-patterns-26",
+  "title": "Rotate Left N",
+  "starterCode": "function rotateLeft(arr, n) {\n  const len = arr.length;\n  const shift = n % len;\n  return arr.slice(shift).concat(arr.slice(0, shift));\n}\nconsole.log(rotateLeft([1,2,3,4,5], 3));",
+  "solution": "function rotateLeft(arr, n) {\n  const len = arr.length;\n  const shift = n % len;\n  return arr.slice(shift).concat(arr.slice(0, shift));\n}\nconsole.log(rotateLeft([1,2,3,4,5], 3));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 4, 5, 1, 2, 3 ]"
+    }
+  ],
+  "hints": [
+    "Modulo for wrap",
+    "Slice then concat"
+  ]
+}

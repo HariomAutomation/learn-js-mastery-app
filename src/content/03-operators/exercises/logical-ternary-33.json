@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-33",
+  "title": "NOT with falsy",
+  "starterCode": "const result = !0;\nconsole.log(result);",
+  "solution": "const result = !0;\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "! converts to boolean then inverts",
+    "0 is falsy, so !0 is true"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-38",
+  "title": "classList Value",
+  "starterCode": "const el = document.querySelector('.box');\nconsole.log(el.classList.value);",
+  "solution": "const el = document.querySelector('.box');\nconsole.log(el.classList.value);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "box"
+    }
+  ],
+  "hints": [
+    "classList.value returns all classes as string",
+    "Same as className"
+  ]
+}

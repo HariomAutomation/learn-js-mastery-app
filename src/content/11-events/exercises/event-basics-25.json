@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-25",
+  "title": "Passive Option",
+  "starterCode": "window.addEventListener('scroll', function() {}, { passive: true });\nconsole.log('passive listener');",
+  "solution": "window.addEventListener('scroll', function() {}, { passive: true });\nconsole.log('passive listener');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "passive listener"
+    }
+  ],
+  "hints": [
+    "passive: true tells browser not to wait",
+    "Improves scroll performance"
+  ]
+}

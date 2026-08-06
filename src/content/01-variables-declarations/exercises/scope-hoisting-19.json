@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-19",
+  "title": "Arrow function scope",
+  "starterCode": "const x = 10\nconst fn = () => console.log(x)\nfn()",
+  "solution": "const x = 10\nconst fn = () => console.log(x)\nfn()",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10"
+    }
+  ],
+  "hints": [
+    "Arrow functions inherit scope"
+  ]
+}

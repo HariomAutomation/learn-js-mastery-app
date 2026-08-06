@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-var-let-const-40",
+  "title": "var in for let in for",
+  "starterCode": "for (var i = 0; i < 2; i++) {}\nfor (let i = 0; i < 2; i++) {}\nconsole.log(typeof i)",
+  "solution": "for (var i = 0; i < 2; i++) {}\nfor (let i = 0; i < 2; i++) {}\nconsole.log(typeof i)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "number"
+    }
+  ],
+  "hints": [
+    "var i leaks out"
+  ]
+}

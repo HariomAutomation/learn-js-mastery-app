@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-35",
+  "title": "For...In With Object.keys",
+  "starterCode": "const obj = {a: 10, b: 20, c: 30};\nconst keys = Object.keys(obj);\nfor (let i = 0; i < keys.length; i++) {\n  console.log(keys[i] + ': ' + obj[keys[i]]);\n}",
+  "solution": "const obj = {a: 10, b: 20, c: 30};\nconst keys = Object.keys(obj);\nfor (let i = 0; i < keys.length; i++) {\n  console.log(keys[i] + ': ' + obj[keys[i]]);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "a: 10\nb: 20\nc: 30"
+    }
+  ],
+  "hints": [
+    "Get keys array first",
+    "Access with index"
+  ]
+}

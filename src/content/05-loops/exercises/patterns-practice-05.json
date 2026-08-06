@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-patterns-practice-05",
+  "title": "Factorial Loop",
+  "starterCode": "let n = 6;\nlet fact = 1;\nfor (let i = 1; i <= n; i++) {\n  fact *= i;\n}\nconsole.log(fact);",
+  "solution": "let n = 6;\nlet fact = 1;\nfor (let i = 1; i <= n; i++) {\n  fact *= i;\n}\nconsole.log(fact);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "720"
+    }
+  ],
+  "hints": [
+    "Multiply from 1 to n",
+    "Start with 1"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-10",
+  "title": "Create a multi-line string with backticks",
+  "starterCode": "const poem = ;\nconsole.log(poem);",
+  "solution": "const poem = `Roses are red\nViolets are blue`;\nconsole.log(poem);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Roses are red\nViolets are blue"
+    }
+  ],
+  "hints": [
+    "Backticks allow multi-line strings",
+    "Just press Enter inside backticks"
+  ]
+}

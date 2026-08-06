@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-patterns-44",
+  "title": "Intersection Three Arrays",
+  "starterCode": "const a = [1, 2, 3, 4];\nconst b = [2, 3, 4, 5];\nconst c = [3, 4, 5, 6];\nconst common = a.filter(x => b.includes(x) && c.includes(x));\nconsole.log(common);",
+  "solution": "const a = [1, 2, 3, 4];\nconst b = [2, 3, 4, 5];\nconst c = [3, 4, 5, 6];\nconst common = a.filter(x => b.includes(x) && c.includes(x));\nconsole.log(common);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 3, 4 ]"
+    }
+  ],
+  "hints": [
+    "Filter with two includes",
+    "Must be in all three"
+  ]
+}

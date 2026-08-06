@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-25",
+  "title": "Filter Unique",
+  "starterCode": "const arr = [1, 2, 2, 3, 3, 3, 4];\nconst unique = arr.____((v, i, a) => a.indexOf(v) === i);\nconsole.log(unique);",
+  "solution": "const arr = [1, 2, 2, 3, 3, 3, 4];\nconst unique = arr.filter((v, i, a) => a.indexOf(v) === i);\nconsole.log(unique);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 1, 2, 3, 4 ]"
+    }
+  ],
+  "hints": [
+    "Check first occurrence",
+    "indexOf equals current index"
+  ]
+}

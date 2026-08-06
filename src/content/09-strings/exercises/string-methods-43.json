@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-methods-43",
+  "title": "Trim Only Spaces",
+  "starterCode": "console.log('\\t hello \\t'.trim());",
+  "solution": "console.log('\\t hello \\t'.trim());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hello"
+    }
+  ],
+  "hints": [
+    "Trim removes all whitespace",
+    "Tabs too"
+  ]
+}

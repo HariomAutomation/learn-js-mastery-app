@@ -1,0 +1,12 @@
+{
+  "id": "09-strings-string-basics",
+  "title": "String basics — template literals aur .at()",
+  "starterCode": "// 1. Template literal se message banao\nconst name = \"Aman\"\nconst age = 25\nconst msg = // yahan template literal use karo\nconsole.log(msg) // \"Hello, Aman! Tum 22 saal ke ho.\"\n\n// 2. String length\nconst str = \"JavaScript\"\nconsole.log(str.length) // 10\n\n// 3. .at() method — index se character lo\nconsole.log(str.at(0)) // \"J\"\nconsole.log(str.at(-1)) // \"t\"\n\n// 4. String concatenation vs template literal\nconst city = \"Mumbai\"\nconst result = // \"Welcome to Mumbai!\" template literal se banao\nconsole.log(result)",
+  "solution": "const name = \"Aman\"\nconst age = 25\nconst msg = `Hello, ${name}! Tum ${age - 3} saal ke ho.`\nconsole.log(msg)\nconst str = \"JavaScript\"\nconsole.log(str.length)\nconsole.log(str.at(0))\nconsole.log(str.at(-1))\nconst city = \"Mumbai\"\nconst result = `Welcome to ${city}!`\nconsole.log(result)",
+  "tests": [{ "input": [], "expected": "Hello, Aman! Tum 22 saal ke ho.\n10\nJ\nt\nWelcome to Mumbai!" }],
+  "hints": [
+    "Template literal: backtick (``) use karo with ${variable} syntax",
+    ".at(-1) se last character milta hai, .length se string ka size pata chalta hai",
+    "Template literal mein variable daalne ke liye ${} brackets use karo"
+  ]
+}

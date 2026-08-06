@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-02",
+  "title": "Filter Elements",
+  "starterCode": "const nums = [1, 2, 3, 4, 5];\nconst evens = nums.____(x => x % 2 === 0);\nconsole.log(evens);",
+  "solution": "const nums = [1, 2, 3, 4, 5];\nconst evens = nums.filter(x => x % 2 === 0);\nconsole.log(evens);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 2, 4 ]"
+    }
+  ],
+  "hints": [
+    "filter keeps elements",
+    "Return true to include"
+  ]
+}

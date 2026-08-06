@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-13",
+  "title": "Static Methods",
+  "starterCode": "console.log(typeof Promise.resolve);\nconsole.log(typeof Promise.reject);\nconsole.log(typeof Promise.all);",
+  "solution": "console.log(typeof Promise.resolve);\nconsole.log(typeof Promise.reject);\nconsole.log(typeof Promise.all);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "function\nfunction\nfunction"
+    }
+  ],
+  "hints": [
+    "Promise has static methods",
+    "resolve, reject, all are functions"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-40",
+  "title": "Arrow Callback Pattern",
+  "starterCode": "function fetchData(callback) {\n  callback({ name: 'Alice', age: 25 });\n}\nfetchData(data => console.log(data.name + ' is ' + data.age));",
+  "solution": "function fetchData(callback) {\n  callback({ name: 'Alice', age: 25 });\n}\nfetchData(data => console.log(data.name + ' is ' + data.age));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Alice is 25"
+    }
+  ],
+  "hints": [
+    "Arrow callback",
+    "Access data"
+  ]
+}

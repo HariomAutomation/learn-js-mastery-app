@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-40",
+  "title": "This in Callback",
+  "starterCode": "const obj = {\n  name: 'test',\n  delayed() {\n    setTimeout(function() { console.log(this.name); }.bind(this), 10);\n  }\n};\nobj.delayed();",
+  "solution": "const obj = {\n  name: 'test',\n  delayed() {\n    setTimeout(function() { console.log(this.name); }.bind(this), 10);\n  }\n};\nobj.delayed();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "test"
+    }
+  ],
+  "hints": [
+    "bind fixes this in callback",
+    "Pass context to bind"
+  ]
+}

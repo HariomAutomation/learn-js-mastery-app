@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-07",
+  "title": "Check if NaN is falsy",
+  "starterCode": "if (NaN) {\n  console.log('truthy');\n} else {\n  console.log('falsy');\n}",
+  "solution": "if (NaN) {\n  console.log('truthy');\n} else {\n  console.log('falsy');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "falsy"
+    }
+  ],
+  "hints": [
+    "NaN is falsy",
+    "It stands for Not a Number"
+  ]
+}

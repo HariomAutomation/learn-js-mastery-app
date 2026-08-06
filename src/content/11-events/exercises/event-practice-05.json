@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-05",
+  "title": "Form Validation",
+  "starterCode": "// Validate on submit and input events\nconsole.log(\"form validation events\");",
+  "solution": "// Validate on submit and input events\nconsole.log(\"form validation events\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "form validation events"
+    }
+  ],
+  "hints": [
+    "Use submit to prevent invalid data",
+    "Input events for real-time feedback"
+  ]
+}

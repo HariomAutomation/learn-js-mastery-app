@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-15",
+  "title": "Blur Event",
+  "starterCode": "const input = document.querySelector('input');\ninput.addEventListener('blur', function(e) {\n  console.log('blurred');\n});",
+  "solution": "const input = document.querySelector('input');\ninput.addEventListener('blur', function(e) {\n  console.log('blurred');\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "blurred"
+    }
+  ],
+  "hints": [
+    "Fires when element loses focus",
+    "Opposite of focus"
+  ]
+}

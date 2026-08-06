@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-48",
+  "title": "Create Complete Practice",
+  "starterCode": "function createList(items) {\n  const ul = document.createElement('ul');\n  items.forEach(item => {\n    const li = document.createElement('li');\n    li.textContent = item;\n    ul.appendChild(li);\n  });\n  return ul;\n}\nconst list = createList(['A', 'B', 'C']);\nconsole.log(list.children.length);",
+  "solution": "function createList(items) {\n  const ul = document.createElement('ul');\n  items.forEach(item => {\n    const li = document.createElement('li');\n    li.textContent = item;\n    ul.appendChild(li);\n  });\n  return ul;\n}\nconst list = createList(['A', 'B', 'C']);\nconsole.log(list.children.length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3"
+    }
+  ],
+  "hints": [
+    "Create elements in a loop",
+    "Append each to parent"
+  ]
+}

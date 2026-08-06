@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-12",
+  "title": "Finally Block",
+  "starterCode": "Promise.resolve('done')\n  .then(val => console.log(val))\n  .finally(() => console.log('complete'));",
+  "solution": "Promise.resolve('done')\n  .then(val => console.log(val))\n  .finally(() => console.log('complete'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "done\ncomplete"
+    }
+  ],
+  "hints": [
+    "finally runs after then/catch",
+    "Always executes"
+  ]
+}

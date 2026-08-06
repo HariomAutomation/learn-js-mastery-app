@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-08",
+  "title": "matches Check",
+  "starterCode": "const el = document.querySelector('div');\nconst doesMatch = el.matches(???);\nconsole.log(doesMatch);",
+  "solution": "const el = document.querySelector('div');\nconst doesMatch = el.matches('div');\nconsole.log(doesMatch);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "false"
+    }
+  ],
+  "hints": [
+    "matches checks if element matches a selector",
+    "Returns a boolean"
+  ]
+}

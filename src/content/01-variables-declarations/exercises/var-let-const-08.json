@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-var-let-const-08",
+  "title": "var redeclaration",
+  "starterCode": "var x = 1\nvar x = 2\nconsole.log(x)",
+  "solution": "var x = 1\nvar x = 2\nconsole.log(x)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2"
+    }
+  ],
+  "hints": [
+    "var allows redeclaration"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-patterns-15",
+  "title": "Deduplicate",
+  "starterCode": "const arr = [1, 1, 2, 3, 3, 3, 4, 4];\nconst deduped = [...new Set(arr)];\nconsole.log(deduped);",
+  "solution": "const arr = [1, 1, 2, 3, 3, 3, 4, 4];\nconst deduped = [...new Set(arr)];\nconsole.log(deduped);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 1, 2, 3, 4 ]"
+    }
+  ],
+  "hints": [
+    "Set for unique values",
+    "Spread to array"
+  ]
+}

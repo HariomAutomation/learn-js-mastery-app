@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-08",
+  "title": "Access first character of a string",
+  "starterCode": "const str = \"Hello\";\nconst first = ;\nconsole.log(first);",
+  "solution": "const str = \"Hello\";\nconst first = str[0];\nconsole.log(first);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "H"
+    }
+  ],
+  "hints": [
+    "Strings are indexed starting at 0",
+    "Use bracket notation"
+  ]
+}

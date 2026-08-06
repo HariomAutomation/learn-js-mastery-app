@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-26",
+  "title": "First Unique Char",
+  "starterCode": "function firstUniqueChar(str) {\n  for (const c of str) {\n    if (str.indexOf(c) === str.lastIndexOf(c)) return c;\n  }\n  return null;\n}\nconsole.log(firstUniqueChar('leetcode'));\nconsole.log(firstUniqueChar('aabb'));",
+  "solution": "function firstUniqueChar(str) {\n  for (const c of str) {\n    if (str.indexOf(c) === str.lastIndexOf(c)) return c;\n  }\n  return null;\n}\nconsole.log(firstUniqueChar('leetcode'));\nconsole.log(firstUniqueChar('aabb'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "l\nnull"
+    }
+  ],
+  "hints": [
+    "Check first and last same",
+    "Unique character"
+  ]
+}

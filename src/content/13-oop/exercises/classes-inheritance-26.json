@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-26",
+  "title": "Static Method",
+  "starterCode": "class ArrayUtils {\n  static flatten(arr) {\n    return arr.flat();\n  }\n}\nconsole.log(ArrayUtils.flatten([[1, 2], [3, 4]]));",
+  "solution": "class ArrayUtils {\n  static flatten(arr) {\n    return arr.flat();\n  }\n}\nconsole.log(ArrayUtils.flatten([[1, 2], [3, 4]]));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1,2,3,4"
+    }
+  ],
+  "hints": [
+    "Static method on class",
+    "No instance needed"
+  ]
+}

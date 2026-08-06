@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-15",
+  "title": "childNodes Type",
+  "starterCode": "const el = document.querySelector('div');\nconst nodes = el.childNodes;\nconsole.log(nodes.length);",
+  "solution": "const el = document.querySelector('div');\nconst nodes = el.childNodes;\nconsole.log(nodes.length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "0"
+    }
+  ],
+  "hints": [
+    "childNodes includes all node types",
+    "Includes text and comment nodes"
+  ]
+}

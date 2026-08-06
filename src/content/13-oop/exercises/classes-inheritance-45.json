@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-45",
+  "title": "Static Method",
+  "starterCode": "class MathUtil {\n  static clamp(val, min, max) {\n    return Math.min(Math.max(val, min), max);\n  }\n}\nconsole.log(MathUtil.clamp(15, 0, 10));",
+  "solution": "class MathUtil {\n  static clamp(val, min, max) {\n    return Math.min(Math.max(val, min), max);\n  }\n}\nconsole.log(MathUtil.clamp(15, 0, 10));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10"
+    }
+  ],
+  "hints": [
+    "Static method on class",
+    "No instance needed"
+  ]
+}

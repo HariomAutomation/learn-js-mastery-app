@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-32",
+  "title": "Delegation with Data Attributes",
+  "starterCode": "const list = document.querySelector('ul');\nlist.addEventListener('click', function(e) {\n  const action = e.target.dataset.action;\n  if (action) console.log(action);\n});",
+  "solution": "const list = document.querySelector('ul');\nlist.addEventListener('click', function(e) {\n  const action = e.target.dataset.action;\n  if (action) console.log(action);\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "delete"
+    }
+  ],
+  "hints": [
+    "data-action attribute holds action name",
+    "Check if action exists"
+  ]
+}

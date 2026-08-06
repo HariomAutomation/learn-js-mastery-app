@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-02",
+  "title": "Symbol Key",
+  "starterCode": "const sym = Symbol('id');\nconst obj = {[sym]: 123};\nconsole.log(obj[sym]);",
+  "solution": "const sym = Symbol('id');\nconst obj = {[sym]: 123};\nconsole.log(obj[sym]);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "123"
+    }
+  ],
+  "hints": [
+    "Symbol as key",
+    "Access with symbol"
+  ]
+}

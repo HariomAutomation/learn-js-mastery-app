@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-41",
+  "title": "Plus with string and number",
+  "starterCode": "console.log(\"Age: \" + 25);",
+  "solution": "console.log(\"Age: \" + 25);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Age: 25"
+    }
+  ],
+  "hints": [
+    "String + number = concatenation",
+    "Number becomes a string"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-20",
+  "title": "For...Of Reverse",
+  "starterCode": "const arr = [1, 2, 3, 4, 5];\nfor (const val of arr.reverse()) {\n  console.log(val);\n}",
+  "solution": "const arr = [1, 2, 3, 4, 5];\nfor (const val of arr.reverse()) {\n  console.log(val);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "5\n4\n3\n2\n1"
+    }
+  ],
+  "hints": [
+    "Use reverse() first",
+    "Then iterate"
+  ]
+}

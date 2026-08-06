@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-37",
+  "title": "Fetch Response Methods",
+  "starterCode": "// response.json(), .text(), .blob(), .arrayBuffer()\nconsole.log(\"4 methods to read response\");",
+  "solution": "// response.json(), .text(), .blob(), .arrayBuffer()\nconsole.log(\"4 methods to read response\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "4 methods to read response"
+    }
+  ],
+  "hints": [
+    "json for JSON, text for strings",
+    "blob and arrayBuffer for binary"
+  ]
+}

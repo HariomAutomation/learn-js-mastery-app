@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-34",
+  "title": "NOT with empty string",
+  "starterCode": "const result = !'';\nconsole.log(result);",
+  "solution": "const result = !'';\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "Empty string is falsy",
+    "!'' is true"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-37",
+  "title": "String Shuffle",
+  "starterCode": "function shuffle(str) {\n  const arr = str.split('');\n  for (let i = arr.length - 1; i > 0; i--) {\n    const j = Math.floor(Math.random() * (i + 1));\n    [arr[i], arr[j]] = [arr[j], arr[i]];\n  }\n  return arr.join('');\n}\nconsole.log(shuffle('abc').split('').sort().join(''));",
+  "solution": "function shuffle(str) {\n  const arr = str.split('');\n  for (let i = arr.length - 1; i > 0; i--) {\n    const j = Math.floor(Math.random() * (i + 1));\n    [arr[i], arr[j]] = [arr[j], arr[i]];\n  }\n  return arr.join('');\n}\nconsole.log(shuffle('abc').split('').sort().join(''));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "abc"
+    }
+  ],
+  "hints": [
+    "Fisher-Yates shuffle",
+    "Same chars, different order"
+  ]
+}

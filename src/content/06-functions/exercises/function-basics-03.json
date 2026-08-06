@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-function-basics-03",
+  "title": "Single Parameter",
+  "starterCode": "function double(x) {\n  return x * 2;\n}\nconsole.log(double(5));",
+  "solution": "function double(x) {\n  return x * 2;\n}\nconsole.log(double(5));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10"
+    }
+  ],
+  "hints": [
+    "One parameter",
+    "Multiply by 2"
+  ]
+}

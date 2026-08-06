@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-22",
+  "title": "Filter Range",
+  "starterCode": "const nums = [1, 5, 10, 15, 20];\nconst inRange = nums.____(x => x >= 5 && x <= 15);\nconsole.log(inRange);",
+  "solution": "const nums = [1, 5, 10, 15, 20];\nconst inRange = nums.filter(x => x >= 5 && x <= 15);\nconsole.log(inRange);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 5, 10, 15 ]"
+    }
+  ],
+  "hints": [
+    "Check range with &&",
+    "Filter keeps in range"
+  ]
+}

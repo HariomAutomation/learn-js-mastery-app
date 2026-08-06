@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-04",
+  "title": "Promise Resolve",
+  "starterCode": "const p = Promise.resolve(42);\np.then(val => console.log(val));",
+  "solution": "const p = Promise.resolve(42);\np.then(val => console.log(val));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "42"
+    }
+  ],
+  "hints": [
+    "Promise.resolve creates resolved promise",
+    "then() receives the value"
+  ]
+}

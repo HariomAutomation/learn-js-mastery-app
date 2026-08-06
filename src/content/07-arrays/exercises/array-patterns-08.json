@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-patterns-08",
+  "title": "Rotate Right",
+  "starterCode": "const arr = [1, 2, 3, 4, 5];\nconst rotated = arr.slice(-1).concat(arr.slice(0, -1));\nconsole.log(rotated);",
+  "solution": "const arr = [1, 2, 3, 4, 5];\nconst rotated = arr.slice(-1).concat(arr.slice(0, -1));\nconsole.log(rotated);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 5, 1, 2, 3, 4 ]"
+    }
+  ],
+  "hints": [
+    "Slice last element",
+    "Concat with rest"
+  ]
+}

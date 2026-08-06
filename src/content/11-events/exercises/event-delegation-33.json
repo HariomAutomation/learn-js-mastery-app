@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-33",
+  "title": "Event Listener Count",
+  "starterCode": "const btn = document.querySelector('button');\nbtn.addEventListener('click', () => {});\nbtn.addEventListener('click', () => {});\nconsole.log('2 listeners added');",
+  "solution": "const btn = document.querySelector('button');\nbtn.addEventListener('click', () => {});\nbtn.addEventListener('click', () => {});\nconsole.log('2 listeners added');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2 listeners added"
+    }
+  ],
+  "hints": [
+    "Multiple listeners can be added",
+    "All fire on event"
+  ]
+}

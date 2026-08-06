@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-methods-48",
+  "title": "Find Object",
+  "starterCode": "const users = [{name: 'Alice', age: 25}, {name: 'Bob', age: 30}];\nconst user = users.find(u => u.age > 28);\nconsole.log(user.name);",
+  "solution": "const users = [{name: 'Alice', age: 25}, {name: 'Bob', age: 30}];\nconst user = users.find(u => u.age > 28);\nconsole.log(user.name);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Bob"
+    }
+  ],
+  "hints": [
+    "find returns matching object",
+    "Access property"
+  ]
+}

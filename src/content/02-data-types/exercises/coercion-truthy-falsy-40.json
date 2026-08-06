@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-40",
+  "title": "Comparison coercion chain",
+  "starterCode": "console.log(1 < 2 > \"1\");",
+  "solution": "console.log(1 < 2 > \"1\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "false"
+    }
+  ],
+  "hints": [
+    "1 < 2 is true",
+    "true > '1' converts true to 1, so 1 > 1 is false"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-while-28",
+  "title": "Reverse Number",
+  "starterCode": "let num = 123;\nlet rev = 0;\nwhile (num > 0) {\n  rev = rev * 10 + num % 10;\n  num = Math.floor(num / 10);\n}\nconsole.log(rev);",
+  "solution": "let num = 123;\nlet rev = 0;\nwhile (num > 0) {\n  rev = rev * 10 + num % 10;\n  num = Math.floor(num / 10);\n}\nconsole.log(rev);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "321"
+    }
+  ],
+  "hints": [
+    "Multiply rev by 10",
+    "Add last digit"
+  ]
+}

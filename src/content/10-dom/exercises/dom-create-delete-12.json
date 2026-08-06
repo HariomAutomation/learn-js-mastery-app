@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-12",
+  "title": "cloneNode Deep",
+  "starterCode": "const original = document.createElement('div');\nconst child = document.createElement('p');\noriginal.appendChild(child);\nconst clone = original.cloneNode(true);\nconsole.log(clone.children.length);",
+  "solution": "const original = document.createElement('div');\nconst child = document.createElement('p');\noriginal.appendChild(child);\nconst clone = original.cloneNode(true);\nconsole.log(clone.children.length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1"
+    }
+  ],
+  "hints": [
+    "cloneNode(true) does deep clone",
+    "Copies all children"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-22",
+  "title": "conditional setAttribute",
+  "starterCode": "const el = document.querySelector('.box');\nconst isActive = true;\nif (isActive) el.setAttribute('data-active', 'true');\nconsole.log(el.dataset.active);",
+  "solution": "const el = document.querySelector('.box');\nconst isActive = true;\nif (isActive) el.setAttribute('data-active', 'true');\nconsole.log(el.dataset.active);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "Use conditional logic before setAttribute",
+    "dataset reads the value"
+  ]
+}

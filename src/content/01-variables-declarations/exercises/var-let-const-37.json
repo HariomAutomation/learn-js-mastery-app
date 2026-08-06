@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-var-let-const-37",
+  "title": "var initialization",
+  "starterCode": "var x\nconsole.log(x)",
+  "solution": "var x\nconsole.log(x)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "undefined"
+    }
+  ],
+  "hints": [
+    "var defaults to undefined"
+  ]
+}

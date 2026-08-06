@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-early-return-43",
+  "title": "Early return - flatten nested",
+  "starterCode": "function getStatusColor(status) {\n  if (status === 'active') return 'green';\n  if (status === 'pending') return 'yellow';\n  if (status === 'error') return 'red';\n  return 'gray';\n}\nconsole.log(getStatusColor('pending'));",
+  "solution": "function getStatusColor(status) {\n  if (status === 'active') return 'green';\n  if (status === 'pending') return 'yellow';\n  if (status === 'error') return 'red';\n  return 'gray';\n}\nconsole.log(getStatusColor('pending'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "yellow"
+    }
+  ],
+  "hints": [
+    "status is 'pending'",
+    "Second guard matches"
+  ]
+}

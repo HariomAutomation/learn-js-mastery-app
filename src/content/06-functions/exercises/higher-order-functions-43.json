@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-higher-order-functions-43",
+  "title": "Accumulator Pattern",
+  "starterCode": "function accumulator() {\n  let total = 0;\n  return {\n    add: (n) => { total += n; return this; },\n    value: () => total\n  };\n}\nconst acc = accumulator();\nacc.add(10).add(20).add(30);\nconsole.log(acc.value());",
+  "solution": "function accumulator() {\n  let total = 0;\n  return {\n    add: (n) => { total += n; return this; },\n    value: () => total\n  };\n}\nconst acc = accumulator();\nacc.add(10).add(20).add(30);\nconsole.log(acc.value());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "60"
+    }
+  ],
+  "hints": [
+    "Chain methods",
+    "Return this"
+  ]
+}

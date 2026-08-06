@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-39",
+  "title": "State Pattern",
+  "starterCode": "class State { handle() { return 'default'; } }\nclass OnState extends State { handle() { return 'on'; } }\nclass OffState extends State { handle() { return 'off'; } }\nconst states = { on: new OnState(), off: new OffState() };\nconsole.log(states.on.handle());",
+  "solution": "class State { handle() { return 'default'; } }\nclass OnState extends State { handle() { return 'on'; } }\nclass OffState extends State { handle() { return 'off'; } }\nconst states = { on: new OnState(), off: new OffState() };\nconsole.log(states.on.handle());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "on"
+    }
+  ],
+  "hints": [
+    "Each state is a class",
+    "Switch between state objects"
+  ]
+}

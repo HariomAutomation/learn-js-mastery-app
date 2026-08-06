@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-42",
+  "title": "insertAdjacent Positions",
+  "starterCode": "// Positions: beforebegin, afterbegin, beforeend, afterend\nconsole.log(\"4 positions available\");",
+  "solution": "// Positions: beforebegin, afterbegin, beforeend, afterend\nconsole.log(\"4 positions available\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "4 positions available"
+    }
+  ],
+  "hints": [
+    "Before/after the element",
+    "Inside at beginning/end"
+  ]
+}

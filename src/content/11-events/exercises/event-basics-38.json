@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-38",
+  "title": "Event Type Check",
+  "starterCode": "document.addEventListener('click', function(e) {\n  console.log(e instanceof Event);\n});",
+  "solution": "document.addEventListener('click', function(e) {\n  console.log(e instanceof Event);\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "Event handler receives Event instance",
+    "Use instanceof to verify"
+  ]
+}

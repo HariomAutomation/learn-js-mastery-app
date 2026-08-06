@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-45",
+  "title": "Arrow IIFE",
+  "starterCode": "const result = (() => 42)();\nconsole.log(result);",
+  "solution": "const result = (() => 42)();\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "42"
+    }
+  ],
+  "hints": [
+    "Arrow IIFE",
+    "Call immediately"
+  ]
+}

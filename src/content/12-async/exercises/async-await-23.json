@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-23",
+  "title": "Async Waterfall",
+  "starterCode": "async function waterfall() {\n  const a = await Promise.resolve(1);\n  const b = await Promise.resolve(a + 10);\n  const c = await Promise.resolve(b + 100);\n  console.log(c);\n}\nwaterfall();",
+  "solution": "async function waterfall() {\n  const a = await Promise.resolve(1);\n  const b = await Promise.resolve(a + 10);\n  const c = await Promise.resolve(b + 100);\n  console.log(c);\n}\nwaterfall();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "111"
+    }
+  ],
+  "hints": [
+    "Each step depends on previous",
+    "1 + 10 = 11, 11 + 100 = 111"
+  ]
+}

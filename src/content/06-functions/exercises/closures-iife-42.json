@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-closures-iife-42",
+  "title": "Decorator Pattern",
+  "starterCode": "function withLogging(fn) {\n  return function(...args) {\n    console.log('Calling ' + fn.name);\n    const result = fn(...args);\n    console.log('Result: ' + result);\n    return result;\n  };\n}\nconst add = (a, b) => a + b;\nconst loggedAdd = withLogging(add);\nloggedAdd(2, 3);",
+  "solution": "function withLogging(fn) {\n  return function(...args) {\n    console.log('Calling ' + fn.name);\n    const result = fn(...args);\n    console.log('Result: ' + result);\n    return result;\n  };\n}\nconst add = (a, b) => a + b;\nconst loggedAdd = withLogging(add);\nloggedAdd(2, 3);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Calling add\nResult: 5"
+    }
+  ],
+  "hints": [
+    "Wrap function",
+    "Add behavior"
+  ]
+}

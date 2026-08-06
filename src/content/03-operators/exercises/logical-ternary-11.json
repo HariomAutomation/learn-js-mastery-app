@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-11",
+  "title": "Nullish coalescing (??)",
+  "starterCode": "const result = null ?? 'default';\nconsole.log(result);",
+  "solution": "const result = null ?? 'default';\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "default"
+    }
+  ],
+  "hints": [
+    "?? only checks null and undefined",
+    "null triggers the right side"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-methods-16",
+  "title": "Flat",
+  "starterCode": "const arr = [[1, 2], [3, 4], [5]];\nconsole.log(arr.____());",
+  "solution": "const arr = [[1, 2], [3, 4], [5]];\nconsole.log(arr.flat());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 1, 2, 3, 4, 5 ]"
+    }
+  ],
+  "hints": [
+    "flat flattens one level",
+    "Default depth is 1"
+  ]
+}

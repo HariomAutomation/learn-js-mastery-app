@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-methods-11",
+  "title": "Includes",
+  "starterCode": "const arr = [1, 2, 3, 4, 5];\nconsole.log(arr.____(3));",
+  "solution": "const arr = [1, 2, 3, 4, 5];\nconsole.log(arr.includes(3));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "includes returns boolean",
+    "Checks if element exists"
+  ]
+}

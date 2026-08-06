@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-18",
+  "title": "dispatchEvent",
+  "starterCode": "const el = document.querySelector('.box');\nconst event = new Event('build');\nel.addEventListener('build', () => console.log('built'));\nel.dispatchEvent(event);",
+  "solution": "const el = document.querySelector('.box');\nconst event = new Event('build');\nel.addEventListener('build', () => console.log('built'));\nel.dispatchEvent(event);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "built"
+    }
+  ],
+  "hints": [
+    "dispatchEvent triggers the event",
+    "Must add listener first"
+  ]
+}

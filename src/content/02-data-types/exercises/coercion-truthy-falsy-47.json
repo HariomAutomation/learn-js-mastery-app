@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-47",
+  "title": "Implicit conversion in template literal",
+  "starterCode": "const num = 42;\nconsole.log(`Number: ${num}`);",
+  "solution": "const num = 42;\nconsole.log(`Number: ${num}`);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Number: 42"
+    }
+  ],
+  "hints": [
+    "Template literals convert to string",
+    "No explicit conversion needed"
+  ]
+}

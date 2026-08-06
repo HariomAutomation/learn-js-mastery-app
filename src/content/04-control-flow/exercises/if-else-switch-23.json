@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-23",
+  "title": "If with logical OR",
+  "starterCode": "const isVIP = false;\nconst isAdmin = true;\nif (isVIP || isAdmin) {\n  console.log('access granted');\n} else {\n  console.log('access denied');\n}",
+  "solution": "const isVIP = false;\nconst isAdmin = true;\nif (isVIP || isAdmin) {\n  console.log('access granted');\n} else {\n  console.log('access denied');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "access granted"
+    }
+  ],
+  "hints": [
+    "|| needs one truthy condition",
+    "isAdmin is true"
+  ]
+}

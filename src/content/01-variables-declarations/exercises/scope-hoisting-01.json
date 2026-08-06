@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-01",
+  "title": "Global scope variable",
+  "starterCode": "var x = 10\nfunction test() {\n  console.log(x)\n}\ntest()",
+  "solution": "var x = 10\nfunction test() {\n  console.log(x)\n}\ntest()",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10"
+    }
+  ],
+  "hints": [
+    "Global variables are accessible everywhere"
+  ]
+}

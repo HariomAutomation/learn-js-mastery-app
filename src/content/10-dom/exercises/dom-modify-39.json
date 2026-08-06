@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-39",
+  "title": "innerHTML Security",
+  "starterCode": "// Never use innerHTML with user input - XSS risk\nconsole.log(\"innerHTML XSS warning\");",
+  "solution": "// Never use innerHTML with user input - XSS risk\nconsole.log(\"innerHTML XSS warning\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "innerHTML XSS warning"
+    }
+  ],
+  "hints": [
+    "innerHTML can execute scripts",
+    "Use textContent for user input"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-01",
+  "title": "Computed Keys",
+  "starterCode": "const key = 'age';\nconst obj = {[key]: 25};\nconsole.log(obj.age);",
+  "solution": "const key = 'age';\nconst obj = {[key]: 25};\nconsole.log(obj.age);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "25"
+    }
+  ],
+  "hints": [
+    "Computed property name",
+    "Expression in brackets"
+  ]
+}

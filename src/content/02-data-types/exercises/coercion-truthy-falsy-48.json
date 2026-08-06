@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-48",
+  "title": "Array to string conversion",
+  "starterCode": "console.log([1, 2, 3] + '');",
+  "solution": "console.log([1, 2, 3] + '');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1,2,3"
+    }
+  ],
+  "hints": [
+    "Arrays use join with comma",
+    "Default join uses commas"
+  ]
+}

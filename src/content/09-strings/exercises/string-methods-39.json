@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-methods-39",
+  "title": "Repeat Edge",
+  "starterCode": "console.log('a'.repeat(0));\nconsole.log(''.repeat(5));",
+  "solution": "console.log('a'.repeat(0));\nconsole.log(''.repeat(5));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "\n"
+    }
+  ],
+  "hints": [
+    "repeat(0) empty",
+    "Empty repeated"
+  ]
+}

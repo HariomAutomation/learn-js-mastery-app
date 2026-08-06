@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-50",
+  "title": "Match Practice",
+  "starterCode": "const str = '2024-01-15';\nconst match = str.match(/\\d+/g);\nconsole.log(match);",
+  "solution": "const str = '2024-01-15';\nconst match = str.match(/\\d+/g);\nconsole.log(match);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ '2024', '01', '15' ]"
+    }
+  ],
+  "hints": [
+    "Match digits globally",
+    "Returns array"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-22",
+  "title": "Symbol.toPrimitive",
+  "starterCode": "const obj = {\n  val: 42,\n  [Symbol.toPrimitive](hint) {\n    return hint === 'number' ? this.val : String(this.val);\n  }\n};\nconsole.log(+obj);\nconsole.log(`${obj}`);",
+  "solution": "const obj = {\n  val: 42,\n  [Symbol.toPrimitive](hint) {\n    return hint === 'number' ? this.val : String(this.val);\n  }\n};\nconsole.log(+obj);\nconsole.log(`${obj}`);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "42\n42"
+    }
+  ],
+  "hints": [
+    "Symbol.toPrimitive controls",
+    "Conversion behavior"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-48",
+  "title": "Destructuring Regex",
+  "starterCode": "const match = 'hello world'.match(/(\\w+)\\s(\\w+)/);\nconst [, first, second] = match;\nconsole.log(first, second);",
+  "solution": "const match = 'hello world'.match(/(\\w+)\\s(\\w+)/);\nconst [, first, second] = match;\nconsole.log(first, second);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hello world"
+    }
+  ],
+  "hints": [
+    "Destructure match result",
+    "Skip full match"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-28",
+  "title": "PadEnd",
+  "starterCode": "console.log('hi'.padEnd(10, '.'));",
+  "solution": "console.log('hi'.padEnd(10, '.'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hi........"
+    }
+  ],
+  "hints": [
+    "padEnd adds padding",
+    "At end"
+  ]
+}

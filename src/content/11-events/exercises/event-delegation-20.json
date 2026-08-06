@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-20",
+  "title": "removeEventListener Match",
+  "starterCode": "function handler() { console.log('done'); }\nconst el = document.querySelector('.box');\nel.addEventListener('click', handler);\nel.removeEventListener('click', handler);\nconsole.log('matching required');",
+  "solution": "function handler() { console.log('done'); }\nconst el = document.querySelector('.box');\nel.addEventListener('click', handler);\nel.removeEventListener('click', handler);\nconsole.log('matching required');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "matching required"
+    }
+  ],
+  "hints": [
+    "Same function reference needed",
+    "Anonymous functions can't be removed"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-12",
+  "title": "Object Create",
+  "starterCode": "const proto = {greet() { return 'Hello'; }};\nconst obj = Object.create(proto);\nconsole.log(obj.greet());",
+  "solution": "const proto = {greet() { return 'Hello'; }};\nconst obj = Object.create(proto);\nconsole.log(obj.greet());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hello"
+    }
+  ],
+  "hints": [
+    "Object.create with prototype",
+    "Inherits methods"
+  ]
+}

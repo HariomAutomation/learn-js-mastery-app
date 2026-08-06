@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-methods-38",
+  "title": "Join Separator",
+  "starterCode": "const arr = ['2024', '01', '15'];\nconsole.log(arr.____('-'));",
+  "solution": "const arr = ['2024', '01', '15'];\nconsole.log(arr.join('-'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2024-01-15"
+    }
+  ],
+  "hints": [
+    "Join with dash separator",
+    "Creates date string"
+  ]
+}

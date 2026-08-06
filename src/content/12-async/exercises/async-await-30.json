@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-30",
+  "title": "Async Practice",
+  "starterCode": "async function practice() {\n  const data = await Promise.resolve('complete');\n  console.log(data);\n}\npractice();",
+  "solution": "async function practice() {\n  const data = await Promise.resolve('complete');\n  console.log(data);\n}\npractice();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "complete"
+    }
+  ],
+  "hints": [
+    "Use async/await for cleaner code",
+    "Wrap in try/catch for errors"
+  ]
+}

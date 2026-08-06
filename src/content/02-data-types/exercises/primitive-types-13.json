@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-13",
+  "title": "Create a negative number",
+  "starterCode": "const temp = ;\nconsole.log(temp);",
+  "solution": "const temp = -10;\nconsole.log(temp);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "-10"
+    }
+  ],
+  "hints": [
+    "Put a minus sign before the number",
+    "Negative numbers are just regular numbers with a sign"
+  ]
+}

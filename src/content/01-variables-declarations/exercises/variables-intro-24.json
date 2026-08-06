@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-variables-intro-24",
+  "title": "Spread string to array",
+  "starterCode": "const arr = [...\"hello\"]\nconsole.log(arr.length)",
+  "solution": "const arr = [...\"hello\"]\nconsole.log(arr.length)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "5"
+    }
+  ],
+  "hints": [
+    "Spread unpacks string into chars"
+  ]
+}

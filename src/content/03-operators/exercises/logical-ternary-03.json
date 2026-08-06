@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-03",
+  "title": "Logical OR with first truthy",
+  "starterCode": "const result = \"hello\" || \"default\";\nconsole.log(result);",
+  "solution": "const result = \"hello\" || \"default\";\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hello"
+    }
+  ],
+  "hints": [
+    "|| returns first truthy or last value",
+    "'hello' is truthy"
+  ]
+}

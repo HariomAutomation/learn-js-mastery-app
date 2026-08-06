@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-28",
+  "title": "null coerces to 0 in arithmetic",
+  "starterCode": "console.log(null + 5);",
+  "solution": "console.log(null + 5);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "5"
+    }
+  ],
+  "hints": [
+    "null converts to 0",
+    "0 + 5 = 5"
+  ]
+}

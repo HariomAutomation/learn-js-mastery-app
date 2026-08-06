@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-46",
+  "title": "Inheritance Chain",
+  "starterCode": "class A { type() { return 'A'; } }\nclass B extends A {}\nclass C extends B {}\nconst c = new C();\nconsole.log(c.type() + ' ' + (c instanceof A));",
+  "solution": "class A { type() { return 'A'; } }\nclass B extends A {}\nclass C extends B {}\nconst c = new C();\nconsole.log(c.type() + ' ' + (c instanceof A));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "A true"
+    }
+  ],
+  "hints": [
+    "C inherits from B inherits from A",
+    "instanceof checks chain"
+  ]
+}

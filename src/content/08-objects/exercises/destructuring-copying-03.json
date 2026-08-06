@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-03",
+  "title": "Default Values",
+  "starterCode": "const obj = {name: 'Alice'};\nconst {name, age = 30} = obj;\nconsole.log(age);",
+  "solution": "const obj = {name: 'Alice'};\nconst {name, age = 30} = obj;\nconsole.log(age);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "30"
+    }
+  ],
+  "hints": [
+    "Default value with =",
+    "Used when undefined"
+  ]
+}

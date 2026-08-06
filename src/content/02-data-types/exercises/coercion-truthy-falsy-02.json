@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-02",
+  "title": "Check if 1 is truthy",
+  "starterCode": "if (1) {\n  console.log('truthy');\n} else {\n  console.log('falsy');\n}",
+  "solution": "if (1) {\n  console.log('truthy');\n} else {\n  console.log('falsy');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "truthy"
+    }
+  ],
+  "hints": [
+    "Non-zero numbers are truthy",
+    "Even negative numbers"
+  ]
+}

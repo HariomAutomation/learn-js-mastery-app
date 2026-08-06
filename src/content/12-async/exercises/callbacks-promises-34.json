@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-34",
+  "title": "Promise.race Loser",
+  "starterCode": "const p1 = new Promise(r => setTimeout(() => r('first'), 50));\nconst p2 = new Promise(r => setTimeout(() => r('second'), 100));\nPromise.race([p1, p2]).then(w => console.log(w));",
+  "solution": "const p1 = new Promise(r => setTimeout(() => r('first'), 50));\nconst p2 = new Promise(r => setTimeout(() => r('second'), 100));\nPromise.race([p1, p2]).then(w => console.log(w));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "first"
+    }
+  ],
+  "hints": [
+    "First to settle wins",
+    "Slower promise is ignored"
+  ]
+}

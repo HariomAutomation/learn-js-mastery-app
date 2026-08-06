@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-12",
+  "title": "Enumerable Configurable",
+  "starterCode": "const obj = {};\nObject.defineProperty(obj, 'hidden', {value: 42, enumerable: false, configurable: false});\nconsole.log(Object.keys(obj));\nconsole.log(obj.hidden);",
+  "solution": "const obj = {};\nObject.defineProperty(obj, 'hidden', {value: 42, enumerable: false, configurable: false});\nconsole.log(Object.keys(obj));\nconsole.log(obj.hidden);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[]\n42"
+    }
+  ],
+  "hints": [
+    "Not enumerable",
+    "Still accessible"
+  ]
+}

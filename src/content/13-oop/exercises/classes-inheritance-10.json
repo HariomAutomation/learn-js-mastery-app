@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-10",
+  "title": "Setter",
+  "starterCode": "class Person {\n  #age = 0;\n  set age(val) {\n    if (val >= 0) this.#age = val;\n  }\n  get age() { return this.#age; }\n}\nconst p = new Person();\np.age = 25;\nconsole.log(p.age);",
+  "solution": "class Person {\n  #age = 0;\n  set age(val) {\n    if (val >= 0) this.#age = val;\n  }\n  get age() { return this.#age; }\n}\nconst p = new Person();\np.age = 25;\nconsole.log(p.age);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "25"
+    }
+  ],
+  "hints": [
+    "set creates setter",
+    "Can validate before setting"
+  ]
+}

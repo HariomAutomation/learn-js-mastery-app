@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-38",
+  "title": "Arrow In Promise",
+  "starterCode": "Promise.resolve(42)\n  .then(x => console.log(x));",
+  "solution": "Promise.resolve(42)\n  .then(x => console.log(x));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "42"
+    }
+  ],
+  "hints": [
+    "Arrow in .then()",
+    "Simple callback"
+  ]
+}

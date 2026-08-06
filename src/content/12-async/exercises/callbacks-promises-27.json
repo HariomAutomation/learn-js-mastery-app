@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-27",
+  "title": "Unhandled Rejection",
+  "starterCode": "// Without catch, rejection is unhandled\nPromise.reject('error');\nconsole.log('will show warning');",
+  "solution": "// Without catch, rejection is unhandled\nPromise.reject('error');\nconsole.log('will show warning');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "will show warning"
+    }
+  ],
+  "hints": [
+    "Unhandled rejections cause warnings",
+    "Always add catch handler"
+  ]
+}

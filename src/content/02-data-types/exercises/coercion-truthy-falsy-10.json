@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-10",
+  "title": "Check if array is truthy",
+  "starterCode": "if ([]) {\n  console.log('truthy');\n} else {\n  console.log('falsy');\n}",
+  "solution": "if ([]) {\n  console.log('truthy');\n} else {\n  console.log('falsy');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "truthy"
+    }
+  ],
+  "hints": [
+    "Arrays are always truthy",
+    "Even empty arrays"
+  ]
+}

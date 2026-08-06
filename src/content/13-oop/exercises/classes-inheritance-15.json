@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-15",
+  "title": "Method Chaining",
+  "starterCode": "class Builder {\n  constructor() { this.parts = []; }\n  add(part) { this.parts.push(part); return this; }\n  build() { return this.parts.join('-'); }\n}\nconsole.log(new Builder().add('a').add('b').build());",
+  "solution": "class Builder {\n  constructor() { this.parts = []; }\n  add(part) { this.parts.push(part); return this; }\n  build() { return this.parts.join('-'); }\n}\nconsole.log(new Builder().add('a').add('b').build());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "a-b"
+    }
+  ],
+  "hints": [
+    "Return this for chaining",
+    "Each method returns instance"
+  ]
+}

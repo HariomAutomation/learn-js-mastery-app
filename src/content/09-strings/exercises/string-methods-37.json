@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-methods-37",
+  "title": "Search Not Found",
+  "starterCode": "console.log('hello'.search(/xyz/));",
+  "solution": "console.log('hello'.search(/xyz/));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "-1"
+    }
+  ],
+  "hints": [
+    "-1 when not found",
+    "No match"
+  ]
+}

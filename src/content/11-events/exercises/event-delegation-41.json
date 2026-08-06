@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-41",
+  "title": "Matches Method",
+  "starterCode": "const btn = document.querySelector('button');\nbtn.addEventListener('click', function(e) {\n  console.log(e.target.matches('button'));\n});",
+  "solution": "const btn = document.querySelector('button');\nbtn.addEventListener('click', function(e) {\n  console.log(e.target.matches('button'));\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "matches checks selector match",
+    "Returns boolean"
+  ]
+}

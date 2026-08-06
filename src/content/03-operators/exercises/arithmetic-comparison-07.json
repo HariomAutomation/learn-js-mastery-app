@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-arithmetic-comparison-07",
+  "title": "Post increment",
+  "starterCode": "let x = 5;\nconst result = x++;\nconsole.log(result);",
+  "solution": "let x = 5;\nconst result = x++;\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "5"
+    }
+  ],
+  "hints": [
+    "Post increment returns value THEN increments",
+    "x is 6 after, but result is 5"
+  ]
+}

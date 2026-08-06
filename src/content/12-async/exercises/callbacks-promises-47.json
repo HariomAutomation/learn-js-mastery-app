@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-47",
+  "title": "Promise Resolve Null",
+  "starterCode": "Promise.resolve(null)\n  .then(val => console.log(val));",
+  "solution": "Promise.resolve(null)\n  .then(val => console.log(val));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "null"
+    }
+  ],
+  "hints": [
+    "Promise can resolve with null",
+    "then receives null"
+  ]
+}

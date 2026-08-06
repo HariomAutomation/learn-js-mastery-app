@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-04",
+  "title": "Input Event",
+  "starterCode": "const input = document.querySelector('input');\ninput.addEventListener('input', function(e) {\n  console.log(e.type);\n});",
+  "solution": "const input = document.querySelector('input');\ninput.addEventListener('input', function(e) {\n  console.log(e.type);\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "input"
+    }
+  ],
+  "hints": [
+    "Fires on every input change",
+    "Event type is 'input'"
+  ]
+}

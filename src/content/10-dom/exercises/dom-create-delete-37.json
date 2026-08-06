@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-37",
+  "title": "Template Element",
+  "starterCode": "const template = document.createElement('template');\ntemplate.innerHTML = '<p>Inside template</p>';\nconsole.log(template.content.children.length);",
+  "solution": "const template = document.createElement('template');\ntemplate.innerHTML = '<p>Inside template</p>';\nconsole.log(template.content.children.length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1"
+    }
+  ],
+  "hints": [
+    "template.content is a DocumentFragment",
+    "Children are inside the fragment"
+  ]
+}

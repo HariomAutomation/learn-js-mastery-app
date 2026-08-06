@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-42",
+  "title": "Private Field",
+  "starterCode": "class Counter {\n  #count = 0;\n  increment() { this.#count++; }\n  getCount() { return this.#count; }\n}\nconst c = new Counter();\nc.increment(); c.increment();\nconsole.log(c.getCount());",
+  "solution": "class Counter {\n  #count = 0;\n  increment() { this.#count++; }\n  getCount() { return this.#count; }\n}\nconst c = new Counter();\nc.increment(); c.increment();\nconsole.log(c.getCount());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2"
+    }
+  ],
+  "hints": [
+    "# creates private field",
+    "Access via method"
+  ]
+}

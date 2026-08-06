@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-20",
+  "title": "classList add Multiple",
+  "starterCode": "const el = document.querySelector('.box');\nel.classList.add('active', 'highlight', 'selected');\nconsole.log(el.classList.length);",
+  "solution": "const el = document.querySelector('.box');\nel.classList.add('active', 'highlight', 'selected');\nconsole.log(el.classList.length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "4"
+    }
+  ],
+  "hints": [
+    "classList.add can take multiple arguments",
+    "Original class plus 3 new ones"
+  ]
+}

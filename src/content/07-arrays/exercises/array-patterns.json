@@ -1,0 +1,12 @@
+{
+  "id": "07-arrays-array-patterns",
+  "title": "Array patterns — flatten, group, deduplicate",
+  "starterCode": "// 1. Flat array banao (nested array se)\nconst nested = [[1, 2], [3, 4], [5, 6]]\nconst flat = nested.flat()\nconsole.log(flat) // [1, 2, 3, 4, 5, 6]\n\n// 2. Duplicate remove karo (Set use karo)\nconst arr = [1, 2, 2, 3, 3, 3, 4]\nconst unique = [...new Set(arr)]\nconsole.log(unique) // [1, 2, 3, 4]\n\n// 3. Array sort descending\nconst nums = [10, 5, 8, 1, 7]\nnums.sort((a, b) => b - a)\nconsole.log(nums) // ?\n\n// 4. Find first even number\nconst numbers = [1, 3, 5, 8, 9, 10]\nconst firstEven = numbers.find(n => n % 2 === 0)\nconsole.log(firstEven) // ?\n",
+  "solution": "const nested = [[1, 2], [3, 4], [5, 6]]\nconst flat = nested.flat()\nconsole.log(flat)\nconst arr = [1, 2, 2, 3, 3, 3, 4]\nconst unique = [...new Set(arr)]\nconsole.log(unique)\nconst nums = [10, 5, 8, 1, 7]\nnums.sort((a, b) => b - a)\nconsole.log(nums)\nconst numbers = [1, 3, 5, 8, 9, 10]\nconst firstEven = numbers.find(n => n % 2 === 0)\nconsole.log(firstEven)",
+  "tests": [{ "input": [], "expected": "[1, 2, 3, 4, 5, 6]\n[1, 2, 3, 4]\n[10, 8, 7, 5, 1]\n8" }],
+  "hints": [
+    "flat() ek level flatten karta hai",
+    "Set sirf unique values rakhta hai",
+    "sort((a,b) => b-a) se descending sort hota hai"
+  ]
+}

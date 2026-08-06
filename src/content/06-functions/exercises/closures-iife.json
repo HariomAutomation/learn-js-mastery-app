@@ -1,0 +1,12 @@
+{
+  "id": "06-functions-closures-iife",
+  "title": "Closure se counter banao",
+  "starterCode": "// 1. Closure — createCounter() jo ek counter return kare\n//    Har call pe increment ho, private rahe\n\nfunction createCounter() {\n  let count = 0\n  // yahan ek object return karo jismein increment, decrement, getCount\n}\n\nconst counter = createCounter()\nconsole.log(counter.increment()) // 1\nconsole.log(counter.increment()) // 2\nconsole.log(counter.decrement()) // 1\nconsole.log(counter.getCount())  // 1\n\n// 2. IIFE — turant function call karo\nconst result = (function() {\n  return 42\n})()\nconsole.log(result) // 42\n",
+  "solution": "function createCounter() {\n  let count = 0\n  return {\n    increment: () => ++count,\n    decrement: () => --count,\n    getCount: () => count\n  }\n}\nconst counter = createCounter()\nconsole.log(counter.increment())\nconsole.log(counter.increment())\nconsole.log(counter.decrement())\nconsole.log(counter.getCount())\nconst result = (function() { return 42 })()\nconsole.log(result)",
+  "tests": [{ "input": [], "expected": "1\n2\n1\n1\n42" }],
+  "hints": [
+    "Closure mein inner function outer ke variables access karta hai",
+    "IIFE: (function() { ... })() — declare + call ek line mein",
+    "count private hai — sirf methods se access ho sakta hai"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-methods-31",
+  "title": "Pad Fill",
+  "starterCode": "console.log('5'.padStart(5, '0'));\nconsole.log('5'.padEnd(5, '0'));",
+  "solution": "console.log('5'.padStart(5, '0'));\nconsole.log('5'.padEnd(5, '0'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "00005\n50000"
+    }
+  ],
+  "hints": [
+    "Pad start and end",
+    "Different positions"
+  ]
+}

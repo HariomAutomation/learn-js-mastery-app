@@ -1,0 +1,57 @@
+[
+  {
+    "question": "fetch() kya return karta hai?",
+    "options": [
+      "Promise jo Response object resolve hota hai",
+      "Response object directly",
+      "JSON data directly",
+      "HTML string"
+    ],
+    "correctIndex": 0,
+    "explanation": "fetch() Promise return karta hai jo Response object mein resolve hota hai. Response mein body, headers, status hain but body abhi raw hai — .json() ya .text() se parse karo."
+  },
+  {
+    "question": "API se JSON data lene ke kya steps hain?",
+    "options": [
+      "fetch() → res.json() → data use karo",
+      "fetch() → data mil gaya",
+      "fetch() → res.text() → JSON hai",
+      "fetch() → JSON.parse() → data"
+    ],
+    "correctIndex": 0,
+    "explanation": "fetch(url) se Response mila, res.json() se Promise mila jo parsed JSON data mein resolve hota hai. Dono .then() ya await use karo."
+  },
+  {
+    "question": "POST request bhejne ke liye fetch mein kya options chahiye?",
+    "options": [
+      "{ method: 'POST', headers, body: JSON.stringify(data) }",
+      "Sirf URL",
+      "{ body: data }",
+      "{ type: 'POST' }"
+    ],
+    "correctIndex": 0,
+    "explanation": "POST ke liye method set karo, Content-Type header lagao (application/json), aur body ko JSON.stringify() se string bana ke bhejo."
+  },
+  {
+    "question": "fetch error handle karne ka sahi tareeka?",
+    "options": [
+      ".catch() lagao ya try/catch mein await karo",
+      "if/else se check karo",
+      "Error nahi aata fetch mein",
+      ".then() mein check karo"
+    ],
+    "correctIndex": 0,
+    "explanation": "fetch() sirf network errors pe reject hota hai (404, 500 nahi). .catch() ya try/catch use karo. HTTP errors ke liye res.ok check karo manually."
+  },
+  {
+    "question": "res.ok kya check karta hai?",
+    "options": [
+      "Status code 200-299 hai ya nahi",
+      "Response empty hai ya nahi",
+      "Content type JSON hai ya nahi",
+      "Headers present hain ya nahi"
+    ],
+    "correctIndex": 0,
+    "explanation": "res.ok true hai agar status 200-299 range mein ho. 404, 500 jaise errors mein res.ok false hoga — manually check karo warna catch nahi hoga."
+  }
+]

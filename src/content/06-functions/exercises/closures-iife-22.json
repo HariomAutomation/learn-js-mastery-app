@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-closures-iife-22",
+  "title": "Closure Event Handler",
+  "starterCode": "function createHandler(name) {\n  return {\n    handle: () => console.log('Handling ' + name),\n    getName: () => name\n  };\n}\nconst h1 = createHandler('click');\nconst h2 = createHandler('scroll');\nh1.handle();\nh2.handle();",
+  "solution": "function createHandler(name) {\n  return {\n    handle: () => console.log('Handling ' + name),\n    getName: () => name\n  };\n}\nconst h1 = createHandler('click');\nconst h2 = createHandler('scroll');\nh1.handle();\nh2.handle();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Handling click\nHandling scroll"
+    }
+  ],
+  "hints": [
+    "Each handler has own closure",
+    "name is captured"
+  ]
+}

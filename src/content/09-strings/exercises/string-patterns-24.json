@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-24",
+  "title": "Array to String",
+  "starterCode": "const arr = ['h', 'e', 'l', 'l', 'o'];\nconst str = arr.join('');\nconsole.log(str);",
+  "solution": "const arr = ['h', 'e', 'l', 'l', 'o'];\nconst str = arr.join('');\nconsole.log(str);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hello"
+    }
+  ],
+  "hints": [
+    "Join without separator",
+    "Concat all"
+  ]
+}

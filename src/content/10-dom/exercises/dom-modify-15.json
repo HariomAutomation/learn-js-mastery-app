@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-15",
+  "title": "classList contains",
+  "starterCode": "const el = document.querySelector('.box');\nconsole.log(el.classList.contains('box'));",
+  "solution": "const el = document.querySelector('.box');\nconsole.log(el.classList.contains('box'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "contains checks if class exists",
+    "Returns boolean"
+  ]
+}

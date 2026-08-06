@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-41",
+  "title": "For...Of Set Union",
+  "starterCode": "const set1 = new Set([1, 2, 3]);\nconst set2 = new Set([2, 3, 4]);\nconst union = new Set([...set1, ...set2]);\nfor (const val of union) {\n  console.log(val);\n}",
+  "solution": "const set1 = new Set([1, 2, 3]);\nconst set2 = new Set([2, 3, 4]);\nconst union = new Set([...set1, ...set2]);\nfor (const val of union) {\n  console.log(val);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1\n2\n3\n4"
+    }
+  ],
+  "hints": [
+    "Spread sets into new Set",
+    "Union removes duplicates"
+  ]
+}

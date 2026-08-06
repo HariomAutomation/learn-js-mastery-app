@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-while-31",
+  "title": "Right Triangle",
+  "starterCode": "for (let i = 1; i <= 5; i++) {\n  let row = '';\n  for (let j = 1; j <= i; j++) {\n    row += '* ';\n  }\n  console.log(row);\n}",
+  "solution": "for (let i = 1; i <= 5; i++) {\n  let row = '';\n  for (let j = 1; j <= i; j++) {\n    row += '* ';\n  }\n  console.log(row);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "* \n* * \n* * * \n* * * * \n* * * * * "
+    }
+  ],
+  "hints": [
+    "Inner loop runs i times",
+    "Add star each iteration"
+  ]
+}

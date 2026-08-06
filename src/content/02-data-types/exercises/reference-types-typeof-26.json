@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-26",
+  "title": "Primitive passed by value",
+  "starterCode": "function modify(n) { n = 10; }\nlet a = 1;\nmodify(a);\nconsole.log();",
+  "solution": "function modify(n) { n = 10; }\nlet a = 1;\nmodify(a);\nconsole.log(a);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1"
+    }
+  ],
+  "hints": [
+    "Primitives are copied by value",
+    "The original is not affected"
+  ]
+}

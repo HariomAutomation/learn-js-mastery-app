@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-48",
+  "title": "Create character from code",
+  "starterCode": "console.log();",
+  "solution": "console.log(String.fromCharCode(65));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "A"
+    }
+  ],
+  "hints": [
+    "String.fromCharCode creates from code",
+    "65 is 'A' in ASCII"
+  ]
+}

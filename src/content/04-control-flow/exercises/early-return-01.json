@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-early-return-01",
+  "title": "Simple validation return",
+  "starterCode": "function divide(a, b) {\n  if (b === 0) return 'Cannot divide by zero';\n  return a / b;\n}\nconsole.log(divide(10, 2));",
+  "solution": "function divide(a, b) {\n  if (b === 0) return 'Cannot divide by zero';\n  return a / b;\n}\nconsole.log(divide(10, 2));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "5"
+    }
+  ],
+  "hints": [
+    "Guard clause returns early on error",
+    "b is not 0, so normal return executes"
+  ]
+}

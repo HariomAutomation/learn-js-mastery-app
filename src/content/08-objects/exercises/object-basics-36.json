@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-36",
+  "title": "Practice 7",
+  "starterCode": "const obj = {a: 1, b: 2, c: 3};\nconst result = {};\nfor (const key of Object.keys(obj)) {\n  result[key] = obj[key] * 10;\n}\nconsole.log(result);",
+  "solution": "const obj = {a: 1, b: 2, c: 3};\nconst result = {};\nfor (const key of Object.keys(obj)) {\n  result[key] = obj[key] * 10;\n}\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{ a: 10, b: 20, c: 30 }"
+    }
+  ],
+  "hints": [
+    "Loop keys",
+    "Transform values"
+  ]
+}

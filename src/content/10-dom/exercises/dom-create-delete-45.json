@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-45",
+  "title": "textContent vs createTextNode",
+  "starterCode": "const el = document.createElement('p');\nel.textContent = 'Hello';\nconsole.log(el.childNodes.length);",
+  "solution": "const el = document.createElement('p');\nel.textContent = 'Hello';\nconsole.log(el.childNodes.length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1"
+    }
+  ],
+  "hints": [
+    "textContent creates a text node internally",
+    "One child node created"
+  ]
+}

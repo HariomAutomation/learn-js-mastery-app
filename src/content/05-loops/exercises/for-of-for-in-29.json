@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-29",
+  "title": "Array Find For...Of",
+  "starterCode": "const arr = [1, 5, 8, 12, 3];\nfor (const num of arr) {\n  if (num > 10) {\n    console.log(num);\n    break;\n  }\n}",
+  "solution": "const arr = [1, 5, 8, 12, 3];\nfor (const num of arr) {\n  if (num > 10) {\n    console.log(num);\n    break;\n  }\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "12"
+    }
+  ],
+  "hints": [
+    "Check condition",
+    "Break when found"
+  ]
+}

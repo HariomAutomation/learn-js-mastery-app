@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-19",
+  "title": "forEach on NodeList",
+  "starterCode": "const items = document.querySelectorAll('.item');\nlet count = 0;\nitems.forEach(() => count++);\nconsole.log(count);",
+  "solution": "const items = document.querySelectorAll('.item');\nlet count = 0;\nitems.forEach(() => count++);\nconsole.log(count);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "0"
+    }
+  ],
+  "hints": [
+    "NodeList supports forEach",
+    "Count iterations in the callback"
+  ]
+}

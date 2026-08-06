@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-01",
+  "title": "Async Function",
+  "starterCode": "async function greet() {\n  return 'Hello';\n}\ngreet().then(msg => console.log(msg));",
+  "solution": "async function greet() {\n  return 'Hello';\n}\ngreet().then(msg => console.log(msg));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hello"
+    }
+  ],
+  "hints": [
+    "async function returns a promise",
+    "Use then to get the value"
+  ]
+}

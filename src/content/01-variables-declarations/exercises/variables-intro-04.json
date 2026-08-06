@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-variables-intro-04",
+  "title": "typeof check",
+  "starterCode": "const val = 42\nconsole.log(typeof val)",
+  "solution": "const val = 42\nconsole.log(typeof val)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "number"
+    }
+  ],
+  "hints": [
+    "typeof returns a string"
+  ]
+}

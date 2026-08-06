@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-closures-iife-23",
+  "title": "IIFE Namespace",
+  "starterCode": "const App = (function() {\n  const _config = { version: '1.0' };\n  return {\n    getVersion: () => _config.version\n  };\n})();\nconsole.log(App.getVersion());",
+  "solution": "const App = (function() {\n  const _config = { version: '1.0' };\n  return {\n    getVersion: () => _config.version\n  };\n})();\nconsole.log(App.getVersion());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1.0"
+    }
+  ],
+  "hints": [
+    "IIFE creates namespace",
+    "_config is private"
+  ]
+}

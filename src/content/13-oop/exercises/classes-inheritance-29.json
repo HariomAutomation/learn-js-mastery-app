@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-29",
+  "title": "Class vs Function",
+  "starterCode": "// class is syntactic sugar for function constructors\nclass Foo {}\nfunction Bar() {}\nconsole.log(typeof Foo);",
+  "solution": "// class is syntactic sugar for function constructors\nclass Foo {}\nfunction Bar() {}\nconsole.log(typeof Foo);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "function"
+    }
+  ],
+  "hints": [
+    "class is actually a function",
+    "Both create constructors"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "08-objects-destructuring-copying",
+  "title": "Destructuring + spread se objects",
+  "starterCode": "const user = {\n  name: \"Aman\",\n  age: 25,\n  role: \"developer\",\n  skills: [\"JS\", \"React\"]\n}\n\n// 1. Object destructuring\nconst { name, role, ...rest } = user\nconsole.log(name)\nconsole.log(role)\nconsole.log(rest) // baaki sab\n\n// 2. Shallow copy (spread)\nconst copy = { ...user }\nconsole.log(copy.name)\n\n// 3. Override with spread\nconst updated = { ...user, age: 26, role: \"senior\" }\nconsole.log(updated.age, updated.role)\n\n// 4. Nested destructuring\nconst { skills: [first, second] } = user\nconsole.log(first, second)\n",
+  "solution": "const user = { name: \"Aman\", age: 25, role: \"developer\", skills: [\"JS\", \"React\"] }\nconst { name, role, ...rest } = user\nconsole.log(name)\nconsole.log(role)\nconsole.log(rest)\nconst copy = { ...user }\nconsole.log(copy.name)\nconst updated = { ...user, age: 26, role: \"senior\" }\nconsole.log(updated.age, updated.role)\nconst { skills: [first, second] } = user\nconsole.log(first, second)",
+  "tests": [{ "input": [], "expected": "Aman\ndeveloper\n{\"name\":\"Aman\",\"age\":25,\"role\":\"developer\",\"skills\":[\"JS\",\"React\"]}\nAman\n26 senior\nJS React" }],
+  "hints": [
+    "Destructuring: const { key1, key2 } = object",
+    "...rest baaki sab keys collect karta hai",
+    "Spread: { ...obj } shallow copy deta hai"
+  ]
+}

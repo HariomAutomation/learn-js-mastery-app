@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-33",
+  "title": "Multiple Listeners",
+  "starterCode": "const btn = document.querySelector('button');\nbtn.addEventListener('click', () => console.log('first'));\nbtn.addEventListener('click', () => console.log('second'));\nconsole.log('two listeners');",
+  "solution": "const btn = document.querySelector('button');\nbtn.addEventListener('click', () => console.log('first'));\nbtn.addEventListener('click', () => console.log('second'));\nconsole.log('two listeners');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "two listeners"
+    }
+  ],
+  "hints": [
+    "Multiple listeners can be added",
+    "All fire in order added"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-28",
+  "title": "Fetch Signal",
+  "starterCode": "// signal option for AbortController\nconsole.log(\"signal: controller.signal\");",
+  "solution": "// signal option for AbortController\nconsole.log(\"signal: controller.signal\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "signal: controller.signal"
+    }
+  ],
+  "hints": [
+    "Pass signal from AbortController",
+    "controller.abort() cancels fetch"
+  ]
+}

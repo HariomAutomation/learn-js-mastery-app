@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-15",
+  "title": "Scope resolution order",
+  "starterCode": "var x = 1\nfunction a() {\n  var x = 2\n  function b() {\n    var x = 3\n    console.log(x)\n  }\n  b()\n}\na()",
+  "solution": "var x = 1\nfunction a() {\n  var x = 2\n  function b() {\n    var x = 3\n    console.log(x)\n  }\n  b()\n}\na()",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3"
+    }
+  ],
+  "hints": [
+    "Innermost scope wins"
+  ]
+}

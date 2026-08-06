@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-17",
+  "title": "Deep Copy Pattern",
+  "starterCode": "const obj = {arr: [1, 2], nested: {x: 10}};\nconst copy = structuredClone(obj);\ncopy.arr.push(3);\ncopy.nested.x = 99;\nconsole.log(obj.arr);\nconsole.log(obj.nested.x);",
+  "solution": "const obj = {arr: [1, 2], nested: {x: 10}};\nconst copy = structuredClone(obj);\ncopy.arr.push(3);\ncopy.nested.x = 99;\nconsole.log(obj.arr);\nconsole.log(obj.nested.x);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 1, 2 ]\n10"
+    }
+  ],
+  "hints": [
+    "Deep copy independent",
+    "Original untouched"
+  ]
+}

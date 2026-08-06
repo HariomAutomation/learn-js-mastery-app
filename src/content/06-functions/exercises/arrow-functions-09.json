@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-09",
+  "title": "Arrow This Binding",
+  "starterCode": "const obj = {\n  name: 'Alice',\n  greet: () => {\n    console.log('Hello ' + this.name);\n  }\n};\nobj.greet();",
+  "solution": "const obj = {\n  name: 'Alice',\n  greet: () => {\n    console.log('Hello ' + this.name);\n  }\n};\nobj.greet();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hello undefined"
+    }
+  ],
+  "hints": [
+    "Arrow has lexical this",
+    "this is outer scope"
+  ]
+}

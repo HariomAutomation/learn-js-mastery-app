@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-36",
+  "title": "Input Value Change",
+  "starterCode": "const input = document.querySelector('input');\ninput.addEventListener('input', function() {\n  console.log(this.value);\n});",
+  "solution": "const input = document.querySelector('input');\ninput.addEventListener('input', function() {\n  console.log(this.value);\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hello"
+    }
+  ],
+  "hints": [
+    "Fires on every input change",
+    "this.value has current value"
+  ]
+}

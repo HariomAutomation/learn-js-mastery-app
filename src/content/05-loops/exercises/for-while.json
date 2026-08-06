@@ -1,0 +1,12 @@
+{
+  "id": "05-loops-for-while",
+  "title": "for + while se sum aur reverse",
+  "starterCode": "// 1. for loop se 1..10 ka sum:\nlet sumFor = 0\nfor (let i = 1; i <= 10; i++) {\n  // yahan add karo\n}\nconsole.log(\"for sum =\", sumFor)  // 55\n\n// 2. while loop se reverse 10..1 print:\nlet n = 10\nwhile (n >= 1) {\n  console.log(n)\n  n--\n}\n\n// 3. do-while — kam se kam ek baar:\nlet counter = 0\ndo {\n  console.log(\"counter:\", counter)\n  counter++\n} while (counter < 3)\n",
+  "solution": "let sumFor = 0\nfor (let i = 1; i <= 10; i++) {\n  sumFor += i\n}\nconsole.log(\"for sum:\", sumFor)  // 55\nlet n = 10\nwhile (n >= 1) {\n  console.log(n)\n  n--\n}\nlet counter = 0\ndo {\n  console.log(\"counter:\", counter)\n  counter++\n} while (counter < 3)",
+  "tests": [{ "input": [], "expected": "for sum: 55" }],
+  "hints": [
+    "for: initialization; condition; increment",
+    "while: condition pehle check",
+    "do-while: body pehle, condition baad"
+  ]
+}

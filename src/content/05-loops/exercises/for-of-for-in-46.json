@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-46",
+  "title": "For...Of Range",
+  "starterCode": "function range(start, end) {\n  const arr = [];\n  for (let i = start; i <= end; i++) {\n    arr.push(i);\n  }\n  return arr;\n}\nfor (const num of range(3, 7)) {\n  console.log(num);\n}",
+  "solution": "function range(start, end) {\n  const arr = [];\n  for (let i = start; i <= end; i++) {\n    arr.push(i);\n  }\n  return arr;\n}\nfor (const num of range(3, 7)) {\n  console.log(num);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3\n4\n5\n6\n7"
+    }
+  ],
+  "hints": [
+    "Create range array",
+    "Iterate with for...of"
+  ]
+}

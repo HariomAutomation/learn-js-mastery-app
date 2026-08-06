@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-19",
+  "title": "Symbol.iterator",
+  "starterCode": "class Range {\n  constructor(start, end) { this.start = start; this.end = end; }\n  [Symbol.iterator]() {\n    let current = this.start;\n    const end = this.end;\n    return {\n      next() {\n        return current <= end\n          ? { value: current++, done: false }\n          : { done: true };\n      }\n    };\n  }\n}\nconsole.log([...new Range(1, 3)]);",
+  "solution": "class Range {\n  constructor(start, end) { this.start = start; this.end = end; }\n  [Symbol.iterator]() {\n    let current = this.start;\n    const end = this.end;\n    return {\n      next() {\n        return current <= end\n          ? { value: current++, done: false }\n          : { done: true };\n      }\n    };\n  }\n}\nconsole.log([...new Range(1, 3)]);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1,2,3"
+    }
+  ],
+  "hints": [
+    "Symbol.iterator makes class iterable",
+    "Return object with next()"
+  ]
+}

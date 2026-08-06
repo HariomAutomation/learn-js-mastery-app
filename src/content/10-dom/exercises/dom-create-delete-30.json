@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-30",
+  "title": "replace All",
+  "starterCode": "const parent = document.createElement('div');\nparent.innerHTML = '<p>Old</p>';\nconst newChild = document.createElement('span');\nparent.replaceChild(newChild, parent.firstChild);\nconsole.log(parent.innerHTML);",
+  "solution": "const parent = document.createElement('div');\nparent.innerHTML = '<p>Old</p>';\nconst newChild = document.createElement('span');\nparent.replaceChild(newChild, parent.firstChild);\nconsole.log(parent.innerHTML);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "<span></span>"
+    }
+  ],
+  "hints": [
+    "replaceChild swaps nodes",
+    "Check innerHTML after replacement"
+  ]
+}

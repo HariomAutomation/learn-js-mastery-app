@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-34",
+  "title": "Practice 5",
+  "starterCode": "const obj = {a: 1, b: 2, c: 3};\nconst hasC = 'c' in obj;\nconst hasD = 'd' in obj;\nconsole.log(hasC, hasD);",
+  "solution": "const obj = {a: 1, b: 2, c: 3};\nconst hasC = 'c' in obj;\nconst hasD = 'd' in obj;\nconsole.log(hasC, hasD);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true false"
+    }
+  ],
+  "hints": [
+    "in operator checks keys",
+    "Returns boolean"
+  ]
+}

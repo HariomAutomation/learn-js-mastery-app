@@ -1,0 +1,15 @@
+{
+  "id": "03-operators-arithmetic-comparison-41",
+  "title": "Compound modulo (%=)",
+  "starterCode": "let x = 17;\nx %= 5;\nconsole.log(x);",
+  "solution": "let x = 17;\nx %= 5;\nconsole.log(x);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2"
+    }
+  ],
+  "hints": [
+    "x %= 5 is the same as x = x % 5"
+  ]
+}

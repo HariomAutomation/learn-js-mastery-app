@@ -1,0 +1,17 @@
+{
+  "id": "04-control-flow-early-return-22",
+  "title": "Multiple guards pattern",
+  "starterCode": "function processPayment(amount, method) {\n  if (amount <= 0) return 'invalid amount';\n  if (!method) return 'no payment method';\n  if (amount > 10000) return 'amount too large';\n  return `paid ${amount} via ${method}`;\n}\nconsole.log(processPayment(500, 'card'));",
+  "solution": "function processPayment(amount, method) {\n  if (amount <= 0) return 'invalid amount';\n  if (!method) return 'no payment method';\n  if (amount > 10000) return 'amount too large';\n  return `paid ${amount} via ${method}`;\n}\nconsole.log(processPayment(500, 'card'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "paid 500 via card"
+    }
+  ],
+  "hints": [
+    "500 > 0, first guard passes",
+    "method is truthy, second passes",
+    "500 <= 10000, third passes"
+  ]
+}

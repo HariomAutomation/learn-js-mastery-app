@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-higher-order-functions-45",
+  "title": "Curry Function",
+  "starterCode": "function curry(fn) {\n  return function curried(...args) {\n    if (args.length >= fn.length) {\n      return fn(...args);\n    }\n    return (...moreArgs) => curried(...args, ...moreArgs);\n  };\n}\nconst add = curry((a, b, c) => a + b + c);\nconsole.log(add(1)(2)(3));",
+  "solution": "function curry(fn) {\n  return function curried(...args) {\n    if (args.length >= fn.length) {\n      return fn(...args);\n    }\n    return (...moreArgs) => curried(...args, ...moreArgs);\n  };\n}\nconst add = curry((a, b, c) => a + b + c);\nconsole.log(add(1)(2)(3));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "6"
+    }
+  ],
+  "hints": [
+    "Partial application",
+    "Collect args until enough"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-35",
+  "title": "Symbol Iterator",
+  "starterCode": "const range = {\n  from: 1,\n  to: 3,\n  [Symbol.iterator]() {\n    let current = this.from;\n    const last = this.to;\n    return {\n      next() {\n        return current <= last ? {value: current++, done: false} : {done: true};\n      }\n    };\n  }\n};\nconsole.log([...range]);",
+  "solution": "const range = {\n  from: 1,\n  to: 3,\n  [Symbol.iterator]() {\n    let current = this.from;\n    const last = this.to;\n    return {\n      next() {\n        return current <= last ? {value: current++, done: false} : {done: true};\n      }\n    };\n  }\n};\nconsole.log([...range]);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 1, 2, 3 ]"
+    }
+  ],
+  "hints": [
+    "Implement iterator",
+    "next() returns value/done"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-10",
+  "title": "Nested scope",
+  "starterCode": "function a() {\n  function b() {\n    function c() {\n      console.log(\"deep\")\n    }\n    c()\n  }\n  b()\n}\na()",
+  "solution": "function a() {\n  function b() {\n    function c() {\n      console.log(\"deep\")\n    }\n    c()\n  }\n  b()\n}\na()",
+  "tests": [
+    {
+      "input": [],
+      "expected": "deep"
+    }
+  ],
+  "hints": [
+    "Functions can nest arbitrarily"
+  ]
+}

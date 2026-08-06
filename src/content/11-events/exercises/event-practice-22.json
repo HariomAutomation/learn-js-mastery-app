@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-22",
+  "title": "Sortable List",
+  "starterCode": "// Drag to reorder items\nconsole.log(\"sortable list pattern\");",
+  "solution": "// Drag to reorder items\nconsole.log(\"sortable list pattern\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "sortable list pattern"
+    }
+  ],
+  "hints": [
+    "Use dragstart/dragover/drop",
+    "Reorder array on drop"
+  ]
+}

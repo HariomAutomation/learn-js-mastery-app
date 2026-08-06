@@ -1,0 +1,49 @@
+[
+  {
+    "question": "for-of loop kya iterate karta hai?",
+    "options": ["Object keys", "Iterable values (array, string)", "Object values", "Indexes"],
+    "correctIndex": 1,
+    "explanation": "for-of iterable objects (arrays, strings, maps) ke values par iterate karta hai."
+  },
+  {
+    "question": "forEach mein break use kar sakte hain?",
+    "options": ["Haan", "Nahi", "Sirf arrays mein", "Sirf objects mein"],
+    "correctIndex": 1,
+    "explanation": "forEach mein break ya continue use nahi kar sakte. Agar break chahiye to for ya for-of use karo."
+  },
+  {
+    "question": "do-while loop aur while loop mein kya farq hai?",
+    "options": ["Koi farq nahi", "do-while kam se kam ek baar chalta hai", "while fast chalta hai", "do-while sirf arrays ke liye"],
+    "correctIndex": 1,
+    "explanation": "do-while pehle body execute karta hai, phir condition check. Isliye kam se kam ek baar zaroor chalta hai."
+  },
+  {
+    "question": "for-in loop ka use kiske liye hota hai?",
+    "options": ["Arrays ke liye", "Objects ke keys ke liye", "Strings ke liye", "Numbers ke liye"],
+    "correctIndex": 1,
+    "explanation": "for-in object keys par iterate karta hai. Arrays ke liye for-of better hai."
+  },
+  {
+    "question": "continue keyword kya karta hai?",
+    "options": ["Loop completely band karta hai", "Current iteration skip, next pe jaata hai", "Function return karta hai", "Error throw karta hai"],
+    "correctIndex": 1,
+    "explanation": "continue current iteration skip karta hai aur next iteration pe chala jaata hai. break loop completely band karta hai."
+  },
+  {
+    "question": "Nested loops mein inner loop ka break kaunsi loop break karta hai?",
+    "options": ["Dono loops", "Sirf outer loop", "Sirf inner loop", "Koi bhi nahi"],
+    "correctIndex": 2,
+    "explanation": "break sirf usi loop ko break karta hai jiska part hai. Outer loop continue rehta hai."
+  },
+  {
+    "question": "Kis situation mein while loop for loop behtar hai?",
+    "options": [
+      "Jab array iterate karni ho",
+      "Jab iteration count pehle se na pata ho",
+      "Jab string reverse karni ho",
+      "While loop kabhi behtar nahi"
+    ],
+    "correctIndex": 1,
+    "explanation": "while tab best hai jab iteration count pehle se nahi pata — user input, API response, ya koi random condition tak loop."
+  }
+]

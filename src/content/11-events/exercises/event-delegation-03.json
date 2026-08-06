@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-03",
+  "title": "currentTarget Property",
+  "starterCode": "const ul = document.querySelector('ul');\nul.addEventListener('click', function(e) {\n  console.log(e.currentTarget.tagName);\n});",
+  "solution": "const ul = document.querySelector('ul');\nul.addEventListener('click', function(e) {\n  console.log(e.currentTarget.tagName);\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "UL"
+    }
+  ],
+  "hints": [
+    "currentTarget is element with listener",
+    "Always the parent in delegation"
+  ]
+}

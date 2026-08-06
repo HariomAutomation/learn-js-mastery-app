@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-39",
+  "title": "Repeat a string",
+  "starterCode": "const str = \"ha\";\nconsole.log();",
+  "solution": "const str = \"ha\";\nconsole.log(str.repeat(3));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hahaha"
+    }
+  ],
+  "hints": [
+    "Strings have a repeat method",
+    "Pass the number of times to repeat"
+  ]
+}

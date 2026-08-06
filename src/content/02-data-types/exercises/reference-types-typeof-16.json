@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-16",
+  "title": "Copy array with spread",
+  "starterCode": "const a = [1, 2, 3];\nconst b = ;\nb.push(4);\nconsole.log(a.length);",
+  "solution": "const a = [1, 2, 3];\nconst b = [...a];\nb.push(4);\nconsole.log(a.length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3"
+    }
+  ],
+  "hints": [
+    "Spread creates a new array",
+    "Original is not affected"
+  ]
+}

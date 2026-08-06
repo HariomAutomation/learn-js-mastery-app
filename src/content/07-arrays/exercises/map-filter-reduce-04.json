@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-04",
+  "title": "Chaining",
+  "starterCode": "const nums = [1, 2, 3, 4, 5];\nconst result = nums.____(x => x > 2).map(x => x * 10);\nconsole.log(result);",
+  "solution": "const nums = [1, 2, 3, 4, 5];\nconst result = nums.filter(x => x > 2).map(x => x * 10);\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 30, 40, 50 ]"
+    }
+  ],
+  "hints": [
+    "Filter first then map",
+    "Chain array methods"
+  ]
+}

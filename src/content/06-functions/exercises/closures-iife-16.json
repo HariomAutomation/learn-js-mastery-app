@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-closures-iife-16",
+  "title": "Closure In Callback",
+  "starterCode": "function setup() {\n  let clicks = 0;\n  return {\n    onClick: () => {\n      clicks++;\n      console.log('Clicks: ' + clicks);\n    }\n  };\n}\nconst ui = setup();\nui.onClick();\nui.onClick();",
+  "solution": "function setup() {\n  let clicks = 0;\n  return {\n    onClick: () => {\n      clicks++;\n      console.log('Clicks: ' + clicks);\n    }\n  };\n}\nconst ui = setup();\nui.onClick();\nui.onClick();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Clicks: 1\nClicks: 2"
+    }
+  ],
+  "hints": [
+    "clicks persists",
+    "Callback uses closure"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "04-control-flow-early-return-40",
+  "title": "Guard clause with logical AND",
+  "starterCode": "function canVote(age, citizen) {\n  if (age < 18 || !citizen) return false;\n  return true;\n}\nconsole.log(canVote(21, true));",
+  "solution": "function canVote(age, citizen) {\n  if (age < 18 || !citizen) return false;\n  return true;\n}\nconsole.log(canVote(21, true));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "21 < 18 is false",
+    "!true is false",
+    "false || false is false, guard doesn't trigger"
+  ]
+}

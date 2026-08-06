@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-39",
+  "title": "Complete 2",
+  "starterCode": "const obj = {a: 1, b: 2, c: 3, d: 4, e: 5};\nconst half = Object.fromEntries(Object.entries(obj).filter(([k, v]) => v % 2 === 0));\nconsole.log(half);",
+  "solution": "const obj = {a: 1, b: 2, c: 3, d: 4, e: 5};\nconst half = Object.fromEntries(Object.entries(obj).filter(([k, v]) => v % 2 === 0));\nconsole.log(half);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{ b: 2, d: 4 }"
+    }
+  ],
+  "hints": [
+    "Filter even values",
+    "fromEntries back"
+  ]
+}

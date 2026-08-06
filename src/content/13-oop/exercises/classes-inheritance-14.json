@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-14",
+  "title": "instanceof",
+  "starterCode": "class Animal {}\nclass Dog extends Animal {}\nconst d = new Dog();\nconsole.log(d instanceof Dog);",
+  "solution": "class Animal {}\nclass Dog extends Animal {}\nconst d = new Dog();\nconsole.log(d instanceof Dog);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "instanceof checks prototype chain",
+    "Returns boolean"
+  ]
+}

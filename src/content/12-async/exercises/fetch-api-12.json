@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-12",
+  "title": "Content-Type",
+  "starterCode": "// Set Content-Type for request body\nconsole.log(\"application/json for JSON data\");",
+  "solution": "// Set Content-Type for request body\nconsole.log(\"application/json for JSON data\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "application/json for JSON data"
+    }
+  ],
+  "hints": [
+    "Content-Type tells server format",
+    "JSON needs application/json"
+  ]
+}

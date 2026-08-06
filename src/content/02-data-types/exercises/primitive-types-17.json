@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-17",
+  "title": "Create a number using exponential notation",
+  "starterCode": "const bigNum = ;\nconsole.log(bigNum);",
+  "solution": "const bigNum = 5e3;\nconsole.log(bigNum);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "5000"
+    }
+  ],
+  "hints": [
+    "e notation means times 10 to the power",
+    "5e3 = 5 × 10^3"
+  ]
+}

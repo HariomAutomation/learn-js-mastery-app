@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-08",
+  "title": "Fetch Timeout",
+  "starterCode": "// Use AbortController for timeout\nconsole.log(\"abort after timeout ms\");",
+  "solution": "// Use AbortController for timeout\nconsole.log(\"abort after timeout ms\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "abort after timeout ms"
+    }
+  ],
+  "hints": [
+    "setTimeout calls abort",
+    "Race fetch against timeout"
+  ]
+}

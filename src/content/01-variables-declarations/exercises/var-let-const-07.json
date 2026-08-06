@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-var-let-const-07",
+  "title": "const array mutation",
+  "starterCode": "const arr = [1, 2]\narr.push(3)\nconsole.log(arr.length)",
+  "solution": "const arr = [1, 2]\narr.push(3)\nconsole.log(arr.length)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3"
+    }
+  ],
+  "hints": [
+    "const allows array mutation"
+  ]
+}

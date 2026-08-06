@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-35",
+  "title": "Async Complete",
+  "starterCode": "// async/await makes async code readable\nconsole.log(\"async/await complete\");",
+  "solution": "// async/await makes async code readable\nconsole.log(\"async/await complete\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "async/await complete"
+    }
+  ],
+  "hints": [
+    "Review all async patterns",
+    "Practice with real APIs"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-27",
+  "title": "Map Values",
+  "starterCode": "const obj = {a: 1, b: 2, c: 3};\nconst doubled = {};\nfor (const [k, v] of Object.entries(obj)) {\n  doubled[k] = v * 2;\n}\nconsole.log(doubled);",
+  "solution": "const obj = {a: 1, b: 2, c: 3};\nconst doubled = {};\nfor (const [k, v] of Object.entries(obj)) {\n  doubled[k] = v * 2;\n}\nconsole.log(doubled);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{ a: 2, b: 4, c: 6 }"
+    }
+  ],
+  "hints": [
+    "Loop entries",
+    "Double each value"
+  ]
+}

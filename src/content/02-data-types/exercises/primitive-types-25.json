@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-25",
+  "title": "Check type of a string with typeof",
+  "starterCode": "const name = \"Alice\";\nconsole.log();",
+  "solution": "const name = \"Alice\";\nconsole.log(typeof name);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "string"
+    }
+  ],
+  "hints": [
+    "typeof returns a string of the type",
+    "Use typeof operator before the variable"
+  ]
+}

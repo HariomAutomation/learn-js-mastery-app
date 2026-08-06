@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-17",
+  "title": "Toast Notification",
+  "starterCode": "// Show temporary notification\nconsole.log(\"toast notification pattern\");",
+  "solution": "// Show temporary notification\nconsole.log(\"toast notification pattern\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "toast notification pattern"
+    }
+  ],
+  "hints": [
+    "Create element and append",
+    "Remove after timeout"
+  ]
+}

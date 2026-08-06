@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-41",
+  "title": "Default Condition",
+  "starterCode": "const obj = {};\nconst {name = 'Unknown', age = 0} = obj;\nconsole.log(name, age);",
+  "solution": "const obj = {};\nconst {name = 'Unknown', age = 0} = obj;\nconsole.log(name, age);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Unknown 0"
+    }
+  ],
+  "hints": [
+    "All defaults applied",
+    "Missing properties"
+  ]
+}

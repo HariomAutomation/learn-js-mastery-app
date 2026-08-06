@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-patterns-practice-03",
+  "title": "Reverse Number Pattern",
+  "starterCode": "for (let i = 5; i >= 1; i--) {\n  let row = '';\n  for (let j = 1; j <= i; j++) {\n    row += j;\n  }\n  console.log(row);\n}",
+  "solution": "for (let i = 5; i >= 1; i--) {\n  let row = '';\n  for (let j = 1; j <= i; j++) {\n    row += j;\n  }\n  console.log(row);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "12345\n1234\n123\n12\n1"
+    }
+  ],
+  "hints": [
+    "Decrement outer loop",
+    "Count down"
+  ]
+}

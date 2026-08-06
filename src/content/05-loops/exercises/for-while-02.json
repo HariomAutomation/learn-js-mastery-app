@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-while-02",
+  "title": "For Loop Reverse",
+  "starterCode": "for (let i = 5; i >= 0; i--) {\n  console.log(i);\n}",
+  "solution": "for (let i = 5; i >= 0; i--) {\n  console.log(i);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "5\n4\n3\n2\n1\n0"
+    }
+  ],
+  "hints": [
+    "Start at 5",
+    "Decrement with i--"
+  ]
+}

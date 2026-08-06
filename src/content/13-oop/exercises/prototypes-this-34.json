@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-34",
+  "title": "This in Method",
+  "starterCode": "const person = {\n  name: 'Alice',\n  sayHi() { return 'Hi ' + this.name; }\n};\nconsole.log(person.sayHi());",
+  "solution": "const person = {\n  name: 'Alice',\n  sayHi() { return 'Hi ' + this.name; }\n};\nconsole.log(person.sayHi());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hi Alice"
+    }
+  ],
+  "hints": [
+    "this is the calling object",
+    "person is calling sayHi"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-methods-32",
+  "title": "Match",
+  "starterCode": "const str = 'hello world';\nconst result = str.match(/\\w+/);\nconsole.log(result[0]);",
+  "solution": "const str = 'hello world';\nconst result = str.match(/\\w+/);\nconsole.log(result[0]);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hello"
+    }
+  ],
+  "hints": [
+    "First match",
+    "Returns array"
+  ]
+}

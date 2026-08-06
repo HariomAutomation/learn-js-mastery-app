@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-patterns-practice-15",
+  "title": "Factorial With While",
+  "starterCode": "let n = 5;\nlet result = 1;\nlet i = n;\nwhile (i > 1) {\n  result *= i;\n  i--;\n}\nconsole.log(result);",
+  "solution": "let n = 5;\nlet result = 1;\nlet i = n;\nwhile (i > 1) {\n  result *= i;\n  i--;\n}\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "120"
+    }
+  ],
+  "hints": [
+    "Start from n",
+    "Count down"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-function-basics-14",
+  "title": "Function .length",
+  "starterCode": "function multi(a, b, c) {}\nconsole.log(multi.length);",
+  "solution": "function multi(a, b, c) {}\nconsole.log(multi.length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3"
+    }
+  ],
+  "hints": [
+    ".length returns parameter count",
+    "Don't count rest params"
+  ]
+}

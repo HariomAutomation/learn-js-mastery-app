@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-18",
+  "title": "nth-child Selector",
+  "starterCode": "const el = document.querySelector('li:nth-child(2)');\nconsole.log(el);",
+  "solution": "const el = document.querySelector('li:nth-child(2)');\nconsole.log(el);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "null"
+    }
+  ],
+  "hints": [
+    "nth-child selects by position",
+    "Counts from 1, not 0"
+  ]
+}

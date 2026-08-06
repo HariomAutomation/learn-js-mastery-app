@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-44",
+  "title": "Key Code",
+  "starterCode": "document.addEventListener('keydown', function(e) {\n  console.log(e.keyCode);\n});",
+  "solution": "document.addEventListener('keydown', function(e) {\n  console.log(e.keyCode);\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "65"
+    }
+  ],
+  "hints": [
+    "keyCode is numeric key code",
+    "65 is 'A' key"
+  ]
+}

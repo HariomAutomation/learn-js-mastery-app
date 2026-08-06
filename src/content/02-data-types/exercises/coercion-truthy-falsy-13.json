@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-13",
+  "title": "Loose equality with type coercion",
+  "starterCode": "console.log(5 == \"5\");",
+  "solution": "console.log(5 == \"5\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "== does type coercion",
+    "It converts types to compare"
+  ]
+}

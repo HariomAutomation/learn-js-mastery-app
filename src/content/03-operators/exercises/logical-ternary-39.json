@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-39",
+  "title": "Optional chaining array out of bounds",
+  "starterCode": "const users = [];\nconst result = users?.[0]?.name;\nconsole.log(result);",
+  "solution": "const users = [];\nconst result = users?.[0]?.name;\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "undefined"
+    }
+  ],
+  "hints": [
+    "?. safely returns undefined",
+    "users[0] is undefined"
+  ]
+}

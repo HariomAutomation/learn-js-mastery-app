@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-23",
+  "title": "style Assign",
+  "starterCode": "const el = document.querySelector('.box');\nObject.assign(el.style, { color: 'red', fontSize: '20px' });\nconsole.log(el.style.color + ' ' + el.style.fontSize);",
+  "solution": "const el = document.querySelector('.box');\nObject.assign(el.style, { color: 'red', fontSize: '20px' });\nconsole.log(el.style.color + ' ' + el.style.fontSize);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "red 20px"
+    }
+  ],
+  "hints": [
+    "Object.assign can set multiple properties",
+    "Use camelCase keys"
+  ]
+}

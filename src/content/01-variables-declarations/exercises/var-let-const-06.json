@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-var-let-const-06",
+  "title": "const object mutation",
+  "starterCode": "const obj = { a: 1 }\nobj.a = 2\nconsole.log(obj.a)",
+  "solution": "const obj = { a: 1 }\nobj.a = 2\nconsole.log(obj.a)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2"
+    }
+  ],
+  "hints": [
+    "const allows property mutation"
+  ]
+}

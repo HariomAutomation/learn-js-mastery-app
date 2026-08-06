@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-36",
+  "title": "For...Of String Length",
+  "starterCode": "const str = \"JavaScript\";\nlet length = 0;\nfor (const char of str) {\n  length++;\n}\nconsole.log(length);",
+  "solution": "const str = \"JavaScript\";\nlet length = 0;\nfor (const char of str) {\n  length++;\n}\nconsole.log(length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10"
+    }
+  ],
+  "hints": [
+    "Count characters",
+    "Increment counter"
+  ]
+}

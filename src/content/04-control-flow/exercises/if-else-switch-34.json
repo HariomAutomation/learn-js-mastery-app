@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-34",
+  "title": "Switch with boolean",
+  "starterCode": "const isOnline = true;\nswitch (isOnline) {\n  case true:\n    console.log('online');\n    break;\n  case false:\n    console.log('offline');\n    break;\n}",
+  "solution": "const isOnline = true;\nswitch (isOnline) {\n  case true:\n    console.log('online');\n    break;\n  case false:\n    console.log('offline');\n    break;\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "online"
+    }
+  ],
+  "hints": [
+    "true matches case true",
+    "break exits switch"
+  ]
+}

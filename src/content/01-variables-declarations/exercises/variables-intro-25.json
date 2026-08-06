@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-variables-intro-25",
+  "title": "Rest parameters sum",
+  "starterCode": "function sum(...nums) {\n  return nums.reduce((a, b) => a + b, 0)\n}\nconsole.log(sum(1, 2, 3, 4))",
+  "solution": "function sum(...nums) {\n  return nums.reduce((a, b) => a + b, 0)\n}\nconsole.log(sum(1, 2, 3, 4))",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10"
+    }
+  ],
+  "hints": [
+    "... collects args into array"
+  ]
+}

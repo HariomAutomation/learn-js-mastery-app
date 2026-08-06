@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-18",
+  "title": "Cancel Pattern",
+  "starterCode": "let cancelled = false;\nconst p = new Promise((resolve) => {\n  setTimeout(() => {\n    if (!cancelled) resolve('done');\n  }, 10);\n});\ncancelled = true;\np.then(v => console.log(v)).catch(() => console.log('cancelled'));",
+  "solution": "let cancelled = false;\nconst p = new Promise((resolve) => {\n  setTimeout(() => {\n    if (!cancelled) resolve('done');\n  }, 10);\n});\ncancelled = true;\np.then(v => console.log(v)).catch(() => console.log('cancelled'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "cancelled"
+    }
+  ],
+  "hints": [
+    "Use flag to track cancellation",
+    "Check flag before resolving"
+  ]
+}

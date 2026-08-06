@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-15",
+  "title": "Sequential Promises",
+  "starterCode": "function asyncTask(val) {\n  return new Promise(resolve => setTimeout(() => resolve(val), 10));\n}\nasyncTask(1)\n  .then(r1 => asyncTask(r1 + 1))\n  .then(r2 => asyncTask(r2 + 1))\n  .then(r3 => console.log(r3));",
+  "solution": "function asyncTask(val) {\n  return new Promise(resolve => setTimeout(() => resolve(val), 10));\n}\nasyncTask(1)\n  .then(r1 => asyncTask(r1 + 1))\n  .then(r2 => asyncTask(r2 + 1))\n  .then(r3 => console.log(r3));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3"
+    }
+  ],
+  "hints": [
+    "Chain promises for sequential execution",
+    "Each depends on previous"
+  ]
+}

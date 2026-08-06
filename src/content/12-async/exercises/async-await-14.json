@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-14",
+  "title": "Await Promise.all",
+  "starterCode": "async function fetchAll() {\n  const results = await Promise.all([\n    Promise.resolve('a'),\n    Promise.resolve('b')\n  ]);\n  console.log(results);\n}\nfetchAll();",
+  "solution": "async function fetchAll() {\n  const results = await Promise.all([\n    Promise.resolve('a'),\n    Promise.resolve('b')\n  ]);\n  console.log(results);\n}\nfetchAll();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "a,b"
+    }
+  ],
+  "hints": [
+    "Promise.all returns array",
+    "Await the combined promise"
+  ]
+}

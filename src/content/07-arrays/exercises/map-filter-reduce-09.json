@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-09",
+  "title": "Map Filter Combo",
+  "starterCode": "const nums = [1, 2, 3, 4, 5, 6];\nconst result = nums.____(x => x % 2 === 0).map(x => x * x);\nconsole.log(result);",
+  "solution": "const nums = [1, 2, 3, 4, 5, 6];\nconst result = nums.filter(x => x % 2 === 0).map(x => x * x);\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 4, 16, 36 ]"
+    }
+  ],
+  "hints": [
+    "Filter evens then square",
+    "Chain filter and map"
+  ]
+}

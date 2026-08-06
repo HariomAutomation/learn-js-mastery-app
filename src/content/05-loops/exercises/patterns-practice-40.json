@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-patterns-practice-40",
+  "title": "Digit Sum While",
+  "starterCode": "let num = 987;\nlet sum = 0;\nwhile (num > 0) {\n  sum += num % 10;\n  num = Math.floor(num / 10);\n}\nconsole.log(sum);",
+  "solution": "let num = 987;\nlet sum = 0;\nwhile (num > 0) {\n  sum += num % 10;\n  num = Math.floor(num / 10);\n}\nconsole.log(sum);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "24"
+    }
+  ],
+  "hints": [
+    "Extract digits",
+    "Sum them"
+  ]
+}

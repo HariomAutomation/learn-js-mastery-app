@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-46",
+  "title": "Entries to Map",
+  "starterCode": "const entries = [['a', 1], ['b', 2]];\nconst map = new Map(entries);\nconsole.log(map.get('a'));",
+  "solution": "const entries = [['a', 1], ['b', 2]];\nconst map = new Map(entries);\nconsole.log(map.get('a'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1"
+    }
+  ],
+  "hints": [
+    "Map from entries",
+    "get method"
+  ]
+}

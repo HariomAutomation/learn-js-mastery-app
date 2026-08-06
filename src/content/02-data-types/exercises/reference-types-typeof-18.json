@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-18",
+  "title": "typeof symbol",
+  "starterCode": "const s = Symbol('id');\nconsole.log();",
+  "solution": "const s = Symbol('id');\nconsole.log(typeof s);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "symbol"
+    }
+  ],
+  "hints": [
+    "Symbols are a primitive type",
+    "typeof correctly returns 'symbol'"
+  ]
+}

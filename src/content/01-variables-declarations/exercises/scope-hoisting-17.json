@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-17",
+  "title": "TDZ reference",
+  "starterCode": "try {\n  let x = x\n} catch(e) {\n  console.log(\"TDZ\")\n}",
+  "solution": "try {\n  let x = x\n} catch(e) {\n  console.log(\"TDZ\")\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "TDZ"
+    }
+  ],
+  "hints": [
+    "Cannot use let before declaration"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-18",
+  "title": "Computed Style Reading",
+  "starterCode": "const el = document.querySelector('.box');\nconst style = window.getComputedStyle(el);\nconsole.log(style.display);",
+  "solution": "const el = document.querySelector('.box');\nconst style = window.getComputedStyle(el);\nconsole.log(style.display);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "block"
+    }
+  ],
+  "hints": [
+    "getComputedStyle reads final computed styles",
+    "Default display for div is block"
+  ]
+}

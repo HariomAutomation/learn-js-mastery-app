@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-function-basics-05",
+  "title": "Default Parameters",
+  "starterCode": "function greet(name = 'World') {\n  console.log('Hello, ' + name + '!');\n}\ngreet();\ngreet('Alice');",
+  "solution": "function greet(name = 'World') {\n  console.log('Hello, ' + name + '!');\n}\ngreet();\ngreet('Alice');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hello, World!\nHello, Alice!"
+    }
+  ],
+  "hints": [
+    "Set default value",
+    "Use parameter if provided"
+  ]
+}

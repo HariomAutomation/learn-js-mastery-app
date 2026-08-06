@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-40",
+  "title": "Check for null explicitly",
+  "starterCode": "const val = null;\nconsole.log();",
+  "solution": "const val = null;\nconsole.log(val === null);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "Use === null for null checks",
+    "typeof is unreliable for null"
+  ]
+}

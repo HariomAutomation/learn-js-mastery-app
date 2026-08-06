@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-24",
+  "title": "nested function scope",
+  "starterCode": "function a() {\n  const x = 1\n  return function b() {\n    return function c() {\n      return x\n    }\n  }\n}\nconsole.log(a()()())",
+  "solution": "function a() {\n  const x = 1\n  return function b() {\n    return function c() {\n      return x\n    }\n  }\n}\nconsole.log(a()()())",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1"
+    }
+  ],
+  "hints": [
+    "Scope chain traverses all levels"
+  ]
+}

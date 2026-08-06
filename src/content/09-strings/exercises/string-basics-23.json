@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-23",
+  "title": "Split",
+  "starterCode": "const str = 'a,b,c,d';\nconsole.log(str.split(','));",
+  "solution": "const str = 'a,b,c,d';\nconsole.log(str.split(','));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 'a', 'b', 'c', 'd' ]"
+    }
+  ],
+  "hints": [
+    "split by delimiter",
+    "Returns array"
+  ]
+}

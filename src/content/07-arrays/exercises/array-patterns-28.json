@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-patterns-28",
+  "title": "Compact Filter",
+  "starterCode": "const arr = [0, 1, 2, null, 3, undefined, 4, ''];\nconst compact = arr.filter(x => x !== 0 && x !== null && x !== undefined && x !== '');\nconsole.log(compact);",
+  "solution": "const arr = [0, 1, 2, null, 3, undefined, 4, ''];\nconst compact = arr.filter(x => x !== 0 && x !== null && x !== undefined && x !== '');\nconsole.log(compact);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 1, 2, 3, 4 ]"
+    }
+  ],
+  "hints": [
+    "Filter out falsy",
+    "Explicit checks"
+  ]
+}

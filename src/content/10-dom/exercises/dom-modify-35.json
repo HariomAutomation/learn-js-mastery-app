@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-35",
+  "title": "dataset Keys",
+  "starterCode": "const el = document.querySelector('[data-id]');\nconsole.log(Object.keys(el.dataset).length);",
+  "solution": "const el = document.querySelector('[data-id]');\nconsole.log(Object.keys(el.dataset).length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1"
+    }
+  ],
+  "hints": [
+    "dataset is an object",
+    "Object.keys returns property names"
+  ]
+}

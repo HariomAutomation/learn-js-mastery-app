@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-26",
+  "title": "Rejection Handler",
+  "starterCode": "Promise.reject('unhandled')\n  .catch(err => console.log('caught: ' + err));",
+  "solution": "Promise.reject('unhandled')\n  .catch(err => console.log('caught: ' + err));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "caught: unhandled"
+    }
+  ],
+  "hints": [
+    "catch handles rejected promise",
+    "Prevents unhandled rejection"
+  ]
+}

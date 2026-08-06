@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-06",
+  "title": "Filter Condition",
+  "starterCode": "const words = ['hello', 'hi', 'hey', 'world'];\nconst hWords = words.____(w => w.startsWith('h'));\nconsole.log(hWords);",
+  "solution": "const words = ['hello', 'hi', 'hey', 'world'];\nconst hWords = words.filter(w => w.startsWith('h'));\nconsole.log(hWords);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 'hello', 'hi', 'hey' ]"
+    }
+  ],
+  "hints": [
+    "startsWith checks prefix",
+    "Filter keeps matching"
+  ]
+}

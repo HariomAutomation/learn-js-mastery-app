@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-44",
+  "title": "Delegation Tag Check",
+  "starterCode": "const list = document.querySelector('ul');\nlist.addEventListener('click', function(e) {\n  if (e.target.tagName === 'LI') console.log('list item');\n});",
+  "solution": "const list = document.querySelector('ul');\nlist.addEventListener('click', function(e) {\n  if (e.target.tagName === 'LI') console.log('list item');\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "list item"
+    }
+  ],
+  "hints": [
+    "Check tagName for element type",
+    "Use uppercase tag name"
+  ]
+}

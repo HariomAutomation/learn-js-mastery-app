@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-13",
+  "title": "Arrow No Prototype",
+  "starterCode": "const Foo = () => {};\nconsole.log(typeof Foo.prototype);",
+  "solution": "const Foo = () => {};\nconsole.log(typeof Foo.prototype);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "undefined"
+    }
+  ],
+  "hints": [
+    "Arrows don't have prototype",
+    "Can't use with new"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "08-objects-object-basics",
+  "title": "Object create aur access",
+  "starterCode": "// 1. Student object banao\nconst student = {\n  name: \"Riya\",\n  age: 22,\n  grades: [85, 90, 78],\n  address: {\n    city: \"Delhi\",\n    pin: 110001\n  }\n}\n\n// 2. Dot notation se access\nconsole.log(student.name)\nconsole.log(student.address.city)\n\n// 3. Bracket notation se access\nconst key = \"age\"\nconsole.log(student[key])\n\n// 4. Object.keys, values, entries\nconsole.log(Object.keys(student).length) // kitne properties?\nconsole.log(Object.values(student).slice(0, 2)) // pehle 2 values\n",
+  "solution": "const student = {\n  name: \"Riya\",\n  age: 22,\n  grades: [85, 90, 78],\n  address: { city: \"Delhi\", pin: 110001 }\n}\nconsole.log(student.name)\nconsole.log(student.address.city)\nconst key = \"age\"\nconsole.log(student[key])\nconsole.log(Object.keys(student).length)\nconsole.log(Object.values(student).slice(0, 2))",
+  "tests": [{ "input": [], "expected": "Riya\nDelhi\n22\n4\n[\"Riya\", 22]" }],
+  "hints": [
+    "Dot notation: object.property",
+    "Bracket notation: object[variable] — dynamic key ke liye",
+    "Object.keys() returns array of property names"
+  ]
+}

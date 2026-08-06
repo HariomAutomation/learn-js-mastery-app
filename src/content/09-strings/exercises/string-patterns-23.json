@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-23",
+  "title": "String to Array",
+  "starterCode": "const str = 'hello';\nconst arr = [...str];\nconsole.log(arr);",
+  "solution": "const str = 'hello';\nconst arr = [...str];\nconsole.log(arr);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 'h', 'e', 'l', 'l', 'o' ]"
+    }
+  ],
+  "hints": [
+    "Spread string",
+    "Each character"
+  ]
+}

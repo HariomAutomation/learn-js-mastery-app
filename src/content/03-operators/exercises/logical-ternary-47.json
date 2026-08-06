@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-47",
+  "title": "Logical AND short circuit",
+  "starterCode": "const showGreeting = false;\nconst result = showGreeting && 'Welcome!';\nconsole.log(result);",
+  "solution": "const showGreeting = false;\nconst result = showGreeting && 'Welcome!';\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "false"
+    }
+  ],
+  "hints": [
+    "&& short-circuits on first falsy",
+    "showGreeting is false"
+  ]
+}

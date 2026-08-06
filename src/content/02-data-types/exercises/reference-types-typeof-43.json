@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-43",
+  "title": "Set removes duplicates",
+  "starterCode": "const s = new Set([1, 2, 2, 3]);\nconsole.log();",
+  "solution": "const s = new Set([1, 2, 2, 3]);\nconsole.log(s.size);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3"
+    }
+  ],
+  "hints": [
+    "Sets only store unique values",
+    "size gives the count"
+  ]
+}

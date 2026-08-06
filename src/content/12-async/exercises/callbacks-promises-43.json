@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-43",
+  "title": "Promise Race Reject",
+  "starterCode": "Promise.race([\n  new Promise((_, r) => setTimeout(() => r('slow error'), 100)),\n  new Promise((_, r) => setTimeout(() => r('fast error'), 10))\n]).catch(err => console.log(err));",
+  "solution": "Promise.race([\n  new Promise((_, r) => setTimeout(() => r('slow error'), 100)),\n  new Promise((_, r) => setTimeout(() => r('fast error'), 10))\n]).catch(err => console.log(err));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "fast error"
+    }
+  ],
+  "hints": [
+    "Race returns first settled",
+    "Fastest rejection wins"
+  ]
+}

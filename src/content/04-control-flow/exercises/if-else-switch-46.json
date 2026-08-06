@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-46",
+  "title": "Switch with multiple breaks",
+  "starterCode": "const x = 3;\nswitch (x) {\n  case 1:\n    console.log('one');\n    break;\n  case 2:\n    console.log('two');\n    break;\n  case 3:\n    console.log('three');\n    break;\n  case 4:\n    console.log('four');\n    break;\n  default:\n    console.log('other');\n}",
+  "solution": "const x = 3;\nswitch (x) {\n  case 1:\n    console.log('one');\n    break;\n  case 2:\n    console.log('two');\n    break;\n  case 3:\n    console.log('three');\n    break;\n  case 4:\n    console.log('four');\n    break;\n  default:\n    console.log('other');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "three"
+    }
+  ],
+  "hints": [
+    "Each case has a break",
+    "3 matches case 3"
+  ]
+}

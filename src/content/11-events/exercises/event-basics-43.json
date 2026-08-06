@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-43",
+  "title": "Submit Prevent",
+  "starterCode": "function handleSubmit(e) {\n  e.preventDefault();\n  console.log('no reload');\n}\ndocument.querySelector('form').addEventListener('submit', handleSubmit);",
+  "solution": "function handleSubmit(e) {\n  e.preventDefault();\n  console.log('no reload');\n}\ndocument.querySelector('form').addEventListener('submit', handleSubmit);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "no reload"
+    }
+  ],
+  "hints": [
+    "preventDefault stops form submission",
+    "Prevents page reload"
+  ]
+}

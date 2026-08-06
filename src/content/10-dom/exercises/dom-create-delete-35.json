@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-35",
+  "title": "innerHTML Clear",
+  "starterCode": "const el = document.createElement('div');\nel.innerHTML = '<p>Content</p>';\nel.innerHTML = '';\nconsole.log(el.children.length);",
+  "solution": "const el = document.createElement('div');\nel.innerHTML = '<p>Content</p>';\nel.innerHTML = '';\nconsole.log(el.children.length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "0"
+    }
+  ],
+  "hints": [
+    "Setting innerHTML to '' clears children",
+    "Simple way to empty element"
+  ]
+}

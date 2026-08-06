@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-early-return-12",
+  "title": "Default fallback pattern",
+  "starterCode": "function getConfig(key) {\n  const config = { theme: 'dark', lang: 'en' };\n  return config[key] ?? 'default';\n}\nconsole.log(getConfig('theme'));",
+  "solution": "function getConfig(key) {\n  const config = { theme: 'dark', lang: 'en' };\n  return config[key] ?? 'default';\n}\nconsole.log(getConfig('theme'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "dark"
+    }
+  ],
+  "hints": [
+    "config.theme exists",
+    "?? returns value if not null/undefined"
+  ]
+}

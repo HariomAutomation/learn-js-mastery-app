@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-12",
+  "title": "ToString",
+  "starterCode": "const str = 'hello';\nconsole.log(str.toString() === str);",
+  "solution": "const str = 'hello';\nconsole.log(str.toString() === str);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "toString returns string",
+    "Same value"
+  ]
+}

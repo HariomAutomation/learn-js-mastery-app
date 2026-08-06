@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-37",
+  "title": "Delegation Efficiency",
+  "starterCode": "// 100 list items: 1 listener vs 100 listeners\nconsole.log(\"delegation: 1 vs 100 listeners\");",
+  "solution": "// 100 list items: 1 listener vs 100 listeners\nconsole.log(\"delegation: 1 vs 100 listeners\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "delegation: 1 vs 100 listeners"
+    }
+  ],
+  "hints": [
+    "Much less memory with delegation",
+    "Easier to manage"
+  ]
+}

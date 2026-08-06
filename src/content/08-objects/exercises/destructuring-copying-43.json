@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-43",
+  "title": "Rest Params",
+  "starterCode": "function sum(...nums) {\n  return nums.reduce((a, b) => a + b, 0);\n}\nconsole.log(sum(1, 2, 3, 4));",
+  "solution": "function sum(...nums) {\n  return nums.reduce((a, b) => a + b, 0);\n}\nconsole.log(sum(1, 2, 3, 4));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10"
+    }
+  ],
+  "hints": [
+    "Rest params collect args",
+    "Use reduce"
+  ]
+}

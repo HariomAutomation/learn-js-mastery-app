@@ -1,0 +1,12 @@
+{
+  "id": "02-data-types-primitive-types",
+  "title": "Primitive types ka collection banao",
+  "starterCode": "// Saare primitive types ke examples banao:\nlet myString = \"Hello JS\"       // string\nlet myNumber = 42                // number\nlet myBoolean = true             // boolean\nlet myNull = null                // null\nlet myUndefined                  // undefined\nlet myBigInt = 123456789012345678901234567890n // bigint\nlet mySymbol = Symbol(\"id\")     // symbol\n\n// Har ek ka typeof print karo\nconsole.log(typeof myString)\nconsole.log(typeof myNumber)\nconsole.log(typeof myBoolean)\nconsole.log(typeof myNull)\nconsole.log(typeof myUndefined)\nconsole.log(typeof myBigInt)\nconsole.log(typeof mySymbol)\n",
+  "solution": "let myString = \"Hello JS\"\nlet myNumber = 42\nlet myBoolean = true\nlet myNull = null\nlet myUndefined\nlet myBigInt = 123456789012345678901234567890n\nlet mySymbol = Symbol(\"id\")\nconsole.log(typeof myString)      // string\nconsole.log(typeof myNumber)      // number\nconsole.log(typeof myBoolean)     // boolean\nconsole.log(typeof myNull)        // object (bug!)\nconsole.log(typeof myUndefined)   // undefined\nconsole.log(typeof myBigInt)      // bigint\nconsole.log(typeof mySymbol)      // symbol",
+  "tests": [{ "input": [], "expected": "string" }],
+  "hints": [
+    "7 primitives hain: string, number, boolean, null, undefined, bigint, symbol",
+    "typeof null ka 'object' aata hai — famous bug",
+    "BigInt ke end mein n lagta hai"
+  ]
+}

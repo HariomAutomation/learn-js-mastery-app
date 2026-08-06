@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-07",
+  "title": "Modify through reference",
+  "starterCode": "const a = { x: 1 };\nconst b = a;\n;\nconsole.log(a.x);",
+  "solution": "const a = { x: 1 };\nconst b = a;\nb.x = 99;\nconsole.log(a.x);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "99"
+    }
+  ],
+  "hints": [
+    "Changing b changes a too",
+    "They reference the same object"
+  ]
+}

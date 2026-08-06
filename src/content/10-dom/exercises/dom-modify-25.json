@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-25",
+  "title": "textContent String",
+  "starterCode": "const el = document.querySelector('.box');\nconst text = el.textContent;\nconsole.log(typeof text);",
+  "solution": "const el = document.querySelector('.box');\nconst text = el.textContent;\nconsole.log(typeof text);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "string"
+    }
+  ],
+  "hints": [
+    "textContent always returns a string",
+    "Use typeof to verify"
+  ]
+}

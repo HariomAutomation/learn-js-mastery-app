@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-23",
+  "title": "NaN is not equal to itself",
+  "starterCode": "console.log(NaN === NaN);",
+  "solution": "console.log(NaN === NaN);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "false"
+    }
+  ],
+  "hints": [
+    "NaN is the only value not equal to itself",
+    "Use Number.isNaN() to check"
+  ]
+}

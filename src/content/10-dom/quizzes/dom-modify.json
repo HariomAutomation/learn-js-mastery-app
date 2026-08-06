@@ -1,0 +1,57 @@
+[
+  {
+    "question": "element.textContent vs innerHTML — kya farq hai?",
+    "options": [
+      "textContent sirf text, innerHTML HTML tags bhi parse karta hai",
+      "Dono same hain",
+      "textContent HTML support karta hai",
+      "innerHTML sirf text deta hai"
+    ],
+    "correctIndex": 0,
+    "explanation": "textContent sirf plain text return/set karta hai. innerHTML se HTML tags bhi inject kar sakte ho but ismein XSS attack ka risk hai — dhyan se use karo."
+  },
+  {
+    "question": "element.classList.add('active') kya karega?",
+    "options": [
+      "Element mein 'active' class add karega",
+      "Class remove karega",
+      "Class toggle karega",
+      "Saari classes hata dega"
+    ],
+    "correctIndex": 0,
+    "explanation": ".classList mein .add(), .remove(), .toggle(), .contains() methods hain. Add se naya class lagta hai, existing change nahi hota."
+  },
+  {
+    "question": "element.style.color = 'red' kya karega?",
+    "options": [
+      "Inline style lagegi — color red hoga",
+      "CSS file change hogi",
+      "Error aayega",
+      "Kuch nahi"
+    ],
+    "correctIndex": 0,
+    "explanation": ".style se inline CSS set hoti hai — directly element pe. CSS rule change nahi hoti. Specificity zyada hoti hai inline style ki."
+  },
+  {
+    "question": "document.createElement('div') kya return karta hai?",
+    "options": [
+      "Naya div element (DOM node) jo DOM mein nahi hai",
+      "Visible div page pe",
+      "HTML string",
+      "undefined"
+    ],
+    "correctIndex": 0,
+    "explanation": "createElement sirf element banata hai — DOM mein add nahi hota automatically. .appendChild() ya .append() se add karna padta hai."
+  },
+  {
+    "question": "classList.toggle('dark') kya karega?",
+    "options": [
+      "Agar 'dark' hai toh hatayega, nahi hai toh lagayega",
+      "Hamesha 'dark' add karega",
+      "Hamesha 'dark' remove karega",
+      "Error aayega"
+    ],
+    "correctIndex": 0,
+    "explanation": ".toggle() add aur remove dono karta hai — conditional class ke liye best hai. Theme toggle, menu open/close jaise kaamon mein bahut kaam aata hai."
+  }
+]

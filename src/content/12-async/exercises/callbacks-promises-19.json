@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-19",
+  "title": "Utility All",
+  "starterCode": "function fetchAll(urls) {\n  return Promise.all(urls.map(url => Promise.resolve(url)));\n}\nfetchAll(['/a', '/b', '/c']).then(r => console.log(r.length));",
+  "solution": "function fetchAll(urls) {\n  return Promise.all(urls.map(url => Promise.resolve(url)));\n}\nfetchAll(['/a', '/b', '/c']).then(r => console.log(r.length));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3"
+    }
+  ],
+  "hints": [
+    "Map urls to promises",
+    "Use Promise.all"
+  ]
+}

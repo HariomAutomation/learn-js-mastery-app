@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-48",
+  "title": "Prototype Access",
+  "starterCode": "const proto = {greet() { return 'Hello'; }};\nconst obj = Object.create(proto);\nconsole.log(obj.__proto__ === proto);",
+  "solution": "const proto = {greet() { return 'Hello'; }};\nconst obj = Object.create(proto);\nconsole.log(obj.__proto__ === proto);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "__proto__ reference",
+    "Check equality"
+  ]
+}

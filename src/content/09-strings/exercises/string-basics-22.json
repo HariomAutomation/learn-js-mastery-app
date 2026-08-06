@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-22",
+  "title": "Slice",
+  "starterCode": "const str = 'hello world';\nconsole.log(str.slice(0, 5));",
+  "solution": "const str = 'hello world';\nconsole.log(str.slice(0, 5));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hello"
+    }
+  ],
+  "hints": [
+    "slice(start, end)",
+    "End exclusive"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-29",
+  "title": "Fetch Duplex",
+  "starterCode": "// duplex: 'half' for streaming requests\nconsole.log(\"duplex option for streaming\");",
+  "solution": "// duplex: 'half' for streaming requests\nconsole.log(\"duplex option for streaming\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "duplex option for streaming"
+    }
+  ],
+  "hints": [
+    "Required for streaming body",
+    "Half-duplex streaming"
+  ]
+}

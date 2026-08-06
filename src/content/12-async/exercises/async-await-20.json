@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-20",
+  "title": "Async Event Handler",
+  "starterCode": "async function handleClick() {\n  const result = await Promise.resolve('clicked');\n  console.log(result);\n}\nconsole.log('handler defined');",
+  "solution": "async function handleClick() {\n  const result = await Promise.resolve('clicked');\n  console.log(result);\n}\nconsole.log('handler defined');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "handler defined"
+    }
+  ],
+  "hints": [
+    "Event handlers can be async",
+    "Define as async function"
+  ]
+}

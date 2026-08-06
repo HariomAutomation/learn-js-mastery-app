@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-39",
+  "title": "Custom Event Delegation",
+  "starterCode": "const el = document.querySelector('.box');\nconst event = new CustomEvent('select', { detail: 'item1' });\nel.addEventListener('select', (e) => console.log(e.detail));\nel.dispatchEvent(event);",
+  "solution": "const el = document.querySelector('.box');\nconst event = new CustomEvent('select', { detail: 'item1' });\nel.addEventListener('select', (e) => console.log(e.detail));\nel.dispatchEvent(event);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "item1"
+    }
+  ],
+  "hints": [
+    "Custom events work with delegation",
+    "Use detail for data"
+  ]
+}

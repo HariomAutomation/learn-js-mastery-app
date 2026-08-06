@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-50",
+  "title": "Prototype Complete",
+  "starterCode": "// Prototype chain, this, call/apply/bind\nconsole.log(\"prototypes review complete\");",
+  "solution": "// Prototype chain, this, call/apply/bind\nconsole.log(\"prototypes review complete\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "prototypes review complete"
+    }
+  ],
+  "hints": [
+    "Review all concepts",
+    "Practice with code"
+  ]
+}

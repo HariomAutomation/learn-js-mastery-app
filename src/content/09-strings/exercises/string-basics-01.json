@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-01",
+  "title": "String Literal",
+  "starterCode": "const str = ____;\nconsole.log(typeof str);",
+  "solution": "const str = 'hello';\nconsole.log(typeof str);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "string"
+    }
+  ],
+  "hints": [
+    "Use quotes",
+    "String primitive"
+  ]
+}

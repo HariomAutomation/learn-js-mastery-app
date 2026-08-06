@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-03",
+  "title": "Getter Setter",
+  "starterCode": "const obj = {\n  _name: 'Alice',\n  get name() { return this._name; },\n  set name(val) { this._name = val; }\n};\nconsole.log(obj.name);\nobj.name = 'Bob';\nconsole.log(obj.name);",
+  "solution": "const obj = {\n  _name: 'Alice',\n  get name() { return this._name; },\n  set name(val) { this._name = val; }\n};\nconsole.log(obj.name);\nobj.name = 'Bob';\nconsole.log(obj.name);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Alice\nBob"
+    }
+  ],
+  "hints": [
+    "get/set accessors",
+    "Encapsulate property"
+  ]
+}

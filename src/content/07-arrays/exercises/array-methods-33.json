@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-methods-33",
+  "title": "IndexOf From Index",
+  "starterCode": "const arr = [1, 2, 3, 2, 1];\nconsole.log(arr.____(2, 2));",
+  "solution": "const arr = [1, 2, 3, 2, 1];\nconsole.log(arr.indexOf(2, 2));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3"
+    }
+  ],
+  "hints": [
+    "indexOf(value, fromIndex)",
+    "Start searching from index 2"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-08",
+  "title": "Private Fields",
+  "starterCode": "class Account {\n  #balance = 0;\n  deposit(amount) {\n    this.#balance += amount;\n    return this.#balance;\n  }\n}\nconst a = new Account();\na.deposit(100);\nconsole.log(a.#balance);",
+  "solution": "class Account {\n  #balance = 0;\n  deposit(amount) {\n    this.#balance += amount;\n    return this.#balance;\n  }\n}\nconst a = new Account();\na.deposit(100);\nconsole.log(a.#balance);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "100"
+    }
+  ],
+  "hints": [
+    "# creates private field",
+    "Cannot access outside class"
+  ]
+}

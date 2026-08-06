@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-08",
+  "title": "Basic ternary operator",
+  "starterCode": "const age = 20;\nconst result = age >= 18 ? \"adult\" : \"minor\";\nconsole.log(result);",
+  "solution": "const age = 20;\nconst result = age >= 18 ? \"adult\" : \"minor\";\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "adult"
+    }
+  ],
+  "hints": [
+    "condition ? valueIfTrue : valueIfFalse",
+    "20 >= 18 is true"
+  ]
+}

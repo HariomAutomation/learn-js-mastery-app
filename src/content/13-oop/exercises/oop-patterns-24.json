@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-24",
+  "title": "Service Locator",
+  "starterCode": "const services = {};\nfunction register(name, service) { services[name] = service; }\nfunction getService(name) { return services[name]; }\nregister('logger', { log: (msg) => console.log(msg) });\ngetService('logger').log('hello');",
+  "solution": "const services = {};\nfunction register(name, service) { services[name] = service; }\nfunction getService(name) { return services[name]; }\nregister('logger', { log: (msg) => console.log(msg) });\ngetService('logger').log('hello');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hello"
+    }
+  ],
+  "hints": [
+    "Registry of services",
+    "Look up by name"
+  ]
+}

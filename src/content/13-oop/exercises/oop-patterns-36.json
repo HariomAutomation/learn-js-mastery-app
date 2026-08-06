@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-36",
+  "title": "Pub/Sub",
+  "starterCode": "const pubsub = {\n  events: {},\n  on(e, fn) { (this.events[e] = this.events[e] || []).push(fn); },\n  emit(e, d) { (this.events[e] || []).forEach(fn => fn(d)); }\n};\npubsub.on('msg', m => console.log(m));\npubsub.emit('msg', 'hi');",
+  "solution": "const pubsub = {\n  events: {},\n  on(e, fn) { (this.events[e] = this.events[e] || []).push(fn); },\n  emit(e, d) { (this.events[e] || []).forEach(fn => fn(d)); }\n};\npubsub.on('msg', m => console.log(m));\npubsub.emit('msg', 'hi');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hi"
+    }
+  ],
+  "hints": [
+    "on subscribes, emit publishes",
+    "Events object stores callbacks"
+  ]
+}

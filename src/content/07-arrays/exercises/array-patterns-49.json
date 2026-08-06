@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-patterns-49",
+  "title": "Group By Multiple",
+  "starterCode": "const people = [\n  {name: 'Alice', dept: 'eng', level: 'senior'},\n  {name: 'Bob', dept: 'sales', level: 'junior'},\n  {name: 'Charlie', dept: 'eng', level: 'junior'},\n  {name: 'Diana', dept: 'sales', level: 'senior'}\n];\nconst grouped = people.reduce((acc, p) => {\n  const key = p.dept + '-' + p.level;\n  acc[key] = acc[key] || [];\n  acc[key].push(p.name);\n  return acc;\n}, {});\nconsole.log(grouped);",
+  "solution": "const people = [\n  {name: 'Alice', dept: 'eng', level: 'senior'},\n  {name: 'Bob', dept: 'sales', level: 'junior'},\n  {name: 'Charlie', dept: 'eng', level: 'junior'},\n  {name: 'Diana', dept: 'sales', level: 'senior'}\n];\nconst grouped = people.reduce((acc, p) => {\n  const key = p.dept + '-' + p.level;\n  acc[key] = acc[key] || [];\n  acc[key].push(p.name);\n  return acc;\n}, {});\nconsole.log(grouped);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{ 'eng-senior': [ 'Alice' ], 'sales-junior': [ 'Bob' ], 'eng-junior': [ 'Charlie' ], 'sales-senior': [ 'Diana' ] }"
+    }
+  ],
+  "hints": [
+    "Composite key",
+    "Reduce to grouped object"
+  ]
+}

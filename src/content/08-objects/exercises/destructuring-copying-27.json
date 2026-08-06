@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-27",
+  "title": "Rest Nested",
+  "starterCode": "const obj = {a: 1, b: {c: 2, d: 3}, e: 4};\nconst {a, b: {c, ...restB}, ...rest} = obj;\nconsole.log(restB);\nconsole.log(rest);",
+  "solution": "const obj = {a: 1, b: {c: 2, d: 3}, e: 4};\nconst {a, b: {c, ...restB}, ...rest} = obj;\nconsole.log(restB);\nconsole.log(rest);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{ d: 3 }\n{ e: 4 }"
+    }
+  ],
+  "hints": [
+    "Rest at multiple levels",
+    "Collect remaining"
+  ]
+}

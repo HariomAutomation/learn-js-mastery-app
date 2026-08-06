@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-07",
+  "title": "Anagram Check",
+  "starterCode": "function isAnagram(a, b) {\n  const sort = s => s.toLowerCase().split('').sort().join('');\n  return sort(a) === sort(b);\n}\nconsole.log(isAnagram('listen', 'silent'));\nconsole.log(isAnagram('hello', 'world'));",
+  "solution": "function isAnagram(a, b) {\n  const sort = s => s.toLowerCase().split('').sort().join('');\n  return sort(a) === sort(b);\n}\nconsole.log(isAnagram('listen', 'silent'));\nconsole.log(isAnagram('hello', 'world'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true\nfalse"
+    }
+  ],
+  "hints": [
+    "Sort characters",
+    "Compare sorted"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-08",
+  "title": "Arrow In Reduce",
+  "starterCode": "const nums = [1, 2, 3, 4];\nconst sum = nums.reduce((acc, x) => acc + x, 0);\nconsole.log(sum);",
+  "solution": "const nums = [1, 2, 3, 4];\nconst sum = nums.reduce((acc, x) => acc + x, 0);\nconsole.log(sum);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10"
+    }
+  ],
+  "hints": [
+    "Accumulator pattern",
+    "Start at 0"
+  ]
+}

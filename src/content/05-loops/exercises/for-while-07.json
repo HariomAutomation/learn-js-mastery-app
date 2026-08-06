@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-while-07",
+  "title": "Nested For Loops",
+  "starterCode": "for (let i = 0; i < 3; i++) {\n  for (let j = 0; j < 3; j++) {\n    console.log(i + j);\n  }\n}",
+  "solution": "for (let i = 0; i < 3; i++) {\n  for (let j = 0; j < 3; j++) {\n    console.log(i + j);\n  }\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "0\n1\n2\n1\n2\n3\n2\n3\n4"
+    }
+  ],
+  "hints": [
+    "Inner loop runs fully each outer iteration",
+    "Sum i and j"
+  ]
+}

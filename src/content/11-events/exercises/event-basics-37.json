@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-37",
+  "title": "Mouse Event Properties",
+  "starterCode": "document.addEventListener('click', function(e) {\n  console.log(e.clientX + ',' + e.clientY);\n});",
+  "solution": "document.addEventListener('click', function(e) {\n  console.log(e.clientX + ',' + e.clientY);\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "0,0"
+    }
+  ],
+  "hints": [
+    "clientX/Y is viewport coordinates",
+    "pageX/Y includes scroll"
+  ]
+}

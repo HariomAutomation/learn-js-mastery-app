@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-24",
+  "title": "ValueOf",
+  "starterCode": "const obj = {\n  val: 10,\n  valueOf() { return this.val; }\n};\nconsole.log(obj + 5);",
+  "solution": "const obj = {\n  val: 10,\n  valueOf() { return this.val; }\n};\nconsole.log(obj + 5);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "15"
+    }
+  ],
+  "hints": [
+    "valueOf for primitives",
+    "Used in arithmetic"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-27",
+  "title": "__proto__ vs prototype",
+  "starterCode": "function Foo() {}\nconst f = new Foo();\nconsole.log(f.__proto__ === Foo.prototype);",
+  "solution": "function Foo() {}\nconst f = new Foo();\nconsole.log(f.__proto__ === Foo.prototype);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "__proto__ is instance reference",
+    "prototype is on constructor"
+  ]
+}

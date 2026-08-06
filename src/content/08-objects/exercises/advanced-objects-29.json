@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-29",
+  "title": "Property Practice",
+  "starterCode": "const obj = {name: 'Alice', age: 25};\nObject.defineProperty(obj, 'greeting', {\n  get() { return `Hi, ${this.name}`; },\n  enumerable: true\n});\nconsole.log(obj.greeting);",
+  "solution": "const obj = {name: 'Alice', age: 25};\nObject.defineProperty(obj, 'greeting', {\n  get() { return `Hi, ${this.name}`; },\n  enumerable: true\n});\nconsole.log(obj.greeting);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hi, Alice"
+    }
+  ],
+  "hints": [
+    "Define getter",
+    "Dynamic greeting"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "03-operators-logical-ternary-09",
+  "title": "Ternary with numbers",
+  "starterCode": "const x = 10;\nconst result = x > 5 ? 1 : 0;\nconsole.log(result);",
+  "solution": "const x = 10;\nconst result = x > 5 ? 1 : 0;\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1"
+    }
+  ],
+  "hints": [
+    "10 > 5 is true, so returns 1"
+  ]
+}

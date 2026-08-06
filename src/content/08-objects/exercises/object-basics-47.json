@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-47",
+  "title": "Object Keys Length",
+  "starterCode": "const obj = {a: 1, b: 2, c: 3};\nconsole.log(Object.keys(obj).length);",
+  "solution": "const obj = {a: 1, b: 2, c: 3};\nconsole.log(Object.keys(obj).length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3"
+    }
+  ],
+  "hints": [
+    "Count properties",
+    "Length of keys array"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "05-loops-for-of-for-in",
+  "title": "for-of + for-in ka use karo",
+  "starterCode": "// 1. for-of se array ke values:\nlet fruits = [\"apple\", \"banana\", \"mango\"]\nfor (let fruit of fruits) {\n  console.log(fruit)\n}\n\n// 2. for-of se string ke characters:\nfor (let char of \"JS\") {\n  console.log(char)  // J, S\n}\n\n// 3. for-in se object keys + values:\nlet user = { name: \"Riya\", age: 25, city: \"Delhi\" }\nfor (let key in user) {\n  console.log(key, user[key])\n}\n",
+  "solution": "let fruits = [\"apple\", \"banana\", \"mango\"]\nfor (let fruit of fruits) {\n  console.log(fruit)\n}\nfor (let char of \"JS\") {\n  console.log(char)\n}\nlet user = { name: \"Riya\", age: 25, city: \"Delhi\" }\nfor (let key in user) {\n  console.log(key, user[key])\n}",
+  "tests": [{ "input": [], "expected": "apple" }],
+  "hints": [
+    "for-of array/string values deta hai",
+    "for-in object keys deta hai",
+    "obj[key] se value milti hai"
+  ]
+}

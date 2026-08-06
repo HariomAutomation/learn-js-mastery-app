@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-arithmetic-comparison-47",
+  "title": "NaN check",
+  "starterCode": "const result = isNaN(\"hello\");\nconsole.log(result);",
+  "solution": "const result = isNaN(\"hello\");\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "isNaN returns true if value is NaN",
+    "'hello' cannot be converted to a number"
+  ]
+}

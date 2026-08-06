@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-while-40",
+  "title": "Pattern X Shape",
+  "starterCode": "const n = 5;\nfor (let i = 0; i < n; i++) {\n  let row = '';\n  for (let j = 0; j < n; j++) {\n    if (i === j || i + j === n - 1) {\n      row += '* ';\n    } else {\n      row += '  ';\n    }\n  }\n  console.log(row);\n}",
+  "solution": "const n = 5;\nfor (let i = 0; i < n; i++) {\n  let row = '';\n  for (let j = 0; j < n; j++) {\n    if (i === j || i + j === n - 1) {\n      row += '* ';\n    } else {\n      row += '  ';\n    }\n  }\n  console.log(row);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "*       * \n  *   * \n    *   \n  *   * \n*       * "
+    }
+  ],
+  "hints": [
+    "Check i===j for main diagonal",
+    "Check i+j===n-1 for anti-diagonal"
+  ]
+}

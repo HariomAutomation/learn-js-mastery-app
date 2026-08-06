@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-16",
+  "title": "FromCharCode",
+  "starterCode": "console.log(String.fromCharCode(72, 101, 108, 108, 111));",
+  "solution": "console.log(String.fromCharCode(72, 101, 108, 108, 111));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hello"
+    }
+  ],
+  "hints": [
+    "Static method",
+    "Convert codes to string"
+  ]
+}

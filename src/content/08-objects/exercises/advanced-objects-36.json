@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-36",
+  "title": "Symbol Species",
+  "starterCode": "class MyArray extends Array {\n  static get [Symbol.species]() { return Array; }\n}\nconst arr = new MyArray(1, 2, 3);\nconst mapped = arr.map(x => x * 2);\nconsole.log(mapped instanceof MyArray);",
+  "solution": "class MyArray extends Array {\n  static get [Symbol.species]() { return Array; }\n}\nconst arr = new MyArray(1, 2, 3);\nconst mapped = arr.map(x => x * 2);\nconsole.log(mapped instanceof MyArray);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "false"
+    }
+  ],
+  "hints": [
+    "Symbol.species controls",
+    "Constructor for derived objects"
+  ]
+}

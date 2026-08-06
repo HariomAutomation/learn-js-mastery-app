@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-16",
+  "title": "Computed Getter",
+  "starterCode": "const obj = {\n  items: [1, 2, 3, 4, 5],\n  get sum() { return this.items.reduce((a, b) => a + b, 0); }\n};\nconsole.log(obj.sum);",
+  "solution": "const obj = {\n  items: [1, 2, 3, 4, 5],\n  get sum() { return this.items.reduce((a, b) => a + b, 0); }\n};\nconsole.log(obj.sum);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "15"
+    }
+  ],
+  "hints": [
+    "Getter computes value",
+    "Dynamic property"
+  ]
+}

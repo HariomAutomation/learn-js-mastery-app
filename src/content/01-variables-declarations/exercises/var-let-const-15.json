@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-var-let-const-15",
+  "title": "const reference check",
+  "starterCode": "const a = { x: 1 }\nconst b = a\nb.x = 99\nconsole.log(a.x)",
+  "solution": "const a = { x: 1 }\nconst b = a\nb.x = 99\nconsole.log(a.x)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "99"
+    }
+  ],
+  "hints": [
+    "Both reference same object"
+  ]
+}

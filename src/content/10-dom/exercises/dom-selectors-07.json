@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-07",
+  "title": "closest Traversal",
+  "starterCode": "const el = document.querySelector('.child');\nconst ancestor = el.closest(???);\nconsole.log(ancestor);",
+  "solution": "const el = document.querySelector('.child');\nconst ancestor = el.closest('.parent');\nconsole.log(ancestor);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "null"
+    }
+  ],
+  "hints": [
+    "closest travels UP the DOM tree",
+    "Takes a CSS selector string"
+  ]
+}

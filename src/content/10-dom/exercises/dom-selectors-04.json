@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-04",
+  "title": "querySelectorAll Length",
+  "starterCode": "const els = document.querySelectorAll('.item');\nconsole.log(els.length);",
+  "solution": "const els = document.querySelectorAll('.item');\nconsole.log(els.length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "0"
+    }
+  ],
+  "hints": [
+    "The length property gives count",
+    "No elements match in this context"
+  ]
+}

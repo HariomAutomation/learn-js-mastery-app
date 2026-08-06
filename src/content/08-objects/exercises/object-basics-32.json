@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-32",
+  "title": "Practice 3",
+  "starterCode": "const obj1 = {a: 1};\nconst obj2 = Object.assign({}, obj1);\nobj2.a = 2;\nconsole.log(obj1.a);\nconsole.log(obj2.a);",
+  "solution": "const obj1 = {a: 1};\nconst obj2 = Object.assign({}, obj1);\nobj2.a = 2;\nconsole.log(obj1.a);\nconsole.log(obj2.a);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1\n2"
+    }
+  ],
+  "hints": [
+    "Object.assign creates clone",
+    "Changes don't affect original"
+  ]
+}

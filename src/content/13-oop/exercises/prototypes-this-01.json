@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-01",
+  "title": "Prototype Chain",
+  "starterCode": "const obj = {};\nconsole.log(Object.getPrototypeOf(obj) === Object.prototype);",
+  "solution": "const obj = {};\nconsole.log(Object.getPrototypeOf(obj) === Object.prototype);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "Object.getPrototypeOf gets prototype",
+    "obj inherits from Object.prototype"
+  ]
+}

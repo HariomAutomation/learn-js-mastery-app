@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-early-return-03",
+  "title": "Guard clause pattern",
+  "starterCode": "function getDiscount(price, isVIP) {\n  if (price <= 0) return 0;\n  return isVIP ? price * 0.2 : price * 0.1;\n}\nconsole.log(getDiscount(100, true));",
+  "solution": "function getDiscount(price, isVIP) {\n  if (price <= 0) return 0;\n  return isVIP ? price * 0.2 : price * 0.1;\n}\nconsole.log(getDiscount(100, true));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "20"
+    }
+  ],
+  "hints": [
+    "price is 100, not <= 0",
+    "isVIP is true, so 20% discount"
+  ]
+}

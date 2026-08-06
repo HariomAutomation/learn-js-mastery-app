@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-44",
+  "title": "Divide with string",
+  "starterCode": "console.log(\"10\" / 2);",
+  "solution": "console.log(\"10\" / 2);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "5"
+    }
+  ],
+  "hints": [
+    "/ does math",
+    "String is converted to number"
+  ]
+}

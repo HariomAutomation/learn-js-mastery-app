@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-15",
+  "title": "Symbol Key Access",
+  "starterCode": "const id = Symbol('id');\nconst obj = {[id]: 123, name: 'Alice'};\nconsole.log(obj[id]);\nconsole.log(Object.getOwnPropertySymbols(obj).length);",
+  "solution": "const id = Symbol('id');\nconst obj = {[id]: 123, name: 'Alice'};\nconsole.log(obj[id]);\nconsole.log(Object.getOwnPropertySymbols(obj).length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "123\n1"
+    }
+  ],
+  "hints": [
+    "Access with symbol",
+    "Count symbol keys"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-43",
+  "title": "Map Boolean",
+  "starterCode": "const arr = [0, 1, 2, 3, 4];\nconst bools = arr.____(x => x > 2);\nconsole.log(bools);",
+  "solution": "const arr = [0, 1, 2, 3, 4];\nconst bools = arr.map(x => x > 2);\nconsole.log(bools);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ false, false, false, true, true ]"
+    }
+  ],
+  "hints": [
+    "Compare returns boolean",
+    "Map to true/false"
+  ]
+}

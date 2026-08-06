@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-closures-iife-27",
+  "title": "Counter Object Pattern",
+  "starterCode": "function createCounterObj() {\n  let count = 0;\n  return {\n    count: () => count,\n    increment: () => ++count,\n    decrement: () => --count,\n    reset: () => (count = 0)\n  };\n}\nconst c = createCounterObj();\nc.increment();\nc.increment();\nc.increment();\nc.decrement();\nconsole.log(c.count());\nc.reset();\nconsole.log(c.count());",
+  "solution": "function createCounterObj() {\n  let count = 0;\n  return {\n    count: () => count,\n    increment: () => ++count,\n    decrement: () => --count,\n    reset: () => (count = 0)\n  };\n}\nconst c = createCounterObj();\nc.increment();\nc.increment();\nc.increment();\nc.decrement();\nconsole.log(c.count());\nc.reset();\nconsole.log(c.count());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3\n0"
+    }
+  ],
+  "hints": [
+    "Object with methods",
+    "Private count"
+  ]
+}

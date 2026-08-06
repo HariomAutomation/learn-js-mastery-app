@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-methods-29",
+  "title": "CopyWithin",
+  "starterCode": "const arr = [1, 2, 3, 4, 5];\narr.____(0, 3);\nconsole.log(arr);",
+  "solution": "const arr = [1, 2, 3, 4, 5];\narr.copyWithin(0, 3);\nconsole.log(arr);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 4, 5, 3, 4, 5 ]"
+    }
+  ],
+  "hints": [
+    "copyWithin(target, start)",
+    "Copies within array"
+  ]
+}

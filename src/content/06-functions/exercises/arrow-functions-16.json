@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-16",
+  "title": "Default Params Arrow",
+  "starterCode": "const greet = (name = 'Friend') => 'Hi ' + name;\nconsole.log(greet());\nconsole.log(greet('Alice'));",
+  "solution": "const greet = (name = 'Friend') => 'Hi ' + name;\nconsole.log(greet());\nconsole.log(greet('Alice'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hi Friend\nHi Alice"
+    }
+  ],
+  "hints": [
+    "Default parameter syntax",
+    "Works same as regular"
+  ]
+}

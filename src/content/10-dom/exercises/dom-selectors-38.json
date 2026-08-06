@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-38",
+  "title": "querySelectorAll Chaining",
+  "starterCode": "const items = document.querySelectorAll('.list .item');\nconsole.log(items.length);",
+  "solution": "const items = document.querySelectorAll('.list .item');\nconsole.log(items.length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "0"
+    }
+  ],
+  "hints": [
+    "Space means descendant selector",
+    "Check the length property"
+  ]
+}

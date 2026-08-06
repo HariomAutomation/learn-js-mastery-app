@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-15",
+  "title": "This in Callback",
+  "starterCode": "const obj = {\n  name: 'John',\n  delayed() {\n    setTimeout(function() {\n      console.log(this.name);\n    }, 10);\n  }\n};\nobj.delayed();",
+  "solution": "const obj = {\n  name: 'John',\n  delayed() {\n    setTimeout(function() {\n      console.log(this.name);\n    }, 10);\n  }\n};\nobj.delayed();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "undefined"
+    }
+  ],
+  "hints": [
+    "Callback loses this binding",
+    "this becomes global"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-45",
+  "title": "Array destructuring copies values",
+  "starterCode": "const arr = [1, 2, 3];\nconst [a, b] = arr;\nconsole.log(a, b);",
+  "solution": "const arr = [1, 2, 3];\nconst [a, b] = arr;\nconsole.log(a, b);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1 2"
+    }
+  ],
+  "hints": [
+    "Array destructuring extracts by position",
+    "Values are copied, not referenced"
+  ]
+}

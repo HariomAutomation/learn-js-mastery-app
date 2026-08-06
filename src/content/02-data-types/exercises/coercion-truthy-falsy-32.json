@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-32",
+  "title": "Boolean of empty object",
+  "starterCode": "console.log(Boolean({}));",
+  "solution": "console.log(Boolean({}));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "Objects are always truthy",
+    "Even with no properties"
+  ]
+}

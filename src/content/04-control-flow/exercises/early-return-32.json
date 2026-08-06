@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-early-return-32",
+  "title": "Guard benefits - clean code",
+  "starterCode": "function divide(a, b) {\n  if (b === 0) return Infinity;\n  return a / b;\n}\nconsole.log(divide(10, 0));",
+  "solution": "function divide(a, b) {\n  if (b === 0) return Infinity;\n  return a / b;\n}\nconsole.log(divide(10, 0));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Infinity"
+    }
+  ],
+  "hints": [
+    "b is 0, guard returns Infinity",
+    "No nested else needed"
+  ]
+}

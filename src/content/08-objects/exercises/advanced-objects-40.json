@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-40",
+  "title": "Freeze Practice",
+  "starterCode": "const obj = Object.freeze({a: 1, b: 2});\nobj.a = 10;\nconsole.log(obj.a);\nconsole.log(Object.isFrozen(obj));",
+  "solution": "const obj = Object.freeze({a: 1, b: 2});\nobj.a = 10;\nconsole.log(obj.a);\nconsole.log(Object.isFrozen(obj));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1\ntrue"
+    }
+  ],
+  "hints": [
+    "Freeze prevents change",
+    "isFrozen check"
+  ]
+}

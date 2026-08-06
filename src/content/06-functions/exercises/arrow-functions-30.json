@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-30",
+  "title": "Arrow Some Every",
+  "starterCode": "const nums = [2, 4, 6, 8];\nconsole.log(nums.every(x => x % 2 === 0));\nconsole.log(nums.some(x => x > 5));",
+  "solution": "const nums = [2, 4, 6, 8];\nconsole.log(nums.every(x => x % 2 === 0));\nconsole.log(nums.some(x => x > 5));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true\ntrue"
+    }
+  ],
+  "hints": [
+    "every checks all",
+    "some checks any"
+  ]
+}

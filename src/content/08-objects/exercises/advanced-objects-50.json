@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-50",
+  "title": "Instanceof Practice",
+  "starterCode": "const arr = [1, 2, 3];\nconst obj = {a: 1};\nconsole.log(arr instanceof Array);\nconsole.log(obj instanceof Object);",
+  "solution": "const arr = [1, 2, 3];\nconst obj = {a: 1};\nconsole.log(arr instanceof Array);\nconsole.log(obj instanceof Object);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true\ntrue"
+    }
+  ],
+  "hints": [
+    "instanceof checks prototype",
+    "Returns boolean"
+  ]
+}

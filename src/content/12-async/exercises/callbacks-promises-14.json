@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-14",
+  "title": "Concurrent Promises",
+  "starterCode": "const p1 = new Promise(r => setTimeout(() => r(1), 50));\nconst p2 = new Promise(r => setTimeout(() => r(2), 30));\nconst p3 = new Promise(r => setTimeout(() => r(3), 10));\nPromise.all([p1, p2, p3]).then(v => console.log(v));",
+  "solution": "const p1 = new Promise(r => setTimeout(() => r(1), 50));\nconst p2 = new Promise(r => setTimeout(() => r(2), 30));\nconst p3 = new Promise(r => setTimeout(() => r(3), 10));\nPromise.all([p1, p2, p3]).then(v => console.log(v));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1,2,3"
+    }
+  ],
+  "hints": [
+    "All promises run concurrently",
+    "Results in order of input"
+  ]
+}

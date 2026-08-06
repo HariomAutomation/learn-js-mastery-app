@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-19",
+  "title": "Entries Filter",
+  "starterCode": "const obj = {a: 1, b: 2, c: 3, d: 4};\nconst filtered = Object.fromEntries(Object.entries(obj).filter(([k, v]) => v > 2));\nconsole.log(filtered);",
+  "solution": "const obj = {a: 1, b: 2, c: 3, d: 4};\nconst filtered = Object.fromEntries(Object.entries(obj).filter(([k, v]) => v > 2));\nconsole.log(filtered);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{ c: 3, d: 4 }"
+    }
+  ],
+  "hints": [
+    "Filter entries by value",
+    "fromEntries back"
+  ]
+}

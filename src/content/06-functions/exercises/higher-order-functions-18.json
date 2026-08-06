@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-higher-order-functions-18",
+  "title": "Filter Maker",
+  "starterCode": "function createFilter(predicate) {\n  return (arr) => arr.filter(predicate);\n}\nconst keepEvens = createFilter(x => x % 2 === 0);\nconsole.log(keepEvens([1, 2, 3, 4, 5]));",
+  "solution": "function createFilter(predicate) {\n  return (arr) => arr.filter(predicate);\n}\nconst keepEvens = createFilter(x => x % 2 === 0);\nconsole.log(keepEvens([1, 2, 3, 4, 5]));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 2, 4 ]"
+    }
+  ],
+  "hints": [
+    "Return filter function",
+    "Use filter inside"
+  ]
+}

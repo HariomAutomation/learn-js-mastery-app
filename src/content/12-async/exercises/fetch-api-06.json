@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-06",
+  "title": "Fetch Error Handling",
+  "starterCode": "// fetch only rejects on network error\n// HTTP errors (404, 500) are not rejections\nconsole.log(\"check response.ok or status\");",
+  "solution": "// fetch only rejects on network error\n// HTTP errors (404, 500) are not rejections\nconsole.log(\"check response.ok or status\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "check response.ok or status"
+    }
+  ],
+  "hints": [
+    "response.ok is true for 2xx",
+    "Check status for errors"
+  ]
+}

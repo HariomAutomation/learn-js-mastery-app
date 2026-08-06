@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-patterns-11",
+  "title": "Sort Objects",
+  "starterCode": "const people = [{name: 'Bob', age: 30}, {name: 'Alice', age: 25}, {name: 'Charlie', age: 35}];\npeople.sort((a, b) => a.age - b.age);\nconsole.log(people.map(p => p.name));",
+  "solution": "const people = [{name: 'Bob', age: 30}, {name: 'Alice', age: 25}, {name: 'Charlie', age: 35}];\npeople.sort((a, b) => a.age - b.age);\nconsole.log(people.map(p => p.name));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 'Alice', 'Bob', 'Charlie' ]"
+    }
+  ],
+  "hints": [
+    "Sort by age property",
+    "Map to names after"
+  ]
+}

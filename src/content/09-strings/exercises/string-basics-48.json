@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-48",
+  "title": "Normalize Practice",
+  "starterCode": "const str = 'caf\\u00E9';\nconsole.log(str.length);\nconsole.log(str.normalize().length);",
+  "solution": "const str = 'caf\\u00E9';\nconsole.log(str.length);\nconsole.log(str.normalize().length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "4\n4"
+    }
+  ],
+  "hints": [
+    "Normalize may change length",
+    "Unicode normalization"
+  ]
+}

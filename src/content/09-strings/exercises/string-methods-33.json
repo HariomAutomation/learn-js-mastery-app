@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-methods-33",
+  "title": "Match All",
+  "starterCode": "const str = 'a1b2c3';\nconst result = str.matchAll(/[a-z]/g);\nconsole.log([...result].map(m => m[0]));",
+  "solution": "const str = 'a1b2c3';\nconst result = str.matchAll(/[a-z]/g);\nconsole.log([...result].map(m => m[0]));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 'a', 'b', 'c' ]"
+    }
+  ],
+  "hints": [
+    "matchAll iterator",
+    "All matches"
+  ]
+}

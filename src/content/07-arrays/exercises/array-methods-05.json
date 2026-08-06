@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-methods-05",
+  "title": "Splice Remove",
+  "starterCode": "const arr = ['a', 'b', 'c', 'd'];\narr.____(1, 2);\nconsole.log(arr);",
+  "solution": "const arr = ['a', 'b', 'c', 'd'];\narr.splice(1, 2);\nconsole.log(arr);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 'a', 'd' ]"
+    }
+  ],
+  "hints": [
+    "splice(index, count) removes",
+    "Start at index 1, remove 2"
+  ]
+}

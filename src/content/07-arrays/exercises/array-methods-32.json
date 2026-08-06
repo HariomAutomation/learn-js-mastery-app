@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-methods-32",
+  "title": "Slice Negative",
+  "starterCode": "const arr = [1, 2, 3, 4, 5];\nconsole.log(arr.____(-3));",
+  "solution": "const arr = [1, 2, 3, 4, 5];\nconsole.log(arr.slice(-3));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 3, 4, 5 ]"
+    }
+  ],
+  "hints": [
+    "Negative index from end",
+    "-3 starts 3 from end"
+  ]
+}

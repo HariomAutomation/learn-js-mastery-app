@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-35",
+  "title": "Practice 6",
+  "starterCode": "const obj = {};\nobj[Symbol('id')] = 123;\nconsole.log(Object.getOwnPropertySymbols(obj).length);",
+  "solution": "const obj = {};\nobj[Symbol('id')] = 123;\nconsole.log(Object.getOwnPropertySymbols(obj).length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1"
+    }
+  ],
+  "hints": [
+    "Symbol keys",
+    "getOwnPropertySymbols"
+  ]
+}

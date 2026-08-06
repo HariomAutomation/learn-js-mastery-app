@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-46",
+  "title": "Async Class Method",
+  "starterCode": "class API {\n  async getData() { return 'data'; }\n}\nnew API().getData().then(d => console.log(d));",
+  "solution": "class API {\n  async getData() { return 'data'; }\n}\nnew API().getData().then(d => console.log(d));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "data"
+    }
+  ],
+  "hints": [
+    "Class methods can be async",
+    "Returns promise"
+  ]
+}

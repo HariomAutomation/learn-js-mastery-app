@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-23",
+  "title": "Keyboard Shortcuts",
+  "starterCode": "document.addEventListener('keydown', function(e) {\n  if (e.ctrlKey && e.key === 's') {\n    e.preventDefault();\n    console.log('save');\n  }\n});",
+  "solution": "document.addEventListener('keydown', function(e) {\n  if (e.ctrlKey && e.key === 's') {\n    e.preventDefault();\n    console.log('save');\n  }\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "save"
+    }
+  ],
+  "hints": [
+    "Check ctrlKey, shiftKey, altKey",
+    "Use preventDefault for browser shortcuts"
+  ]
+}

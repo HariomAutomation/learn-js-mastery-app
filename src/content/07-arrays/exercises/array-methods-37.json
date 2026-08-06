@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-methods-37",
+  "title": "Flat Reduce",
+  "starterCode": "const arr = [[1, 2], [3], [4, 5, 6]];\nconsole.log(arr.____().length);",
+  "solution": "const arr = [[1, 2], [3], [4, 5, 6]];\nconsole.log(arr.flat().length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "6"
+    }
+  ],
+  "hints": [
+    "Flat first, then get length",
+    "Count all elements"
+  ]
+}

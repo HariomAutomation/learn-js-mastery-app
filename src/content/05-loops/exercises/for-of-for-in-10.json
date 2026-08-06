@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-10",
+  "title": "Object.values()",
+  "starterCode": "const obj = {a: 1, b: 2, c: 3};\nconst values = Object.values(obj);\nconsole.log(values);",
+  "solution": "const obj = {a: 1, b: 2, c: 3};\nconst values = Object.values(obj);\nconsole.log(values);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 1, 2, 3 ]"
+    }
+  ],
+  "hints": [
+    "Object.values() returns array",
+    "Contains only values"
+  ]
+}

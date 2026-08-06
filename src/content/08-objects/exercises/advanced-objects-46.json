@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-46",
+  "title": "Delete Operator",
+  "starterCode": "const obj = {a: 1, b: 2, c: 3};\ndelete obj.b;\nconsole.log(Object.keys(obj));",
+  "solution": "const obj = {a: 1, b: 2, c: 3};\ndelete obj.b;\nconsole.log(Object.keys(obj));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 'a', 'c' ]"
+    }
+  ],
+  "hints": [
+    "delete removes property",
+    "From object"
+  ]
+}

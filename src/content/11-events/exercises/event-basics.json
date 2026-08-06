@@ -1,0 +1,12 @@
+{
+  "id": "11-events-event-basics",
+  "title": "Event handling basics — click, submit simulation",
+  "starterCode": "// Event handling simulation — callback pattern samjho\n\n// 1. Click event handler banao\nlet clickCount = 0\nfunction handleClick() {\n  clickCount++\n  console.log(`Clicked ${clickCount} times`)\n}\n\nhandleClick() // \"Clicked 1 times\"\nhandleClick() // \"Clicked 2 times\"\nhandleClick() // __BLANK__\n\n// 2. Button disable karo (simulated)\nlet buttonDisabled = false\nfunction toggleButton() {\n  buttonDisabled = !buttonDisabled\n  console.log(`Button is now: ${buttonDisabled ? \"disabled\" : \"enabled\"}`)\n}\n\ntoggleButton() // __BLANK__\ntoggleButton() // __BLANK__\n\n// 3. Event with data — form submit simulate karo\nfunction handleSubmit(formData) {\n  const { name, email } = formData\n  if (!name || !email) {\n    console.log(\"Error: Name and email required\")\n  } else {\n    console.log(`Submitted: ${name} - ${email}`)\n  }\n}\n\nhandleSubmit({ name: \"Rahul\", email: \"rahul@test.com\" }) // __BLANK__\nhandleSubmit({ name: \"\", email: \"\" }) // __BLANK__",
+  "solution": "let clickCount = 0\nfunction handleClick() {\n  clickCount++\n  console.log(`Clicked ${clickCount} times`)\n}\nhandleClick()\nhandleClick()\nconsole.log(`Clicked ${clickCount} times`)\n\nlet buttonDisabled = false\nfunction toggleButton() {\n  buttonDisabled = !buttonDisabled\n  console.log(`Button is now: ${buttonDisabled ? \"disabled\" : \"enabled\"}`)\n}\ntoggleButton()\ntoggleButton()\n\nfunction handleSubmit(formData) {\n  const { name, email } = formData\n  if (!name || !email) {\n    console.log(\"Error: Name and email required\")\n  } else {\n    console.log(`Submitted: ${name} - ${email}`)\n  }\n}\nhandleSubmit({ name: \"Rahul\", email: \"rahul@test.com\" })\nhandleSubmit({ name: \"\", email: \"\" })",
+  "tests": [{ "input": [], "expected": "Clicked 1 times\nClicked 2 times\nClicked 3 times\nButton is now: disabled\nButton is now: enabled\nSubmitted: Rahul - rahul@test.com\nError: Name and email required" }],
+  "hints": [
+    "Event handler ek function hota hai jo event hone pe chalta hai",
+    "Toggle pattern: variable = !variable — true ko false aur false ko true karo",
+    "Form validation: check karo ki saari fields bhari hain ya nahi"
+  ]
+}

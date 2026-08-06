@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-19",
+  "title": "LocaleCompare",
+  "starterCode": "console.log('apple'.localeCompare('banana'));",
+  "solution": "console.log('apple'.localeCompare('banana'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "-1"
+    }
+  ],
+  "hints": [
+    "Negative if before",
+    "Locale-aware sort"
+  ]
+}

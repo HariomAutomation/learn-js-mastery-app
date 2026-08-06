@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-21",
+  "title": "Logical AND assignment (&&=)",
+  "starterCode": "let x = 10;\nx &&= 5;\nconsole.log(x);",
+  "solution": "let x = 10;\nx &&= 5;\nconsole.log(x);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "5"
+    }
+  ],
+  "hints": [
+    "x &&= 5 means x = x && 5",
+    "x is truthy, so x becomes 5"
+  ]
+}

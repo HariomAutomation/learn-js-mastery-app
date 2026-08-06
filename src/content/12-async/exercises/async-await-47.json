@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-47",
+  "title": "Async Timeout",
+  "starterCode": "function delay(ms) {\n  return new Promise(r => setTimeout(r, ms));\n}\nasync function run() {\n  await delay(10);\n  console.log('done');\n}\nrun();",
+  "solution": "function delay(ms) {\n  return new Promise(r => setTimeout(r, ms));\n}\nasync function run() {\n  await delay(10);\n  console.log('done');\n}\nrun();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "done"
+    }
+  ],
+  "hints": [
+    "Create delay helper",
+    "Await the delay"
+  ]
+}

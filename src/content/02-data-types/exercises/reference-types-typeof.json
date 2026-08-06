@@ -1,0 +1,12 @@
+{
+  "id": "02-data-types-reference-types-typeof",
+  "title": "Reference vs Value ka farq samjho",
+  "starterCode": "// 1. Primitive copy — independent hai:\nlet a = 10\nlet b = a\nb = 99\nconsole.log(\"a =\", a, \"b =\", b)  // a = 10? b = 99?\n\n// 2. Reference copy — same memory point karte hain:\nlet arr1 = [1, 2, 3]\nlet arr2 = arr1\narr2.push(4)\nconsole.log(\"arr1 =\", arr1)  // kya aayega?\nconsole.log(\"arr2 =\", arr2)\n\n// 3. Ab copy ko independent banao (spread):\nlet arr3 = [...arr1]\narr3.push(5)\nconsole.log(\"arr1 =\", arr1, \"arr3 =\", arr3)\n",
+  "solution": "let a = 10\nlet b = a\nb = 99\nconsole.log(\"a =\", a, \"b =\", b)  // a = 10 b = 99 (independent)\nlet arr1 = [1, 2, 3]\nlet arr2 = arr1\narr2.push(4)\nconsole.log(\"arr1 =\", arr1)  // [1,2,3,4] — same reference!\nconsole.log(\"arr2 =\", arr2)  // [1,2,3,4]\nlet arr3 = [...arr1]\narr3.push(5)\nconsole.log(\"arr1 =\", arr1, \"arr3 =\", arr3)  // arr1 [1,2,3,4], arr3 [1,2,3,4,5]",
+  "tests": [{ "input": [], "expected": "a = 10 b = 99" }],
+  "hints": [
+    "Primitives copy by value — har ek independent",
+    "Arrays/objects copy by reference — same memory location",
+    "Spread [...arr] naya array banata hai"
+  ]
+}

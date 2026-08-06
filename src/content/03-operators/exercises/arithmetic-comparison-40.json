@@ -1,0 +1,15 @@
+{
+  "id": "03-operators-arithmetic-comparison-40",
+  "title": "Compound division (/=)",
+  "starterCode": "let x = 24;\nx /= 6;\nconsole.log(x);",
+  "solution": "let x = 24;\nx /= 6;\nconsole.log(x);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "4"
+    }
+  ],
+  "hints": [
+    "x /= 6 is the same as x = x / 6"
+  ]
+}

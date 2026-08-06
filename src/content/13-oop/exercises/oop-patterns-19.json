@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-19",
+  "title": "Visitor",
+  "starterCode": "class Shape {\n  accept(visitor) { return visitor.visit(this); }\n}\nclass Circle extends Shape {\n  constructor(r) { super(); this.r = r; }\n}\nclass AreaVisitor {\n  visit(circle) { return Math.PI * circle.r * circle.r; }\n}\nconsole.log(new Circle(5).accept(new AreaVisitor()));",
+  "solution": "class Shape {\n  accept(visitor) { return visitor.visit(this); }\n}\nclass Circle extends Shape {\n  constructor(r) { super(); this.r = r; }\n}\nclass AreaVisitor {\n  visit(circle) { return Math.PI * circle.r * circle.r; }\n}\nconsole.log(new Circle(5).accept(new AreaVisitor()));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "78.53981633974483"
+    }
+  ],
+  "hints": [
+    "Visitor adds operations without modifying",
+    "accept calls visitor.visit"
+  ]
+}

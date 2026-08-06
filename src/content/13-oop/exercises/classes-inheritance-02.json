@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-02",
+  "title": "Constructor",
+  "starterCode": "class Person {\n  constructor(name) {\n    // TODO: set name\n  }\n}\nconst p = new Person('John');\nconsole.log(p.name);",
+  "solution": "class Person {\n  constructor(name) {\n    this.name = name;\n  }\n}\nconst p = new Person('John');\nconsole.log(p.name);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "John"
+    }
+  ],
+  "hints": [
+    "constructor runs on new",
+    "this refers to new instance"
+  ]
+}

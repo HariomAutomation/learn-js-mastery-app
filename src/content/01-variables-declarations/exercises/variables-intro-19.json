@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-variables-intro-19",
+  "title": "Number parseFloat",
+  "starterCode": "console.log(parseFloat(\"3.14abc\"))\nconsole.log(parseInt(\"42rest\"))",
+  "solution": "console.log(parseFloat(\"3.14abc\"))\nconsole.log(parseInt(\"42rest\"))",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3.14\n42"
+    }
+  ],
+  "hints": [
+    "parseFloat reads until non-number"
+  ]
+}

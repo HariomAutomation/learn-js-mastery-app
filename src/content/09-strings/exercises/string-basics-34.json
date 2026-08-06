@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-34",
+  "title": "Replace",
+  "starterCode": "const str = 'hello world';\nconsole.log(str.replace('world', 'JS'));",
+  "solution": "const str = 'hello world';\nconsole.log(str.replace('world', 'JS'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hello JS"
+    }
+  ],
+  "hints": [
+    "replace first match",
+    "Returns new string"
+  ]
+}

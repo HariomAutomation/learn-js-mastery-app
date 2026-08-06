@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-20",
+  "title": "CORS Basics",
+  "starterCode": "// CORS: Cross-Origin Resource Sharing\nconsole.log(\"same-origin policy blocks cross-origin\");",
+  "solution": "// CORS: Cross-Origin Resource Sharing\nconsole.log(\"same-origin policy blocks cross-origin\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "same-origin policy blocks cross-origin"
+    }
+  ],
+  "hints": [
+    "CORS allows cross-origin requests",
+    "Server must send CORS headers"
+  ]
+}

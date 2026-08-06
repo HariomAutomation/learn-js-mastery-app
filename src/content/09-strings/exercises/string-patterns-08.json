@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-08",
+  "title": "Count Words",
+  "starterCode": "function countWords(str) {\n  return str.trim().split(/\\s+/).length;\n}\nconsole.log(countWords('hello world'));\nconsole.log(countWords('  hello   world  '));",
+  "solution": "function countWords(str) {\n  return str.trim().split(/\\s+/).length;\n}\nconsole.log(countWords('hello world'));\nconsole.log(countWords('  hello   world  '));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2\n2"
+    }
+  ],
+  "hints": [
+    "Trim then split",
+    "Count array length"
+  ]
+}

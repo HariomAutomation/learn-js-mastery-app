@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-32",
+  "title": "Is Pangram",
+  "starterCode": "function isPangram(str) {\n  return 'abcdefghijklmnopqrstuvwxyz'.split('').every(c => str.toLowerCase().includes(c));\n}\nconsole.log(isPangram('The quick brown fox jumps over the lazy dog'));\nconsole.log(isPangram('Hello'));",
+  "solution": "function isPangram(str) {\n  return 'abcdefghijklmnopqrstuvwxyz'.split('').every(c => str.toLowerCase().includes(c));\n}\nconsole.log(isPangram('The quick brown fox jumps over the lazy dog'));\nconsole.log(isPangram('Hello'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true\nfalse"
+    }
+  ],
+  "hints": [
+    "Check all 26 letters",
+    "every with includes"
+  ]
+}

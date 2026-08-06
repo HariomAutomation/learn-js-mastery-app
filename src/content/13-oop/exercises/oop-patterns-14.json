@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-14",
+  "title": "Builder",
+  "starterCode": "class QueryBuilder {\n  constructor() { this.parts = []; }\n  select(fields) { this.parts.push('SELECT ' + fields); return this; }\n  from(table) { this.parts.push('FROM ' + table); return this; }\n  where(cond) { this.parts.push('WHERE ' + cond); return this; }\n  build() { return this.parts.join(' '); }\n}\nconsole.log(new QueryBuilder().select('*').from('users').where('id=1').build());",
+  "solution": "class QueryBuilder {\n  constructor() { this.parts = []; }\n  select(fields) { this.parts.push('SELECT ' + fields); return this; }\n  from(table) { this.parts.push('FROM ' + table); return this; }\n  where(cond) { this.parts.push('WHERE ' + cond); return this; }\n  build() { return this.parts.join(' '); }\n}\nconsole.log(new QueryBuilder().select('*').from('users').where('id=1').build());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "SELECT * FROM users WHERE id=1"
+    }
+  ],
+  "hints": [
+    "Each method returns this",
+    "build() assembles final result"
+  ]
+}

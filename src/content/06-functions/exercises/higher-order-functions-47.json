@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-higher-order-functions-47",
+  "title": "Flip Arguments",
+  "starterCode": "function flip(fn) {\n  return function(...args) {\n    return fn(...args.reverse());\n  };\n}\nconst subtract = flip((a, b) => a - b);\nconsole.log(subtract(5, 3));",
+  "solution": "function flip(fn) {\n  return function(...args) {\n    return fn(...args.reverse());\n  };\n}\nconst subtract = flip((a, b) => a - b);\nconsole.log(subtract(5, 3));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "-2"
+    }
+  ],
+  "hints": [
+    "Reverse argument order",
+    "Then call original"
+  ]
+}

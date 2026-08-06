@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-07",
+  "title": "Shallow Copy Spread",
+  "starterCode": "const original = {a: 1, b: {c: 2}};\nconst copy = {...original};\ncopy.a = 10;\nconsole.log(original.a);\nconsole.log(copy.a);",
+  "solution": "const original = {a: 1, b: {c: 2}};\nconst copy = {...original};\ncopy.a = 10;\nconsole.log(original.a);\nconsole.log(copy.a);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1\n10"
+    }
+  ],
+  "hints": [
+    "Spread creates shallow clone",
+    "Top level copied"
+  ]
+}

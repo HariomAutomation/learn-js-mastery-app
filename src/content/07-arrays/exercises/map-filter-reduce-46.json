@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-46",
+  "title": "Map Index",
+  "starterCode": "const arr = ['a', 'b', 'c'];\nconst indexed = arr.____((_, i) => i);\nconsole.log(indexed);",
+  "solution": "const arr = ['a', 'b', 'c'];\nconst indexed = arr.map((_, i) => i);\nconsole.log(indexed);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 0, 1, 2 ]"
+    }
+  ],
+  "hints": [
+    "Return only index",
+    "Ignore value"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-05",
+  "title": "For...In Objects",
+  "starterCode": "const obj = {a: 1, b: 2};\nfor (const key in obj) {\n  console.log(key + ': ' + obj[key]);\n}",
+  "solution": "const obj = {a: 1, b: 2};\nfor (const key in obj) {\n  console.log(key + ': ' + obj[key]);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "a: 1\nb: 2"
+    }
+  ],
+  "hints": [
+    "for...in gives keys",
+    "Access value with obj[key]"
+  ]
+}

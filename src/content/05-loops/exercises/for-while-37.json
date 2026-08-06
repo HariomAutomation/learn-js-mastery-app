@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-while-37",
+  "title": "Digit Counting",
+  "starterCode": "let num = 987654321;\nlet count = 0;\nwhile (num > 0) {\n  count++;\n  num = Math.floor(num / 10);\n}\nconsole.log(count);",
+  "solution": "let num = 987654321;\nlet count = 0;\nwhile (num > 0) {\n  count++;\n  num = Math.floor(num / 10);\n}\nconsole.log(count);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "9"
+    }
+  ],
+  "hints": [
+    "Divide by 10 each iteration",
+    "Count until num is 0"
+  ]
+}

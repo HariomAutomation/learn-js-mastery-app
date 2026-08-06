@@ -1,0 +1,17 @@
+{
+  "id": "04-control-flow-early-return-25",
+  "title": "Nested refactor - no access",
+  "starterCode": "function canAccess(user) {\n  if (!user) return false;\n  if (!user.isLoggedIn) return false;\n  if (!user.hasPermission) return false;\n  return true;\n}\nconsole.log(canAccess({ isLoggedIn: true, hasPermission: false }));",
+  "solution": "function canAccess(user) {\n  if (!user) return false;\n  if (!user.isLoggedIn) return false;\n  if (!user.hasPermission) return false;\n  return true;\n}\nconsole.log(canAccess({ isLoggedIn: true, hasPermission: false }));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "false"
+    }
+  ],
+  "hints": [
+    "user is truthy",
+    "isLoggedIn is true",
+    "hasPermission is false, returns false"
+  ]
+}

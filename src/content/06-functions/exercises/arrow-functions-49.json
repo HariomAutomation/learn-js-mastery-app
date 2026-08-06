@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-49",
+  "title": "Arrow Object Method Warning",
+  "starterCode": "const obj = {\n  value: 42,\n  getValue: () => this.value\n};\nconsole.log(obj.getValue());",
+  "solution": "const obj = {\n  value: 42,\n  getValue: () => this.value\n};\nconsole.log(obj.getValue());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "undefined"
+    }
+  ],
+  "hints": [
+    "Arrow doesn't bind this",
+    "this is outer scope"
+  ]
+}

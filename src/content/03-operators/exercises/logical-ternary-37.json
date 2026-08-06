@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-37",
+  "title": "Nullish coalescing chain",
+  "starterCode": "const a = null;\nconst b = undefined;\nconst c = 0;\nconst result = a ?? b ?? c ?? 'default';\nconsole.log(result);",
+  "solution": "const a = null;\nconst b = undefined;\nconst c = 0;\nconst result = a ?? b ?? c ?? 'default';\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "0"
+    }
+  ],
+  "hints": [
+    "?? chains until non-null/undefined",
+    "c is 0, which is not null/undefined"
+  ]
+}

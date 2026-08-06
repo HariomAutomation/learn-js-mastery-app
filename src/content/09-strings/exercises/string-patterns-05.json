@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-05",
+  "title": "Truncate String",
+  "starterCode": "function truncate(str, len) {\n  return str.length > len ? str.slice(0, len) + '...' : str;\n}\nconsole.log(truncate('hello world', 5));",
+  "solution": "function truncate(str, len) {\n  return str.length > len ? str.slice(0, len) + '...' : str;\n}\nconsole.log(truncate('hello world', 5));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hello..."
+    }
+  ],
+  "hints": [
+    "Check length",
+    "Add ellipsis"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-var-let-const-12",
+  "title": "var global pollution",
+  "starterCode": "var x = 1\nfunction test() {\n  var x = 2\n}\ntest()\nconsole.log(x)",
+  "solution": "var x = 1\nfunction test() {\n  var x = 2\n}\ntest()\nconsole.log(x)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1"
+    }
+  ],
+  "hints": [
+    "function var is local"
+  ]
+}

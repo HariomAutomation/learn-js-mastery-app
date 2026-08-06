@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-31",
+  "title": "This Interview",
+  "starterCode": "// Q: What is 'this'?\n// A: Depends on how function is called\nconsole.log(\"this depends on call context\");",
+  "solution": "// Q: What is 'this'?\n// A: Depends on how function is called\nconsole.log(\"this depends on call context\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "this depends on call context"
+    }
+  ],
+  "hints": [
+    "this is determined at call time",
+    "Not at definition time"
+  ]
+}

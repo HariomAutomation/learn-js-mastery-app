@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-22",
+  "title": "Mask Email",
+  "starterCode": "function maskEmail(email) {\n  const [name, domain] = email.split('@');\n  const masked = name[0] + '*'.repeat(name.length - 2) + name[name.length - 1];\n  return masked + '@' + domain;\n}\nconsole.log(maskEmail('alice@example.com'));",
+  "solution": "function maskEmail(email) {\n  const [name, domain] = email.split('@');\n  const masked = name[0] + '*'.repeat(name.length - 2) + name[name.length - 1];\n  return masked + '@' + domain;\n}\nconsole.log(maskEmail('alice@example.com'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "a*****e@example.com"
+    }
+  ],
+  "hints": [
+    "Keep first and last",
+    "Mask middle with *"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-06",
+  "title": "Switch/case basic",
+  "starterCode": "const day = 'Monday';\nswitch (day) {\n  case 'Monday':\n    console.log('Start of week');\n    break;\n  case 'Friday':\n    console.log('End of week');\n    break;\n  default:\n    console.log('Midweek');\n}",
+  "solution": "const day = 'Monday';\nswitch (day) {\n  case 'Monday':\n    console.log('Start of week');\n    break;\n  case 'Friday':\n    console.log('End of week');\n    break;\n  default:\n    console.log('Midweek');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Start of week"
+    }
+  ],
+  "hints": [
+    "switch matches day against cases",
+    "Monday matches first case"
+  ]
+}

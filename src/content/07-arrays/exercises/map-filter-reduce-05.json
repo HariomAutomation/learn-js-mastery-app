@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-05",
+  "title": "Map with Index",
+  "starterCode": "const arr = ['a', 'b', 'c'];\nconst indexed = arr.____((val, idx) => idx + ':' + val);\nconsole.log(indexed);",
+  "solution": "const arr = ['a', 'b', 'c'];\nconst indexed = arr.map((val, idx) => idx + ':' + val);\nconsole.log(indexed);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ '0:a', '1:b', '2:c' ]"
+    }
+  ],
+  "hints": [
+    "map callback gets index",
+    "Combine index and value"
+  ]
+}

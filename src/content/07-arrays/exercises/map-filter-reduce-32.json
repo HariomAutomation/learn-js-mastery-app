@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-32",
+  "title": "Filter Strict",
+  "starterCode": "const arr = [1, 2, '2', 3];\nconst nums = arr.____(x => x === 2);\nconsole.log(nums);",
+  "solution": "const arr = [1, 2, '2', 3];\nconst nums = arr.filter(x => x === 2);\nconsole.log(nums);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 2 ]"
+    }
+  ],
+  "hints": [
+    "Strict equality ===",
+    "Type matters"
+  ]
+}

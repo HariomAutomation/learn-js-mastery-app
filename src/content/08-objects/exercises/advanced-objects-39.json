@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-39",
+  "title": "Seal Practice",
+  "starterCode": "const obj = Object.seal({a: 1, b: 2});\nobj.a = 10;\nobj.b = 20;\nobj.c = 30;\nconsole.log(obj.a, obj.b, obj.c);",
+  "solution": "const obj = Object.seal({a: 1, b: 2});\nobj.a = 10;\nobj.b = 20;\nobj.c = 30;\nconsole.log(obj.a, obj.b, obj.c);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10 20 undefined"
+    }
+  ],
+  "hints": [
+    "Seal allows changes",
+    "Cannot add c"
+  ]
+}

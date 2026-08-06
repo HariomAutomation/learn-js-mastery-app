@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-33",
+  "title": "Reduce Sum Squares",
+  "starterCode": "const nums = [1, 2, 3, 4];\nconst sumSq = nums.____((acc, x) => acc + x * x, 0);\nconsole.log(sumSq);",
+  "solution": "const nums = [1, 2, 3, 4];\nconst sumSq = nums.reduce((acc, x) => acc + x * x, 0);\nconsole.log(sumSq);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "30"
+    }
+  ],
+  "hints": [
+    "Square each then sum",
+    "Accumulate squares"
+  ]
+}

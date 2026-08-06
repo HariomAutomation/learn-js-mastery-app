@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-09",
+  "title": "Access last character of a string",
+  "starterCode": "const str = \"Hello\";\nconst last = ;\nconsole.log(last);",
+  "solution": "const str = \"Hello\";\nconst last = str[str.length - 1];\nconsole.log(last);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "o"
+    }
+  ],
+  "hints": [
+    "The last index is length minus 1",
+    "Use str.length - 1 as the index"
+  ]
+}

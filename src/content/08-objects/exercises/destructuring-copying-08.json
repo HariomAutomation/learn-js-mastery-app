@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-08",
+  "title": "Deep Copy structuredClone",
+  "starterCode": "const original = {a: 1, b: {c: 2}};\nconst copy = structuredClone(original);\ncopy.b.c = 99;\nconsole.log(original.b.c);\nconsole.log(copy.b.c);",
+  "solution": "const original = {a: 1, b: {c: 2}};\nconst copy = structuredClone(original);\ncopy.b.c = 99;\nconsole.log(original.b.c);\nconsole.log(copy.b.c);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2\n99"
+    }
+  ],
+  "hints": [
+    "structuredClone deep copies",
+    "Nested objects independent"
+  ]
+}

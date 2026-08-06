@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-12",
+  "title": "Once Delegation",
+  "starterCode": "const list = document.querySelector('ul');\nlist.addEventListener('click', function(e) {\n  console.log('clicked once');\n}, { once: true });\nconsole.log('once option');",
+  "solution": "const list = document.querySelector('ul');\nlist.addEventListener('click', function(e) {\n  console.log('clicked once');\n}, { once: true });\nconsole.log('once option');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "once option"
+    }
+  ],
+  "hints": [
+    "once: true auto-removes after first fire",
+    "Works with delegation"
+  ]
+}

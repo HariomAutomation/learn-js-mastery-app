@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-18",
+  "title": "Create a hexadecimal number",
+  "starterCode": "const hex = ;\nconsole.log(hex);",
+  "solution": "const hex = 0xFF;\nconsole.log(hex);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "255"
+    }
+  ],
+  "hints": [
+    "Hex uses 0x prefix",
+    "FF in hex equals 255 in decimal"
+  ]
+}

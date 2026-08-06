@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-07",
+  "title": "Pub/Sub",
+  "starterCode": "class PubSub {\n  constructor() { this.channels = {}; }\n  subscribe(ch, fn) {\n    (this.channels[ch] = this.channels[ch] || []).push(fn);\n  }\n  publish(ch, data) {\n    (this.channels[ch] || []).forEach(fn => fn(data));\n  }\n}\nconst ps = new PubSub();\nps.subscribe('news', (d) => console.log(d));\nps.publish('news', 'breaking');",
+  "solution": "class PubSub {\n  constructor() { this.channels = {}; }\n  subscribe(ch, fn) {\n    (this.channels[ch] = this.channels[ch] || []).push(fn);\n  }\n  publish(ch, data) {\n    (this.channels[ch] || []).forEach(fn => fn(data));\n  }\n}\nconst ps = new PubSub();\nps.subscribe('news', (d) => console.log(d));\nps.publish('news', 'breaking');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "breaking"
+    }
+  ],
+  "hints": [
+    "Channels group subscribers",
+    "publish notifies all in channel"
+  ]
+}

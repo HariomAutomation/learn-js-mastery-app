@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-patterns-47",
+  "title": "Rotate In Place",
+  "starterCode": "function rotateInPlace(arr, n) {\n  const len = arr.length;\n  n = ((n % len) + len) % len;\n  return [...arr.slice(n), ...arr.slice(0, n)];\n}\nconsole.log(rotateInPlace([1,2,3,4,5], -1));",
+  "solution": "function rotateInPlace(arr, n) {\n  const len = arr.length;\n  n = ((n % len) + len) % len;\n  return [...arr.slice(n), ...arr.slice(0, n)];\n}\nconsole.log(rotateInPlace([1,2,3,4,5], -1));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 5, 1, 2, 3, 4 ]"
+    }
+  ],
+  "hints": [
+    "Handle negative rotation",
+    "Modulo for wrap"
+  ]
+}

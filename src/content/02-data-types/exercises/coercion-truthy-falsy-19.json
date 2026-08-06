@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-19",
+  "title": "parseInt for string parsing",
+  "starterCode": "console.log(parseInt(\"42abc\"));",
+  "solution": "console.log(parseInt(\"42abc\"));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "42"
+    }
+  ],
+  "hints": [
+    "parseInt stops at non-numeric",
+    "Parses until it can't anymore"
+  ]
+}

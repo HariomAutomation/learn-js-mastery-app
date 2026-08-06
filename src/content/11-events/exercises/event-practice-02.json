@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-02",
+  "title": "Modal Events",
+  "starterCode": "// Open/close modal with click events\nconsole.log(\"modal toggle pattern\");",
+  "solution": "// Open/close modal with click events\nconsole.log(\"modal toggle pattern\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "modal toggle pattern"
+    }
+  ],
+  "hints": [
+    "Toggle display on button click",
+    "Close on backdrop click"
+  ]
+}

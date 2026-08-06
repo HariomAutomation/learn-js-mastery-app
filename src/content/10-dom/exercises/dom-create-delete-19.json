@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-19",
+  "title": "adoptNode",
+  "starterCode": "const doc = document;\nconst div = document.createElement('div');\nconst adopted = doc.adoptNode(div);\nconsole.log(adopted.ownerDocument === doc);",
+  "solution": "const doc = document;\nconst div = document.createElement('div');\nconst adopted = doc.adoptNode(div);\nconsole.log(adopted.ownerDocument === doc);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "adoptNode adopts node from another document",
+    "Sets ownerDocument"
+  ]
+}

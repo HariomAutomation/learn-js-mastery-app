@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-18",
+  "title": "insertAdjacentText",
+  "starterCode": "const el = document.createElement('div');\nel.insertAdjacentText('beforeend', 'Hello');\nconsole.log(el.textContent);",
+  "solution": "const el = document.createElement('div');\nel.insertAdjacentText('beforeend', 'Hello');\nconsole.log(el.textContent);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hello"
+    }
+  ],
+  "hints": [
+    "insertAdjacentText inserts text node",
+    "beforeend puts inside at end"
+  ]
+}

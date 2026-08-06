@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-21",
+  "title": "Nested object reference",
+  "starterCode": "const a = { nested: { val: 1 } };\nconst b = a;\nconsole.log(a === b);",
+  "solution": "const a = { nested: { val: 1 } };\nconst b = a;\nconsole.log(a === b);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "Assignment copies the reference",
+    "Same reference, same object"
+  ]
+}

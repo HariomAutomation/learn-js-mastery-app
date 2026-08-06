@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-arithmetic-comparison-45",
+  "title": "parseInt",
+  "starterCode": "const result = parseInt(\"42px\");\nconsole.log(result);",
+  "solution": "const result = parseInt(\"42px\");\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "42"
+    }
+  ],
+  "hints": [
+    "parseInt parses until non-numeric",
+    "Stops at 'p'"
+  ]
+}

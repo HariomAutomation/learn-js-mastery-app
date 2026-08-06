@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-19",
+  "title": "dataset Set",
+  "starterCode": "const el = document.querySelector('.item');\nel.dataset.userId = '42';\nconsole.log(el.getAttribute('data-user-id'));",
+  "solution": "const el = document.querySelector('.item');\nel.dataset.userId = '42';\nconsole.log(el.getAttribute('data-user-id'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "42"
+    }
+  ],
+  "hints": [
+    "dataset camelCase maps to data-kebab-case",
+    "userId becomes data-user-id"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-14",
+  "title": "Switch on numbers",
+  "starterCode": "const code = 2;\nswitch (code) {\n  case 1:\n    console.log('one');\n    break;\n  case 2:\n    console.log('two');\n    break;\n  case 3:\n    console.log('three');\n    break;\n  default:\n    console.log('other');\n}",
+  "solution": "const code = 2;\nswitch (code) {\n  case 1:\n    console.log('one');\n    break;\n  case 2:\n    console.log('two');\n    break;\n  case 3:\n    console.log('three');\n    break;\n  default:\n    console.log('other');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "two"
+    }
+  ],
+  "hints": [
+    "2 matches case 2",
+    "break prevents fallthrough"
+  ]
+}

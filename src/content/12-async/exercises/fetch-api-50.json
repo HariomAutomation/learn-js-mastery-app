@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-50",
+  "title": "Fetch Complete Review",
+  "starterCode": "// fetch: GET, POST, PUT, DELETE, headers\nconsole.log(\"fetch API review complete\");",
+  "solution": "// fetch: GET, POST, PUT, DELETE, headers\nconsole.log(\"fetch API review complete\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "fetch API review complete"
+    }
+  ],
+  "hints": [
+    "Review all fetch concepts",
+    "Practice with APIs"
+  ]
+}

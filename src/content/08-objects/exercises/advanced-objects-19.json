@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-19",
+  "title": "Prevent Extensions",
+  "starterCode": "const obj = Object.preventExtensions({a: 1});\nobj.b = 2;\nconsole.log(obj.b);\nconsole.log(Object.isExtensible(obj));",
+  "solution": "const obj = Object.preventExtensions({a: 1});\nobj.b = 2;\nconsole.log(obj.b);\nconsole.log(Object.isExtensible(obj));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "undefined\nfalse"
+    }
+  ],
+  "hints": [
+    "Cannot add properties",
+    "isExtensible returns false"
+  ]
+}

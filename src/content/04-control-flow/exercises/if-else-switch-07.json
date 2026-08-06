@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-07",
+  "title": "Switch with default",
+  "starterCode": "const day = 'Wednesday';\nswitch (day) {\n  case 'Monday':\n    console.log('Start');\n    break;\n  case 'Friday':\n    console.log('End');\n    break;\n  default:\n    console.log('Other');\n}",
+  "solution": "const day = 'Wednesday';\nswitch (day) {\n  case 'Monday':\n    console.log('Start');\n    break;\n  case 'Friday':\n    console.log('End');\n    break;\n  default:\n    console.log('Other');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Other"
+    }
+  ],
+  "hints": [
+    "Wednesday doesn't match any case",
+    "default executes"
+  ]
+}

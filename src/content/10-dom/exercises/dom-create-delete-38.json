@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-38",
+  "title": "prepend to Empty",
+  "starterCode": "const el = document.createElement('div');\nel.prepend('First');\nconsole.log(el.textContent);",
+  "solution": "const el = document.createElement('div');\nel.prepend('First');\nconsole.log(el.textContent);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "First"
+    }
+  ],
+  "hints": [
+    "prepend works on empty elements",
+    "Adds as first child"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-while-13",
+  "title": "For Loop With String",
+  "starterCode": "const str = \"Hello\";\nfor (let i = 0; i < str.length; i++) {\n  console.log(str[i]);\n}",
+  "solution": "const str = \"Hello\";\nfor (let i = 0; i < str.length; i++) {\n  console.log(str[i]);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "H\ne\nl\nl\no"
+    }
+  ],
+  "hints": [
+    "Access string characters with []",
+    "Use .length for loop condition"
+  ]
+}

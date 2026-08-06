@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-24",
+  "title": "append Multiple",
+  "starterCode": "const el = document.createElement('div');\nel.append('A', 'B', 'C');\nconsole.log(el.textContent);",
+  "solution": "const el = document.createElement('div');\nel.append('A', 'B', 'C');\nconsole.log(el.textContent);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "ABC"
+    }
+  ],
+  "hints": [
+    "append takes multiple arguments",
+    "All are added in order"
+  ]
+}

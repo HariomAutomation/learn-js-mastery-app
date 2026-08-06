@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-50",
+  "title": "Event Practice Final",
+  "starterCode": "// All UI patterns mastered\nconsole.log(\"event practice final\");",
+  "solution": "// All UI patterns mastered\nconsole.log(\"event practice final\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "event practice final"
+    }
+  ],
+  "hints": [
+    "Review all patterns",
+    "Build complete applications"
+  ]
+}

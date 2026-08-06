@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-30",
+  "title": "Map Size",
+  "starterCode": "const map = new Map([['a', 1], ['b', 2], ['c', 3]]);\nlet count = 0;\nfor (const [k, v] of map) {\n  count++;\n}\nconsole.log(count);",
+  "solution": "const map = new Map([['a', 1], ['b', 2], ['c', 3]]);\nlet count = 0;\nfor (const [k, v] of map) {\n  count++;\n}\nconsole.log(count);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3"
+    }
+  ],
+  "hints": [
+    "Count iterations",
+    "Map.size also works"
+  ]
+}

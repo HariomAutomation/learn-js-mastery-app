@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-34",
+  "title": "HTMLCollection to Array",
+  "starterCode": "const els = document.getElementsByTagName('div');\nconst arr = [...els];\nconsole.log(Array.isArray(arr));",
+  "solution": "const els = document.getElementsByTagName('div');\nconst arr = [...els];\nconsole.log(Array.isArray(arr));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "Spread operator can convert array-like",
+    "Creates a true array"
+  ]
+}

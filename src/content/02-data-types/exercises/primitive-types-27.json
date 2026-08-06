@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-27",
+  "title": "Check type of a boolean with typeof",
+  "starterCode": "const flag = true;\nconsole.log();",
+  "solution": "const flag = true;\nconsole.log(typeof flag);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "boolean"
+    }
+  ],
+  "hints": [
+    "typeof returns the type as a string",
+    "Booleans return 'boolean'"
+  ]
+}

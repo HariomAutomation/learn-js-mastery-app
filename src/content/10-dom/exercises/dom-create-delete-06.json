@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-06",
+  "title": "prepend Method",
+  "starterCode": "const el = document.createElement('div');\nel.append(document.createElement('span'));\nel.prepend('First');\nconsole.log(el.firstChild.textContent);",
+  "solution": "const el = document.createElement('div');\nel.append(document.createElement('span'));\nel.prepend('First');\nconsole.log(el.firstChild.textContent);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "First"
+    }
+  ],
+  "hints": [
+    "prepend adds items at beginning",
+    "firstChild gets the first node"
+  ]
+}

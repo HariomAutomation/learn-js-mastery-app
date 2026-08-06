@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-08",
+  "title": "Object comparison by reference",
+  "starterCode": "const a = { x: 1 };\nconst b = { x: 1 };\nconsole.log();",
+  "solution": "const a = { x: 1 };\nconst b = { x: 1 };\nconsole.log(a === b);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "false"
+    }
+  ],
+  "hints": [
+    "Different objects are never ===",
+    "Even with same content"
+  ]
+}

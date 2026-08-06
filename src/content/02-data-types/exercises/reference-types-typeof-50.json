@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-50",
+  "title": "Reference equality in arrays",
+  "starterCode": "const a = [1, 2];\nconst b = [1, 2];\nconsole.log(a === b);",
+  "solution": "const a = [1, 2];\nconst b = [1, 2];\nconsole.log(a === b);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "false"
+    }
+  ],
+  "hints": [
+    "Different array objects are not ===",
+    "Even with same contents"
+  ]
+}

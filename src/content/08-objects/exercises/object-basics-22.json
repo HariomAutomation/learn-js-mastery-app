@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-22",
+  "title": "Compare Objects",
+  "starterCode": "const obj1 = {a: 1, b: 2};\nconst obj2 = {a: 1, b: 2};\nconsole.log(JSON.stringify(obj1) === JSON.stringify(obj2));",
+  "solution": "const obj1 = {a: 1, b: 2};\nconst obj2 = {a: 1, b: 2};\nconsole.log(JSON.stringify(obj1) === JSON.stringify(obj2));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "JSON stringify for comparison",
+    "Compare strings"
+  ]
+}

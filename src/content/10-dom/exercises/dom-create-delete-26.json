@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-26",
+  "title": "after Multiple",
+  "starterCode": "const container = document.createElement('div');\nconst ref = document.createElement('p');\ncontainer.appendChild(ref);\nref.after('A', 'B');\nconsole.log(container.childNodes.length);",
+  "solution": "const container = document.createElement('div');\nconst ref = document.createElement('p');\ncontainer.appendChild(ref);\nref.after('A', 'B');\nconsole.log(container.childNodes.length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3"
+    }
+  ],
+  "hints": [
+    "after can take multiple arguments",
+    "Adds all after reference"
+  ]
+}

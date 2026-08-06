@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-38",
+  "title": "Optional chaining with array",
+  "starterCode": "const users = [{ name: 'Alice' }];\nconst result = users?.[0]?.name;\nconsole.log(result);",
+  "solution": "const users = [{ name: 'Alice' }];\nconst result = users?.[0]?.name;\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Alice"
+    }
+  ],
+  "hints": [
+    "?.[] for optional property access",
+    "users[0] exists and has name"
+  ]
+}

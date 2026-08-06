@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-closures-iife-31",
+  "title": "IIFE With Params",
+  "starterCode": "const result = (function(a, b) {\n  return a * b;\n})(4, 5);\nconsole.log(result);",
+  "solution": "const result = (function(a, b) {\n  return a * b;\n})(4, 5);\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "20"
+    }
+  ],
+  "hints": [
+    "Pass arguments",
+    "Return value"
+  ]
+}

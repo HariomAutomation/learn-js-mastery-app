@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-48",
+  "title": "For...Of Map Keys",
+  "starterCode": "const map = new Map([['x', 1], ['y', 2], ['z', 3]]);\nfor (const key of map.keys()) {\n  console.log(key);\n}",
+  "solution": "const map = new Map([['x', 1], ['y', 2], ['z', 3]]);\nfor (const key of map.keys()) {\n  console.log(key);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "x\ny\nz"
+    }
+  ],
+  "hints": [
+    "Use keys() method",
+    "Iterates map keys"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-41",
+  "title": "Event Capturing",
+  "starterCode": "// Capture phase goes from document to target\nconsole.log(\"capture phase first\");",
+  "solution": "// Capture phase goes from document to target\nconsole.log(\"capture phase first\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "capture phase first"
+    }
+  ],
+  "hints": [
+    "Capture happens before bubbling",
+    "Use capture: true option"
+  ]
+}

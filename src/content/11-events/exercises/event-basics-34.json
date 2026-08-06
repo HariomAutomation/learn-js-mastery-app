@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-34",
+  "title": "Event Listener Options",
+  "starterCode": "// Options: { capture, once, passive, signal }\nconsole.log(\"options object\");",
+  "solution": "// Options: { capture, once, passive, signal }\nconsole.log(\"options object\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "options object"
+    }
+  ],
+  "hints": [
+    "Third argument can be options object",
+    "Can also be boolean for capture"
+  ]
+}

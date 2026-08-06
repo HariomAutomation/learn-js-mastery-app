@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-early-return-46",
+  "title": "Guard benefit - no deep nesting",
+  "starterCode": "function calculate(a, b, op) {\n  if (typeof a !== 'number') return 'invalid a';\n  if (typeof b !== 'number') return 'invalid b';\n  if (op === '+') return a + b;\n  if (op === '-') return a - b;\n  if (op === '*') return a * b;\n  return 'unknown operator';\n}\nconsole.log(calculate(10, 5, '*'));",
+  "solution": "function calculate(a, b, op) {\n  if (typeof a !== 'number') return 'invalid a';\n  if (typeof b !== 'number') return 'invalid b';\n  if (op === '+') return a + b;\n  if (op === '-') return a - b;\n  if (op === '*') return a * b;\n  return 'unknown operator';\n}\nconsole.log(calculate(10, 5, '*'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "50"
+    }
+  ],
+  "hints": [
+    "Both are numbers",
+    "op is '*', returns product"
+  ]
+}

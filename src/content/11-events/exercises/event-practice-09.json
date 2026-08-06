@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-09",
+  "title": "Context Menu",
+  "starterCode": "// Custom right-click menu\nconsole.log(\"context menu pattern\");",
+  "solution": "// Custom right-click menu\nconsole.log(\"context menu pattern\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "context menu pattern"
+    }
+  ],
+  "hints": [
+    "Use contextmenu event",
+    "preventDefault to hide default menu"
+  ]
+}

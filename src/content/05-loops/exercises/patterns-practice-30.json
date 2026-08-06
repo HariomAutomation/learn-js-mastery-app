@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-patterns-practice-30",
+  "title": "While Countdown",
+  "starterCode": "let count = 10;\nwhile (count >= 0) {\n  console.log(count);\n  count -= 2;\n}",
+  "solution": "let count = 10;\nwhile (count >= 0) {\n  console.log(count);\n  count -= 2;\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10\n8\n6\n4\n2\n0"
+    }
+  ],
+  "hints": [
+    "Start at 10",
+    "Decrement by 2"
+  ]
+}

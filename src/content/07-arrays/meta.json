@@ -1,0 +1,8 @@
+{
+  "id": "07-arrays",
+  "title": "Arrays",
+  "order": 7,
+  "description": "Array methods, map/filter/reduce, destructuring, spread — data manipulation ka superpower.",
+  "prerequisites": ["06-functions"],
+  "lessonCount": 3
+}

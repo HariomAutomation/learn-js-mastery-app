@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-34",
+  "title": "Run Length Decode",
+  "starterCode": "function decode(str) {\n  return str.replace(/(\\w)(\\d+)/g, (_, char, count) => char.repeat(Number(count)));\n}\nconsole.log(decode('a3b2c1'));",
+  "solution": "function decode(str) {\n  return str.replace(/(\\w)(\\d+)/g, (_, char, count) => char.repeat(Number(count)));\n}\nconsole.log(decode('a3b2c1'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "aaabbc"
+    }
+  ],
+  "hints": [
+    "Match char + digits",
+    "Repeat char by count"
+  ]
+}

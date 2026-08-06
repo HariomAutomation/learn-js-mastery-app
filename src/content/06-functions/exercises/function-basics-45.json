@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-function-basics-45",
+  "title": "Conditional Execution",
+  "starterCode": "function when(predicate, fn) {\n  return (value) => predicate(value) ? fn(value) : value;\n}\nconst isEven = x => x % 2 === 0;\nconst double = x => x * 2;\nconst process = when(isEven, double);\nconsole.log(process(4));\nconsole.log(process(5));",
+  "solution": "function when(predicate, fn) {\n  return (value) => predicate(value) ? fn(value) : value;\n}\nconst isEven = x => x % 2 === 0;\nconst double = x => x * 2;\nconst process = when(isEven, double);\nconsole.log(process(4));\nconsole.log(process(5));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "8\n5"
+    }
+  ],
+  "hints": [
+    "Check predicate",
+    "Apply or return original"
+  ]
+}

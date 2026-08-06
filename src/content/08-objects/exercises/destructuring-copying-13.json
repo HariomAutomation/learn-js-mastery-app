@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-13",
+  "title": "Rename Param",
+  "starterCode": "function greet({name: n, age: a}) {\n  console.log(`${n} is ${a}`);\n}\ngreet({name: 'Alice', age: 25});",
+  "solution": "function greet({name: n, age: a}) {\n  console.log(`${n} is ${a}`);\n}\ngreet({name: 'Alice', age: 25});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Alice is 25"
+    }
+  ],
+  "hints": [
+    "Rename in destructuring",
+    "Use new names"
+  ]
+}

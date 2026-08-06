@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-46",
+  "title": "Exponentiation with string",
+  "starterCode": "console.log(\"2\" ** 3);",
+  "solution": "console.log(\"2\" ** 3);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "8"
+    }
+  ],
+  "hints": [
+    "** does math",
+    "2^3 = 8"
+  ]
+}

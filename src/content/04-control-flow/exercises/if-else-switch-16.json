@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-16",
+  "title": "Switch with string comparison",
+  "starterCode": "const color = 'red';\nswitch (color) {\n  case 'red':\n    console.log('warm');\n    break;\n  case 'blue':\n    console.log('cool');\n    break;\n  default:\n    console.log('neutral');\n}",
+  "solution": "const color = 'red';\nswitch (color) {\n  case 'red':\n    console.log('warm');\n    break;\n  case 'blue':\n    console.log('cool');\n    break;\n  default:\n    console.log('neutral');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "warm"
+    }
+  ],
+  "hints": [
+    "switch does strict comparison",
+    "'red' === 'red' is true"
+  ]
+}

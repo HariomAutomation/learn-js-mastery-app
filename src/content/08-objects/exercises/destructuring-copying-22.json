@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-22",
+  "title": "Skip Elements",
+  "starterCode": "const arr = [1, 2, 3, 4, 5];\nconst [, , third] = arr;\nconsole.log(third);",
+  "solution": "const arr = [1, 2, 3, 4, 5];\nconst [, , third] = arr;\nconsole.log(third);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3"
+    }
+  ],
+  "hints": [
+    "Skip with empty slots",
+    "Get third element"
+  ]
+}

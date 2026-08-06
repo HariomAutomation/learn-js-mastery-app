@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-09",
+  "title": "Promise Race",
+  "starterCode": "Promise.race([\n  new Promise(resolve => setTimeout(() => resolve('slow'), 100)),\n  new Promise(resolve => setTimeout(() => resolve('fast'), 10))\n]).then(winner => console.log(winner));",
+  "solution": "Promise.race([\n  new Promise(resolve => setTimeout(() => resolve('slow'), 100)),\n  new Promise(resolve => setTimeout(() => resolve('fast'), 10))\n]).then(winner => console.log(winner));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "fast"
+    }
+  ],
+  "hints": [
+    "race returns first settled",
+    "Fast promise wins"
+  ]
+}

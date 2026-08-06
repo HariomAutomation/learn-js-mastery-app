@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-18",
+  "title": "Remove Duplicate Chars",
+  "starterCode": "function removeDuplicates(str) {\n  return [...new Set(str)].join('');\n}\nconsole.log(removeDuplicates('hello'));",
+  "solution": "function removeDuplicates(str) {\n  return [...new Set(str)].join('');\n}\nconsole.log(removeDuplicates('hello'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "helo"
+    }
+  ],
+  "hints": [
+    "Set removes duplicates",
+    "Spread and join"
+  ]
+}

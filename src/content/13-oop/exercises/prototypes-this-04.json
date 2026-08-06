@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-04",
+  "title": "This in Object Method",
+  "starterCode": "const obj = {\n  name: 'John',\n  greet() {\n    console.log(this.name);\n  }\n};\nobj.greet();",
+  "solution": "const obj = {\n  name: 'John',\n  greet() {\n    console.log(this.name);\n  }\n};\nobj.greet();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "John"
+    }
+  ],
+  "hints": [
+    "this refers to calling object",
+    "obj is calling greet"
+  ]
+}

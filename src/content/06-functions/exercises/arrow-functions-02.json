@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-02",
+  "title": "Single Parameter",
+  "starterCode": "const double = x => x * 2;\nconsole.log(double(4));",
+  "solution": "const double = x => x * 2;\nconsole.log(double(4));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "8"
+    }
+  ],
+  "hints": [
+    "No parens for single param",
+    "Implicit return"
+  ]
+}

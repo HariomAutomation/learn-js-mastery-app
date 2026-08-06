@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-38",
+  "title": "If with truthy object",
+  "starterCode": "const obj = { name: 'test' };\nif (obj) {\n  console.log('object exists');\n} else {\n  console.log('no object');\n}",
+  "solution": "const obj = { name: 'test' };\nif (obj) {\n  console.log('object exists');\n} else {\n  console.log('no object');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "object exists"
+    }
+  ],
+  "hints": [
+    "Objects are truthy",
+    "if block executes"
+  ]
+}

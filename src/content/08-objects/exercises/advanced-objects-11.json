@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-11",
+  "title": "Object DefineProperty",
+  "starterCode": "const obj = {};\nObject.defineProperty(obj, 'x', {\n  value: 42,\n  writable: true,\n  enumerable: true,\n  configurable: true\n});\nconsole.log(obj.x);",
+  "solution": "const obj = {};\nObject.defineProperty(obj, 'x', {\n  value: 42,\n  writable: true,\n  enumerable: true,\n  configurable: true\n});\nconsole.log(obj.x);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "42"
+    }
+  ],
+  "hints": [
+    "Full descriptor",
+    "All flags true"
+  ]
+}

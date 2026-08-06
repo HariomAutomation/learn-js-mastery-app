@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-33",
+  "title": "Use template literal with variable",
+  "starterCode": "const name = \"Bob\";\nconst age = 30;\nconsole.log();",
+  "solution": "const name = \"Bob\";\nconst age = 30;\nconsole.log(`Name: ${name}, Age: ${age}`);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Name: Bob, Age: 30"
+    }
+  ],
+  "hints": [
+    "Use backticks for template literals",
+    "Wrap variables in ${}"
+  ]
+}

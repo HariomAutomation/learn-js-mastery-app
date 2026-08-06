@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-49",
+  "title": "Delegation Once Option",
+  "starterCode": "const list = document.querySelector('ul');\nlist.addEventListener('click', function(e) {\n  if (e.target.tagName === 'LI') console.log('once');\n}, { once: true });\nconsole.log('once option');",
+  "solution": "const list = document.querySelector('ul');\nlist.addEventListener('click', function(e) {\n  if (e.target.tagName === 'LI') console.log('once');\n}, { once: true });\nconsole.log('once option');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "once option"
+    }
+  ],
+  "hints": [
+    "once: true removes after first fire",
+    "Works with delegation"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-39",
+  "title": "Reduce Product",
+  "starterCode": "const nums = [2, 3, 4];\nconst product = nums.____((acc, x) => acc * x, 1);\nconsole.log(product);",
+  "solution": "const nums = [2, 3, 4];\nconst product = nums.reduce((acc, x) => acc * x, 1);\nconsole.log(product);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "24"
+    }
+  ],
+  "hints": [
+    "Multiply all elements",
+    "Start at 1"
+  ]
+}

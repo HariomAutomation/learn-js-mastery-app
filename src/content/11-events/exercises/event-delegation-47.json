@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-47",
+  "title": "Delegation Selector Complexity",
+  "starterCode": "const table = document.querySelector('table');\ntable.addEventListener('click', function(e) {\n  if (e.target.closest('td.active')) console.log('active cell');\n});",
+  "solution": "const table = document.querySelector('table');\ntable.addEventListener('click', function(e) {\n  if (e.target.closest('td.active')) console.log('active cell');\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "active cell"
+    }
+  ],
+  "hints": [
+    "Complex selectors work with closest",
+    "Combine class and tag"
+  ]
+}

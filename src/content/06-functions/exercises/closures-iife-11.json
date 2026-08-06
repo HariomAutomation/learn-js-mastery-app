@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-closures-iife-11",
+  "title": "Scope Chain",
+  "starterCode": "function outer() {\n  const a = 1;\n  function middle() {\n    const b = 2;\n    function inner() {\n      console.log(a + b);\n    }\n    inner();\n  }\n  middle();\n}\nouter();",
+  "solution": "function outer() {\n  const a = 1;\n  function middle() {\n    const b = 2;\n    function inner() {\n      console.log(a + b);\n    }\n    inner();\n  }\n  middle();\n}\nouter();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3"
+    }
+  ],
+  "hints": [
+    "Inner accesses outer scopes",
+    "Scope chain traversal"
+  ]
+}

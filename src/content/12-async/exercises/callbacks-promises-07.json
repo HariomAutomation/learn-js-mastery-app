@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-07",
+  "title": "Catch Handling",
+  "starterCode": "Promise.reject('fail')\n  .catch(err => 'recovered')\n  .then(val => console.log(val));",
+  "solution": "Promise.reject('fail')\n  .catch(err => 'recovered')\n  .then(val => console.log(val));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "recovered"
+    }
+  ],
+  "hints": [
+    "catch handles rejection",
+    "Returns new resolved promise"
+  ]
+}

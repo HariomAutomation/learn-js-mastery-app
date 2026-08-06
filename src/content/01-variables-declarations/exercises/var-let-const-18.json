@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-var-let-const-18",
+  "title": "const freeze object",
+  "starterCode": "const obj = Object.freeze({ x: 1 })\ntry {\n  obj.x = 2\n} catch(e) {\n  console.log(\"error\")\n}\nconsole.log(obj.x)",
+  "solution": "const obj = Object.freeze({ x: 1 })\ntry {\n  obj.x = 2\n} catch(e) {\n  console.log(\"error\")\n}\nconsole.log(obj.x)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "error\n1"
+    }
+  ],
+  "hints": [
+    "freeze prevents mutation"
+  ]
+}

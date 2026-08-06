@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-32",
+  "title": "innerHTML vs textContent",
+  "starterCode": "// innerHTML parses HTML tags, textContent does not\nconsole.log(\"innerHTML parses, textContent does not\");",
+  "solution": "// innerHTML parses HTML tags, textContent does not\nconsole.log(\"innerHTML parses, textContent does not\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "innerHTML parses, textContent does not"
+    }
+  ],
+  "hints": [
+    "innerHTML creates DOM nodes",
+    "textContent treats everything as text"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-variables-intro-02",
+  "title": "Template literal interpolation",
+  "starterCode": "const name = \"JS\"\nconsole.log(`Language: ${name}`)",
+  "solution": "const name = \"JS\"\nconsole.log(`Language: ${name}`)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Language: JS"
+    }
+  ],
+  "hints": [
+    "Use backticks and ${}"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-50",
+  "title": "Arrow Class Method Warning",
+  "starterCode": "class Foo {\n  constructor() { this.val = 10; }\n  getVal = () => this.val;\n}\nconst foo = new Foo();\nconsole.log(foo.getVal());",
+  "solution": "class Foo {\n  constructor() { this.val = 10; }\n  getVal = () => this.val;\n}\nconst foo = new Foo();\nconsole.log(foo.getVal());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10"
+    }
+  ],
+  "hints": [
+    "Arrow as class field",
+    "Lexical this works here"
+  ]
+}

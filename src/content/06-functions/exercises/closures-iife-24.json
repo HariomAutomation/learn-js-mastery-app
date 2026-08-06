@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-closures-iife-24",
+  "title": "Module Singleton",
+  "starterCode": "const instance = (function() {\n  let created = false;\n  let data = null;\n  return {\n    init: () => {\n      if (!created) {\n        data = [1, 2, 3];\n        created = true;\n      }\n      return data;\n    }\n  };\n})();\nconsole.log(instance.init());\nconsole.log(instance.init());",
+  "solution": "const instance = (function() {\n  let created = false;\n  let data = null;\n  return {\n    init: () => {\n      if (!created) {\n        data = [1, 2, 3];\n        created = true;\n      }\n      return data;\n    }\n  };\n})();\nconsole.log(instance.init());\nconsole.log(instance.init());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 1, 2, 3 ]\n[ 1, 2, 3 ]"
+    }
+  ],
+  "hints": [
+    "Singleton pattern",
+    "Only creates once"
+  ]
+}

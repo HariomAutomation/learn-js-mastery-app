@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-04",
+  "title": "Check typeof an array (tricky!)",
+  "starterCode": "const arr = [1, 2, 3];\nconsole.log();",
+  "solution": "const arr = [1, 2, 3];\nconsole.log(typeof arr);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "object"
+    }
+  ],
+  "hints": [
+    "typeof doesn't distinguish arrays",
+    "Arrays are technically objects"
+  ]
+}

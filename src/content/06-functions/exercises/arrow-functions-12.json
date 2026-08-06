@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-12",
+  "title": "Arrow No Arguments",
+  "starterCode": "const getArgs = () => arguments;\ntry {\n  getArgs(1, 2, 3);\n} catch (e) {\n  console.log('No arguments object');\n}",
+  "solution": "const getArgs = () => arguments;\ntry {\n  getArgs(1, 2, 3);\n} catch (e) {\n  console.log('No arguments object');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "No arguments object"
+    }
+  ],
+  "hints": [
+    "Arrow has no arguments",
+    "Use rest params instead"
+  ]
+}

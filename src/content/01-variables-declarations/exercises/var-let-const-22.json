@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-var-let-const-22",
+  "title": "var hoisting demo",
+  "starterCode": "console.log(a)\nvar a = 10\nconsole.log(a)",
+  "solution": "console.log(a)\nvar a = 10\nconsole.log(a)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "undefined\n10"
+    }
+  ],
+  "hints": [
+    "var is hoisted, let is not"
+  ]
+}

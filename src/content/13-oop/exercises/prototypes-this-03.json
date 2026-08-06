@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-03",
+  "title": "This in Function",
+  "starterCode": "function greet() {\n  console.log(this);\n}\ngreet();",
+  "solution": "function greet() {\n  console.log(this);\n}\ngreet();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[object Object]"
+    }
+  ],
+  "hints": [
+    "this in global function is globalThis",
+    "In strict mode, this is undefined"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-while-08",
+  "title": "Counter Pattern",
+  "starterCode": "let count = 0;\nfor (let i = 1; i <= 5; i++) {\n  count += i;\n}\nconsole.log(count);",
+  "solution": "let count = 0;\nfor (let i = 1; i <= 5; i++) {\n  count += i;\n}\nconsole.log(count);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "15"
+    }
+  ],
+  "hints": [
+    "Initialize count to 0",
+    "Add each i to count"
+  ]
+}

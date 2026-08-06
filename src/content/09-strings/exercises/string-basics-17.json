@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-17",
+  "title": "Raw String",
+  "starterCode": "console.log(String.raw`Hello\\nWorld`);",
+  "solution": "console.log(String.raw`Hello\\nWorld`);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hello\\nWorld"
+    }
+  ],
+  "hints": [
+    "raw preserves escapes",
+    "No processing"
+  ]
+}

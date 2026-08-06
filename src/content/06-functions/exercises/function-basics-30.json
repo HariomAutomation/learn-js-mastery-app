@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-function-basics-30",
+  "title": "Higher Order Filter",
+  "starterCode": "function filterBy(arr, predicate) {\n  const result = [];\n  for (const item of arr) {\n    if (predicate(item)) {\n      result.push(item);\n    }\n  }\n  return result;\n}\nconst nums = [1, 2, 3, 4, 5, 6];\nconsole.log(filterBy(nums, x => x % 2 === 0));",
+  "solution": "function filterBy(arr, predicate) {\n  const result = [];\n  for (const item of arr) {\n    if (predicate(item)) {\n      result.push(item);\n    }\n  }\n  return result;\n}\nconst nums = [1, 2, 3, 4, 5, 6];\nconsole.log(filterBy(nums, x => x % 2 === 0));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 2, 4, 6 ]"
+    }
+  ],
+  "hints": [
+    "Return function parameter",
+    "Check predicate"
+  ]
+}

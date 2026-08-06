@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-arithmetic-comparison-44",
+  "title": "String number conversion",
+  "starterCode": "const result = Number(\"42\");\nconsole.log(result);",
+  "solution": "const result = Number(\"42\");\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "42"
+    }
+  ],
+  "hints": [
+    "Number() converts string to number",
+    "Result is a number type"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-06",
+  "title": "Super Call",
+  "starterCode": "class Parent {\n  greet() { return 'hello'; }\n}\nclass Child extends Parent {\n  greet() {\n    return super.greet() + ' world';\n  }\n}\nconsole.log(new Child().greet());",
+  "solution": "class Parent {\n  greet() { return 'hello'; }\n}\nclass Child extends Parent {\n  greet() {\n    return super.greet() + ' world';\n  }\n}\nconsole.log(new Child().greet());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hello world"
+    }
+  ],
+  "hints": [
+    "super.method() calls parent method",
+    "Can modify return value"
+  ]
+}

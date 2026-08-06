@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-methods-07",
+  "title": "Splice Replace",
+  "starterCode": "const arr = [1, 2, 3, 4];\narr.____(1, 2, 20, 30);\nconsole.log(arr);",
+  "solution": "const arr = [1, 2, 3, 4];\narr.splice(1, 2, 20, 30);\nconsole.log(arr);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 1, 20, 30, 4 ]"
+    }
+  ],
+  "hints": [
+    "splice replaces elements",
+    "Remove 2, insert 2"
+  ]
+}

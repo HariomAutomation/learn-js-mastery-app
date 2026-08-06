@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-48",
+  "title": "Visitor Pattern",
+  "starterCode": "class Shape { accept(v) { return v.visit(this); } }\nclass Rect extends Shape {\n  constructor(w, h) { super(); this.w = w; this.h = h; }\n}\nclass AreaV { visit(r) { return r.w * r.h; } }\nconsole.log(new Rect(3, 4).accept(new AreaV()));",
+  "solution": "class Shape { accept(v) { return v.visit(this); } }\nclass Rect extends Shape {\n  constructor(w, h) { super(); this.w = w; this.h = h; }\n}\nclass AreaV { visit(r) { return r.w * r.h; } }\nconsole.log(new Rect(3, 4).accept(new AreaV()));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "12"
+    }
+  ],
+  "hints": [
+    "Visitor adds operations",
+    "accept calls visitor.visit"
+  ]
+}

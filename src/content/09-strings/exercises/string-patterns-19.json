@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-19",
+  "title": "Is Rotation",
+  "starterCode": "function isRotation(a, b) {\n  return a.length === b.length && (a + a).includes(b);\n}\nconsole.log(isRotation('hello', 'llohe'));\nconsole.log(isRotation('hello', 'helloo'));",
+  "solution": "function isRotation(a, b) {\n  return a.length === b.length && (a + a).includes(b);\n}\nconsole.log(isRotation('hello', 'llohe'));\nconsole.log(isRotation('hello', 'helloo'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true\nfalse"
+    }
+  ],
+  "hints": [
+    "Concat string with itself",
+    "Check inclusion"
+  ]
+}

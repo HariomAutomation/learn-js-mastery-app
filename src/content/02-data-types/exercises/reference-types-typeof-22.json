@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-22",
+  "title": "Nested spread shallow copy",
+  "starterCode": "const a = { nested: { val: 1 } };\nconst b = { ...a };\nconsole.log(a === b);",
+  "solution": "const a = { nested: { val: 1 } };\nconst b = { ...a };\nconsole.log(a === b);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "false"
+    }
+  ],
+  "hints": [
+    "Spread creates a new object",
+    "But nested objects still reference"
+  ]
+}

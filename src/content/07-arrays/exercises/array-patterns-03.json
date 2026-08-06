@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-patterns-03",
+  "title": "Unique Array",
+  "starterCode": "const arr = [1, 2, 2, 3, 3, 3, 4];\nconst unique = [...new Set(arr)];\nconsole.log(unique);",
+  "solution": "const arr = [1, 2, 2, 3, 3, 3, 4];\nconst unique = [...new Set(arr)];\nconsole.log(unique);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 1, 2, 3, 4 ]"
+    }
+  ],
+  "hints": [
+    "Set removes duplicates",
+    "Spread back to array"
+  ]
+}

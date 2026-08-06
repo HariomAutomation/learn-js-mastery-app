@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-while-27",
+  "title": "Sum Of Digits",
+  "starterCode": "let num = 123;\nlet sum = 0;\nwhile (num > 0) {\n  sum += num % 10;\n  num = Math.floor(num / 10);\n}\nconsole.log(sum);",
+  "solution": "let num = 123;\nlet sum = 0;\nwhile (num > 0) {\n  sum += num % 10;\n  num = Math.floor(num / 10);\n}\nconsole.log(sum);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "6"
+    }
+  ],
+  "hints": [
+    "Use % 10 for last digit",
+    "Divide by 10 to remove it"
+  ]
+}

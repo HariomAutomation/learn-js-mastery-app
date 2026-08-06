@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-06",
+  "title": "getElementsByTagName Type",
+  "starterCode": "const els = document.getElementsByTagName('div');\nconsole.log(typeof els);",
+  "solution": "const els = document.getElementsByTagName('div');\nconsole.log(typeof els);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "object"
+    }
+  ],
+  "hints": [
+    "Returns an HTMLCollection",
+    "Not an array but array-like"
+  ]
+}

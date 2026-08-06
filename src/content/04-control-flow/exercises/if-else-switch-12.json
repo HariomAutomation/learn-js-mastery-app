@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-12",
+  "title": "Guard clause pattern",
+  "starterCode": "function greet(name) {\n  if (!name) return;\n  console.log(`Hello, ${name}!`);\n}\ngreet('Alice');",
+  "solution": "function greet(name) {\n  if (!name) return;\n  console.log(`Hello, ${name}!`);\n}\ngreet('Alice');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hello, Alice!"
+    }
+  ],
+  "hints": [
+    "Guard clause exits early if condition met",
+    "!name is false for 'Alice'"
+  ]
+}

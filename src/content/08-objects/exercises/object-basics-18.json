@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-18",
+  "title": "Values Transform",
+  "starterCode": "const obj = {a: 1, b: 2, c: 3};\nconst doubled = Object.fromEntries(Object.entries(obj).map(([k, v]) => [k, v * 2]));\nconsole.log(doubled);",
+  "solution": "const obj = {a: 1, b: 2, c: 3};\nconst doubled = Object.fromEntries(Object.entries(obj).map(([k, v]) => [k, v * 2]));\nconsole.log(doubled);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{ a: 2, b: 4, c: 6 }"
+    }
+  ],
+  "hints": [
+    "entries then map",
+    "fromEntries back to object"
+  ]
+}

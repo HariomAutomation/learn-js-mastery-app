@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-50",
+  "title": "Switch with comma in case",
+  "starterCode": "const day = 'Sat';\nswitch (day) {\n  case 'Sat':\n  case 'Sun':\n    console.log('weekend');\n    break;\n  default:\n    console.log('weekday');\n}",
+  "solution": "const day = 'Sat';\nswitch (day) {\n  case 'Sat':\n  case 'Sun':\n    console.log('weekend');\n    break;\n  default:\n    console.log('weekday');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "weekend"
+    }
+  ],
+  "hints": [
+    "Sat matches first case",
+    "Falls through to weekend"
+  ]
+}

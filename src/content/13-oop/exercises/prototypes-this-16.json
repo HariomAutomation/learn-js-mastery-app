@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-16",
+  "title": "This in Constructor",
+  "starterCode": "function Person(name) {\n  this.name = name;\n}\nconst p = new Person('John');\nconsole.log(p.name);",
+  "solution": "function Person(name) {\n  this.name = name;\n}\nconst p = new Person('John');\nconsole.log(p.name);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "John"
+    }
+  ],
+  "hints": [
+    "new creates empty object",
+    "this refers to new object"
+  ]
+}

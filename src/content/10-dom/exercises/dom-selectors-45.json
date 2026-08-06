@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-45",
+  "title": "closest Self Match",
+  "starterCode": "const el = document.querySelector('.target');\nconst found = el.closest('.target');\nconsole.log(found === el);",
+  "solution": "const el = document.querySelector('.target');\nconst found = el.closest('.target');\nconsole.log(found === el);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "false"
+    }
+  ],
+  "hints": [
+    "closest can match the element itself",
+    "Starts checking from the element"
+  ]
+}

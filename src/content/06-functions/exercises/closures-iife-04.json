@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-closures-iife-04",
+  "title": "IIFE Pattern",
+  "starterCode": "(function() {\n  const secret = 'private';\n  console.log(secret);\n})();",
+  "solution": "(function() {\n  const secret = 'private';\n  console.log(secret);\n})();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "private"
+    }
+  ],
+  "hints": [
+    "Immediately invoked",
+    "Scope is contained"
+  ]
+}

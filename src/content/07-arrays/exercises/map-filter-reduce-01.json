@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-01",
+  "title": "Map Transform",
+  "starterCode": "const nums = [1, 2, 3];\nconst doubled = nums.____(x => x * 2);\nconsole.log(doubled);",
+  "solution": "const nums = [1, 2, 3];\nconst doubled = nums.map(x => x * 2);\nconsole.log(doubled);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 2, 4, 6 ]"
+    }
+  ],
+  "hints": [
+    "map transforms each element",
+    "Return new value"
+  ]
+}

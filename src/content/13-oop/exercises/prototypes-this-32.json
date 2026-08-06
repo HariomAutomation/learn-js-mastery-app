@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-32",
+  "title": "OOP Complete",
+  "starterCode": "// Prototypes, this, call/apply/bind\nconsole.log(\"prototypes and this complete\");",
+  "solution": "// Prototypes, this, call/apply/bind\nconsole.log(\"prototypes and this complete\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "prototypes and this complete"
+    }
+  ],
+  "hints": [
+    "Review all prototype concepts",
+    "Master this binding"
+  ]
+}

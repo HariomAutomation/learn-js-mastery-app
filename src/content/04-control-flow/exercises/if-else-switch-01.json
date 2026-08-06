@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-01",
+  "title": "Basic if statement",
+  "starterCode": "const age = 20;\nif (age >= 18) {\n  console.log('adult');\n}",
+  "solution": "const age = 20;\nif (age >= 18) {\n  console.log('adult');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "adult"
+    }
+  ],
+  "hints": [
+    "if executes block when condition is true",
+    "20 >= 18 is true"
+  ]
+}

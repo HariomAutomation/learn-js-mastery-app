@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-50",
+  "title": "Convert boolean to number",
+  "starterCode": "console.log(Number(true));",
+  "solution": "console.log(Number(true));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1"
+    }
+  ],
+  "hints": [
+    "true becomes 1",
+    "false becomes 0"
+  ]
+}

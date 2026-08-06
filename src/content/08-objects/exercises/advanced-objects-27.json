@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-27",
+  "title": "Immutable Pattern",
+  "starterCode": "const state = Object.freeze({\n  user: Object.freeze({name: 'Alice', age: 25}),\n  items: Object.freeze([1, 2, 3])\n});\nstate.user.age = 30;\nconsole.log(state.user.age);",
+  "solution": "const state = Object.freeze({\n  user: Object.freeze({name: 'Alice', age: 25}),\n  items: Object.freeze([1, 2, 3])\n});\nstate.user.age = 30;\nconsole.log(state.user.age);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "25"
+    }
+  ],
+  "hints": [
+    "Deep freeze pattern",
+    "Nested freeze"
+  ]
+}

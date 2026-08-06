@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-while-49",
+  "title": "While String Reverse",
+  "starterCode": "const str = \"world\";\nlet rev = \"\";\nlet i = str.length - 1;\nwhile (i >= 0) {\n  rev += str[i];\n  i--;\n}\nconsole.log(rev);",
+  "solution": "const str = \"world\";\nlet rev = \"\";\nlet i = str.length - 1;\nwhile (i >= 0) {\n  rev += str[i];\n  i--;\n}\nconsole.log(rev);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "dlrow"
+    }
+  ],
+  "hints": [
+    "Start at last index",
+    "Decrement to 0"
+  ]
+}

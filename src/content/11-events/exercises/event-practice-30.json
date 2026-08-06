@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-30",
+  "title": "Throttle Implementation",
+  "starterCode": "function throttle(fn, limit) {\n  let inThrottle;\n  return function(...args) {\n    if (!inThrottle) {\n      fn(...args);\n      inThrottle = true;\n      setTimeout(() => inThrottle = false, limit);\n    }\n  };\n}\nconst log = throttle((x) => console.log(x), 100);\nlog('test');",
+  "solution": "function throttle(fn, limit) {\n  let inThrottle;\n  return function(...args) {\n    if (!inThrottle) {\n      fn(...args);\n      inThrottle = true;\n      setTimeout(() => inThrottle = false, limit);\n    }\n  };\n}\nconst log = throttle((x) => console.log(x), 100);\nlog('test');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "test"
+    }
+  ],
+  "hints": [
+    "Use flag to limit execution",
+    "Only run once per limit period"
+  ]
+}

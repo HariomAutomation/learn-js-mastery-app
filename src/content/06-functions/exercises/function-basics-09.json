@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-function-basics-09",
+  "title": "Function Hoisting",
+  "starterCode": "console.log(add(2, 3));\nfunction add(a, b) {\n  return a + b;\n}",
+  "solution": "console.log(add(2, 3));\nfunction add(a, b) {\n  return a + b;\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "5"
+    }
+  ],
+  "hints": [
+    "Declarations are hoisted",
+    "Can call before definition"
+  ]
+}

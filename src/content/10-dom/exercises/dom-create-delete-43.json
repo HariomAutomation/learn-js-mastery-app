@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-43",
+  "title": "Fragment Node Type",
+  "starterCode": "const fragment = document.createDocumentFragment();\nconsole.log(fragment.nodeType + ' ' + fragment.nodeName);",
+  "solution": "const fragment = document.createDocumentFragment();\nconsole.log(fragment.nodeType + ' ' + fragment.nodeName);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "11 #document-fragment"
+    }
+  ],
+  "hints": [
+    "nodeType 11 for DocumentFragment",
+    "nodeName is #document-fragment"
+  ]
+}

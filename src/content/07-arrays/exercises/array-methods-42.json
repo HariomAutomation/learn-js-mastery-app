@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-methods-42",
+  "title": "Mutable vs Immutable",
+  "starterCode": "const arr1 = [1, 2, 3];\nconst arr2 = arr1;\narr2.____(4);\nconsole.log(arr1 === arr2);",
+  "solution": "const arr1 = [1, 2, 3];\nconst arr2 = arr1;\narr2.push(4);\nconsole.log(arr1 === arr2);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "Assignment copies reference",
+    "Same array in memory"
+  ]
+}

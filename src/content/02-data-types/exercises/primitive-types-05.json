@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-05",
+  "title": "Store your age as a string",
+  "starterCode": "const age = ;\nconsole.log(age);",
+  "solution": "const age = \"25\";\nconsole.log(age);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "25"
+    }
+  ],
+  "hints": [
+    "Wrap the number in quotes to make it a string",
+    "Use typeof to verify if unsure"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-24",
+  "title": "Implicit string conversion in comparison",
+  "starterCode": "console.log(\"2\" > \"12\");",
+  "solution": "console.log(\"2\" > \"12\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "String comparison is lexicographic",
+    "'2' comes after '1' alphabetically"
+  ]
+}

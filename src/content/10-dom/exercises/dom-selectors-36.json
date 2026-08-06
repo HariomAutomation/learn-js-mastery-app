@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-36",
+  "title": "matches Returns Boolean",
+  "starterCode": "const el = document.querySelector('div');\nconst result = el.matches('div');\nconsole.log(typeof result);",
+  "solution": "const el = document.querySelector('div');\nconst result = el.matches('div');\nconsole.log(typeof result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "boolean"
+    }
+  ],
+  "hints": [
+    "matches always returns true or false",
+    "Use typeof to check"
+  ]
+}

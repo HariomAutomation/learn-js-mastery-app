@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-46",
+  "title": "Use unary plus for conversion",
+  "starterCode": "const str = \"42\";\nconst num = ;\nconsole.log(typeof num);",
+  "solution": "const str = \"42\";\nconst num = +str;\nconsole.log(typeof num);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "number"
+    }
+  ],
+  "hints": [
+    "+ before a value converts to number",
+    "It's the fastest conversion method"
+  ]
+}

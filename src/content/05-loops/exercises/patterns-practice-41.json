@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-patterns-practice-41",
+  "title": "GCD Loop",
+  "starterCode": "function gcd(a, b) {\n  while (b !== 0) {\n    let temp = b;\n    b = a % b;\n    a = temp;\n  }\n  return a;\n}\nconsole.log(gcd(48, 18));",
+  "solution": "function gcd(a, b) {\n  while (b !== 0) {\n    let temp = b;\n    b = a % b;\n    a = temp;\n  }\n  return a;\n}\nconsole.log(gcd(48, 18));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "6"
+    }
+  ],
+  "hints": [
+    "Euclidean algorithm",
+    "Modulo operation"
+  ]
+}

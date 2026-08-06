@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-39",
+  "title": "Null is object (typeof bug)",
+  "starterCode": "console.log();",
+  "solution": "console.log(typeof null);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "object"
+    }
+  ],
+  "hints": [
+    "This is a well-known bug",
+    "It's been there since JS was created"
+  ]
+}

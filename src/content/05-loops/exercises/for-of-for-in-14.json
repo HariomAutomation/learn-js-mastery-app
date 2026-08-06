@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-14",
+  "title": "For...Of Characters",
+  "starterCode": "const str = \"cat\";\nlet result = \"\";\nfor (const ch of str) {\n  result += ch.toUpperCase();\n}\nconsole.log(result);",
+  "solution": "const str = \"cat\";\nlet result = \"\";\nfor (const ch of str) {\n  result += ch.toUpperCase();\n}\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "CAT"
+    }
+  ],
+  "hints": [
+    "Iterate characters",
+    "Use toUpperCase()"
+  ]
+}

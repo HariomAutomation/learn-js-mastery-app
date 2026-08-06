@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-48",
+  "title": "Nested Access",
+  "starterCode": "const obj = {a: {b: {c: 42}}};\nconsole.log(obj.a.b.c);",
+  "solution": "const obj = {a: {b: {c: 42}}};\nconsole.log(obj.a.b.c);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "42"
+    }
+  ],
+  "hints": [
+    "Dot notation chain",
+    "Access nested value"
+  ]
+}

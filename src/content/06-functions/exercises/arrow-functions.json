@@ -1,0 +1,12 @@
+{
+  "id": "06-functions-arrow-functions",
+  "title": "Arrow functions se calculation",
+  "starterCode": "// 1. Arrow function — double(x) jo x*2 return kare\n// 2. Arrow function — isEven(n) jo true/false return kare\n// 3. Single line arrow function — square(x)\n\nconst double = (x) => {\n  // yahan likho\n}\n\nconst isEven = (n) => {\n  // yahan likho\n}\n\nconst square = (x) => x * x\n\nconsole.log(double(5))\nconsole.log(isEven(4))\nconsole.log(square(6))\n",
+  "solution": "const double = (x) => x * 2\nconst isEven = (n) => n % 2 === 0\nconst square = (x) => x * x\n\nconsole.log(double(5))\nconsole.log(isEven(4))\nconsole.log(square(6))",
+  "tests": [{ "input": [], "expected": "10\ntrue\n36" }],
+  "hints": [
+    "Arrow: (params) => expression ya (params) => { return expression }",
+    "Single expression mein return keyword zaroori nahi",
+    "n % 2 === 0 se check hota hai even"
+  ]
+}

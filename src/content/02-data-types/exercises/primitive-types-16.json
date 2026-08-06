@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-16",
+  "title": "Store NaN",
+  "starterCode": "const notANumber = ;\nconsole.log(notANumber);",
+  "solution": "const notANumber = NaN;\nconsole.log(notANumber);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "NaN"
+    }
+  ],
+  "hints": [
+    "NaN stands for Not a Number",
+    "It's a global property"
+  ]
+}

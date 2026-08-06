@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-49",
+  "title": "For...Of Array Spread",
+  "starterCode": "const arr = [1, 2, 3];\nconst copy = [...arr];\nfor (const val of copy) {\n  console.log(val);\n}",
+  "solution": "const arr = [1, 2, 3];\nconst copy = [...arr];\nfor (const val of copy) {\n  console.log(val);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1\n2\n3"
+    }
+  ],
+  "hints": [
+    "Spread creates copy",
+    "Iterate copy"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-patterns-practice-27",
+  "title": "Fibonacci Iterative",
+  "starterCode": "function fib(n) {\n  let a = 0, b = 1;\n  for (let i = 0; i < n; i++) {\n    [a, b] = [b, a + b];\n  }\n  return a;\n}\nconsole.log(fib(7));",
+  "solution": "function fib(n) {\n  let a = 0, b = 1;\n  for (let i = 0; i < n; i++) {\n    [a, b] = [b, a + b];\n  }\n  return a;\n}\nconsole.log(fib(7));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "13"
+    }
+  ],
+  "hints": [
+    "Swap values",
+    "Return a"
+  ]
+}

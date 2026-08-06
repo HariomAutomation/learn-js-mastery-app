@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-higher-order-functions-33",
+  "title": "Compose Functions",
+  "starterCode": "const compose = (f, g) => (x) => f(g(x));\nconst add1 = x => x + 1;\nconst double = x => x * 2;\nconst add1ThenDouble = compose(double, add1);\nconsole.log(add1ThenDouble(3));",
+  "solution": "const compose = (f, g) => (x) => f(g(x));\nconst add1 = x => x + 1;\nconst double = x => x * 2;\nconst add1ThenDouble = compose(double, add1);\nconsole.log(add1ThenDouble(3));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "8"
+    }
+  ],
+  "hints": [
+    "g runs first",
+    "f runs on result"
+  ]
+}

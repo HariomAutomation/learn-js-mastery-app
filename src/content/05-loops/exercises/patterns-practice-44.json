@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-patterns-practice-44",
+  "title": "Power Calculation",
+  "starterCode": "function power(base, exp) {\n  let result = 1;\n  for (let i = 0; i < exp; i++) {\n    result *= base;\n  }\n  return result;\n}\nconsole.log(power(2, 10));",
+  "solution": "function power(base, exp) {\n  let result = 1;\n  for (let i = 0; i < exp; i++) {\n    result *= base;\n  }\n  return result;\n}\nconsole.log(power(2, 10));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1024"
+    }
+  ],
+  "hints": [
+    "Multiply base exp times",
+    "Start with 1"
+  ]
+}

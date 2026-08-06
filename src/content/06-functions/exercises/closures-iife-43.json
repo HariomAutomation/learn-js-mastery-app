@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-closures-iife-43",
+  "title": "Throttle Function",
+  "starterCode": "function throttle(fn, limit) {\n  let lastCall = 0;\n  return function(...args) {\n    const now = Date.now();\n    if (now - lastCall >= limit) {\n      lastCall = now;\n      fn(...args);\n    }\n  };\n}",
+  "solution": "function throttle(fn, limit) {\n  let lastCall = 0;\n  return function(...args) {\n    const now = Date.now();\n    if (now - lastCall >= limit) {\n      lastCall = now;\n      fn(...args);\n    }\n  };\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": ""
+    }
+  ],
+  "hints": [
+    "Limit execution rate",
+    "Check time between calls"
+  ]
+}

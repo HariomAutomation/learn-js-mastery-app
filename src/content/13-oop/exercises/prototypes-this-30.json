@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-30",
+  "title": "Prototype Practice",
+  "starterCode": "function Car(make) { this.make = make; }\nCar.prototype.toString = function() {\n  return 'Car: ' + this.make;\n};\nconsole.log(new Car('Toyota').toString());",
+  "solution": "function Car(make) { this.make = make; }\nCar.prototype.toString = function() {\n  return 'Car: ' + this.make;\n};\nconsole.log(new Car('Toyota').toString());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Car: Toyota"
+    }
+  ],
+  "hints": [
+    "Add methods to prototype",
+    "Shared across instances"
+  ]
+}

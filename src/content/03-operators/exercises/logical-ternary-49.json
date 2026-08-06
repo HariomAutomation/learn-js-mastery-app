@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-49",
+  "title": "Nullish vs OR with false",
+  "starterCode": "const result = false ?? 'default';\nconsole.log(result);",
+  "solution": "const result = false ?? 'default';\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "false"
+    }
+  ],
+  "hints": [
+    "?? only triggers on null/undefined",
+    "false is not null or undefined"
+  ]
+}

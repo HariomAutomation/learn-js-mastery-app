@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-50",
+  "title": "Optional chaining with method on null",
+  "starterCode": "const obj = null;\nconst result = obj?.toString();\nconsole.log(result);",
+  "solution": "const obj = null;\nconst result = obj?.toString();\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "undefined"
+    }
+  ],
+  "hints": [
+    "?. returns undefined if object is null",
+    "No error is thrown"
+  ]
+}

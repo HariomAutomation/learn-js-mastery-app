@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-30",
+  "title": "Delete removes property",
+  "starterCode": "const obj = { a: 1, b: 2 };\n;\nconsole.log(obj.a);",
+  "solution": "const obj = { a: 1, b: 2 };\ndelete obj.b;\nconsole.log(obj.a);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1"
+    }
+  ],
+  "hints": [
+    "delete removes a property",
+    "The property no longer exists"
+  ]
+}

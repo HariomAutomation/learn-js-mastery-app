@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-early-return-42",
+  "title": "Early return in filter callback",
+  "starterCode": "const numbers = [1, 2, 3, 4, 5, 6];\nconst evens = numbers.filter(n => {\n  if (n % 2 !== 0) return false;\n  return true;\n});\nconsole.log(evens);",
+  "solution": "const numbers = [1, 2, 3, 4, 5, 6];\nconst evens = numbers.filter(n => {\n  if (n % 2 !== 0) return false;\n  return true;\n});\nconsole.log(evens);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2,4,6"
+    }
+  ],
+  "hints": [
+    "filter keeps elements where callback returns true",
+    "Even numbers pass the check"
+  ]
+}

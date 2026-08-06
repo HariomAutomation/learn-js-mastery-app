@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-35",
+  "title": "If/else if with string comparison",
+  "starterCode": "const role = 'admin';\nif (role === 'admin') {\n  console.log('full access');\n} else if (role === 'user') {\n  console.log('limited access');\n} else {\n  console.log('no access');\n}",
+  "solution": "const role = 'admin';\nif (role === 'admin') {\n  console.log('full access');\n} else if (role === 'user') {\n  console.log('limited access');\n} else {\n  console.log('no access');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "full access"
+    }
+  ],
+  "hints": [
+    "role === 'admin' is true",
+    "First condition matches"
+  ]
+}

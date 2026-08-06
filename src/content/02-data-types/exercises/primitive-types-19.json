@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-19",
+  "title": "Create a number with underscore separators",
+  "starterCode": "const million = ;\nconsole.log(million);",
+  "solution": "const million = 1_000_000;\nconsole.log(million);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1000000"
+    }
+  ],
+  "hints": [
+    "Underscores improve readability",
+    "They don't affect the actual value"
+  ]
+}

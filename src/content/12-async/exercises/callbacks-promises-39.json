@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-39",
+  "title": "Promise Resolve String",
+  "starterCode": "Promise.resolve('hello')\n  .then(msg => console.log(msg));",
+  "solution": "Promise.resolve('hello')\n  .then(msg => console.log(msg));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hello"
+    }
+  ],
+  "hints": [
+    "Promise.resolve with string value",
+    "then receives the string"
+  ]
+}

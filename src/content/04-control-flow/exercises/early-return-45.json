@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-early-return-45",
+  "title": "Early return with try/catch",
+  "starterCode": "function safeParse(str) {\n  if (!str) return null;\n  try {\n    return JSON.parse(str);\n  } catch {\n    return null;\n  }\n}\nconsole.log(safeParse('{\"key\": \"value\"}'));",
+  "solution": "function safeParse(str) {\n  if (!str) return null;\n  try {\n    return JSON.parse(str);\n  } catch {\n    return null;\n  }\n}\nconsole.log(safeParse('{\"key\": \"value\"}'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[object Object]"
+    }
+  ],
+  "hints": [
+    "str is truthy",
+    "JSON.parse succeeds"
+  ]
+}

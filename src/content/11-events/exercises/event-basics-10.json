@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-10",
+  "title": "Scroll Event",
+  "starterCode": "window.addEventListener('scroll', function(e) {\n  console.log('scrolled');\n});",
+  "solution": "window.addEventListener('scroll', function(e) {\n  console.log('scrolled');\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "scrolled"
+    }
+  ],
+  "hints": [
+    "Fires on window scroll",
+    "Can fire many times per second"
+  ]
+}

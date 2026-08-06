@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-function-basics-20",
+  "title": "Return Object",
+  "starterCode": "function createUser(name, age) {\n  return { name, age };\n}\nconst user = createUser('Tom', 25);\nconsole.log(user.name + ' is ' + user.age);",
+  "solution": "function createUser(name, age) {\n  return { name, age };\n}\nconst user = createUser('Tom', 25);\nconsole.log(user.name + ' is ' + user.age);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Tom is 25"
+    }
+  ],
+  "hints": [
+    "Return object literal",
+    "Use shorthand properties"
+  ]
+}

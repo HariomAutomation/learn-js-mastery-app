@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-early-return-06",
+  "title": "Return undefined early",
+  "starterCode": "function findUser(users, id) {\n  if (!users) return undefined;\n  if (!id) return undefined;\n  return users.find(u => u.id === id);\n}\nconst users = [{ id: 1, name: 'Alice' }];\nconsole.log(findUser(users, 1));",
+  "solution": "function findUser(users, id) {\n  if (!users) return undefined;\n  if (!id) return undefined;\n  return users.find(u => u.id === id);\n}\nconst users = [{ id: 1, name: 'Alice' }];\nconsole.log(findUser(users, 1));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[object Object]"
+    }
+  ],
+  "hints": [
+    "Both guards pass",
+    "find returns matching user object"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-patterns-06",
+  "title": "Zip Arrays",
+  "starterCode": "const arr1 = [1, 2, 3];\nconst arr2 = ['a', 'b', 'c'];\nconst result = arr1.map((x, i) => [x, arr2[i]]);\nconsole.log(result);",
+  "solution": "const arr1 = [1, 2, 3];\nconst arr2 = ['a', 'b', 'c'];\nconst result = arr1.map((x, i) => [x, arr2[i]]);\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ [ 1, 'a' ], [ 2, 'b' ], [ 3, 'c' ] ]"
+    }
+  ],
+  "hints": [
+    "Map with index",
+    "Pair elements"
+  ]
+}

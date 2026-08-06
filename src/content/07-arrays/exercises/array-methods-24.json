@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-methods-24",
+  "title": "At Positive",
+  "starterCode": "const arr = ['a', 'b', 'c', 'd'];\nconsole.log(arr.____(2));",
+  "solution": "const arr = ['a', 'b', 'c', 'd'];\nconsole.log(arr.at(2));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "c"
+    }
+  ],
+  "hints": [
+    "at() with positive index",
+    "Same as bracket access"
+  ]
+}

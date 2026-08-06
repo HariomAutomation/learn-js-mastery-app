@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-var-let-const-09",
+  "title": "let redeclaration error",
+  "starterCode": "try {\n  let x = 1\n  let x = 2\n} catch(e) {\n  console.log(\"error\")\n}",
+  "solution": "try {\n  let x = 1\n  let x = 2\n} catch(e) {\n  console.log(\"error\")\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "error"
+    }
+  ],
+  "hints": [
+    "let does not allow redeclaration"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-18",
+  "title": "getPrototypeOf",
+  "starterCode": "const obj = {};\nconst proto = Object.getPrototypeOf(obj);\nconsole.log(proto === Object.prototype);",
+  "solution": "const obj = {};\nconst proto = Object.getPrototypeOf(obj);\nconsole.log(proto === Object.prototype);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "getPrototypeOf returns prototype",
+    "Compare with Object.prototype"
+  ]
+}

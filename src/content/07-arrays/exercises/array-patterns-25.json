@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-patterns-25",
+  "title": "Zip Longest",
+  "starterCode": "function zipLongest(a, b) {\n  const maxLen = Math.max(a.length, b.length);\n  return Array.from({length: maxLen}, (_, i) => [a[i] || null, b[i] || null]);\n}\nconsole.log(zipLongest([1,2], ['a','b','c']));",
+  "solution": "function zipLongest(a, b) {\n  const maxLen = Math.max(a.length, b.length);\n  return Array.from({length: maxLen}, (_, i) => [a[i] || null, b[i] || null]);\n}\nconsole.log(zipLongest([1,2], ['a','b','c']));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ [ 1, 'a' ], [ 2, 'b' ], [ null, 'c' ] ]"
+    }
+  ],
+  "hints": [
+    "Array.from with length",
+    "Pad with null"
+  ]
+}

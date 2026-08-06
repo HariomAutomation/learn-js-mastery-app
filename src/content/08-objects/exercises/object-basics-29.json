@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-29",
+  "title": "Reduce Object",
+  "starterCode": "const obj = {a: 1, b: 2, c: 3};\nconst sum = Object.values(obj).reduce((acc, v) => acc + v, 0);\nconsole.log(sum);",
+  "solution": "const obj = {a: 1, b: 2, c: 3};\nconst sum = Object.values(obj).reduce((acc, v) => acc + v, 0);\nconsole.log(sum);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "6"
+    }
+  ],
+  "hints": [
+    "Object.values then reduce",
+    "Sum all values"
+  ]
+}

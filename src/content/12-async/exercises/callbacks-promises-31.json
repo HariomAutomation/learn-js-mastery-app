@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-31",
+  "title": "Promise.all Parallel",
+  "starterCode": "const tasks = [\n  Promise.resolve('a'),\n  Promise.resolve('b'),\n  Promise.resolve('c')\n];\nPromise.all(tasks).then(r => console.log(r.join('')));",
+  "solution": "const tasks = [\n  Promise.resolve('a'),\n  Promise.resolve('b'),\n  Promise.resolve('c')\n];\nPromise.all(tasks).then(r => console.log(r.join('')));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "abc"
+    }
+  ],
+  "hints": [
+    "All run in parallel",
+    "Results joined as string"
+  ]
+}

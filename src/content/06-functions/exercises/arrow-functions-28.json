@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-28",
+  "title": "Arrow Chaining",
+  "starterCode": "const result = [1, 2, 3, 4, 5]\n  .filter(x => x > 2)\n  .map(x => x * 10);\nconsole.log(result);",
+  "solution": "const result = [1, 2, 3, 4, 5]\n  .filter(x => x > 2)\n  .map(x => x * 10);\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 30, 40, 50 ]"
+    }
+  ],
+  "hints": [
+    "Chain array methods",
+    "Filter then map"
+  ]
+}

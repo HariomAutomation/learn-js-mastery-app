@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-patterns-09",
+  "title": "Compact Array",
+  "starterCode": "const arr = [0, 1, false, 2, '', 3, null, 4];\nconst compact = arr.filter(Boolean);\nconsole.log(compact);",
+  "solution": "const arr = [0, 1, false, 2, '', 3, null, 4];\nconst compact = arr.filter(Boolean);\nconsole.log(compact);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 1, 2, 3, 4 ]"
+    }
+  ],
+  "hints": [
+    "Boolean as callback",
+    "Remove falsy values"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-02",
+  "title": "Create a string using single quotes",
+  "starterCode": "const name = '';\nconsole.log(name);",
+  "solution": "const name = 'Alice';\nconsole.log(name);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Alice"
+    }
+  ],
+  "hints": [
+    "Use single quotes this time",
+    "Type a name inside the quotes"
+  ]
+}

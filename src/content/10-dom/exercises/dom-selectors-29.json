@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-29",
+  "title": "querySelector Class Selector",
+  "starterCode": "const els = document.querySelectorAll('.active');\nconsole.log(els.length);",
+  "solution": "const els = document.querySelectorAll('.active');\nconsole.log(els.length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "0"
+    }
+  ],
+  "hints": [
+    "Use . prefix for class selectors",
+    "Check length of the result"
+  ]
+}

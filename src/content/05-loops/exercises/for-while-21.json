@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-while-21",
+  "title": "Do...While Menu Pattern",
+  "starterCode": "let choice = 0;\ndo {\n  choice++;\n  console.log('Option ' + choice);\n} while (choice < 3);",
+  "solution": "let choice = 0;\ndo {\n  choice++;\n  console.log('Option ' + choice);\n} while (choice < 3);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Option 1\nOption 2\nOption 3"
+    }
+  ],
+  "hints": [
+    "Increment before using",
+    "Body runs at least once"
+  ]
+}

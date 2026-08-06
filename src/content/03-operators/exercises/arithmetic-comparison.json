@@ -1,0 +1,11 @@
+{
+  "id": "03-operators-arithmetic-comparison",
+  "title": "Calculator function banao",
+  "starterCode": "// switch + arithmetic operators ka calculator banao\nfunction calc(a, b, operator) {\n  // +, -, *, /, % support karo\n}\n\nconsole.log(calc(10, 3, \"+\"))  // 13\nconsole.log(calc(10, 3, \"-\"))  // 7\nconsole.log(calc(10, 3, \"*\"))  // 30\nconsole.log(calc(10, 3, \"/\"))  // 3.33...\nconsole.log(calc(10, 3, \"%\"))  // 1\n",
+  "solution": "function calc(a, b, operator) {\n  switch (operator) {\n    case \"+\": return a + b\n    case \"-\": return a - b\n    case \"*\": return a * b\n    case \"/\": return a / b\n    case \"%\": return a % b\n    default: return \"Invalid operator\"\n  }\n}",
+  "tests": [{ "input": [], "expected": "13" }],
+  "hints": [
+    "Switch-case operator match karega",
+    "% modulus — remainder return karta hai"
+  ]
+}

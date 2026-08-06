@@ -1,0 +1,17 @@
+{
+  "id": "04-control-flow-early-return-20",
+  "title": "Null check early return",
+  "starterCode": "function getLength(str) {\n  if (str === null) return 0;\n  if (str === undefined) return 0;\n  return str.length;\n}\nconsole.log(getLength('hello'));",
+  "solution": "function getLength(str) {\n  if (str === null) return 0;\n  if (str === undefined) return 0;\n  return str.length;\n}\nconsole.log(getLength('hello'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "5"
+    }
+  ],
+  "hints": [
+    "str is not null",
+    "str is not undefined",
+    "str.length is 5"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-arithmetic-comparison-12",
+  "title": "Subtraction with string coercion",
+  "starterCode": "const result = \"10\" - 3;\nconsole.log(result);",
+  "solution": "const result = \"10\" - 3;\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "7"
+    }
+  ],
+  "hints": [
+    "- always coerces to numbers",
+    "The result is a number"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-closures-iife-02",
+  "title": "Closure With Variable",
+  "starterCode": "function multiplier(factor) {\n  return function(number) {\n    return number * factor;\n  };\n}\nconst double = multiplier(2);\nconsole.log(double(5));",
+  "solution": "function multiplier(factor) {\n  return function(number) {\n    return number * factor;\n  };\n}\nconst double = multiplier(2);\nconsole.log(double(5));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10"
+    }
+  ],
+  "hints": [
+    "factor is captured",
+    "Return inner function"
+  ]
+}

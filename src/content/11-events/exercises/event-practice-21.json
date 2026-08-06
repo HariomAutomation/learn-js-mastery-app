@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-21",
+  "title": "Pagination",
+  "starterCode": "// Click page numbers to navigate\nconsole.log(\"pagination pattern\");",
+  "solution": "// Click page numbers to navigate\nconsole.log(\"pagination pattern\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "pagination pattern"
+    }
+  ],
+  "hints": [
+    "Track current page",
+    "Update content on page click"
+  ]
+}

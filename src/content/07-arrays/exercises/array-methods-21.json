@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-methods-21",
+  "title": "Sort Strings",
+  "starterCode": "const arr = ['banana', 'apple', 'cherry'];\narr.____();\nconsole.log(arr);",
+  "solution": "const arr = ['banana', 'apple', 'cherry'];\narr.sort();\nconsole.log(arr);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 'apple', 'banana', 'cherry' ]"
+    }
+  ],
+  "hints": [
+    "Default sort is lexicographic",
+    "No compare needed for strings"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-28",
+  "title": "querySelector ID Selector",
+  "starterCode": "const el = document.querySelector('#header');\nconsole.log(el);",
+  "solution": "const el = document.querySelector('#header');\nconsole.log(el);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "null"
+    }
+  ],
+  "hints": [
+    "Use # prefix for ID selectors",
+    "Same as getElementById"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-patterns-practice-22",
+  "title": "Sum Even Digits",
+  "starterCode": "let num = 2468;\nlet sum = 0;\nwhile (num > 0) {\n  let d = num % 10;\n  if (d % 2 === 0) sum += d;\n  num = Math.floor(num / 10);\n}\nconsole.log(sum);",
+  "solution": "let num = 2468;\nlet sum = 0;\nwhile (num > 0) {\n  let d = num % 10;\n  if (d % 2 === 0) sum += d;\n  num = Math.floor(num / 10);\n}\nconsole.log(sum);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "20"
+    }
+  ],
+  "hints": [
+    "Check if digit even",
+    "Sum even digits"
+  ]
+}

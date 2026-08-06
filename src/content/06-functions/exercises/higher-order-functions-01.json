@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-higher-order-functions-01",
+  "title": "Function As Argument",
+  "starterCode": "function doTwice(fn, value) {\n  fn(value);\n  fn(value);\n}\ndoTwice(console.log, 'Hello');",
+  "solution": "function doTwice(fn, value) {\n  fn(value);\n  fn(value);\n}\ndoTwice(console.log, 'Hello');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hello\nHello"
+    }
+  ],
+  "hints": [
+    "Pass function as parameter",
+    "Call it twice"
+  ]
+}

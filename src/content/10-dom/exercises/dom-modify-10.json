@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-10",
+  "title": "dataset Property",
+  "starterCode": "const el = document.querySelector('[data-id]');\nel.dataset.id = '123';\nconsole.log(el.dataset.id);",
+  "solution": "const el = document.querySelector('[data-id]');\nel.dataset.id = '123';\nconsole.log(el.dataset.id);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "123"
+    }
+  ],
+  "hints": [
+    "dataset maps data-* attributes",
+    "Use camelCase for multi-word attrs"
+  ]
+}

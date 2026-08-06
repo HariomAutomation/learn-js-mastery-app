@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-methods-28",
+  "title": "PadStart",
+  "starterCode": "console.log('42'.padStart(5, '0'));",
+  "solution": "console.log('42'.padStart(5, '0'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "00042"
+    }
+  ],
+  "hints": [
+    "Pad with zeros",
+    "To length 5"
+  ]
+}

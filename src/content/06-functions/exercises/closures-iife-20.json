@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-closures-iife-20",
+  "title": "Private State",
+  "starterCode": "function createState(initial) {\n  let state = initial;\n  return {\n    get: () => state,\n    set: (val) => { state = val; },\n    reset: () => { state = initial; }\n  };\n}\nconst s = createState(10);\ns.set(20);\nconsole.log(s.get());\ns.reset();\nconsole.log(s.get());",
+  "solution": "function createState(initial) {\n  let state = initial;\n  return {\n    get: () => state,\n    set: (val) => { state = val; },\n    reset: () => { state = initial; }\n  };\n}\nconst s = createState(10);\ns.set(20);\nconsole.log(s.get());\ns.reset();\nconsole.log(s.get());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "20\n10"
+    }
+  ],
+  "hints": [
+    "initial is captured",
+    "reset uses captured value"
+  ]
+}

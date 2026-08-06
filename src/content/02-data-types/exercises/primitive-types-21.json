@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-21",
+  "title": "Create a true boolean",
+  "starterCode": "const isReady = ;\nconsole.log(isReady);",
+  "solution": "const isReady = true;\nconsole.log(isReady);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "Boolean literals are true or false",
+    "No quotes needed"
+  ]
+}

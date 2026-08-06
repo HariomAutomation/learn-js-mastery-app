@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-27",
+  "title": "Longest Substring No Repeat",
+  "starterCode": "function longestSubstring(str) {\n  let max = 0, start = 0;\n  const seen = new Map();\n  for (let i = 0; i < str.length; i++) {\n    if (seen.has(str[i]) && seen.get(str[i]) >= start) {\n      start = seen.get(str[i]) + 1;\n    }\n    seen.set(str[i], i);\n    max = Math.max(max, i - start + 1);\n  }\n  return max;\n}\nconsole.log(longestSubstring('abcabcbb'));",
+  "solution": "function longestSubstring(str) {\n  let max = 0, start = 0;\n  const seen = new Map();\n  for (let i = 0; i < str.length; i++) {\n    if (seen.has(str[i]) && seen.get(str[i]) >= start) {\n      start = seen.get(str[i]) + 1;\n    }\n    seen.set(str[i], i);\n    max = Math.max(max, i - start + 1);\n  }\n  return max;\n}\nconsole.log(longestSubstring('abcabcbb'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3"
+    }
+  ],
+  "hints": [
+    "Sliding window",
+    "Track seen characters"
+  ]
+}

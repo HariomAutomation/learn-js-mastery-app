@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-15",
+  "title": "Run-Length Compression",
+  "starterCode": "function compress(str) {\n  return str.replace(/(.)\\1+/g, (match) => match[0] + match.length);\n}\nconsole.log(compress('aaabbbccc'));",
+  "solution": "function compress(str) {\n  return str.replace(/(.)\\1+/g, (match) => match[0] + match.length);\n}\nconsole.log(compress('aaabbbccc'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "a3b3c3"
+    }
+  ],
+  "hints": [
+    "Count consecutive",
+    "Replace with count"
+  ]
+}

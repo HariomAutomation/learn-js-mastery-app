@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-07",
+  "title": "AbortController",
+  "starterCode": "// AbortController cancels fetch\nconsole.log(\"controller.abort() cancels request\");",
+  "solution": "// AbortController cancels fetch\nconsole.log(\"controller.abort() cancels request\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "controller.abort() cancels request"
+    }
+  ],
+  "hints": [
+    "Create AbortController",
+    "Pass signal to fetch"
+  ]
+}

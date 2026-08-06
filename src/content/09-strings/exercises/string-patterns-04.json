@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-04",
+  "title": "Title Case",
+  "starterCode": "function titleCase(str) {\n  return str.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');\n}\nconsole.log(titleCase('hello world'));",
+  "solution": "function titleCase(str) {\n  return str.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');\n}\nconsole.log(titleCase('hello world'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hello World"
+    }
+  ],
+  "hints": [
+    "Capitalize each word",
+    "Split, map, join"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-35",
+  "title": "Use toPrecision",
+  "starterCode": "const num = 3.14159;\nconsole.log();",
+  "solution": "const num = 3.14159;\nconsole.log(num.toPrecision(3));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3.14"
+    }
+  ],
+  "hints": [
+    "toPrecision takes total significant digits",
+    "It rounds to that many digits"
+  ]
+}

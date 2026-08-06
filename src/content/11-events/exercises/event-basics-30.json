@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-30",
+  "title": "Event Delegation Concept",
+  "starterCode": "// Handle events on parent, check event.target\nconsole.log(\"event delegation pattern\");",
+  "solution": "// Handle events on parent, check event.target\nconsole.log(\"event delegation pattern\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "event delegation pattern"
+    }
+  ],
+  "hints": [
+    "Attach listener to parent element",
+    "Check event.target for actual element"
+  ]
+}

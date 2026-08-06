@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-17",
+  "title": "Prototype Inheritance",
+  "starterCode": "function Animal() { this.type = 'animal'; }\nfunction Dog() { Animal.call(this); }\nDog.prototype = Object.create(Animal.prototype);\nDog.prototype.constructor = Dog;\nconst d = new Dog();\nconsole.log(d.type);",
+  "solution": "function Animal() { this.type = 'animal'; }\nfunction Dog() { Animal.call(this); }\nDog.prototype = Object.create(Animal.prototype);\nDog.prototype.constructor = Dog;\nconst d = new Dog();\nconsole.log(d.type);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "animal"
+    }
+  ],
+  "hints": [
+    "Object.create for prototype chain",
+    "Call parent constructor"
+  ]
+}

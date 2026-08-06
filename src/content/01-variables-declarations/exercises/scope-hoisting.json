@@ -1,0 +1,12 @@
+{
+  "id": "01-variables-declarations-scope-hoisting",
+  "title": "Hoisting ka output predict karo",
+  "starterCode": "// Pehle predict karo, phir run karo:\nconsole.log(x)      // ?\nvar x = 5\n\n// console.log(y)  // ? — uncomment karo\nlet y = 10\n\nconsole.log(z)      // ?\nfunction z() {}\n",
+  "solution": "console.log(x)  // undefined — var hoisted with undefined\nvar x = 5\n// console.log(y) // ReferenceError — let TDZ mein hai\nlet y = 10\nconsole.log(z)  // function hoisted hai, poora define ho jaata hai\nfunction z() {}",
+  "tests": [{ "input": [], "expected": "undefined" }],
+  "hints": [
+    "var hoisted hota hai with undefined value",
+    "let/const hoisted hain lekin TDZ mein — ReferenceError",
+    "Function declaration poora hoisted hota hai"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-while-14",
+  "title": "While Null Check",
+  "starterCode": "let arr = [1, 2, 3, null, 5];\nlet i = 0;\nwhile (arr[i] !== null) {\n  console.log(arr[i]);\n  i++;\n}",
+  "solution": "let arr = [1, 2, 3, null, 5];\nlet i = 0;\nwhile (arr[i] !== null) {\n  console.log(arr[i]);\n  i++;\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1\n2\n3"
+    }
+  ],
+  "hints": [
+    "Check for null to stop",
+    "Increment index each iteration"
+  ]
+}

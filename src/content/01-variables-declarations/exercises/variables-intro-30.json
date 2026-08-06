@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-variables-intro-30",
+  "title": "Object.fromEntries",
+  "starterCode": "const obj = Object.fromEntries([[\"a\",1],[\"b\",2]])\nconsole.log(obj)",
+  "solution": "const obj = Object.fromEntries([[\"a\",1],[\"b\",2]])\nconsole.log(obj)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{\"a\":1,\"b\":2}"
+    }
+  ],
+  "hints": [
+    "fromEntries converts [key,value] pairs"
+  ]
+}

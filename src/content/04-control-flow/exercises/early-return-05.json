@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-early-return-05",
+  "title": "Nested to flat with early return",
+  "starterCode": "function process(value) {\n  if (value === null) return 'null input';\n  if (value === undefined) return 'undefined input';\n  return `processed: ${value}`;\n}\nconsole.log(process(null));",
+  "solution": "function process(value) {\n  if (value === null) return 'null input';\n  if (value === undefined) return 'undefined input';\n  return `processed: ${value}`;\n}\nconsole.log(process(null));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "null input"
+    }
+  ],
+  "hints": [
+    "First guard catches null",
+    "Returns before second check"
+  ]
+}

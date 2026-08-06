@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-38",
+  "title": "Filter Divisible",
+  "starterCode": "const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];\nconst div3 = nums.____(x => x % 3 === 0);\nconsole.log(div3);",
+  "solution": "const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];\nconst div3 = nums.filter(x => x % 3 === 0);\nconsole.log(div3);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 3, 6, 9 ]"
+    }
+  ],
+  "hints": [
+    "Check divisibility by 3",
+    "Remainder is 0"
+  ]
+}

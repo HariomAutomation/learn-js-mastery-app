@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-13",
+  "title": "Define Property",
+  "starterCode": "const obj = {};\nObject.defineProperty(obj, 'x', {value: 10});\nconsole.log(obj.x);",
+  "solution": "const obj = {};\nObject.defineProperty(obj, 'x', {value: 10});\nconsole.log(obj.x);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10"
+    }
+  ],
+  "hints": [
+    "defineProperty adds property",
+    "With descriptor"
+  ]
+}

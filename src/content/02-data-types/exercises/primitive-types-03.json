@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-03",
+  "title": "Create a string using backticks",
+  "starterCode": "const msg = ``;\nconsole.log(msg);",
+  "solution": "const msg = `Hello world`;\nconsole.log(msg);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hello world"
+    }
+  ],
+  "hints": [
+    "Backticks create template literals",
+    "Type the message inside backticks"
+  ]
+}

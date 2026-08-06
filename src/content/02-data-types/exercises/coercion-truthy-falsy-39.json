@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-39",
+  "title": "Double NOT preserves truthiness",
+  "starterCode": "console.log(!!42);",
+  "solution": "console.log(!!42);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "42 is truthy",
+    "!! converts to boolean"
+  ]
+}

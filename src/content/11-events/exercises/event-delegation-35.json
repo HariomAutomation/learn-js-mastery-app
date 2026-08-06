@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-35",
+  "title": "Event Bubbling Order",
+  "starterCode": "// Child handler fires before parent handler\nconsole.log(\"child fires first, then parent\");",
+  "solution": "// Child handler fires before parent handler\nconsole.log(\"child fires first, then parent\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "child fires first, then parent"
+    }
+  ],
+  "hints": [
+    "Bubbling goes from target up",
+    "Inner handlers fire first"
+  ]
+}

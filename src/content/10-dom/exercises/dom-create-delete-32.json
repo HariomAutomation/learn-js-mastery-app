@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-32",
+  "title": "Create from HTML String",
+  "starterCode": "function htmlToElement(html) {\n  const template = document.createElement('template');\n  template.innerHTML = html.trim();\n  return template.content.firstChild;\n}\nconst el = htmlToElement('<p>Hello</p>');\nconsole.log(el.tagName);",
+  "solution": "function htmlToElement(html) {\n  const template = document.createElement('template');\n  template.innerHTML = html.trim();\n  return template.content.firstChild;\n}\nconst el = htmlToElement('<p>Hello</p>');\nconsole.log(el.tagName);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "P"
+    }
+  ],
+  "hints": [
+    "template element holds content",
+    "firstChild gets the element"
+  ]
+}

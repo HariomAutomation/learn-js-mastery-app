@@ -1,0 +1,12 @@
+{
+  "id": "12-async-callbacks-promises",
+  "title": "Promises samjho — resolve, reject, chaining",
+  "starterCode": "// Promise simulation — async code ko sync samjho\n\n// 1. Promise banao — resolve karo agar positive hai\nfunction checkNumber(num) {\n  return new Promise((resolve, reject) => {\n    if (num > 0) {\n      resolve(`Positive: ${num}`)\n    } else {\n      reject(`Not positive: ${num}`)\n    }\n  })\n}\n\ncheckNumber(5).then(msg => console.log(msg)) // __BLANK__\ncheckNumber(-3).catch(msg => console.log(msg)) // __BLANK__\n\n// 2. Promise chaining\nfunction double(n) {\n  return Promise.resolve(n * 2)\n}\n\ndouble(5)\n  .then(result => double(result))  // 10\n  .then(result => double(result))  // 20\n  .then(result => console.log(result)) // __BLANK__\n\n// 3. Promise.all — sab ek saath resolve ho\nconst p1 = Promise.resolve(10)\nconst p2 = Promise.resolve(20)\nconst p3 = Promise.resolve(30)\n\nPromise.all([p1, p2, p3]).then(results => {\n  console.log(results) // __BLANK__\n  console.log(results.reduce((a, b) => a + b, 0)) // __BLANK__\n})",
+  "solution": "function checkNumber(num) {\n  return new Promise((resolve, reject) => {\n    if (num > 0) {\n      resolve(`Positive: ${num}`)\n    } else {\n      reject(`Not positive: ${num}`)\n    }\n  })\n}\n\ncheckNumber(5).then(msg => console.log(msg))\ncheckNumber(-3).catch(msg => console.log(msg))\n\nfunction double(n) {\n  return Promise.resolve(n * 2)\n}\n\ndouble(5)\n  .then(result => double(result))\n  .then(result => double(result))\n  .then(result => console.log(result))\n\nconst p1 = Promise.resolve(10)\nconst p2 = Promise.resolve(20)\nconst p3 = Promise.resolve(30)\n\nPromise.all([p1, p2, p3]).then(results => {\n  console.log(results)\n  console.log(results.reduce((a, b) => a + b, 0))\n})",
+  "tests": [{ "input": [], "expected": "Positive: 5\nNot positive: -3\n20\n[10, 20, 30]\n60" }],
+  "hints": [
+    "Promise: resolve() se success, reject() se error milta hai",
+    "Chaining: har .then() next step return karta hai — naya Promise milta hai",
+    "Promise.all: sab promises ka result array mein milta hai — jab saare resolve ho jaayein"
+  ]
+}

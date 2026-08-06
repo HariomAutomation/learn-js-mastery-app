@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-25",
+  "title": "Switch as expression",
+  "starterCode": "const code = 404;\nconst message = (() => {\n  switch (code) {\n    case 200: return 'OK';\n    case 404: return 'Not Found';\n    case 500: return 'Server Error';\n    default: return 'Unknown';\n  }\n})();\nconsole.log(message);",
+  "solution": "const code = 404;\nconst message = (() => {\n  switch (code) {\n    case 200: return 'OK';\n    case 404: return 'Not Found';\n    case 500: return 'Server Error';\n    default: return 'Unknown';\n  }\n})();\nconsole.log(message);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Not Found"
+    }
+  ],
+  "hints": [
+    "Switch can return values",
+    "404 matches case 404"
+  ]
+}

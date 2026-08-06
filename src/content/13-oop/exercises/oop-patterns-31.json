@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-31",
+  "title": "Patterns Practice",
+  "starterCode": "// Module, Singleton, Factory, Observer, Strategy\nconsole.log(\"OOP patterns complete\");",
+  "solution": "// Module, Singleton, Factory, Observer, Strategy\nconsole.log(\"OOP patterns complete\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "OOP patterns complete"
+    }
+  ],
+  "hints": [
+    "Review all design patterns",
+    "Apply in real projects"
+  ]
+}

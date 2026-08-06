@@ -1,0 +1,12 @@
+{
+  "id": "01-variables-declarations-variables-intro",
+  "title": "Apne pehle variables banao",
+  "starterCode": "// 1. const se apna naam aur city declare karo\n// 2. let se apni age declare karo\n// 3. Teeno ko console.log karo\n\nconst name = \"________\"\nconst city = \"________\"\nlet age = 0\n\n// Yahan console.log karo\n",
+  "solution": "const name = \"Riya\"\nconst city = \"Delhi\"\nlet age = 25\nconsole.log(name, city, age)",
+  "tests": [{ "input": [], "expected": "Riya Delhi 25" }],
+  "hints": [
+    "const = jo value kabhi change nahi hogi (name, city)",
+    "let = jo value badal sakti hai (age)",
+    "console.log(name, city, age) se ek line mein print hota hai"
+  ]
+}

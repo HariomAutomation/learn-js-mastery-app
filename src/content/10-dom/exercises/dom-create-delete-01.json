@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-01",
+  "title": "createElement Basics",
+  "starterCode": "const div = document.createElement('div');\nconsole.log(div.tagName);",
+  "solution": "const div = document.createElement('div');\nconsole.log(div.tagName);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "DIV"
+    }
+  ],
+  "hints": [
+    "createElement takes a tag name",
+    "tagName returns uppercase tag"
+  ]
+}

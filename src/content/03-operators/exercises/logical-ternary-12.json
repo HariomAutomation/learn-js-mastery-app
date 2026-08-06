@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-12",
+  "title": "Nullish coalescing with undefined",
+  "starterCode": "const result = undefined ?? 'fallback';\nconsole.log(result);",
+  "solution": "const result = undefined ?? 'fallback';\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "fallback"
+    }
+  ],
+  "hints": [
+    "undefined triggers the right side of ??",
+    "Unlike ||, 0 and '' don't trigger"
+  ]
+}

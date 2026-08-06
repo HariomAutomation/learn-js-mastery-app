@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-20",
+  "title": "Create a binary number",
+  "starterCode": "const bin = ;\nconsole.log(bin);",
+  "solution": "const bin = 0b1010;\nconsole.log(bin);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10"
+    }
+  ],
+  "hints": [
+    "0b prefix for binary",
+    "1010 in binary equals 10 in decimal"
+  ]
+}

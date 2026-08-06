@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-17",
+  "title": "insertAdjacentElement",
+  "starterCode": "const parent = document.createElement('div');\nconst child = document.createElement('span');\nparent.insertAdjacentElement('afterbegin', child);\nconsole.log(parent.children[0] === child);",
+  "solution": "const parent = document.createElement('div');\nconst child = document.createElement('span');\nparent.insertAdjacentElement('afterbegin', child);\nconsole.log(parent.children[0] === child);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "insertAdjacentElement inserts an element",
+    "afterbegin places at start"
+  ]
+}

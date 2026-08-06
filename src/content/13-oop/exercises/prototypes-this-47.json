@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-47",
+  "title": "Chain Depth",
+  "starterCode": "function A() {}\nfunction B() extends A {}\nfunction C() extends B {}\nconst c = new C();\nconsole.log(c instanceof A);",
+  "solution": "function A() {}\nfunction B() extends A {}\nfunction C() extends B {}\nconst c = new C();\nconsole.log(c instanceof A);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "Deep prototype chain",
+    "instanceof walks the chain"
+  ]
+}

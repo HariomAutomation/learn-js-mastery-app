@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-function-basics-13",
+  "title": "Anonymous Function Expression",
+  "starterCode": "const square = function(n) {\n  return n * n;\n};\nconsole.log(square(6));",
+  "solution": "const square = function(n) {\n  return n * n;\n};\nconsole.log(square(6));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "36"
+    }
+  ],
+  "hints": [
+    "No name after function",
+    "Assign to variable"
+  ]
+}

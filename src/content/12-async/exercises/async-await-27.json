@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-27",
+  "title": "Async Condition",
+  "starterCode": "async function waitFor(condition) {\n  while (!condition()) {\n    await new Promise(r => setTimeout(r, 10));\n  }\n  return true;\n}\nlet val = false;\nsetTimeout(() => val = true, 30);\nwaitFor(() => val).then(() => console.log('resolved'));",
+  "solution": "async function waitFor(condition) {\n  while (!condition()) {\n    await new Promise(r => setTimeout(r, 10));\n  }\n  return true;\n}\nlet val = false;\nsetTimeout(() => val = true, 30);\nwaitFor(() => val).then(() => console.log('resolved'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "resolved"
+    }
+  ],
+  "hints": [
+    "Poll until condition is true",
+    "Use while loop with await"
+  ]
+}

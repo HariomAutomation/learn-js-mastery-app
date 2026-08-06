@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-40",
+  "title": "Await Loop",
+  "starterCode": "async function sum() {\n  let total = 0;\n  for (let i = 1; i <= 3; i++) {\n    total += await Promise.resolve(i);\n  }\n  console.log(total);\n}\nsum();",
+  "solution": "async function sum() {\n  let total = 0;\n  for (let i = 1; i <= 3; i++) {\n    total += await Promise.resolve(i);\n  }\n  console.log(total);\n}\nsum();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "6"
+    }
+  ],
+  "hints": [
+    "Sequential await in loop",
+    "1 + 2 + 3 = 6"
+  ]
+}

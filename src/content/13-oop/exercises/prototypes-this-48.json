@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-48",
+  "title": "Apply Array Args",
+  "starterCode": "function sum(a, b, c) { return a + b + c; }\nconsole.log(sum.apply(null, [1, 2, 3]));",
+  "solution": "function sum(a, b, c) { return a + b + c; }\nconsole.log(sum.apply(null, [1, 2, 3]));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "6"
+    }
+  ],
+  "hints": [
+    "apply takes args as array",
+    "Same as call with array"
+  ]
+}

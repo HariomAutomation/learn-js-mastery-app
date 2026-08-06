@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-07",
+  "title": "Infinite Scroll",
+  "starterCode": "// Scroll event to load more content\nconsole.log(\"infinite scroll pattern\");",
+  "solution": "// Scroll event to load more content\nconsole.log(\"infinite scroll pattern\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "infinite scroll pattern"
+    }
+  ],
+  "hints": [
+    "Check scroll position near bottom",
+    "Debounce scroll handler"
+  ]
+}

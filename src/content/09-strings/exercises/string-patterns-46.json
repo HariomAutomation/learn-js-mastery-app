@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-46",
+  "title": "Generate Parentheses",
+  "starterCode": "function generate(n) {\n  const result = [];\n  function backtrack(s, open, close) {\n    if (s.length === 2 * n) { result.push(s); return; }\n    if (open < n) backtrack(s + '(', open + 1, close);\n    if (close < open) backtrack(s + ')', open, close + 1);\n  }\n  backtrack('', 0, 0);\n  return result;\n}\nconsole.log(generate(3));",
+  "solution": "function generate(n) {\n  const result = [];\n  function backtrack(s, open, close) {\n    if (s.length === 2 * n) { result.push(s); return; }\n    if (open < n) backtrack(s + '(', open + 1, close);\n    if (close < open) backtrack(s + ')', open, close + 1);\n  }\n  backtrack('', 0, 0);\n  return result;\n}\nconsole.log(generate(3));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ '((()))', '(()())', '(())()', '()(())', '()()()' ]"
+    }
+  ],
+  "hints": [
+    "Backtracking",
+    "Valid combinations"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-18",
+  "title": "Normalize",
+  "starterCode": "const str = 'caf\\u00E9';\nconsole.log(str.normalize('NFC').length);",
+  "solution": "const str = 'caf\\u00E9';\nconsole.log(str.normalize('NFC').length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "4"
+    }
+  ],
+  "hints": [
+    "normalize for unicode",
+    "NFC form"
+  ]
+}

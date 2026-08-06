@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-44",
+  "title": "For...In Prototype Skip",
+  "starterCode": "function Animal(name) { this.name = name; }\nAnimal.prototype.type = 'animal';\nconst cat = new Animal('Whiskers');\nfor (const key in cat) {\n  if (cat.hasOwnProperty(key)) {\n    console.log(key + ': ' + cat[key]);\n  }\n}",
+  "solution": "function Animal(name) { this.name = name; }\nAnimal.prototype.type = 'animal';\nconst cat = new Animal('Whiskers');\nfor (const key in cat) {\n  if (cat.hasOwnProperty(key)) {\n    console.log(key + ': ' + cat[key]);\n  }\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "name: Whiskers"
+    }
+  ],
+  "hints": [
+    "prototype properties skipped",
+    "Only own properties"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-05",
+  "title": "append Method",
+  "starterCode": "const el = document.createElement('div');\nel.append('Text', document.createElement('span'));\nconsole.log(el.childNodes.length);",
+  "solution": "const el = document.createElement('div');\nel.append('Text', document.createElement('span'));\nconsole.log(el.childNodes.length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2"
+    }
+  ],
+  "hints": [
+    "append adds multiple items at end",
+    "Counts text nodes and elements"
+  ]
+}

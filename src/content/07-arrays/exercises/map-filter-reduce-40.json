@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-40",
+  "title": "Map Absolute",
+  "starterCode": "const nums = [-1, 2, -3, 4, -5];\nconst abs = nums.____(x => Math.abs(x));\nconsole.log(abs);",
+  "solution": "const nums = [-1, 2, -3, 4, -5];\nconst abs = nums.map(x => Math.abs(x));\nconsole.log(abs);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 1, 2, 3, 4, 5 ]"
+    }
+  ],
+  "hints": [
+    "Math.abs for absolute",
+    "Remove negatives"
+  ]
+}

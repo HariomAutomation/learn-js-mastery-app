@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-03",
+  "title": "Accordion Events",
+  "starterCode": "// Click to expand/collapse sections\nconsole.log(\"accordion pattern\");",
+  "solution": "// Click to expand/collapse sections\nconsole.log(\"accordion pattern\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "accordion pattern"
+    }
+  ],
+  "hints": [
+    "Toggle active class on click",
+    "Show/hide panel content"
+  ]
+}

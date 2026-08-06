@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-01",
+  "title": "Callback Pattern",
+  "starterCode": "function fetchData(callback) {\n  // TODO: call callback with data\n  callback('Hello');\n}\nfetchData(function(data) {\n  console.log(data);\n});",
+  "solution": "function fetchData(callback) {\n  callback('Hello');\n}\nfetchData(function(data) {\n  console.log(data);\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hello"
+    }
+  ],
+  "hints": [
+    "Callback is a function passed as argument",
+    "Call it with the result"
+  ]
+}

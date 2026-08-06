@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-08",
+  "title": "Strategy",
+  "starterCode": "const strategies = {\n  add: (a, b) => a + b,\n  sub: (a, b) => a - b,\n  mul: (a, b) => a * b\n};\nfunction calc(op, a, b) { return strategies[op](a, b); }\nconsole.log(calc('add', 2, 3));",
+  "solution": "const strategies = {\n  add: (a, b) => a + b,\n  sub: (a, b) => a - b,\n  mul: (a, b) => a * b\n};\nfunction calc(op, a, b) { return strategies[op](a, b); }\nconsole.log(calc('add', 2, 3));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "5"
+    }
+  ],
+  "hints": [
+    "Strategy object holds algorithms",
+    "Select at runtime"
+  ]
+}

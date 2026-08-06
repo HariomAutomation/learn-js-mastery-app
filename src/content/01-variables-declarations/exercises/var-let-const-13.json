@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-var-let-const-13",
+  "title": "const initialization",
+  "starterCode": "try {\n  const x\n} catch(e) {\n  console.log(\"error\")\n}",
+  "solution": "try {\n  const x\n} catch(e) {\n  console.log(\"error\")\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "error"
+    }
+  ],
+  "hints": [
+    "const must be initialized"
+  ]
+}

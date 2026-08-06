@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-13",
+  "title": "Static Factory",
+  "starterCode": "class User {\n  constructor(name) { this.name = name; }\n  static create(name) {\n    return new User(name);\n  }\n}\nconst u = User.create('John');\nconsole.log(u.name);",
+  "solution": "class User {\n  constructor(name) { this.name = name; }\n  static create(name) {\n    return new User(name);\n  }\n}\nconst u = User.create('John');\nconsole.log(u.name);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "John"
+    }
+  ],
+  "hints": [
+    "Static factory creates instances",
+    "Alternative to new"
+  ]
+}

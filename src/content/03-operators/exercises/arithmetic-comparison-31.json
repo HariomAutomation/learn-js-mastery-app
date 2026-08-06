@@ -1,0 +1,15 @@
+{
+  "id": "03-operators-arithmetic-comparison-31",
+  "title": "Math.ceil",
+  "starterCode": "const result = Math.ceil(4.1);\nconsole.log(result);",
+  "solution": "const result = Math.ceil(4.1);\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "5"
+    }
+  ],
+  "hints": [
+    "Math.ceil rounds up to nearest integer"
+  ]
+}

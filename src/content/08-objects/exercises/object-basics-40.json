@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-40",
+  "title": "Complete 3",
+  "starterCode": "const obj = {name: 'Alice', age: 25, city: 'NYC'};\nconst {name, ...rest} = obj;\nconsole.log(name);\nconsole.log(rest);",
+  "solution": "const obj = {name: 'Alice', age: 25, city: 'NYC'};\nconst {name, ...rest} = obj;\nconsole.log(name);\nconsole.log(rest);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Alice\n{ age: 25, city: 'NYC' }"
+    }
+  ],
+  "hints": [
+    "Rest in destructuring",
+    "Collects remaining"
+  ]
+}

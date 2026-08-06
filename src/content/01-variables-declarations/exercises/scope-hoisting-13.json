@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-13",
+  "title": "Loop var vs let",
+  "starterCode": "for (var i = 0; i < 2; i++) {}\nconsole.log(i)\nfor (let j = 0; j < 2; j++) {}\ntry {\n  console.log(j)\n} catch(e) {\n  console.log(\"error\")\n}",
+  "solution": "for (var i = 0; i < 2; i++) {}\nconsole.log(i)\nfor (let j = 0; j < 2; j++) {}\ntry {\n  console.log(j)\n} catch(e) {\n  console.log(\"error\")\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2\nerror"
+    }
+  ],
+  "hints": [
+    "var leaks, let stays in block"
+  ]
+}

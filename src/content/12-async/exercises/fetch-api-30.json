@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-30",
+  "title": "Fetch Practice",
+  "starterCode": "// Basic fetch pattern\n// fetch(url).then(r => r.json()).then(d => console.log(d))\nconsole.log(\"fetch practice\");",
+  "solution": "// Basic fetch pattern\n// fetch(url).then(r => r.json()).then(d => console.log(d))\nconsole.log(\"fetch practice\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "fetch practice"
+    }
+  ],
+  "hints": [
+    "fetch returns Response promise",
+    "json() returns data promise"
+  ]
+}

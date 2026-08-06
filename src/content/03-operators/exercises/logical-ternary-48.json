@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-48",
+  "title": "Complex ternary expression",
+  "starterCode": "const age = 15;\nconst result = age >= 18 ? 'adult' : age >= 13 ? 'teen' : 'child';\nconsole.log(result);",
+  "solution": "const age = 15;\nconst result = age >= 18 ? 'adult' : age >= 13 ? 'teen' : 'child';\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "teen"
+    }
+  ],
+  "hints": [
+    "15 < 18, check second ternary",
+    "15 >= 13 is true"
+  ]
+}

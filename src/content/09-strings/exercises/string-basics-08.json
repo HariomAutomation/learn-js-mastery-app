@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-08",
+  "title": "Comparison",
+  "starterCode": "console.log('abc' < 'abd');\nconsole.log('abc' === 'abc');",
+  "solution": "console.log('abc' < 'abd');\nconsole.log('abc' === 'abc');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true\ntrue"
+    }
+  ],
+  "hints": [
+    "Lexicographic comparison",
+    "Strict equality"
+  ]
+}

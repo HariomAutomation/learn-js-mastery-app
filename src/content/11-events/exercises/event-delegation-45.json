@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-45",
+  "title": "Delegation Multiple Levels",
+  "starterCode": "const nav = document.querySelector('nav');\nnav.addEventListener('click', function(e) {\n  const link = e.target.closest('a');\n  if (link) console.log('link clicked');\n});",
+  "solution": "const nav = document.querySelector('nav');\nnav.addEventListener('click', function(e) {\n  const link = e.target.closest('a');\n  if (link) console.log('link clicked');\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "link clicked"
+    }
+  ],
+  "hints": [
+    "closest traverses up multiple levels",
+    "Works with nested structures"
+  ]
+}

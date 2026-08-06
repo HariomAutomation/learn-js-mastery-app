@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-higher-order-functions-07",
+  "title": "Debounce Basics",
+  "starterCode": "function debounce(fn, delay) {\n  let timer;\n  return function(...args) {\n    clearTimeout(timer);\n    timer = setTimeout(() => fn(...args), delay);\n  };\n}\nconst log = debounce(console.log, 100);\nlog('a');\nlog('b');\nlog('c');",
+  "solution": "function debounce(fn, delay) {\n  let timer;\n  return function(...args) {\n    clearTimeout(timer);\n    timer = setTimeout(() => fn(...args), delay);\n  };\n}\nconst log = debounce(console.log, 100);\nlog('a');\nlog('b');\nlog('c');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "c"
+    }
+  ],
+  "hints": [
+    "Reset timer each call",
+    "Only last call executes"
+  ]
+}

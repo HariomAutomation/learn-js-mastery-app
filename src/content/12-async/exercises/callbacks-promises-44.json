@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-44",
+  "title": "Promise Finally",
+  "starterCode": "Promise.reject('error')\n  .catch(err => 'caught')\n  .finally(() => console.log('done'));",
+  "solution": "Promise.reject('error')\n  .catch(err => 'caught')\n  .finally(() => console.log('done'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "done"
+    }
+  ],
+  "hints": [
+    "finally runs after catch",
+    "Always executes"
+  ]
+}

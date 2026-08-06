@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-39",
+  "title": "Fetch Async Pattern",
+  "starterCode": "// async function getData() {\n//   const res = await fetch(url);\n//   const data = await res.json();\n//   return data;\n// }\nconsole.log(\"async fetch pattern\");",
+  "solution": "// async function getData() {\n//   const res = await fetch(url);\n//   const data = await res.json();\n//   return data;\n// }\nconsole.log(\"async fetch pattern\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "async fetch pattern"
+    }
+  ],
+  "hints": [
+    "Use async/await",
+    "Await fetch and json()"
+  ]
+}

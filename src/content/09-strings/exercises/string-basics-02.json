@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-02",
+  "title": "String Constructor",
+  "starterCode": "const str = String(42);\nconsole.log(typeof str, str);",
+  "solution": "const str = String(42);\nconsole.log(typeof str, str);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "string 42"
+    }
+  ],
+  "hints": [
+    "String() converts to string",
+    "Returns string type"
+  ]
+}

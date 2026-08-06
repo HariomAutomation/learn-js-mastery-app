@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-27",
+  "title": "Arrow With forEach",
+  "starterCode": "const items = [1, 2, 3];\nitems.forEach(x => console.log(x * 10));",
+  "solution": "const items = [1, 2, 3];\nitems.forEach(x => console.log(x * 10));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10\n20\n30"
+    }
+  ],
+  "hints": [
+    "Arrow callback in forEach",
+    "Side effect only"
+  ]
+}

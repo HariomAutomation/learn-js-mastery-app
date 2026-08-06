@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-methods-47",
+  "title": "Includes From",
+  "starterCode": "console.log('hello world'.includes('world', 6));",
+  "solution": "console.log('hello world'.includes('world', 6));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "includes with fromIndex",
+    "Start search at 6"
+  ]
+}

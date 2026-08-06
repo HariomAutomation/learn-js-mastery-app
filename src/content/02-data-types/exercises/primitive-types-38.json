@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-38",
+  "title": "Convert string to float with parseFloat",
+  "starterCode": "const str = \"3.14abc\";\nconst num = ;\nconsole.log(num);",
+  "solution": "const str = \"3.14abc\";\nconst num = parseFloat(str);\nconsole.log(num);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3.14"
+    }
+  ],
+  "hints": [
+    "parseFloat parses decimal numbers",
+    "It stops at the first non-numeric character"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-while-24",
+  "title": "Find Element In Loop",
+  "starterCode": "const arr = [5, 12, 8, 130, 44];\nfor (let i = 0; i < arr.length; i++) {\n  if (arr[i] > 10) {\n    console.log(arr[i]);\n    break;\n  }\n}",
+  "solution": "const arr = [5, 12, 8, 130, 44];\nfor (let i = 0; i < arr.length; i++) {\n  if (arr[i] > 10) {\n    console.log(arr[i]);\n    break;\n  }\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "12"
+    }
+  ],
+  "hints": [
+    "Check each element",
+    "Break when found"
+  ]
+}

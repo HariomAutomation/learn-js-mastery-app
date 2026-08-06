@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-49",
+  "title": "Use trim to remove whitespace",
+  "starterCode": "const str = \"  hello  \";\nconsole.log();",
+  "solution": "const str = \"  hello  \";\nconsole.log(str.trim());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hello"
+    }
+  ],
+  "hints": [
+    "trim removes spaces from both ends",
+    "It doesn't modify the original"
+  ]
+}

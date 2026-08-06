@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-14",
+  "title": "OR vs Nullish with zero",
+  "starterCode": "const result = 0 || 'default';\nconsole.log(result);",
+  "solution": "const result = 0 || 'default';\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "default"
+    }
+  ],
+  "hints": [
+    "|| treats 0 as falsy",
+    "0 is falsy, so returns 'default'"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-higher-order-functions-09",
+  "title": "Retry Pattern",
+  "starterCode": "function retry(fn, attempts) {\n  return function(...args) {\n    for (let i = 0; i < attempts; i++) {\n      try {\n        return fn(...args);\n      } catch (e) {\n        if (i === attempts - 1) throw e;\n      }\n    }\n  };\n}\nlet count = 0;\nconst unstable = () => {\n  count++;\n  if (count < 3) throw new Error('Fail');\n  return 'Success';\n};\nconst reliable = retry(unstable, 3);\nconsole.log(reliable());",
+  "solution": "function retry(fn, attempts) {\n  return function(...args) {\n    for (let i = 0; i < attempts; i++) {\n      try {\n        return fn(...args);\n      } catch (e) {\n        if (i === attempts - 1) throw e;\n      }\n    }\n  };\n}\nlet count = 0;\nconst unstable = () => {\n  count++;\n  if (count < 3) throw new Error('Fail');\n  return 'Success';\n};\nconst reliable = retry(unstable, 3);\nconsole.log(reliable());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Success"
+    }
+  ],
+  "hints": [
+    "Try multiple times",
+    "Throw on last attempt"
+  ]
+}

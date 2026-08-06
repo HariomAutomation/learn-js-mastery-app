@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-30",
+  "title": "StartsWith",
+  "starterCode": "console.log('hello world'.startsWith('hello'));",
+  "solution": "console.log('hello world'.startsWith('hello'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "startsWith checks prefix",
+    "At beginning"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-40",
+  "title": "Event Delegation Complete",
+  "starterCode": "// Delegation: parent listener + event.target\nconsole.log(\"delegation pattern complete\");",
+  "solution": "// Delegation: parent listener + event.target\nconsole.log(\"delegation pattern complete\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "delegation pattern complete"
+    }
+  ],
+  "hints": [
+    "Key pattern for dynamic content",
+    "Efficient event handling"
+  ]
+}

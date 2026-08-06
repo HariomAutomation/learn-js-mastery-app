@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-28",
+  "title": "Seal vs Freeze",
+  "starterCode": "const sealed = Object.seal({a: 1});\nconst frozen = Object.freeze({b: 2});\nsealed.a = 10;\nfrozen.b = 20;\nconsole.log(sealed.a, frozen.b);",
+  "solution": "const sealed = Object.seal({a: 1});\nconst frozen = Object.freeze({b: 2});\nsealed.a = 10;\nfrozen.b = 20;\nconsole.log(sealed.a, frozen.b);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10 2"
+    }
+  ],
+  "hints": [
+    "Seal allows changes",
+    "Freeze prevents"
+  ]
+}

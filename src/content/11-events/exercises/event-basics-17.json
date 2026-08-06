@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-17",
+  "title": "Resize Event",
+  "starterCode": "window.addEventListener('resize', function(e) {\n  console.log('resized');\n});",
+  "solution": "window.addEventListener('resize', function(e) {\n  console.log('resized');\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "resized"
+    }
+  ],
+  "hints": [
+    "Fires on window resize",
+    "Use with debounce for performance"
+  ]
+}

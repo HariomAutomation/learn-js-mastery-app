@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-01",
+  "title": "getElementById Basics",
+  "starterCode": "const el = document.getElementById(???);\nconsole.log(el);",
+  "solution": "const el = document.getElementById('app');\nconsole.log(el);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "null"
+    }
+  ],
+  "hints": [
+    "Pass a string with the element's id",
+    "Remove the # prefix if present"
+  ]
+}

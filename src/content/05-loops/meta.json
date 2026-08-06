@@ -1,0 +1,8 @@
+{
+  "id": "05-loops",
+  "title": "Loops",
+  "order": 5,
+  "description": "for, while, do-while, for-of, for-in — repetition ko master karo.",
+  "prerequisites": ["04-control-flow"],
+  "lessonCount": 3
+}

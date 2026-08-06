@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-14",
+  "title": "createDocumentFragment",
+  "starterCode": "const fragment = document.createDocumentFragment();\nconsole.log(fragment.nodeType);",
+  "solution": "const fragment = document.createDocumentFragment();\nconsole.log(fragment.nodeType);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "11"
+    }
+  ],
+  "hints": [
+    "DocumentFragment has nodeType 11",
+    "It's a lightweight container"
+  ]
+}

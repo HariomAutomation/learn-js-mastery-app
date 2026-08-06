@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-07",
+  "title": "Object Entries",
+  "starterCode": "const obj = {x: 10, y: 20};\nconst entries = Object.entries(____);\nconsole.log(entries);",
+  "solution": "const obj = {x: 10, y: 20};\nconst entries = Object.entries(obj);\nconsole.log(entries);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ [ 'x', 10 ], [ 'y', 20 ] ]"
+    }
+  ],
+  "hints": [
+    "Object.entries returns",
+    "Array of [key, value] pairs"
+  ]
+}

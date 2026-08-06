@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-methods-47",
+  "title": "Slice No Mutation",
+  "starterCode": "const arr = [1, 2, 3, 4];\nconst sliced = arr.slice(1, 3);\narr.____(0);\nconsole.log(sliced);",
+  "solution": "const arr = [1, 2, 3, 4];\nconst sliced = arr.slice(1, 3);\narr.push(0);\nconsole.log(sliced);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 2, 3 ]"
+    }
+  ],
+  "hints": [
+    "slice creates new array",
+    "Changes to original don't affect copy"
+  ]
+}

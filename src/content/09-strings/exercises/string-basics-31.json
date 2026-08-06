@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-31",
+  "title": "EndsWith",
+  "starterCode": "console.log('hello world'.endsWith('world'));",
+  "solution": "console.log('hello world'.endsWith('world'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "endsWith checks suffix",
+    "At end"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-30",
+  "title": "Map Filter Reduce Pipeline",
+  "starterCode": "const nums = [1, 2, 3, 4, 5];\nconst result = nums.filter(x => x % 2 !== 0).map(x => x * x).reduce((a, b) => a + b, 0);\nconsole.log(result);",
+  "solution": "const nums = [1, 2, 3, 4, 5];\nconst result = nums.filter(x => x % 2 !== 0).map(x => x * x).reduce((a, b) => a + b, 0);\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "35"
+    }
+  ],
+  "hints": [
+    "Filter odds, square, sum",
+    "Complete pipeline"
+  ]
+}

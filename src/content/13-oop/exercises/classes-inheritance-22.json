@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-22",
+  "title": "Static Init",
+  "starterCode": "class Config {\n  static instance;\n  static {\n    Config.instance = new Config();\n  }\n}\nconsole.log(Config.instance instanceof Config);",
+  "solution": "class Config {\n  static instance;\n  static {\n    Config.instance = new Config();\n  }\n}\nconsole.log(Config.instance instanceof Config);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "static block runs once",
+    "Used for static initialization"
+  ]
+}

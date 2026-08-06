@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-42",
+  "title": "Switch with mixed types",
+  "starterCode": "const x = \"1\";\nswitch (x) {\n  case 1:\n    console.log(\"number\");\n    break;\n  case \"1\":\n    console.log(\"string\");\n    break;\n  default:\n    console.log(\"other\");\n}",
+  "solution": "const x = \"1\";\nswitch (x) {\n  case 1:\n    console.log(\"number\");\n    break;\n  case \"1\":\n    console.log(\"string\");\n    break;\n  default:\n    console.log(\"other\");\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "string"
+    }
+  ],
+  "hints": [
+    "switch uses === (strict equality)",
+    "'1' === 1 is false"
+  ]
+}

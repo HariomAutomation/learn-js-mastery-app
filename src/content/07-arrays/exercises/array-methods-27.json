@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-methods-27",
+  "title": "Values",
+  "starterCode": "const arr = [10, 20, 30];\nconst vals = arr.____();\nconsole.log([...vals]);",
+  "solution": "const arr = [10, 20, 30];\nconst vals = arr.values();\nconsole.log([...vals]);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 10, 20, 30 ]"
+    }
+  ],
+  "hints": [
+    "values() returns iterator",
+    "Spread to see values"
+  ]
+}

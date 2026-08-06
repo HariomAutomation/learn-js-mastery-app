@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-03",
+  "title": "querySelectorAll Returns",
+  "starterCode": "const els = document.querySelectorAll('.item');\nconsole.log(typeof els);",
+  "solution": "const els = document.querySelectorAll('.item');\nconsole.log(typeof els);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "object"
+    }
+  ],
+  "hints": [
+    "querySelectorAll returns a collection",
+    "Check the type of the result"
+  ]
+}

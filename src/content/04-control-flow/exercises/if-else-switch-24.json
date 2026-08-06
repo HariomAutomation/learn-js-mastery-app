@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-24",
+  "title": "Refactor if/else to switch",
+  "starterCode": "function getDayType(day) {\n  if (day === 'Sat' || day === 'Sun') {\n    return 'weekend';\n  } else {\n    return 'weekday';\n  }\n}\nconsole.log(getDayType('Sat'));",
+  "solution": "function getDayType(day) {\n  if (day === 'Sat' || day === 'Sun') {\n    return 'weekend';\n  } else {\n    return 'weekday';\n  }\n}\nconsole.log(getDayType('Sat'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "weekend"
+    }
+  ],
+  "hints": [
+    "Sat matches the first condition",
+    "OR checks both conditions"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-05",
+  "title": "Nested if/else",
+  "starterCode": "const num = 15;\nif (num > 10) {\n  if (num > 20) {\n    console.log('large');\n  } else {\n    console.log('medium');\n  }\n} else {\n  console.log('small');\n}",
+  "solution": "const num = 15;\nif (num > 10) {\n  if (num > 20) {\n    console.log('large');\n  } else {\n    console.log('medium');\n  }\n} else {\n  console.log('small');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "medium"
+    }
+  ],
+  "hints": [
+    "15 > 10 is true, enter first block",
+    "15 > 20 is false, enter else"
+  ]
+}

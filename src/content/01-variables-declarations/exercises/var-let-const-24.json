@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-var-let-const-24",
+  "title": "const nested object",
+  "starterCode": "const obj = { a: { b: 1 } }\nobj.a.b = 99\nconsole.log(obj.a.b)",
+  "solution": "const obj = { a: { b: 1 } }\nobj.a.b = 99\nconsole.log(obj.a.b)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "99"
+    }
+  ],
+  "hints": [
+    "Nested objects are mutable"
+  ]
+}

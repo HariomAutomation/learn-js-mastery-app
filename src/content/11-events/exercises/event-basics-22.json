@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-22",
+  "title": "Touch Events",
+  "starterCode": "const el = document.querySelector('.touchable');\nel.addEventListener('touchstart', function(e) {\n  console.log('touched');\n});",
+  "solution": "const el = document.querySelector('.touchable');\nel.addEventListener('touchstart', function(e) {\n  console.log('touched');\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "touched"
+    }
+  ],
+  "hints": [
+    "touchstart fires on touch",
+    "First of touch events"
+  ]
+}

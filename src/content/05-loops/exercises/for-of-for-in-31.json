@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-31",
+  "title": "Set Dedupe",
+  "starterCode": "const arr = [1, 2, 2, 3, 3, 3];\nconst unique = [...new Set(arr)];\nfor (const val of unique) {\n  console.log(val);\n}",
+  "solution": "const arr = [1, 2, 2, 3, 3, 3];\nconst unique = [...new Set(arr)];\nfor (const val of unique) {\n  console.log(val);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1\n2\n3"
+    }
+  ],
+  "hints": [
+    "Set removes duplicates",
+    "Spread to array"
+  ]
+}

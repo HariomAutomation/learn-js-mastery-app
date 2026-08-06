@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-47",
+  "title": "Fetch Response OK",
+  "starterCode": "// res.ok is true for status 200-299\nconsole.log(\"check res.ok for success\");",
+  "solution": "// res.ok is true for status 200-299\nconsole.log(\"check res.ok for success\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "check res.ok for success"
+    }
+  ],
+  "hints": [
+    "res.ok is boolean",
+    "False for 4xx/5xx"
+  ]
+}

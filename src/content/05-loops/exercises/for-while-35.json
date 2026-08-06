@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-while-35",
+  "title": "Factorial Loop",
+  "starterCode": "let n = 5;\nlet factorial = 1;\nfor (let i = 1; i <= n; i++) {\n  factorial *= i;\n}\nconsole.log(factorial);",
+  "solution": "let n = 5;\nlet factorial = 1;\nfor (let i = 1; i <= n; i++) {\n  factorial *= i;\n}\nconsole.log(factorial);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "120"
+    }
+  ],
+  "hints": [
+    "Start at 1",
+    "Multiply by each i"
+  ]
+}

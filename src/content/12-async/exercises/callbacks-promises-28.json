@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-28",
+  "title": "Callback vs Promise",
+  "starterCode": "// Callback: error-first pattern\n// Promise: then/catch pattern\nconsole.log(\"promises are cleaner\");",
+  "solution": "// Callback: error-first pattern\n// Promise: then/catch pattern\nconsole.log(\"promises are cleaner\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "promises are cleaner"
+    }
+  ],
+  "hints": [
+    "Promises avoid callback hell",
+    "Chainable and composable"
+  ]
+}

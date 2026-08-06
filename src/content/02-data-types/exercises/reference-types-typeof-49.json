@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-49",
+  "title": "typeof for all primitives",
+  "starterCode": "console.log(typeof 42, typeof 'hi', typeof true, typeof undefined, typeof null, typeof Symbol('s'));",
+  "solution": "console.log(typeof 42, typeof 'hi', typeof true, typeof undefined, typeof null, typeof Symbol('s'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "number string boolean undefined object symbol"
+    }
+  ],
+  "hints": [
+    "typeof returns the type as a string",
+    "null is the exception - returns 'object'"
+  ]
+}

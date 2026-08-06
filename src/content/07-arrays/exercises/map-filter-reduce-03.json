@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-03",
+  "title": "Reduce Sum",
+  "starterCode": "const nums = [1, 2, 3, 4];\nconst sum = nums.____((acc, x) => acc + x, 0);\nconsole.log(sum);",
+  "solution": "const nums = [1, 2, 3, 4];\nconst sum = nums.reduce((acc, x) => acc + x, 0);\nconsole.log(sum);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10"
+    }
+  ],
+  "hints": [
+    "reduce accumulates value",
+    "Start at 0"
+  ]
+}

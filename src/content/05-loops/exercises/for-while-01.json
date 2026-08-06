@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-while-01",
+  "title": "For Loop Basics",
+  "starterCode": "for (let i = 0; i < 5; i++) {\n  console.log(i);\n}",
+  "solution": "for (let i = 0; i < 5; i++) {\n  console.log(i);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "0\n1\n2\n3\n4"
+    }
+  ],
+  "hints": [
+    "Initialize i at 0",
+    "Use i++ to increment"
+  ]
+}

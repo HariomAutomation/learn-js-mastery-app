@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-23",
+  "title": "Interceptor Pattern",
+  "starterCode": "// Wrap fetch to add headers/auth\nconsole.log(\"interceptors modify requests\");",
+  "solution": "// Wrap fetch to add headers/auth\nconsole.log(\"interceptors modify requests\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "interceptors modify requests"
+    }
+  ],
+  "hints": [
+    "Create custom fetch wrapper",
+    "Add headers before request"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-38",
+  "title": "Scroll Position",
+  "starterCode": "window.addEventListener('scroll', function() {\n  console.log(window.scrollY);\n});",
+  "solution": "window.addEventListener('scroll', function() {\n  console.log(window.scrollY);\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "0"
+    }
+  ],
+  "hints": [
+    "scrollY gives vertical scroll position",
+    "scrollX for horizontal"
+  ]
+}

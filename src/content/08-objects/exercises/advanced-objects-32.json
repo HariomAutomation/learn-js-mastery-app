@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-32",
+  "title": "DefineProperty Enumerable",
+  "starterCode": "const obj = {};\nObject.defineProperty(obj, 'hidden', {value: 42, enumerable: false});\nconsole.log(Object.keys(obj));\nconsole.log('hidden' in obj);",
+  "solution": "const obj = {};\nObject.defineProperty(obj, 'hidden', {value: 42, enumerable: false});\nconsole.log(Object.keys(obj));\nconsole.log('hidden' in obj);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[]\ntrue"
+    }
+  ],
+  "hints": [
+    "Not in keys",
+    "But exists"
+  ]
+}

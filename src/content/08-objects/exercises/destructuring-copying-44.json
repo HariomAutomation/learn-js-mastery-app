@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-44",
+  "title": "Shallow Clone",
+  "starterCode": "const obj = {a: 1, b: [2, 3]};\nconst clone = {...obj};\nclone.b.push(4);\nconsole.log(obj.b);",
+  "solution": "const obj = {a: 1, b: [2, 3]};\nconst clone = {...obj};\nclone.b.push(4);\nconsole.log(obj.b);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 2, 3, 4 ]"
+    }
+  ],
+  "hints": [
+    "Shallow clone shares arrays",
+    "Same reference"
+  ]
+}

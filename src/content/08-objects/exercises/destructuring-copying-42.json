@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-42",
+  "title": "Rename Import",
+  "starterCode": "const obj = {name: 'Alice', years: 25};\nconst {name: userName, years: age} = obj;\nconsole.log(`${userName} is ${age}`);",
+  "solution": "const obj = {name: 'Alice', years: 25};\nconst {name: userName, years: age} = obj;\nconsole.log(`${userName} is ${age}`);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Alice is 25"
+    }
+  ],
+  "hints": [
+    "Rename during destructuring",
+    "Map to new names"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-12",
+  "title": "Default Parameter",
+  "starterCode": "function greet({name = 'World', age = 0} = {}) {\n  console.log(`${name}: ${age}`);\n}\ngreet();\ngreet({name: 'Alice'});",
+  "solution": "function greet({name = 'World', age = 0} = {}) {\n  console.log(`${name}: ${age}`);\n}\ngreet();\ngreet({name: 'Alice'});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "World: 0\nAlice: 0"
+    }
+  ],
+  "hints": [
+    "Default param values",
+    "Default whole object"
+  ]
+}

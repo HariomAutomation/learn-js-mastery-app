@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-05",
+  "title": "Object Keys",
+  "starterCode": "const obj = {a: 1, b: 2, c: 3};\nconst keys = Object.keys(____);\nconsole.log(keys);",
+  "solution": "const obj = {a: 1, b: 2, c: 3};\nconst keys = Object.keys(obj);\nconsole.log(keys);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 'a', 'b', 'c' ]"
+    }
+  ],
+  "hints": [
+    "Object.keys returns array",
+    "Of property names"
+  ]
+}

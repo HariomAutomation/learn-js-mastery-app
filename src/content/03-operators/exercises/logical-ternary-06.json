@@ -1,0 +1,17 @@
+{
+  "id": "03-operators-logical-ternary-06",
+  "title": "Double NOT for boolean coercion",
+  "starterCode": "const result = !!\"\";\nconsole.log(result);",
+  "solution": "const result = !!\"\";\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "false"
+    }
+  ],
+  "hints": [
+    "First ! converts to boolean and inverts",
+    "Second ! inverts back",
+    "!! converts any value to boolean"
+  ]
+}

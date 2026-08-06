@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-12",
+  "title": "Event Object",
+  "starterCode": "document.addEventListener('click', function(e) {\n  console.log(typeof e);\n});",
+  "solution": "document.addEventListener('click', function(e) {\n  console.log(typeof e);\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "object"
+    }
+  ],
+  "hints": [
+    "Event handler receives Event object",
+    "e is an object"
+  ]
+}

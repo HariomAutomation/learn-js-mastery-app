@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-variables-intro-28",
+  "title": "Nullish coalescing",
+  "starterCode": "const val = null ?? \"default\"\nconsole.log(val)",
+  "solution": "const val = null ?? \"default\"\nconsole.log(val)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "default"
+    }
+  ],
+  "hints": [
+    "?? only treats null/undefined as falsy"
+  ]
+}

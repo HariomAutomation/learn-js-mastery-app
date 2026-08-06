@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-patterns-18",
+  "title": "Circular Shift",
+  "starterCode": "function circularShift(arr, n) {\n  const len = arr.length;\n  const shift = n % len;\n  return arr.slice(shift).concat(arr.slice(0, shift));\n}\nconsole.log(circularShift([1,2,3,4,5], 2));",
+  "solution": "function circularShift(arr, n) {\n  const len = arr.length;\n  const shift = n % len;\n  return arr.slice(shift).concat(arr.slice(0, shift));\n}\nconsole.log(circularShift([1,2,3,4,5], 2));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 3, 4, 5, 1, 2 ]"
+    }
+  ],
+  "hints": [
+    "Modulo for wrap around",
+    "Slice and concat"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-methods-49",
+  "title": "Iteration",
+  "starterCode": "const str = 'abc';\nfor (const char of str) {\n  console.log(char);\n}",
+  "solution": "const str = 'abc';\nfor (const char of str) {\n  console.log(char);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "a\nb\nc"
+    }
+  ],
+  "hints": [
+    "for...of iterates chars",
+    "Each character"
+  ]
+}

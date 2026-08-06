@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-09",
+  "title": "Object Assign",
+  "starterCode": "const target = {a: 1};\nconst source = {b: 2, c: 3};\nObject.assign(target, source);\nconsole.log(target);",
+  "solution": "const target = {a: 1};\nconst source = {b: 2, c: 3};\nObject.assign(target, source);\nconsole.log(target);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{ a: 1, b: 2, c: 3 }"
+    }
+  ],
+  "hints": [
+    "Object.assign mutates target",
+    "Copies properties"
+  ]
+}

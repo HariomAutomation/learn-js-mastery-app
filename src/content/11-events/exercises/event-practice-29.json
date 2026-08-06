@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-29",
+  "title": "Debounce Implementation",
+  "starterCode": "function debounce(fn, delay) {\n  let timer;\n  return function(...args) {\n    clearTimeout(timer);\n    timer = setTimeout(() => fn(...args), delay);\n  };\n}\nconst log = debounce((x) => console.log(x), 100);\nlog('test');",
+  "solution": "function debounce(fn, delay) {\n  let timer;\n  return function(...args) {\n    clearTimeout(timer);\n    timer = setTimeout(() => fn(...args), delay);\n  };\n}\nconst log = debounce((x) => console.log(x), 100);\nlog('test');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "test"
+    }
+  ],
+  "hints": [
+    "Clear previous timer",
+    "Set new timer each call"
+  ]
+}

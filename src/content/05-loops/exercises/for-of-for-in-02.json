@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-02",
+  "title": "For...Of Strings",
+  "starterCode": "const str = \"Hi\";\nfor (const char of str) {\n  console.log(char);\n}",
+  "solution": "const str = \"Hi\";\nfor (const char of str) {\n  console.log(char);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "H\ni"
+    }
+  ],
+  "hints": [
+    "Iterate over characters",
+    "Each char is a string"
+  ]
+}

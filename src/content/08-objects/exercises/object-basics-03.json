@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-03",
+  "title": "Bracket Notation",
+  "starterCode": "const obj = {name: 'Alice'};\nconst key = 'name';\nconsole.log(obj[____]);",
+  "solution": "const obj = {name: 'Alice'};\nconst key = 'name';\nconsole.log(obj[key]);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Alice"
+    }
+  ],
+  "hints": [
+    "Use brackets with variable",
+    "Dynamic property access"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-arithmetic-comparison-09",
+  "title": "Post decrement",
+  "starterCode": "let x = 10;\nconst result = x--;\nconsole.log(result);",
+  "solution": "let x = 10;\nconst result = x--;\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10"
+    }
+  ],
+  "hints": [
+    "Post decrement returns value THEN decrements",
+    "x is 9 after, but result is 10"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-20",
+  "title": "Object.keys returns array",
+  "starterCode": "const obj = { x: 1, y: 2 };\nconsole.log();",
+  "solution": "const obj = { x: 1, y: 2 };\nconsole.log(Object.keys(obj));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "x,y"
+    }
+  ],
+  "hints": [
+    "Object.keys returns an array of keys",
+    "console.log shows array without brackets in some environments"
+  ]
+}

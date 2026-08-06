@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-14",
+  "title": "Has Own Property",
+  "starterCode": "const obj = {name: 'Alice', age: 25};\nconsole.log(obj.hasOwnProperty('name'));\nconsole.log(obj.hasOwnProperty('email'));",
+  "solution": "const obj = {name: 'Alice', age: 25};\nconsole.log(obj.hasOwnProperty('name'));\nconsole.log(obj.hasOwnProperty('email'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true\nfalse"
+    }
+  ],
+  "hints": [
+    "hasOwnProperty checks",
+    "Returns boolean"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-higher-order-functions-49",
+  "title": "Once Function",
+  "starterCode": "function once(fn) {\n  let called = false;\n  let result;\n  return function(...args) {\n    if (!called) {\n      called = true;\n      result = fn(...args);\n    }\n    return result;\n  };\n}\nconst init = once(() => {\n  console.log('Initializing...');\n  return 42;\n});\nconsole.log(init());\nconsole.log(init());",
+  "solution": "function once(fn) {\n  let called = false;\n  let result;\n  return function(...args) {\n    if (!called) {\n      called = true;\n      result = fn(...args);\n    }\n    return result;\n  };\n}\nconst init = once(() => {\n  console.log('Initializing...');\n  return 42;\n});\nconsole.log(init());\nconsole.log(init());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Initializing...\n42\n42"
+    }
+  ],
+  "hints": [
+    "Run only once",
+    "Cache result"
+  ]
+}

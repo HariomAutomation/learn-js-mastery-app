@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-35",
+  "title": "Rest in for-of",
+  "starterCode": "const arr = [{type: 'a', val: 1, extra: 'x'}, {type: 'b', val: 2, extra: 'y'}];\nfor (const {type, ...rest} of arr) {\n  console.log(type, rest);\n}",
+  "solution": "const arr = [{type: 'a', val: 1, extra: 'x'}, {type: 'b', val: 2, extra: 'y'}];\nfor (const {type, ...rest} of arr) {\n  console.log(type, rest);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "a { val: 1, extra: 'x' }\nb { val: 2, extra: 'y' }"
+    }
+  ],
+  "hints": [
+    "Rest in loop destructuring",
+    "Collect remaining props"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-16",
+  "title": "Optional chaining",
+  "starterCode": "const user = { name: 'Alice' };\nconst result = user?.address?.street;\nconsole.log(result);",
+  "solution": "const user = { name: 'Alice' };\nconst result = user?.address?.street;\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "undefined"
+    }
+  ],
+  "hints": [
+    "?. returns undefined if property doesn't exist",
+    "user has no address property"
+  ]
+}

@@ -1,0 +1,22 @@
+[
+  { "question": "Optional chaining: obj?.a?.b — purpose?", "options": ["Undefined pe crash nahi, undefined return", "Forced value", "Copy", "Type check"], "correctIndex": 0, "explanation": "?. nullish pe safely chain break." },
+  { "question": "Nullish coalescing: a ?? b — kab use hota?", "options": ["0/\"\" ko valid, sirf null/undefined default", "Sab falsy default", "Hamesha b", "Never"], "correctIndex": 0, "explanation": "?? sirf nullish (null/undefined) check — 0 bachta." },
+  { "question": "0 ?? 10 → ?", "options": ["0", "10", "null", "true"], "correctIndex": 0, "explanation": "0 falsy hai but nullish nahi — 0 return." },
+  { "question": "null ?? 5 → ?", "options": ["5", "null", "undefined", "0"], "correctIndex": 0, "explanation": "null nullish — default." },
+  { "question": "undefined ?? \"d\" → ?", "options": ["\"d\"", "undefined", "null", "Error"], "correctIndex": 0, "explanation": "undefined nullish — default milta hai." },
+  { "question": "Getter/setter object:", "options": ["get name() { return this._name }", "name getter() {}", "this.name = get", "{get}"], "correctIndex": 0, "explanation": "get keyword — computed property." },
+  { "question": "Object freeze kya karta hai?", "options": ["Add/delete/change sab rokta hai", "Sirf copy ko", "Values change allowed", "Delete only"], "correctIndex": 0, "explanation": "Object.freeze — fully immutable." },
+  { "question": "Object.seal vs freeze?", "options": ["Seal: value edit allowed", "Bilkul same", "Seal delete allows", "Seal copy hota"], "correctIndex": 0, "explanation": "Seal keys fixed, values mutable; freeze sab fix." },
+  { "question": "Object.create(proto) — proto kya hota hai?", "options": ["Prototype of new object", "Property name", "Method", "Global"], "correctIndex": 0, "explanation": "Specific prototype ke saath object banata hai." },
+  { "question": "hasOwnProperty vs in?", "options": ["Own prop hi vs inherited bhi", "Same checks", "in own check", "hasOwn inherited"], "correctIndex": 0, "explanation": "Inherited wali = in true, hasOwn false." },
+  { "question": "Optional chaining call: obj.method?.()", "options": ["Method exists to call", "Always calls", "Returns object", "Error"], "correctIndex": 0, "explanation": "?.() sirf exists ho to call." },
+  { "question": "const user = { profile: null }; user.profile?.name → ?", "options": ["undefined — no crash", "Error", "null", "profile"], "correctIndex": 0, "explanation": "Optional chain — null safe." },
+  { "question": "const { a, ...rest } = { a: 1, b: 2 } — rest?", "options": ["{ b: 2 }", "[b]", "Error", "a:1"], "correctIndex": 0, "explanation": "Rest baaki keys ka object." },
+  { "question": "Object.freeze array pe kaam karta hai?", "options": ["Haan — dono object hain", "Sirf objects", "Sirf arrays", "Nahi"], "correctIndex": 0, "explanation": "Arrays bhi objects hain — freeze dono." },
+  { "question": "const point = { x: 1, y: 2 }; Object.entries(point) → ?", "options": ["[[\"x\",1],[\"y\",2]]", "[\"x y\"]", "[1,2]", "[object]"], "correctIndex": 0, "explanation": "Entries = key-value pairs ka array." },
+  { "question": "Deep comparison of objects — approach?", "options": ["Recursively compare keys/values", "=== se", "JSON.stringify se", "obj == obj"], "correctIndex": 0, "explanation": "Recursive equality — custom logic." },
+  { "question": "JSON.stringify(obj) kya karta hai?", "options": ["Object → JSON string", "JSON → object", "Copy", "Freeze"], "correctIndex": 0, "explanation": "Serialize karne ka tarika." },
+  { "question": "JSON.parse(str) kya karta hai?", "options": ["JSON string → object", "Object → string", "Freeze", "Clone"], "correctIndex": 0, "explanation": "Deserialize — object banata hai." },
+  { "question": "String key with space: obj[\"my key\"]", "options": ["Bracket access zaroori", "Dot access", "Error", "Auto dot"], "correctIndex": 0, "explanation": "Space wali keys — bracket hi chala." },
+  { "question": "Method mein this:", "options": ["obj.method() pe this = obj", "this = global", "this = undefined", "This nahi hota"], "correctIndex": 0, "explanation": "Method call pe this object hota hai." }
+]

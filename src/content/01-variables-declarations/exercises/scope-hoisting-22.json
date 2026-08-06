@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-22",
+  "title": "var function only",
+  "starterCode": "function test() {\n  var x = 1\n}\ntest()\nconsole.log(typeof x)",
+  "solution": "function test() {\n  var x = 1\n}\ntest()\nconsole.log(typeof x)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "undefined"
+    }
+  ],
+  "hints": [
+    "var is confined to function"
+  ]
+}

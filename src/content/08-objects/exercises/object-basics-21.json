@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-21",
+  "title": "Clone Object",
+  "starterCode": "const original = {a: 1, b: 2};\nconst clone = {...original};\nclone.a = 10;\nconsole.log(original.a);\nconsole.log(clone.a);",
+  "solution": "const original = {a: 1, b: 2};\nconst clone = {...original};\nclone.a = 10;\nconsole.log(original.a);\nconsole.log(clone.a);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1\n10"
+    }
+  ],
+  "hints": [
+    "Spread creates shallow clone",
+    "Changes don't affect original"
+  ]
+}

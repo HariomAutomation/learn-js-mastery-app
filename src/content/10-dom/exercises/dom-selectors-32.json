@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-32",
+  "title": "querySelector Pseudo Class",
+  "starterCode": "const el = document.querySelector('li:first-child');\nconsole.log(el);",
+  "solution": "const el = document.querySelector('li:first-child');\nconsole.log(el);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "null"
+    }
+  ],
+  "hints": [
+    "Use : for pseudo-classes",
+    "first-child selects first li"
+  ]
+}

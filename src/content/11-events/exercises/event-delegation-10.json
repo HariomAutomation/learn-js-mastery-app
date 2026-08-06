@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-10",
+  "title": "Delegation Performance",
+  "starterCode": "// One listener vs many listeners\nconsole.log(\"delegation uses fewer listeners\");",
+  "solution": "// One listener vs many listeners\nconsole.log(\"delegation uses fewer listeners\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "delegation uses fewer listeners"
+    }
+  ],
+  "hints": [
+    "Single listener on parent",
+    "Better memory usage"
+  ]
+}

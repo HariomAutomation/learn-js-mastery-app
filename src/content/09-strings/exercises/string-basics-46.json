@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-46",
+  "title": "CharCode Practice",
+  "starterCode": "const code = 'Z'.charCodeAt(0);\nconsole.log(code);\nconsole.log(String.fromCharCode(code));",
+  "solution": "const code = 'Z'.charCodeAt(0);\nconsole.log(code);\nconsole.log(String.fromCharCode(code));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "90\nZ"
+    }
+  ],
+  "hints": [
+    "Z is code 90",
+    "Convert back"
+  ]
+}

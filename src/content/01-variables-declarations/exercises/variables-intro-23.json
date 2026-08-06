@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-variables-intro-23",
+  "title": "Comma operator",
+  "starterCode": "const x = (1, 2, 3)\nconsole.log(x)",
+  "solution": "const x = (1, 2, 3)\nconsole.log(x)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3"
+    }
+  ],
+  "hints": [
+    "Comma returns last value"
+  ]
+}

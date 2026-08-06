@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-30",
+  "title": "lexical environment",
+  "starterCode": "function outer() {\n  const x = 10\n  return function inner() {\n    console.log(x)\n  }\n}\nconst fn = outer()\nfn()",
+  "solution": "function outer() {\n  const x = 10\n  return function inner() {\n    console.log(x)\n  }\n}\nconst fn = outer()\nfn()",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10"
+    }
+  ],
+  "hints": [
+    "Lexical scope = where function is defined"
+  ]
+}

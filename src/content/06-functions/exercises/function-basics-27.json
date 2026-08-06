@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-function-basics-27",
+  "title": "Function As Value",
+  "starterCode": "const operations = {\n  add: (a, b) => a + b,\n  sub: (a, b) => a - b\n};\nconsole.log(operations.add(5, 3));\nconsole.log(operations.sub(5, 3));",
+  "solution": "const operations = {\n  add: (a, b) => a + b,\n  sub: (a, b) => a - b\n};\nconsole.log(operations.add(5, 3));\nconsole.log(operations.sub(5, 3));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "8\n2"
+    }
+  ],
+  "hints": [
+    "Functions are values",
+    "Store in object"
+  ]
+}

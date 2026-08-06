@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-function-basics-16",
+  "title": "Call Method",
+  "starterCode": "function greet(greeting) {\n  console.log(greeting + ', ' + this.name);\n}\nconst person = {name: 'Bob'};\ngreet.call(person, 'Hello');",
+  "solution": "function greet(greeting) {\n  console.log(greeting + ', ' + this.name);\n}\nconst person = {name: 'Bob'};\ngreet.call(person, 'Hello');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hello, Bob"
+    }
+  ],
+  "hints": [
+    "call() sets this",
+    "First arg is context"
+  ]
+}

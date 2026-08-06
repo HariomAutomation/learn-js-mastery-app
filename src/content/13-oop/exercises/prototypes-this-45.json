@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-45",
+  "title": "Prototype Pollution Warning",
+  "starterCode": "// Modifying Object.prototype affects ALL objects\nconsole.log(\"prototype pollution is dangerous\");",
+  "solution": "// Modifying Object.prototype affects ALL objects\nconsole.log(\"prototype pollution is dangerous\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "prototype pollution is dangerous"
+    }
+  ],
+  "hints": [
+    "Never modify Object.prototype",
+    "Security vulnerability"
+  ]
+}

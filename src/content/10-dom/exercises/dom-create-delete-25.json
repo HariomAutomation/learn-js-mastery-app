@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-25",
+  "title": "prepend Multiple",
+  "starterCode": "const el = document.createElement('div');\nel.append('B', 'C');\nel.prepend('A');\nconsole.log(el.textContent);",
+  "solution": "const el = document.createElement('div');\nel.append('B', 'C');\nel.prepend('A');\nconsole.log(el.textContent);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "ABC"
+    }
+  ],
+  "hints": [
+    "prepend adds at beginning",
+    "Order is preserved"
+  ]
+}

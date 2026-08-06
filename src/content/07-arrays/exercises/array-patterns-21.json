@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-patterns-21",
+  "title": "Frequency Count",
+  "starterCode": "function frequency(arr) {\n  return arr.reduce((acc, x) => ({ ...acc, [x]: (acc[x] || 0) + 1 }), {});\n}\nconsole.log(frequency(['a','b','a','c','b','a']));",
+  "solution": "function frequency(arr) {\n  return arr.reduce((acc, x) => ({ ...acc, [x]: (acc[x] || 0) + 1 }), {});\n}\nconsole.log(frequency(['a','b','a','c','b','a']));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{ a: 3, b: 2, c: 1 }"
+    }
+  ],
+  "hints": [
+    "Count occurrences",
+    "Use reduce"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-27",
+  "title": "Event Timestamp",
+  "starterCode": "document.addEventListener('click', function(e) {\n  console.log(typeof e.timeStamp);\n});",
+  "solution": "document.addEventListener('click', function(e) {\n  console.log(typeof e.timeStamp);\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "number"
+    }
+  ],
+  "hints": [
+    "timeStamp is when event occurred",
+    "Returns milliseconds"
+  ]
+}

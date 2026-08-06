@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-45",
+  "title": "Property in Operator",
+  "starterCode": "const obj = {a: 1, b: 2};\nconsole.log('a' in obj);\nconsole.log('c' in obj);",
+  "solution": "const obj = {a: 1, b: 2};\nconsole.log('a' in obj);\nconsole.log('c' in obj);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true\nfalse"
+    }
+  ],
+  "hints": [
+    "in operator checks",
+    "Returns boolean"
+  ]
+}

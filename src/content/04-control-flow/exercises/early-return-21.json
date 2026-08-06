@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-early-return-21",
+  "title": "Null check - null input",
+  "starterCode": "function getLength(str) {\n  if (str === null) return 0;\n  if (str === undefined) return 0;\n  return str.length;\n}\nconsole.log(getLength(null));",
+  "solution": "function getLength(str) {\n  if (str === null) return 0;\n  if (str === undefined) return 0;\n  return str.length;\n}\nconsole.log(getLength(null));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "0"
+    }
+  ],
+  "hints": [
+    "str is null",
+    "First guard returns 0"
+  ]
+}

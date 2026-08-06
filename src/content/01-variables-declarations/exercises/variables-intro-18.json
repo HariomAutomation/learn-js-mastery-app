@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-variables-intro-18",
+  "title": "const array push",
+  "starterCode": "const arr = [1, 2]\narr.push(3)\nconsole.log(arr)",
+  "solution": "const arr = [1, 2]\narr.push(3)\nconsole.log(arr)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[1,2,3]"
+    }
+  ],
+  "hints": [
+    "const allows mutation"
+  ]
+}

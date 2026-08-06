@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-20",
+  "title": "Short circuit OR assignment",
+  "starterCode": "let x = 0;\nconst result = x || (x = 5);\nconsole.log(x);",
+  "solution": "let x = 0;\nconst result = x || (x = 5);\nconsole.log(x);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "5"
+    }
+  ],
+  "hints": [
+    "|| short-circuits on first truthy",
+    "x is 0 (falsy), so assignment happens"
+  ]
+}

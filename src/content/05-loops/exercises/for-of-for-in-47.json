@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-47",
+  "title": "For...In Nested Object",
+  "starterCode": "const config = {\n  db: { host: 'localhost', port: 5432 },\n  app: { name: 'MyApp' }\n};\nfor (const key in config) {\n  if (config.hasOwnProperty(key)) {\n    console.log(key + ': ' + JSON.stringify(config[key]));\n  }\n}",
+  "solution": "const config = {\n  db: { host: 'localhost', port: 5432 },\n  app: { name: 'MyApp' }\n};\nfor (const key in config) {\n  if (config.hasOwnProperty(key)) {\n    console.log(key + ': ' + JSON.stringify(config[key]));\n  }\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "db: {\"host\":\"localhost\",\"port\":5432}\napp: {\"name\":\"MyApp\"}"
+    }
+  ],
+  "hints": [
+    "JSON.stringify to print",
+    "Check own properties"
+  ]
+}

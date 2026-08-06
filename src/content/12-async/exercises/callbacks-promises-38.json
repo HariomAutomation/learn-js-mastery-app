@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-38",
+  "title": "Promise Complete",
+  "starterCode": "// Callbacks → Promises → Async/Await\nconsole.log(\"promises complete\");",
+  "solution": "// Callbacks → Promises → Async/Await\nconsole.log(\"promises complete\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "promises complete"
+    }
+  ],
+  "hints": [
+    "Review callback and promise patterns",
+    "Foundation for async/await"
+  ]
+}

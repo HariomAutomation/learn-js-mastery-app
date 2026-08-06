@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-34",
+  "title": "Delegation Selector Check",
+  "starterCode": "const list = document.querySelector('ul');\nlist.addEventListener('click', function(e) {\n  if (e.target.closest('li')) console.log('li found');\n});",
+  "solution": "const list = document.querySelector('ul');\nlist.addEventListener('click', function(e) {\n  if (e.target.closest('li')) console.log('li found');\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "li found"
+    }
+  ],
+  "hints": [
+    "closest checks ancestors",
+    "Returns element or null"
+  ]
+}

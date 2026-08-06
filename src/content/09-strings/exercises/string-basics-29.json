@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-29",
+  "title": "Includes",
+  "starterCode": "console.log('hello world'.includes('world'));",
+  "solution": "console.log('hello world'.includes('world'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "includes checks substring",
+    "Returns boolean"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-23",
+  "title": "Resizable Panel",
+  "starterCode": "// Mouse events for resizing\nconsole.log(\"resizable panel pattern\");",
+  "solution": "// Mouse events for resizing\nconsole.log(\"resizable panel pattern\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "resizable panel pattern"
+    }
+  ],
+  "hints": [
+    "mousedown on divider",
+    "mousemove to resize"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-43",
+  "title": "If with bitwise AND",
+  "starterCode": "const num = 5;\nif (num & 1) {\n  console.log('odd');\n} else {\n  console.log('even');\n}",
+  "solution": "const num = 5;\nif (num & 1) {\n  console.log('odd');\n} else {\n  console.log('even');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "odd"
+    }
+  ],
+  "hints": [
+    "& is bitwise AND",
+    "5 & 1 = 1, which is truthy"
+  ]
+}

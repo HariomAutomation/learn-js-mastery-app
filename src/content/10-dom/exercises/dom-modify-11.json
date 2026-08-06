@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-11",
+  "title": "className Replace",
+  "starterCode": "const el = document.querySelector('.box');\nel.className = 'new-class';\nconsole.log(el.className);",
+  "solution": "const el = document.querySelector('.box');\nel.className = 'new-class';\nconsole.log(el.className);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "new-class"
+    }
+  ],
+  "hints": [
+    "className replaces all classes",
+    "Use classList for individual changes"
+  ]
+}

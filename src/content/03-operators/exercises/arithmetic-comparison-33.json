@@ -1,0 +1,15 @@
+{
+  "id": "03-operators-arithmetic-comparison-33",
+  "title": "Math.max",
+  "starterCode": "const result = Math.max(10, 20, 5);\nconsole.log(result);",
+  "solution": "const result = Math.max(10, 20, 5);\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "20"
+    }
+  ],
+  "hints": [
+    "Math.max returns the largest value"
+  ]
+}

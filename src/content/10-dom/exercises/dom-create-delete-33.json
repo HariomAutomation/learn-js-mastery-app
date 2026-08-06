@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-33",
+  "title": "Delete Practice",
+  "starterCode": "const list = document.createElement('ul');\n['A', 'B', 'C'].forEach(t => {\n  const li = document.createElement('li');\n  li.textContent = t;\n  list.appendChild(li);\n});\nlist.lastElementChild.remove();\nconsole.log(list.innerHTML);",
+  "solution": "const list = document.createElement('ul');\n['A', 'B', 'C'].forEach(t => {\n  const li = document.createElement('li');\n  li.textContent = t;\n  list.appendChild(li);\n});\nlist.lastElementChild.remove();\nconsole.log(list.innerHTML);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "<li>A</li><li>B</li>"
+    }
+  ],
+  "hints": [
+    "Remove last child with remove()",
+    "Check innerHTML"
+  ]
+}

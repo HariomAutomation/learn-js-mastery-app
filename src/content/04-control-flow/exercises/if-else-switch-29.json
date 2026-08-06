@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-29",
+  "title": "Guard clause with null user",
+  "starterCode": "function processUser(user) {\n  if (!user) return 'no user';\n  if (!user.name) return 'no name';\n  return `Processing ${user.name}`;\n}\nconsole.log(processUser(null));",
+  "solution": "function processUser(user) {\n  if (!user) return 'no user';\n  if (!user.name) return 'no name';\n  return `Processing ${user.name}`;\n}\nconsole.log(processUser(null));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "no user"
+    }
+  ],
+  "hints": [
+    "null is falsy",
+    "First guard returns early"
+  ]
+}

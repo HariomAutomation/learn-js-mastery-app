@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-32",
+  "title": "Private Field Access",
+  "starterCode": "class Secret {\n  #value = 'hidden';\n  getValue() { return this.#value; }\n}\nconst s = new Secret();\nconsole.log(s.getValue());",
+  "solution": "class Secret {\n  #value = 'hidden';\n  getValue() { return this.#value; }\n}\nconst s = new Secret();\nconsole.log(s.getValue());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hidden"
+    }
+  ],
+  "hints": [
+    "Private fields accessible via methods",
+    "Not directly from outside"
+  ]
+}

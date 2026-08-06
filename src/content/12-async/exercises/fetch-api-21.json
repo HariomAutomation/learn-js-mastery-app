@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-21",
+  "title": "Fetch Credentials",
+  "starterCode": "// credentials: 'include' sends cookies\nconsole.log(\"credentials option controls cookies\");",
+  "solution": "// credentials: 'include' sends cookies\nconsole.log(\"credentials option controls cookies\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "credentials option controls cookies"
+    }
+  ],
+  "hints": [
+    "same-origin, include, or omit",
+    "include sends cookies cross-origin"
+  ]
+}

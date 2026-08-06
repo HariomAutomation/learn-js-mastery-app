@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-41",
+  "title": "Prototype Inheritance",
+  "starterCode": "function Parent() { this.type = 'parent'; }\nfunction Child() { Parent.call(this); }\nChild.prototype = Object.create(Parent.prototype);\nconst c = new Child();\nconsole.log(c.type);",
+  "solution": "function Parent() { this.type = 'parent'; }\nfunction Child() { Parent.call(this); }\nChild.prototype = Object.create(Parent.prototype);\nconst c = new Child();\nconsole.log(c.type);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "parent"
+    }
+  ],
+  "hints": [
+    "Object.create for prototype chain",
+    "Call parent constructor"
+  ]
+}

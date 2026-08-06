@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-12",
+  "title": "Class Expression",
+  "starterCode": "const MyClass = class {\n  constructor() { this.val = 42; }\n};\nconsole.log(new MyClass().val);",
+  "solution": "const MyClass = class {\n  constructor() { this.val = 42; }\n};\nconsole.log(new MyClass().val);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "42"
+    }
+  ],
+  "hints": [
+    "Classes can be expressions",
+    "Assign to variable"
+  ]
+}

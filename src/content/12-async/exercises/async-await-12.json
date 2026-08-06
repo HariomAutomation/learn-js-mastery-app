@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-12",
+  "title": "Async Filter",
+  "starterCode": "async function filterAsync(items) {\n  const results = await Promise.all(items.map(async item => {\n    return { item, keep: await Promise.resolve(item > 2) };\n  }));\n  return results.filter(r => r.keep).map(r => r.item);\n}\nfilterAsync([1, 2, 3, 4]).then(r => console.log(r));",
+  "solution": "async function filterAsync(items) {\n  const results = await Promise.all(items.map(async item => {\n    return { item, keep: await Promise.resolve(item > 2) };\n  }));\n  return results.filter(r => r.keep).map(r => r.item);\n}\nfilterAsync([1, 2, 3, 4]).then(r => console.log(r));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3,4"
+    }
+  ],
+  "hints": [
+    "Map to check condition",
+    "Filter by keep property"
+  ]
+}

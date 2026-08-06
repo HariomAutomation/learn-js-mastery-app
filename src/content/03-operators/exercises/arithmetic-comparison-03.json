@@ -1,0 +1,15 @@
+{
+  "id": "03-operators-arithmetic-comparison-03",
+  "title": "Multiply two numbers",
+  "starterCode": "const result = 7 * 6;\nconsole.log(result);",
+  "solution": "const result = 7 * 6;\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "42"
+    }
+  ],
+  "hints": [
+    "Use the * operator"
+  ]
+}

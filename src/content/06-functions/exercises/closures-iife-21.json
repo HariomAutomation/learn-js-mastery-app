@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-closures-iife-21",
+  "title": "Counter Reset",
+  "starterCode": "function makeCounter() {\n  let count = 0;\n  return {\n    increment: () => ++count,\n    getCount: () => count,\n    reset: () => { count = 0; return count; }\n  };\n}\nconst c = makeCounter();\nc.increment();\nc.increment();\nc.increment();\nconsole.log(c.getCount());\nc.reset();\nconsole.log(c.getCount());",
+  "solution": "function makeCounter() {\n  let count = 0;\n  return {\n    increment: () => ++count,\n    getCount: () => count,\n    reset: () => { count = 0; return count; }\n  };\n}\nconst c = makeCounter();\nc.increment();\nc.increment();\nc.increment();\nconsole.log(c.getCount());\nc.reset();\nconsole.log(c.getCount());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3\n0"
+    }
+  ],
+  "hints": [
+    "reset sets count to 0",
+    "Methods share closure"
+  ]
+}

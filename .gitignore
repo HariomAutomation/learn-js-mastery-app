@@ -1,0 +1,10 @@
+node_modules/
+dist/
+dist-electron/
+*.local
+.DS_Store
+exercises-*.mjs
+generate-*.mjs
+exerciseBank-*.mjs
+*.pdf
+/tmp/

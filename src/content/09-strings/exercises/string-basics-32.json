@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-32",
+  "title": "IndexOf",
+  "starterCode": "console.log('hello world'.indexOf('world'));",
+  "solution": "console.log('hello world'.indexOf('world'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "6"
+    }
+  ],
+  "hints": [
+    "indexOf returns index",
+    "-1 if not found"
+  ]
+}

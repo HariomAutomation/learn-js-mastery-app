@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-13",
+  "title": "Deep copy with structuredClone",
+  "starterCode": "const original = { a: { b: 1 } };\nconst copy = ;\nconsole.log(copy.a.b);",
+  "solution": "const original = { a: { b: 1 } };\nconst copy = structuredClone(original);\nconsole.log(copy.a.b);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1"
+    }
+  ],
+  "hints": [
+    "structuredClone creates deep copies",
+    "Nested objects are fully cloned"
+  ]
+}

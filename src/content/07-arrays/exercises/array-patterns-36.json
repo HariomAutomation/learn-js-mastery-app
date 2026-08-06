@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-patterns-36",
+  "title": "Zip Objects",
+  "starterCode": "const keys = ['name', 'age', 'city'];\nconst vals = ['Alice', 25, 'NYC'];\nconst obj = keys.reduce((acc, key, i) => ({ ...acc, [key]: vals[i] }), {});\nconsole.log(obj);",
+  "solution": "const keys = ['name', 'age', 'city'];\nconst vals = ['Alice', 25, 'NYC'];\nconst obj = keys.reduce((acc, key, i) => ({ ...acc, [key]: vals[i] }), {});\nconsole.log(obj);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{ name: 'Alice', age: 25, city: 'NYC' }"
+    }
+  ],
+  "hints": [
+    "Reduce to object",
+    "Pair keys with values"
+  ]
+}

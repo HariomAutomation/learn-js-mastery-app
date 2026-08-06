@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-41",
+  "title": "Slice Practice",
+  "starterCode": "const str = 'abcdef';\nconsole.log(str.slice(-3));",
+  "solution": "const str = 'abcdef';\nconsole.log(str.slice(-3));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "def"
+    }
+  ],
+  "hints": [
+    "Negative index",
+    "From end"
+  ]
+}

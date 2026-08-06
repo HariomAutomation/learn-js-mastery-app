@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-41",
+  "title": "WeakMap holds object keys",
+  "starterCode": "const wm = new WeakMap();\nconst obj = {};\nwm.set(obj, 42);\nconsole.log();",
+  "solution": "const wm = new WeakMap();\nconst obj = {};\nwm.set(obj, 42);\nconsole.log(wm.get(obj));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "42"
+    }
+  ],
+  "hints": [
+    "WeakMap keys must be objects",
+    "It allows garbage collection"
+  ]
+}

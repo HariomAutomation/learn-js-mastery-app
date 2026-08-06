@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-while-29",
+  "title": "Palindrome Check Loop",
+  "starterCode": "const str = \"racecar\";\nlet isPalindrome = true;\nfor (let i = 0; i < str.length / 2; i++) {\n  if (str[i] !== str[str.length - 1 - i]) {\n    isPalindrome = false;\n    break;\n  }\n}\nconsole.log(isPalindrome);",
+  "solution": "const str = \"racecar\";\nlet isPalindrome = true;\nfor (let i = 0; i < str.length / 2; i++) {\n  if (str[i] !== str[str.length - 1 - i]) {\n    isPalindrome = false;\n    break;\n  }\n}\nconsole.log(isPalindrome);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "Compare characters from both ends",
+    "Only check half the string"
+  ]
+}

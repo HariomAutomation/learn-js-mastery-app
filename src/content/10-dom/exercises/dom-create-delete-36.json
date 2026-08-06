@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-36",
+  "title": "cloneNode Separate",
+  "starterCode": "const original = document.createElement('div');\nconst clone = original.cloneNode(true);\noriginal.textContent = 'Changed';\nconsole.log(clone.textContent);",
+  "solution": "const original = document.createElement('div');\nconst clone = original.cloneNode(true);\noriginal.textContent = 'Changed';\nconsole.log(clone.textContent);",
+  "tests": [
+    {
+      "input": [],
+      "expected": ""
+    }
+  ],
+  "hints": [
+    "Clone is a separate node",
+    "Changes to original don't affect clone"
+  ]
+}

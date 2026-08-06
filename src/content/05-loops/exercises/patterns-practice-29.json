@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-patterns-practice-29",
+  "title": "Binary Pattern",
+  "starterCode": "for (let i = 0; i < 4; i++) {\n  let row = '';\n  for (let j = 0; j < 4; j++) {\n    row += (i + j) % 2;\n  }\n  console.log(row);\n}",
+  "solution": "for (let i = 0; i < 4; i++) {\n  let row = '';\n  for (let j = 0; j < 4; j++) {\n    row += (i + j) % 2;\n  }\n  console.log(row);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "0101\n1010\n0101\n1010"
+    }
+  ],
+  "hints": [
+    "Use (i+j)%2",
+    "Alternating pattern"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-08",
+  "title": "Dynamic Elements",
+  "starterCode": "// Delegation works for elements added later\nconsole.log(\"dynamic elements handled\");",
+  "solution": "// Delegation works for elements added later\nconsole.log(\"dynamic elements handled\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "dynamic elements handled"
+    }
+  ],
+  "hints": [
+    "Listener on parent catches new children",
+    "No need to reattach listeners"
+  ]
+}

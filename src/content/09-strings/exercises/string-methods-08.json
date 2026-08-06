@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-methods-08",
+  "title": "IndexOf Not Found",
+  "starterCode": "console.log('hello'.indexOf('xyz'));",
+  "solution": "console.log('hello'.indexOf('xyz'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "-1"
+    }
+  ],
+  "hints": [
+    "-1 when not found",
+    "No match"
+  ]
+}

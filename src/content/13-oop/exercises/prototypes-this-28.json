@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-28",
+  "title": "instanceof Polyfill",
+  "starterCode": "function myInstanceof(obj, Constructor) {\n  let proto = Object.getPrototypeOf(obj);\n  while (proto !== null) {\n    if (proto === Constructor.prototype) return true;\n    proto = Object.getPrototypeOf(proto);\n  }\n  return false;\n}\nconsole.log(myInstanceof(new Date(), Date));",
+  "solution": "function myInstanceof(obj, Constructor) {\n  let proto = Object.getPrototypeOf(obj);\n  while (proto !== null) {\n    if (proto === Constructor.prototype) return true;\n    proto = Object.getPrototypeOf(proto);\n  }\n  return false;\n}\nconsole.log(myInstanceof(new Date(), Date));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "Walk up prototype chain",
+    "Compare with Constructor.prototype"
+  ]
+}

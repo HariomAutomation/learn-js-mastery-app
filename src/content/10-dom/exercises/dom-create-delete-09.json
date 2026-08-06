@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-09",
+  "title": "remove Method",
+  "starterCode": "const parent = document.createElement('div');\nconst child = document.createElement('p');\nparent.appendChild(child);\nchild.remove();\nconsole.log(parent.children.length);",
+  "solution": "const parent = document.createElement('div');\nconst child = document.createElement('p');\nparent.appendChild(child);\nchild.remove();\nconsole.log(parent.children.length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "0"
+    }
+  ],
+  "hints": [
+    "remove() removes element from parent",
+    "Parent has no children after"
+  ]
+}

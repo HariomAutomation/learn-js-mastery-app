@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-45",
+  "title": "For...Of Generator",
+  "starterCode": "function* range(start, end) {\n  for (let i = start; i <= end; i++) {\n    yield i;\n  }\n}\nfor (const num of range(1, 5)) {\n  console.log(num);\n}",
+  "solution": "function* range(start, end) {\n  for (let i = start; i <= end; i++) {\n    yield i;\n  }\n}\nfor (const num of range(1, 5)) {\n  console.log(num);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1\n2\n3\n4\n5"
+    }
+  ],
+  "hints": [
+    "Generator yields values",
+    "for...of works with generators"
+  ]
+}

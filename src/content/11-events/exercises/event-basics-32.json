@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-32",
+  "title": "Event Phase",
+  "starterCode": "document.addEventListener('click', function(e) {\n  console.log(e.eventPhase);\n}, { capture: true });",
+  "solution": "document.addEventListener('click', function(e) {\n  console.log(e.eventPhase);\n}, { capture: true });",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1"
+    }
+  ],
+  "hints": [
+    "Phase 1 is capture, 2 is target, 3 is bubble",
+    "capture phase is 1"
+  ]
+}

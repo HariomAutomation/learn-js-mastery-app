@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-methods-24",
+  "title": "Split Join Roundtrip",
+  "starterCode": "const str = 'hello world';\nconst result = str.split(' ').join('-');\nconsole.log(result);",
+  "solution": "const str = 'hello world';\nconst result = str.split(' ').join('-');\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hello-world"
+    }
+  ],
+  "hints": [
+    "Split then join",
+    "Change separator"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-13",
+  "title": "Guard clause returns early",
+  "starterCode": "function greet(name) {\n  if (!name) return;\n  console.log(`Hello, ${name}!`);\n}\ngreet(null);",
+  "solution": "function greet(name) {\n  if (!name) return;\n  console.log(`Hello, ${name}!`);\n}\ngreet(null);",
+  "tests": [
+    {
+      "input": [],
+      "expected": ""
+    }
+  ],
+  "hints": [
+    "null is falsy",
+    "Function returns before console.log"
+  ]
+}

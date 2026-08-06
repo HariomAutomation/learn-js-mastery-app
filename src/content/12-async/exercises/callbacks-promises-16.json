@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-16",
+  "title": "Retry Pattern",
+  "starterCode": "function retry(fn, attempts) {\n  return fn().catch(err => {\n    if (attempts <= 1) throw err;\n    return retry(fn, attempts - 1);\n  });\n}\nlet count = 0;\nretry(() => new Promise((res, rej) => {\n  count++;\n  if (count < 3) rej('fail');\n  else res('success');\n}), 3).then(r => console.log(r));",
+  "solution": "function retry(fn, attempts) {\n  return fn().catch(err => {\n    if (attempts <= 1) throw err;\n    return retry(fn, attempts - 1);\n  });\n}\nlet count = 0;\nretry(() => new Promise((res, rej) => {\n  count++;\n  if (count < 3) rej('fail');\n  else res('success');\n}), 3).then(r => console.log(r));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "success"
+    }
+  ],
+  "hints": [
+    "Catch and retry on failure",
+    "Decrement attempts counter"
+  ]
+}

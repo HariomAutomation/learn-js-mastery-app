@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-09",
+  "title": "Closure basics",
+  "starterCode": "function counter() {\n  let count = 0\n  return () => ++count\n}\nconst c = counter()\nconsole.log(c(), c(), c())",
+  "solution": "function counter() {\n  let count = 0\n  return () => ++count\n}\nconst c = counter()\nconsole.log(c(), c(), c())",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1 2 3"
+    }
+  ],
+  "hints": [
+    "Closure captures outer variable"
+  ]
+}

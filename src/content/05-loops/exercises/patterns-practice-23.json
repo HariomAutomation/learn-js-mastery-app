@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-patterns-practice-23",
+  "title": "Reverse String Loop",
+  "starterCode": "const str = \"abcdef\";\nlet result = \"\";\nfor (let i = str.length - 1; i >= 0; i--) {\n  result += str[i];\n}\nconsole.log(result);",
+  "solution": "const str = \"abcdef\";\nlet result = \"\";\nfor (let i = str.length - 1; i >= 0; i--) {\n  result += str[i];\n}\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "fedcba"
+    }
+  ],
+  "hints": [
+    "Start at end",
+    "Decrement index"
+  ]
+}

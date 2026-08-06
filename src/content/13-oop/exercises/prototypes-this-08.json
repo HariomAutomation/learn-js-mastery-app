@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-08",
+  "title": "Bind Method",
+  "starterCode": "function greet() {\n  console.log(this.name);\n}\nconst bound = greet.bind({ name: 'John' });\nbound();",
+  "solution": "function greet() {\n  console.log(this.name);\n}\nconst bound = greet.bind({ name: 'John' });\nbound();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "John"
+    }
+  ],
+  "hints": [
+    "bind returns new function",
+    "this is permanently set"
+  ]
+}

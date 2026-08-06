@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-early-return-15",
+  "title": "Fail fast on non-array",
+  "starterCode": "function processArray(arr) {\n  if (!Array.isArray(arr)) return [];\n  if (arr.length === 0) return [];\n  return arr.map(x => x * 2);\n}\nconsole.log(processArray('not an array'));",
+  "solution": "function processArray(arr) {\n  if (!Array.isArray(arr)) return [];\n  if (arr.length === 0) return [];\n  return arr.map(x => x * 2);\n}\nconsole.log(processArray('not an array'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": ""
+    }
+  ],
+  "hints": [
+    "'not an array' is not an array",
+    "Returns empty array"
+  ]
+}

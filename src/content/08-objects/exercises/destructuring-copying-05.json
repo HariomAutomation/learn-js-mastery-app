@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-05",
+  "title": "Nested Destructuring",
+  "starterCode": "const obj = {user: {name: 'Alice', age: 25}};\nconst {user: {name, age}} = obj;\nconsole.log(name, age);",
+  "solution": "const obj = {user: {name: 'Alice', age: 25}};\nconst {user: {name, age}} = obj;\nconsole.log(name, age);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Alice 25"
+    }
+  ],
+  "hints": [
+    "Nested object destructuring",
+    "Drill down properties"
+  ]
+}

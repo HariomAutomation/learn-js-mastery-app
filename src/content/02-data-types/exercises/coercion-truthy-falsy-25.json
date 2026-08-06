@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-25",
+  "title": "Numeric comparison",
+  "starterCode": "console.log(2 > \"12\");",
+  "solution": "console.log(2 > \"12\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "false"
+    }
+  ],
+  "hints": [
+    "Number on left converts string to number",
+    "2 > 12 is false"
+  ]
+}

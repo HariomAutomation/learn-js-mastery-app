@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-function-basics-25",
+  "title": "Side Effects Vs Pure",
+  "starterCode": "let counter = 0;\nfunction increment() {\n  counter++;\n  console.log(counter);\n}\nincrement();\nincrement();",
+  "solution": "let counter = 0;\nfunction increment() {\n  counter++;\n  console.log(counter);\n}\nincrement();\nincrement();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1\n2"
+    }
+  ],
+  "hints": [
+    "Function modifies external variable",
+    "This is a side effect"
+  ]
+}

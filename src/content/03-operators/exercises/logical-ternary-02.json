@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-02",
+  "title": "Logical AND with falsy first",
+  "starterCode": "const result = 0 && 42;\nconsole.log(result);",
+  "solution": "const result = 0 && 42;\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "0"
+    }
+  ],
+  "hints": [
+    "&& short-circuits on first falsy",
+    "0 is falsy"
+  ]
+}

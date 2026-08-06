@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-17",
+  "title": "Optional chaining exists",
+  "starterCode": "const user = { name: 'Alice', address: { street: '123 Main St' } };\nconst result = user?.address?.street;\nconsole.log(result);",
+  "solution": "const user = { name: 'Alice', address: { street: '123 Main St' } };\nconst result = user?.address?.street;\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "123 Main St"
+    }
+  ],
+  "hints": [
+    "?. safely accesses nested properties",
+    "All properties exist"
+  ]
+}

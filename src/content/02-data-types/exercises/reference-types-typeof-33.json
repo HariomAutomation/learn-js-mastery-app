@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-33",
+  "title": "RegExp is object",
+  "starterCode": "const r = /abc/;\nconsole.log();",
+  "solution": "const r = /abc/;\nconsole.log(typeof r);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "object"
+    }
+  ],
+  "hints": [
+    "Regular expressions are objects",
+    "typeof returns 'object'"
+  ]
+}

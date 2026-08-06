@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-02",
+  "title": "Revealing Module",
+  "starterCode": "const bank = (function() {\n  let balance = 0;\n  function deposit(amount) { balance += amount; }\n  function getBalance() { return balance; }\n  return { deposit, getBalance };\n})();\nbank.deposit(100);\nconsole.log(bank.getBalance());",
+  "solution": "const bank = (function() {\n  let balance = 0;\n  function deposit(amount) { balance += amount; }\n  function getBalance() { return balance; }\n  return { deposit, getBalance };\n})();\nbank.deposit(100);\nconsole.log(bank.getBalance());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "100"
+    }
+  ],
+  "hints": [
+    "Define functions privately",
+    "Return object mapping names"
+  ]
+}

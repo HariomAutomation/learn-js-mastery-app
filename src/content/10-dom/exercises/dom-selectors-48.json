@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-48",
+  "title": "closest Upward Traversal",
+  "starterCode": "// closest traverses upward from element\nconsole.log(\"upward\");",
+  "solution": "// closest traverses upward from element\nconsole.log(\"upward\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "upward"
+    }
+  ],
+  "hints": [
+    "closest goes up the DOM tree",
+    "From element to root"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-patterns-practice-17",
+  "title": "Palindrome Number Check",
+  "starterCode": "let num = 1221;\nlet orig = num;\nlet rev = 0;\nwhile (num > 0) {\n  rev = rev * 10 + num % 10;\n  num = Math.floor(num / 10);\n}\nconsole.log(orig === rev);",
+  "solution": "let num = 1221;\nlet orig = num;\nlet rev = 0;\nwhile (num > 0) {\n  rev = rev * 10 + num % 10;\n  num = Math.floor(num / 10);\n}\nconsole.log(orig === rev);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "Save original",
+    "Reverse and compare"
+  ]
+}

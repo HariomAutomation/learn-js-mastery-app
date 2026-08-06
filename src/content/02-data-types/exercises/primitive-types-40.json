@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-40",
+  "title": "Pad a string to length",
+  "starterCode": "const str = \"5\";\nconsole.log();",
+  "solution": "const str = \"5\";\nconsole.log(str.padStart(3, \"0\"));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "005"
+    }
+  ],
+  "hints": [
+    "padStart adds characters to the beginning",
+    "Second argument is the padding character"
+  ]
+}

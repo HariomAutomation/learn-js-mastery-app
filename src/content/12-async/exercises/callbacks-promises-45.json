@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-45",
+  "title": "Promise Chain Error",
+  "starterCode": "Promise.resolve(1)\n  .then(x => { throw new Error('oops'); })\n  .catch(err => console.log(err.message));",
+  "solution": "Promise.resolve(1)\n  .then(x => { throw new Error('oops'); })\n  .catch(err => console.log(err.message));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "oops"
+    }
+  ],
+  "hints": [
+    "Throw in then goes to catch",
+    "Error is caught"
+  ]
+}

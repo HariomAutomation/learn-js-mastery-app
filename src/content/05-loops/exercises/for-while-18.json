@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-while-18",
+  "title": "While Parsing Input",
+  "starterCode": "let num = 12345;\nlet digits = 0;\nwhile (num > 0) {\n  digits++;\n  num = Math.floor(num / 10);\n}\nconsole.log(digits);",
+  "solution": "let num = 12345;\nlet digits = 0;\nwhile (num > 0) {\n  digits++;\n  num = Math.floor(num / 10);\n}\nconsole.log(digits);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "5"
+    }
+  ],
+  "hints": [
+    "Divide by 10 to remove last digit",
+    "Count each iteration"
+  ]
+}

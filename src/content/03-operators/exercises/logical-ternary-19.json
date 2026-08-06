@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-19",
+  "title": "Short circuit AND assignment",
+  "starterCode": "let x = 0;\nconst result = x && (x = 5);\nconsole.log(x);",
+  "solution": "let x = 0;\nconst result = x && (x = 5);\nconsole.log(x);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "0"
+    }
+  ],
+  "hints": [
+    "&& short-circuits on first falsy",
+    "x is 0 (falsy), so assignment never happens"
+  ]
+}

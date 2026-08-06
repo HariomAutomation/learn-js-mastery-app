@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-patterns-practice-45",
+  "title": "String Compression",
+  "starterCode": "function compress(str) {\n  let result = \"\";\n  let count = 1;\n  for (let i = 1; i <= str.length; i++) {\n    if (i === str.length || str[i] !== str[i-1]) {\n      result += str[i-1] + count;\n      count = 1;\n    } else {\n      count++;\n    }\n  }\n  return result;\n}\nconsole.log(compress(\"aaabbcc\"));",
+  "solution": "function compress(str) {\n  let result = \"\";\n  let count = 1;\n  for (let i = 1; i <= str.length; i++) {\n    if (i === str.length || str[i] !== str[i-1]) {\n      result += str[i-1] + count;\n      count = 1;\n    } else {\n      count++;\n    }\n  }\n  return result;\n}\nconsole.log(compress(\"aaabbcc\"));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "a3b2c2"
+    }
+  ],
+  "hints": [
+    "Count consecutive chars",
+    "Build result string"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-11",
+  "title": "Object FromEntries",
+  "starterCode": "const entries = [['a', 1], ['b', 2], ['c', 3]];\nconst obj = Object.fromEntries(____);\nconsole.log(obj);",
+  "solution": "const entries = [['a', 1], ['b', 2], ['c', 3]];\nconst obj = Object.fromEntries(entries);\nconsole.log(obj);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{ a: 1, b: 2, c: 3 }"
+    }
+  ],
+  "hints": [
+    "fromEntries converts pairs",
+    "To object"
+  ]
+}

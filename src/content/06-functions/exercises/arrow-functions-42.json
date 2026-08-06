@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-42",
+  "title": "Arrow Flat Map",
+  "starterCode": "const arr = [[1, 2], [3, 4], [5, 6]];\nconst flat = arr.flatMap(x => x);\nconsole.log(flat);",
+  "solution": "const arr = [[1, 2], [3, 4], [5, 6]];\nconst flat = arr.flatMap(x => x);\nconsole.log(flat);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 1, 2, 3, 4, 5, 6 ]"
+    }
+  ],
+  "hints": [
+    "flatMap flattens one level",
+    "Arrow returns array"
+  ]
+}

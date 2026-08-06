@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-33",
+  "title": "style Priority",
+  "starterCode": "// Inline styles have highest priority\nconsole.log(\"inline styles have highest priority\");",
+  "solution": "// Inline styles have highest priority\nconsole.log(\"inline styles have highest priority\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "inline styles have highest priority"
+    }
+  ],
+  "hints": [
+    "Inline styles override stylesheet",
+    "Unless !important is used"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-20",
+  "title": "Merge Objects",
+  "starterCode": "const defaults = {color: 'red', size: 'medium'};\nconst custom = {size: 'large', weight: 'heavy'};\nconst result = {...defaults, ...custom};\nconsole.log(result);",
+  "solution": "const defaults = {color: 'red', size: 'medium'};\nconst custom = {size: 'large', weight: 'heavy'};\nconst result = {...defaults, ...custom};\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{ color: 'red', size: 'large', weight: 'heavy' }"
+    }
+  ],
+  "hints": [
+    "Spread merge",
+    "Custom overrides defaults"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "06-functions-higher-order-functions",
+  "title": "Higher-order functions se magic",
+  "starterCode": "// 1. repeat(n, fn) — fn ko n baar call kare\nfunction repeat(n, fn) {\n  // yahan likho\n}\n\n// 2. once(fn) — sirf ek baar call ho, baaki ignore\nfunction once(fn) {\n  // yahan likho\n}\n\n// Test repeat\nrepeat(3, () => console.log(\"Hello!\"))\n\n// Test once\nconst greet = once((name) => console.log(\"Hi \" + name))\ngreet(\"Riya\")  // Hi Riya\n-greet(\"Priya\") // Riya duplicate nahi hona chahiye\n",
+  "solution": "function repeat(n, fn) {\n  for (let i = 0; i < n; i++) fn()\n}\n\nfunction once(fn) {\n  let called = false\n  return function(...args) {\n    if (!called) {\n      called = true\n      return fn(...args)\n    }\n  }\n}\n\nrepeat(3, () => console.log(\"Hello!\"))\nconst greet = once((name) => console.log(\"Hi \" + name))\ngreet(\"Riya\")\ngreet(\"Priya\")",
+  "tests": [{ "input": [], "expected": "Hello!\nHello!\nHello!\nHi Riya" }],
+  "hints": [
+    "Higher-order function: function jo function leta ya deta hai",
+    "repeat mein for loop chalao n baar",
+    "once mein ek flag variable rakho — true hone ke baad call mat karo"
+  ]
+}

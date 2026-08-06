@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-var-let-const-21",
+  "title": "const getter setter",
+  "starterCode": "const obj = { _x: 1, get x() { return this._x } }\nconsole.log(obj.x)",
+  "solution": "const obj = { _x: 1, get x() { return this._x } }\nconsole.log(obj.x)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1"
+    }
+  ],
+  "hints": [
+    "getter returns value"
+  ]
+}

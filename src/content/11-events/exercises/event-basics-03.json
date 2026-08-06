@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-03",
+  "title": "Click Event",
+  "starterCode": "const btn = document.querySelector('button');\nbtn.addEventListener('click', function(e) {\n  console.log(e.type);\n});",
+  "solution": "const btn = document.querySelector('button');\nbtn.addEventListener('click', function(e) {\n  console.log(e.type);\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "click"
+    }
+  ],
+  "hints": [
+    "Event object has type property",
+    "click event type is 'click'"
+  ]
+}

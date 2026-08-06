@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-43",
+  "title": "Getter Property",
+  "starterCode": "class Rectangle {\n  constructor(w, h) { this.w = w; this.h = h; }\n  get area() { return this.w * this.h; }\n}\nconsole.log(new Rectangle(3, 4).area);",
+  "solution": "class Rectangle {\n  constructor(w, h) { this.w = w; this.h = h; }\n  get area() { return this.w * this.h; }\n}\nconsole.log(new Rectangle(3, 4).area);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "12"
+    }
+  ],
+  "hints": [
+    "get creates getter",
+    "Access like property"
+  ]
+}

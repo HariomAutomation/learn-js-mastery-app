@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-24",
+  "title": "Fetch Retry",
+  "starterCode": "async function fetchRetry(url, retries) {\n  for (let i = 0; i < retries; i++) {\n    try {\n      const res = await fetch(url);\n      if (res.ok) return res;\n    } catch (e) {}\n  }\n  throw new Error('failed');\n}\nconsole.log(\"retry pattern defined\");",
+  "solution": "async function fetchRetry(url, retries) {\n  for (let i = 0; i < retries; i++) {\n    try {\n      const res = await fetch(url);\n      if (res.ok) return res;\n    } catch (e) {}\n  }\n  throw new Error('failed');\n}\nconsole.log(\"retry pattern defined\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "retry pattern defined"
+    }
+  ],
+  "hints": [
+    "Loop with try/catch",
+    "Return on success"
+  ]
+}

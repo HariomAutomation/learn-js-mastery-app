@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-41",
+  "title": "Use includes to check substring",
+  "starterCode": "const str = \"Hello World\";\nconsole.log();",
+  "solution": "const str = \"Hello World\";\nconsole.log(str.includes(\"World\"));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "includes returns a boolean",
+    "Check if substring exists in string"
+  ]
+}

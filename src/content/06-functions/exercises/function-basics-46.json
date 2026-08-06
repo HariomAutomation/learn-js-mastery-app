@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-function-basics-46",
+  "title": "Mapper Function",
+  "starterCode": "function createMapper(transform) {\n  return (arr) => arr.map(transform);\n}\nconst doubleAll = createMapper(x => x * 2);\nconsole.log(doubleAll([1, 2, 3]));",
+  "solution": "function createMapper(transform) {\n  return (arr) => arr.map(transform);\n}\nconst doubleAll = createMapper(x => x * 2);\nconsole.log(doubleAll([1, 2, 3]));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 2, 4, 6 ]"
+    }
+  ],
+  "hints": [
+    "Return mapper function",
+    "Use map inside"
+  ]
+}

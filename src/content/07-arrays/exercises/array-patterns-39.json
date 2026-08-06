@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-patterns-39",
+  "title": "Group By Function",
+  "starterCode": "const nums = [1, 2, 3, 4, 5, 6];\nconst grouped = nums.reduce((acc, n) => {\n  const key = n % 2 === 0 ? 'even' : 'odd';\n  acc[key] = acc[key] || [];\n  acc[key].push(n);\n  return acc;\n}, {});\nconsole.log(grouped);",
+  "solution": "const nums = [1, 2, 3, 4, 5, 6];\nconst grouped = nums.reduce((acc, n) => {\n  const key = n % 2 === 0 ? 'even' : 'odd';\n  acc[key] = acc[key] || [];\n  acc[key].push(n);\n  return acc;\n}, {});\nconsole.log(grouped);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{ odd: [ 1, 3, 5 ], even: [ 2, 4, 6 ] }"
+    }
+  ],
+  "hints": [
+    "Group by odd/even",
+    "Use ternary for key"
+  ]
+}

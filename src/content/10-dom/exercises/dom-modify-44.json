@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-44",
+  "title": "getAttribute Default",
+  "starterCode": "const el = document.querySelector('div');\nconst role = el.getAttribute('role');\nconsole.log(role);",
+  "solution": "const el = document.querySelector('div');\nconst role = el.getAttribute('role');\nconsole.log(role);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "null"
+    }
+  ],
+  "hints": [
+    "getAttribute returns null if not set",
+    "Does not throw error"
+  ]
+}

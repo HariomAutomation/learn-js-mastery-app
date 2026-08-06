@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-34",
+  "title": "classList Length",
+  "starterCode": "const el = document.querySelector('.box');\nconsole.log(el.classList.length);",
+  "solution": "const el = document.querySelector('.box');\nconsole.log(el.classList.length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1"
+    }
+  ],
+  "hints": [
+    "classList.length gives number of classes",
+    "Box has one class"
+  ]
+}

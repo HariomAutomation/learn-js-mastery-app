@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-34",
+  "title": "Fragment Efficiency",
+  "starterCode": "// DocumentFragment avoids reflows during batch operations\nconsole.log(\"fragment is efficient\");",
+  "solution": "// DocumentFragment avoids reflows during batch operations\nconsole.log(\"fragment is efficient\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "fragment is efficient"
+    }
+  ],
+  "hints": [
+    "Fragments don't trigger layout",
+    "Single reflow when appended"
+  ]
+}

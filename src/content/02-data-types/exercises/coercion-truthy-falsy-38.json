@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-38",
+  "title": "Logical NOT converts to boolean",
+  "starterCode": "console.log(!0);",
+  "solution": "console.log(!0);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "! converts to boolean",
+    "0 is falsy, so !0 is true"
+  ]
+}

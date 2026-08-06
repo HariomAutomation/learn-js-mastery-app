@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-36",
+  "title": "Class typeof",
+  "starterCode": "class Dog {}\nconsole.log();",
+  "solution": "class Dog {}\nconsole.log(typeof Dog);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "function"
+    }
+  ],
+  "hints": [
+    "Classes are syntactic sugar for functions",
+    "typeof returns 'function'"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-21",
+  "title": "Composite",
+  "starterCode": "class Component {\n  operation() { return 0; }\n}\nclass Leaf extends Component {\n  constructor(val) { super(); this.val = val; }\n  operation() { return this.val; }\n}\nclass Composite extends Component {\n  constructor() { super(); this.children = []; }\n  add(child) { this.children.push(child); }\n  operation() { return this.children.reduce((s, c) => s + c.operation(), 0); }\n}\nconst tree = new Composite();\ntree.add(new Leaf(1));\ntree.add(new Leaf(2));\nconsole.log(tree.operation());",
+  "solution": "class Component {\n  operation() { return 0; }\n}\nclass Leaf extends Component {\n  constructor(val) { super(); this.val = val; }\n  operation() { return this.val; }\n}\nclass Composite extends Component {\n  constructor() { super(); this.children = []; }\n  add(child) { this.children.push(child); }\n  operation() { return this.children.reduce((s, c) => s + c.operation(), 0); }\n}\nconst tree = new Composite();\ntree.add(new Leaf(1));\ntree.add(new Leaf(2));\nconsole.log(tree.operation());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3"
+    }
+  ],
+  "hints": [
+    "Tree structure of components",
+    "Composite contains children"
+  ]
+}

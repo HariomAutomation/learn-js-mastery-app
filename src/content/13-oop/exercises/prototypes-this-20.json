@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-20",
+  "title": "Prototype Pollution",
+  "starterCode": "// Warning: prototype pollution is a security risk\nconst obj = {};\nObject.prototype.polluted = 'yes';\nconsole.log({}.polluted);",
+  "solution": "// Warning: prototype pollution is a security risk\nconst obj = {};\nObject.prototype.polluted = 'yes';\nconsole.log({}.polluted);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "yes"
+    }
+  ],
+  "hints": [
+    "Modifying Object.prototype affects all",
+    "Security vulnerability"
+  ]
+}

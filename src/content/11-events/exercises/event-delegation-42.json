@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-42",
+  "title": "Closest Method",
+  "starterCode": "const inner = document.querySelector('.inner');\ninner.addEventListener('click', function(e) {\n  const parent = e.target.closest('.parent');\n  console.log(parent ? 'found' : 'not found');\n});",
+  "solution": "const inner = document.querySelector('.inner');\ninner.addEventListener('click', function(e) {\n  const parent = e.target.closest('.parent');\n  console.log(parent ? 'found' : 'not found');\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "found"
+    }
+  ],
+  "hints": [
+    "closest finds ancestor matching selector",
+    "Returns element or null"
+  ]
+}

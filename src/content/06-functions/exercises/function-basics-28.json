@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-function-basics-28",
+  "title": "Closure Counter",
+  "starterCode": "function createCounter() {\n  let count = 0;\n  return function() {\n    return ++count;\n  };\n}\nconst counter = createCounter();\nconsole.log(counter());\nconsole.log(counter());\nconsole.log(counter());",
+  "solution": "function createCounter() {\n  let count = 0;\n  return function() {\n    return ++count;\n  };\n}\nconst counter = createCounter();\nconsole.log(counter());\nconsole.log(counter());\nconsole.log(counter());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1\n2\n3"
+    }
+  ],
+  "hints": [
+    "Closure captures count",
+    "Increment and return"
+  ]
+}

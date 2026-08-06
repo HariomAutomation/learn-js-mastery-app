@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-21",
+  "title": "Drag Event",
+  "starterCode": "const el = document.querySelector('.draggable');\nel.addEventListener('dragstart', function(e) {\n  console.log('dragging');\n});",
+  "solution": "const el = document.querySelector('.draggable');\nel.addEventListener('dragstart', function(e) {\n  console.log('dragging');\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "dragging"
+    }
+  ],
+  "hints": [
+    "dragstart fires when drag begins",
+    "Set dataTransfer in handler"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-41",
+  "title": "adoptNode vs importNode",
+  "starterCode": "// adoptNode moves node, importNode copies it\nconsole.log(\"adopt moves, import copies\");",
+  "solution": "// adoptNode moves node, importNode copies it\nconsole.log(\"adopt moves, import copies\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "adopt moves, import copies"
+    }
+  ],
+  "hints": [
+    "adoptNode transfers ownership",
+    "importNode creates a copy"
+  ]
+}

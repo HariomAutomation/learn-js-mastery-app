@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-46",
+  "title": "Object.entries returns pairs",
+  "starterCode": "const obj = { x: 1, y: 2 };\nconsole.log();",
+  "solution": "const obj = { x: 1, y: 2 };\nconsole.log(Object.entries(obj));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "x,1,y,2"
+    }
+  ],
+  "hints": [
+    "Object.entries returns [key, value] pairs",
+    "Each pair is an array"
+  ]
+}

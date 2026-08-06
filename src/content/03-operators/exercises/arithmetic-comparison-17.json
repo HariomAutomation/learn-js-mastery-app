@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-arithmetic-comparison-17",
+  "title": "Zero divided by zero",
+  "starterCode": "const result = 0 / 0;\nconsole.log(result);",
+  "solution": "const result = 0 / 0;\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "NaN"
+    }
+  ],
+  "hints": [
+    "0/0 is mathematically undefined",
+    "JavaScript returns NaN"
+  ]
+}

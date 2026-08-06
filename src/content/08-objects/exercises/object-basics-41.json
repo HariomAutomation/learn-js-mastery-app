@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-41",
+  "title": "Complete 4",
+  "starterCode": "const obj = {a: 1, b: 2};\nconst result = Object.keys(obj).reduce((acc, key) => {\n  acc[key.toUpperCase()] = obj[key];\n  return acc;\n}, {});\nconsole.log(result);",
+  "solution": "const obj = {a: 1, b: 2};\nconst result = Object.keys(obj).reduce((acc, key) => {\n  acc[key.toUpperCase()] = obj[key];\n  return acc;\n}, {});\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{ A: 1, B: 2 }"
+    }
+  ],
+  "hints": [
+    "Uppercase keys",
+    "Reduce to new object"
+  ]
+}

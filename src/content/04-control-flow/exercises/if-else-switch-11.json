@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-11",
+  "title": "Truthy number condition",
+  "starterCode": "const count = 0;\nif (count) {\n  console.log('has count');\n} else {\n  console.log('no count');\n}",
+  "solution": "const count = 0;\nif (count) {\n  console.log('has count');\n} else {\n  console.log('no count');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "no count"
+    }
+  ],
+  "hints": [
+    "0 is falsy",
+    "else block executes"
+  ]
+}

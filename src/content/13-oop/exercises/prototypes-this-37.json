@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-37",
+  "title": "Object Create",
+  "starterCode": "const proto = { greet() { return 'hello'; } };\nconst obj = Object.create(proto);\nconsole.log(obj.greet());",
+  "solution": "const proto = { greet() { return 'hello'; } };\nconst obj = Object.create(proto);\nconsole.log(obj.greet());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hello"
+    }
+  ],
+  "hints": [
+    "Object.create creates with prototype",
+    "Inherits from proto"
+  ]
+}

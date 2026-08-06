@@ -1,0 +1,59 @@
+[
+  {
+    "question": "Arrow function mein 'this' kahan se aata hai?",
+    "options": ["Calling context se", "Lexical (parent) scope se", "Global scope se", "Khud ka this hota hai"],
+    "correctIndex": 1,
+    "explanation": "Arrow function ka this lexical scope se aata hai — jahan function defined hai, wahan ka this use hota hai."
+  },
+  {
+    "question": "Closure kya hota hai?",
+    "options": [
+      "Function jo object return karta hai",
+      "Function jo parent scope ke variables ko yaad rakhta hai",
+      "IIFE ka doosra naam",
+      "Arrow function"
+    ],
+    "correctIndex": 1,
+    "explanation": "Closure = function jo apne parent scope ke variables ko access kar sakta hai, parent function finish hone ke baad bhi."
+  },
+  {
+    "question": "Higher-Order Function kya hota hai?",
+    "options": ["Jo sirf numbers par kaam kare", "Jo function ko argument le ya function return kare", "Jo arrow function ho", "Jo async ho"],
+    "correctIndex": 1,
+    "explanation": "HOF = function jo function ko argument leta hai ya function return karta hai. map, filter, reduce sab HOF hain."
+  },
+  {
+    "question": "Rest parameter (...nums) kya karta hai?",
+    "options": ["Array ko spread karta hai", "Saare arguments ko array mein collect karta hai", "Function ko immediately call karta hai", "Object copy karta hai"],
+    "correctIndex": 1,
+    "explanation": "Rest parameter saare passed arguments ko ek array mein collect karta hai. Function ke parameter mein ... use hota hai."
+  },
+  {
+    "question": "IIFE ka full form kya hai?",
+    "options": ["Internal Invocation Function Event", "Immediately Invoked Function Expression", "Inline Function Expression", "Iterated Function Execution"],
+    "correctIndex": 1,
+    "explanation": "IIFE = Immediately Invoked Function Expression. Define karte hi execute ho jaata hai. Private scope create karne ke liye use hota hai."
+  },
+  {
+    "question": "Function declaration aur function expression mein kya farq hai?",
+    "options": [
+      "Koi farq nahi",
+      "Declaration hoisted hota hai, expression nahi",
+      "Expression hoisted hota hai, declaration nahi",
+      "Expression sirf arrow functions mein use hota hai"
+    ],
+    "correctIndex": 1,
+    "explanation": "Function declaration hoisted hota hai (pehle call kar sakte hain). Function expression (const fn = function() {}) hoisted nahi hota."
+  },
+  {
+    "question": "Pure function ki definition kya hai?",
+    "options": [
+      "Jo sirf numbers par kaam kare",
+      "Same input, same output, no side effects",
+      "Jo async ho",
+      "Jo array return kare"
+    ],
+    "correctIndex": 1,
+    "explanation": "Pure function: same input → same output. Koi external state change nahi karta. Predictable aur testable hota hai."
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-01",
+  "title": "Reverse String",
+  "starterCode": "function reverse(str) {\n  return str.split('').reverse().join('');\n}\nconsole.log(reverse('hello'));",
+  "solution": "function reverse(str) {\n  return str.split('').reverse().join('');\n}\nconsole.log(reverse('hello'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "olleh"
+    }
+  ],
+  "hints": [
+    "Split to array, reverse, join",
+    "Classic pattern"
+  ]
+}

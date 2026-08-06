@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-31",
+  "title": "Interview Questions",
+  "starterCode": "// class, extends, super, private, static\nconsole.log(\"class interview topics\");",
+  "solution": "// class, extends, super, private, static\nconsole.log(\"class interview topics\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "class interview topics"
+    }
+  ],
+  "hints": [
+    "Know class syntax well",
+    "Understand inheritance"
+  ]
+}

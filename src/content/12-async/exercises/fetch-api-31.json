@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-31",
+  "title": "Fetch GET Pattern",
+  "starterCode": "// fetch('/api/data')\n//   .then(r => r.json())\n//   .then(data => console.log(data))\nconsole.log(\"GET pattern\");",
+  "solution": "// fetch('/api/data')\n//   .then(r => r.json())\n//   .then(data => console.log(data))\nconsole.log(\"GET pattern\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "GET pattern"
+    }
+  ],
+  "hints": [
+    "Default method is GET",
+    "Chain json() to parse"
+  ]
+}

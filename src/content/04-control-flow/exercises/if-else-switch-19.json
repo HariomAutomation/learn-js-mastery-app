@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-19",
+  "title": "Null check with if",
+  "starterCode": "const user = null;\nif (user !== null) {\n  console.log(user.name);\n} else {\n  console.log('no user');\n}",
+  "solution": "const user = null;\nif (user !== null) {\n  console.log(user.name);\n} else {\n  console.log('no user');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "no user"
+    }
+  ],
+  "hints": [
+    "null !== null is false",
+    "else block executes"
+  ]
+}

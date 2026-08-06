@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-methods-19",
+  "title": "Reverse",
+  "starterCode": "const arr = [1, 2, 3, 4];\narr.____();\nconsole.log(arr);",
+  "solution": "const arr = [1, 2, 3, 4];\narr.reverse();\nconsole.log(arr);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 4, 3, 2, 1 ]"
+    }
+  ],
+  "hints": [
+    "reverse mutates array",
+    "Reverses in place"
+  ]
+}

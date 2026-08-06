@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-49",
+  "title": "If with template literal condition",
+  "starterCode": "const name = \"Alice\";\nif (`Hello, ${name}` === \"Hello, Alice\") {\n  console.log(\"match\");\n} else {\n  console.log(\"no match\");\n}",
+  "solution": "const name = \"Alice\";\nif (`Hello, ${name}` === \"Hello, Alice\") {\n  console.log(\"match\");\n} else {\n  console.log(\"no match\");\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "match"
+    }
+  ],
+  "hints": [
+    "Template literal produces 'Hello, Alice'",
+    "Comparison is true"
+  ]
+}

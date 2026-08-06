@@ -1,0 +1,15 @@
+{
+  "id": "03-operators-arithmetic-comparison-39",
+  "title": "Compound multiplication (*=)",
+  "starterCode": "let x = 5;\nx *= 4;\nconsole.log(x);",
+  "solution": "let x = 5;\nx *= 4;\nconsole.log(x);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "20"
+    }
+  ],
+  "hints": [
+    "x *= 4 is the same as x = x * 4"
+  ]
+}

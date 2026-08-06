@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-33",
+  "title": "DefineProperty Configurable",
+  "starterCode": "const obj = {};\nObject.defineProperty(obj, 'x', {value: 10, configurable: false});\ntry {\n  delete obj.x;\n} catch(e) {}\nconsole.log(obj.x);",
+  "solution": "const obj = {};\nObject.defineProperty(obj, 'x', {value: 10, configurable: false});\ntry {\n  delete obj.x;\n} catch(e) {}\nconsole.log(obj.x);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10"
+    }
+  ],
+  "hints": [
+    "configurable: false",
+    "Cannot delete"
+  ]
+}

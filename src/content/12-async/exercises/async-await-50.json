@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-50",
+  "title": "Async Complete Review",
+  "starterCode": "// async/await: function, await, try/catch\nconsole.log(\"async/await review complete\");",
+  "solution": "// async/await: function, await, try/catch\nconsole.log(\"async/await review complete\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "async/await review complete"
+    }
+  ],
+  "hints": [
+    "Review all async/await concepts",
+    "Practice with real code"
+  ]
+}

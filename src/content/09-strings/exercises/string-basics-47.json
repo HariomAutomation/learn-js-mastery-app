@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-47",
+  "title": "Raw Practice",
+  "starterCode": "console.log(String.raw`First line\\nSecond line`);",
+  "solution": "console.log(String.raw`First line\\nSecond line`);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "First line\\nSecond line"
+    }
+  ],
+  "hints": [
+    "raw preserves backslash",
+    "No escape processing"
+  ]
+}

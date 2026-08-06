@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-06",
+  "title": "Keydown Event",
+  "starterCode": "document.addEventListener('keydown', function(e) {\n  console.log(e.key);\n});",
+  "solution": "document.addEventListener('keydown', function(e) {\n  console.log(e.key);\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "a"
+    }
+  ],
+  "hints": [
+    "key property has the key value",
+    "Fires when key is pressed down"
+  ]
+}

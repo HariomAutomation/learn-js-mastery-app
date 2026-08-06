@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-closures-iife-28",
+  "title": "IIFE Initialization",
+  "starterCode": "const config = (function() {\n  const settings = { debug: true, env: 'dev' };\n  console.log('Config loaded');\n  return settings;\n})();\nconsole.log(config.env);",
+  "solution": "const config = (function() {\n  const settings = { debug: true, env: 'dev' };\n  console.log('Config loaded');\n  return settings;\n})();\nconsole.log(config.env);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Config loaded\ndev"
+    }
+  ],
+  "hints": [
+    "IIFE runs immediately",
+    "Can log during init"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-var-let-const-34",
+  "title": "var scope chain",
+  "starterCode": "var x = 1\nfunction outer() {\n  var x = 2\n  function inner() {\n    console.log(x)\n  }\n  inner()\n}\nouter()",
+  "solution": "var x = 1\nfunction outer() {\n  var x = 2\n  function inner() {\n    console.log(x)\n  }\n  inner()\n}\nouter()",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2"
+    }
+  ],
+  "hints": [
+    "inner looks at outer's x first"
+  ]
+}

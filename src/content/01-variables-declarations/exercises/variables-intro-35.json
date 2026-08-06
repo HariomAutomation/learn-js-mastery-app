@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-variables-intro-35",
+  "title": "Promise.allSettled",
+  "starterCode": "Promise.allSettled([Promise.resolve(\"ok\"), Promise.reject(\"err\")]).then(r => console.log(r.length))",
+  "solution": "Promise.allSettled([Promise.resolve(\"ok\"), Promise.reject(\"err\")]).then(r => console.log(r.length))",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2"
+    }
+  ],
+  "hints": [
+    "allSettled never rejects"
+  ]
+}

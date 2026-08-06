@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-02",
+  "title": "__proto__ Property",
+  "starterCode": "const obj = { a: 1 };\nconst child = Object.create(obj);\nconsole.log(child.__proto__ === obj);",
+  "solution": "const obj = { a: 1 };\nconst child = Object.create(obj);\nconsole.log(child.__proto__ === obj);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "__proto__ is reference to prototype",
+    "Object.create sets prototype"
+  ]
+}

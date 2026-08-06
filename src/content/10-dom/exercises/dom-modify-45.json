@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-45",
+  "title": "style.cssText Reset",
+  "starterCode": "const el = document.querySelector('.box');\nel.style.color = 'red';\nel.style.cssText = '';\nconsole.log(el.style.color);",
+  "solution": "const el = document.querySelector('.box');\nel.style.color = 'red';\nel.style.cssText = '';\nconsole.log(el.style.color);",
+  "tests": [
+    {
+      "input": [],
+      "expected": ""
+    }
+  ],
+  "hints": [
+    "Setting cssText to empty clears all",
+    "Individual properties are removed"
+  ]
+}

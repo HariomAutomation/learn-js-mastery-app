@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-early-return-10",
+  "title": "Error handling early return",
+  "starterCode": "function parseJSON(str) {\n  if (typeof str !== 'string') return null;\n  try {\n    return JSON.parse(str);\n  } catch {\n    return null;\n  }\n}\nconsole.log(parseJSON('{\"a\": 1}'));",
+  "solution": "function parseJSON(str) {\n  if (typeof str !== 'string') return null;\n  try {\n    return JSON.parse(str);\n  } catch {\n    return null;\n  }\n}\nconsole.log(parseJSON('{\"a\": 1}'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[object Object]"
+    }
+  ],
+  "hints": [
+    "str is a string, guard passes",
+    "JSON.parse succeeds"
+  ]
+}

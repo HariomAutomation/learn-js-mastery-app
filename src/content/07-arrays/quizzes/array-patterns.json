@@ -1,0 +1,22 @@
+[
+  { "question": "Array copy ka safe tarika?", "options": ["[...arr] ya arr.slice()", "arr2 = arr", "arr.copy()", "arr.clone()"], "correctIndex": 0, "explanation": "Spread/slice — shallow copy." },
+  { "question": "const b = a — kya hota hai?", "options": ["Same reference", "Copy", "New array", "Error"], "correctIndex": 0, "explanation": "Assignment reference copy — dono same array." },
+  { "question": "let x = 5, y = x; y = 10 — x?", "options": ["5", "10", "Error", "undefined"], "correctIndex": 0, "explanation": "Primitives by value — copy." },
+  { "question": "let a = [1], b = a; b.push(2) — a?", "options": ["[1,2]", "[1]", "[]", "Error"], "correctIndex": 0, "explanation": "Same reference — dono mein change." },
+  { "question": "Flat array banao: [1,[2,3]].flat() → ?", "options": ["[1,2,3]", "[1,[2,3]]", "[2,3]", "Error"], "correctIndex": 0, "explanation": "Flat ek level kholta hai." },
+  { "question": "[1,2,3,4].flatMap(n => [n, n*2]) → ?", "options": ["[1,2,2,4,3,6,4,8]", "[2,4,6,8]", "[1,4,9,16]", "Error"], "correctIndex": 0, "explanation": "Map + flat ek saath." },
+  { "question": "Reverse copy (original safe):", "options": ["[...arr].reverse()", "arr.reverse()", "arr.sort()", "arr.slice().sort()"], "correctIndex": 0, "explanation": "Spread copy pe reverse." },
+  { "question": "[3,1,2].sort((a,b) => a - b) → ?", "options": ["[1,2,3]", "[3,1,2]", "[2,1,3]", "Error"], "correctIndex": 0, "explanation": "Ascending numeric sort." },
+  { "question": "Sort descending?", "options": ["(a,b) => b - a", "(a,b) => a - b", "sort()", "reverse()"], "correctIndex": 0, "explanation": "b - a descending." },
+  { "question": "Remove duplicates:", "options": ["[...new Set(arr)]", "arr.filter()", "arr.map()", "arr.sort()"], "correctIndex": 0, "explanation": "Set unique rakhta hai." },
+  { "question": "Last element safe access?", "options": ["arr.at(-1)", "arr[-1]", "arr[arr] ", "arr.last()"], "correctIndex": 0, "explanation": ".at(-1) modern tarika." },
+  { "question": "arr.at(-1) kya deta hai?", "options": ["Last element", "First", "Error", "undefined"], "correctIndex": 0, "explanation": "Negative index — peeche se." },
+  { "question": "Shuffle ka idea?", "options": ["Loop mein random swap", "sort() hi shuffle", "map()", "reduce()"], "correctIndex": 0, "explanation": "Fisher-Yates shuffle pattern." },
+  { "question": "Chunk array (2-2):", "options": ["reduce se slice groups", "map se", "filter se", "sort se"], "correctIndex": 0, "explanation": "Loop mein slice(i, i+size)." },
+  { "question": "Get unique + sorted:", "options": ["[...new Set(arr)].sort((a,b)=>a-b)", "arr.map()", "arr.filter()", "arr.reverse()"], "correctIndex": 0, "explanation": "Set phir sort." },
+  { "question": "Intersection (common elements):", "options": ["a.filter(x => b.includes(x))", "a.concat(b)", "a.map(b)", "a.sort()"], "correctIndex": 0, "explanation": "Filter + includes pattern." },
+  { "question": "Difference (a mein jo b mein nahi):", "options": ["a.filter(x => !b.includes(x))", "a.concat(b)", "a.sort()", "a.reverse()"], "correctIndex": 0, "explanation": "Not-includes filter." },
+  { "question": "[1,2,3,1,2,1].reduce(count duplicates) — best data struct?", "options": ["Object/Map counter", "Array", "String", "Number"], "correctIndex": 0, "explanation": "Counter object — frequency pattern." },
+  { "question": "Sum of only numbers:", "options": ["arr.filter(n => typeof n === 'number').reduce((a,b)=>a+b,0)", "arr.map()", "arr.sort()", "arr.join()"], "correctIndex": 0, "explanation": "Filter type phir reduce." },
+  { "question": "Two arrays ko combine (union):", "options": ["[...a, ...b]", "a + b", "a.push(b)", "a.concat(a)"], "correctIndex": 0, "explanation": "Spread merge — nayi array." }
+]

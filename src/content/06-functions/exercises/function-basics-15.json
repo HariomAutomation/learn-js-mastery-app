@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-function-basics-15",
+  "title": "Function toString",
+  "starterCode": "function hello() { return 'hi'; }\nconsole.log(hello.toString());",
+  "solution": "function hello() { return 'hi'; }\nconsole.log(hello.toString());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "function hello() { return 'hi'; }"
+    }
+  ],
+  "hints": [
+    ".toString() returns source",
+    "Useful for debugging"
+  ]
+}

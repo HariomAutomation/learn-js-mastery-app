@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-27",
+  "title": "CQRS",
+  "starterCode": "class CommandHandler {\n  execute(cmd) { return 'executed ' + cmd; }\n}\nclass QueryHandler {\n  handle(query) { return 'result for ' + query; }\n}\nconst cmd = new CommandHandler();\nconst q = new QueryHandler();\nconsole.log(cmd.execute('create') + ' | ' + q.handle('read'));",
+  "solution": "class CommandHandler {\n  execute(cmd) { return 'executed ' + cmd; }\n}\nclass QueryHandler {\n  handle(query) { return 'result for ' + query; }\n}\nconst cmd = new CommandHandler();\nconst q = new QueryHandler();\nconsole.log(cmd.execute('create') + ' | ' + q.handle('read'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "executed create | result for read"
+    }
+  ],
+  "hints": [
+    "Separate read and write models",
+    "Commands vs Queries"
+  ]
+}

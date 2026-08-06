@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-17",
+  "title": "cssText Append",
+  "starterCode": "const el = document.querySelector('.box');\nel.style.cssText += '; margin: 10px';\nconsole.log(el.style.margin);",
+  "solution": "const el = document.querySelector('.box');\nel.style.cssText += '; margin: 10px';\nconsole.log(el.style.margin);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10px"
+    }
+  ],
+  "hints": [
+    "Use += to append to cssText",
+    "Separate properties with semicolons"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-33",
+  "title": "Singleton",
+  "starterCode": "class Singleton {\n  static instance;\n  constructor() {\n    if (Singleton.instance) return Singleton.instance;\n    Singleton.instance = this;\n  }\n}\nconst a = new Singleton();\nconst b = new Singleton();\nconsole.log(a === b);",
+  "solution": "class Singleton {\n  static instance;\n  constructor() {\n    if (Singleton.instance) return Singleton.instance;\n    Singleton.instance = this;\n  }\n}\nconst a = new Singleton();\nconst b = new Singleton();\nconsole.log(a === b);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "Only one instance exists",
+    "Check if instance already created"
+  ]
+}

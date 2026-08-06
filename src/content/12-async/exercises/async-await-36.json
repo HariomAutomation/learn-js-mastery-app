@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-36",
+  "title": "Async Function Return",
+  "starterCode": "async function getNum() { return 42; }\ngetNum().then(n => console.log(n));",
+  "solution": "async function getNum() { return 42; }\ngetNum().then(n => console.log(n));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "42"
+    }
+  ],
+  "hints": [
+    "async function returns promise",
+    "then() receives the value"
+  ]
+}

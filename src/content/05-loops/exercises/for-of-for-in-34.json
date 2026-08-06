@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-34",
+  "title": "For...Of With Set Size",
+  "starterCode": "const nums = new Set([1, 2, 2, 3, 3, 3]);\nlet count = 0;\nfor (const n of nums) {\n  count++;\n}\nconsole.log(count);",
+  "solution": "const nums = new Set([1, 2, 2, 3, 3, 3]);\nlet count = 0;\nfor (const n of nums) {\n  count++;\n}\nconsole.log(count);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3"
+    }
+  ],
+  "hints": [
+    "Count unique elements",
+    "Set removes duplicates"
+  ]
+}

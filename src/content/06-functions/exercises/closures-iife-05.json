@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-closures-iife-05",
+  "title": "IIFE Returning Value",
+  "starterCode": "const result = (function() {\n  return 42;\n})();\nconsole.log(result);",
+  "solution": "const result = (function() {\n  return 42;\n})();\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "42"
+    }
+  ],
+  "hints": [
+    "IIFE can return value",
+    "Assign result"
+  ]
+}

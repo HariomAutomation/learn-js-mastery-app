@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-methods-35",
+  "title": "Match Null",
+  "starterCode": "const result = 'hello'.match(/xyz/);\nconsole.log(result);",
+  "solution": "const result = 'hello'.match(/xyz/);\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "null"
+    }
+  ],
+  "hints": [
+    "No match returns null",
+    "Check result"
+  ]
+}

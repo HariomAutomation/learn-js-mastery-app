@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-26",
+  "title": "Fetch Cache",
+  "starterCode": "// cache: 'no-cache', 'reload', 'force-cache'\nconsole.log(\"cache option controls caching\");",
+  "solution": "// cache: 'no-cache', 'reload', 'force-cache'\nconsole.log(\"cache option controls caching\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "cache option controls caching"
+    }
+  ],
+  "hints": [
+    "no-cache always fetches fresh",
+    "force-cache uses cache"
+  ]
+}

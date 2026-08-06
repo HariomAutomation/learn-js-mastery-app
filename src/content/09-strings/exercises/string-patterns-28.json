@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-28",
+  "title": "Valid Parentheses",
+  "starterCode": "function isValid(s) {\n  const stack = [];\n  const map = {')': '(', ']': '[', '}': '{'};\n  for (const c of s) {\n    if ('([{'.includes(c)) stack.push(c);\n    else if (stack.pop() !== map[c]) return false;\n  }\n  return stack.length === 0;\n}\nconsole.log(isValid('()[]{}'));\nconsole.log(isValid('(]'));",
+  "solution": "function isValid(s) {\n  const stack = [];\n  const map = {')': '(', ']': '[', '}': '{'};\n  for (const c of s) {\n    if ('([{'.includes(c)) stack.push(c);\n    else if (stack.pop() !== map[c]) return false;\n  }\n  return stack.length === 0;\n}\nconsole.log(isValid('()[]{}'));\nconsole.log(isValid('(]'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true\nfalse"
+    }
+  ],
+  "hints": [
+    "Stack for matching",
+    "Pop and compare"
+  ]
+}

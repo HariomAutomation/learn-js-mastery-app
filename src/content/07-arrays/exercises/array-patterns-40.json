@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-patterns-40",
+  "title": "Sort Stable",
+  "starterCode": "const arr = [{id: 1, val: 'b'}, {id: 2, val: 'a'}, {id: 3, val: 'a'}];\narr.sort((a, b) => a.val.localeCompare(b.val) || a.id - b.id);\nconsole.log(arr.map(x => x.id));",
+  "solution": "const arr = [{id: 1, val: 'b'}, {id: 2, val: 'a'}, {id: 3, val: 'a'}];\narr.sort((a, b) => a.val.localeCompare(b.val) || a.id - b.id);\nconsole.log(arr.map(x => x.id));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 2, 3, 1 ]"
+    }
+  ],
+  "hints": [
+    "Sort by val, then id",
+    "Use || for tiebreak"
+  ]
+}

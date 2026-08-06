@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-45",
+  "title": "Is Balanced Brackets",
+  "starterCode": "function isBalanced(str) {\n  const stack = [];\n  const pairs = {')': '(', ']': '[', '}': '{'};\n  for (const c of str) {\n    if ('([{'.includes(c)) stack.push(c);\n    else if (')]}'.includes(c)) {\n      if (stack.pop() !== pairs[c]) return false;\n    }\n  }\n  return stack.length === 0;\n}\nconsole.log(isBalanced('{[()]}'));\nconsole.log(isBalanced('{[(])}'));",
+  "solution": "function isBalanced(str) {\n  const stack = [];\n  const pairs = {')': '(', ']': '[', '}': '{'};\n  for (const c of str) {\n    if ('([{'.includes(c)) stack.push(c);\n    else if (')]}'.includes(c)) {\n      if (stack.pop() !== pairs[c]) return false;\n    }\n  }\n  return stack.length === 0;\n}\nconsole.log(isBalanced('{[()]}'));\nconsole.log(isBalanced('{[(])}'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true\nfalse"
+    }
+  ],
+  "hints": [
+    "Stack for brackets",
+    "Match pairs"
+  ]
+}

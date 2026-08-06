@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-29",
+  "title": "stopPropagation",
+  "starterCode": "const inner = document.querySelector('.inner');\ninner.addEventListener('click', function(e) {\n  e.stopPropagation();\n  console.log('stopped');\n});",
+  "solution": "const inner = document.querySelector('.inner');\ninner.addEventListener('click', function(e) {\n  e.stopPropagation();\n  console.log('stopped');\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "stopped"
+    }
+  ],
+  "hints": [
+    "stopPropagation prevents bubbling",
+    "Event won't reach parent elements"
+  ]
+}

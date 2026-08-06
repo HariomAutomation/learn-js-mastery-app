@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-patterns-45",
+  "title": "Difference Symmetric Two",
+  "starterCode": "const a = [1, 2, 3];\nconst b = [2, 3, 4];\nconst symmetric = [...a.filter(x => !b.includes(x)), ...b.filter(x => !a.includes(x))];\nconsole.log(symmetric);",
+  "solution": "const a = [1, 2, 3];\nconst b = [2, 3, 4];\nconst symmetric = [...a.filter(x => !b.includes(x)), ...b.filter(x => !a.includes(x))];\nconsole.log(symmetric);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 1, 4 ]"
+    }
+  ],
+  "hints": [
+    "Symmetric difference",
+    "Unique to each array"
+  ]
+}

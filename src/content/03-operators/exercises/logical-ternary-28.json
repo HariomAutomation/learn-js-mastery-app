@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-28",
+  "title": "AND returns last truthy",
+  "starterCode": "const result = 1 && 2 && 3;\nconsole.log(result);",
+  "solution": "const result = 1 && 2 && 3;\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3"
+    }
+  ],
+  "hints": [
+    "&& returns last value if all truthy",
+    "1, 2, 3 are all truthy"
+  ]
+}

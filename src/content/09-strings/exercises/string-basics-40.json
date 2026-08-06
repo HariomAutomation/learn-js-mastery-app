@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-40",
+  "title": "Join Practice",
+  "starterCode": "const arr = ['hello', 'world'];\nconsole.log(arr.join(' '));",
+  "solution": "const arr = ['hello', 'world'];\nconsole.log(arr.join(' '));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hello world"
+    }
+  ],
+  "hints": [
+    "join concatenates",
+    "With separator"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-39",
+  "title": "Bind Partial Application",
+  "starterCode": "function multiply(a, b) { return a * b; }\nconst double = multiply.bind(null, 2);\nconsole.log(double(5));",
+  "solution": "function multiply(a, b) { return a * b; }\nconst double = multiply.bind(null, 2);\nconsole.log(double(5));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10"
+    }
+  ],
+  "hints": [
+    "bind prefills arguments",
+    "First arg is this"
+  ]
+}

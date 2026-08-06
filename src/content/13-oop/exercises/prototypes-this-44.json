@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-44",
+  "title": "SetPrototypeOf",
+  "starterCode": "const parent = { type: 'parent' };\nconst child = {};\nObject.setPrototypeOf(child, parent);\nconsole.log(child.type);",
+  "solution": "const parent = { type: 'parent' };\nconst child = {};\nObject.setPrototypeOf(child, parent);\nconsole.log(child.type);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "parent"
+    }
+  ],
+  "hints": [
+    "setPrototypeOf changes prototype",
+    "child inherits from parent"
+  ]
+}

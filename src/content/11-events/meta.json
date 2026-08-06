@@ -1,0 +1,8 @@
+{
+  "id": "11-events",
+  "title": "Events & Event Handling",
+  "order": 11,
+  "description": "Event listeners, bubbling, delegation, and common events",
+  "prerequisites": ["10-dom"],
+  "lessonCount": 3
+}

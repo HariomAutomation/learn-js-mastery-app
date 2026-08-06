@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-33",
+  "title": "String 'false' is truthy",
+  "starterCode": "console.log(Boolean(\"false\"));",
+  "solution": "console.log(Boolean(\"false\"));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "Any non-empty string is truthy",
+    "Even the string 'false'"
+  ]
+}

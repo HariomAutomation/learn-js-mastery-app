@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-methods-46",
+  "title": "Pad End Start",
+  "starterCode": "console.log('hi'.padStart(5).padEnd(8));",
+  "solution": "console.log('hi'.padStart(5).padEnd(8));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "   hi    "
+    }
+  ],
+  "hints": [
+    "Chain pad methods",
+    "Pad both ends"
+  ]
+}

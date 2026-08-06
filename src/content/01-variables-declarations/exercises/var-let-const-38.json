@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-var-let-const-38",
+  "title": "let initialization error",
+  "starterCode": "try {\n  let x\n  console.log(x)\n} catch(e) {\n  console.log(\"error\")\n}",
+  "solution": "try {\n  let x\n  console.log(x)\n} catch(e) {\n  console.log(\"error\")\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "undefined"
+    }
+  ],
+  "hints": [
+    "let can be declared without value"
+  ]
+}

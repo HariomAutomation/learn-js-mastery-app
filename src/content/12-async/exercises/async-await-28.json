@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-28",
+  "title": "Async Queue",
+  "starterCode": "class AsyncQueue {\n  constructor() { this.queue = []; }\n  add(fn) { this.queue.push(fn); }\n  async run() {\n    for (const fn of this.queue) {\n      await fn();\n    }\n    console.log('done');\n  }\n}\nconst q = new AsyncQueue();\nq.add(() => Promise.resolve());\nq.add(() => Promise.resolve());\nq.run();",
+  "solution": "class AsyncQueue {\n  constructor() { this.queue = []; }\n  add(fn) { this.queue.push(fn); }\n  async run() {\n    for (const fn of this.queue) {\n      await fn();\n    }\n    console.log('done');\n  }\n}\nconst q = new AsyncQueue();\nq.add(() => Promise.resolve());\nq.add(() => Promise.resolve());\nq.run();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "done"
+    }
+  ],
+  "hints": [
+    "Store functions in array",
+    "Run sequentially with await"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-18",
+  "title": "Function declaration hoisting",
+  "starterCode": "test()\nfunction test() { console.log(\"hoisted\") }",
+  "solution": "test()\nfunction test() { console.log(\"hoisted\") }",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hoisted"
+    }
+  ],
+  "hints": [
+    "Function declarations are fully hoisted"
+  ]
+}

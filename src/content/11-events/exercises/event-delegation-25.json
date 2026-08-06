@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-25",
+  "title": "Touch Delegation",
+  "starterCode": "const list = document.querySelector('ul');\nlist.addEventListener('touchstart', function(e) {\n  if (e.target.tagName === 'LI') {\n    console.log('touched');\n  }\n});",
+  "solution": "const list = document.querySelector('ul');\nlist.addEventListener('touchstart', function(e) {\n  if (e.target.tagName === 'LI') {\n    console.log('touched');\n  }\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "touched"
+    }
+  ],
+  "hints": [
+    "Touch events delegate like mouse",
+    "Use e.touches for position"
+  ]
+}

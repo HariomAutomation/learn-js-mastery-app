@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-06",
+  "title": "classList remove",
+  "starterCode": "const el = document.querySelector('.box');\nel.classList.remove('active');\nconsole.log(el.classList.contains('active'));",
+  "solution": "const el = document.querySelector('.box');\nel.classList.remove('active');\nconsole.log(el.classList.contains('active'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "false"
+    }
+  ],
+  "hints": [
+    "classList.remove removes a class",
+    "Returns false if not present"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-21",
+  "title": "Map Property",
+  "starterCode": "const users = [{name: 'Alice', age: 25}, {name: 'Bob', age: 30}];\nconst names = users.____(u => u.name);\nconsole.log(names);",
+  "solution": "const users = [{name: 'Alice', age: 25}, {name: 'Bob', age: 30}];\nconst names = users.map(u => u.name);\nconsole.log(names);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 'Alice', 'Bob' ]"
+    }
+  ],
+  "hints": [
+    "Extract name property",
+    "Map returns array"
+  ]
+}

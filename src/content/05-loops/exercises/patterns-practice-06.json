@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-patterns-practice-06",
+  "title": "Sum Of Digits",
+  "starterCode": "let num = 9876;\nlet sum = 0;\nwhile (num > 0) {\n  sum += num % 10;\n  num = Math.floor(num / 10);\n}\nconsole.log(sum);",
+  "solution": "let num = 9876;\nlet sum = 0;\nwhile (num > 0) {\n  sum += num % 10;\n  num = Math.floor(num / 10);\n}\nconsole.log(sum);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "30"
+    }
+  ],
+  "hints": [
+    "% 10 gets last digit",
+    "Floor divide by 10"
+  ]
+}

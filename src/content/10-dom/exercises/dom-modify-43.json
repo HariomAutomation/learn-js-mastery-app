@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-43",
+  "title": "innerHTML Sanitize",
+  "starterCode": "// Use DOMPurify or textContent to sanitize\nconsole.log(\"sanitize before setting innerHTML\");",
+  "solution": "// Use DOMPurify or textContent to sanitize\nconsole.log(\"sanitize before setting innerHTML\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "sanitize before setting innerHTML"
+    }
+  ],
+  "hints": [
+    "Never trust user input",
+    "Use libraries or textContent"
+  ]
+}

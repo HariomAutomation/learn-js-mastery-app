@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-06",
+  "title": "Observer Notify",
+  "starterCode": "class Subject {\n  constructor() { this.observers = []; }\n  attach(fn) { this.observers.push(fn); }\n  notify(data) { this.observers.forEach(fn => fn(data)); }\n}\nconst subject = new Subject();\nsubject.attach(d => console.log(d));\nsubject.notify('update');",
+  "solution": "class Subject {\n  constructor() { this.observers = []; }\n  attach(fn) { this.observers.push(fn); }\n  notify(data) { this.observers.forEach(fn => fn(data)); }\n}\nconst subject = new Subject();\nsubject.attach(d => console.log(d));\nsubject.notify('update');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "update"
+    }
+  ],
+  "hints": [
+    "Subject maintains observer list",
+    "notify calls all observers"
+  ]
+}

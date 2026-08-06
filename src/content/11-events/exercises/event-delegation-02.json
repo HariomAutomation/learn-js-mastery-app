@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-02",
+  "title": "event.target Property",
+  "starterCode": "document.querySelector('ul').addEventListener('click', function(e) {\n  console.log(e.target.tagName);\n});",
+  "solution": "document.querySelector('ul').addEventListener('click', function(e) {\n  console.log(e.target.tagName);\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "LI"
+    }
+  ],
+  "hints": [
+    "target is the actual clicked element",
+    "tagName gives element type"
+  ]
+}

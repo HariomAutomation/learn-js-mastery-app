@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-36",
+  "title": "Ternary with falsy condition",
+  "starterCode": "const result = 0 ? 'yes' : 'no';\nconsole.log(result);",
+  "solution": "const result = 0 ? 'yes' : 'no';\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "no"
+    }
+  ],
+  "hints": [
+    "0 is falsy",
+    "Ternary returns second value"
+  ]
+}

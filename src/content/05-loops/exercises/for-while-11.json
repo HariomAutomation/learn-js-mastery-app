@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-while-11",
+  "title": "Do...While At Least One",
+  "starterCode": "let i = 10;\ndo {\n  console.log(i);\n  i++;\n} while (i < 5);",
+  "solution": "let i = 10;\ndo {\n  console.log(i);\n  i++;\n} while (i < 5);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10"
+    }
+  ],
+  "hints": [
+    "Body executes once even if condition false",
+    "Check condition after body"
+  ]
+}

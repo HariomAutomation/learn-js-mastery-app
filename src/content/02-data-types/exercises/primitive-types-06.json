@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-06",
+  "title": "Concatenate two strings",
+  "starterCode": "const first = \"John\";\nconst last = \"Doe\";\nconst full = ;\nconsole.log(full);",
+  "solution": "const first = \"John\";\nconst last = \"Doe\";\nconst full = first + \" \" + last;\nconsole.log(full);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "John Doe"
+    }
+  ],
+  "hints": [
+    "Use the + operator to join strings",
+    "Add a space between the names"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-36",
+  "title": "Reduce Join",
+  "starterCode": "const arr = ['a', 'b', 'c', 'd'];\nconst str = arr.____((acc, x) => acc + x, '');\nconsole.log(str);",
+  "solution": "const arr = ['a', 'b', 'c', 'd'];\nconst str = arr.reduce((acc, x) => acc + x, '');\nconsole.log(str);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "abcd"
+    }
+  ],
+  "hints": [
+    "Concatenate all",
+    "Start empty"
+  ]
+}

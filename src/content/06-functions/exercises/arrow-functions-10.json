@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-10",
+  "title": "Arrow In Callback",
+  "starterCode": "setTimeout(() => {\n  console.log('Done!');\n}, 100);",
+  "solution": "setTimeout(() => {\n  console.log('Done!');\n}, 100);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Done!"
+    }
+  ],
+  "hints": [
+    "Arrow as callback",
+    "No this binding issues"
+  ]
+}

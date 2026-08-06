@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-48",
+  "title": "Async Retry",
+  "starterCode": "async function retry(fn, n) {\n  for (let i = 0; i < n; i++) {\n    try { return await fn(); }\n    catch (e) { if (i === n - 1) throw e; }\n  }\n}\nlet c = 0;\nretry(async () => { c++; if (c < 3) throw 'err'; return 'ok'; }, 3)\n  .then(r => console.log(r));",
+  "solution": "async function retry(fn, n) {\n  for (let i = 0; i < n; i++) {\n    try { return await fn(); }\n    catch (e) { if (i === n - 1) throw e; }\n  }\n}\nlet c = 0;\nretry(async () => { c++; if (c < 3) throw 'err'; return 'ok'; }, 3)\n  .then(r => console.log(r));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "ok"
+    }
+  ],
+  "hints": [
+    "Loop with try/catch",
+    "Retry on failure"
+  ]
+}

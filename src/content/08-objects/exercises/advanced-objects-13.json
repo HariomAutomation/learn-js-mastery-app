@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-13",
+  "title": "Writable Property",
+  "starterCode": "const obj = {x: 10};\nObject.defineProperty(obj, 'x', {writable: false});\nobj.x = 20;\nconsole.log(obj.x);",
+  "solution": "const obj = {x: 10};\nObject.defineProperty(obj, 'x', {writable: false});\nobj.x = 20;\nconsole.log(obj.x);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10"
+    }
+  ],
+  "hints": [
+    "writable: false",
+    "Assignment fails silently"
+  ]
+}

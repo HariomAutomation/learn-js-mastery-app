@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-12",
+  "title": "Hover Tooltip",
+  "starterCode": "// mouseenter/mouseleave for tooltips\nconsole.log(\"hover tooltip pattern\");",
+  "solution": "// mouseenter/mouseleave for tooltips\nconsole.log(\"hover tooltip pattern\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hover tooltip pattern"
+    }
+  ],
+  "hints": [
+    "Show tooltip on mouseenter",
+    "Hide on mouseleave"
+  ]
+}

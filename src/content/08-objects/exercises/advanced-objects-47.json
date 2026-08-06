@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-47",
+  "title": "HasOwnProperty Chain",
+  "starterCode": "const proto = {x: 1};\nconst obj = Object.create(proto);\nobj.y = 2;\nconsole.log(obj.hasOwnProperty('x'));\nconsole.log(obj.hasOwnProperty('y'));",
+  "solution": "const proto = {x: 1};\nconst obj = Object.create(proto);\nobj.y = 2;\nconsole.log(obj.hasOwnProperty('x'));\nconsole.log(obj.hasOwnProperty('y'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "false\ntrue"
+    }
+  ],
+  "hints": [
+    "hasOwnProperty own only",
+    "Inherited not counted"
+  ]
+}

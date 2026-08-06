@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-05",
+  "title": "Promise Reject",
+  "starterCode": "const p = Promise.reject('error');\np.catch(err => console.log(err));",
+  "solution": "const p = Promise.reject('error');\np.catch(err => console.log(err));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "error"
+    }
+  ],
+  "hints": [
+    "Promise.reject creates rejected promise",
+    "catch() handles the error"
+  ]
+}

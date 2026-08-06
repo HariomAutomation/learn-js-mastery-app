@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-closures-iife-01",
+  "title": "Closure Basics",
+  "starterCode": "function outer() {\n  let count = 0;\n  return function inner() {\n    count++;\n    console.log(count);\n  };\n}\nconst fn = outer();\nfn();\nfn();",
+  "solution": "function outer() {\n  let count = 0;\n  return function inner() {\n    count++;\n    console.log(count);\n  };\n}\nconst fn = outer();\nfn();\nfn();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1\n2"
+    }
+  ],
+  "hints": [
+    "Inner function remembers outer",
+    "Count persists between calls"
+  ]
+}

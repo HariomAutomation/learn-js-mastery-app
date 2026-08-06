@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-10",
+  "title": "Complex Reduce",
+  "starterCode": "const items = [{type: 'fruit', name: 'apple'}, {type: 'veggie', name: 'carrot'}, {type: 'fruit', name: 'banana'}];\nconst grouped = items.____((acc, item) => {\n  acc[item.type] = acc[item.type] || [];\n  acc[item.type].push(item.name);\n  return acc;\n}, {});\nconsole.log(grouped);",
+  "solution": "const items = [{type: 'fruit', name: 'apple'}, {type: 'veggie', name: 'carrot'}, {type: 'fruit', name: 'banana'}];\nconst grouped = items.reduce((acc, item) => {\n  acc[item.type] = acc[item.type] || [];\n  acc[item.type].push(item.name);\n  return acc;\n}, {});\nconsole.log(grouped);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{ fruit: [ 'apple', 'banana' ], veggie: [ 'carrot' ] }"
+    }
+  ],
+  "hints": [
+    "Group by type",
+    "Initialize array if needed"
+  ]
+}

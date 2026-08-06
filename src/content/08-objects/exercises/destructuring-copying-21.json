@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-21",
+  "title": "Swap Variables",
+  "starterCode": "let a = 1, b = 2;\n[a, b] = [b, a];\nconsole.log(a, b);",
+  "solution": "let a = 1, b = 2;\n[a, b] = [b, a];\nconsole.log(a, b);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2 1"
+    }
+  ],
+  "hints": [
+    "Array destructuring swap",
+    "Temp-free swap"
+  ]
+}

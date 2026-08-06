@@ -1,0 +1,17 @@
+{
+  "id": "04-control-flow-early-return-33",
+  "title": "Nested guard pattern",
+  "starterCode": "function processRequest(request) {\n  if (!request) return 'no request';\n  if (!request.method) return 'no method';\n  if (request.method !== 'GET' && request.method !== 'POST') return 'invalid method';\n  return `processing ${request.method}`;\n}\nconsole.log(processRequest({ method: 'POST' }));",
+  "solution": "function processRequest(request) {\n  if (!request) return 'no request';\n  if (!request.method) return 'no method';\n  if (request.method !== 'GET' && request.method !== 'POST') return 'invalid method';\n  return `processing ${request.method}`;\n}\nconsole.log(processRequest({ method: 'POST' }));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "processing POST"
+    }
+  ],
+  "hints": [
+    "request is truthy",
+    "method exists",
+    "POST is valid"
+  ]
+}

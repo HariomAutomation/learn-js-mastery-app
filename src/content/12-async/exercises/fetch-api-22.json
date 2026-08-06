@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-22",
+  "title": "Fetch Mode",
+  "starterCode": "// mode: 'cors', 'no-cors', 'same-origin'\nconsole.log(\"mode controls CORS behavior\");",
+  "solution": "// mode: 'cors', 'no-cors', 'same-origin'\nconsole.log(\"mode controls CORS behavior\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "mode controls CORS behavior"
+    }
+  ],
+  "hints": [
+    "cors allows cross-origin",
+    "no-cors limits to simple requests"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-39",
+  "title": "Rotate String",
+  "starterCode": "function rotateString(s, goal) {\n  return s.length === goal.length && (s + s).includes(goal);\n}\nconsole.log(rotateString('abcde', 'cdeab'));\nconsole.log(rotateString('abcde', 'abced'));",
+  "solution": "function rotateString(s, goal) {\n  return s.length === goal.length && (s + s).includes(goal);\n}\nconsole.log(rotateString('abcde', 'cdeab'));\nconsole.log(rotateString('abcde', 'abced'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true\nfalse"
+    }
+  ],
+  "hints": [
+    "Concat with itself",
+    "Check rotation"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-var-let-const-33",
+  "title": "const tuple pattern",
+  "starterCode": "const [first, , third] = [1, 2, 3]\nconsole.log(first, third)",
+  "solution": "const [first, , third] = [1, 2, 3]\nconsole.log(first, third)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1 3"
+    }
+  ],
+  "hints": [
+    "Skip with empty slot"
+  ]
+}

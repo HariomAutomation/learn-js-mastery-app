@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-21",
+  "title": "Switch with type coercion trap",
+  "starterCode": "const x = \"1\";\nswitch (x) {\n  case 1:\n    console.log(\"number one\");\n    break;\n  case \"1\":\n    console.log(\"string one\");\n    break;\n}",
+  "solution": "const x = \"1\";\nswitch (x) {\n  case 1:\n    console.log(\"number one\");\n    break;\n  case \"1\":\n    console.log(\"string one\");\n    break;\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "string one"
+    }
+  ],
+  "hints": [
+    "switch uses === comparison",
+    "'1' === 1 is false"
+  ]
+}

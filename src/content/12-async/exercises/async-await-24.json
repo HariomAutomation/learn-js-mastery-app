@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-24",
+  "title": "Try/Catch/Finally",
+  "starterCode": "async function withFinally() {\n  try {\n    await Promise.resolve('ok');\n  } catch (e) {\n    console.log('error');\n  } finally {\n    console.log('done');\n  }\n}\nwithFinally();",
+  "solution": "async function withFinally() {\n  try {\n    await Promise.resolve('ok');\n  } catch (e) {\n    console.log('error');\n  } finally {\n    console.log('done');\n  }\n}\nwithFinally();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "done"
+    }
+  ],
+  "hints": [
+    "finally always runs",
+    "Even without error"
+  ]
+}

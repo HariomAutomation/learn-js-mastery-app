@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-31",
+  "title": "Boolean of empty array",
+  "starterCode": "console.log(Boolean([]));",
+  "solution": "console.log(Boolean([]));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "Arrays are objects",
+    "All objects are truthy"
+  ]
+}

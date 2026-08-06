@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-02",
+  "title": "Create an array",
+  "starterCode": "const nums = ;\nconsole.log(nums[0]);",
+  "solution": "const nums = [1, 2, 3];\nconsole.log(nums[0]);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1"
+    }
+  ],
+  "hints": [
+    "Arrays use square brackets",
+    "Index 0 is the first element"
+  ]
+}

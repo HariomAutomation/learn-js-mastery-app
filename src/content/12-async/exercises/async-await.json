@@ -1,0 +1,12 @@
+{
+  "id": "12-async-async-await",
+  "title": "Async/Await patterns — clean async code",
+  "starterCode": "// Async/Await — Promises ko aur clean banao\n\n// 1. Async function banao\nasync function greet(name) {\n  return `Hello, ${name}!`\n}\n\n// greet() ek Promise return karta hai\nconst result = await greet(\"Priya\")\nconsole.log(result) // __BLANK__\n\n// 2. Try-catch with async/await\nasync function fetchData(shouldFail) {\n  return new Promise((resolve, reject) => {\n    setTimeout(() => {\n      if (shouldFail) reject(\"Error occurred\")\n      else resolve({ id: 1, name: \"Data\" })\n    }, 100)\n  })\n}\n\nasync function getData() {\n  try {\n    const data = await fetchData(false)\n    console.log(data) // __BLANK__\n  } catch (err) {\n    console.log(err)\n  }\n}\n\nawait getData()\n\n// 3. Async loop — sequential awaits\nasync function processItems(items) {\n  const results = []\n  for (const item of items) {\n    const processed = await Promise.resolve(item.toUpperCase())\n    results.push(processed)\n  }\n  return results\n}\n\nconst items = await processItems([\"a\", \"b\", \"c\"])\nconsole.log(items) // __BLANK__",
+  "solution": "async function greet(name) {\n  return `Hello, ${name}!`\n}\nconst result = await greet(\"Priya\")\nconsole.log(result)\n\nasync function fetchData(shouldFail) {\n  return new Promise((resolve, reject) => {\n    setTimeout(() => {\n      if (shouldFail) reject(\"Error occurred\")\n      else resolve({ id: 1, name: \"Data\" })\n    }, 100)\n  })\n}\n\nasync function getData() {\n  try {\n    const data = await fetchData(false)\n    console.log(data)\n  } catch (err) {\n    console.log(err)\n  }\n}\nawait getData()\n\nasync function processItems(items) {\n  const results = []\n  for (const item of items) {\n    const processed = await Promise.resolve(item.toUpperCase())\n    results.push(processed)\n  }\n  return results\n}\nconst items = await processItems([\"a\", \"b\", \"c\"])\nconsole.log(items)",
+  "tests": [{ "input": [], "expected": "Hello, Priya!\n{ id: 1, name: \"Data\" }\n[\"A\", \"B\", \"C\"]" }],
+  "hints": [
+    "async function hamesha Promise return karta hai — uske andar await use kar sakte ho",
+    "try-catch async/await ke saath — Promise .catch() jaisa kaam karta hai",
+    "Sequential await: for loop mein await — har step pehle complete hota hai"
+  ]
+}

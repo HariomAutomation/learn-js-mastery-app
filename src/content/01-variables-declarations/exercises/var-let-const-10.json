@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-var-let-const-10",
+  "title": "Loop var vs let",
+  "starterCode": "for (var i = 0; i < 3; i++) {\n  setTimeout(() => console.log(i), 0)\n}",
+  "solution": "for (var i = 0; i < 3; i++) {\n  setTimeout(() => console.log(i), 0)\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3\n3\n3"
+    }
+  ],
+  "hints": [
+    "var is shared across iterations"
+  ]
+}

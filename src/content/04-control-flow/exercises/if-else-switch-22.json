@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-22",
+  "title": "If with logical AND",
+  "starterCode": "const age = 25;\nconst hasTicket = true;\nif (age >= 18 && hasTicket) {\n  console.log('admitted');\n} else {\n  console.log('denied');\n}",
+  "solution": "const age = 25;\nconst hasTicket = true;\nif (age >= 18 && hasTicket) {\n  console.log('admitted');\n} else {\n  console.log('denied');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "admitted"
+    }
+  ],
+  "hints": [
+    "Both conditions must be true for &&",
+    "25>=18 is true AND hasTicket is true"
+  ]
+}

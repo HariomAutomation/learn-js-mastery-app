@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-21",
+  "title": "Event Emitter Pattern",
+  "starterCode": "class EventEmitter {\n  constructor() { this.events = {}; }\n  on(event, fn) {\n    (this.events[event] = this.events[event] || []).push(fn);\n  }\n  emit(event, data) {\n    (this.events[event] || []).forEach(fn => fn(data));\n  }\n}\nconst emitter = new EventEmitter();\nemitter.on('test', (d) => console.log(d));\nemitter.emit('test', 'emitted');",
+  "solution": "class EventEmitter {\n  constructor() { this.events = {}; }\n  on(event, fn) {\n    (this.events[event] = this.events[event] || []).push(fn);\n  }\n  emit(event, data) {\n    (this.events[event] || []).forEach(fn => fn(data));\n  }\n}\nconst emitter = new EventEmitter();\nemitter.on('test', (d) => console.log(d));\nemitter.emit('test', 'emitted');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "emitted"
+    }
+  ],
+  "hints": [
+    "Store callbacks in object",
+    "Emit calls all registered callbacks"
+  ]
+}

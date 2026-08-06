@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-arithmetic-comparison-13",
+  "title": "Multiplication with string coercion",
+  "starterCode": "const result = \"4\" * 2;\nconsole.log(result);",
+  "solution": "const result = \"4\" * 2;\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "8"
+    }
+  ],
+  "hints": [
+    "* always coerces to numbers",
+    "The result is a number"
+  ]
+}

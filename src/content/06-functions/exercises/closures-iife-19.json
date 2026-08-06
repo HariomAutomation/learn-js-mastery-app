@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-closures-iife-19",
+  "title": "Closure In Loop Var",
+  "starterCode": "const fns = [];\nfor (var i = 0; i < 3; i++) {\n  fns.push((function(j) {\n    return () => console.log(j);\n  })(i));\n}\nfns[0]();\nfns[1]();\nfns[2]();",
+  "solution": "const fns = [];\nfor (var i = 0; i < 3; i++) {\n  fns.push((function(j) {\n    return () => console.log(j);\n  })(i));\n}\nfns[0]();\nfns[1]();\nfns[2]();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "0\n1\n2"
+    }
+  ],
+  "hints": [
+    "IIFE captures i",
+    "j is local copy"
+  ]
+}

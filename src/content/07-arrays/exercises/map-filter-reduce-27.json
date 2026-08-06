@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-27",
+  "title": "Map Parse",
+  "starterCode": "const strs = ['1', '2', '3', '4'];\nconst nums = strs.____(s => parseInt(s));\nconsole.log(nums);",
+  "solution": "const strs = ['1', '2', '3', '4'];\nconst nums = strs.map(s => parseInt(s));\nconsole.log(nums);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 1, 2, 3, 4 ]"
+    }
+  ],
+  "hints": [
+    "Parse string to number",
+    "Use parseInt"
+  ]
+}

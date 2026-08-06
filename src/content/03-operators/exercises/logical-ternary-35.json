@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-35",
+  "title": "Ternary with truthy condition",
+  "starterCode": "const result = \"yes\" ? \"affirmed\" : \"denied\";\nconsole.log(result);",
+  "solution": "const result = \"yes\" ? \"affirmed\" : \"denied\";\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "affirmed"
+    }
+  ],
+  "hints": [
+    "Non-empty string is truthy",
+    "Ternary returns first value"
+  ]
+}

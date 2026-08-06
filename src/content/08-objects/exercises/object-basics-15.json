@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-15",
+  "title": "Object Is",
+  "starterCode": "console.log(Object.is(25, 25));\nconsole.log(Object.is(NaN, NaN));\nconsole.log(Object.is(+0, -0));",
+  "solution": "console.log(Object.is(25, 25));\nconsole.log(Object.is(NaN, NaN));\nconsole.log(Object.is(+0, -0));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true\ntrue\nfalse"
+    }
+  ],
+  "hints": [
+    "Object.is strict equality",
+    "NaN === NaN in Object.is"
+  ]
+}

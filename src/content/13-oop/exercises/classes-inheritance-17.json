@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-17",
+  "title": "Abstract Pattern",
+  "starterCode": "class Shape {\n  area() { throw new Error('abstract'); }\n}\nclass Square extends Shape {\n  constructor(s) { super(); this.s = s; }\n  area() { return this.s * this.s; }\n}\nconsole.log(new Square(5).area());",
+  "solution": "class Shape {\n  area() { throw new Error('abstract'); }\n}\nclass Square extends Shape {\n  constructor(s) { super(); this.s = s; }\n  area() { return this.s * this.s; }\n}\nconsole.log(new Square(5).area());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "25"
+    }
+  ],
+  "hints": [
+    "Abstract class throws on abstract method",
+    "Subclass must implement"
+  ]
+}

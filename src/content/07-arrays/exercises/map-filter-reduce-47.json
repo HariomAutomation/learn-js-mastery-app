@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-47",
+  "title": "Filter Duplicate",
+  "starterCode": "const arr = [1, 2, 2, 3, 4, 4, 5];\nconst unique = [...new Set(arr)];\nconst filtered = arr.____((v, i) => arr.indexOf(v) === i);\nconsole.log(JSON.stringify(filtered) === JSON.stringify(unique));",
+  "solution": "const arr = [1, 2, 2, 3, 4, 4, 5];\nconst unique = [...new Set(arr)];\nconst filtered = arr.filter((v, i) => arr.indexOf(v) === i);\nconsole.log(JSON.stringify(filtered) === JSON.stringify(unique));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "filter with indexOf",
+    "Check first occurrence"
+  ]
+}

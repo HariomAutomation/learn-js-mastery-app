@@ -1,0 +1,17 @@
+{
+  "id": "04-control-flow-early-return-49",
+  "title": "Early return with object destructuring",
+  "starterCode": "function getFullName({ first, last }) {\n  if (!first) return 'No first name';\n  if (!last) return 'No last name';\n  return `${first} ${last}`;\n}\nconsole.log(getFullName({ first: 'John', last: 'Doe' }));",
+  "solution": "function getFullName({ first, last }) {\n  if (!first) return 'No first name';\n  if (!last) return 'No last name';\n  return `${first} ${last}`;\n}\nconsole.log(getFullName({ first: 'John', last: 'Doe' }));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "John Doe"
+    }
+  ],
+  "hints": [
+    "first is truthy",
+    "last is truthy",
+    "Returns full name"
+  ]
+}

@@ -1,0 +1,16 @@
+appId: com.jsmastery.app
+productName: JS Mastery
+directories:
+  buildResources: build
+files:
+  - dist-electron
+  - dist
+linux:
+  target:
+    - AppImage
+    - deb
+  category: Education
+win:
+  target: nsis
+mac:
+  target: dmg

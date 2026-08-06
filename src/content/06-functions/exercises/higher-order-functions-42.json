@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-higher-order-functions-42",
+  "title": "Chain Functions",
+  "starterCode": "function chain(...fns) {\n  return (initial) => {\n    let result = initial;\n    for (const fn of fns) {\n      result = fn(result);\n    }\n    return result;\n  };\n}\nconst process = chain(\n  x => x + 1,\n  x => x * 2,\n  x => x - 3\n);\nconsole.log(process(5));",
+  "solution": "function chain(...fns) {\n  return (initial) => {\n    let result = initial;\n    for (const fn of fns) {\n      result = fn(result);\n    }\n    return result;\n  };\n}\nconst process = chain(\n  x => x + 1,\n  x => x * 2,\n  x => x - 3\n);\nconsole.log(process(5));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "9"
+    }
+  ],
+  "hints": [
+    "Sequential execution",
+    "Pass result to next"
+  ]
+}

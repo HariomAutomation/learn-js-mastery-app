@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-while-36",
+  "title": "While Factorial",
+  "starterCode": "let n = 5;\nlet factorial = 1;\nlet i = 1;\nwhile (i <= n) {\n  factorial *= i;\n  i++;\n}\nconsole.log(factorial);",
+  "solution": "let n = 5;\nlet factorial = 1;\nlet i = 1;\nwhile (i <= n) {\n  factorial *= i;\n  i++;\n}\nconsole.log(factorial);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "120"
+    }
+  ],
+  "hints": [
+    "Initialize i to 1",
+    "Increment after multiply"
+  ]
+}

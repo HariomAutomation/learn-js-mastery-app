@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-44",
+  "title": "Pad Practice",
+  "starterCode": "console.log('5'.padStart(3));\nconsole.log('hi'.padEnd(5, '!'));",
+  "solution": "console.log('5'.padStart(3));\nconsole.log('hi'.padEnd(5, '!'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "  5\nhi!!!"
+    }
+  ],
+  "hints": [
+    "padStart default space",
+    "padEnd custom char"
+  ]
+}

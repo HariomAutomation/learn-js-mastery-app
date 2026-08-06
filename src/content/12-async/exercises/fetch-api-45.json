@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-45",
+  "title": "Fetch Body Methods",
+  "starterCode": "// JSON.stringify(body) for JSON\n// formData for files\n// text for plain text\nconsole.log(\"3 body formats\");",
+  "solution": "// JSON.stringify(body) for JSON\n// formData for files\n// text for plain text\nconsole.log(\"3 body formats\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3 body formats"
+    }
+  ],
+  "hints": [
+    "JSON for structured data",
+    "FormData for files"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-43",
+  "title": "Sequential Await",
+  "starterCode": "async function seq() {\n  const a = await Promise.resolve(1);\n  const b = await Promise.resolve(a * 2);\n  console.log(b);\n}\nseq();",
+  "solution": "async function seq() {\n  const a = await Promise.resolve(1);\n  const b = await Promise.resolve(a * 2);\n  console.log(b);\n}\nseq();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2"
+    }
+  ],
+  "hints": [
+    "Sequential awaits",
+    "Each depends on previous"
+  ]
+}

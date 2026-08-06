@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-function-basics-12",
+  "title": "Named Function Expression",
+  "starterCode": "const factorial = function fact(n) {\n  if (n <= 1) return 1;\n  return n * fact(n - 1);\n};\nconsole.log(factorial(5));",
+  "solution": "const factorial = function fact(n) {\n  if (n <= 1) return 1;\n  return n * fact(n - 1);\n};\nconsole.log(factorial(5));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "120"
+    }
+  ],
+  "hints": [
+    "Named for recursion",
+    "Base case n <= 1"
+  ]
+}

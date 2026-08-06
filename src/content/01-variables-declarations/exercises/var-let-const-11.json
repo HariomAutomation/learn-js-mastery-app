@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-var-let-const-11",
+  "title": "Loop let scope",
+  "starterCode": "for (let i = 0; i < 3; i++) {\n  setTimeout(() => console.log(i), 0)\n}",
+  "solution": "for (let i = 0; i < 3; i++) {\n  setTimeout(() => console.log(i), 0)\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "0\n1\n2"
+    }
+  ],
+  "hints": [
+    "let is block-scoped per iteration"
+  ]
+}

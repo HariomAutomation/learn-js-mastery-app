@@ -1,0 +1,11 @@
+{
+  "id": "05-loops-patterns-practice",
+  "title": "Loops se naam pattern",
+  "starterCode": "// 1. String reverse — for-of:\nlet str = \"Sheryians\"\nlet rev = \"\"\nfor (let ch of str) {\n  rev = ch + rev\n}\nconsole.log(rev)  // snaiyrehS\n\n// 2. Triangle pattern:\nfor (let i = 1; i <= 5; i++) {\n  console.log(\"*\".repeat(i))\n}\n\n// 3. Fibonacci (pehle 8):\nlet a = 0, b = 1\nfor (let i = 0; i < 8; i++) {\n  console.log(a)\n  let next = a + b\n  a = b\n  b = next\n}\n",
+  "solution": "let str = \"Sheryians\"\nlet rev = \"\"\nfor (let ch of str) rev = ch + rev\nconsole.log(rev)\nfor (let i = 1; i <= 5; i++) console.log(\"*\".repeat(i))\nlet a = 0, b = 1\nfor (let i = 0; i < 8; i++) {\n  console.log(a)\n  let next = a + b\n  a = b\n  b = next\n}",
+  "tests": [{ "input": [], "expected": "snaiyrehS" }],
+  "hints": [
+    "ch + rev se naya char pehle aata hai",
+    "Fibonacci: next = a+b, a=b, b=next"
+  ]
+}

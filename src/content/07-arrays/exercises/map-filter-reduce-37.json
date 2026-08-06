@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-37",
+  "title": "Map Math",
+  "starterCode": "const nums = [1, 4, 9, 16];\nconst roots = nums.____(x => Math.sqrt(x));\nconsole.log(roots);",
+  "solution": "const nums = [1, 4, 9, 16];\nconst roots = nums.map(x => Math.sqrt(x));\nconsole.log(roots);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 1, 2, 3, 4 ]"
+    }
+  ],
+  "hints": [
+    "Math.sqrt for square root",
+    "Map each number"
+  ]
+}

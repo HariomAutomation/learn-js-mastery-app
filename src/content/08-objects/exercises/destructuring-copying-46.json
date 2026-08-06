@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-46",
+  "title": "Merge Assign",
+  "starterCode": "const target = {a: 1};\nconst source1 = {b: 2};\nconst source2 = {c: 3};\nObject.assign(target, source1, source2);\nconsole.log(target);",
+  "solution": "const target = {a: 1};\nconst source1 = {b: 2};\nconst source2 = {c: 3};\nObject.assign(target, source1, source2);\nconsole.log(target);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{ a: 1, b: 2, c: 3 }"
+    }
+  ],
+  "hints": [
+    "Multiple sources",
+    "Merge into target"
+  ]
+}

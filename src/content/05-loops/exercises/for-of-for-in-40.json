@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-40",
+  "title": "For...Of Map Values",
+  "starterCode": "const map = new Map([['a', 1], ['b', 2], ['c', 3]]);\nfor (const val of map.values()) {\n  console.log(val * 10);\n}",
+  "solution": "const map = new Map([['a', 1], ['b', 2], ['c', 3]]);\nfor (const val of map.values()) {\n  console.log(val * 10);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10\n20\n30"
+    }
+  ],
+  "hints": [
+    "Use values() method",
+    "Transform each value"
+  ]
+}

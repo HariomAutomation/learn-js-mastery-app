@@ -1,0 +1,11 @@
+{
+  "id": "04-control-flow-early-return",
+  "title": "Early return se validation karo",
+  "starterCode": "// Early return pattern — step by step check\nfunction placeOrder(product) {\n  // 1. Agar product nahi → \"No product\"\n  // 2. Agar out of stock → \"Out of stock\"\n  // 3. Agar price > budget (1000) → \"Too expensive\"\n  // 4. Sab sahi → \"Order placed\"\n}\n\nconsole.log(placeOrder(null))\nconsole.log(placeOrder({ name: \"Phone\", inStock: false, price: 500 }))\nconsole.log(placeOrder({ name: \"Laptop\", inStock: true, price: 5000 }))\nconsole.log(placeOrder({ name: \"Book\", inStock: true, price: 200 }))\n",
+  "solution": "function validateOrder(product) {\n  if (!product) return \"No product\"\n  if (!product.inStock) return \"Out of stock\"\n  if (product.price > 999) return \"Too expensive\"\n  return \"Order placed\"\n}",
+  "tests": [{ "input": [], "expected": "No product" }],
+  "hints": [
+    "Har edge case pe return — nesting avoid",
+    "Order: null check pehle, phir flags"
+  ]
+}

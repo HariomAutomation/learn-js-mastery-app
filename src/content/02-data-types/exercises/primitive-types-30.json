@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-30",
+  "title": "Check typeof a function",
+  "starterCode": "function greet() {}\nconsole.log();",
+  "solution": "function greet() {}\nconsole.log(typeof greet);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "function"
+    }
+  ],
+  "hints": [
+    "Functions have their own typeof",
+    "It returns 'function' not 'object'"
+  ]
+}

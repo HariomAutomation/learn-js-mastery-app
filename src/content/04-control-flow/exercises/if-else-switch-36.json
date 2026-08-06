@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-36",
+  "title": "Switch with null",
+  "starterCode": "const value = null;\nswitch (value) {\n  case null:\n    console.log('null');\n    break;\n  case undefined:\n    console.log('undefined');\n    break;\n  default:\n    console.log('other');\n}",
+  "solution": "const value = null;\nswitch (value) {\n  case null:\n    console.log('null');\n    break;\n  case undefined:\n    console.log('undefined');\n    break;\n  default:\n    console.log('other');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "null"
+    }
+  ],
+  "hints": [
+    "null matches case null",
+    "switch uses === comparison"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-33",
+  "title": "Caesar Cipher",
+  "starterCode": "function caesar(str, shift) {\n  return str.replace(/[a-z]/gi, c => {\n    const base = c <= 'Z' ? 65 : 97;\n    return String.fromCharCode(((c.charCodeAt(0) - base + shift) % 26 + 26) % 26 + base);\n  });\n}\nconsole.log(caesar('Hello', 3));",
+  "solution": "function caesar(str, shift) {\n  return str.replace(/[a-z]/gi, c => {\n    const base = c <= 'Z' ? 65 : 97;\n    return String.fromCharCode(((c.charCodeAt(0) - base + shift) % 26 + 26) % 26 + base);\n  });\n}\nconsole.log(caesar('Hello', 3));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Khoor"
+    }
+  ],
+  "hints": [
+    "Shift each letter",
+    "Wrap around alphabet"
+  ]
+}

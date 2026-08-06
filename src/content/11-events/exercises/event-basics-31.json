@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-31",
+  "title": "event.target vs currentTarget",
+  "starterCode": "const parent = document.querySelector('.parent');\nparent.addEventListener('click', function(e) {\n  console.log(e.target === e.currentTarget);\n});",
+  "solution": "const parent = document.querySelector('.parent');\nparent.addEventListener('click', function(e) {\n  console.log(e.target === e.currentTarget);\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "target is clicked element",
+    "currentTarget is element with listener"
+  ]
+}

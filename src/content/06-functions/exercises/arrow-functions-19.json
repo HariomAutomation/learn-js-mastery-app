@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-19",
+  "title": "Promise Arrow",
+  "starterCode": "const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));\ndelay(100).then(() => console.log('Resolved'));",
+  "solution": "const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));\ndelay(100).then(() => console.log('Resolved'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Resolved"
+    }
+  ],
+  "hints": [
+    "Arrow in Promise",
+    "Resolve callback"
+  ]
+}

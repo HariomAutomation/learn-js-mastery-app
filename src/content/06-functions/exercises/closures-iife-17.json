@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-closures-iife-17",
+  "title": "IIFE Async",
+  "starterCode": "(async function() {\n  const result = await Promise.resolve(42);\n  console.log(result);\n})();",
+  "solution": "(async function() {\n  const result = await Promise.resolve(42);\n  console.log(result);\n})();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "42"
+    }
+  ],
+  "hints": [
+    "Async IIFE",
+    "Await in closure"
+  ]
+}

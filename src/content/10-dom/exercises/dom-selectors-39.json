@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-39",
+  "title": "getElementById Null",
+  "starterCode": "const el = document.getElementById('nonexistent');\nconsole.log(el);",
+  "solution": "const el = document.getElementById('nonexistent');\nconsole.log(el);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "null"
+    }
+  ],
+  "hints": [
+    "Returns null if element not found",
+    "No error is thrown"
+  ]
+}

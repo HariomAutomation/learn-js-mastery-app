@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-05",
+  "title": "Submit Event",
+  "starterCode": "const form = document.querySelector('form');\nform.addEventListener('submit', function(e) {\n  e.preventDefault();\n  console.log('submitted');\n});",
+  "solution": "const form = document.querySelector('form');\nform.addEventListener('submit', function(e) {\n  e.preventDefault();\n  console.log('submitted');\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "submitted"
+    }
+  ],
+  "hints": [
+    "Use preventDefault to stop form submission",
+    "Event type is 'submit'"
+  ]
+}

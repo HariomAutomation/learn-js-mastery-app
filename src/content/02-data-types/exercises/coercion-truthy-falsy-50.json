@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-50",
+  "title": "Date to string conversion",
+  "starterCode": "console.log(new Date() + '');",
+  "solution": "console.log(new Date() + '');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "dynamic"
+    }
+  ],
+  "hints": [
+    "Date has a toString method",
+    "Returns human-readable date string"
+  ]
+}

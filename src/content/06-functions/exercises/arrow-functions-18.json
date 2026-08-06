@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-18",
+  "title": "Rest Params Arrow",
+  "starterCode": "const sum = (...nums) => nums.reduce((a, b) => a + b, 0);\nconsole.log(sum(1, 2, 3, 4));",
+  "solution": "const sum = (...nums) => nums.reduce((a, b) => a + b, 0);\nconsole.log(sum(1, 2, 3, 4));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10"
+    }
+  ],
+  "hints": [
+    "Rest params collect args",
+    "Use reduce"
+  ]
+}

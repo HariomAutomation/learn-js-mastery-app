@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-25",
+  "title": "ToLowerCase",
+  "starterCode": "console.log('HELLO'.toLowerCase());",
+  "solution": "console.log('HELLO'.toLowerCase());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hello"
+    }
+  ],
+  "hints": [
+    "toLowerCase converts",
+    "All lowercase"
+  ]
+}

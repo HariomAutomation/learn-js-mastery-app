@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-early-return-13",
+  "title": "Default fallback on missing key",
+  "starterCode": "function getConfig(key) {\n  const config = { theme: 'dark', lang: 'en' };\n  return config[key] ?? 'default';\n}\nconsole.log(getConfig('missing'));",
+  "solution": "function getConfig(key) {\n  const config = { theme: 'dark', lang: 'en' };\n  return config[key] ?? 'default';\n}\nconsole.log(getConfig('missing'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "default"
+    }
+  ],
+  "hints": [
+    "config.missing is undefined",
+    "?? returns 'default'"
+  ]
+}

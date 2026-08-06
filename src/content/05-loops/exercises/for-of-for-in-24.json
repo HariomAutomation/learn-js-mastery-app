@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-24",
+  "title": "Set Iteration",
+  "starterCode": "const colors = new Set(['red', 'green', 'blue']);\nfor (const color of colors) {\n  console.log(color);\n}",
+  "solution": "const colors = new Set(['red', 'green', 'blue']);\nfor (const color of colors) {\n  console.log(color);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "red\ngreen\nblue"
+    }
+  ],
+  "hints": [
+    "Set iterates values",
+    "Order preserved"
+  ]
+}

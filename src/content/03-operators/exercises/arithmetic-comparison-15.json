@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-arithmetic-comparison-15",
+  "title": "Modulo with negative divisor",
+  "starterCode": "const result = 7 % -3;\nconsole.log(result);",
+  "solution": "const result = 7 % -3;\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1"
+    }
+  ],
+  "hints": [
+    "Sign follows the dividend",
+    "7 = -3*(-3) + (-2), but JS gives 1"
+  ]
+}

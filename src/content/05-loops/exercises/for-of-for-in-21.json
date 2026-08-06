@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-21",
+  "title": "For...In Alphabetical Keys",
+  "starterCode": "const obj = {c: 3, a: 1, b: 2};\nconst sorted = Object.keys(obj).sort();\nfor (const key of sorted) {\n  console.log(key + ':' + obj[key]);\n}",
+  "solution": "const obj = {c: 3, a: 1, b: 2};\nconst sorted = Object.keys(obj).sort();\nfor (const key of sorted) {\n  console.log(key + ':' + obj[key]);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "a:1\nb:2\nc:3"
+    }
+  ],
+  "hints": [
+    "Sort keys alphabetically",
+    "Use for...of on sorted array"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-49",
+  "title": "Double Tap",
+  "starterCode": "// Detect two quick taps\nconsole.log(\"double tap pattern\");",
+  "solution": "// Detect two quick taps\nconsole.log(\"double tap pattern\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "double tap pattern"
+    }
+  ],
+  "hints": [
+    "Track tap timing",
+    "Check interval between taps"
+  ]
+}

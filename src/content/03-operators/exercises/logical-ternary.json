@@ -1,0 +1,12 @@
+{
+  "id": "03-operators-logical-ternary",
+  "title": "Ternary + logical operators",
+  "starterCode": "// 1. Marks ke basis par grade ternary se:\nlet marks = 82\nlet grade = null // ternary likho\n// 90+ = A, 80-89 = B, 70-79 = C, 50-69 = D, <50 = F\nconsole.log(grade)\n\n// 2. Logical combinations:\nlet isLoggedIn = true\nlet isAdmin = false\nlet access = null // isLoggedIn && isAdmin? \"admin\" : isLoggedIn ? \"user\" : \"guest\"\nconsole.log(access)\n",
+  "solution": "let marks = 82\nlet grade = marks >= 90 ? \"A\" : marks >= 80 ? \"B\" : marks >= 70 ? \"C\" : marks >= 50 ? \"D\" : \"F\"\nconsole.log(grade) // B\nlet isLoggedIn = true\nlet isAdmin = false\nlet access = isLoggedIn && isAdmin ? \"admin\" : isLoggedIn ? \"user\" : \"guest\"\nconsole.log(access) // user",
+  "tests": [{ "input": [], "expected": "B" }],
+  "hints": [
+    "condition ? trueVal : falseVal",
+    "Nested ternary: pehle highest check",
+    "Logical && || se conditions combine karo"
+  ]
+}

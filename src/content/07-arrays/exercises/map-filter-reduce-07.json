@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-07",
+  "title": "Reduce to Object",
+  "starterCode": "const arr = [['a', 1], ['b', 2], ['c', 3]];\nconst obj = arr.____((o, [k, v]) => ({ ...o, [k]: v }), {});\nconsole.log(obj);",
+  "solution": "const arr = [['a', 1], ['b', 2], ['c', 3]];\nconst obj = arr.reduce((o, [k, v]) => ({ ...o, [k]: v }), {});\nconsole.log(obj);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{ a: 1, b: 2, c: 3 }"
+    }
+  ],
+  "hints": [
+    "Spread accumulator",
+    "Create object from pairs"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-07",
+  "title": "style Property",
+  "starterCode": "const el = document.querySelector('.box');\nel.style.color = 'red';\nconsole.log(el.style.color);",
+  "solution": "const el = document.querySelector('.box');\nel.style.color = 'red';\nconsole.log(el.style.color);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "red"
+    }
+  ],
+  "hints": [
+    "style property sets inline styles",
+    "Use camelCase for property names"
+  ]
+}

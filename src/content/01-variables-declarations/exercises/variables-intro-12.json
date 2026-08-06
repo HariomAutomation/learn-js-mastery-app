@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-variables-intro-12",
+  "title": "Object shorthand property",
+  "starterCode": "const name = \"Alice\"\nconst obj = { name }\nconsole.log(obj.name)",
+  "solution": "const name = \"Alice\"\nconst obj = { name }\nconsole.log(obj.name)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Alice"
+    }
+  ],
+  "hints": [
+    "{ name } is shorthand for { name: name }"
+  ]
+}

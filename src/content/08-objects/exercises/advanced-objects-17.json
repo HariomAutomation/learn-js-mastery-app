@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-17",
+  "title": "Iterate Properties",
+  "starterCode": "const obj = {a: 1, b: 2, c: 3};\nfor (const key in obj) {\n  if (obj.hasOwnProperty(key)) {\n    console.log(key + ': ' + obj[key]);\n  }\n}",
+  "solution": "const obj = {a: 1, b: 2, c: 3};\nfor (const key in obj) {\n  if (obj.hasOwnProperty(key)) {\n    console.log(key + ': ' + obj[key]);\n  }\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "a: 1\nb: 2\nc: 3"
+    }
+  ],
+  "hints": [
+    "for-in loops keys",
+    "Check hasOwnProperty"
+  ]
+}

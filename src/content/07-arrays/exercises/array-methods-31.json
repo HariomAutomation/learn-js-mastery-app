@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-methods-31",
+  "title": "Splice Insert Multiple",
+  "starterCode": "const arr = ['a', 'd'];\narr.____(1, 0, 'b', 'c');\nconsole.log(arr);",
+  "solution": "const arr = ['a', 'd'];\narr.splice(1, 0, 'b', 'c');\nconsole.log(arr);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 'a', 'b', 'c', 'd' ]"
+    }
+  ],
+  "hints": [
+    "Insert multiple items",
+    "Count is 0 for insert"
+  ]
+}

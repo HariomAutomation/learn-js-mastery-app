@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-48",
+  "title": "Frozen object can't be modified",
+  "starterCode": "const obj = Object.freeze({ x: 1 });\nobj.x = 2;\nconsole.log();",
+  "solution": "const obj = Object.freeze({ x: 1 });\nobj.x = 2;\nconsole.log(obj.x);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1"
+    }
+  ],
+  "hints": [
+    "freeze prevents modifications",
+    "Silently fails in non-strict mode"
+  ]
+}

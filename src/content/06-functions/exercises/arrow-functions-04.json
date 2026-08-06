@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-04",
+  "title": "Implicit Return",
+  "starterCode": "const square = x => x * x;\nconsole.log(square(5));",
+  "solution": "const square = x => x * x;\nconsole.log(square(5));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "25"
+    }
+  ],
+  "hints": [
+    "No braces needed",
+    "Single expression"
+  ]
+}

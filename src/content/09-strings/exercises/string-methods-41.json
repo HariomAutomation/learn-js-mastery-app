@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-methods-41",
+  "title": "Trim Start",
+  "starterCode": "console.log('  hello  '.trimStart());",
+  "solution": "console.log('  hello  '.trimStart());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hello  "
+    }
+  ],
+  "hints": [
+    "Remove leading whitespace",
+    "Keep trailing"
+  ]
+}

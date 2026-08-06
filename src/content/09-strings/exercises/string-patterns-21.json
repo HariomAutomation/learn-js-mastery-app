@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-21",
+  "title": "Common Suffix",
+  "starterCode": "function commonSuffix(str1, str2) {\n  let i = str1.length, j = str2.length, count = 0;\n  while (i > 0 && j > 0 && str1[--i] === str2[--j]) count++;\n  return str1.slice(-count);\n}\nconsole.log(commonSuffix('testing', 'running'));",
+  "solution": "function commonSuffix(str1, str2) {\n  let i = str1.length, j = str2.length, count = 0;\n  while (i > 0 && j > 0 && str1[--i] === str2[--j]) count++;\n  return str1.slice(-count);\n}\nconsole.log(commonSuffix('testing', 'running'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "ing"
+    }
+  ],
+  "hints": [
+    "Compare from end",
+    "Count matching suffix"
+  ]
+}

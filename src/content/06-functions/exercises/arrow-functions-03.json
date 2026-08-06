@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-03",
+  "title": "No Parameters",
+  "starterCode": "const sayHi = () => 'Hi!';\nconsole.log(sayHi());",
+  "solution": "const sayHi = () => 'Hi!';\nconsole.log(sayHi());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hi!"
+    }
+  ],
+  "hints": [
+    "Empty parens",
+    "Implicit return"
+  ]
+}

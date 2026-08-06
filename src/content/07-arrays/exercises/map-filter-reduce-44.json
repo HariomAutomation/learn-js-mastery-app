@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-44",
+  "title": "Filter Range Inclusive",
+  "starterCode": "const nums = [1, 5, 10, 15, 20];\nconst range = nums.____(x => x >= 10 && x <= 20);\nconsole.log(range);",
+  "solution": "const nums = [1, 5, 10, 15, 20];\nconst range = nums.filter(x => x >= 10 && x <= 20);\nconsole.log(range);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 10, 15, 20 ]"
+    }
+  ],
+  "hints": [
+    "Inclusive range",
+    "Both bounds included"
+  ]
+}

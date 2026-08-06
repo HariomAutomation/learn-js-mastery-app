@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-variables-intro-22",
+  "title": "void operator",
+  "starterCode": "console.log(void 0)",
+  "solution": "console.log(void 0)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "undefined"
+    }
+  ],
+  "hints": [
+    "void evaluates and returns undefined"
+  ]
+}

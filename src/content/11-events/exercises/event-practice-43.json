@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-43",
+  "title": "Event Bubbling Control",
+  "starterCode": "// stopPropagation: stops bubbling\n// stopImmediatePropagation: stops all handlers\nconsole.log(\"propagation control\");",
+  "solution": "// stopPropagation: stops bubbling\n// stopImmediatePropagation: stops all handlers\nconsole.log(\"propagation control\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "propagation control"
+    }
+  ],
+  "hints": [
+    "stopPropagation for bubbling",
+    "stopImmediatePropagation for all"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-11",
+  "title": "ValueOf",
+  "starterCode": "const str = 'hello';\nconsole.log(str.valueOf() === str);",
+  "solution": "const str = 'hello';\nconsole.log(str.valueOf() === str);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "valueOf returns primitive",
+    "Same string"
+  ]
+}

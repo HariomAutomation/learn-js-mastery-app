@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-07",
+  "title": "Return from Async",
+  "starterCode": "async function getValue() {\n  return 'result';\n}\nasync function caller() {\n  const val = await getValue();\n  console.log(val);\n}\ncaller();",
+  "solution": "async function getValue() {\n  return 'result';\n}\nasync function caller() {\n  const val = await getValue();\n  console.log(val);\n}\ncaller();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "result"
+    }
+  ],
+  "hints": [
+    "Return value is wrapped in promise",
+    "Await to get actual value"
+  ]
+}

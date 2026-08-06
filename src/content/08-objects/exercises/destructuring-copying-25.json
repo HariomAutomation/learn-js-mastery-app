@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-25",
+  "title": "Nested Array Destruct",
+  "starterCode": "const arr = [1, [2, 3], 4];\nconst [a, [b, c], d] = arr;\nconsole.log(a, b, c, d);",
+  "solution": "const arr = [1, [2, 3], 4];\nconst [a, [b, c], d] = arr;\nconsole.log(a, b, c, d);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1 2 3 4"
+    }
+  ],
+  "hints": [
+    "Nested array destructuring",
+    "Match structure"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-20",
+  "title": "Chain of Responsibility",
+  "starterCode": "class Handler {\n  setNext(handler) { this.next = handler; return handler; }\n  handle(request) {\n    if (this.next) return this.next.handle(request);\n    return null;\n  }\n}\nclass AuthHandler extends Handler {\n  handle(request) {\n    if (request.auth) return 'authenticated';\n    return super.handle(request);\n  }\n}\nconst auth = new AuthHandler();\nauth.setNext(new Handler());\nconsole.log(auth.handle({ auth: true }));",
+  "solution": "class Handler {\n  setNext(handler) { this.next = handler; return handler; }\n  handle(request) {\n    if (this.next) return this.next.handle(request);\n    return null;\n  }\n}\nclass AuthHandler extends Handler {\n  handle(request) {\n    if (request.auth) return 'authenticated';\n    return super.handle(request);\n  }\n}\nconst auth = new AuthHandler();\nauth.setNext(new Handler());\nconsole.log(auth.handle({ auth: true }));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "authenticated"
+    }
+  ],
+  "hints": [
+    "Chain handlers together",
+    "Each handles or passes to next"
+  ]
+}

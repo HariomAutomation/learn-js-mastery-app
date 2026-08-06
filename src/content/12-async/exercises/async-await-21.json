@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-21",
+  "title": "Sequential Array",
+  "starterCode": "async function processSequentially() {\n  const items = [1, 2, 3];\n  const results = [];\n  for (const item of items) {\n    results.push(await Promise.resolve(item * 10));\n  }\n  console.log(results);\n}\nprocessSequentially();",
+  "solution": "async function processSequentially() {\n  const items = [1, 2, 3];\n  const results = [];\n  for (const item of items) {\n    results.push(await Promise.resolve(item * 10));\n  }\n  console.log(results);\n}\nprocessSequentially();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10,20,30"
+    }
+  ],
+  "hints": [
+    "Use for loop with await",
+    "Sequential processing"
+  ]
+}

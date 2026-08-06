@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-40",
+  "title": "Promise Reject Error",
+  "starterCode": "Promise.reject(new Error('fail'))\n  .catch(err => console.log(err.message));",
+  "solution": "Promise.reject(new Error('fail'))\n  .catch(err => console.log(err.message));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "fail"
+    }
+  ],
+  "hints": [
+    "Reject with Error object",
+    "catch receives the error"
+  ]
+}

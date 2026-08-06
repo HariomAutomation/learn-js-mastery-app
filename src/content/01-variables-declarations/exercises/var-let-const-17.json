@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-var-let-const-17",
+  "title": "let in for of",
+  "starterCode": "const arr = [\"a\", \"b\", \"c\"]\nfor (let x of arr) {\n  console.log(x)\n}",
+  "solution": "const arr = [\"a\", \"b\", \"c\"]\nfor (let x of arr) {\n  console.log(x)\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "a\nb\nc"
+    }
+  ],
+  "hints": [
+    "let creates new scope per iteration"
+  ]
+}

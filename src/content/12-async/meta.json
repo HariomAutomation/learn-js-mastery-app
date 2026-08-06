@@ -1,0 +1,8 @@
+{
+  "id": "12-async",
+  "title": "Async JavaScript",
+  "order": 12,
+  "description": "Callbacks, Promises, async/await, and Fetch API",
+  "prerequisites": ["06-functions"],
+  "lessonCount": 3
+}

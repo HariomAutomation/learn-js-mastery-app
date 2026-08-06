@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-39",
+  "title": "Static Factory Method",
+  "starterCode": "class User {\n  constructor(name) { this.name = name; }\n  static create(name) { return new User(name); }\n}\nconst u = User.create('Admin');\nconsole.log(u.name);",
+  "solution": "class User {\n  constructor(name) { this.name = name; }\n  static create(name) { return new User(name); }\n}\nconst u = User.create('Admin');\nconsole.log(u.name);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Admin"
+    }
+  ],
+  "hints": [
+    "Static method creates instance",
+    "Called on class, not instance"
+  ]
+}

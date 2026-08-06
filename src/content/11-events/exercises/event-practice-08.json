@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-08",
+  "title": "Keyboard Shortcuts",
+  "starterCode": "// Keydown for keyboard shortcuts\nconsole.log(\"keyboard shortcut pattern\");",
+  "solution": "// Keydown for keyboard shortcuts\nconsole.log(\"keyboard shortcut pattern\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "keyboard shortcut pattern"
+    }
+  ],
+  "hints": [
+    "Check e.key and modifier keys",
+    "Use preventDefault for defaults"
+  ]
+}

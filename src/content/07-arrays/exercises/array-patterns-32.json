@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-patterns-32",
+  "title": "Chunk Size",
+  "starterCode": "function chunk(arr, size) {\n  const chunks = [];\n  for (let i = 0; i < arr.length; i += size) {\n    chunks.push(arr.slice(i, i + size));\n  }\n  return chunks;\n}\nconsole.log(chunk([1,2,3,4,5,6,7], 3));",
+  "solution": "function chunk(arr, size) {\n  const chunks = [];\n  for (let i = 0; i < arr.length; i += size) {\n    chunks.push(arr.slice(i, i + size));\n  }\n  return chunks;\n}\nconsole.log(chunk([1,2,3,4,5,6,7], 3));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7 ] ]"
+    }
+  ],
+  "hints": [
+    "Step by size",
+    "Last chunk may be smaller"
+  ]
+}

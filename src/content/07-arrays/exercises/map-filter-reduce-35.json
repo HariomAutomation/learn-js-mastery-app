@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-35",
+  "title": "Filter Includes",
+  "starterCode": "const arr = ['apple', 'banana', 'avocado', 'cherry'];\nconst withA = arr.____(w => w.includes('a'));\nconsole.log(withA);",
+  "solution": "const arr = ['apple', 'banana', 'avocado', 'cherry'];\nconst withA = arr.filter(w => w.includes('a'));\nconsole.log(withA);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 'apple', 'banana', 'avocado' ]"
+    }
+  ],
+  "hints": [
+    "includes checks substring",
+    "Filter words with 'a'"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-21",
+  "title": "Descriptor Enumerate",
+  "starterCode": "const obj = {};\nObject.defineProperty(obj, 'a', {value: 1, enumerable: true});\nObject.defineProperty(obj, 'b', {value: 2, enumerable: false});\nconsole.log(Object.keys(obj));\nconsole.log(obj.b);",
+  "solution": "const obj = {};\nObject.defineProperty(obj, 'a', {value: 1, enumerable: true});\nObject.defineProperty(obj, 'b', {value: 2, enumerable: false});\nconsole.log(Object.keys(obj));\nconsole.log(obj.b);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 'a' ]\n2"
+    }
+  ],
+  "hints": [
+    "Enumerable affects keys",
+    "Still accessible"
+  ]
+}

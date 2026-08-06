@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-38",
+  "title": "Delegation Maintenance",
+  "starterCode": "// Easy to add new items without new listeners\nconsole.log(\"no need to rebind events\");",
+  "solution": "// Easy to add new items without new listeners\nconsole.log(\"no need to rebind events\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "no need to rebind events"
+    }
+  ],
+  "hints": [
+    "New elements automatically handled",
+    "Parent listener catches all"
+  ]
+}

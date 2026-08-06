@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-31",
+  "title": "querySelector Attribute Value",
+  "starterCode": "const el = document.querySelector('input[type=\"text\"]');\nconsole.log(el);",
+  "solution": "const el = document.querySelector('input[type=\"text\"]');\nconsole.log(el);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "null"
+    }
+  ],
+  "hints": [
+    "Use [attribute=value] syntax",
+    "Combines tag and attribute selectors"
+  ]
+}

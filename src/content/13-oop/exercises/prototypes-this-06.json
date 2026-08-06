@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-06",
+  "title": "Call Method",
+  "starterCode": "function greet(greeting) {\n  console.log(greeting + ' ' + this.name);\n}\ngreet.call({ name: 'John' }, 'Hello');",
+  "solution": "function greet(greeting) {\n  console.log(greeting + ' ' + this.name);\n}\ngreet.call({ name: 'John' }, 'Hello');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hello John"
+    }
+  ],
+  "hints": [
+    "call sets this and passes args",
+    "First arg is this context"
+  ]
+}

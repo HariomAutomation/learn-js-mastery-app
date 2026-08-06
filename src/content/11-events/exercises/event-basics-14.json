@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-14",
+  "title": "Focus Event",
+  "starterCode": "const input = document.querySelector('input');\ninput.addEventListener('focus', function(e) {\n  console.log('focused');\n});",
+  "solution": "const input = document.querySelector('input');\ninput.addEventListener('focus', function(e) {\n  console.log('focused');\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "focused"
+    }
+  ],
+  "hints": [
+    "Fires when element gains focus",
+    "Use for input highlighting"
+  ]
+}

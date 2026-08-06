@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-47",
+  "title": "dataset Read All",
+  "starterCode": "const el = document.querySelector('[data-name=\"test\"]');\nconsole.log(JSON.stringify(el.dataset));",
+  "solution": "const el = document.querySelector('[data-name=\"test\"]');\nconsole.log(JSON.stringify(el.dataset));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{\"name\":\"test\"}"
+    }
+  ],
+  "hints": [
+    "dataset contains all data-* attributes",
+    "JSON.stringify to see all"
+  ]
+}

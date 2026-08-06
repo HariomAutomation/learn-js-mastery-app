@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-05",
+  "title": "Hoisting var",
+  "starterCode": "console.log(x)\nvar x = 5",
+  "solution": "console.log(x)\nvar x = 5",
+  "tests": [
+    {
+      "input": [],
+      "expected": "undefined"
+    }
+  ],
+  "hints": [
+    "var is hoisted but not initialized"
+  ]
+}

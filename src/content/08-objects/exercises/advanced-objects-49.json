@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-49",
+  "title": "Constructor Property",
+  "starterCode": "const obj = {};\nconsole.log(obj.constructor === Object);",
+  "solution": "const obj = {};\nconsole.log(obj.constructor === Object);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "constructor property",
+    "Points to constructor"
+  ]
+}

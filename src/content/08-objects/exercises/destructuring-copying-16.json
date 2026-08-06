@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-16",
+  "title": "Shallow Demo",
+  "starterCode": "const obj = {a: 1, b: {c: 2}};\nconst copy = {...obj};\ncopy.b.c = 99;\nconsole.log(obj.b.c);",
+  "solution": "const obj = {a: 1, b: {c: 2}};\nconst copy = {...obj};\ncopy.b.c = 99;\nconsole.log(obj.b.c);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "99"
+    }
+  ],
+  "hints": [
+    "Shallow copy shares nested",
+    "Reference copied"
+  ]
+}

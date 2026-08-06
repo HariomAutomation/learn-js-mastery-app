@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-20",
+  "title": "Paste Event",
+  "starterCode": "document.addEventListener('paste', function(e) {\n  console.log('pasted');\n});",
+  "solution": "document.addEventListener('paste', function(e) {\n  console.log('pasted');\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "pasted"
+    }
+  ],
+  "hints": [
+    "Fires when user pastes content",
+    "Can access pasted data"
+  ]
+}

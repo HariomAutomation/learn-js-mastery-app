@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-20",
+  "title": "IsFrozen",
+  "starterCode": "const obj1 = {a: 1};\nconst obj2 = Object.freeze({a: 1});\nconsole.log(Object.isFrozen(obj1));\nconsole.log(Object.isFrozen(obj2));",
+  "solution": "const obj1 = {a: 1};\nconst obj2 = Object.freeze({a: 1});\nconsole.log(Object.isFrozen(obj1));\nconsole.log(Object.isFrozen(obj2));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "false\ntrue"
+    }
+  ],
+  "hints": [
+    "isFrozen checks",
+    "Frozen objects"
+  ]
+}

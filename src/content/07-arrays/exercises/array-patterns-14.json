@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-patterns-14",
+  "title": "Sliding Window",
+  "starterCode": "function slidingWindow(arr, size) {\n  return arr.slice(0, arr.length - size + 1).map((_, i) => arr.slice(i, i + size));\n}\nconsole.log(slidingWindow([1,2,3,4,5], 3));",
+  "solution": "function slidingWindow(arr, size) {\n  return arr.slice(0, arr.length - size + 1).map((_, i) => arr.slice(i, i + size));\n}\nconsole.log(slidingWindow([1,2,3,4,5], 3));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ [ 1, 2, 3 ], [ 2, 3, 4 ], [ 3, 4, 5 ] ]"
+    }
+  ],
+  "hints": [
+    "Slice windows of size",
+    "Map with slice"
+  ]
+}

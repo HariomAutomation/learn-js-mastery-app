@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-12",
+  "title": "Function block scope",
+  "starterCode": "if (true) {\n  function test() { return 10 }\n}\ntry {\n  console.log(test())\n} catch(e) {\n  console.log(\"error\")\n}",
+  "solution": "if (true) {\n  function test() { return 10 }\n}\ntry {\n  console.log(test())\n} catch(e) {\n  console.log(\"error\")\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "error"
+    }
+  ],
+  "hints": [
+    "Function hoisting varies by environment"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-arithmetic-comparison-10",
+  "title": "Pre decrement",
+  "starterCode": "let x = 10;\nconst result = --x;\nconsole.log(result);",
+  "solution": "let x = 10;\nconst result = --x;\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "9"
+    }
+  ],
+  "hints": [
+    "Pre decrement decrements THEN returns value",
+    "x is 9, and result is 9"
+  ]
+}

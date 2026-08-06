@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-18",
+  "title": "Map Flatten",
+  "starterCode": "const arr = [[1, 2], [3, 4]];\nconst flat = arr.____(x => x);\nconsole.log(flat);",
+  "solution": "const arr = [[1, 2], [3, 4]];\nconst flat = arr.flatMap(x => x);\nconsole.log(flat);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 1, 2, 3, 4 ]"
+    }
+  ],
+  "hints": [
+    "flatMap flattens result",
+    "Return inner array"
+  ]
+}

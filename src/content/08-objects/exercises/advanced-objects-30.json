@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-30",
+  "title": "Advanced Complete",
+  "starterCode": "const obj = {a: 1, b: 2};\nconst sym = Symbol('key');\nobj[sym] = 3;\nconsole.log(Object.keys(obj).length);\nconsole.log(Object.getOwnPropertySymbols(obj).length);",
+  "solution": "const obj = {a: 1, b: 2};\nconst sym = Symbol('key');\nobj[sym] = 3;\nconsole.log(Object.keys(obj).length);\nconsole.log(Object.getOwnPropertySymbols(obj).length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2\n1"
+    }
+  ],
+  "hints": [
+    "Regular vs symbol keys",
+    "Count each"
+  ]
+}

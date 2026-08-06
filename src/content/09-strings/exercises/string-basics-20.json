@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-20",
+  "title": "Match",
+  "starterCode": "const str = 'hello world';\nconst result = str.match(/\\w+/g);\nconsole.log(result);",
+  "solution": "const str = 'hello world';\nconst result = str.match(/\\w+/g);\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 'hello', 'world' ]"
+    }
+  ],
+  "hints": [
+    "match with regex",
+    "Global flag for all"
+  ]
+}

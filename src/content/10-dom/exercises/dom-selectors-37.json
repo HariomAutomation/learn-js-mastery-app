@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-37",
+  "title": "querySelector Chaining",
+  "starterCode": "const inner = document.querySelector('.outer .inner');\nconsole.log(inner);",
+  "solution": "const inner = document.querySelector('.outer .inner');\nconsole.log(inner);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "null"
+    }
+  ],
+  "hints": [
+    "Space means descendant selector",
+    "Finds .inner inside .outer"
+  ]
+}

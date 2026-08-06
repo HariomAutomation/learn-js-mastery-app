@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-patterns-22",
+  "title": "Unique Filter",
+  "starterCode": "const arr = [1, 2, 2, 3, 4, 4, 5];\nconst unique = arr.filter((v, i, a) => a.indexOf(v) === i);\nconsole.log(unique);",
+  "solution": "const arr = [1, 2, 2, 3, 4, 4, 5];\nconst unique = arr.filter((v, i, a) => a.indexOf(v) === i);\nconsole.log(unique);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 1, 2, 3, 4 ]"
+    }
+  ],
+  "hints": [
+    "Check first occurrence",
+    "indexOf equals index"
+  ]
+}

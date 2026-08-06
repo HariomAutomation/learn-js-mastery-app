@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-02",
+  "title": "Array Destructuring",
+  "starterCode": "const arr = [1, 2, 3];\nconst [a, b, c] = arr;\nconsole.log(a, b, c);",
+  "solution": "const arr = [1, 2, 3];\nconst [a, b, c] = arr;\nconsole.log(a, b, c);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1 2 3"
+    }
+  ],
+  "hints": [
+    "Destructure with brackets",
+    "Order matters"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-closures-iife-08",
+  "title": "Counter Closure",
+  "starterCode": "function createCounter() {\n  let count = 0;\n  return {\n    increment: () => ++count,\n    decrement: () => --count,\n    getCount: () => count\n  };\n}\nconst c = createCounter();\nc.increment();\nc.increment();\nc.increment();\nc.decrement();\nconsole.log(c.getCount());",
+  "solution": "function createCounter() {\n  let count = 0;\n  return {\n    increment: () => ++count,\n    decrement: () => --count,\n    getCount: () => count\n  };\n}\nconst c = createCounter();\nc.increment();\nc.increment();\nc.increment();\nc.decrement();\nconsole.log(c.getCount());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2"
+    }
+  ],
+  "hints": [
+    "Private count variable",
+    "Methods modify it"
+  ]
+}

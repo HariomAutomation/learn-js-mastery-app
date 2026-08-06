@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-16",
+  "title": "Object GroupBy",
+  "starterCode": "const items = [{type: 'fruit', name: 'apple'}, {type: 'veggie', name: 'carrot'}];\nconst grouped = Object.groupBy(items, item => item.type);\nconsole.log(grouped);",
+  "solution": "const items = [{type: 'fruit', name: 'apple'}, {type: 'veggie', name: 'carrot'}];\nconst grouped = Object.groupBy(items, item => item.type);\nconsole.log(grouped);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{ fruit: [ { type: 'fruit', name: 'apple' } ], veggie: [ { type: 'veggie', name: 'carrot' } ] }"
+    }
+  ],
+  "hints": [
+    "Object.groupBy groups",
+    "By callback result"
+  ]
+}

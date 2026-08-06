@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-40",
+  "title": "Extends Super",
+  "starterCode": "class Animal {\n  constructor(type) { this.type = type; }\n}\nclass Dog extends Animal {\n  constructor(name) {\n    super('dog');\n    this.name = name;\n  }\n}\nconsole.log(new Dog('Rex').type + ' ' + new Dog('Rex').name);",
+  "solution": "class Animal {\n  constructor(type) { this.type = type; }\n}\nclass Dog extends Animal {\n  constructor(name) {\n    super('dog');\n    this.name = name;\n  }\n}\nconsole.log(new Dog('Rex').type + ' ' + new Dog('Rex').name);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "dog Rex"
+    }
+  ],
+  "hints": [
+    "super() calls parent constructor",
+    "Set own properties after super"
+  ]
+}

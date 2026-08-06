@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-43",
+  "title": "Decompress String",
+  "starterCode": "function decompress(str) {\n  return str.replace(/(\\w)(\\d+)/g, (_, c, n) => c.repeat(Number(n)));\n}\nconsole.log(decompress('a3b2c4'));",
+  "solution": "function decompress(str) {\n  return str.replace(/(\\w)(\\d+)/g, (_, c, n) => c.repeat(Number(n)));\n}\nconsole.log(decompress('a3b2c4'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "aaabbbbcccc"
+    }
+  ],
+  "hints": [
+    "Match char + count",
+    "Repeat char"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-15",
+  "title": "Multiline Arrow",
+  "starterCode": "const process = (a, b) => {\n  const sum = a + b;\n  const product = a * b;\n  return { sum, product };\n};\nconst result = process(2, 3);\nconsole.log(result.sum + ' ' + result.product);",
+  "solution": "const process = (a, b) => {\n  const sum = a + b;\n  const product = a * b;\n  return { sum, product };\n};\nconst result = process(2, 3);\nconsole.log(result.sum + ' ' + result.product);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "5 6"
+    }
+  ],
+  "hints": [
+    "Use braces for multi-line",
+    "Explicit return"
+  ]
+}

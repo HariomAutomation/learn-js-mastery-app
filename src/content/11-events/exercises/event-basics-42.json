@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-42",
+  "title": "Input Value Event",
+  "starterCode": "const input = document.querySelector('input');\ninput.addEventListener('input', function(e) {\n  console.log(e.target.value);\n});",
+  "solution": "const input = document.querySelector('input');\ninput.addEventListener('input', function(e) {\n  console.log(e.target.value);\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hello"
+    }
+  ],
+  "hints": [
+    "e.target.value has current input value",
+    "Fires on every keystroke"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-20",
+  "title": "Reduce Group",
+  "starterCode": "const people = [{name: 'Alice', age: 25}, {name: 'Bob', age: 30}, {name: 'Charlie', age: 25}];\nconst byAge = people.____((acc, p) => {\n  acc[p.age] = acc[p.age] || [];\n  acc[p.age].push(p.name);\n  return acc;\n}, {});\nconsole.log(byAge);",
+  "solution": "const people = [{name: 'Alice', age: 25}, {name: 'Bob', age: 30}, {name: 'Charlie', age: 25}];\nconst byAge = people.reduce((acc, p) => {\n  acc[p.age] = acc[p.age] || [];\n  acc[p.age].push(p.name);\n  return acc;\n}, {});\nconsole.log(byAge);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{ '25': [ 'Alice', 'Charlie' ], '30': [ 'Bob' ] }"
+    }
+  ],
+  "hints": [
+    "Group by age property",
+    "Initialize array"
+  ]
+}

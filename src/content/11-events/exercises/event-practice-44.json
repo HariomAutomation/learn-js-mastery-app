@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-44",
+  "title": "Practice Complete",
+  "starterCode": "// All event patterns practiced\nconsole.log(\"all patterns complete\");",
+  "solution": "// All event patterns practiced\nconsole.log(\"all patterns complete\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "all patterns complete"
+    }
+  ],
+  "hints": [
+    "Review all UI patterns",
+    "Build real projects"
+  ]
+}

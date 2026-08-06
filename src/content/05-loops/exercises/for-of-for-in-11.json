@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-11",
+  "title": "For...Of With Entries",
+  "starterCode": "const arr = ['x', 'y', 'z'];\nfor (const [index, val] of arr.entries()) {\n  console.log(index + ': ' + val);\n}",
+  "solution": "const arr = ['x', 'y', 'z'];\nfor (const [index, val] of arr.entries()) {\n  console.log(index + ': ' + val);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "0: x\n1: y\n2: z"
+    }
+  ],
+  "hints": [
+    "entries() returns [index, value]",
+    "Use with for...of"
+  ]
+}

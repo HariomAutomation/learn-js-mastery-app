@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-patterns-10",
+  "title": "Group By Property",
+  "starterCode": "const people = [\n  {name: 'Alice', dept: 'eng'},\n  {name: 'Bob', dept: 'sales'},\n  {name: 'Charlie', dept: 'eng'}\n];\nconst grouped = people.reduce((acc, p) => {\n  acc[p.dept] = acc[p.dept] || [];\n  acc[p.dept].push(p.name);\n  return acc;\n}, {});\nconsole.log(grouped);",
+  "solution": "const people = [\n  {name: 'Alice', dept: 'eng'},\n  {name: 'Bob', dept: 'sales'},\n  {name: 'Charlie', dept: 'eng'}\n];\nconst grouped = people.reduce((acc, p) => {\n  acc[p.dept] = acc[p.dept] || [];\n  acc[p.dept].push(p.name);\n  return acc;\n}, {});\nconsole.log(grouped);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{ eng: [ 'Alice', 'Charlie' ], sales: [ 'Bob' ] }"
+    }
+  ],
+  "hints": [
+    "Group by dept",
+    "Reduce to object"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-40",
+  "title": "Switch with function return",
+  "starterCode": "function getHttpStatus(code) {\n  switch (code) {\n    case 200: return 'OK';\n    case 301: return 'Moved';\n    case 404: return 'Not Found';\n    case 500: return 'Error';\n    default: return 'Unknown';\n  }\n}\nconsole.log(getHttpStatus(301));",
+  "solution": "function getHttpStatus(code) {\n  switch (code) {\n    case 200: return 'OK';\n    case 301: return 'Moved';\n    case 404: return 'Not Found';\n    case 500: return 'Error';\n    default: return 'Unknown';\n  }\n}\nconsole.log(getHttpStatus(301));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Moved"
+    }
+  ],
+  "hints": [
+    "switch can return from function",
+    "301 matches case 301"
+  ]
+}

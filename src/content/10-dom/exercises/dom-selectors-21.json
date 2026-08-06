@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-21",
+  "title": "Closest Polyfill Concept",
+  "starterCode": "function closestPolyfill(el, selector) {\n  // TODO: implement traversal up\n  return null;\n}\nconsole.log(typeof closestPolyfill);",
+  "solution": "function closestPolyfill(el, selector) {\n  let current = el;\n  while (current) {\n    if (current.matches(selector)) return current;\n    current = current.parentElement;\n  }\n  return null;\n}\nconsole.log(typeof closestPolyfill);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "function"
+    }
+  ],
+  "hints": [
+    "Traverse up using parentElement",
+    "Check matches at each step"
+  ]
+}

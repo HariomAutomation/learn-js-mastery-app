@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-31",
+  "title": "Map Array Flat",
+  "starterCode": "const arr = [[1, 2], [3, 4], [5]];\nconst result = arr.____((x, i) => [...x, i]);\nconsole.log(result.flat());",
+  "solution": "const arr = [[1, 2], [3, 4], [5]];\nconst result = arr.map((x, i) => [...x, i]);\nconsole.log(result.flat());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 1, 2, 0, 3, 4, 1, 5, 2 ]"
+    }
+  ],
+  "hints": [
+    "Map adds index to each",
+    "Then flatten"
+  ]
+}

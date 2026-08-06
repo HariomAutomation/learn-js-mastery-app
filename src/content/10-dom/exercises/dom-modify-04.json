@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-04",
+  "title": "removeAttribute Method",
+  "starterCode": "const el = document.querySelector('[disabled]');\nel.removeAttribute('disabled');\nconsole.log(el.hasAttribute('disabled'));",
+  "solution": "const el = document.querySelector('[disabled]');\nel.removeAttribute('disabled');\nconsole.log(el.hasAttribute('disabled'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "false"
+    }
+  ],
+  "hints": [
+    "removeAttribute removes an attribute",
+    "hasAttribute checks existence"
+  ]
+}

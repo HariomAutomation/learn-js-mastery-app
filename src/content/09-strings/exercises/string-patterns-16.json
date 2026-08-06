@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-16",
+  "title": "Longest Word",
+  "starterCode": "function longestWord(str) {\n  return str.split(/\\s+/).reduce((a, b) => a.length >= b.length ? a : b);\n}\nconsole.log(longestWord('hello beautiful world'));",
+  "solution": "function longestWord(str) {\n  return str.split(/\\s+/).reduce((a, b) => a.length >= b.length ? a : b);\n}\nconsole.log(longestWord('hello beautiful world'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "beautiful"
+    }
+  ],
+  "hints": [
+    "Split by spaces",
+    "Find longest"
+  ]
+}

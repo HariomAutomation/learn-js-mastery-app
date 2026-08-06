@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-42",
+  "title": "For...In Object Entries",
+  "starterCode": "const user = {name: 'Tom', age: 30, job: 'dev'};\nfor (const key in user) {\n  if (user.hasOwnProperty(key)) {\n    console.log(`${key}: ${user[key]}`);\n  }\n}",
+  "solution": "const user = {name: 'Tom', age: 30, job: 'dev'};\nfor (const key in user) {\n  if (user.hasOwnProperty(key)) {\n    console.log(`${key}: ${user[key]}`);\n  }\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "name: Tom\nage: 30\njob: dev"
+    }
+  ],
+  "hints": [
+    "Use template literal",
+    "Check own properties"
+  ]
+}

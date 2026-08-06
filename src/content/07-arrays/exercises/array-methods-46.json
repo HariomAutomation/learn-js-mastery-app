@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-methods-46",
+  "title": "Splice Return",
+  "starterCode": "const arr = ['a', 'b', 'c', 'd'];\nconst removed = arr.____(1, 2);\nconsole.log(removed);\nconsole.log(arr);",
+  "solution": "const arr = ['a', 'b', 'c', 'd'];\nconst removed = arr.splice(1, 2);\nconsole.log(removed);\nconsole.log(arr);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 'b', 'c' ]\n[ 'a', 'd' ]"
+    }
+  ],
+  "hints": [
+    "splice returns removed items",
+    "Array with removed elements"
+  ]
+}

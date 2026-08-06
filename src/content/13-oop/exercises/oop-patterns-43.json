@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-43",
+  "title": "Builder Pattern",
+  "starterCode": "class QueryBuilder {\n  constructor() { this.q = []; }\n  select(f) { this.q.push('SELECT ' + f); return this; }\n  from(t) { this.q.push('FROM ' + t); return this; }\n  build() { return this.q.join(' '); }\n}\nconsole.log(new QueryBuilder().select('*').from('t').build());",
+  "solution": "class QueryBuilder {\n  constructor() { this.q = []; }\n  select(f) { this.q.push('SELECT ' + f); return this; }\n  from(t) { this.q.push('FROM ' + t); return this; }\n  build() { return this.q.join(' '); }\n}\nconsole.log(new QueryBuilder().select('*').from('t').build());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "SELECT * FROM t"
+    }
+  ],
+  "hints": [
+    "Each method returns this",
+    "build() assembles result"
+  ]
+}

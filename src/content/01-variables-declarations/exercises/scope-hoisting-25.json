@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-25",
+  "title": "block scope if",
+  "starterCode": "if (true) {\n  var a = 1\n  let b = 2\n  const c = 3\n}\nconsole.log(a, typeof b, typeof c)",
+  "solution": "if (true) {\n  var a = 1\n  let b = 2\n  const c = 3\n}\nconsole.log(a, typeof b, typeof c)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1 undefined undefined"
+    }
+  ],
+  "hints": [
+    "var leaks, let/const stay in block"
+  ]
+}

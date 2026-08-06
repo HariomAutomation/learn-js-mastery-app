@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-45",
+  "title": "Async Generator",
+  "starterCode": "async function* gen() {\n  yield await Promise.resolve(1);\n  yield await Promise.resolve(2);\n}\n(async () => {\n  const results = [];\n  for await (const v of gen()) results.push(v);\n  console.log(results);\n})();",
+  "solution": "async function* gen() {\n  yield await Promise.resolve(1);\n  yield await Promise.resolve(2);\n}\n(async () => {\n  const results = [];\n  for await (const v of gen()) results.push(v);\n  console.log(results);\n})();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1,2"
+    }
+  ],
+  "hints": [
+    "async function* creates async generator",
+    "for await...of iterates"
+  ]
+}

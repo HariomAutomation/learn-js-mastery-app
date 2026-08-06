@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-29",
+  "title": "Async Pattern",
+  "starterCode": "function asyncAdd(a, b) {\n  return new Promise(resolve => resolve(a + b));\n}\nasyncAdd(2, 3).then(result => console.log(result));",
+  "solution": "function asyncAdd(a, b) {\n  return new Promise(resolve => resolve(a + b));\n}\nasyncAdd(2, 3).then(result => console.log(result));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "5"
+    }
+  ],
+  "hints": [
+    "Wrap sync code in Promise",
+    "Use then to get result"
+  ]
+}

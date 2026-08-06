@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-40",
+  "title": "Destructuring Condition",
+  "starterCode": "const obj = {name: 'Alice', active: true};\nconst {name, active = false} = obj;\nconsole.log(active);",
+  "solution": "const obj = {name: 'Alice', active: true};\nconst {name, active = false} = obj;\nconsole.log(active);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "Default only if undefined",
+    "Existing value kept"
+  ]
+}

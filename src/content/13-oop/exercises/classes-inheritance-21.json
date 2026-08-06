@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-21",
+  "title": "Symbol.hasInstance",
+  "starterCode": "class Even {\n  static [Symbol.hasInstance](num) {\n    return num % 2 === 0;\n  }\n}\nconsole.log(4 instanceof Even);",
+  "solution": "class Even {\n  static [Symbol.hasInstance](num) {\n    return num % 2 === 0;\n  }\n}\nconsole.log(4 instanceof Even);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "Symbol.hasInstance customizes instanceof",
+    "Static method on class"
+  ]
+}

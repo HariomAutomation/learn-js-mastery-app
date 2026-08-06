@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-26",
+  "title": "Falsy 0 vs truthy string 0",
+  "starterCode": "console.log(0 == \"0\");",
+  "solution": "console.log(0 == \"0\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "== coerces types",
+    "0 and '0' are loosely equal"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-30",
+  "title": "Observer Complete",
+  "starterCode": "class Store {\n  constructor(state) { this.state = state; this.listeners = []; }\n  subscribe(fn) { this.listeners.push(fn); }\n  setState(newState) {\n    this.state = { ...this.state, ...newState };\n    this.listeners.forEach(fn => fn(this.state));\n  }\n}\nconst store = new Store({ count: 0 });\nstore.subscribe(s => console.log(s.count));\nstore.setState({ count: 1 });",
+  "solution": "class Store {\n  constructor(state) { this.state = state; this.listeners = []; }\n  subscribe(fn) { this.listeners.push(fn); }\n  setState(newState) {\n    this.state = { ...this.state, ...newState };\n    this.listeners.forEach(fn => fn(this.state));\n  }\n}\nconst store = new Store({ count: 0 });\nstore.subscribe(s => console.log(s.count));\nstore.setState({ count: 1 });",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1"
+    }
+  ],
+  "hints": [
+    "State management with observer",
+    "Notify on state change"
+  ]
+}

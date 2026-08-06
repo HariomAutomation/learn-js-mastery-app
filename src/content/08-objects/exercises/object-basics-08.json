@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-08",
+  "title": "Spread Objects",
+  "starterCode": "const obj1 = {a: 1, b: 2};\nconst obj2 = {b: 3, c: 4};\nconst merged = {...obj1, ...obj2};\nconsole.log(merged);",
+  "solution": "const obj1 = {a: 1, b: 2};\nconst obj2 = {b: 3, c: 4};\nconst merged = {...obj1, ...obj2};\nconsole.log(merged);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{ a: 1, b: 3, c: 4 }"
+    }
+  ],
+  "hints": [
+    "Spread merges objects",
+    "Later overrides earlier"
+  ]
+}

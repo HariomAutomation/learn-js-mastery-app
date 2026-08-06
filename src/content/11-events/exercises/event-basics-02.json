@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-02",
+  "title": "removeEventListener",
+  "starterCode": "function handleClick() { console.log('clicked'); }\nconst btn = document.querySelector('button');\nbtn.addEventListener('click', handleClick);\nbtn.removeEventListener('click', handleClick);\nconsole.log('removed');",
+  "solution": "function handleClick() { console.log('clicked'); }\nconst btn = document.querySelector('button');\nbtn.addEventListener('click', handleClick);\nbtn.removeEventListener('click', handleClick);\nconsole.log('removed');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "removed"
+    }
+  ],
+  "hints": [
+    "Must pass same function reference",
+    "Anonymous functions can't be removed"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-31",
+  "title": "Nested Delegation",
+  "starterCode": "const table = document.querySelector('table');\ntable.addEventListener('click', function(e) {\n  const td = e.target.closest('td');\n  if (td) console.log(td.textContent);\n});",
+  "solution": "const table = document.querySelector('table');\ntable.addEventListener('click', function(e) {\n  const td = e.target.closest('td');\n  if (td) console.log(td.textContent);\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Cell"
+    }
+  ],
+  "hints": [
+    "closest traverses up",
+    "Works with nested elements"
+  ]
+}

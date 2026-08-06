@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-37",
+  "title": "Symbol ToPrimitive",
+  "starterCode": "const money = {\n  amount: 100,\n  currency: 'USD',\n  [Symbol.toPrimitive](hint) {\n    if (hint === 'string') return `${this.amount} ${this.currency}`;\n    return this.amount;\n  }\n};\nconsole.log(money + 50);\nconsole.log(String(money));",
+  "solution": "const money = {\n  amount: 100,\n  currency: 'USD',\n  [Symbol.toPrimitive](hint) {\n    if (hint === 'string') return `${this.amount} ${this.currency}`;\n    return this.amount;\n  }\n};\nconsole.log(money + 50);\nconsole.log(String(money));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "150\n100 USD"
+    }
+  ],
+  "hints": [
+    "Hint determines format",
+    "Number or string"
+  ]
+}

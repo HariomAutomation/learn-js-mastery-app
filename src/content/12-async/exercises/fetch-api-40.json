@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-40",
+  "title": "Fetch with Auth",
+  "starterCode": "// fetch(url, { headers: { 'Authorization': 'Bearer token' } })\nconsole.log(\"authorization header\");",
+  "solution": "// fetch(url, { headers: { 'Authorization': 'Bearer token' } })\nconsole.log(\"authorization header\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "authorization header"
+    }
+  ],
+  "hints": [
+    "Set Authorization header",
+    "Bearer token format"
+  ]
+}

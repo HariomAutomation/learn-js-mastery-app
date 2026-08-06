@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-46",
+  "title": "Long Press",
+  "starterCode": "// mousedown timer + mouseup clear\nconsole.log(\"long press detection\");",
+  "solution": "// mousedown timer + mouseup clear\nconsole.log(\"long press detection\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "long press detection"
+    }
+  ],
+  "hints": [
+    "Start timer on mousedown",
+    "Clear on mouseup"
+  ]
+}

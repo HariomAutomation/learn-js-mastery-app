@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-closures-iife-07",
+  "title": "Private Variables",
+  "starterCode": "function createPerson(name) {\n  let _name = name;\n  return {\n    getName: () => _name,\n    setName: (n) => { _name = n; }\n  };\n}\nconst p = createPerson('Alice');\nconsole.log(p.getName());\np.setName('Bob');\nconsole.log(p.getName());",
+  "solution": "function createPerson(name) {\n  let _name = name;\n  return {\n    getName: () => _name,\n    setName: (n) => { _name = n; }\n  };\n}\nconst p = createPerson('Alice');\nconsole.log(p.getName());\np.setName('Bob');\nconsole.log(p.getName());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Alice\nBob"
+    }
+  ],
+  "hints": [
+    "_name is private",
+    "Access through methods"
+  ]
+}

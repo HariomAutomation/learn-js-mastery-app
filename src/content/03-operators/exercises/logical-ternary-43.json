@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-43",
+  "title": "Logical assignment with null",
+  "starterCode": "let x = null;\nx ??= 'initialized';\nconsole.log(x);",
+  "solution": "let x = null;\nx ??= 'initialized';\nconsole.log(x);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "initialized"
+    }
+  ],
+  "hints": [
+    "??= only assigns if null/undefined",
+    "x is null, so assignment happens"
+  ]
+}

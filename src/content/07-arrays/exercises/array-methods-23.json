@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-methods-23",
+  "title": "At Method",
+  "starterCode": "const arr = [10, 20, 30, 40, 50];\nconsole.log(arr.____(-1));",
+  "solution": "const arr = [10, 20, 30, 40, 50];\nconsole.log(arr.at(-1));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "50"
+    }
+  ],
+  "hints": [
+    "at() supports negative index",
+    "-1 is last element"
+  ]
+}

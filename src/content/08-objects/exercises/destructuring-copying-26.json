@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-26",
+  "title": "Rename Nested",
+  "starterCode": "const obj = {user: {name: 'Alice', address: {city: 'NYC'}}};\nconst {user: {name, address: {city: location}} = {}} = obj;\nconsole.log(name, location);",
+  "solution": "const obj = {user: {name: 'Alice', address: {city: 'NYC'}}};\nconst {user: {name, address: {city: location}} = {}} = obj;\nconsole.log(name, location);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Alice NYC"
+    }
+  ],
+  "hints": [
+    "Nested rename",
+    "Drill down deep"
+  ]
+}

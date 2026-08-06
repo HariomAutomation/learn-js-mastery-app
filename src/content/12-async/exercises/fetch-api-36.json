@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-36",
+  "title": "Fetch Complete",
+  "starterCode": "// fetch API: GET, POST, PUT, DELETE, etc.\nconsole.log(\"fetch API complete\");",
+  "solution": "// fetch API: GET, POST, PUT, DELETE, etc.\nconsole.log(\"fetch API complete\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "fetch API complete"
+    }
+  ],
+  "hints": [
+    "Review all fetch patterns",
+    "Practice with real APIs"
+  ]
+}

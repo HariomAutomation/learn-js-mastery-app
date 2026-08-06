@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-11",
+  "title": "Inner outer scope",
+  "starterCode": "var x = 1\nfunction test() {\n  console.log(x)\n}\ntest()",
+  "solution": "var x = 1\nfunction test() {\n  console.log(x)\n}\ntest()",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1"
+    }
+  ],
+  "hints": [
+    "Inner scope can access outer"
+  ]
+}

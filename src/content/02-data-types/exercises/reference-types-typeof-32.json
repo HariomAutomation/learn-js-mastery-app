@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-32",
+  "title": "Date is object",
+  "starterCode": "const d = new Date();\nconsole.log();",
+  "solution": "const d = new Date();\nconsole.log(typeof d);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "object"
+    }
+  ],
+  "hints": [
+    "Date objects are objects",
+    "instanceof is better for checking"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-14",
+  "title": "Get Set Accessor",
+  "starterCode": "const obj = {\n  _temp: 0,\n  get celsius() { return this._temp; },\n  set celsius(val) { this._temp = val; },\n  get fahrenheit() { return this._temp * 9/5 + 32; }\n};\nobj.celsius = 100;\nconsole.log(obj.fahrenheit);",
+  "solution": "const obj = {\n  _temp: 0,\n  get celsius() { return this._temp; },\n  set celsius(val) { this._temp = val; },\n  get fahrenheit() { return this._temp * 9/5 + 32; }\n};\nobj.celsius = 100;\nconsole.log(obj.fahrenheit);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "212"
+    }
+  ],
+  "hints": [
+    "Computed getter",
+    "Convert temperature"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-23",
+  "title": "ToString Override",
+  "starterCode": "const obj = {\n  name: 'Alice',\n  toString() { return this.name; }\n};\nconsole.log(String(obj));",
+  "solution": "const obj = {\n  name: 'Alice',\n  toString() { return this.name; }\n};\nconsole.log(String(obj));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Alice"
+    }
+  ],
+  "hints": [
+    "Override toString",
+    "String conversion"
+  ]
+}

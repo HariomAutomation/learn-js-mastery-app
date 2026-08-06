@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-44",
+  "title": "Fetch URL Search Params",
+  "starterCode": "// const params = new URLSearchParams({ q: 'test', page: 1 });\n// fetch('/api?' + params)\nconsole.log(\"URLSearchParams for query strings\");",
+  "solution": "// const params = new URLSearchParams({ q: 'test', page: 1 });\n// fetch('/api?' + params)\nconsole.log(\"URLSearchParams for query strings\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "URLSearchParams for query strings"
+    }
+  ],
+  "hints": [
+    "URLSearchParams builds query strings",
+    "Append to URL"
+  ]
+}

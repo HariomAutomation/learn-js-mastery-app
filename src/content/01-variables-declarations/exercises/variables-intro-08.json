@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-variables-intro-08",
+  "title": "Boolean negation",
+  "starterCode": "const isRaining = false\nconsole.log(!isRaining)",
+  "solution": "const isRaining = false\nconsole.log(!isRaining)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "! inverts boolean"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-04",
+  "title": "Check if non-empty string is truthy",
+  "starterCode": "if (\"hello\") {\n  console.log(\"truthy\");\n} else {\n  console.log(\"falsy\");\n}",
+  "solution": "if (\"hello\") {\n  console.log(\"truthy\");\n} else {\n  console.log(\"falsy\");\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "truthy"
+    }
+  ],
+  "hints": [
+    "Any non-empty string is truthy",
+    "Even whitespace-only strings"
+  ]
+}

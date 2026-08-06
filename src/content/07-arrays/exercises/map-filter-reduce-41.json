@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-41",
+  "title": "Filter Length",
+  "starterCode": "const words = ['hi', 'hello', 'hey', 'world'];\nconst long = words.____(w => w.length > 3);\nconsole.log(long);",
+  "solution": "const words = ['hi', 'hello', 'hey', 'world'];\nconst long = words.filter(w => w.length > 3);\nconsole.log(long);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 'hello', 'world' ]"
+    }
+  ],
+  "hints": [
+    "Check string length",
+    "Keep long words"
+  ]
+}

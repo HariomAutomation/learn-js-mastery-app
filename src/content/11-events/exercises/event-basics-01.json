@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-01",
+  "title": "addEventListener Basics",
+  "starterCode": "const btn = document.querySelector('button');\nbtn.addEventListener('click', () => {\n  console.log('clicked');\n});\nconsole.log('listener added');",
+  "solution": "const btn = document.querySelector('button');\nbtn.addEventListener('click', () => {\n  console.log('clicked');\n});\nconsole.log('listener added');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "listener added"
+    }
+  ],
+  "hints": [
+    "addEventListener takes event type and callback",
+    "Does not fire until event occurs"
+  ]
+}

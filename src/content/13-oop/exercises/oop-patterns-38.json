@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-38",
+  "title": "Decorator Pattern",
+  "starterCode": "function withTimestamp(fn) {\n  return function(...args) {\n    console.log('called at ' + Date.now());\n    return fn(...args);\n  };\n}\nconst greet = withTimestamp(() => 'hello');\ngreet();",
+  "solution": "function withTimestamp(fn) {\n  return function(...args) {\n    console.log('called at ' + Date.now());\n    return fn(...args);\n  };\n}\nconst greet = withTimestamp(() => 'hello');\ngreet();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "called at"
+    }
+  ],
+  "hints": [
+    "Decorator wraps function",
+    "Add behavior before/after"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-24",
+  "title": "Nullish coalescing assignment (??=)",
+  "starterCode": "let x = null;\nx ??= 'default';\nconsole.log(x);",
+  "solution": "let x = null;\nx ??= 'default';\nconsole.log(x);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "default"
+    }
+  ],
+  "hints": [
+    "x ??= 'default' means x = x ?? 'default'",
+    "x is null, so assignment happens"
+  ]
+}

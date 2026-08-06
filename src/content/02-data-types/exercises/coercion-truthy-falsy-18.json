@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-18",
+  "title": "String() conversion from number",
+  "starterCode": "console.log(String(42));",
+  "solution": "console.log(String(42));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "42"
+    }
+  ],
+  "hints": [
+    "String() converts to string",
+    "Returns '42' not 42"
+  ]
+}

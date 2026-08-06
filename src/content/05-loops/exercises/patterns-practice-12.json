@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-patterns-practice-12",
+  "title": "Inverted Pyramid",
+  "starterCode": "for (let i = 5; i >= 1; i--) {\n  let spaces = ' '.repeat(5-i);\n  let stars = '* '.repeat(i);\n  console.log(spaces + stars);\n}",
+  "solution": "for (let i = 5; i >= 1; i--) {\n  let spaces = ' '.repeat(5-i);\n  let stars = '* '.repeat(i);\n  console.log(spaces + stars);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "* * * * * \n  * * * * \n    * * * \n      * * \n        * "
+    }
+  ],
+  "hints": [
+    "Decrease stars",
+    "Increase spaces"
+  ]
+}

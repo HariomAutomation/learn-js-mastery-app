@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-05",
+  "title": "Observer Subscribe",
+  "starterCode": "class EventEmitter {\n  constructor() { this.listeners = {}; }\n  on(event, fn) {\n    (this.listeners[event] = this.listeners[event] || []).push(fn);\n  }\n  emit(event, data) {\n    (this.listeners[event] || []).forEach(fn => fn(data));\n  }\n}\nconst emitter = new EventEmitter();\nemitter.on('data', (d) => console.log(d));\nemitter.emit('data', 'hello');",
+  "solution": "class EventEmitter {\n  constructor() { this.listeners = {}; }\n  on(event, fn) {\n    (this.listeners[event] = this.listeners[event] || []).push(fn);\n  }\n  emit(event, data) {\n    (this.listeners[event] || []).forEach(fn => fn(data));\n  }\n}\nconst emitter = new EventEmitter();\nemitter.on('data', (d) => console.log(d));\nemitter.emit('data', 'hello');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hello"
+    }
+  ],
+  "hints": [
+    "Store callbacks in object",
+    "Call all on emit"
+  ]
+}

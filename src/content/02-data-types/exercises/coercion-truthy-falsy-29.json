@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-29",
+  "title": "undefined coerces to NaN",
+  "starterCode": "console.log(undefined + 5);",
+  "solution": "console.log(undefined + 5);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "NaN"
+    }
+  ],
+  "hints": [
+    "undefined converts to NaN",
+    "Any math with NaN is NaN"
+  ]
+}

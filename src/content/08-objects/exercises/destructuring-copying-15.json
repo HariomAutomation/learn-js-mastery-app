@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-15",
+  "title": "Rest Pattern",
+  "starterCode": "function log({first, ...others}) {\n  console.log(first);\n  console.log(others);\n}\nlog({first: 1, second: 2, third: 3});",
+  "solution": "function log({first, ...others}) {\n  console.log(first);\n  console.log(others);\n}\nlog({first: 1, second: 2, third: 3});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1\n{ second: 2, third: 3 }"
+    }
+  ],
+  "hints": [
+    "Rest collects rest",
+    "Log both parts"
+  ]
+}

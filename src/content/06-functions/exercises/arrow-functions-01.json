@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-01",
+  "title": "Arrow Syntax",
+  "starterCode": "const add = (a, b) => a + b;\nconsole.log(add(2, 3));",
+  "solution": "const add = (a, b) => a + b;\nconsole.log(add(2, 3));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "5"
+    }
+  ],
+  "hints": [
+    "Use => syntax",
+    "Implicit return"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-50",
+  "title": "Map Filter Reduce Complete",
+  "starterCode": "const products = [\n  {name: 'apple', price: 1.5, inStock: true},\n  {name: 'banana', price: 0.5, inStock: true},\n  {name: 'cherry', price: 3, inStock: false}\n];\nconst totalInStock = products.filter(p => p.inStock).map(p => p.price).reduce((a, b) => a + b, 0);\nconsole.log(totalInStock);",
+  "solution": "const products = [\n  {name: 'apple', price: 1.5, inStock: true},\n  {name: 'banana', price: 0.5, inStock: true},\n  {name: 'cherry', price: 3, inStock: false}\n];\nconst totalInStock = products.filter(p => p.inStock).map(p => p.price).reduce((a, b) => a + b, 0);\nconsole.log(totalInStock);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2"
+    }
+  ],
+  "hints": [
+    "Filter in stock, map price",
+    "Sum prices"
+  ]
+}

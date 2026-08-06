@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-01",
+  "title": "Create an object literal",
+  "starterCode": "const person = ;\nconsole.log(person.name);",
+  "solution": "const person = { name: \"Alice\", age: 25 };\nconsole.log(person.name);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Alice"
+    }
+  ],
+  "hints": [
+    "Objects use curly braces",
+    "Key-value pairs separated by commas"
+  ]
+}

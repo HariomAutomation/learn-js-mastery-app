@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-17",
+  "title": "Chained Pipeline",
+  "starterCode": "const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];\nconst result = nums.filter(x => x > 5).map(x => x * 2).reduce((a, b) => a + b, 0);\nconsole.log(result);",
+  "solution": "const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];\nconst result = nums.filter(x => x > 5).map(x => x * 2).reduce((a, b) => a + b, 0);\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "60"
+    }
+  ],
+  "hints": [
+    "Filter, map, then reduce",
+    "Full pipeline"
+  ]
+}

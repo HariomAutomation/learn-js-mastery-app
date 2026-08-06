@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-14",
+  "title": "Map String",
+  "starterCode": "const words = ['hello', 'world'];\nconst upper = words.____(w => w.toUpperCase());\nconsole.log(upper);",
+  "solution": "const words = ['hello', 'world'];\nconst upper = words.map(w => w.toUpperCase());\nconsole.log(upper);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 'HELLO', 'WORLD' ]"
+    }
+  ],
+  "hints": [
+    "toUpperCase converts",
+    "Map each word"
+  ]
+}

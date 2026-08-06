@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-higher-order-functions-02",
+  "title": "Function As Return Value",
+  "starterCode": "function createMultiplier(n) {\n  return (x) => x * n;\n}\nconst triple = createMultiplier(3);\nconsole.log(triple(5));",
+  "solution": "function createMultiplier(n) {\n  return (x) => x * n;\n}\nconst triple = createMultiplier(3);\nconsole.log(triple(5));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "15"
+    }
+  ],
+  "hints": [
+    "Return a function",
+    "Closure captures n"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-while-09",
+  "title": "For Loop Step",
+  "starterCode": "for (let i = 0; i < 10; i += 2) {\n  console.log(i);\n}",
+  "solution": "for (let i = 0; i < 10; i += 2) {\n  console.log(i);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "0\n2\n4\n6\n8"
+    }
+  ],
+  "hints": [
+    "Increment by 2",
+    "Use i += 2"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-04",
+  "title": "Create an empty string",
+  "starterCode": "const empty = ;\nconsole.log(empty.length);",
+  "solution": "const empty = '';\nconsole.log(empty.length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "0"
+    }
+  ],
+  "hints": [
+    "An empty string has no characters",
+    "Use two quotes with nothing between them"
+  ]
+}

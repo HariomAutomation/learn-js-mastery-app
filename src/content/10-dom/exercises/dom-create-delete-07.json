@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-07",
+  "title": "after Method",
+  "starterCode": "const container = document.createElement('div');\nconst first = document.createElement('p');\ncontainer.appendChild(first);\nfirst.after('After');\nconsole.log(container.childNodes.length);",
+  "solution": "const container = document.createElement('div');\nconst first = document.createElement('p');\ncontainer.appendChild(first);\nfirst.after('After');\nconsole.log(container.childNodes.length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2"
+    }
+  ],
+  "hints": [
+    "after inserts after the element",
+    "Adds as a sibling"
+  ]
+}

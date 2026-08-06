@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-10",
+  "title": "Frozen vs Sealed",
+  "starterCode": "const obj = Object.seal({a: 1, b: 2});\nobj.a = 10;\nobj.c = 3;\nconsole.log(obj.a);\nconsole.log(obj.c);",
+  "solution": "const obj = Object.seal({a: 1, b: 2});\nobj.a = 10;\nobj.c = 3;\nconsole.log(obj.a);\nconsole.log(obj.c);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10\nundefined"
+    }
+  ],
+  "hints": [
+    "Seal allows changes",
+    "Cannot add properties"
+  ]
+}

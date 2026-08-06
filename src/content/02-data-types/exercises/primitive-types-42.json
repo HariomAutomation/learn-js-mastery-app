@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-42",
+  "title": "Use indexOf to find position",
+  "starterCode": "const str = \"Hello\";\nconsole.log();",
+  "solution": "const str = \"Hello\";\nconsole.log(str.indexOf(\"ll\"));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2"
+    }
+  ],
+  "hints": [
+    "indexOf returns the position",
+    "Positions start at 0"
+  ]
+}

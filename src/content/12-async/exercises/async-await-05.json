@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-05",
+  "title": "Sequential Await",
+  "starterCode": "async function sequential() {\n  const a = await Promise.resolve(1);\n  const b = await Promise.resolve(a + 1);\n  const c = await Promise.resolve(b + 1);\n  console.log(c);\n}\nsequential();",
+  "solution": "async function sequential() {\n  const a = await Promise.resolve(1);\n  const b = await Promise.resolve(a + 1);\n  const c = await Promise.resolve(b + 1);\n  console.log(c);\n}\nsequential();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3"
+    }
+  ],
+  "hints": [
+    "Each await waits for previous",
+    "Sequential execution"
+  ]
+}

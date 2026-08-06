@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-07",
+  "title": "Immutability",
+  "starterCode": "const str = 'hello';\nstr[0] = 'H';\nconsole.log(str);",
+  "solution": "const str = 'hello';\nstr[0] = 'H';\nconsole.log(str);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hello"
+    }
+  ],
+  "hints": [
+    "Strings are immutable",
+    "Assignment fails"
+  ]
+}

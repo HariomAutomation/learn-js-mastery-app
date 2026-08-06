@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-26",
+  "title": "Chain Depth",
+  "starterCode": "function A() {}\nA.prototype = Object.create(null);\nconst a = new A();\nconsole.log(Object.getPrototypeOf(a) === A.prototype);",
+  "solution": "function A() {}\nA.prototype = Object.create(null);\nconst a = new A();\nconsole.log(Object.getPrototypeOf(a) === A.prototype);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "Object.create(null) has no prototype",
+    "Clean prototype chain"
+  ]
+}

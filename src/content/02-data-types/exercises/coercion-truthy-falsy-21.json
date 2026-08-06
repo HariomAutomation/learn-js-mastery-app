@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-21",
+  "title": "null == undefined",
+  "starterCode": "console.log(null == undefined);",
+  "solution": "console.log(null == undefined);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "null and undefined are loosely equal",
+    "They're both 'empty' values"
+  ]
+}

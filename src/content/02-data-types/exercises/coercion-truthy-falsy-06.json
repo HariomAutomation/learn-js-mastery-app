@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-06",
+  "title": "Check if undefined is falsy",
+  "starterCode": "if (undefined) {\n  console.log('truthy');\n} else {\n  console.log('falsy');\n}",
+  "solution": "if (undefined) {\n  console.log('truthy');\n} else {\n  console.log('falsy');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "falsy"
+    }
+  ],
+  "hints": [
+    "undefined is falsy",
+    "It means no value assigned"
+  ]
+}

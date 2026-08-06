@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-arithmetic-comparison-16",
+  "title": "Division by zero",
+  "starterCode": "const result = 5 / 0;\nconsole.log(result);",
+  "solution": "const result = 5 / 0;\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Infinity"
+    }
+  ],
+  "hints": [
+    "Division by zero produces Infinity",
+    "Not an error in JS"
+  ]
+}

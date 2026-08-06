@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-patterns-23",
+  "title": "Intersection Filter",
+  "starterCode": "const arr1 = [1, 2, 3, 4, 5];\nconst arr2 = [3, 4, 5, 6, 7];\nconst common = arr1.filter(x => arr2.includes(x));\nconsole.log(common);",
+  "solution": "const arr1 = [1, 2, 3, 4, 5];\nconst arr2 = [3, 4, 5, 6, 7];\nconst common = arr1.filter(x => arr2.includes(x));\nconsole.log(common);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 3, 4, 5 ]"
+    }
+  ],
+  "hints": [
+    "Filter with includes",
+    "Common elements"
+  ]
+}

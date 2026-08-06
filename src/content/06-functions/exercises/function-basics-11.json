@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-function-basics-11",
+  "title": "Pure Function",
+  "starterCode": "function add(a, b) {\n  return a + b;\n}\nconsole.log(add(3, 4));",
+  "solution": "function add(a, b) {\n  return a + b;\n}\nconsole.log(add(3, 4));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "7"
+    }
+  ],
+  "hints": [
+    "No side effects",
+    "Same input = same output"
+  ]
+}

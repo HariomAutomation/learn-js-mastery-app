@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-08",
+  "title": "cssText Property",
+  "starterCode": "const el = document.querySelector('.box');\nel.style.cssText = 'color: blue; font-size: 16px';\nconsole.log(el.style.cssText);",
+  "solution": "const el = document.querySelector('.box');\nel.style.cssText = 'color: blue; font-size: 16px';\nconsole.log(el.style.cssText);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "color: blue; font-size: 16px"
+    }
+  ],
+  "hints": [
+    "cssText sets multiple styles at once",
+    "Use CSS syntax in string"
+  ]
+}

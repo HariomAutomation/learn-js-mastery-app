@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-41",
+  "title": "Reverse Words Order",
+  "starterCode": "function reverseWordsOrder(str) {\n  return str.split(' ').reverse().join(' ');\n}\nconsole.log(reverseWordsOrder('I love JavaScript'));",
+  "solution": "function reverseWordsOrder(str) {\n  return str.split(' ').reverse().join(' ');\n}\nconsole.log(reverseWordsOrder('I love JavaScript'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "JavaScript love I"
+    }
+  ],
+  "hints": [
+    "Split, reverse, join",
+    "Word order reversed"
+  ]
+}

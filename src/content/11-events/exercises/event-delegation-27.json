@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-27",
+  "title": "Event Pooling",
+  "starterCode": "// Synthetic events may be reused (older React)\nconsole.log(\"event pooling in old React\");",
+  "solution": "// Synthetic events may be reused (older React)\nconsole.log(\"event pooling in old React\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "event pooling in old React"
+    }
+  ],
+  "hints": [
+    "React 17+ doesn't pool events",
+    "Older versions reused event objects"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-function-basics-02",
+  "title": "Function Expression",
+  "starterCode": "const add = function(a, b) {\n  return a + b;\n};\nconsole.log(add(2, 3));",
+  "solution": "const add = function(a, b) {\n  return a + b;\n};\nconsole.log(add(2, 3));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "5"
+    }
+  ],
+  "hints": [
+    "Assign function to variable",
+    "Use return keyword"
+  ]
+}

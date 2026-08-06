@@ -1,0 +1,38 @@
+[
+  {
+    "question": "'Hello World'.includes('World') kya return karega?",
+    "options": ["true", "false", "5", "undefined"],
+    "correctIndex": 0,
+    "explanation": ".includes() boolean return karta hai — substring mila toh true, nahi toh false. Yeh ES6 method hai, case-sensitive hota hai."
+  },
+  {
+    "question": "'banana'.indexOf('a') kya return karega?",
+    "options": ["0", "1", "2", "-1"],
+    "correctIndex": 1,
+    "explanation": ".indexOf() pehle occurrence ka index deta hai. 'banana' mein pehla 'a' index 1 pe hai. Agar nahi mila toh -1 return hota hai."
+  },
+  {
+    "question": "'Hello World'.slice(0, 5) kya return karega?",
+    "options": ["'Hello'", "'World'", "'Hell'", "'Hello '"],
+    "correctIndex": 0,
+    "explanation": ".slice(start, end) string ka portion copy karta hai. Start inclusive hai, end exclusive — toh index 0 se 4 tak ka portion milega."
+  },
+  {
+    "question": "'a,b,c'.split(',') kya return karega?",
+    "options": ["['a','b','c']", "'abc'", "['a,b,c']", "undefined"],
+    "correctIndex": 0,
+    "explanation": ".split() string ko array mein todta hai delimiter ke basis pe. Comma separator use kiya toh teen elements ka array milega."
+  },
+  {
+    "question": "'  Hello  '.trim() kya karega?",
+    "options": ["'Hello'", "'  Hello'", "'Hello  '", "'  '"],
+    "correctIndex": 0,
+    "explanation": ".trim() start aur end ke saare whitespace (spaces, tabs, newlines) hata deta hai. Beech ka space nahi hota."
+  },
+  {
+    "question": "'hello'.replace('l', 'r') kya return karega?",
+    "options": ["'herlo'", "'herrlo'", "'hello'", "'herro'"],
+    "correctIndex": 0,
+    "explanation": ".replace() sirf pehla match replace karta hai. 'l' ki jagah 'r' aayega pehli baar — 'herlo'. Saare matches ke liye regex ya .replaceAll() use karo."
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-44",
+  "title": "Count Palindromes",
+  "starterCode": "function countPalindromes(str) {\n  let count = 0;\n  for (let i = 0; i < str.length; i++) {\n    for (let j = i; j < str.length; j++) {\n      const sub = str.slice(i, j + 1);\n      if (sub === sub.split('').reverse().join('')) count++;\n    }\n  }\n  return count;\n}\nconsole.log(countPalindromes('aaa'));",
+  "solution": "function countPalindromes(str) {\n  let count = 0;\n  for (let i = 0; i < str.length; i++) {\n    for (let j = i; j < str.length; j++) {\n      const sub = str.slice(i, j + 1);\n      if (sub === sub.split('').reverse().join('')) count++;\n    }\n  }\n  return count;\n}\nconsole.log(countPalindromes('aaa'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "6"
+    }
+  ],
+  "hints": [
+    "Check all substrings",
+    "Count palindromic"
+  ]
+}

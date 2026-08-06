@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-07",
+  "title": "Function hoisting",
+  "starterCode": "console.log(add(2, 3))\nfunction add(a, b) { return a + b }",
+  "solution": "console.log(add(2, 3))\nfunction add(a, b) { return a + b }",
+  "tests": [
+    {
+      "input": [],
+      "expected": "5"
+    }
+  ],
+  "hints": [
+    "Function declarations are hoisted"
+  ]
+}

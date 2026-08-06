@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-28",
+  "title": "Saga",
+  "starterCode": "class Saga {\n  constructor() { this.steps = []; }\n  addStep(fn) { this.steps.push(fn); }\n  async execute() {\n    for (const step of this.steps) {\n      await step();\n    }\n    console.log('complete');\n  }\n}\nconst saga = new Saga();\nsaga.addStep(() => Promise.resolve());\nsaga.addStep(() => Promise.resolve());\nsaga.execute();",
+  "solution": "class Saga {\n  constructor() { this.steps = []; }\n  addStep(fn) { this.steps.push(fn); }\n  async execute() {\n    for (const step of this.steps) {\n      await step();\n    }\n    console.log('complete');\n  }\n}\nconst saga = new Saga();\nsaga.addStep(() => Promise.resolve());\nsaga.addStep(() => Promise.resolve());\nsaga.execute();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "complete"
+    }
+  ],
+  "hints": [
+    "Manage long-running processes",
+    "Sequential async steps"
+  ]
+}

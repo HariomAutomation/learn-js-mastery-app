@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-41",
+  "title": "Promise Then Return",
+  "starterCode": "Promise.resolve(1)\n  .then(x => x + 1)\n  .then(x => x + 1)\n  .then(x => console.log(x));",
+  "solution": "Promise.resolve(1)\n  .then(x => x + 1)\n  .then(x => x + 1)\n  .then(x => console.log(x));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3"
+    }
+  ],
+  "hints": [
+    "Each then returns new promise",
+    "Values chain through"
+  ]
+}

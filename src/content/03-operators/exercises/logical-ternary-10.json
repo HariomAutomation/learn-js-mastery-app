@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-10",
+  "title": "Nested ternary",
+  "starterCode": "const score = 85;\nconst result = score >= 90 ? 'A' : score >= 80 ? 'B' : 'C';\nconsole.log(result);",
+  "solution": "const score = 85;\nconst result = score >= 90 ? 'A' : score >= 80 ? 'B' : 'C';\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "B"
+    }
+  ],
+  "hints": [
+    "85 is not >= 90, so check second ternary",
+    "85 >= 80 is true"
+  ]
+}

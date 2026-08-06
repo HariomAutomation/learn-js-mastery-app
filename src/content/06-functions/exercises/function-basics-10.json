@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-function-basics-10",
+  "title": "Function Scope",
+  "starterCode": "function test() {\n  const x = 10;\n  console.log(x);\n}\ntest();",
+  "solution": "function test() {\n  const x = 10;\n  console.log(x);\n}\ntest();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10"
+    }
+  ],
+  "hints": [
+    "Variables are local",
+    "Accessible inside function"
+  ]
+}

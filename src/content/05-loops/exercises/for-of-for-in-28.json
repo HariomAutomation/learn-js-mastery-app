@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-28",
+  "title": "String Reverse For...Of",
+  "starterCode": "const str = \"hello\";\nlet rev = \"\";\nfor (const ch of str) {\n  rev = ch + rev;\n}\nconsole.log(rev);",
+  "solution": "const str = \"hello\";\nlet rev = \"\";\nfor (const ch of str) {\n  rev = ch + rev;\n}\nconsole.log(rev);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "olleh"
+    }
+  ],
+  "hints": [
+    "Prepend each character",
+    "Build reversed string"
+  ]
+}

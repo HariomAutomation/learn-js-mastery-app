@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-36",
+  "title": "Capture vs Bubble",
+  "starterCode": "// Capture: document → target\n// Bubble: target → document\nconsole.log(\"capture first, bubble second\");",
+  "solution": "// Capture: document → target\n// Bubble: target → document\nconsole.log(\"capture first, bubble second\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "capture first, bubble second"
+    }
+  ],
+  "hints": [
+    "Capture phase goes down",
+    "Bubble phase goes up"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-42",
+  "title": "IsSealed",
+  "starterCode": "const obj1 = {a: 1};\nconst obj2 = Object.seal({a: 1});\nconsole.log(Object.isSealed(obj1));\nconsole.log(Object.isSealed(obj2));",
+  "solution": "const obj1 = {a: 1};\nconst obj2 = Object.seal({a: 1});\nconsole.log(Object.isSealed(obj1));\nconsole.log(Object.isSealed(obj2));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "false\ntrue"
+    }
+  ],
+  "hints": [
+    "isSealed check",
+    "Sealed objects"
+  ]
+}

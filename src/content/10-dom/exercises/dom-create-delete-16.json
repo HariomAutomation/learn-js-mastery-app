@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-16",
+  "title": "insertAdjacentHTML",
+  "starterCode": "const el = document.createElement('div');\nel.insertAdjacentHTML('beforeend', '<p>Para</p>');\nconsole.log(el.innerHTML);",
+  "solution": "const el = document.createElement('div');\nel.insertAdjacentHTML('beforeend', '<p>Para</p>');\nconsole.log(el.innerHTML);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "<p>Para</p>"
+    }
+  ],
+  "hints": [
+    "insertAdjacentHTML inserts at position",
+    "beforeend puts inside at end"
+  ]
+}

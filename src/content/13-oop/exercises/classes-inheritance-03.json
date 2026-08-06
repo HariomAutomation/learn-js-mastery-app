@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-03",
+  "title": "Instance Methods",
+  "starterCode": "class Dog {\n  constructor(name) { this.name = name; }\n  bark() {\n    // TODO: return bark string\n  }\n}\nconst d = new Dog('Rex');\nconsole.log(d.bark());",
+  "solution": "class Dog {\n  constructor(name) { this.name = name; }\n  bark() {\n    return this.name + ' says woof';\n  }\n}\nconst d = new Dog('Rex');\nconsole.log(d.bark());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Rex says woof"
+    }
+  ],
+  "hints": [
+    "Methods are on the prototype",
+    "Use this to access instance"
+  ]
+}

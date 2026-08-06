@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-29",
+  "title": "structuredClone Advanced",
+  "starterCode": "const obj = {arr: [1, [2, 3]], date: new Date('2024-01-01'), regex: /test/gi};\nconst copy = structuredClone(obj);\ncopy.arr[1].push(4);\nconsole.log(obj.arr[1]);",
+  "solution": "const obj = {arr: [1, [2, 3]], date: new Date('2024-01-01'), regex: /test/gi};\nconst copy = structuredClone(obj);\ncopy.arr[1].push(4);\nconsole.log(obj.arr[1]);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 2, 3 ]"
+    }
+  ],
+  "hints": [
+    "Deep clone even nested arrays",
+    "Original untouched"
+  ]
+}

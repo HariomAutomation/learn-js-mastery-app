@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-methods-27",
+  "title": "ToCase Edge",
+  "starterCode": "console.log(''.toUpperCase());\nconsole.log('123'.toLowerCase());",
+  "solution": "console.log(''.toUpperCase());\nconsole.log('123'.toLowerCase());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "\n123"
+    }
+  ],
+  "hints": [
+    "Empty string",
+    "Numbers unchanged"
+  ]
+}

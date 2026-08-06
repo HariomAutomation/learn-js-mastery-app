@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-09",
+  "title": "Repeat",
+  "starterCode": "const str = 'ha';\nconsole.log(str.____(3));",
+  "solution": "const str = 'ha';\nconsole.log(str.repeat(3));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hahaha"
+    }
+  ],
+  "hints": [
+    "repeat(n) repeats n times",
+    "Returns new string"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-variables-intro-34",
+  "title": "Logical assignment",
+  "starterCode": "let a = 0\na ||= \"default\"\nconsole.log(a)",
+  "solution": "let a = 0\na ||= \"default\"\nconsole.log(a)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "default"
+    }
+  ],
+  "hints": [
+    "||= assigns if falsy"
+  ]
+}

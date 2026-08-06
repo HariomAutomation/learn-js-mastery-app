@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-22",
+  "title": "Create a false boolean",
+  "starterCode": "const isActive = ;\nconsole.log(isActive);",
+  "solution": "const isActive = false;\nconsole.log(isActive);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "false"
+    }
+  ],
+  "hints": [
+    "Use the keyword false",
+    "Make sure it's lowercase"
+  ]
+}

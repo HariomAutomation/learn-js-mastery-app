@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-48",
+  "title": "Fetch Headers Get",
+  "starterCode": "// response.headers.get('content-type')\nconsole.log(\"headers.get reads header\");",
+  "solution": "// response.headers.get('content-type')\nconsole.log(\"headers.get reads header\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "headers.get reads header"
+    }
+  ],
+  "hints": [
+    "Headers object has get method",
+    "Case-insensitive"
+  ]
+}

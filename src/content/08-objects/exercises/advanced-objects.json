@@ -1,0 +1,12 @@
+{
+  "id": "08-objects-advanced-objects",
+  "title": "Advanced objects — optional chaining + computed",
+  "starterCode": "// 1. Optional chaining (?.)\nconst data = {\n  user: {\n    name: \"Riya\",\n    address: {\n      city: \"Delhi\"\n    }\n  }\n}\nconsole.log(data.user?.address?.city) // Delhi\nconsole.log(data.user?.phone?.mobile) // ? (undefined, error nahi)\n\n// 2. Computed property names\nconst field = \"age\"\nconst obj = {\n  name: \"Aman\",\n  [field]: 25\n}\nconsole.log(obj)\n\n// 3. Object.fromEntries — array se object\nconst pairs = [[\"a\", 1], [\"b\", 2], [\"c\", 3]]\nconst fromPairs = Object.fromEntries(pairs)\nconsole.log(fromPairs)\n\n// 4. Deep copy (structuredClone)\nconst original = { a: 1, b: { c: 2 } }\nconst deep = structuredClone(original)\ndeep.b.c = 99\nconsole.log(original.b.c, deep.b.c)\n",
+  "solution": "const data = { user: { name: \"Riya\", address: { city: \"Delhi\" } } }\nconsole.log(data.user?.address?.city)\nconsole.log(data.user?.phone?.mobile)\nconst field = \"age\"\nconst obj = { name: \"Aman\", [field]: 25 }\nconsole.log(obj)\nconst pairs = [[\"a\", 1], [\"b\", 2], [\"c\", 3]]\nconst fromPairs = Object.fromEntries(pairs)\nconsole.log(fromPairs)\nconst original = { a: 1, b: { c: 2 } }\nconst deep = structuredClone(original)\ndeep.b.c = 99\nconsole.log(original.b.c, deep.b.c)",
+  "tests": [{ "input": [], "expected": "Delhi\nundefined\n{\"name\":\"Aman\",\"age\":25}\n{\"a\":1,\"b\":2,\"c\":3}\n2 99" }],
+  "hints": [
+    "?. se null/undefined pe error nahi aata",
+    "[variable] se dynamic key ban sakta hai",
+    "structuredClone() deep copy deta hai — nested objects bhi alag hote hain"
+  ]
+}

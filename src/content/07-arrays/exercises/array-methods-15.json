@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-methods-15",
+  "title": "Every",
+  "starterCode": "const nums = [2, 4, 6, 8];\nconsole.log(nums.____(x => x % 2 === 0));",
+  "solution": "const nums = [2, 4, 6, 8];\nconsole.log(nums.every(x => x % 2 === 0));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "every checks if all match",
+    "Returns boolean"
+  ]
+}

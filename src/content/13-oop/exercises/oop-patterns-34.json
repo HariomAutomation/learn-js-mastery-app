@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-34",
+  "title": "Factory",
+  "starterCode": "function create(type) {\n  const types = { admin: { role: 'admin' }, user: { role: 'user' } };\n  return { ...types[type] };\n}\nconsole.log(create('admin').role);",
+  "solution": "function create(type) {\n  const types = { admin: { role: 'admin' }, user: { role: 'user' } };\n  return { ...types[type] };\n}\nconsole.log(create('admin').role);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "admin"
+    }
+  ],
+  "hints": [
+    "Factory creates objects by type",
+    "No new keyword needed"
+  ]
+}

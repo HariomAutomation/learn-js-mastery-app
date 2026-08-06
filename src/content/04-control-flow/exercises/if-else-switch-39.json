@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-39",
+  "title": "If with empty object",
+  "starterCode": "const obj = {};\nif (obj.name) {\n  console.log('has name');\n} else {\n  console.log('no name');\n}",
+  "solution": "const obj = {};\nif (obj.name) {\n  console.log('has name');\n} else {\n  console.log('no name');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "no name"
+    }
+  ],
+  "hints": [
+    "obj.name is undefined",
+    "undefined is falsy"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-42",
+  "title": "Ternary with function call",
+  "starterCode": "const isEven = (n) => n % 2 === 0;\nconst result = isEven(4) ? 'even' : 'odd';\nconsole.log(result);",
+  "solution": "const isEven = (n) => n % 2 === 0;\nconst result = isEven(4) ? 'even' : 'odd';\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "even"
+    }
+  ],
+  "hints": [
+    "isEven(4) returns true",
+    "Ternary returns first value"
+  ]
+}

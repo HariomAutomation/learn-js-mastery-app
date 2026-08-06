@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-closures-iife-06",
+  "title": "Module Pattern",
+  "starterCode": "const counter = (function() {\n  let count = 0;\n  return {\n    increment: () => ++count,\n    getCount: () => count\n  };\n})();\ncounter.increment();\ncounter.increment();\nconsole.log(counter.getCount());",
+  "solution": "const counter = (function() {\n  let count = 0;\n  return {\n    increment: () => ++count,\n    getCount: () => count\n  };\n})();\ncounter.increment();\ncounter.increment();\nconsole.log(counter.getCount());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2"
+    }
+  ],
+  "hints": [
+    "IIFE creates module",
+    "Private state"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-43",
+  "title": "Check if value is NaN with Number.isNaN",
+  "starterCode": "console.log(Number.isNaN(NaN));",
+  "solution": "console.log(Number.isNaN(NaN));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "Number.isNaN is more reliable than isNaN",
+    "It only returns true for actual NaN"
+  ]
+}

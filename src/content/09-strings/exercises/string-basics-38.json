@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-38",
+  "title": "Template Practice",
+  "starterCode": "const x = 10, y = 20;\nconsole.log(`Sum: ${x + y}`);",
+  "solution": "const x = 10, y = 20;\nconsole.log(`Sum: ${x + y}`);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Sum: 30"
+    }
+  ],
+  "hints": [
+    "Expression in template",
+    "Calculate inline"
+  ]
+}

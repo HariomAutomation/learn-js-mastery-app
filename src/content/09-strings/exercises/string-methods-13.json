@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-methods-13",
+  "title": "Substring",
+  "starterCode": "const str = 'hello world';\nconsole.log(str.substring(6));",
+  "solution": "const str = 'hello world';\nconsole.log(str.substring(6));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "world"
+    }
+  ],
+  "hints": [
+    "substring from index",
+    "To end of string"
+  ]
+}

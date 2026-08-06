@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-28",
+  "title": "Class Practice",
+  "starterCode": "class Stack {\n  constructor() { this.items = []; }\n  push(item) { this.items.push(item); }\n  pop() { return this.items.pop(); }\n  peek() { return this.items[this.items.length - 1]; }\n}\nconst s = new Stack();\ns.push(1); s.push(2);\nconsole.log(s.pop());",
+  "solution": "class Stack {\n  constructor() { this.items = []; }\n  push(item) { this.items.push(item); }\n  pop() { return this.items.pop(); }\n  peek() { return this.items[this.items.length - 1]; }\n}\nconst s = new Stack();\ns.push(1); s.push(2);\nconsole.log(s.pop());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2"
+    }
+  ],
+  "hints": [
+    "pop removes and returns last",
+    "LIFO order"
+  ]
+}

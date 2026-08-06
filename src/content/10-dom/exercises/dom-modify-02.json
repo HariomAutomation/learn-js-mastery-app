@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-02",
+  "title": "innerHTML Property",
+  "starterCode": "const el = document.querySelector('div');\nel.innerHTML = '<b>Bold</b>';\nconsole.log(el.innerHTML);",
+  "solution": "const el = document.querySelector('div');\nel.innerHTML = '<b>Bold</b>';\nconsole.log(el.innerHTML);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "<b>Bold</b>"
+    }
+  ],
+  "hints": [
+    "innerHTML sets HTML content",
+    "Parses HTML tags"
+  ]
+}

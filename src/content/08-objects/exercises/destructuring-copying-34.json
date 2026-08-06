@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-34",
+  "title": "Rename in Loop",
+  "starterCode": "const arr = [{n: 'Alice', a: 25}, {n: 'Bob', a: 30}];\nfor (const {n: name, a: age} of arr) {\n  console.log(`${name}: ${age}`);\n}",
+  "solution": "const arr = [{n: 'Alice', a: 25}, {n: 'Bob', a: 30}];\nfor (const {n: name, a: age} of arr) {\n  console.log(`${name}: ${age}`);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Alice: 25\nBob: 30"
+    }
+  ],
+  "hints": [
+    "Destructure in for-of",
+    "Rename during iteration"
+  ]
+}

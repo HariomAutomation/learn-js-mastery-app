@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-09",
+  "title": "Object.keys()",
+  "starterCode": "const obj = {a: 1, b: 2, c: 3};\nconst keys = Object.keys(obj);\nconsole.log(keys);",
+  "solution": "const obj = {a: 1, b: 2, c: 3};\nconst keys = Object.keys(obj);\nconsole.log(keys);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 'a', 'b', 'c' ]"
+    }
+  ],
+  "hints": [
+    "Object.keys() returns array",
+    "Keys are strings"
+  ]
+}

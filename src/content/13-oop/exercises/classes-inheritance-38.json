@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-38",
+  "title": "Instance Method",
+  "starterCode": "class Greeting {\n  constructor(name) { this.name = name; }\n  greet() { return 'Hello ' + this.name; }\n}\nconsole.log(new Greeting('World').greet());",
+  "solution": "class Greeting {\n  constructor(name) { this.name = name; }\n  greet() { return 'Hello ' + this.name; }\n}\nconsole.log(new Greeting('World').greet());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hello World"
+    }
+  ],
+  "hints": [
+    "Methods are on prototype",
+    "Use this to access instance"
+  ]
+}

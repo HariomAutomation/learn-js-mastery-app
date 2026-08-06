@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-03",
+  "title": "Capitalize First",
+  "starterCode": "function capitalize(str) {\n  return str.charAt(0).toUpperCase() + str.slice(1);\n}\nconsole.log(capitalize('hello'));",
+  "solution": "function capitalize(str) {\n  return str.charAt(0).toUpperCase() + str.slice(1);\n}\nconsole.log(capitalize('hello'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hello"
+    }
+  ],
+  "hints": [
+    "First char uppercase",
+    "Concat rest"
+  ]
+}

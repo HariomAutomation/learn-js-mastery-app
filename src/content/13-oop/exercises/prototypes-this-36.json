@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-36",
+  "title": "Arrow This",
+  "starterCode": "const obj = {\n  name: 'test',\n  getArrow: () => this.name\n};\nconsole.log(obj.getArrow());",
+  "solution": "const obj = {\n  name: 'test',\n  getArrow: () => this.name\n};\nconsole.log(obj.getArrow());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "undefined"
+    }
+  ],
+  "hints": [
+    "Arrow doesn't bind this",
+    "this is from outer scope"
+  ]
+}

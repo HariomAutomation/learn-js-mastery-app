@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-44",
+  "title": "Switch expression with arrow function",
+  "starterCode": "const getStatus = (code) => {\n  switch (code) {\n    case 200: return 'success';\n    case 404: return 'not found';\n    default: return 'error';\n  }\n};\nconsole.log(getStatus(200));",
+  "solution": "const getStatus = (code) => {\n  switch (code) {\n    case 200: return 'success';\n    case 404: return 'not found';\n    default: return 'error';\n  }\n};\nconsole.log(getStatus(200));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "success"
+    }
+  ],
+  "hints": [
+    "Arrow function with switch",
+    "200 matches case 200"
+  ]
+}

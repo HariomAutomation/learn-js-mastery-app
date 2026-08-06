@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-closures-iife-13",
+  "title": "Module Export",
+  "starterCode": "const math = (function() {\n  const PI = 3.14159;\n  const add = (a, b) => a + b;\n  return { PI, add };\n})();\nconsole.log(math.PI);\nconsole.log(math.add(2, 3));",
+  "solution": "const math = (function() {\n  const PI = 3.14159;\n  const add = (a, b) => a + b;\n  return { PI, add };\n})();\nconsole.log(math.PI);\nconsole.log(math.add(2, 3));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3.14159\n5"
+    }
+  ],
+  "hints": [
+    "Return public API",
+    "Private variables inside"
+  ]
+}

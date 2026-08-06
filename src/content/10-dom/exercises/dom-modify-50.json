@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-50",
+  "title": "setAttribute Checked",
+  "starterCode": "const el = document.querySelector('input[type=\"checkbox\"]');\nel.setAttribute('checked', '');\nconsole.log(el.checked);",
+  "solution": "const el = document.querySelector('input[type=\"checkbox\"]');\nel.setAttribute('checked', '');\nconsole.log(el.checked);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "setAttribute for checked state",
+    "checked is a boolean property"
+  ]
+}

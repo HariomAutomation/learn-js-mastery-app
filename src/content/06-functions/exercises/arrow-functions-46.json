@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-46",
+  "title": "Arrow In Set Timeout",
+  "starterCode": "setTimeout(() => console.log('delayed'), 50);",
+  "solution": "setTimeout(() => console.log('delayed'), 50);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "delayed"
+    }
+  ],
+  "hints": [
+    "Arrow callback",
+    "Async execution"
+  ]
+}

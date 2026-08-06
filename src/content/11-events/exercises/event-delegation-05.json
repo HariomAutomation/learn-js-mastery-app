@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-05",
+  "title": "Capturing Phase",
+  "starterCode": "// Capture goes document → parent → target\nconsole.log(\"document → ... → parent → target\");",
+  "solution": "// Capture goes document → parent → target\nconsole.log(\"document → ... → parent → target\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "document → ... → parent → target"
+    }
+  ],
+  "hints": [
+    "Capture happens before bubbling",
+    "Use capture: true option"
+  ]
+}

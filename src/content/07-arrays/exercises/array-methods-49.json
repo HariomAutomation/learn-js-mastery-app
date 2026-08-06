@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-methods-49",
+  "title": "Some Check",
+  "starterCode": "const arr = [1, 3, 5, 7, 8];\nconst hasEven = arr.some(x => x % 2 === 0);\nconsole.log(hasEven);",
+  "solution": "const arr = [1, 3, 5, 7, 8];\nconst hasEven = arr.some(x => x % 2 === 0);\nconsole.log(hasEven);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "some checks if any match",
+    "Returns boolean"
+  ]
+}

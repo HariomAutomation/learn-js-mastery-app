@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-41",
+  "title": "Short circuit OR return value",
+  "starterCode": "const result = false || \"fallback\";\nconsole.log(result);",
+  "solution": "const result = false || \"fallback\";\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "fallback"
+    }
+  ],
+  "hints": [
+    "|| returns first truthy",
+    "false is falsy, so returns 'fallback'"
+  ]
+}

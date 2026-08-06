@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-23",
+  "title": "Map Iteration",
+  "starterCode": "const map = new Map();\nmap.set('name', 'Alice');\nmap.set('age', 25);\nfor (const [key, val] of map) {\n  console.log(key + ' is ' + val);\n}",
+  "solution": "const map = new Map();\nmap.set('name', 'Alice');\nmap.set('age', 25);\nfor (const [key, val] of map) {\n  console.log(key + ' is ' + val);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "name is Alice\nage is 25"
+    }
+  ],
+  "hints": [
+    "Destructure entries",
+    "Use template or concat"
+  ]
+}

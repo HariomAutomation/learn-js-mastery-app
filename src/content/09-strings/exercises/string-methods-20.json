@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-methods-20",
+  "title": "Split Empty",
+  "starterCode": "console.log(''.split(','));",
+  "solution": "console.log(''.split(','));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ '' ]"
+    }
+  ],
+  "hints": [
+    "Empty string split",
+    "Returns array with empty"
+  ]
+}

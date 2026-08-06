@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-33",
+  "title": "querySelectorAll vs querySelector",
+  "starterCode": "// What's the difference?\nconsole.log(\"querySelector returns one, querySelectorAll returns all\");",
+  "solution": "// What's the difference?\nconsole.log(\"querySelector returns one, querySelectorAll returns all\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "querySelector returns one, querySelectorAll returns all"
+    }
+  ],
+  "hints": [
+    "querySelector returns first match",
+    "querySelectorAll returns all matches"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-42",
+  "title": "Proxy Pattern",
+  "starterCode": "const handler = {\n  get(t, p) { return p in t ? t[p] : 'default'; }\n};\nconst proxy = new Proxy({ x: 1 }, handler);\nconsole.log(proxy.x + ' ' + proxy.y);",
+  "solution": "const handler = {\n  get(t, p) { return p in t ? t[p] : 'default'; }\n};\nconst proxy = new Proxy({ x: 1 }, handler);\nconsole.log(proxy.x + ' ' + proxy.y);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1 default"
+    }
+  ],
+  "hints": [
+    "Proxy intercepts operations",
+    "handler defines traps"
+  ]
+}

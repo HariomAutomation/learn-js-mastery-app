@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-17",
+  "title": "Timeout Pattern",
+  "starterCode": "function withTimeout(promise, ms) {\n  return Promise.race([\n    promise,\n    new Promise((_, rej) => setTimeout(() => rej('timeout'), ms))\n  ]);\n}\nwithTimeout(new Promise(r => setTimeout(() => r('done'), 50)), 100)\n  .then(v => console.log(v));",
+  "solution": "function withTimeout(promise, ms) {\n  return Promise.race([\n    promise,\n    new Promise((_, rej) => setTimeout(() => rej('timeout'), ms))\n  ]);\n}\nwithTimeout(new Promise(r => setTimeout(() => r('done'), 50)), 100)\n  .then(v => console.log(v));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "done"
+    }
+  ],
+  "hints": [
+    "Race promise against timeout",
+    "First to settle wins"
+  ]
+}

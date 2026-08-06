@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-var-let-const-19",
+  "title": "var name shadow",
+  "starterCode": "var x = 1\nfunction test() {\n  var x = 2\n  console.log(x)\n}\ntest()\nconsole.log(x)",
+  "solution": "var x = 1\nfunction test() {\n  var x = 2\n  console.log(x)\n}\ntest()\nconsole.log(x)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2\n1"
+    }
+  ],
+  "hints": [
+    "Function var shadows global"
+  ]
+}

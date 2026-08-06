@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-12",
+  "title": "Shallow copy with Object.assign",
+  "starterCode": "const original = { a: 1 };\nconst copy = ;\nconsole.log(copy);",
+  "solution": "const original = { a: 1 };\nconst copy = Object.assign({}, original);\nconsole.log(copy);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{ a: 1 }"
+    }
+  ],
+  "hints": [
+    "Object.assign copies properties",
+    "First arg is target, rest are sources"
+  ]
+}

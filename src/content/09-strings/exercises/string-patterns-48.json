@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-48",
+  "title": "Zigzag Convert",
+  "starterCode": "function zigzag(s, numRows) {\n  if (numRows === 1) return s;\n  const rows = Array(numRows).fill('');\n  let idx = 0, dir = 1;\n  for (const c of s) {\n    rows[idx] += c;\n    if (idx === 0) dir = 1;\n    else if (idx === numRows - 1) dir = -1;\n    idx += dir;\n  }\n  return rows.join('');\n}\nconsole.log(zigzag('PAYPALISHIRING', 3));",
+  "solution": "function zigzag(s, numRows) {\n  if (numRows === 1) return s;\n  const rows = Array(numRows).fill('');\n  let idx = 0, dir = 1;\n  for (const c of s) {\n    rows[idx] += c;\n    if (idx === 0) dir = 1;\n    else if (idx === numRows - 1) dir = -1;\n    idx += dir;\n  }\n  return rows.join('');\n}\nconsole.log(zigzag('PAYPALISHIRING', 3));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "PAHNAPLSIIGYIR"
+    }
+  ],
+  "hints": [
+    "Fill rows zigzag",
+    "Direction changes"
+  ]
+}

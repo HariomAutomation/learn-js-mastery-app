@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-15",
+  "title": "Multiple cases same block",
+  "starterCode": "const month = 'Jan';\nswitch (month) {\n  case 'Dec':\n  case 'Jan':\n  case 'Feb':\n    console.log('winter');\n    break;\n  case 'Mar':\n  case 'Apr':\n  case 'May':\n    console.log('spring');\n    break;\n  default:\n    console.log('other');\n}",
+  "solution": "const month = 'Jan';\nswitch (month) {\n  case 'Dec':\n  case 'Jan':\n  case 'Feb':\n    console.log('winter');\n    break;\n  case 'Mar':\n  case 'Apr':\n  case 'May':\n    console.log('spring');\n    break;\n  default:\n    console.log('other');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "winter"
+    }
+  ],
+  "hints": [
+    "Multiple cases can share code",
+    "Jan matches, falls to winter"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-49",
+  "title": "Locale Practice",
+  "starterCode": "const arr = ['banana', 'apple', 'cherry'];\narr.sort((a, b) => a.localeCompare(b));\nconsole.log(arr);",
+  "solution": "const arr = ['banana', 'apple', 'cherry'];\narr.sort((a, b) => a.localeCompare(b));\nconsole.log(arr);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 'apple', 'banana', 'cherry' ]"
+    }
+  ],
+  "hints": [
+    "localeCompare for sort",
+    "Alphabetical order"
+  ]
+}

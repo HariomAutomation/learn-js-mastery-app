@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-early-return-29",
+  "title": "Validation chain - valid",
+  "starterCode": "function validate(data) {\n  if (!data) return 'no data';\n  if (!data.username) return 'no username';\n  if (data.username.length < 3) return 'username too short';\n  return 'valid';\n}\nconsole.log(validate({ username: 'alice' }));",
+  "solution": "function validate(data) {\n  if (!data) return 'no data';\n  if (!data.username) return 'no username';\n  if (data.username.length < 3) return 'username too short';\n  return 'valid';\n}\nconsole.log(validate({ username: 'alice' }));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "valid"
+    }
+  ],
+  "hints": [
+    "All guards pass",
+    "Returns 'valid'"
+  ]
+}

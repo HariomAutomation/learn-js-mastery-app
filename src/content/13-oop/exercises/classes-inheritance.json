@@ -1,0 +1,12 @@
+{
+  "id": "13-oop-classes-inheritance",
+  "title": "Classes aur Inheritance — OOP basics",
+  "starterCode": "// 1. Animal class banao\nclass Animal {\n  // constructor banao — name aur sound\n  constructor(name, sound) {\n    // your code here\n  }\n\n  // speak method — \"${name} says ${sound}\"\n  speak() {\n    // your code here\n  }\n}\n\nconst dog = new Animal(\"Buddy\", \"Woof\")\nconsole.log(dog.speak()) // \"Buddy says Woof\"\n\n// 2. Dog class — Animal se inherit karo\nclass Dog extends Animal {\n  // constructor — name aur breed\n  constructor(name, breed) {\n    // your code here — super call karo\n  }\n\n  // fetch method — \"${name} is fetching the ball!\"\n  fetch() {\n    // your code here\n  }\n}\n\nconst rex = new Dog(\"Rex\", \"German Shepherd\")\nconsole.log(rex.speak()) // \"Rex says Woof\"\nconsole.log(rex.fetch()) // \"Rex is fetching the ball!\"\n\n// 3. Static method\nclass MathHelper {\n  static add(a, b) {\n    return a + b\n  }\n\n  static multiply(a, b) {\n    return a * b\n  }\n}\n\nconsole.log(MathHelper.add(5, 3)) // 8\nconsole.log(MathHelper.multiply(4, 7)) // 28",
+  "solution": "class Animal {\n  constructor(name, sound) {\n    this.name = name\n    this.sound = sound\n  }\n\n  speak() {\n    return `${this.name} says ${this.sound}`\n  }\n}\n\nconst dog = new Animal(\"Buddy\", \"Woof\")\nconsole.log(dog.speak())\n\nclass Dog extends Animal {\n  constructor(name, breed) {\n    super(name, \"Woof\")\n    this.breed = breed\n  }\n\n  fetch() {\n    return `${this.name} is fetching the ball!`\n  }\n}\n\nconst rex = new Dog(\"Rex\", \"German Shepherd\")\nconsole.log(rex.speak())\nconsole.log(rex.fetch())\n\nclass MathHelper {\n  static add(a, b) {\n    return a + b\n  }\n  static multiply(a, b) {\n    return a * b\n  }\n}\n\nconsole.log(MathHelper.add(5, 3))\nconsole.log(MathHelper.multiply(4, 7))",
+  "tests": [{ "input": [], "expected": "Buddy says Woof\nRex says Woof\nRex is fetching the ball!\n8\n28" }],
+  "hints": [
+    "Constructor mein this se properties assign karo — this.name = name",
+    "Inheritance: extends keyword + super() se parent class ka constructor call karo",
+    "Static method: class se directly call hota hai — instance ki zaroorat nahi"
+  ]
+}

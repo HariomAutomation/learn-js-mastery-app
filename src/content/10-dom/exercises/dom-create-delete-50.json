@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-50",
+  "title": "DocumentFragment Append",
+  "starterCode": "const frag = document.createDocumentFragment();\nconst div = document.createElement('div');\nfrag.appendChild(div);\nconsole.log(frag.children.length);",
+  "solution": "const frag = document.createDocumentFragment();\nconst div = document.createElement('div');\nfrag.appendChild(div);\nconsole.log(frag.children.length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1"
+    }
+  ],
+  "hints": [
+    "Fragment holds children temporarily",
+    "Count children before append"
+  ]
+}

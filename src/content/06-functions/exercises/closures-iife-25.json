@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-closures-iife-25",
+  "title": "Closure Factory",
+  "starterCode": "function createGreeter(greeting) {\n  return (name) => greeting + ', ' + name + '!';\n}\nconst hello = createGreeter('Hello');\nconst howdy = createGreeter('Howdy');\nconsole.log(hello('World'));\nconsole.log(howdy('Partner'));",
+  "solution": "function createGreeter(greeting) {\n  return (name) => greeting + ', ' + name + '!';\n}\nconst hello = createGreeter('Hello');\nconst howdy = createGreeter('Howdy');\nconsole.log(hello('World'));\nconsole.log(howdy('Partner'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hello, World!\nHowdy, Partner!"
+    }
+  ],
+  "hints": [
+    "Factory returns function",
+    "greeting captured"
+  ]
+}

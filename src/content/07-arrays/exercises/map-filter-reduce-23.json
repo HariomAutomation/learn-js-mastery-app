@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-23",
+  "title": "Reduce Flatten",
+  "starterCode": "const arr = [[1, 2], [3, [4, 5]]];\nconst flat = arr.____((acc, x) => acc.concat(x), []);\nconsole.log(flat);",
+  "solution": "const arr = [[1, 2], [3, [4, 5]]];\nconst flat = arr.reduce((acc, x) => acc.concat(x), []);\nconsole.log(flat);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 1, 2, 3, [ 4, 5 ] ]"
+    }
+  ],
+  "hints": [
+    "Concat to accumulator",
+    "One level flatten"
+  ]
+}

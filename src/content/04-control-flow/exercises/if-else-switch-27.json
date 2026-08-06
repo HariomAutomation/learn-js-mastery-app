@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-27",
+  "title": "Switch with no matching case",
+  "starterCode": "const status = 'pending';\nswitch (status) {\n  case 'active':\n    console.log('active');\n    break;\n  case 'inactive':\n    console.log('inactive');\n    break;\n  default:\n    console.log('unknown');\n}",
+  "solution": "const status = 'pending';\nswitch (status) {\n  case 'active':\n    console.log('active');\n    break;\n  case 'inactive':\n    console.log('inactive');\n    break;\n  default:\n    console.log('unknown');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "unknown"
+    }
+  ],
+  "hints": [
+    "'pending' doesn't match any case",
+    "default executes"
+  ]
+}

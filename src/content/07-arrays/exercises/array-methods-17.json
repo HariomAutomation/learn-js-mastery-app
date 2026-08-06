@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-methods-17",
+  "title": "FlatMap",
+  "starterCode": "const arr = [1, 2, 3];\nconsole.log(arr.____(x => [x, x * 2]));",
+  "solution": "const arr = [1, 2, 3];\nconsole.log(arr.flatMap(x => [x, x * 2]));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 1, 2, 2, 4, 3, 6 ]"
+    }
+  ],
+  "hints": [
+    "flatMap maps then flattens",
+    "Callback returns array"
+  ]
+}

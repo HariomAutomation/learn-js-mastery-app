@@ -1,0 +1,17 @@
+{
+  "id": "04-control-flow-early-return-18",
+  "title": "Guard function pattern",
+  "starterCode": "function isValidEmail(email) {\n  if (!email) return false;\n  if (typeof email !== 'string') return false;\n  return email.includes('@');\n}\nconsole.log(isValidEmail('test@example.com'));",
+  "solution": "function isValidEmail(email) {\n  if (!email) return false;\n  if (typeof email !== 'string') return false;\n  return email.includes('@');\n}\nconsole.log(isValidEmail('test@example.com'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "email is truthy",
+    "email is a string",
+    "email includes '@'"
+  ]
+}

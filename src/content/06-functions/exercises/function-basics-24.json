@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-function-basics-24",
+  "title": "Multiple Return Values",
+  "starterCode": "function getStats(arr) {\n  let min = arr[0], max = arr[0];\n  for (const n of arr) {\n    if (n < min) min = n;\n    if (n > max) max = n;\n  }\n  return { min, max };\n}\nconst stats = getStats([3, 1, 4, 1, 5]);\nconsole.log(stats.min + ' ' + stats.max);",
+  "solution": "function getStats(arr) {\n  let min = arr[0], max = arr[0];\n  for (const n of arr) {\n    if (n < min) min = n;\n    if (n > max) max = n;\n  }\n  return { min, max };\n}\nconst stats = getStats([3, 1, 4, 1, 5]);\nconsole.log(stats.min + ' ' + stats.max);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1 5"
+    }
+  ],
+  "hints": [
+    "Return object with properties",
+    "Find min and max"
+  ]
+}

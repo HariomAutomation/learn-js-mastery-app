@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-24",
+  "title": "Map Capitalize",
+  "starterCode": "const words = ['hello', 'world'];\nconst capitalized = words.____(w => w[0].toUpperCase() + w.slice(1));\nconsole.log(capitalized);",
+  "solution": "const words = ['hello', 'world'];\nconst capitalized = words.map(w => w[0].toUpperCase() + w.slice(1));\nconsole.log(capitalized);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 'Hello', 'World' ]"
+    }
+  ],
+  "hints": [
+    "Capitalize first letter",
+    "Concat rest of string"
+  ]
+}

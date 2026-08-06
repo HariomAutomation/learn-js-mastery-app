@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-04",
+  "title": "Factory",
+  "starterCode": "function createUser(name, role) {\n  return { name, role, greet() { return 'Hi ' + this.name; } };\n}\nconst user = createUser('John', 'admin');\nconsole.log(user.greet());",
+  "solution": "function createUser(name, role) {\n  return { name, role, greet() { return 'Hi ' + this.name; } };\n}\nconst user = createUser('John', 'admin');\nconsole.log(user.greet());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hi John"
+    }
+  ],
+  "hints": [
+    "Factory returns new object",
+    "No need for new keyword"
+  ]
+}

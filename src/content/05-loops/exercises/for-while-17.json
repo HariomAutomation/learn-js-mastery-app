@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-while-17",
+  "title": "For Loop With Array",
+  "starterCode": "const nums = [10, 20, 30, 40];\nlet sum = 0;\nfor (let i = 0; i < nums.length; i++) {\n  sum += nums[i];\n}\nconsole.log(sum);",
+  "solution": "const nums = [10, 20, 30, 40];\nlet sum = 0;\nfor (let i = 0; i < nums.length; i++) {\n  sum += nums[i];\n}\nconsole.log(sum);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "100"
+    }
+  ],
+  "hints": [
+    "Access array elements with index",
+    "Use .length for loop bound"
+  ]
+}

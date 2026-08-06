@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-08",
+  "title": "Switch fallthrough danger",
+  "starterCode": "const fruit = 'apple';\nswitch (fruit) {\n  case 'apple':\n    console.log('red');\n  case 'banana':\n    console.log('yellow');\n    break;\n  default:\n    console.log('other');\n}",
+  "solution": "const fruit = 'apple';\nswitch (fruit) {\n  case 'apple':\n    console.log('red');\n  case 'banana':\n    console.log('yellow');\n    break;\n  default:\n    console.log('other');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "red\nyellow"
+    }
+  ],
+  "hints": [
+    "Missing break causes fallthrough",
+    "apple matches, then falls to banana"
+  ]
+}

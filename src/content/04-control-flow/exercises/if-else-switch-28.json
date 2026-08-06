@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-28",
+  "title": "Guard clause with multiple conditions",
+  "starterCode": "function processUser(user) {\n  if (!user) return 'no user';\n  if (!user.name) return 'no name';\n  if (!user.email) return 'no email';\n  return `Processing ${user.name}`;\n}\nconsole.log(processUser({ name: 'Alice', email: 'alice@test.com' }));",
+  "solution": "function processUser(user) {\n  if (!user) return 'no user';\n  if (!user.name) return 'no name';\n  if (!user.email) return 'no email';\n  return `Processing ${user.name}`;\n}\nconsole.log(processUser({ name: 'Alice', email: 'alice@test.com' }));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Processing Alice"
+    }
+  ],
+  "hints": [
+    "All guards pass",
+    "Returns success message"
+  ]
+}

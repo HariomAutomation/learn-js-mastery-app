@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-07",
+  "title": "For...Of Vs For...In",
+  "starterCode": "const arr = [10, 20, 30];\nfor (const val of arr) console.log('of: ' + val);\nfor (const key in arr) console.log('in: ' + key);",
+  "solution": "const arr = [10, 20, 30];\nfor (const val of arr) console.log('of: ' + val);\nfor (const key in arr) console.log('in: ' + key);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "of: 10\nof: 20\nof: 30\nin: 0\nin: 1\nin: 2"
+    }
+  ],
+  "hints": [
+    "of gives values",
+    "in gives keys/indices"
+  ]
+}

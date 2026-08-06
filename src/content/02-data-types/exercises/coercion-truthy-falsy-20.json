@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-20",
+  "title": "Unary plus conversion",
+  "starterCode": "console.log(+\"42\");",
+  "solution": "console.log(+\"42\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "42"
+    }
+  ],
+  "hints": [
+    "+ before a value converts to number",
+    "It's a shorthand for Number()"
+  ]
+}

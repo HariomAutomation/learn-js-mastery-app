@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-closures-iife-18",
+  "title": "Revealing Module",
+  "starterCode": "const calculator = (function() {\n  let result = 0;\n  function add(n) { result += n; }\n  function subtract(n) { result -= n; }\n  function getResult() { return result; }\n  return { add, subtract, getResult };\n})();\ncalculator.add(5);\ncalculator.subtract(2);\nconsole.log(calculator.getResult());",
+  "solution": "const calculator = (function() {\n  let result = 0;\n  function add(n) { result += n; }\n  function subtract(n) { result -= n; }\n  function getResult() { return result; }\n  return { add, subtract, getResult };\n})();\ncalculator.add(5);\ncalculator.subtract(2);\nconsole.log(calculator.getResult());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3"
+    }
+  ],
+  "hints": [
+    "Private functions",
+    "Reveal public API"
+  ]
+}

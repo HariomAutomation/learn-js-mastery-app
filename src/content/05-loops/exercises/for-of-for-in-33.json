@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-33",
+  "title": "For...Of With Map Entries",
+  "starterCode": "const map = new Map([['x', 10], ['y', 20]]);\nfor (const [key, val] of map.entries()) {\n  console.log(key + '=' + val);\n}",
+  "solution": "const map = new Map([['x', 10], ['y', 20]]);\nfor (const [key, val] of map.entries()) {\n  console.log(key + '=' + val);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "x=10\ny=20"
+    }
+  ],
+  "hints": [
+    "Use entries() method",
+    "Destructure pairs"
+  ]
+}

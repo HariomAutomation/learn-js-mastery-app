@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-09",
+  "title": "Check if object is truthy",
+  "starterCode": "if ({}) {\n  console.log('truthy');\n} else {\n  console.log('falsy');\n}",
+  "solution": "if ({}) {\n  console.log('truthy');\n} else {\n  console.log('falsy');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "truthy"
+    }
+  ],
+  "hints": [
+    "Objects are always truthy",
+    "Even empty objects"
+  ]
+}

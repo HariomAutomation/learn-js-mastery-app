@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-18",
+  "title": "Merge Practice",
+  "starterCode": "const defaults = {color: 'red', size: 'medium', weight: 'light'};\nconst custom = {size: 'large', weight: 'heavy'};\nconst result = {...defaults, ...custom};\nconsole.log(result);",
+  "solution": "const defaults = {color: 'red', size: 'medium', weight: 'light'};\nconst custom = {size: 'large', weight: 'heavy'};\nconst result = {...defaults, ...custom};\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{ color: 'red', size: 'large', weight: 'heavy' }"
+    }
+  ],
+  "hints": [
+    "Override specific keys",
+    "Spread merge"
+  ]
+}

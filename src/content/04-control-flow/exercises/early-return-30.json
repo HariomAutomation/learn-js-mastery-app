@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-early-return-30",
+  "title": "Early return arrays",
+  "starterCode": "function getFirstThree(arr) {\n  if (!Array.isArray(arr)) return [];\n  return arr.slice(0, 3);\n}\nconsole.log(getFirstThree([1, 2, 3, 4, 5]));",
+  "solution": "function getFirstThree(arr) {\n  if (!Array.isArray(arr)) return [];\n  return arr.slice(0, 3);\n}\nconsole.log(getFirstThree([1, 2, 3, 4, 5]));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1,2,3"
+    }
+  ],
+  "hints": [
+    "arr is an array",
+    "slice(0,3) returns first 3 elements"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-18",
+  "title": "Copy to Clipboard",
+  "starterCode": "// Copy text on button click\nconsole.log(\"copy to clipboard pattern\");",
+  "solution": "// Copy text on button click\nconsole.log(\"copy to clipboard pattern\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "copy to clipboard pattern"
+    }
+  ],
+  "hints": [
+    "Use navigator.clipboard API",
+    "Show success message"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-14",
+  "title": "Global pollution",
+  "starterCode": "var x = 1\nfunction test() {\n  x = 99\n}\ntest()\nconsole.log(x)",
+  "solution": "var x = 1\nfunction test() {\n  x = 99\n}\ntest()\nconsole.log(x)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "99"
+    }
+  ],
+  "hints": [
+    "Global var is modified everywhere"
+  ]
+}

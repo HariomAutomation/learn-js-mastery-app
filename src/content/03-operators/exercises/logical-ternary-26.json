@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-26",
+  "title": "De Morgan's Law NOT AND",
+  "starterCode": "const result = !(true && false);\nconsole.log(result);",
+  "solution": "const result = !(true && false);\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "De Morgan: !(A && B) === !A || !B",
+    "!(true && false) === !true || !false === true"
+  ]
+}

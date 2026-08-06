@@ -1,0 +1,12 @@
+{
+  "id": "09-strings-string-methods",
+  "title": "String methods ka power — includes, slice, split, join, replace",
+  "starterCode": "const sentence = \"I love JavaScript and I love coding\"\n\n// 1. includes() — check karo ki word hai ya nahi\nconsole.log(sentence.includes(\"JavaScript\")) // true\nconsole.log(sentence.includes(\"Python\")) // __BLANK__\n\n// 2. slice() — substring nikalo\nconsole.log(sentence.slice(7, 17)) // __BLANK__\n\n// 3. split() — string ko array mein todo\nconst words = sentence.split(\" \")\nconsole.log(words.length) // __BLANK__\nconsole.log(words.slice(0, 3)) // __BLANK__\n\n// 4. join() — array ko string mein todo\nconst rejoined = words.join(\"-\")\nconsole.log(rejoined) // __BLANK__\n\n// 5. replace() — word badlo\nconst newSentence = sentence.replace(\"love\", \"adore\")\nconsole.log(newSentence) // __BLANK__",
+  "solution": "const sentence = \"I love JavaScript and I love coding\"\nconsole.log(sentence.includes(\"JavaScript\"))\nconsole.log(sentence.includes(\"Python\"))\nconsole.log(sentence.slice(7, 17))\nconst words = sentence.split(\" \")\nconsole.log(words.length)\nconsole.log(words.slice(0, 3))\nconst rejoined = words.join(\"-\")\nconsole.log(rejoined)\nconst newSentence = sentence.replace(\"love\", \"adore\")\nconsole.log(newSentence)",
+  "tests": [{ "input": [], "expected": "true\nfalse\nJavaScript\n7\n[\"I\", \"love\", \"JavaScript\"]\nI-love-JavaScript-and-I-love-coding\nI adore JavaScript and I love coding" }],
+  "hints": [
+    "includes() boolean return karta hai — true ya false",
+    "slice(start, end) — start se end tak ka substring deta hai (end exclusive)",
+    "replace() pehla match hi replace karta hai, saare nahi"
+  ]
+}

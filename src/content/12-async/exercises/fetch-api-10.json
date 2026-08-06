@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-10",
+  "title": "Parallel Fetch",
+  "starterCode": "// Use Promise.all for parallel requests\nconsole.log(\"Promise.all for multiple fetches\");",
+  "solution": "// Use Promise.all for multiple requests\nconsole.log(\"Promise.all for multiple fetches\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Promise.all for multiple fetches"
+    }
+  ],
+  "hints": [
+    "Map URLs to fetch promises",
+    "Promise.all waits for all"
+  ]
+}

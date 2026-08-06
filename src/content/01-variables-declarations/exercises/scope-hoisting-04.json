@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-04",
+  "title": "Lexical scope",
+  "starterCode": "function outer() {\n  const x = 10\n  return function inner() {\n    return x\n  }\n}\nconsole.log(outer()())",
+  "solution": "function outer() {\n  const x = 10\n  return function inner() {\n    return x\n  }\n}\nconsole.log(outer()())",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10"
+    }
+  ],
+  "hints": [
+    "Inner functions access outer variables"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-27",
+  "title": "getAttribute Method",
+  "starterCode": "const el = document.querySelector('a');\nconst href = el.getAttribute('href');\nconsole.log(typeof href);",
+  "solution": "const el = document.querySelector('a');\nconst href = el.getAttribute('href');\nconsole.log(typeof href);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "string"
+    }
+  ],
+  "hints": [
+    "getAttribute returns attribute value",
+    "Always returns a string or null"
+  ]
+}

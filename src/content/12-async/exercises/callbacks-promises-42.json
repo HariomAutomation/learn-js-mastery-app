@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-42",
+  "title": "Promise All Reject",
+  "starterCode": "Promise.all([\n  Promise.resolve(1),\n  Promise.reject('err'),\n  Promise.resolve(3)\n]).catch(err => console.log(err));",
+  "solution": "Promise.all([\n  Promise.resolve(1),\n  Promise.reject('err'),\n  Promise.resolve(3)\n]).catch(err => console.log(err));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "err"
+    }
+  ],
+  "hints": [
+    "Promise.all rejects on first rejection",
+    "Ignores remaining promises"
+  ]
+}

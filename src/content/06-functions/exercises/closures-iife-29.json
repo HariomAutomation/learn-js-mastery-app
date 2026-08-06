@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-closures-iife-29",
+  "title": "Module Pattern Complete",
+  "starterCode": "const TodoList = (function() {\n  let todos = [];\n  return {\n    add: (todo) => todos.push(todo),\n    remove: (index) => todos.splice(index, 1),\n    getAll: () => [...todos],\n    count: () => todos.length\n  };\n})();\nTodoList.add('Buy milk');\nTodoList.add('Walk dog');\nconsole.log(TodoList.count());\nconsole.log(TodoList.getAll());",
+  "solution": "const TodoList = (function() {\n  let todos = [];\n  return {\n    add: (todo) => todos.push(todo),\n    remove: (index) => todos.splice(index, 1),\n    getAll: () => [...todos],\n    count: () => todos.length\n  };\n})();\nTodoList.add('Buy milk');\nTodoList.add('Walk dog');\nconsole.log(TodoList.count());\nconsole.log(TodoList.getAll());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2\n[ 'Buy milk', 'Walk dog' ]"
+    }
+  ],
+  "hints": [
+    "Private todos array",
+    "Public API methods"
+  ]
+}

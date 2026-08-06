@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-23",
+  "title": "Nested deep copy check",
+  "starterCode": "const a = { nested: { val: 1 } };\nconst b = structuredClone(a);\nb.nested.val = 99;\nconsole.log();",
+  "solution": "const a = { nested: { val: 1 } };\nconst b = structuredClone(a);\nb.nested.val = 99;\nconsole.log(a.nested.val);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1"
+    }
+  ],
+  "hints": [
+    "Deep copy breaks all references",
+    "Original is unaffected"
+  ]
+}

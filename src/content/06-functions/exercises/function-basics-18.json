@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-function-basics-18",
+  "title": "Bind Method",
+  "starterCode": "function greet(greeting) {\n  console.log(greeting + ' ' + this.name);\n}\nconst person = {name: 'Alice'};\nconst greetAlice = greet.bind(person);\ngreetAlice('Hi');",
+  "solution": "function greet(greeting) {\n  console.log(greeting + ' ' + this.name);\n}\nconst person = {name: 'Alice'};\nconst greetAlice = greet.bind(person);\ngreetAlice('Hi');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hi Alice"
+    }
+  ],
+  "hints": [
+    "bind() returns new function",
+    "Sets this permanently"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-methods-18",
+  "title": "Replace Callback",
+  "starterCode": "const str = 'hello world';\nconsole.log(str.replace(/\\w+/g, w => w.toUpperCase()));",
+  "solution": "const str = 'hello world';\nconsole.log(str.replace(/\\w+/g, w => w.toUpperCase()));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "HELLO WORLD"
+    }
+  ],
+  "hints": [
+    "Callback transforms",
+    "Capitalize words"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-methods-43",
+  "title": "Method Return Values",
+  "starterCode": "const arr = [1, 2, 3];\nconst popped = arr.pop();\nconst pushed = arr.____(4);\nconsole.log(popped);\nconsole.log(pushed);",
+  "solution": "const arr = [1, 2, 3];\nconst popped = arr.pop();\nconst pushed = arr.push(4);\nconsole.log(popped);\nconsole.log(pushed);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3\n4"
+    }
+  ],
+  "hints": [
+    "pop returns removed",
+    "push returns new length"
+  ]
+}

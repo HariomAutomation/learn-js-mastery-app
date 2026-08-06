@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-patterns-35",
+  "title": "Difference Symmetric",
+  "starterCode": "const arr1 = [1, 2, 3, 4];\nconst arr2 = [3, 4, 5, 6];\nconst diff = arr1.filter(x => !arr2.includes(x)).concat(arr2.filter(x => !arr1.includes(x)));\nconsole.log(diff);",
+  "solution": "const arr1 = [1, 2, 3, 4];\nconst arr2 = [3, 4, 5, 6];\nconst diff = arr1.filter(x => !arr2.includes(x)).concat(arr2.filter(x => !arr1.includes(x)));\nconsole.log(diff);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 1, 2, 5, 6 ]"
+    }
+  ],
+  "hints": [
+    "Symmetric difference",
+    "Elements in either but not both"
+  ]
+}

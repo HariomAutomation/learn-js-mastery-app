@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-16",
+  "title": "For...Of NodeList",
+  "starterCode": "const items = [10, 20, 30];\nfor (const item of items) {\n  console.log(item * 2);\n}",
+  "solution": "const items = [10, 20, 30];\nfor (const item of items) {\n  console.log(item * 2);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "20\n40\n60"
+    }
+  ],
+  "hints": [
+    "NodeList is iterable",
+    "for...of works on it"
+  ]
+}

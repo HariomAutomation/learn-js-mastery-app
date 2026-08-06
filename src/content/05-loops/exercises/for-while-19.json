@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-while-19",
+  "title": "Modulo Pattern",
+  "starterCode": "for (let i = 1; i <= 10; i++) {\n  if (i % 2 === 0) console.log(i);\n}",
+  "solution": "for (let i = 1; i <= 10; i++) {\n  if (i % 2 === 0) console.log(i);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2\n4\n6\n8\n10"
+    }
+  ],
+  "hints": [
+    "Use modulo to check even",
+    "i % 2 === 0 means even"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-37",
+  "title": "CharAt Practice",
+  "starterCode": "const str = 'JavaScript';\nconsole.log(str.charAt(0) + str.charAt(str.length - 1));",
+  "solution": "const str = 'JavaScript';\nconsole.log(str.charAt(0) + str.charAt(str.length - 1));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Jt"
+    }
+  ],
+  "hints": [
+    "First and last char",
+    "Concat them"
+  ]
+}

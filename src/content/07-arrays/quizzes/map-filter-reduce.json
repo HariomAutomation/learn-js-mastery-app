@@ -1,0 +1,22 @@
+[
+  { "question": "arr.map(fn) — new array length kya hota hai?", "options": ["Same as original", "Double", "Half", "Random"], "correctIndex": 0, "explanation": "Map 1-to-1 transform — same length." },
+  { "question": "arr.filter(fn) — output length?", "options": ["Chhoti ya barabar", "Same", "Zaroor double", "0"], "correctIndex": 0, "explanation": "Condition ke mutabiq subset." },
+  { "question": "arr.reduce(fn, 0) — reduce output type?", "options": ["Koi bhi — initial se define", "Hamesha number", "Hamesha array", "Hamesha string"], "correctIndex": 0, "explanation": "Reduce accumulator flexible hai." },
+  { "question": "[1,2,3].reduce((acc, n) => acc * n, 1) → ?", "options": ["6", "3", "7", "0"], "correctIndex": 0, "explanation": "1*1*2*3 = 6." },
+  { "question": "const total = [10, 20, 30].reduce((a, b) => a + b, 0) → total?", "options": ["60", "30", "10", "0"], "correctIndex": 0, "explanation": "10+20+30 = 60." },
+  { "question": "[1,2,3].map(String) → ?", "options": ["[\"1\",\"2\",\"3\"]", "[1,2,3]", "[\"123\"]", "Error"], "correctIndex": 0, "explanation": "String conversion har element." },
+  { "question": "Map vs forEach — key difference?", "options": ["Map nayi array deta hai, forEach nahi", "Dono same", "forEach array deta", "Map loop nahi"], "correctIndex": 0, "explanation": "Map return karta hai — forEach kuch nahi." },
+  { "question": "Chain: [1,2,3,4].filter(n => n%2===0).map(n => n*10) → ?", "options": ["[20,40]", "[2,4]", "[10,30]", "[2,4,20,40]"], "correctIndex": 0, "explanation": "Filter [2,4] → map [20,40]." },
+  { "question": "[1,2,3].reduce((acc, n) => [...acc, n * 2], []) → ?", "options": ["[2,4,6]", "[1,2,3]", "6", "[6]"], "correctIndex": 0, "explanation": "Reduce se array bhi bana sakte hain." },
+  { "question": "[a, b, c].map((ch, i) => ch + i) → ?", "options": ["[\"a0\",\"b1\",\"c2\"]", "[\"a\",\"b\",\"c\"]", "[\"0\",\"1\",\"2\"]", "Error"], "correctIndex": 0, "explanation": "Index bhi milta hai — ch + i." },
+  { "question": "Find max with reduce?", "options": ["[3,7,2].reduce((m,n) => n>m?n:m, -Infinity)", "sort hi best", "map se", "filter se"], "correctIndex": 0, "explanation": "Accumulate max — classic reduce." },
+  { "question": "[1,2,2,3].filter((n,i,a) => a.indexOf(n) === i) → kya?", "options": ["Unique values", "Sab values", "Duplicates", "Error"], "correctIndex": 0, "explanation": "Pehla occurrence hi filter — unique." },
+  { "question": "Map callback ke 3 args?", "options": ["(element, index, array)", "(element, array)", "(index)", "(this)"], "correctIndex": 0, "explanation": "Element, index, poori array." },
+  { "question": "[1,2,3].map(n => n * n).reduce((a,b) => a + b, 0) → ?", "options": ["14", "6", "9", "36"], "correctIndex": 0, "explanation": "1+4+9 = 14." },
+  { "question": "Reduce bina initial value?", "options": ["Pehla element initial", "Error", "0", "undefined"], "correctIndex": 0, "explanation": "Bina init — arr[0] start." },
+  { "question": "[].reduce((a,b) => a+b) — bina init?", "options": ["TypeError", "0", "undefined", "null"], "correctIndex": 0, "explanation": "Empty array bina init — error." },
+  { "question": "Objects array se name list:", "options": ["users.map(u => u.name)", "users.filter(u)", "users.join()", "users.sort()"], "correctIndex": 0, "explanation": "Map property extract karta hai." },
+  { "question": "const doubled = [1,2,3].map(n => n * 2) — original array?", "options": ["Unchanged", "Bhi double", "Empty", "Deleted"], "correctIndex": 0, "explanation": "Map immutable — original safe." },
+  { "question": "[5,3,8].reduce((m,n) => n < m ? n : m, Infinity) → ?", "options": ["3", "5", "8", "0"], "correctIndex": 0, "explanation": "Min tracking." },
+  { "question": "Group by with reduce: users → age group object", "options": ["reduce mein accumulator object", "map se possible nahi", "filter best", "sort best"], "correctIndex": 0, "explanation": "Accumulator {} — grouping ka power." }
+]

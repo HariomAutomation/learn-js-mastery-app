@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-07",
+  "title": "Object Create with Prototype",
+  "starterCode": "const animal = {speak() { return this.name + ' speaks'; }};\nconst dog = Object.create(animal);\ndog.name = 'Rex';\nconsole.log(dog.speak());",
+  "solution": "const animal = {speak() { return this.name + ' speaks'; }};\nconst dog = Object.create(animal);\ndog.name = 'Rex';\nconsole.log(dog.speak());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Rex speaks"
+    }
+  ],
+  "hints": [
+    "Inherit speak method",
+    "Set name property"
+  ]
+}

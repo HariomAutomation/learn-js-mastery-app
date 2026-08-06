@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-10",
+  "title": "Object Freeze",
+  "starterCode": "const obj = {name: 'Alice'};\nObject.freeze(obj);\nobj.name = 'Bob';\nconsole.log(obj.name);",
+  "solution": "const obj = {name: 'Alice'};\nObject.freeze(obj);\nobj.name = 'Bob';\nconsole.log(obj.name);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Alice"
+    }
+  ],
+  "hints": [
+    "Freeze prevents changes",
+    "Assignment fails silently"
+  ]
+}

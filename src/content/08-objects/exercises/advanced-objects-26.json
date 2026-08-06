@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-26",
+  "title": "structuredClone Advanced",
+  "starterCode": "const obj = {date: new Date(), regexp: /test/g, data: [1, 2, 3]};\nconst copy = structuredClone(obj);\ncopy.data.push(4);\nconsole.log(obj.data);",
+  "solution": "const obj = {date: new Date(), regexp: /test/g, data: [1, 2, 3]};\nconst copy = structuredClone(obj);\ncopy.data.push(4);\nconsole.log(obj.data);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 1, 2, 3 ]"
+    }
+  ],
+  "hints": [
+    "structuredClone deep copies",
+    "Original untouched"
+  ]
+}

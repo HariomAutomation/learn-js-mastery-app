@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-35",
+  "title": "Promise.allSettled Complete",
+  "starterCode": "Promise.allSettled([\n  Promise.resolve(1),\n  Promise.reject('err'),\n  Promise.resolve(3)\n]).then(results => {\n  const fulfilled = results.filter(r => r.status === 'fulfilled');\n  console.log(fulfilled.length);\n});",
+  "solution": "Promise.allSettled([\n  Promise.resolve(1),\n  Promise.reject('err'),\n  Promise.resolve(3)\n]).then(results => {\n  const fulfilled = results.filter(r => r.status === 'fulfilled');\n  console.log(fulfilled.length);\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2"
+    }
+  ],
+  "hints": [
+    "Count fulfilled results",
+    "Filter by status"
+  ]
+}

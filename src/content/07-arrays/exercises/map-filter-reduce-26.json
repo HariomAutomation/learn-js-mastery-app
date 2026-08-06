@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-26",
+  "title": "Reduce Frequency",
+  "starterCode": "const arr = ['a', 'b', 'a', 'c', 'b', 'a'];\nconst freq = arr.____((acc, x) => ({ ...acc, [x]: (acc[x] || 0) + 1 }), {});\nconsole.log(freq);",
+  "solution": "const arr = ['a', 'b', 'a', 'c', 'b', 'a'];\nconst freq = arr.reduce((acc, x) => ({ ...acc, [x]: (acc[x] || 0) + 1 }), {});\nconsole.log(freq);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{ a: 3, b: 2, c: 1 }"
+    }
+  ],
+  "hints": [
+    "Count occurrences",
+    "Increment count"
+  ]
+}

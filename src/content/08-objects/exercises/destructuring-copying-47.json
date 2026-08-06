@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-47",
+  "title": "Copy Date",
+  "starterCode": "const original = new Date('2024-01-01');\nconst copy = new Date(original);\ncopy.setFullYear(2025);\nconsole.log(original.getFullYear());\nconsole.log(copy.getFullYear());",
+  "solution": "const original = new Date('2024-01-01');\nconst copy = new Date(original);\ncopy.setFullYear(2025);\nconsole.log(original.getFullYear());\nconsole.log(copy.getFullYear());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2024\n2025"
+    }
+  ],
+  "hints": [
+    "Date constructor copies",
+    "Independent dates"
+  ]
+}

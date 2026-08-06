@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-var-let-const-25",
+  "title": "var in function param",
+  "starterCode": "function test(x) {\n  var x = 10\n  console.log(x)\n}\ntest(5)",
+  "solution": "function test(x) {\n  var x = 10\n  console.log(x)\n}\ntest(5)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10"
+    }
+  ],
+  "hints": [
+    "var shadows parameter"
+  ]
+}

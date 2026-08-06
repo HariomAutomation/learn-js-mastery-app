@@ -1,0 +1,15 @@
+{
+  "id": "03-operators-arithmetic-comparison-35",
+  "title": "Math.sqrt",
+  "starterCode": "const result = Math.sqrt(9);\nconsole.log(result);",
+  "solution": "const result = Math.sqrt(9);\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3"
+    }
+  ],
+  "hints": [
+    "Math.sqrt returns the square root"
+  ]
+}

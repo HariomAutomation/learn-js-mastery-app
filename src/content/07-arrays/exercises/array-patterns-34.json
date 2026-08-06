@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-patterns-34",
+  "title": "Intersection Multiple",
+  "starterCode": "const arr1 = [1, 2, 3, 4];\nconst arr2 = [2, 3, 4, 5];\nconst arr3 = [3, 4, 5, 6];\nconst common = arr1.filter(x => arr2.includes(x) && arr3.includes(x));\nconsole.log(common);",
+  "solution": "const arr1 = [1, 2, 3, 4];\nconst arr2 = [2, 3, 4, 5];\nconst arr3 = [3, 4, 5, 6];\nconst common = arr1.filter(x => arr2.includes(x) && arr3.includes(x));\nconsole.log(common);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 3, 4 ]"
+    }
+  ],
+  "hints": [
+    "Filter with multiple includes",
+    "Must be in all arrays"
+  ]
+}

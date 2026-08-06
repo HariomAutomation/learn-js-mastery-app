@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-34",
+  "title": "Map Template",
+  "starterCode": "const names = ['Alice', 'Bob'];\nconst greetings = names.____(n => `Hello, ${n}!`);\nconsole.log(greetings);",
+  "solution": "const names = ['Alice', 'Bob'];\nconst greetings = names.map(n => `Hello, ${n}!`);\nconsole.log(greetings);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 'Hello, Alice!', 'Hello, Bob!' ]"
+    }
+  ],
+  "hints": [
+    "Template literal",
+    "Map each name"
+  ]
+}

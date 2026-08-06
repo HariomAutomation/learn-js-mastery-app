@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-39",
+  "title": "Copy Nested",
+  "starterCode": "const obj = {a: 1, b: {c: 2}};\nconst copy = JSON.parse(JSON.stringify(obj));\ncopy.b.c = 99;\nconsole.log(obj.b.c);",
+  "solution": "const obj = {a: 1, b: 2, c: {d: 2}};\nconst copy = JSON.parse(JSON.stringify(obj));\ncopy.c.d = 99;\nconsole.log(obj.c.d);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2"
+    }
+  ],
+  "hints": [
+    "JSON deep copy pattern",
+    "Original untouched"
+  ]
+}

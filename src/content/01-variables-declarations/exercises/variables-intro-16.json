@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-variables-intro-16",
+  "title": "Falsy value check",
+  "starterCode": "console.log(Boolean(0))\nconsole.log(Boolean(\"\"))\nconsole.log(Boolean(null))",
+  "solution": "console.log(Boolean(0))\nconsole.log(Boolean(\"\"))\nconsole.log(Boolean(null))",
+  "tests": [
+    {
+      "input": [],
+      "expected": "false\nfalse\nfalse"
+    }
+  ],
+  "hints": [
+    "0, '', null are falsy"
+  ]
+}

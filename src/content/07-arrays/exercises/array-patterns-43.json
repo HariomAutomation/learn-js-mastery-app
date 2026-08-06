@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-patterns-43",
+  "title": "Unique Preserving Order",
+  "starterCode": "const arr = ['b', 'a', 'b', 'c', 'a', 'd'];\nconst unique = arr.reduce((acc, x) => acc.includes(x) ? acc : [...acc, x], []);\nconsole.log(unique);",
+  "solution": "const arr = ['b', 'a', 'b', 'c', 'a', 'd'];\nconst unique = arr.reduce((acc, x) => acc.includes(x) ? acc : [...acc, x], []);\nconsole.log(unique);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 'b', 'a', 'c', 'd' ]"
+    }
+  ],
+  "hints": [
+    "Reduce with includes",
+    "Preserve first occurrence"
+  ]
+}

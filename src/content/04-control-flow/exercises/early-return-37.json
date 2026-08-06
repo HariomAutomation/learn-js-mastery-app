@@ -1,0 +1,17 @@
+{
+  "id": "04-control-flow-early-return-37",
+  "title": "Early return in async pattern",
+  "starterCode": "function fetchData(url) {\n  if (!url) return Promise.reject('no url');\n  if (typeof url !== 'string') return Promise.reject('invalid url');\n  return Promise.resolve(`fetched ${url}`);\n}\nfetchData('test.com').then(console.log);",
+  "solution": "function fetchData(url) {\n  if (!url) return Promise.reject('no url');\n  if (typeof url !== 'string') return Promise.reject('invalid url');\n  return Promise.resolve(`fetched ${url}`);\n}\nfetchData('test.com').then(console.log);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "fetched test.com"
+    }
+  ],
+  "hints": [
+    "url is truthy",
+    "url is a string",
+    "Returns resolved promise"
+  ]
+}

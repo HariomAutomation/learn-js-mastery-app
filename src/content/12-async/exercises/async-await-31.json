@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-31",
+  "title": "Promise.all Parallel Work",
+  "starterCode": "async function parallelWork() {\n  const results = await Promise.all([\n    new Promise(r => setTimeout(() => r(1), 10)),\n    new Promise(r => setTimeout(() => r(2), 10)),\n    new Promise(r => setTimeout(() => r(3), 10))\n  ]);\n  console.log(results.reduce((a, b) => a + b));\n}\nparallelWork();",
+  "solution": "async function parallelWork() {\n  const results = await Promise.all([\n    new Promise(r => setTimeout(() => r(1), 10)),\n    new Promise(r => setTimeout(() => r(2), 10)),\n    new Promise(r => setTimeout(() => r(3), 10))\n  ]);\n  console.log(results.reduce((a, b) => a + b));\n}\nparallelWork();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "6"
+    }
+  ],
+  "hints": [
+    "All run in parallel",
+    "Sum the results"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-25",
+  "title": "Dependency Injection",
+  "starterCode": "class Service {\n  getData() { return 'data'; }\n}\nclass Consumer {\n  constructor(service) { this.service = service; }\n  use() { return this.service.getData(); }\n}\nconst consumer = new Consumer(new Service());\nconsole.log(consumer.use());",
+  "solution": "class Service {\n  getData() { return 'data'; }\n}\nclass Consumer {\n  constructor(service) { this.service = service; }\n  use() { return this.service.getData(); }\n}\nconst consumer = new Consumer(new Service());\nconsole.log(consumer.use());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "data"
+    }
+  ],
+  "hints": [
+    "Pass dependencies to constructor",
+    "Loose coupling"
+  ]
+}

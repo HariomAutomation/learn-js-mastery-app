@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-02",
+  "title": "Response Object",
+  "starterCode": "// fetch resolves to a Response object\nconsole.log(\"Response has status, headers, body\");",
+  "solution": "// fetch resolves to a Response object\nconsole.log(\"Response has status, headers, body\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Response has status, headers, body"
+    }
+  ],
+  "hints": [
+    "Response is the fetch result",
+    "Contains response data"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-48",
+  "title": "Reduce Deep Flatten",
+  "starterCode": "const arr = [1, [2, [3, [4]]]];\nfunction deepFlatten(arr) {\n  return arr.____((acc, val) =>\n    acc.concat(Array.isArray(val) ? deepFlatten(val) : val), []);\n}\nconsole.log(deepFlatten(arr));",
+  "solution": "const arr = [1, [2, [3, [4]]]];\nfunction deepFlatten(arr) {\n  return arr.reduce((acc, val) =>\n    acc.concat(Array.isArray(val) ? deepFlatten(val) : val), []);\n}\nconsole.log(deepFlatten(arr));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 1, 2, 3, 4 ]"
+    }
+  ],
+  "hints": [
+    "Recursive flatten",
+    "Check Array.isArray"
+  ]
+}

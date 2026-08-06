@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-14",
+  "title": "PUT Request",
+  "starterCode": "// PUT updates entire resource\nconsole.log(\"method: PUT for updating\");",
+  "solution": "// PUT updates entire resource\nconsole.log(\"method: PUT for updating\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "method: PUT for updating"
+    }
+  ],
+  "hints": [
+    "PUT replaces entire resource",
+    "Needs complete data"
+  ]
+}

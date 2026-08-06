@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-33",
+  "title": "Async forEach",
+  "starterCode": "async function forEachAsync(items, fn) {\n  for (const item of items) {\n    await fn(item);\n  }\n}\nforEachAsync([1, 2, 3], async (item) => {\n  await Promise.resolve();\n}).then(() => console.log('done'));",
+  "solution": "async function forEachAsync(items, fn) {\n  for (const item of items) {\n    await fn(item);\n  }\n}\nforEachAsync([1, 2, 3], async (item) => {\n  await Promise.resolve();\n}).then(() => console.log('done'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "done"
+    }
+  ],
+  "hints": [
+    "Sequential forEach with await",
+    "Use for...of loop"
+  ]
+}

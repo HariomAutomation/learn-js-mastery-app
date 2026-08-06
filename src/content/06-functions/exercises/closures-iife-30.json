@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-closures-iife-30",
+  "title": "Closure In Callback",
+  "starterCode": "function setup() {\n  let count = 0;\n  return {\n    increment: () => ++count,\n    getCount: () => count\n  };\n}\nconst counter = setup();\nconst fn = () => console.log(counter.increment());\nfn();\nfn();\nfn();",
+  "solution": "function setup() {\n  let count = 0;\n  return {\n    increment: () => ++count,\n    getCount: () => count\n  };\n}\nconst counter = setup();\nconst fn = () => console.log(counter.increment());\nfn();\nfn();\nfn();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1\n2\n3"
+    }
+  ],
+  "hints": [
+    "Closure persists",
+    "Callback uses it"
+  ]
+}

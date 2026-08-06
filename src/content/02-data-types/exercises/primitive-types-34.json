@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-34",
+  "title": "Use toFixed to format a number",
+  "starterCode": "const pi = 3.14159;\nconsole.log();",
+  "solution": "const pi = 3.14159;\nconsole.log(pi.toFixed(2));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3.14"
+    }
+  ],
+  "hints": [
+    "toFixed takes number of decimal places",
+    "It returns a string"
+  ]
+}

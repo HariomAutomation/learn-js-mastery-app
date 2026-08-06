@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-02",
+  "title": "Callback Hell",
+  "starterCode": "function step1(cb) { cb(1); }\nfunction step2(val, cb) { cb(val + 1); }\nfunction step3(val, cb) { cb(val + 1); }\nstep1(function(r1) {\n  step2(r1, function(r2) {\n    step3(r2, function(r3) {\n      console.log(r3);\n    });\n  });\n});",
+  "solution": "function step1(cb) { cb(1); }\nfunction step2(val, cb) { cb(val + 1); }\nfunction step3(val, cb) { cb(val + 1); }\nstep1(function(r1) {\n  step2(r1, function(r2) {\n    step3(r2, function(r3) {\n      console.log(r3);\n    });\n  });\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3"
+    }
+  ],
+  "hints": [
+    "Nested callbacks form pyramid",
+    "Each step adds 1"
+  ]
+}

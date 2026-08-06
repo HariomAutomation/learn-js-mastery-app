@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-04",
+  "title": "Multi-line",
+  "starterCode": "const str = ____;\nconsole.log(str);",
+  "solution": "const str = `line1\nline2`;\nconsole.log(str);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "line1\nline2"
+    }
+  ],
+  "hints": [
+    "Backticks for multi-line",
+    "Newlines preserved"
+  ]
+}

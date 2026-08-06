@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-11",
+  "title": "String to number coercion with +",
+  "starterCode": "console.log(\"5\" + 3);",
+  "solution": "console.log(\"5\" + 3);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "53"
+    }
+  ],
+  "hints": [
+    "+ with a string does concatenation",
+    "The number becomes a string"
+  ]
+}

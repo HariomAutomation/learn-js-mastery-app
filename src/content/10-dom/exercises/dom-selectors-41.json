@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-41",
+  "title": "getElementsByTagName Live",
+  "starterCode": "// getElementsByTagName returns a live collection\nconsole.log(\"live\");",
+  "solution": "// getElementsByTagName returns a live collection\nconsole.log(\"live\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "live"
+    }
+  ],
+  "hints": [
+    "Live collections auto-update",
+    "Same as getElementsByClassName"
+  ]
+}

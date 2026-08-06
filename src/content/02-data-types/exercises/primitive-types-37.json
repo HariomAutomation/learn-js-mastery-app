@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-37",
+  "title": "Convert string to integer with parseInt",
+  "starterCode": "const str = \"42px\";\nconst num = ;\nconsole.log(num);",
+  "solution": "const str = \"42px\";\nconst num = parseInt(str);\nconsole.log(num);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "42"
+    }
+  ],
+  "hints": [
+    "parseInt parses until it finds non-numeric",
+    "It stops at the 'px'"
+  ]
+}

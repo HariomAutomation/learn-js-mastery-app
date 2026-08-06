@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-13",
+  "title": "This in Class",
+  "starterCode": "class Person {\n  constructor(name) { this.name = name; }\n  greet() { console.log(this.name); }\n}\nnew Person('John').greet();",
+  "solution": "class Person {\n  constructor(name) { this.name = name; }\n  greet() { console.log(this.name); }\n}\nnew Person('John').greet();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "John"
+    }
+  ],
+  "hints": [
+    "Class methods work like prototype",
+    "this is the instance"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-24",
+  "title": "querySelectorAll to Array",
+  "starterCode": "const items = document.querySelectorAll('.item');\nconst arr = Array.from(items);\nconsole.log(Array.isArray(arr));",
+  "solution": "const items = document.querySelectorAll('.item');\nconst arr = Array.from(items);\nconsole.log(Array.isArray(arr));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "Array.from converts array-like to array",
+    "Check with Array.isArray"
+  ]
+}

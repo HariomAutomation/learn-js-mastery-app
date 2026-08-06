@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-48",
+  "title": "Arrow In Filter Chain",
+  "starterCode": "const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];\nconst result = nums.filter(x => x > 3).filter(x => x % 2 === 0);\nconsole.log(result);",
+  "solution": "const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];\nconst result = nums.filter(x => x > 3).filter(x => x % 2 === 0);\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 4, 6, 8, 10 ]"
+    }
+  ],
+  "hints": [
+    "Chain filters",
+    "Each arrow callback"
+  ]
+}

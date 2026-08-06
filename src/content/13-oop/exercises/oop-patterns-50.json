@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-50",
+  "title": "Composite Pattern",
+  "starterCode": "class Item { price() { return 0; } }\nclass Product extends Item {\n  constructor(p) { super(); this.p = p; }\n  price() { return this.p; }\n}\nclass Box extends Item {\n  constructor() { super(); this.items = []; }\n  add(i) { this.items.push(i); }\n  price() { return this.items.reduce((s, i) => s + i.price(), 0); }\n}\nconst box = new Box();\nbox.add(new Product(10));\nbox.add(new Product(20));\nconsole.log(box.price());",
+  "solution": "class Item { price() { return 0; } }\nclass Product extends Item {\n  constructor(p) { super(); this.p = p; }\n  price() { return this.p; }\n}\nclass Box extends Item {\n  constructor() { super(); this.items = []; }\n  add(i) { this.items.push(i); }\n  price() { return this.items.reduce((s, i) => s + i.price(), 0); }\n}\nconst box = new Box();\nbox.add(new Product(10));\nbox.add(new Product(20));\nconsole.log(box.price());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "30"
+    }
+  ],
+  "hints": [
+    "Tree structure",
+    "Composite contains children"
+  ]
+}

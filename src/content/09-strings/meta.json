@@ -1,0 +1,8 @@
+{
+  "id": "09-strings",
+  "title": "Strings & String Methods",
+  "order": 9,
+  "description": "String creation, methods, searching, formatting, and pattern matching",
+  "prerequisites": ["08-objects"],
+  "lessonCount": 3
+}

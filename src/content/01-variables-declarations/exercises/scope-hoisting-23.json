@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-23",
+  "title": "scope and this",
+  "starterCode": "const obj = {\n  x: 10,\n  getX() { return this.x }\n}\nconsole.log(obj.getX())",
+  "solution": "const obj = {\n  x: 10,\n  getX() { return this.x }\n}\nconsole.log(obj.getX())",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10"
+    }
+  ],
+  "hints": [
+    "this depends on call site"
+  ]
+}

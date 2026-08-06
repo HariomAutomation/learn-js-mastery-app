@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-19",
+  "title": "Copy Practice",
+  "starterCode": "const obj = {a: 1, b: 2};\nconst copy1 = {...obj};\nconst copy2 = Object.assign({}, obj);\nconsole.log(copy1.a === copy2.a);",
+  "solution": "const obj = {a: 1, b: 2};\nconst copy1 = {...obj};\nconst copy2 = Object.assign({}, obj);\nconsole.log(copy1.a === copy2.a);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "Both create shallow copy",
+    "Same result"
+  ]
+}

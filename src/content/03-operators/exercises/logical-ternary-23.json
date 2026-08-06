@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-23",
+  "title": "Logical OR assignment with truthy",
+  "starterCode": "let x = \"hello\";\nx ||= \"default\";\nconsole.log(x);",
+  "solution": "let x = \"hello\";\nx ||= \"default\";\nconsole.log(x);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hello"
+    }
+  ],
+  "hints": [
+    "x is truthy, so assignment doesn't happen",
+    "x stays as 'hello'"
+  ]
+}

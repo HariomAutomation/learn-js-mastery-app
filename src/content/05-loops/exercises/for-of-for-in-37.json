@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-37",
+  "title": "For...In Object Values",
+  "starterCode": "const scores = {math: 95, science: 88, english: 92};\nfor (const key in scores) {\n  if (scores.hasOwnProperty(key)) {\n    console.log(key + ': ' + scores[key]);\n  }\n}",
+  "solution": "const scores = {math: 95, science: 88, english: 92};\nfor (const key in scores) {\n  if (scores.hasOwnProperty(key)) {\n    console.log(key + ': ' + scores[key]);\n  }\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "math: 95\nscience: 88\nenglish: 92"
+    }
+  ],
+  "hints": [
+    "Check hasOwnProperty",
+    "Access value with key"
+  ]
+}

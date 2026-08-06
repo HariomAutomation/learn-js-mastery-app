@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-13",
+  "title": "Proxy",
+  "starterCode": "const handler = {\n  get(target, prop) {\n    return prop in target ? target[prop] : 'not found';\n  }\n};\nconst proxy = new Proxy({ name: 'John' }, handler);\nconsole.log(proxy.name + ' ' + proxy.age);",
+  "solution": "const handler = {\n  get(target, prop) {\n    return prop in target ? target[prop] : 'not found';\n  }\n};\nconst proxy = new Proxy({ name: 'John' }, handler);\nconsole.log(proxy.name + ' ' + proxy.age);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "John not found"
+    }
+  ],
+  "hints": [
+    "Proxy intercepts operations",
+    "handler defines traps"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-34",
+  "title": "String '0' is truthy",
+  "starterCode": "console.log(Boolean(\"0\"));",
+  "solution": "console.log(Boolean(\"0\"));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "String '0' is not the same as number 0",
+    "Non-empty strings are truthy"
+  ]
+}

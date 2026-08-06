@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-methods-17",
+  "title": "ReplaceAll",
+  "starterCode": "const str = 'aaa';\nconsole.log(str.replaceAll('a', 'b'));",
+  "solution": "const str = 'aaa';\nconsole.log(str.replaceAll('a', 'b'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "bbb"
+    }
+  ],
+  "hints": [
+    "replaceAll replaces all",
+    "No regex needed"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-31",
+  "title": "fragment Append",
+  "starterCode": "const fragment = document.createDocumentFragment();\nfor (let i = 0; i < 5; i++) {\n  const li = document.createElement('li');\n  li.textContent = i;\n  fragment.appendChild(li);\n}\nconst list = document.createElement('ul');\nlist.appendChild(fragment);\nconsole.log(list.children.length);",
+  "solution": "const fragment = document.createDocumentFragment();\nfor (let i = 0; i < 5; i++) {\n  const li = document.createElement('li');\n  li.textContent = i;\n  fragment.appendChild(li);\n}\nconst list = document.createElement('ul');\nlist.appendChild(fragment);\nconsole.log(list.children.length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "5"
+    }
+  ],
+  "hints": [
+    "Fragment is efficient for batch inserts",
+    "All children move to list"
+  ]
+}

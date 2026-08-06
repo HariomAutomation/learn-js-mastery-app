@@ -1,0 +1,17 @@
+{
+  "id": "04-control-flow-early-return-24",
+  "title": "Nested refactor to flat",
+  "starterCode": "function canAccess(user) {\n  if (!user) return false;\n  if (!user.isLoggedIn) return false;\n  if (!user.hasPermission) return false;\n  return true;\n}\nconsole.log(canAccess({ isLoggedIn: true, hasPermission: true }));",
+  "solution": "function canAccess(user) {\n  if (!user) return false;\n  if (!user.isLoggedIn) return false;\n  if (!user.hasPermission) return false;\n  return true;\n}\nconsole.log(canAccess({ isLoggedIn: true, hasPermission: true }));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "user is truthy",
+    "isLoggedIn is true",
+    "hasPermission is true"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-13",
+  "title": "Scroll Spy",
+  "starterCode": "// Scroll event to highlight nav items\nconsole.log(\"scroll spy pattern\");",
+  "solution": "// Scroll event to highlight nav items\nconsole.log(\"scroll spy pattern\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "scroll spy pattern"
+    }
+  ],
+  "hints": [
+    "Check section positions on scroll",
+    "Update active nav link"
+  ]
+}

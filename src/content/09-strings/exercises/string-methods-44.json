@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-methods-44",
+  "title": "Trim Unicode",
+  "starterCode": "console.log('\\u00A0hello\\u00A0'.trim());",
+  "solution": "console.log('\\u00A0hello\\u00A0'.trim());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hello"
+    }
+  ],
+  "hints": [
+    "Unicode whitespace",
+    "Non-breaking space"
+  ]
+}

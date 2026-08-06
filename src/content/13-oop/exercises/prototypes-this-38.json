@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-38",
+  "title": "Prototype Method",
+  "starterCode": "function Animal(name) { this.name = name; }\nAnimal.prototype.speak = function() { return this.name + ' speaks'; };\nconsole.log(new Animal('Cat').speak());",
+  "solution": "function Animal(name) { this.name = name; }\nAnimal.prototype.speak = function() { return this.name + ' speaks'; };\nconsole.log(new Animal('Cat').speak());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Cat speaks"
+    }
+  ],
+  "hints": [
+    "Methods on prototype are shared",
+    "this refers to instance"
+  ]
+}

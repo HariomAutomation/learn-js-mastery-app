@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-25",
+  "title": "Class Get/Set",
+  "starterCode": "class Circle {\n  #radius;\n  constructor(r) { this.#radius = r; }\n  get radius() { return this.#radius; }\n  set radius(r) { if (r > 0) this.#radius = r; }\n}\nconst c = new Circle(5);\nc.radius = 10;\nconsole.log(c.radius);",
+  "solution": "class Circle {\n  #radius;\n  constructor(r) { this.#radius = r; }\n  get radius() { return this.#radius; }\n  set radius(r) { if (r > 0) this.#radius = r; }\n}\nconst c = new Circle(5);\nc.radius = 10;\nconsole.log(c.radius);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10"
+    }
+  ],
+  "hints": [
+    "Getter returns value",
+    "Setter validates and sets"
+  ]
+}

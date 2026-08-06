@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-10",
+  "title": "Truthy/falsy if condition",
+  "starterCode": "const name = '';\nif (name) {\n  console.log('has name');\n} else {\n  console.log('no name');\n}",
+  "solution": "const name = '';\nif (name) {\n  console.log('has name');\n} else {\n  console.log('no name');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "no name"
+    }
+  ],
+  "hints": [
+    "Empty string is falsy",
+    "else block executes"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-patterns-20",
+  "title": "Chunking Practice",
+  "starterCode": "function chunk(arr, size) {\n  const result = [];\n  for (let i = 0; i < arr.length; i += size) {\n    result.push(arr.slice(i, i + size));\n  }\n  return result;\n}\nconsole.log(chunk(['a','b','c','d','e'], 3));",
+  "solution": "function chunk(arr, size) {\n  const result = [];\n  for (let i = 0; i < arr.length; i += size) {\n    result.push(arr.slice(i, i + size));\n  }\n  return result;\n}\nconsole.log(chunk(['a','b','c','d','e'], 3));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ [ 'a', 'b', 'c' ], [ 'd', 'e' ] ]"
+    }
+  ],
+  "hints": [
+    "Loop with step size",
+    "Slice chunks"
+  ]
+}

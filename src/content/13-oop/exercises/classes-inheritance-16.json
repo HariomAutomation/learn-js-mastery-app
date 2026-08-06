@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-16",
+  "title": "Protected Pattern",
+  "starterCode": "class Base {\n  _internal() { return 'protected'; }\n}\nclass Child extends Base {\n  access() { return this._internal(); }\n}\nconsole.log(new Child().access());",
+  "solution": "class Base {\n  _internal() { return 'protected'; }\n}\nclass Child extends Base {\n  access() { return this._internal(); }\n}\nconsole.log(new Child().access());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "protected"
+    }
+  ],
+  "hints": [
+    "_ prefix convention for protected",
+    "Not truly private in JS"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-43",
+  "title": "Multiply with string",
+  "starterCode": "console.log(\"3\" * 2);",
+  "solution": "console.log(\"3\" * 2);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "6"
+    }
+  ],
+  "hints": [
+    "* does math",
+    "String is converted to number"
+  ]
+}

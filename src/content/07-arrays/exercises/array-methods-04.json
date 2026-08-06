@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-methods-04",
+  "title": "Unshift Element",
+  "starterCode": "const arr = [2, 3, 4];\narr.____(1);\nconsole.log(arr);",
+  "solution": "const arr = [2, 3, 4];\narr.unshift(1);\nconsole.log(arr);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 1, 2, 3, 4 ]"
+    }
+  ],
+  "hints": [
+    "unshift adds to beginning",
+    "Mutates original array"
+  ]
+}

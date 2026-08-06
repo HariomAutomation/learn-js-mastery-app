@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-08",
+  "title": "Object Assign Deep",
+  "starterCode": "function deepAssign(target, ...sources) {\n  sources.forEach(source => {\n    Object.entries(source).forEach(([k, v]) => {\n      if (typeof v === 'object' && v !== null && !Array.isArray(v)) {\n        target[k] = target[k] || {};\n        deepAssign(target[k], v);\n      } else {\n        target[k] = v;\n      }\n    });\n  });\n  return target;\n}\nconsole.log(deepAssign({}, {a: {b: 1}}, {a: {c: 2}}));",
+  "solution": "function deepAssign(target, ...sources) {\n  sources.forEach(source => {\n    Object.entries(source).forEach(([k, v]) => {\n      if (typeof v === 'object' && v !== null && !Array.isArray(v)) {\n        target[k] = target[k] || {};\n        deepAssign(target[k], v);\n      } else {\n        target[k] = v;\n      }\n    });\n  });\n  return target;\n}\nconsole.log(deepAssign({}, {a: {b: 1}}, {a: {c: 2}}));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{ a: { b: 1, c: 2 } }"
+    }
+  ],
+  "hints": [
+    "Recursive merge",
+    "Deep assign pattern"
+  ]
+}

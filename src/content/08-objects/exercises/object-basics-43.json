@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-43",
+  "title": "Complete 6",
+  "starterCode": "const obj = {a: 1, b: 2, c: 3};\nconst entries = Object.entries(obj);\nconst max = entries.reduce((a, b) => a[1] > b[1] ? a : b);\nconsole.log(max);",
+  "solution": "const obj = {a: 1, b: 2, c: 3};\nconst entries = Object.entries(obj);\nconst max = entries.reduce((a, b) => a[1] > b[1] ? a : b);\nconsole.log(max);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 'c', 3 ]"
+    }
+  ],
+  "hints": [
+    "Find max value entry",
+    "Compare values"
+  ]
+}

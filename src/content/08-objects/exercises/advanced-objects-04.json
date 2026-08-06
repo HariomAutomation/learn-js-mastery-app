@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-04",
+  "title": "Object Keys Enumeration",
+  "starterCode": "const obj = {a: 1, b: 2};\nObject.defineProperty(obj, 'c', {value: 3, enumerable: false});\nconsole.log(Object.keys(obj));",
+  "solution": "const obj = {a: 1, b: 2};\nObject.defineProperty(obj, 'c', {value: 3, enumerable: false});\nconsole.log(Object.keys(obj));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 'a', 'b' ]"
+    }
+  ],
+  "hints": [
+    "enumerable false hides",
+    "Not in keys"
+  ]
+}

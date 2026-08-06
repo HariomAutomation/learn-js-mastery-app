@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-16",
+  "title": "FormData",
+  "starterCode": "// FormData for file uploads\nconsole.log(\"FormData for multipart/form-data\");",
+  "solution": "// FormData for file uploads\nconsole.log(\"FormData for multipart/form-data\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "FormData for multipart/form-data"
+    }
+  ],
+  "hints": [
+    "FormData handles files and fields",
+    "Auto-sets content-type"
+  ]
+}

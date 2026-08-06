@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-45",
+  "title": "Reduce Object Accumulator",
+  "starterCode": "const arr = [1, 2, 3, 4, 5];\nconst result = arr.____((acc, x) => ({\n  sum: acc.sum + x,\n  count: acc.count + 1\n}), { sum: 0, count: 0 });\nconsole.log(result);",
+  "solution": "const arr = [1, 2, 3, 4, 5];\nconst result = arr.reduce((acc, x) => ({\n  sum: acc.sum + x,\n  count: acc.count + 1\n}), { sum: 0, count: 0 });\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{ sum: 15, count: 5 }"
+    }
+  ],
+  "hints": [
+    "Object as accumulator",
+    "Track sum and count"
+  ]
+}

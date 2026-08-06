@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-closures-iife-03",
+  "title": "Closure In Loop Fix",
+  "starterCode": "const funcs = [];\nfor (let i = 0; i < 3; i++) {\n  funcs.push(() => console.log(i));\n}\nfuncs[0]();\nfuncs[1]();\nfuncs[2]();",
+  "solution": "const funcs = [];\nfor (let i = 0; i < 3; i++) {\n  funcs.push(() => console.log(i));\n}\nfuncs[0]();\nfuncs[1]();\nfuncs[2]();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "0\n1\n2"
+    }
+  ],
+  "hints": [
+    "let in for loop is block scoped",
+    "Each iteration has own i"
+  ]
+}

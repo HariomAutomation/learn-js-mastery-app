@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-arithmetic-comparison-42",
+  "title": "Type coercion in addition",
+  "starterCode": "const result = true + 1;\nconsole.log(result);",
+  "solution": "const result = true + 1;\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2"
+    }
+  ],
+  "hints": [
+    "true coerces to 1 in numeric context",
+    "1 + 1 = 2"
+  ]
+}

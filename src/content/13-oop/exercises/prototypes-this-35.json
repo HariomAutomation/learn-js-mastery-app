@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-35",
+  "title": "Call Apply Bind",
+  "starterCode": "function greet(greeting) { return greeting + ' ' + this.name; }\nconst ctx = { name: 'Bob' };\nconsole.log(greet.call(ctx, 'Hey'));",
+  "solution": "function greet(greeting) { return greeting + ' ' + this.name; }\nconst ctx = { name: 'Bob' };\nconsole.log(greet.call(ctx, 'Hey'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hey Bob"
+    }
+  ],
+  "hints": [
+    "call sets this and passes args",
+    "First arg is context"
+  ]
+}

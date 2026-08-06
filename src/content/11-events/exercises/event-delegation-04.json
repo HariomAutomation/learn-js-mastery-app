@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-04",
+  "title": "Bubbling Phase",
+  "starterCode": "// Events bubble from target up to document\nconsole.log(\"target → parent → ... → document\");",
+  "solution": "// Events bubble from target up to document\nconsole.log(\"target → parent → ... → document\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "target → parent → ... → document"
+    }
+  ],
+  "hints": [
+    "Default behavior is bubbling",
+    "Goes up the DOM tree"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-10",
+  "title": "Async Iteration",
+  "starterCode": "async function iterate() {\n  const items = [1, 2, 3];\n  for (const item of items) {\n    const val = await Promise.resolve(item * 10);\n    console.log(val);\n  }\n}\niterate();",
+  "solution": "async function iterate() {\n  const items = [1, 2, 3];\n  for (const item of items) {\n    const val = await Promise.resolve(item * 10);\n    console.log(val);\n  }\n}\niterate();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10\n20\n30"
+    }
+  ],
+  "hints": [
+    "Use for...of with await",
+    "Each iteration waits"
+  ]
+}

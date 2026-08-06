@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-21",
+  "title": "This Lost",
+  "starterCode": "const obj = {\n  name: 'John',\n  greet() { console.log(this.name); }\n};\nconst fn = obj.greet;\nfn();",
+  "solution": "const obj = {\n  name: 'John',\n  greet() { console.log(this.name); }\n};\nconst fn = obj.greet;\nfn();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "undefined"
+    }
+  ],
+  "hints": [
+    "this is lost when function is extracted",
+    "Use bind to fix"
+  ]
+}

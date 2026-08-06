@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-50",
+  "title": "Rename Class",
+  "starterCode": "const config = {url: 'http://example.com', maxRetries: 3};\nconst {url: endpoint, maxRetries: retries} = config;\nconsole.log(endpoint, retries);",
+  "solution": "const config = {url: 'http://example.com', maxRetries: 3};\nconst {url: endpoint, maxRetries: retries} = config;\nconsole.log(endpoint, retries);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "http://example.com 3"
+    }
+  ],
+  "hints": [
+    "Rename to meaningful names",
+    "Clean API"
+  ]
+}

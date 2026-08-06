@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-28",
+  "title": "Delegation Pattern Complete",
+  "starterCode": "const list = document.querySelector('ul');\nlist.addEventListener('click', function(e) {\n  const item = e.target.closest('li');\n  if (item) console.log(item.textContent);\n});",
+  "solution": "const list = document.querySelector('ul');\nlist.addEventListener('click', function(e) {\n  const item = e.target.closest('li');\n  if (item) console.log(item.textContent);\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Item 1"
+    }
+  ],
+  "hints": [
+    "Use closest to find parent element",
+    "Works even with nested elements"
+  ]
+}

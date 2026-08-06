@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-var-let-const-39",
+  "title": "const reassign object",
+  "starterCode": "const obj = { a: 1 }\ntry {\n  obj = { b: 2 }\n} catch(e) {\n  console.log(\"error\")\n}",
+  "solution": "const obj = { a: 1 }\ntry {\n  obj = { b: 2 }\n} catch(e) {\n  console.log(\"error\")\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "error"
+    }
+  ],
+  "hints": [
+    "const cannot reassign variable"
+  ]
+}

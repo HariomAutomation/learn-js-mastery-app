@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-17",
+  "title": "Destructuring Params",
+  "starterCode": "const getAge = ({ age }) => age;\nconst person = {name: 'Tom', age: 30};\nconsole.log(getAge(person));",
+  "solution": "const getAge = ({ age }) => age;\nconst person = {name: 'Tom', age: 30};\nconsole.log(getAge(person));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "30"
+    }
+  ],
+  "hints": [
+    "Destructure in params",
+    "Extract age"
+  ]
+}

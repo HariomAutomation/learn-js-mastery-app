@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-closures-iife-38",
+  "title": "Partial Application",
+  "starterCode": "function partial(fn, ...presetArgs) {\n  return function(...laterArgs) {\n    return fn(...presetArgs, ...laterArgs);\n  };\n}\nconst add5 = partial((a, b) => a + b, 5);\nconsole.log(add5(3));",
+  "solution": "function partial(fn, ...presetArgs) {\n  return function(...laterArgs) {\n    return fn(...presetArgs, ...laterArgs);\n  };\n}\nconst add5 = partial((a, b) => a + b, 5);\nconsole.log(add5(3));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "8"
+    }
+  ],
+  "hints": [
+    "Fix some args",
+    "Add more later"
+  ]
+}

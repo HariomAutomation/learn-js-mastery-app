@@ -1,0 +1,32 @@
+[
+  {
+    "question": "String banane ke kitne tareeke hain JavaScript mein?",
+    "options": ["Sirf 1 — double quotes", "2 — double quotes aur single quotes", "3 — double, single, aur template literals", "4 — double, single, template, aur backticks"],
+    "correctIndex": 2,
+    "explanation": "JavaScript mein 3 tareeke hain: double quotes (\"\"), single quotes (''), aur template literals (``). Template literals ${} se interpolation support karte hain."
+  },
+  {
+    "question": "Template literal mein variable kaise inject karte ho?",
+    "options": ["`${variable}`", "${variable}", "%{variable}", "#{variable}"],
+    "correctIndex": 0,
+    "explanation": "Template literals backticks mein hote hain aur ${} se variables/expressions inject karte hain — jaise `Hello ${name}`"
+  },
+  {
+    "question": "\"hello\".length kya return karega?",
+    "options": ["4", "5", "6", "undefined"],
+    "correctIndex": 1,
+    "explanation": "String ki .length property batati hai kitne characters hain — 'hello' mein 5 characters hain."
+  },
+  {
+    "question": "'JavaScript'.at(0) kya return karega?",
+    "options": ["'J'", "'a'", "'t'", "undefined"],
+    "correctIndex": 0,
+    "explanation": ".at() method index pe character deta hai. Index 0 pe pehla character 'J' hai. Negative index bhi use kar sakte ho — .at(-1) last character deta hai."
+  },
+  {
+    "question": "Strings mein .at(-1) use karne ka kya fayda hai?",
+    "options": ["Last character milta hai bina .length ki calculation ke", "Error aata hai", "Pehla character milta hai", "String reverse ho jaati hai"],
+    "correctIndex": 0,
+    "explanation": ".at(-1) last character deta hai — yeh bracket notation [str.length-1] se zyada clean hai. Modern JS mein .at() popular hai."
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-methods-30",
+  "title": "Flat Depth 2",
+  "starterCode": "const arr = [[1, [2]], [3, [4, [5]]]];\nconsole.log(arr.____(2));",
+  "solution": "const arr = [[1, [2]], [3, [4, [5]]]];\nconsole.log(arr.flat(2));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 1, 2, 3, 4, 5 ]"
+    }
+  ],
+  "hints": [
+    "Pass depth to flat()",
+    "Depth 2 flattens two levels"
+  ]
+}

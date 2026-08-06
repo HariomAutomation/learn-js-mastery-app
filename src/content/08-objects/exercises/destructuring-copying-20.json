@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-20",
+  "title": "Destructuring Practice",
+  "starterCode": "const arr = [1, 2, 3, 4, 5];\nconst [first, second, ...rest] = arr;\nconsole.log(first, second, rest);",
+  "solution": "const arr = [1, 2, 3, 4, 5];\nconst [first, second, ...rest] = arr;\nconsole.log(first, second, rest);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1 2 [ 3, 4, 5 ]"
+    }
+  ],
+  "hints": [
+    "Array destructuring rest",
+    "Collects remainder"
+  ]
+}

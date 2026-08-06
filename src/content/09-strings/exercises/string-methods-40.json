@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-methods-40",
+  "title": "Repeat Large",
+  "starterCode": "console.log('ab'.repeat(3));",
+  "solution": "console.log('ab'.repeat(3));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "ababab"
+    }
+  ],
+  "hints": [
+    "Repeat string",
+    "Concatenate"
+  ]
+}

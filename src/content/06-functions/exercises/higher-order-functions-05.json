@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-higher-order-functions-05",
+  "title": "Pipe Functions",
+  "starterCode": "const pipe = (...fns) => (x) => fns.reduce((v, f) => f(v), x);\nconst add1 = x => x + 1;\nconst double = x => x * 2;\nconst square = x => x * x;\nconst transform = pipe(add1, double, square);\nconsole.log(transform(3));",
+  "solution": "const pipe = (...fns) => (x) => fns.reduce((v, f) => f(v), x);\nconst add1 = x => x + 1;\nconst double = x => x * 2;\nconst square = x => x * x;\nconst transform = pipe(add1, double, square);\nconsole.log(transform(3));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "64"
+    }
+  ],
+  "hints": [
+    "Left to right execution",
+    "Reduce to chain"
+  ]
+}

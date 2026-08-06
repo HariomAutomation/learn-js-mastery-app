@@ -1,0 +1,8 @@
+{
+  "id": "06-functions",
+  "title": "Functions",
+  "order": 6,
+  "description": "Declarations, expressions, arrow functions, closures, HOF, IIFE — functions ka sara jahan.",
+  "prerequisites": ["05-loops"],
+  "lessonCount": 4
+}

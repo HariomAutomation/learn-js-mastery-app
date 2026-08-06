@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-10",
+  "title": "Promise AllSettled",
+  "starterCode": "Promise.allSettled([\n  Promise.resolve('ok'),\n  Promise.reject('fail'),\n  Promise.resolve('done')\n]).then(results => console.log(results.length));",
+  "solution": "Promise.allSettled([\n  Promise.resolve('ok'),\n  Promise.reject('fail'),\n  Promise.resolve('done')\n]).then(results => console.log(results.length));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3"
+    }
+  ],
+  "hints": [
+    "allSettled waits for all",
+    "Never rejects, returns all results"
+  ]
+}

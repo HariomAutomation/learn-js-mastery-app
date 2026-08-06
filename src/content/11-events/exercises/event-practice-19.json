@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-19",
+  "title": "Color Picker",
+  "starterCode": "// Input event for color changes\nconsole.log(\"color picker pattern\");",
+  "solution": "// Input event for color changes\nconsole.log(\"color picker pattern\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "color picker pattern"
+    }
+  ],
+  "hints": [
+    "Use input type='color'",
+    "Update background on input"
+  ]
+}

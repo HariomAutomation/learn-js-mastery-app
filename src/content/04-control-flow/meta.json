@@ -1,0 +1,8 @@
+{
+  "id": "04-control-flow",
+  "title": "Control Flow",
+  "order": 4,
+  "description": "if/else, switch-case, early return — code ko decision dene ka tareeka.",
+  "prerequisites": ["03-operators"],
+  "lessonCount": 2
+}

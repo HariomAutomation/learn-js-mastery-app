@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-14",
+  "title": "This in Event",
+  "starterCode": "const btn = { name: 'button' };\n// btn.addEventListener('click', function() {\n//   console.log(this.name); // 'button'\n// });\nconsole.log(\"this is the element with listener\");",
+  "solution": "const btn = { name: 'button' };\n// btn.addEventListener('click', function() {\n//   console.log(this.name); // 'button'\n// });\nconsole.log(\"this is the element with listener\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "this is the element with listener"
+    }
+  ],
+  "hints": [
+    "In event handler, this is element",
+    "Not the object containing method"
+  ]
+}

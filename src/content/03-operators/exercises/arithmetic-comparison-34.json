@@ -1,0 +1,15 @@
+{
+  "id": "03-operators-arithmetic-comparison-34",
+  "title": "Math.min",
+  "starterCode": "const result = Math.min(10, 20, 5);\nconsole.log(result);",
+  "solution": "const result = Math.min(10, 20, 5);\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "5"
+    }
+  ],
+  "hints": [
+    "Math.min returns the smallest value"
+  ]
+}

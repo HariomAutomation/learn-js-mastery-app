@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-35",
+  "title": "Arrow function typeof",
+  "starterCode": "const fn = () => {};\nconsole.log();",
+  "solution": "const fn = () => {};\nconsole.log(typeof fn);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "function"
+    }
+  ],
+  "hints": [
+    "Arrow functions are also functions",
+    "typeof works the same"
+  ]
+}

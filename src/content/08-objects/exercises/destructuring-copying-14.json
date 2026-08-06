@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-14",
+  "title": "Nested Param",
+  "starterCode": "function greet({user: {name, age}}) {\n  console.log(`${name} is ${age}`);\n}\ngreet({user: {name: 'Alice', age: 25}});",
+  "solution": "function greet({user: {name, age}}) {\n  console.log(`${name} is ${age}`);\n}\ngreet({user: {name: 'Alice', age: 25}});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Alice is 25"
+    }
+  ],
+  "hints": [
+    "Nested destructuring in params",
+    "Drill down"
+  ]
+}

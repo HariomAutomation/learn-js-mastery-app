@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-33",
+  "title": "Static Property",
+  "starterCode": "class Counter {\n  static count = 0;\n  constructor() { Counter.count++; }\n}\nnew Counter(); new Counter();\nconsole.log(Counter.count);",
+  "solution": "class Counter {\n  static count = 0;\n  constructor() { Counter.count++; }\n}\nnew Counter(); new Counter();\nconsole.log(Counter.count);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2"
+    }
+  ],
+  "hints": [
+    "Static property shared across instances",
+    "Increment in constructor"
+  ]
+}

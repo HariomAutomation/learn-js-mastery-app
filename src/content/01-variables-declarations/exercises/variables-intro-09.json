@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-variables-intro-09",
+  "title": "Undefined vs null",
+  "starterCode": "let a\nconst b = null\nconsole.log(a, b)",
+  "solution": "let a\nconst b = null\nconsole.log(a, b)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "undefined null"
+    }
+  ],
+  "hints": [
+    "Uninitialized let is undefined"
+  ]
+}

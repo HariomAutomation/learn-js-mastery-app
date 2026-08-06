@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-30",
+  "title": "Spread Merge Multiple",
+  "starterCode": "const a = {x: 1};\nconst b = {y: 2};\nconst c = {z: 3};\nconst merged = {...a, ...b, ...c};\nconsole.log(merged);",
+  "solution": "const a = {x: 1};\nconst b = {y: 2};\nconst c = {z: 3};\nconst merged = {...a, ...b, ...c};\nconsole.log(merged);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{ x: 1, y: 2, z: 3 }"
+    }
+  ],
+  "hints": [
+    "Multiple spread merges",
+    "Combine all"
+  ]
+}

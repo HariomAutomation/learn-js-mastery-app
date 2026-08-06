@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-while-20",
+  "title": "Range Generation",
+  "starterCode": "let range = [];\nfor (let i = 1; i <= 5; i++) {\n  range.push(i);\n}\nconsole.log(range);",
+  "solution": "let range = [];\nfor (let i = 1; i <= 5; i++) {\n  range.push(i);\n}\nconsole.log(range);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 1, 2, 3, 4, 5 ]"
+    }
+  ],
+  "hints": [
+    "Start array empty",
+    "Push each i to array"
+  ]
+}

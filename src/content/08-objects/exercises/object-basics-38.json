@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-38",
+  "title": "Complete 1",
+  "starterCode": "const arr = [{name: 'Alice', age: 25}, {name: 'Bob', age: 30}];\nconst obj = Object.fromEntries(arr.map(p => [p.name, p.age]));\nconsole.log(obj);",
+  "solution": "const arr = [{name: 'Alice', age: 25}, {name: 'Bob', age: 30}];\nconst obj = Object.fromEntries(arr.map(p => [p.name, p.age]));\nconsole.log(obj);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{ Alice: 25, Bob: 30 }"
+    }
+  ],
+  "hints": [
+    "Map to entries",
+    "fromEntries to object"
+  ]
+}

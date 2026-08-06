@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-12",
+  "title": "textContent vs innerHTML",
+  "starterCode": "// textContent escapes HTML, innerHTML does not\nconst el = document.querySelector('p');\nel.textContent = '<b>Bold</b>';\nconsole.log(el.innerHTML);",
+  "solution": "// textContent escapes HTML, innerHTML does not\nconst el = document.querySelector('p');\nel.textContent = '<b>Bold</b>';\nconsole.log(el.innerHTML);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "&lt;b&gt;Bold&lt;/b&gt;"
+    }
+  ],
+  "hints": [
+    "textContent escapes HTML entities",
+    "innerHTML interprets HTML"
+  ]
+}

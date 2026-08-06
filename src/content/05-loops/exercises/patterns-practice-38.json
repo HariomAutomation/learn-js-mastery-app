@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-patterns-practice-38",
+  "title": "Matrix Row Sum",
+  "starterCode": "const m = [[1,2,3],[4,5,6],[7,8,9]];\nfor (let i = 0; i < 3; i++) {\n  let sum = 0;\n  for (let j = 0; j < 3; j++) {\n    sum += m[i][j];\n  }\n  console.log('Row ' + i + ': ' + sum);\n}",
+  "solution": "const m = [[1,2,3],[4,5,6],[7,8,9]];\nfor (let i = 0; i < 3; i++) {\n  let sum = 0;\n  for (let j = 0; j < 3; j++) {\n    sum += m[i][j];\n  }\n  console.log('Row ' + i + ': ' + sum);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Row 0: 6\nRow 1: 15\nRow 2: 24"
+    }
+  ],
+  "hints": [
+    "Sum each row",
+    "Inner loop for columns"
+  ]
+}

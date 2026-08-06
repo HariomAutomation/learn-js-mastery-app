@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-34",
+  "title": "Async Reduce Accumulator",
+  "starterCode": "async function asyncReduce(items, fn, init) {\n  let acc = init;\n  for (const item of items) {\n    acc = await fn(acc, item);\n  }\n  return acc;\n}\nasyncReduce([1, 2, 3], async (acc, item) => acc + item, 0)\n  .then(r => console.log(r));",
+  "solution": "async function asyncReduce(items, fn, init) {\n  let acc = init;\n  for (const item of items) {\n    acc = await fn(acc, item);\n  }\n  return acc;\n}\nasyncReduce([1, 2, 3], async (acc, item) => acc + item, 0)\n  .then(r => console.log(r));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "6"
+    }
+  ],
+  "hints": [
+    "Accumulate with await",
+    "Sequential reduction"
+  ]
+}

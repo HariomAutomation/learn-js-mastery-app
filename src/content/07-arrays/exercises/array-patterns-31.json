@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-patterns-31",
+  "title": "Flatten Deep",
+  "starterCode": "function flatten(arr) {\n  return arr.reduce((acc, val) =>\n    Array.isArray(val) ? acc.concat(flatten(val)) : acc.concat(val), []);\n}\nconsole.log(flatten([1, [2, [3, [4, [5]]]]]));",
+  "solution": "function flatten(arr) {\n  return arr.reduce((acc, val) =>\n    Array.isArray(val) ? acc.concat(flatten(val)) : acc.concat(val), []);\n}\nconsole.log(flatten([1, [2, [3, [4, [5]]]]]));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 1, 2, 3, 4, 5 ]"
+    }
+  ],
+  "hints": [
+    "Recursive flatten",
+    "Check Array.isArray"
+  ]
+}

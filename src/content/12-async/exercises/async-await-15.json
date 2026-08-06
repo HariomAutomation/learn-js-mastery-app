@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-15",
+  "title": "Await Promise.race",
+  "starterCode": "async function first() {\n  const winner = await Promise.race([\n    new Promise(r => setTimeout(() => r('slow'), 50)),\n    new Promise(r => setTimeout(() => r('fast'), 10))\n  ]);\n  console.log(winner);\n}\nfirst();",
+  "solution": "async function first() {\n  const winner = await Promise.race([\n    new Promise(r => setTimeout(() => r('slow'), 50)),\n    new Promise(r => setTimeout(() => r('fast'), 10))\n  ]);\n  console.log(winner);\n}\nfirst();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "fast"
+    }
+  ],
+  "hints": [
+    "race returns first settled",
+    "Fastest promise wins"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "07-arrays-array-methods",
+  "title": "Array methods ka combo",
+  "starterCode": "const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n\n// 1. push + unshift se naye elements jodo\nnums.push(11)\nnums.unshift(0)\nconsole.log(nums.length) // 12\n\n// 2. pop + shift se elements nikalo\nnums.pop()\nnums.shift()\nconsole.log(nums) // [1, 2, 3, 4, 5, 6, 7, 8, 9]\n\n// 3. slice vs splice:\nconst sliced = nums.slice(2, 5)\nconsole.log(sliced) // ?\n\nnums.splice(2, 2, 20, 30)\nconsole.log(nums) // ?\n",
+  "solution": "const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nnums.push(11)\nnums.unshift(0)\nconsole.log(nums.length) // 12\nnums.pop()\nnums.shift()\nconsole.log(nums) // [1, 2, 3, 4, 5, 6, 7, 8, 9]\nconst sliced = nums.slice(2, 5)\nconsole.log(sliced) // [3, 4, 5]\nnums.splice(2, 2, 20, 30)\nconsole.log(nums) // [1, 2, 20, 30, 5, 6, 7, 8, 9]",
+  "tests": [{ "input": [], "expected": "12\n[1, 2, 3, 4, 5, 6, 7, 8, 9]\n[3, 4, 5]\n[1, 2, 20, 30, 5, 6, 7, 8, 9]" }],
+  "hints": [
+    "push/unshift = end/start mein add",
+    "pop/shift = end/start se remove",
+    "slice = copy without modify, splice = modify original"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-43",
+  "title": "matches Complex Selector",
+  "starterCode": "const el = document.querySelector('a');\nconst result = el.matches('a[href^=\"https\"]');\nconsole.log(typeof result);",
+  "solution": "const el = document.querySelector('a');\nconst result = el.matches('a[href^=\"https\"]');\nconsole.log(typeof result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "boolean"
+    }
+  ],
+  "hints": [
+    "^= means starts with",
+    "matches always returns boolean"
+  ]
+}

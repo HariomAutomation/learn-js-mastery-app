@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-26",
+  "title": "block scope for",
+  "starterCode": "for (var i = 0; i < 1; i++) {\n  var a = i\n  let b = i\n  const c = i\n}\nconsole.log(a, b, c)",
+  "solution": "for (var i = 0; i < 1; i++) {\n  var a = i\n  let b = i\n  const c = i\n}\nconsole.log(a, b, c)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "0 0 0"
+    }
+  ],
+  "hints": [
+    "All accessible after loop for var"
+  ]
+}

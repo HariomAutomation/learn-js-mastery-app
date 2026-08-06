@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-08",
+  "title": "Check if false is falsy",
+  "starterCode": "if (false) {\n  console.log('truthy');\n} else {\n  console.log('falsy');\n}",
+  "solution": "if (false) {\n  console.log('truthy');\n} else {\n  console.log('falsy');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "falsy"
+    }
+  ],
+  "hints": [
+    "false is obviously falsy",
+    "It's the boolean false"
+  ]
+}

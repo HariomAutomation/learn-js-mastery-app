@@ -1,0 +1,8 @@
+{
+  "id": "08-objects",
+  "title": "Objects",
+  "order": 8,
+  "description": "Key-value pairs, destructuring, optional chaining, copying — structured data ko samajhna.",
+  "prerequisites": ["07-arrays"],
+  "lessonCount": 3
+}

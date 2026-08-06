@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-methods-09",
+  "title": "LastIndexOf",
+  "starterCode": "console.log('abcabc'.lastIndexOf('b'));",
+  "solution": "console.log('abcabc'.lastIndexOf('b'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "4"
+    }
+  ],
+  "hints": [
+    "Last occurrence",
+    "Searches from end"
+  ]
+}

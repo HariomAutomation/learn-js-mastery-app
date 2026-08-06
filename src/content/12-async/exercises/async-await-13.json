@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-13",
+  "title": "Async Reduce",
+  "starterCode": "async function reduceAsync(items) {\n  let acc = 0;\n  for (const item of items) {\n    acc += await Promise.resolve(item);\n  }\n  return acc;\n}\nreduceAsync([1, 2, 3]).then(r => console.log(r));",
+  "solution": "async function reduceAsync(items) {\n  let acc = 0;\n  for (const item of items) {\n    acc += await Promise.resolve(item);\n  }\n  return acc;\n}\nreduceAsync([1, 2, 3]).then(r => console.log(r));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "6"
+    }
+  ],
+  "hints": [
+    "Accumulate in loop",
+    "Await each addition"
+  ]
+}

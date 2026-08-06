@@ -1,0 +1,17 @@
+{
+  "id": "04-control-flow-early-return-09",
+  "title": "Readability with early return",
+  "starterCode": "function calculateShipping(weight, isInternational) {\n  if (weight <= 0) return 0;\n  if (isInternational) return weight * 5;\n  return weight * 2;\n}\nconsole.log(calculateShipping(10, false));",
+  "solution": "function calculateShipping(weight, isInternational) {\n  if (weight <= 0) return 0;\n  if (isInternational) return weight * 5;\n  return weight * 2;\n}\nconsole.log(calculateShipping(10, false));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "20"
+    }
+  ],
+  "hints": [
+    "weight is 10, not <= 0",
+    "isInternational is false",
+    "Returns weight * 2"
+  ]
+}

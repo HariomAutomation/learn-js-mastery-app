@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-37",
+  "title": "Object.assign merges",
+  "starterCode": "const a = { x: 1 };\nObject.assign(a, { y: 2 });\nconsole.log();",
+  "solution": "const a = { x: 1 };\nObject.assign(a, { y: 2 });\nconsole.log(a.y);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2"
+    }
+  ],
+  "hints": [
+    "Object.assign can add properties",
+    "It mutates the first argument"
+  ]
+}

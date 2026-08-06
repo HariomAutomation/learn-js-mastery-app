@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-01",
+  "title": "Module Pattern IIFE",
+  "starterCode": "const counter = (function() {\n  let count = 0;\n  return {\n    increment() { count++; },\n    getCount() { return count; }\n  };\n})();\ncounter.increment();\nconsole.log(counter.getCount());",
+  "solution": "const counter = (function() {\n  let count = 0;\n  return {\n    increment() { count++; },\n    getCount() { return count; }\n  };\n})();\ncounter.increment();\nconsole.log(counter.getCount());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1"
+    }
+  ],
+  "hints": [
+    "IIFE creates private scope",
+    "Return public methods"
+  ]
+}

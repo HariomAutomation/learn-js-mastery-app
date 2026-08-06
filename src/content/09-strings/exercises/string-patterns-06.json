@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-06",
+  "title": "Palindrome Check",
+  "starterCode": "function isPalindrome(str) {\n  const clean = str.toLowerCase().replace(/[^a-z0-9]/g, '');\n  return clean === clean.split('').reverse().join('');\n}\nconsole.log(isPalindrome('racecar'));\nconsole.log(isPalindrome('hello'));",
+  "solution": "function isPalindrome(str) {\n  const clean = str.toLowerCase().replace(/[^a-z0-9]/g, '');\n  return clean === clean.split('').reverse().join('');\n}\nconsole.log(isPalindrome('racecar'));\nconsole.log(isPalindrome('hello'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true\nfalse"
+    }
+  ],
+  "hints": [
+    "Clean string first",
+    "Compare to reverse"
+  ]
+}

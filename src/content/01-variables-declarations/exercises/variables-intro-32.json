@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-variables-intro-32",
+  "title": "Array.at negative index",
+  "starterCode": "const arr = [10, 20, 30]\nconsole.log(arr.at(-1))",
+  "solution": "const arr = [10, 20, 30]\nconsole.log(arr.at(-1))",
+  "tests": [
+    {
+      "input": [],
+      "expected": "30"
+    }
+  ],
+  "hints": [
+    ".at(-1) returns last element"
+  ]
+}

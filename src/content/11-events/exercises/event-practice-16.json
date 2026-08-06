@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-16",
+  "title": "Carousel",
+  "starterCode": "// Click arrows to change slides\nconsole.log(\"carousel navigation pattern\");",
+  "solution": "// Click arrows to change slides\nconsole.log(\"carousel navigation pattern\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "carousel navigation pattern"
+    }
+  ],
+  "hints": [
+    "Track current slide index",
+    "Update on arrow click"
+  ]
+}

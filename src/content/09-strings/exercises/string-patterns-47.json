@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-47",
+  "title": "Decode String",
+  "starterCode": "function decodeString(str) {\n  const stack = [];\n  let current = '', num = 0;\n  for (const c of str) {\n    if (c >= '0' && c <= '9') num = num * 10 + Number(c);\n    else if (c === '[') { stack.push([current, num]); current = ''; num = 0; }\n    else if (c === ']') { const [prev, n] = stack.pop(); current = prev + current.repeat(n); }\n    else current += c;\n  }\n  return current;\n}\nconsole.log(decodeString('3[a2[c]]'));",
+  "solution": "function decodeString(str) {\n  const stack = [];\n  let current = '', num = 0;\n  for (const c of str) {\n    if (c >= '0' && c <= '9') num = num * 10 + Number(c);\n    else if (c === '[') { stack.push([current, num]); current = ''; num = 0; }\n    else if (c === ']') { const [prev, n] = stack.pop(); current = prev + current.repeat(n); }\n    else current += c;\n  }\n  return current;\n}\nconsole.log(decodeString('3[a2[c]]'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "accaccacc"
+    }
+  ],
+  "hints": [
+    "Stack for nesting",
+    "Repeat pattern"
+  ]
+}

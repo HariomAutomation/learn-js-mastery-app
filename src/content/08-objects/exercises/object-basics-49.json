@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-49",
+  "title": "Object Entries Loop",
+  "starterCode": "const obj = {x: 10, y: 20};\nfor (const [k, v] of Object.entries(obj)) {\n  console.log(k + '=' + v);\n}",
+  "solution": "const obj = {x: 10, y: 20};\nfor (const [k, v] of Object.entries(obj)) {\n  console.log(k + '=' + v);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "x=10\ny=20"
+    }
+  ],
+  "hints": [
+    "Destructure in loop",
+    "Log key=value"
+  ]
+}

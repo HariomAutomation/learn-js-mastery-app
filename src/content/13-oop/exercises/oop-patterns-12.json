@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-12",
+  "title": "Adapter",
+  "starterCode": "class OldAPI {\n  getData() { return { first: 'John', last: 'Doe' }; }\n}\nclass NewAPI {\n  constructor(old) { this.old = old; }\n  getFullName() {\n    const d = this.old.getData();\n    return d.first + ' ' + d.last;\n  }\n}\nconsole.log(new NewAPI(new OldAPI()).getFullName());",
+  "solution": "class OldAPI {\n  getData() { return { first: 'John', last: 'Doe' }; }\n}\nclass NewAPI {\n  constructor(old) { this.old = old; }\n  getFullName() {\n    const d = this.old.getData();\n    return d.first + ' ' + d.last;\n  }\n}\nconsole.log(new NewAPI(new OldAPI()).getFullName());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "John Doe"
+    }
+  ],
+  "hints": [
+    "Adapter wraps old interface",
+    "Converts to new interface"
+  ]
+}

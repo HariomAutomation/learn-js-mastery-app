@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-25",
+  "title": "Reference sharing in function",
+  "starterCode": "function modify(obj) { obj.x = 10; }\nconst a = { x: 1 };\nmodify(a);\nconsole.log();",
+  "solution": "function modify(obj) { obj.x = 10; }\nconst a = { x: 1 };\nmodify(a);\nconsole.log(a.x);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10"
+    }
+  ],
+  "hints": [
+    "Objects are passed by reference",
+    "Modifying inside affects the original"
+  ]
+}

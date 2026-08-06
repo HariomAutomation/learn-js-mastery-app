@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-36",
+  "title": "Key Event Properties",
+  "starterCode": "document.addEventListener('keydown', function(e) {\n  console.log(e.key + ' ' + e.code);\n});",
+  "solution": "document.addEventListener('keydown', function(e) {\n  console.log(e.key + ' ' + e.code);\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "a KeyA"
+    }
+  ],
+  "hints": [
+    "key is the key value",
+    "code is physical key code"
+  ]
+}

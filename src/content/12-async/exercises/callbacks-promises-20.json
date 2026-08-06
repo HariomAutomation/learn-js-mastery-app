@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-20",
+  "title": "Error First Callback",
+  "starterCode": "function readFile(path, callback) {\n  // Node.js error-first pattern\n  callback(null, 'file contents');\n}\nreadFile('/path', function(err, data) {\n  console.log(err + ' ' + data);\n});",
+  "solution": "function readFile(path, callback) {\n  callback(null, 'file contents');\n}\nreadFile('/path', function(err, data) {\n  console.log(err + ' ' + data);\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "null file contents"
+    }
+  ],
+  "hints": [
+    "First argument is error",
+    "null means no error"
+  ]
+}

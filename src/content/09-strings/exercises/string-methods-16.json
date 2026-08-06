@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-methods-16",
+  "title": "Replace Multiple",
+  "starterCode": "const str = 'aabbcc';\nconsole.log(str.replace(/b/g, 'X'));",
+  "solution": "const str = 'aabbcc';\nconsole.log(str.replace(/b/g, 'X'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "aaXXcc"
+    }
+  ],
+  "hints": [
+    "Replace all b",
+    "Global flag"
+  ]
+}

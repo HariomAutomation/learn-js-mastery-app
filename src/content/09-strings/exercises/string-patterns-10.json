@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-10",
+  "title": "Slugify String",
+  "starterCode": "function slugify(str) {\n  return str.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');\n}\nconsole.log(slugify('Hello World!'));",
+  "solution": "function slugify(str) {\n  return str.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');\n}\nconsole.log(slugify('Hello World!'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hello-world"
+    }
+  ],
+  "hints": [
+    "Lowercase, replace spaces",
+    "Remove leading/trailing dashes"
+  ]
+}

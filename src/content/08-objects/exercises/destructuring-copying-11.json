@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-11",
+  "title": "Destructuring Function Params",
+  "starterCode": "function greet({name, age}) {\n  console.log(`${name} is ${age}`);\n}\ngreet({name: 'Alice', age: 25});",
+  "solution": "function greet({name, age}) {\n  console.log(`${name} is ${age}`);\n}\ngreet({name: 'Alice', age: 25});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Alice is 25"
+    }
+  ],
+  "hints": [
+    "Destructure in params",
+    "Extract properties"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-24",
+  "title": "Mouse Delegation",
+  "starterCode": "const list = document.querySelector('ul');\nlist.addEventListener('mouseover', function(e) {\n  if (e.target.tagName === 'LI') {\n    console.log('hovered');\n  }\n});",
+  "solution": "const list = document.querySelector('ul');\nlist.addEventListener('mouseover', function(e) {\n  if (e.target.tagName === 'LI') {\n    console.log('hovered');\n  }\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hovered"
+    }
+  ],
+  "hints": [
+    "Use mouseover/mouseenter for hover",
+    "Check target.tagName"
+  ]
+}

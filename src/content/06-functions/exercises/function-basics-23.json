@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-function-basics-23",
+  "title": "Return Early",
+  "starterCode": "function getLength(str) {\n  if (!str) return 0;\n  return str.length;\n}\nconsole.log(getLength('hello'));\nconsole.log(getLength(''));",
+  "solution": "function getLength(str) {\n  if (!str) return 0;\n  return str.length;\n}\nconsole.log(getLength('hello'));\nconsole.log(getLength(''));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "5\n0"
+    }
+  ],
+  "hints": [
+    "Check empty first",
+    "Return early if empty"
+  ]
+}

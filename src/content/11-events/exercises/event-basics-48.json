@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-48",
+  "title": "Event Complete Practice",
+  "starterCode": "// Events: add/remove, types, options, phases\nconsole.log(\"events basics complete\");",
+  "solution": "// Events: add/remove, types, options, phases\nconsole.log(\"events basics complete\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "events basics complete"
+    }
+  ],
+  "hints": [
+    "Review all event concepts",
+    "Practice with different event types"
+  ]
+}

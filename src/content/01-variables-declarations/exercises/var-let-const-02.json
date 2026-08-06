@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-var-let-const-02",
+  "title": "let block scope",
+  "starterCode": "if (true) {\n  let x = 10\n}\nconsole.log(typeof x)",
+  "solution": "if (true) {\n  let x = 10\n}\nconsole.log(typeof x)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "undefined"
+    }
+  ],
+  "hints": [
+    "let is block-scoped"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-45",
+  "title": "Nullish OR default pattern",
+  "starterCode": "function greet(name) {\n  const displayName = name ?? 'Guest';\n  return `Hello, ${displayName}!`;\n}\nconsole.log(greet(''));",
+  "solution": "function greet(name) {\n  const displayName = name ?? 'Guest';\n  return `Hello, ${displayName}!`;\n}\nconsole.log(greet(''));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hello, !"
+    }
+  ],
+  "hints": [
+    "?? only triggers on null/undefined",
+    "'' is not null/undefined, so no default"
+  ]
+}

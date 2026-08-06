@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-01",
+  "title": "Delegation Concept",
+  "starterCode": "// Attach listener to parent, check event.target\nconsole.log(\"delegation attaches to parent\");",
+  "solution": "// Attach listener to parent, check event.target\nconsole.log(\"delegation attaches to parent\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "delegation attaches to parent"
+    }
+  ],
+  "hints": [
+    "Single listener on parent element",
+    "Check which child was clicked"
+  ]
+}

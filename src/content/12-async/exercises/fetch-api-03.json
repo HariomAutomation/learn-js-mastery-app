@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-03",
+  "title": "Response JSON",
+  "starterCode": "// response.json() parses JSON body\nconsole.log(\"json() returns a Promise\");",
+  "solution": "// response.json() parses JSON body\nconsole.log(\"json() returns a Promise\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "json() returns a Promise"
+    }
+  ],
+  "hints": [
+    "json() is async method",
+    "Returns parsed JSON"
+  ]
+}

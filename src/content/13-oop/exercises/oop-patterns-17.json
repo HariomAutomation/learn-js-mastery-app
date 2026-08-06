@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-17",
+  "title": "Mediator",
+  "starterCode": "class ChatRoom {\n  constructor() { this.users = []; }\n  register(user) { this.users.push(user); }\n  send(message, sender) {\n    this.users.filter(u => u !== sender).forEach(u => u.receive(message));\n  }\n}\nclass User {\n  constructor(name, room) { this.name = name; room.register(this); }\n  send(msg) { this.room.send(msg, this); }\n  receive(msg) { console.log(this.name + ': ' + msg); }\n}",
+  "solution": "class ChatRoom {\n  constructor() { this.users = []; }\n  register(user) { this.users.push(user); }\n  send(message, sender) {\n    this.users.filter(u => u !== sender).forEach(u => u.receive(message));\n  }\n}\nclass User {\n  constructor(name, room) { this.name = name; this.room = room; room.register(this); }\n  send(msg) { this.room.send(msg, this); }\n  receive(msg) { console.log(this.name + ': ' + msg); }\n}\nconst room = new ChatRoom();\nconst u1 = new User('Alice', room);\nconst u2 = new User('Bob', room);\nu1.send('hello');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Bob: hello"
+    }
+  ],
+  "hints": [
+    "Mediator coordinates communication",
+    "Users don't talk directly"
+  ]
+}

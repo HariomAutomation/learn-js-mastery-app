@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-31",
+  "title": "Practice 2",
+  "starterCode": "const obj = {x: 10, y: 20, z: 30};\nconst entries = Object.entries(obj);\nconsole.log(entries.length);",
+  "solution": "const obj = {x: 10, y: 20, z: 30};\nconst entries = Object.entries(obj);\nconsole.log(entries.length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3"
+    }
+  ],
+  "hints": [
+    "Object.entries returns array",
+    "Check length"
+  ]
+}

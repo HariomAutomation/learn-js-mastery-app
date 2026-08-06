@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-methods-25",
+  "title": "Concat",
+  "starterCode": "const arr1 = [1, 2];\nconst arr2 = [3, 4];\nconst result = arr1.____(arr2);\nconsole.log(result);",
+  "solution": "const arr1 = [1, 2];\nconst arr2 = [3, 4];\nconst result = arr1.concat(arr2);\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 1, 2, 3, 4 ]"
+    }
+  ],
+  "hints": [
+    "concat merges arrays",
+    "Does not mutate originals"
+  ]
+}

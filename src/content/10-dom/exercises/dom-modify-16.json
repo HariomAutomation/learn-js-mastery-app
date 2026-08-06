@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-16",
+  "title": "camelCase Style",
+  "starterCode": "const el = document.querySelector('.box');\nel.style.backgroundColor = 'green';\nconsole.log(el.style.backgroundColor);",
+  "solution": "const el = document.querySelector('.box');\nel.style.backgroundColor = 'green';\nconsole.log(el.style.backgroundColor);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "green"
+    }
+  ],
+  "hints": [
+    "Use camelCase for multi-word properties",
+    "background-color becomes backgroundColor"
+  ]
+}

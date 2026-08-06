@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-39",
+  "title": "addEventListener Return",
+  "starterCode": "const btn = document.querySelector('button');\nconst result = btn.addEventListener('click', () => {});\nconsole.log(result);",
+  "solution": "const btn = document.querySelector('button');\nconst result = btn.addEventListener('click', () => {});\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "undefined"
+    }
+  ],
+  "hints": [
+    "addEventListener returns undefined",
+    "Unlike jQuery which returns element"
+  ]
+}

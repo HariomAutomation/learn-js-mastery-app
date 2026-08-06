@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-08",
+  "title": "Reduce to String",
+  "starterCode": "const arr = ['Hello', ' ', 'World', '!'];\nconst str = arr.____((acc, s) => acc + s, '');\nconsole.log(str);",
+  "solution": "const arr = ['Hello', ' ', 'World', '!'];\nconst str = arr.reduce((acc, s) => acc + s, '');\nconsole.log(str);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hello World!"
+    }
+  ],
+  "hints": [
+    "Concatenate strings",
+    "Start with empty string"
+  ]
+}

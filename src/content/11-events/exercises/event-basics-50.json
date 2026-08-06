@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-50",
+  "title": "Event Type String",
+  "starterCode": "// Common types: click, input, submit, keydown\nconsole.log(\"events have type strings\");",
+  "solution": "// Common types: click, input, submit, keydown\nconsole.log(\"events have type strings\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "events have type strings"
+    }
+  ],
+  "hints": [
+    "Event type identifies the event",
+    "Passed as first argument to addEventListener"
+  ]
+}

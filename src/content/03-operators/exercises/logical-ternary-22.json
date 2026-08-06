@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-22",
+  "title": "Logical OR assignment (||=)",
+  "starterCode": "let x = \"\";\nx ||= \"default\";\nconsole.log(x);",
+  "solution": "let x = \"\";\nx ||= \"default\";\nconsole.log(x);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "default"
+    }
+  ],
+  "hints": [
+    "x ||= 'default' means x = x || 'default'",
+    "x is falsy, so assignment happens"
+  ]
+}

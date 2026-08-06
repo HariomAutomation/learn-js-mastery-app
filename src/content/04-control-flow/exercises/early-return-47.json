@@ -1,0 +1,17 @@
+{
+  "id": "04-control-flow-early-return-47",
+  "title": "Nested guard refactor - flat",
+  "starterCode": "function getDiscount(tier, amount) {\n  if (!tier) return 0;\n  if (tier === 'gold') return amount * 0.3;\n  if (tier === 'silver') return amount * 0.2;\n  if (tier === 'bronze') return amount * 0.1;\n  return 0;\n}\nconsole.log(getDiscount('silver', 100));",
+  "solution": "function getDiscount(tier, amount) {\n  if (!tier) return 0;\n  if (tier === 'gold') return amount * 0.3;\n  if (tier === 'silver') return amount * 0.2;\n  if (tier === 'bronze') return amount * 0.1;\n  return 0;\n}\nconsole.log(getDiscount('silver', 100));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "20"
+    }
+  ],
+  "hints": [
+    "tier is truthy",
+    "tier is 'silver'",
+    "Returns 20% of 100"
+  ]
+}

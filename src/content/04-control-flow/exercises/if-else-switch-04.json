@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-04",
+  "title": "If/else if/else chain",
+  "starterCode": "const score = 85;\nif (score >= 90) {\n  console.log('A');\n} else if (score >= 80) {\n  console.log('B');\n} else {\n  console.log('C');\n}",
+  "solution": "const score = 85;\nif (score >= 90) {\n  console.log('A');\n} else if (score >= 80) {\n  console.log('B');\n} else {\n  console.log('C');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "B"
+    }
+  ],
+  "hints": [
+    "85 is not >= 90",
+    "85 >= 80 is true"
+  ]
+}

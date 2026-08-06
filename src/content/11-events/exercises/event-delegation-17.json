@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-17",
+  "title": "CustomEvent Detail",
+  "starterCode": "const event = new CustomEvent('update', { detail: 42 });\ndocument.addEventListener('update', function(e) {\n  console.log(e.detail);\n});\ndocument.dispatchEvent(event);",
+  "solution": "const event = new CustomEvent('update', { detail: 42 });\ndocument.addEventListener('update', function(e) {\n  console.log(e.detail);\n});\ndocument.dispatchEvent(event);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "42"
+    }
+  ],
+  "hints": [
+    "detail property holds custom data",
+    "Can be any type"
+  ]
+}

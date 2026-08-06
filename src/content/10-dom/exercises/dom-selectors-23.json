@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-23",
+  "title": "Complex Selector",
+  "starterCode": "const el = document.querySelector('div > p:first-child');\nconsole.log(el);",
+  "solution": "const el = document.querySelector('div > p:first-child');\nconsole.log(el);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "null"
+    }
+  ],
+  "hints": [
+    "> selects direct children",
+    "first-child selects first element"
+  ]
+}

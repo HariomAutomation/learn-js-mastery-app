@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-22",
+  "title": "Chaining Return",
+  "starterCode": "Promise.resolve('start')\n  .then(x => { console.log(x); return x.toUpperCase(); })\n  .then(x => console.log(x));",
+  "solution": "Promise.resolve('start')\n  .then(x => { console.log(x); return x.toUpperCase(); })\n  .then(x => console.log(x));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "start\nSTART"
+    }
+  ],
+  "hints": [
+    "Return value passes to next then",
+    "Return new value in chain"
+  ]
+}

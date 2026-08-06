@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-11",
+  "title": "cloneNode Shallow",
+  "starterCode": "const original = document.createElement('div');\nconst child = document.createElement('p');\noriginal.appendChild(child);\nconst clone = original.cloneNode(false);\nconsole.log(clone.children.length);",
+  "solution": "const original = document.createElement('div');\nconst child = document.createElement('p');\noriginal.appendChild(child);\nconst clone = original.cloneNode(false);\nconsole.log(clone.children.length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "0"
+    }
+  ],
+  "hints": [
+    "cloneNode(false) does shallow clone",
+    "Does not copy children"
+  ]
+}

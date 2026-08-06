@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-37",
+  "title": "Deep Copy Array",
+  "starterCode": "const arr = [[1, 2], [3, 4]];\nconst copy = structuredClone(arr);\ncopy[0].push(5);\nconsole.log(arr[0]);",
+  "solution": "const arr = [[1, 2], [3, 4]];\nconst copy = structuredClone(arr);\ncopy[0].push(5);\nconsole.log(arr[0]);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 1, 2 ]"
+    }
+  ],
+  "hints": [
+    "structuredClone deep copies",
+    "Nested arrays independent"
+  ]
+}

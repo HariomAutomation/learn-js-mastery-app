@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-26",
+  "title": "Omit",
+  "starterCode": "const obj = {a: 1, b: 2, c: 3, d: 4};\nconst omitted = Object.fromEntries(Object.entries(obj).filter(([k]) => !['b', 'd'].includes(k)));\nconsole.log(omitted);",
+  "solution": "const obj = {a: 1, b: 2, c: 3, d: 4};\nconst omitted = Object.fromEntries(Object.entries(obj).filter(([k]) => !['b', 'd'].includes(k)));\nconsole.log(omitted);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{ a: 1, c: 3 }"
+    }
+  ],
+  "hints": [
+    "Exclude specific keys",
+    "Omit properties"
+  ]
+}

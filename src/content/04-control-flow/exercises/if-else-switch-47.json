@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-47",
+  "title": "If with string length",
+  "starterCode": "const str = \"hello\";\nif (str.length > 3) {\n  console.log(\"long\");\n} else {\n  console.log(\"short\");\n}",
+  "solution": "const str = \"hello\";\nif (str.length > 3) {\n  console.log(\"long\");\n} else {\n  console.log(\"short\");\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "long"
+    }
+  ],
+  "hints": [
+    "str.length is 5",
+    "5 > 3 is true"
+  ]
+}

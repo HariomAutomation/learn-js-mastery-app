@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-50",
+  "title": "Class Expression",
+  "starterCode": "const MyClass = class {\n  constructor() { this.val = 99; }\n};\nconsole.log(new MyClass().val);",
+  "solution": "const MyClass = class {\n  constructor() { this.val = 99; }\n};\nconsole.log(new MyClass().val);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "99"
+    }
+  ],
+  "hints": [
+    "Class expression assigned to variable",
+    "Anonymous class"
+  ]
+}

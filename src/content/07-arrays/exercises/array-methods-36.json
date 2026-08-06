@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-methods-36",
+  "title": "Some Condition",
+  "starterCode": "const nums = [1, 3, 5, 8, 9];\nconsole.log(nums.____(n => n % 2 === 0));",
+  "solution": "const nums = [1, 3, 5, 8, 9];\nconsole.log(nums.some(n => n % 2 === 0));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "Some means at least one",
+    "8 is even"
+  ]
+}

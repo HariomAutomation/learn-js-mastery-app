@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-24",
+  "title": "Field Declaration",
+  "starterCode": "class User {\n  name = 'John';\n  age = 30;\n}\nconst u = new User();\nconsole.log(u.name + ' ' + u.age);",
+  "solution": "class User {\n  name = 'John';\n  age = 30;\n}\nconst u = new User();\nconsole.log(u.name + ' ' + u.age);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "John 30"
+    }
+  ],
+  "hints": [
+    "Fields are initialized in class body",
+    "No need for constructor"
+  ]
+}

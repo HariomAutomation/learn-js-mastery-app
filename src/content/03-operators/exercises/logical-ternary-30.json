@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-30",
+  "title": "OR returns first truthy",
+  "starterCode": "const result = 0 || \"\" || 42;\nconsole.log(result);",
+  "solution": "const result = 0 || \"\" || 42;\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "42"
+    }
+  ],
+  "hints": [
+    "|| returns first truthy value",
+    "0 and '' are falsy, 42 is truthy"
+  ]
+}

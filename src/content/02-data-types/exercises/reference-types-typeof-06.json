@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-06",
+  "title": "Create two references to same object",
+  "starterCode": "const a = { x: 1 };\nconst b = ;\nconsole.log(a === b);",
+  "solution": "const a = { x: 1 };\nconst b = a;\nconsole.log(a === b);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "Assignment copies the reference",
+    "Both variables point to the same object"
+  ]
+}

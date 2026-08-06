@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-37",
+  "title": "setAttribute vs Property",
+  "starterCode": "// setAttribute affects HTML attribute, not JS property\nconsole.log(\"attribute vs property\");",
+  "solution": "// setAttribute affects HTML attribute, not JS property\nconsole.log(\"attribute vs property\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "attribute vs property"
+    }
+  ],
+  "hints": [
+    "Attributes are in HTML",
+    "Properties are on the DOM object"
+  ]
+}

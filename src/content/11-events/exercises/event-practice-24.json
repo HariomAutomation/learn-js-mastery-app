@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-24",
+  "title": "Zoom Image",
+  "starterCode": "// Click to zoom image\nconsole.log(\"image zoom pattern\");",
+  "solution": "// Click to zoom image\nconsole.log(\"image zoom pattern\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "image zoom pattern"
+    }
+  ],
+  "hints": [
+    "Toggle zoom class on click",
+    "CSS transform: scale"
+  ]
+}

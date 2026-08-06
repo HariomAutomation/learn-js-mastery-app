@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-42",
+  "title": "Substring Practice",
+  "starterCode": "const str = 'hello world';\nconsole.log(str.substring(6, 11));",
+  "solution": "const str = 'hello world';\nconsole.log(str.substring(6, 11));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "world"
+    }
+  ],
+  "hints": [
+    "substring(start, end)",
+    "Characters between"
+  ]
+}

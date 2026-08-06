@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-closures-iife-09",
+  "title": "Once Function",
+  "starterCode": "function once(fn) {\n  let called = false;\n  return function(...args) {\n    if (!called) {\n      called = true;\n      return fn(...args);\n    }\n    return 'Already called';\n  };\n}\nconst greet = once(() => 'Hello');\nconsole.log(greet());\nconsole.log(greet());",
+  "solution": "function once(fn) {\n  let called = false;\n  return function(...args) {\n    if (!called) {\n      called = true;\n      return fn(...args);\n    }\n    return 'Already called';\n  };\n}\nconst greet = once(() => 'Hello');\nconsole.log(greet());\nconsole.log(greet());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hello\nAlready called"
+    }
+  ],
+  "hints": [
+    "Track if called",
+    "Return result only once"
+  ]
+}

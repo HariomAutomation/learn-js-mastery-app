@@ -1,0 +1,12 @@
+{
+  "id": "13-oop-prototypes-this",
+  "title": "Prototypes aur this binding samjho",
+  "starterCode": "// 1. this binding samjho\nconst person = {\n  name: \"Arjun\",\n  greet() {\n    return `Hi, I am ${this.name}`\n  }\n}\n\nconsole.log(person.greet()) // \"Hi, I am Arjun\"\n\n// function借用 — ye kya karega?\nconst greetFunction = person.greet\n// console.log(greetFunction()) // Error kyonki this undefined hai\n\n// 2. Prototype method — Object.create se\nconst animalProto = {\n  init(name, sound) {\n    this.name = name\n    this.sound = sound\n    return this // chaining ke liye\n  },\n  speak() {\n    return `${this.name} makes ${this.sound}`\n  }\n}\n\nconst cat = Object.create(animalProto)\ncat.init(\"Whiskers\", \"Meow\")\nconsole.log(cat.speak()) // __BLANK__\n\n// 3. Prototype chain\nfunction User(name, role) {\n  this.name = name\n  this.role = role\n}\n\nUser.prototype.getInfo = function() {\n  return `${this.name} (${this.role})`\n}\n\nconst admin = new User(\"Rahul\", \"Admin\")\nconsole.log(admin.getInfo()) // __BLANK__\nconsole.log(admin.hasOwnProperty(\"name\")) // __BLANK__\nconsole.log(admin.hasOwnProperty(\"getInfo\")) // __BLANK__",
+  "solution": "const person = {\n  name: \"Arjun\",\n  greet() {\n    return `Hi, I am ${this.name}`\n  }\n}\nconsole.log(person.greet())\n\nconst animalProto = {\n  init(name, sound) {\n    this.name = name\n    this.sound = sound\n    return this\n  },\n  speak() {\n    return `${this.name} makes ${this.sound}`\n  }\n}\n\nconst cat = Object.create(animalProto)\ncat.init(\"Whiskers\", \"Meow\")\nconsole.log(cat.speak())\n\nfunction User(name, role) {\n  this.name = name\n  this.role = role\n}\nUser.prototype.getInfo = function() {\n  return `${this.name} (${this.role})`\n}\n\nconst admin = new User(\"Rahul\", \"Admin\")\nconsole.log(admin.getInfo())\nconsole.log(admin.hasOwnProperty(\"name\"))\nconsole.log(admin.hasOwnProperty(\"getInfo\"))",
+  "tests": [{ "input": [], "expected": "Hi, I am Arjun\nWhiskers makes Meow\nRahul (Admin)\ntrue\nfalse" }],
+  "hints": [
+    "this keyword: jis object pe method call hota hai, uska reference deta hai",
+    "Object.create se naya object banta hai jo prototype se linked hota hai",
+    "hasOwnProperty: name own property hai (true), getInfo prototype pe hai (false)"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-methods-44",
+  "title": "Map Iteration",
+  "starterCode": "const arr = [1, 2, 3];\narr.____(x => console.log(x));",
+  "solution": "const arr = [1, 2, 3];\narr.forEach(x => console.log(x));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1\n2\n3"
+    }
+  ],
+  "hints": [
+    "forEach for side effects",
+    "No return value"
+  ]
+}

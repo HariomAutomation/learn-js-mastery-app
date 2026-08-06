@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-29",
+  "title": "Check typeof undefined",
+  "starterCode": "let x;\nconsole.log();",
+  "solution": "let x;\nconsole.log(typeof x);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "undefined"
+    }
+  ],
+  "hints": [
+    "typeof undefined returns 'undefined'",
+    "This is the only case where typeof matches the value"
+  ]
+}

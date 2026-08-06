@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-05",
+  "title": "Block Body Arrow",
+  "starterCode": "const greet = (name) => {\n  const msg = 'Hello, ' + name;\n  return msg;\n};\nconsole.log(greet('World'));",
+  "solution": "const greet = (name) => {\n  const msg = 'Hello, ' + name;\n  return msg;\n};\nconsole.log(greet('World'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hello, World"
+    }
+  ],
+  "hints": [
+    "Use braces for multiple lines",
+    "Explicit return needed"
+  ]
+}

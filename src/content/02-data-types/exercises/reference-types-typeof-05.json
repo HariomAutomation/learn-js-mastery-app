@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-05",
+  "title": "Use Array.isArray to check arrays",
+  "starterCode": "const arr = [1, 2, 3];\nconsole.log();",
+  "solution": "const arr = [1, 2, 3];\nconsole.log(Array.isArray(arr));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "Array.isArray is the correct way",
+    "It returns true only for arrays"
+  ]
+}

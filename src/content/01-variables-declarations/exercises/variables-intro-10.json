@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-variables-intro-10",
+  "title": "Exponentiation operator",
+  "starterCode": "console.log(2 ** 10)",
+  "solution": "console.log(2 ** 10)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1024"
+    }
+  ],
+  "hints": [
+    "** is power operator"
+  ]
+}

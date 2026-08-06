@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-09",
+  "title": "Mouseleave Event",
+  "starterCode": "const box = document.querySelector('.box');\nbox.addEventListener('mouseleave', function(e) {\n  console.log('left');\n});",
+  "solution": "const box = document.querySelector('.box');\nbox.addEventListener('mouseleave', function(e) {\n  console.log('left');\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "left"
+    }
+  ],
+  "hints": [
+    "Fires when mouse leaves element",
+    "Opposite of mouseenter"
+  ]
+}

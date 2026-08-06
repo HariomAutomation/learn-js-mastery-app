@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-44",
+  "title": "Check if value is finite",
+  "starterCode": "console.log(Number.isFinite(42));",
+  "solution": "console.log(Number.isFinite(42));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "Number.isFinite checks for finite numbers",
+    "Infinity returns false"
+  ]
+}

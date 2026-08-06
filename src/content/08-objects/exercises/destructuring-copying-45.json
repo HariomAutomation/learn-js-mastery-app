@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-45",
+  "title": "Deep Freeze",
+  "starterCode": "function deepFreeze(obj) {\n  Object.freeze(obj);\n  Object.values(obj).filter(v => typeof v === 'object' && v !== null).forEach(deepFreeze);\n  return obj;\n}\nconst obj = deepFreeze({a: 1, b: {c: 2}});\nobj.b.c = 99;\nconsole.log(obj.b.c);",
+  "solution": "function deepFreeze(obj) {\n  Object.freeze(obj);\n  Object.values(obj).filter(v => typeof v === 'object' && v !== null).forEach(deepFreeze);\n  return obj;\n}\nconst obj = deepFreeze({a: 1, b: {c: 2}});\nobj.b.c = 99;\nconsole.log(obj.b.c);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2"
+    }
+  ],
+  "hints": [
+    "Recursive freeze",
+    "Deep immutability"
+  ]
+}

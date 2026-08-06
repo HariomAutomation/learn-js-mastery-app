@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-09",
+  "title": "Immutable Object",
+  "starterCode": "const obj = Object.freeze({a: 1, b: {c: 2}});\nobj.a = 10;\nconsole.log(obj.a);",
+  "solution": "const obj = Object.freeze({a: 1, b: {c: 2}});\nobj.a = 10;\nconsole.log(obj.a);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1"
+    }
+  ],
+  "hints": [
+    "Freeze prevents mutation",
+    "Top level only"
+  ]
+}

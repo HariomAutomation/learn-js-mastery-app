@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-higher-order-functions-44",
+  "title": "Dispatcher Function",
+  "starterCode": "function createDispatcher(handlers) {\n  return (action, payload) => {\n    if (handlers[action]) {\n      handlers[action](payload);\n    }\n  };\n}\nconst dispatch = createDispatcher({\n  greet: (name) => console.log('Hello ' + name),\n  farewell: (name) => console.log('Goodbye ' + name)\n});\ndispatch('greet', 'Alice');\ndispatch('farewell', 'Bob');",
+  "solution": "function createDispatcher(handlers) {\n  return (action, payload) => {\n    if (handlers[action]) {\n      handlers[action](payload);\n    }\n  };\n}\nconst dispatch = createDispatcher({\n  greet: (name) => console.log('Hello ' + name),\n  farewell: (name) => console.log('Goodbye ' + name)\n});\ndispatch('greet', 'Alice');\ndispatch('farewell', 'Bob');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hello Alice\nGoodbye Bob"
+    }
+  ],
+  "hints": [
+    "Map actions to handlers",
+    "Call matching handler"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-04",
+  "title": "Computed Property",
+  "starterCode": "const key = 'age';\nconst person = {[key]: 25};\nconsole.log(person.age);",
+  "solution": "const key = 'age';\nconst person = {[key]: 25};\nconsole.log(person.age);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "25"
+    }
+  ],
+  "hints": [
+    "Computed property name",
+    "Wrap key in brackets"
+  ]
+}

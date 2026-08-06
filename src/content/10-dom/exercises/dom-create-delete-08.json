@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-08",
+  "title": "before Method",
+  "starterCode": "const container = document.createElement('div');\nconst last = document.createElement('p');\ncontainer.appendChild(last);\nlast.before('Before');\nconsole.log(container.childNodes.length);",
+  "solution": "const container = document.createElement('div');\nconst last = document.createElement('p');\ncontainer.appendChild(last);\nlast.before('Before');\nconsole.log(container.childNodes.length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2"
+    }
+  ],
+  "hints": [
+    "before inserts before the element",
+    "Adds as a sibling"
+  ]
+}

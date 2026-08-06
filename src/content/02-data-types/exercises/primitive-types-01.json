@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-01",
+  "title": "Create a string using double quotes",
+  "starterCode": "const greeting = \"Hello\";\nconsole.log(greeting);",
+  "solution": "const greeting = \"Hello\";\nconsole.log(greeting);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Hello"
+    }
+  ],
+  "hints": [
+    "Use double quotes to create a string",
+    "Assign the string to a variable"
+  ]
+}

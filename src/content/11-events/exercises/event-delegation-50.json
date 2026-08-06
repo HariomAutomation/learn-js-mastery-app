@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-50",
+  "title": "Delegation Performance Count",
+  "starterCode": "// 1 delegation listener vs N direct listeners\n// Memory: O(1) vs O(N)\nconsole.log(\"delegation is O(1)\");",
+  "solution": "// 1 delegation listener vs N direct listeners\n// Memory: O(1) vs O(N)\nconsole.log(\"delegation is O(1)\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "delegation is O(1)"
+    }
+  ],
+  "hints": [
+    "Constant memory with delegation",
+    "Linear with direct listeners"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-early-return-02",
+  "title": "Early return on divide by zero",
+  "starterCode": "function divide(a, b) {\n  if (b === 0) return 'Cannot divide by zero';\n  return a / b;\n}\nconsole.log(divide(10, 0));",
+  "solution": "function divide(a, b) {\n  if (b === 0) return 'Cannot divide by zero';\n  return a / b;\n}\nconsole.log(divide(10, 0));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Cannot divide by zero"
+    }
+  ],
+  "hints": [
+    "b is 0, guard clause triggers",
+    "Returns early before division"
+  ]
+}

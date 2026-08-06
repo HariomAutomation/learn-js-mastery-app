@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-28",
+  "title": "Virtual Scroll",
+  "starterCode": "// Only render visible items\nconsole.log(\"virtual scroll pattern\");",
+  "solution": "// Only render visible items\nconsole.log(\"virtual scroll pattern\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "virtual scroll pattern"
+    }
+  ],
+  "hints": [
+    "Calculate visible range",
+    "Render only visible items"
+  ]
+}

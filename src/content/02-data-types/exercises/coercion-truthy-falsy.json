@@ -1,0 +1,12 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy",
+  "title": "Coercion aur truthy/falsy predict karo",
+  "starterCode": "// Pehle har line ka output predict karo, phir run karo:\nconsole.log(\"5\" + 1)          // ?\nconsole.log(\"5\" - 1)          // ?\nconsole.log(true + 1)         // ?\nconsole.log(null + 1)         // ?\nconsole.log(undefined + 1)    // ?\nconsole.log(\"5\" + null)       // ?\n\n// Truthy ya falsy?\nconsole.log(Boolean(\"0\"))     // ?\nconsole.log(Boolean([]))       // ?\nconsole.log(Boolean({}))       // ?\nconsole.log(Boolean(0))        // ?\nconsole.log(Boolean(\"false\")) // ?\n",
+  "solution": "console.log(\"5\" + 1)       // \"51\" (string concat)\nconsole.log(\"5\" - 1)       // 4 (string → number)\nconsole.log(true + 1)      // 2\nconsole.log(null + 1)      // 1 (null → 0)\nconsole.log(undefined + 1) // NaN\nconsole.log(\"5\" + null)    // \"5null\"\nconsole.log(Boolean(\"0\"))     // true\nconsole.log(Boolean([]))       // true\nconsole.log(Boolean({}))       // true\nconsole.log(Boolean(0))        // false\nconsole.log(Boolean(\"false\")) // true",
+  "tests": [{ "input": [], "expected": "51" }],
+  "hints": [
+    "+ string ke saath concat karta hai, - subtract karta hai",
+    "6 falsy: false, 0, \"\", null, undefined, NaN",
+    "\"0\", \"false\", [], {} — sab truthy"
+  ]
+}

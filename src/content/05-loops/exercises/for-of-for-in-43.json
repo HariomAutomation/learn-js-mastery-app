@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-43",
+  "title": "For...Of Array Entries",
+  "starterCode": "const fruits = ['apple', 'banana', 'cherry'];\nfor (const [idx, fruit] of fruits.entries()) {\n  console.log(`${idx + 1}. ${fruit}`);\n}",
+  "solution": "const fruits = ['apple', 'banana', 'cherry'];\nfor (const [idx, fruit] of fruits.entries()) {\n  console.log(`${idx + 1}. ${fruit}`);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1. apple\n2. banana\n3. cherry"
+    }
+  ],
+  "hints": [
+    "Use entries() for index",
+    "Add 1 for numbering"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-23",
+  "title": "Flatten Object",
+  "starterCode": "function flatten(obj, prefix = '') {\n  return Object.entries(obj).reduce((acc, [k, v]) => {\n    const key = prefix ? prefix + '.' + k : k;\n    if (typeof v === 'object' && v !== null && !Array.isArray(v)) {\n      return {...acc, ...flatten(v, key)};\n    }\n    return {...acc, [key]: v};\n  }, {});\n}\nconsole.log(flatten({a: {b: 1, c: {d: 2}}}));",
+  "solution": "function flatten(obj, prefix = '') {\n  return Object.entries(obj).reduce((acc, [k, v]) => {\n    const key = prefix ? prefix + '.' + k : k;\n    if (typeof v === 'object' && v !== null && !Array.isArray(v)) {\n      return {...acc, ...flatten(v, key)};\n    }\n    return {...acc, [key]: v};\n  }, {});\n}\nconsole.log(flatten({a: {b: 1, c: {d: 2}}}));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{ 'a.b': 1, 'a.c.d': 2 }"
+    }
+  ],
+  "hints": [
+    "Recursive flatten",
+    "Dot notation keys"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-20",
+  "title": "If with undefined check",
+  "starterCode": "const value = undefined;\nif (value !== undefined) {\n  console.log('defined');\n} else {\n  console.log('undefined');\n}",
+  "solution": "const value = undefined;\nif (value !== undefined) {\n  console.log('defined');\n} else {\n  console.log('undefined');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "undefined"
+    }
+  ],
+  "hints": [
+    "undefined !== undefined is false",
+    "else block executes"
+  ]
+}

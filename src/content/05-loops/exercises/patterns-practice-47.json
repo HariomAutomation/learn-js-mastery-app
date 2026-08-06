@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-patterns-practice-47",
+  "title": "Matrix Rotate 90",
+  "starterCode": "const m = [[1,2,3],[4,5,6],[7,8,9]];\nconst rotated = [];\nfor (let j = 0; j < 3; j++) {\n  rotated[j] = [];\n  for (let i = 2; i >= 0; i--) {\n    rotated[j].push(m[i][j]);\n  }\n}\nconsole.log(rotated);",
+  "solution": "const m = [[1,2,3],[4,5,6],[7,8,9]];\nconst rotated = [];\nfor (let j = 0; j < 3; j++) {\n  rotated[j] = [];\n  for (let i = 2; i >= 0; i--) {\n    rotated[j].push(m[i][j]);\n  }\n}\nconsole.log(rotated);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ [ 7, 4, 1 ], [ 8, 5, 2 ], [ 9, 6, 3 ] ]"
+    }
+  ],
+  "hints": [
+    "Read columns top to bottom",
+    "Build new rows"
+  ]
+}

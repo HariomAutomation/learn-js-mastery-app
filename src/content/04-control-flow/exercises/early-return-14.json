@@ -1,0 +1,17 @@
+{
+  "id": "04-control-flow-early-return-14",
+  "title": "Fail fast pattern",
+  "starterCode": "function processArray(arr) {\n  if (!Array.isArray(arr)) return [];\n  if (arr.length === 0) return [];\n  return arr.map(x => x * 2);\n}\nconsole.log(processArray([1, 2, 3]));",
+  "solution": "function processArray(arr) {\n  if (!Array.isArray(arr)) return [];\n  if (arr.length === 0) return [];\n  return arr.map(x => x * 2);\n}\nconsole.log(processArray([1, 2, 3]));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2,4,6"
+    }
+  ],
+  "hints": [
+    "arr is an array",
+    "arr has elements",
+    "map doubles each element"
+  ]
+}

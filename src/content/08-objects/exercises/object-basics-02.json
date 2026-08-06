@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-02",
+  "title": "Dot Notation",
+  "starterCode": "const car = {brand: 'Toyota', model: 'Camry'};\nconsole.log(car.____);",
+  "solution": "const car = {brand: 'Toyota', model: 'Camry'};\nconsole.log(car.brand);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Toyota"
+    }
+  ],
+  "hints": [
+    "Use dot followed by key",
+    "Simple property access"
+  ]
+}

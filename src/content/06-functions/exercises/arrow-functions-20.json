@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-20",
+  "title": "Event Handler Arrow",
+  "starterCode": "const handler = (event) => {\n  console.log('Clicked!');\n};\nhandler();",
+  "solution": "const handler = (event) => {\n  console.log('Clicked!');\n};\nhandler();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Clicked!"
+    }
+  ],
+  "hints": [
+    "Arrow as handler",
+    "Common pattern"
+  ]
+}

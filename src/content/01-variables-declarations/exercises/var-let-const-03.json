@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-var-let-const-03",
+  "title": "const reassignment error",
+  "starterCode": "const x = 1\ntry {\n  x = 2\n} catch(e) {\n  console.log(\"error\")\n}",
+  "solution": "const x = 1\ntry {\n  x = 2\n} catch(e) {\n  console.log(\"error\")\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "error"
+    }
+  ],
+  "hints": [
+    "const cannot be reassigned"
+  ]
+}

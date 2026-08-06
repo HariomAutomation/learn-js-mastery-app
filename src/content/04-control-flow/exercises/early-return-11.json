@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-early-return-11",
+  "title": "Error handling on invalid input",
+  "starterCode": "function parseJSON(str) {\n  if (typeof str !== 'string') return null;\n  try {\n    return JSON.parse(str);\n  } catch {\n    return null;\n  }\n}\nconsole.log(parseJSON(123));",
+  "solution": "function parseJSON(str) {\n  if (typeof str !== 'string') return null;\n  try {\n    return JSON.parse(str);\n  } catch {\n    return null;\n  }\n}\nconsole.log(parseJSON(123));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "null"
+    }
+  ],
+  "hints": [
+    "123 is not a string",
+    "Guard clause returns null"
+  ]
+}

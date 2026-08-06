@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-36",
+  "title": "Convert number to binary string",
+  "starterCode": "const num = 10;\nconsole.log();",
+  "solution": "const num = 10;\nconsole.log(num.toString(2));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1010"
+    }
+  ],
+  "hints": [
+    "toString accepts a radix parameter",
+    "2 for binary, 8 for octal, 16 for hex"
+  ]
+}

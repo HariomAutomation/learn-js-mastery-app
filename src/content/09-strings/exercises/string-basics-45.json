@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-45",
+  "title": "Repeat Practice",
+  "starterCode": "console.log('ab'.repeat(0));\nconsole.log('x'.repeat(5));",
+  "solution": "console.log('ab'.repeat(0));\nconsole.log('x'.repeat(5));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "\nxxxxx"
+    }
+  ],
+  "hints": [
+    "repeat(0) empty",
+    "repeat(5) five times"
+  ]
+}

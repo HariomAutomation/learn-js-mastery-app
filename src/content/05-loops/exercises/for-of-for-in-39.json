@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-39",
+  "title": "For...In String Indices",
+  "starterCode": "const str = \"abc\";\nfor (const index in str) {\n  console.log(index + \": \" + str[index]);\n}",
+  "solution": "const str = \"abc\";\nfor (const index in str) {\n  console.log(index + \": \" + str[index]);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "0: a\n1: b\n2: c"
+    }
+  ],
+  "hints": [
+    "for...in on string gives indices",
+    "Access char with index"
+  ]
+}

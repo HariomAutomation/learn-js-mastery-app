@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-function-basics-39",
+  "title": "Middleware Pattern",
+  "starterCode": "function createPipeline(...middlewares) {\n  return (data) => {\n    return middlewares.reduce((value, middleware) => middleware(value), data);\n  };\n}\nconst addPrefix = (s) => 'Hello, ' + s;\nconst toUpper = (s) => s.toUpperCase();\nconst addExclaim = (s) => s + '!';\nconst greet = createPipeline(addPrefix, toUpper, addExclaim);\nconsole.log(greet('world'));",
+  "solution": "function createPipeline(...middlewares) {\n  return (data) => {\n    return middlewares.reduce((value, middleware) => middleware(value), data);\n  };\n}\nconst addPrefix = (s) => 'Hello, ' + s;\nconst toUpper = (s) => s.toUpperCase();\nconst addExclaim = (s) => s + '!';\nconst greet = createPipeline(addPrefix, toUpper, addExclaim);\nconsole.log(greet('world'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "HELLO, WORLD!"
+    }
+  ],
+  "hints": [
+    "Chain middlewares",
+    "Each transforms value"
+  ]
+}

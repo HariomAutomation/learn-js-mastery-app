@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-46",
+  "title": "remove Child Return",
+  "starterCode": "const parent = document.createElement('div');\nconst child = document.createElement('span');\nparent.appendChild(child);\nconst removed = parent.removeChild(child);\nconsole.log(removed.parentNode);",
+  "solution": "const parent = document.createElement('div');\nconst child = document.createElement('span');\nparent.appendChild(child);\nconst removed = parent.removeChild(child);\nconsole.log(removed.parentNode);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "null"
+    }
+  ],
+  "hints": [
+    "Removed node has no parent",
+    "parentNode is null"
+  ]
+}

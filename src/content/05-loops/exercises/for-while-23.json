@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-while-23",
+  "title": "Matrix Iteration",
+  "starterCode": "const matrix = [[1, 2], [3, 4]];\nfor (let i = 0; i < matrix.length; i++) {\n  for (let j = 0; j < matrix[i].length; j++) {\n    console.log(matrix[i][j]);\n  }\n}",
+  "solution": "const matrix = [[1, 2], [3, 4]];\nfor (let i = 0; i < matrix.length; i++) {\n  for (let j = 0; j < matrix[i].length; j++) {\n    console.log(matrix[i][j]);\n  }\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1\n2\n3\n4"
+    }
+  ],
+  "hints": [
+    "Access rows first",
+    "Then columns"
+  ]
+}

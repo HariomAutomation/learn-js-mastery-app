@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-methods-01",
+  "title": "CharAt",
+  "starterCode": "const str = 'hello';\nconsole.log(str.charAt(0));",
+  "solution": "const str = 'hello';\nconsole.log(str.charAt(0));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "h"
+    }
+  ],
+  "hints": [
+    "charAt returns character",
+    "At index"
+  ]
+}

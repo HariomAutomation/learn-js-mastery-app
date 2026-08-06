@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-36",
+  "title": "Promise Resolve Object",
+  "starterCode": "Promise.resolve({ name: 'John', age: 30 })\n  .then(user => console.log(user.name));",
+  "solution": "Promise.resolve({ name: 'John', age: 30 })\n  .then(user => console.log(user.name));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "John"
+    }
+  ],
+  "hints": [
+    "Promise can resolve with any value",
+    "Access properties in then"
+  ]
+}

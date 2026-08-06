@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-patterns-practice-48",
+  "title": "Count Vowels Loop",
+  "starterCode": "const str = \"hello world\";\nlet count = 0;\nconst vowels = \"aeiou\";\nfor (const ch of str) {\n  if (vowels.includes(ch)) count++;\n}\nconsole.log(count);",
+  "solution": "const str = \"hello world\";\nlet count = 0;\nconst vowels = \"aeiou\";\nfor (const ch of str) {\n  if (vowels.includes(ch)) count++;\n}\nconsole.log(count);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3"
+    }
+  ],
+  "hints": [
+    "Check each character",
+    "Use includes()"
+  ]
+}

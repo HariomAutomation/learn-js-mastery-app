@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-38",
+  "title": "Is Unique Chars",
+  "starterCode": "function isUnique(str) {\n  return new Set(str).size === str.length;\n}\nconsole.log(isUnique('abcde'));\nconsole.log(isUnique('abcda'));",
+  "solution": "function isUnique(str) {\n  return new Set(str).size === str.length;\n}\nconsole.log(isUnique('abcde'));\nconsole.log(isUnique('abcda'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true\nfalse"
+    }
+  ],
+  "hints": [
+    "Set removes duplicates",
+    "Compare sizes"
+  ]
+}

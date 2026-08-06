@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-10",
+  "title": "removeChild",
+  "starterCode": "const parent = document.createElement('div');\nconst child = document.createElement('p');\nparent.appendChild(child);\nconst removed = parent.removeChild(child);\nconsole.log(removed === child);",
+  "solution": "const parent = document.createElement('div');\nconst child = document.createElement('p');\nparent.appendChild(child);\nconst removed = parent.removeChild(child);\nconsole.log(removed === child);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "removeChild returns the removed node",
+    "Compare reference with original"
+  ]
+}

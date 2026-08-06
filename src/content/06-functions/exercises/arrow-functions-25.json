@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-25",
+  "title": "Arrow Usage Patterns",
+  "starterCode": "const operations = {\n  double: x => x * 2,\n  triple: x => x * 3,\n  negate: x => -x\n};\nconsole.log(operations.double(5));\nconsole.log(operations.triple(5));\nconsole.log(operations.negate(5));",
+  "solution": "const operations = {\n  double: x => x * 2,\n  triple: x => x * 3,\n  negate: x => -x\n};\nconsole.log(operations.double(5));\nconsole.log(operations.triple(5));\nconsole.log(operations.negate(5));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10\n15\n-5"
+    }
+  ],
+  "hints": [
+    "Arrows as object methods",
+    "Concise syntax"
+  ]
+}

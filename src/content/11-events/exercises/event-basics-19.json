@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-19",
+  "title": "Copy Event",
+  "starterCode": "document.addEventListener('copy', function(e) {\n  console.log('copied');\n});",
+  "solution": "document.addEventListener('copy', function(e) {\n  console.log('copied');\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "copied"
+    }
+  ],
+  "hints": [
+    "Fires when user copies content",
+    "Can modify clipboard data"
+  ]
+}

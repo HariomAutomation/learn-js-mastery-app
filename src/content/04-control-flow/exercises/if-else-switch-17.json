@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-17",
+  "title": "Nested switch",
+  "starterCode": "const a = 1;\nconst b = 2;\nswitch (a) {\n  case 1:\n    switch (b) {\n      case 1:\n        console.log('both 1');\n        break;\n      case 2:\n        console.log('a=1 b=2');\n        break;\n    }\n    break;\n  case 2:\n    console.log('a=2');\n    break;\n}",
+  "solution": "const a = 1;\nconst b = 2;\nswitch (a) {\n  case 1:\n    switch (b) {\n      case 1:\n        console.log('both 1');\n        break;\n      case 2:\n        console.log('a=1 b=2');\n        break;\n    }\n    break;\n  case 2:\n    console.log('a=2');\n    break;\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "a=1 b=2"
+    }
+  ],
+  "hints": [
+    "a is 1, enter first case",
+    "b is 2, enter inner case 2"
+  ]
+}

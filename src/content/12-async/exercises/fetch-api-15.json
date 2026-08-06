@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-15",
+  "title": "DELETE Request",
+  "starterCode": "// DELETE removes resource\nconsole.log(\"method: DELETE for removing\");",
+  "solution": "// DELETE removes resource\nconsole.log(\"method: DELETE for removing\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "method: DELETE for removing"
+    }
+  ],
+  "hints": [
+    "DELETE removes the resource",
+    "Usually no body needed"
+  ]
+}

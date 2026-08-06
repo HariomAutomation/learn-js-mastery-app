@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-04",
+  "title": "Tab Switcher",
+  "starterCode": "// Click tabs to show different content\nconsole.log(\"tab switching pattern\");",
+  "solution": "// Click tabs to show different content\nconsole.log(\"tab switching pattern\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "tab switching pattern"
+    }
+  ],
+  "hints": [
+    "Add active class to clicked tab",
+    "Show corresponding content"
+  ]
+}

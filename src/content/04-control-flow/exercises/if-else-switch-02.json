@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-02",
+  "title": "If statement with falsy condition",
+  "starterCode": "const age = 15;\nif (age >= 18) {\n  console.log('adult');\n}",
+  "solution": "const age = 15;\nif (age >= 18) {\n  console.log('adult');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": ""
+    }
+  ],
+  "hints": [
+    "15 >= 18 is false",
+    "Block doesn't execute"
+  ]
+}

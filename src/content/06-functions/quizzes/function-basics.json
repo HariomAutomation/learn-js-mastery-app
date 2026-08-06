@@ -1,0 +1,22 @@
+[
+  { "question": "Function declaration ka syntax kya hai?", "options": ["function name() {}", "name function() {}", "function = name()", "def name()"], "correctIndex": 0, "explanation": "function keyword, name, parentheses, body." },
+  { "question": "function add(a, b) { return a + b } — yahan a aur b kya hain?", "options": ["Parameters", "Arguments", "Variables", "Returns"], "correctIndex": 0, "explanation": "Definition mein parameters, call mein arguments." },
+  { "question": "add(3, 4) — 3 aur 4 ko kya kehte hain?", "options": ["Arguments", "Parameters", "Default values", "Rest params"], "correctIndex": 0, "explanation": "Call karte waqt diye gaye values = arguments." },
+  { "question": "Return ke bina function kya return karta hai?", "options": ["undefined", "null", "0", "Error"], "correctIndex": 0, "explanation": "Bina return — undefined." },
+  { "question": "return ke baad ka code kab execute hota hai?", "options": ["Kabhi nahi", "Hamesha", "Kuch conditions pe", "Dusre call mein"], "correctIndex": 0, "explanation": "Return ke baad function exit — code unreachable." },
+  { "question": "Function ko call karke value kis variable mein lete hain?", "options": ["let result = add(2,3)", "add(2,3) = result", "let result = add", "return add(2,3)"], "correctIndex": 0, "explanation": "Assignment se return value capture hoti hai." },
+  { "question": "Function declaration hoisting kya hoti hai?", "options": ["Call top pe ho, declaration baad mein bhi chale", "Error deta hai", "Sirf arrow works", "Kuch nahi"], "correctIndex": 0, "explanation": "Declarations hoist hote hain — pehle call kar sakte ho." },
+  { "question": "Default parameter kya hai?", "options": ["function greet(name = \"friend\")", "function greet(name?)", "function greet()", "function = default"], "correctIndex": 0, "explanation": "Argument na diye to default use hota hai." },
+  { "question": "greet() bina argument — name = ?", "options": ["\"friend\"", "undefined", "null", "Error"], "correctIndex": 0, "explanation": "Default value apply hoti hai." },
+  { "question": "function sum(...nums) — nums kya hai?", "options": ["Array of all args", "String", "Number", "Object"], "correctIndex": 0, "explanation": "Rest parameter saare args ka array banata hai." },
+  { "question": "Function expression kya hoti hai?", "options": ["const fn = function() {}", "function fn() {}", "fn => {}", "class fn {}"], "correctIndex": 0, "explanation": "Anonymous function variable mein store." },
+  { "question": "Function expression hoisting hoti hai?", "options": ["Nahi, const ki tarah", "Haan, full hoisting", "Partial", "Error"], "correctIndex": 0, "explanation": "const function expression hoist nahi hoti — TDZ." },
+  { "question": "Multiple return statements allowed?", "options": ["Haan", "Nahi", "Sirf 2", "Sirf nested"], "correctIndex": 0, "explanation": "Alag-alag branches mein multiple returns chal sakte hain." },
+  { "question": "function isEven(n) { return n % 2 === 0 } — isEven(7)?", "options": ["false", "true", "7", "undefined"], "correctIndex": 0, "explanation": "7 % 2 = 1 !== 0 → false." },
+  { "question": "Naming convention functions ka?", "options": ["camelCase (getTotal)", "snake_case", "PascalCase", "Kebab-case"], "correctIndex": 0, "explanation": "JS mein camelCase standard hai." },
+  { "question": "Arguments and parameters order kaise match karte hain?", "options": ["Position se", "Naam se", "Type se", "Random"], "correctIndex": 0, "explanation": "Pehla argument → pehla parameter." },
+  { "question": "function outer() { return 1; return 2 } — result?", "options": ["1", "2", "12", "undefined"], "correctIndex": 0, "explanation": "Pehla return hi return hota hai." },
+  { "question": "Bina call kiye function kab run hota hai?", "options": ["Kabhi nahi", "Declaration pe", "Page load pe", "Har second"], "correctIndex": 0, "explanation": "Function sirf call karne pe execute hota hai." },
+  { "question": "let x = add — yahan add kya hai?", "options": ["Function reference", "Function ka result", "undefined", "String"], "correctIndex": 0, "explanation": "Bina () function ki reference milti hai." },
+  { "question": "Function ka use kyu karte hain?", "options": ["Reusable code", "Sirf style", "Speed ke liye", "Design ke liye"], "correctIndex": 0, "explanation": "DRY — ek baar likho, bar-bar use karo." }
+]

@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-42",
+  "title": "Map preserves insertion order",
+  "starterCode": "const m = new Map();\nm.set('b', 2);\nm.set('a', 1);\nconsole.log();",
+  "solution": "const m = new Map();\nm.set('b', 2);\nm.set('a', 1);\nconsole.log([...m.keys()]);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "b,a"
+    }
+  ],
+  "hints": [
+    "Maps preserve key order",
+    "Use spread to get keys as array"
+  ]
+}

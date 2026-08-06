@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-higher-order-functions-03",
+  "title": "Callback Pattern",
+  "starterCode": "function fetchData(callback) {\n  const data = { name: 'Alice', age: 25 };\n  callback(data);\n}\nfetchData((data) => {\n  console.log(data.name + ' is ' + data.age);\n});",
+  "solution": "function fetchData(callback) {\n  const data = { name: 'Alice', age: 25 };\n  callback(data);\n}\nfetchData((data) => {\n  console.log(data.name + ' is ' + data.age);\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Alice is 25"
+    }
+  ],
+  "hints": [
+    "Pass callback function",
+    "Call with data"
+  ]
+}

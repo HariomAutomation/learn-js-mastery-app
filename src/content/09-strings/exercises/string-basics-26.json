@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-26",
+  "title": "ToUpperCase",
+  "starterCode": "console.log('hello'.toUpperCase());",
+  "solution": "console.log('hello'.toUpperCase());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "HELLO"
+    }
+  ],
+  "hints": [
+    "toUpperCase converts",
+    "All uppercase"
+  ]
+}

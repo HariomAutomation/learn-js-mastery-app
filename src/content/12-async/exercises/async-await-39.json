@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-39",
+  "title": "Async Arrow",
+  "starterCode": "const add = async (a, b) => a + b;\nadd(1, 2).then(r => console.log(r));",
+  "solution": "const add = async (a, b) => a + b;\nadd(1, 2).then(r => console.log(r));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3"
+    }
+  ],
+  "hints": [
+    "Arrow functions can be async",
+    "Returns promise"
+  ]
+}

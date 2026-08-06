@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-34",
+  "title": "Get Set Lifecycle",
+  "starterCode": "const obj = {\n  _val: 0,\n  get val() {\n    console.log('getting');\n    return this._val;\n  },\n  set val(v) {\n    console.log('setting');\n    this._val = v;\n  }\n};\nobj.val = 5;\nconsole.log(obj.val);",
+  "solution": "const obj = {\n  _val: 0,\n  get val() {\n    console.log('getting');\n    return this._val;\n  },\n  set val(v) {\n    console.log('setting');\n    this._val = v;\n  }\n};\nobj.val = 5;\nconsole.log(obj.val);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "setting\ngetting\n5"
+    }
+  ],
+  "hints": [
+    "Setter called on assignment",
+    "Getter on access"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-29",
+  "title": "cloneNode Deep Copy",
+  "starterCode": "const original = document.createElement('div');\noriginal.innerHTML = '<span>Hi</span>';\nconst clone = original.cloneNode(true);\nconsole.log(clone.innerHTML);",
+  "solution": "const original = document.createElement('div');\noriginal.innerHTML = '<span>Hi</span>';\nconst clone = original.cloneNode(true);\nconsole.log(clone.innerHTML);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "<span>Hi</span>"
+    }
+  ],
+  "hints": [
+    "deep clone copies innerHTML",
+    "Same structure as original"
+  ]
+}

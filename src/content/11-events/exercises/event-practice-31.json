@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-31",
+  "title": "Event Practice Complete",
+  "starterCode": "// UI patterns: todo, modal, tabs, forms, etc.\nconsole.log(\"event practice complete\");",
+  "solution": "// UI patterns: todo, modal, tabs, forms, etc.\nconsole.log(\"event practice complete\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "event practice complete"
+    }
+  ],
+  "hints": [
+    "Review all UI patterns",
+    "Practice combining events"
+  ]
+}

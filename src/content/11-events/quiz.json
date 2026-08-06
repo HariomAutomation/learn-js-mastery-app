@@ -1,0 +1,57 @@
+[
+  {
+    "question": "addEventListener ke third parameter options object mein kya hota hai?",
+    "options": [
+      "once, passive, capture — boolean flags",
+      "speed, delay, duration",
+      "name, type, id",
+      "color, size, font"
+    ],
+    "correctIndex": 0,
+    "explanation": "Options: { once: true } ek baar chale, { passive: true } preventDefault nahi kar sakta (scroll performance), { capture: true } capturing phase mein chale."
+  },
+  {
+    "question": "Event capturing vs bubbling mein kya farq hai?",
+    "options": [
+      "Capturing: root se target tak, Bubbling: target se root tak",
+      "Dono same direction mein jaate hain",
+      "Capturing fast hai, bubbling slow",
+      "Koi farq nahi"
+    ],
+    "correctIndex": 0,
+    "explanation": "Capturing phase: event root se neeche jaata hai target tak. Bubbling phase: event target se upar jaata hai root tak. Default bubbling hota hai, capture ke liye { capture: true } lagao."
+  },
+  {
+    "question": "Dynamic elements (baad mein add huye) pe event lagane ka best tareeka?",
+    "options": [
+      "Event delegation — parent pe listener lagao",
+      "Har naye element pe naya listener lagao",
+      "MutationObserver use karo",
+      "setTimeout se wait karo"
+    ],
+    "correctIndex": 0,
+    "explanation": "Delegation se parent pe ek listener lagao — naye elements bhi automatically handle honge bina naye listeners ke. Clean aur performant."
+  },
+  {
+    "question": "Memory leaks kyun hote hain events mein?",
+    "options": [
+      "Remove nahi kiye gaye listeners rehte hain jab element delete hota hai",
+      "Events bahut chalte hain",
+      "JavaScript memory kam hai",
+      "Koi reason nahi"
+    ],
+    "correctIndex": 0,
+    "explanation": "Agar element remove kar diya but uspe listener rehta hai toh memory leak hota hai. removeEventListener ya cleanup karo component hatane pe. WeakRef modern solution hai."
+  },
+  {
+    "question": "IntersectionObserver event-based approach se better kyun hai scroll tracking mein?",
+    "options": [
+      "scroll event peh bahut zyada fire hota hai, Observer optimized hai",
+      "Observer slow hai",
+      "Scroll event band hai",
+      "Koi farq nahi"
+    ],
+    "correctIndex": 0,
+    "explanation": "Scroll event continuously fire hota hai — scroll listener = performance hit. IntersectionObserver optimized hai browser-level pe, kam resources leta hai."
+  }
+]

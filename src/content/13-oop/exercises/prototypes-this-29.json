@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-prototypes-this-29",
+  "title": "This Practice",
+  "starterCode": "const calculator = {\n  value: 0,\n  add(n) { this.value += n; return this; },\n  result() { return this.value; }\n};\nconsole.log(calculator.add(5).add(3).result());",
+  "solution": "const calculator = {\n  value: 0,\n  add(n) { this.value += n; return this; },\n  result() { return this.value; }\n};\nconsole.log(calculator.add(5).add(3).result());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "8"
+    }
+  ],
+  "hints": [
+    "Return this for chaining",
+    "this is the calculator object"
+  ]
+}

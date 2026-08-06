@@ -1,0 +1,54 @@
+[
+  {
+    "question": "map() aur forEach() mein kya farq hai?",
+    "options": ["Koi farq nahi", "map new array return karta hai, forEach undefined", "forEach fast chalta hai", "map sirf numbers ke liye"],
+    "correctIndex": 1,
+    "explanation": "map() transformed values ka naya array return karta hai. forEach() sirf iterate karta hai, undefined return karta hai."
+  },
+  {
+    "question": "sort() without compare function kya problem deta hai?",
+    "options": ["Koi problem nahi", "Numbers ko string ki tarah sort karta hai", "Array reverse ho jaati hai", "Error aata hai"],
+    "correctIndex": 1,
+    "explanation": "sort() default se lexical (string) sort karta hai. Isliye [10, 2, 3] galat sort hota hai. Compare function zaroori hai."
+  },
+  {
+    "question": "reduce() kya return karta hai?",
+    "options": ["Naya array", "Single value", "Boolean", "Undefined"],
+    "correctIndex": 1,
+    "explanation": "reduce() array ko single value mein reduce karta hai — sum, max, concatenated string, etc."
+  },
+  {
+    "question": "splice() aur slice() mein kya farq hai?",
+    "options": ["Same hain", "splice original modify karta hai, slice copy deta hai", "slice modify karta hai, splice copy deta hai", "Dono copy dete hain"],
+    "correctIndex": 1,
+    "explanation": "splice() original array modify karta hai (add/remove). slice() copy return karta hai, original change nahi hota."
+  },
+  {
+    "question": "find() method kya return karta hai?",
+    "options": ["Saare matching elements", "Pehla matching element", "Boolean", "Index"],
+    "correctIndex": 1,
+    "explanation": "find() pehla element return karta hai jo condition match kare. some() boolean deta hai, filter() saare matches."
+  },
+  {
+    "question": "[...arr] spread operator se kya hota hai?",
+    "options": [
+      "Array delete ho jaati hai",
+      "Shallow copy banti hai",
+      "Array reverse ho jaati hai",
+      "Error aata hai"
+    ],
+    "correctIndex": 1,
+    "explanation": "[...arr] array ki shallow copy banata hai. Original array change nahi hoti, naya array milta hai."
+  },
+  {
+    "question": "Chaining ka matlab kya hai array methods mein?",
+    "options": [
+      "Ek method baad ek method call karna",
+      "Sirf ek method use karna",
+      "Loop ke andar loop",
+      "Error handling"
+    ],
+    "correctIndex": 0,
+    "explanation": "Chaining: arr.filter().map().reduce() — ek method ka result next method ko jata hai. Clean, readable code."
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-09",
+  "title": "Getter/Setter",
+  "starterCode": "class Temperature {\n  #celsius;\n  constructor(c) { this.#celsius = c; }\n  get fahrenheit() {\n    return this.#celsius * 9/5 + 32;\n  }\n}\nconsole.log(new Temperature(100).fahrenheit);",
+  "solution": "class Temperature {\n  #celsius;\n  constructor(c) { this.#celsius = c; }\n  get fahrenheit() {\n    return this.#celsius * 9/5 + 32;\n  }\n}\nconsole.log(new Temperature(100).fahrenheit);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "212"
+    }
+  ],
+  "hints": [
+    "get creates getter property",
+    "Access like a property, not method"
+  ]
+}

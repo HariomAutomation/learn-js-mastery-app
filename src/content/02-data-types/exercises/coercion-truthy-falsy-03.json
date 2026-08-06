@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-03",
+  "title": "Check if empty string is falsy",
+  "starterCode": "if (\"\") {\n  console.log(\"truthy\");\n} else {\n  console.log(\"falsy\");\n}",
+  "solution": "if (\"\") {\n  console.log(\"truthy\");\n} else {\n  console.log(\"falsy\");\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "falsy"
+    }
+  ],
+  "hints": [
+    "Empty strings are falsy",
+    "Non-empty strings are truthy"
+  ]
+}

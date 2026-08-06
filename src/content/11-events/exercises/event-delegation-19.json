@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-19",
+  "title": "addEventListener Options",
+  "starterCode": "// Options: capture, once, passive, signal\nconsole.log(\"4 options available\");",
+  "solution": "// Options: capture, once, passive, signal\nconsole.log(\"4 options available\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "4 options available"
+    }
+  ],
+  "hints": [
+    "capture for capture phase",
+    "once auto-removes listener"
+  ]
+}

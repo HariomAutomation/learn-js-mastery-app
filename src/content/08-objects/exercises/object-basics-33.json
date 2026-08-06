@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-33",
+  "title": "Practice 4",
+  "starterCode": "const obj = {a: 1, b: 2};\nObject.defineProperty(obj, 'c', {value: 3});\nconsole.log(Object.keys(obj));",
+  "solution": "const obj = {a: 1, b: 2};\nObject.defineProperty(obj, 'c', {value: 3});\nconsole.log(Object.keys(obj));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 'a', 'b', 'c' ]"
+    }
+  ],
+  "hints": [
+    "defineProperty adds new",
+    "Keys includes it"
+  ]
+}

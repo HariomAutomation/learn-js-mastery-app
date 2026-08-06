@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-05",
+  "title": "Extends",
+  "starterCode": "class Animal {\n  constructor(name) { this.name = name; }\n}\nclass Dog extends Animal {\n  // TODO: call super\n}\nconst d = new Dog('Rex');\nconsole.log(d.name);",
+  "solution": "class Animal {\n  constructor(name) { this.name = name; }\n}\nclass Dog extends Animal {\n  constructor(name) {\n    super(name);\n  }\n}\nconst d = new Dog('Rex');\nconsole.log(d.name);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Rex"
+    }
+  ],
+  "hints": [
+    "extends creates inheritance",
+    "super() calls parent constructor"
+  ]
+}

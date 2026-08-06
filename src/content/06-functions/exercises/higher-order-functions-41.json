@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-higher-order-functions-41",
+  "title": "Transformer Function",
+  "starterCode": "function transform(arr, ...fns) {\n  return arr.map(item => {\n    return fns.reduce((value, fn) => fn(value), item);\n  });\n}\nconst nums = [1, 2, 3];\nconst result = transform(nums, x => x * 2, x => x + 1);\nconsole.log(result);",
+  "solution": "function transform(arr, ...fns) {\n  return arr.map(item => {\n    return fns.reduce((value, fn) => fn(value), item);\n  });\n}\nconst nums = [1, 2, 3];\nconst result = transform(nums, x => x * 2, x => x + 1);\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 3, 5, 7 ]"
+    }
+  ],
+  "hints": [
+    "Apply functions to each item",
+    "Chain transformations"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-variables-intro-20",
+  "title": "Symbol uniqueness",
+  "starterCode": "const s1 = Symbol(\"id\")\nconst s2 = Symbol(\"id\")\nconsole.log(s1 === s2)",
+  "solution": "const s1 = Symbol(\"id\")\nconst s2 = Symbol(\"id\")\nconsole.log(s1 === s2)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "false"
+    }
+  ],
+  "hints": [
+    "Every Symbol is unique"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-34",
+  "title": "Arrow Object Method",
+  "starterCode": "const obj = {\n  nums: [1, 2, 3, 4],\n  sum: function() {\n    return this.nums.reduce((a, b) => a + b, 0);\n  }\n};\nconsole.log(obj.sum());",
+  "solution": "const obj = {\n  nums: [1, 2, 3, 4],\n  sum: function() {\n    return this.nums.reduce((a, b) => a + b, 0);\n  }\n};\nconsole.log(obj.sum());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10"
+    }
+  ],
+  "hints": [
+    "Use function for this",
+    "Arrow won't work here"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-28",
+  "title": "style removeProperty",
+  "starterCode": "const el = document.querySelector('.box');\nel.style.color = 'red';\nel.style.removeProperty('color');\nconsole.log(el.style.color);",
+  "solution": "const el = document.querySelector('.box');\nel.style.color = 'red';\nel.style.removeProperty('color');\nconsole.log(el.style.color);",
+  "tests": [
+    {
+      "input": [],
+      "expected": ""
+    }
+  ],
+  "hints": [
+    "removeProperty removes an inline style",
+    "Returns empty string after removal"
+  ]
+}

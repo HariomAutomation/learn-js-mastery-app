@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-44",
+  "title": "Command Pattern",
+  "starterCode": "class Cmd { execute() {} }\nclass LogCmd extends Cmd {\n  constructor(msg) { super(); this.msg = msg; }\n  execute() { console.log(this.msg); }\n}\nnew LogCmd('hello').execute();",
+  "solution": "class Cmd { execute() {} }\nclass LogCmd extends Cmd {\n  constructor(msg) { super(); this.msg = msg; }\n  execute() { console.log(this.msg); }\n}\nnew LogCmd('hello').execute();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hello"
+    }
+  ],
+  "hints": [
+    "Command encapsulates action",
+    "execute() performs it"
+  ]
+}

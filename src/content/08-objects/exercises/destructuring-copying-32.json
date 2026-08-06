@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-32",
+  "title": "Destructuring Return",
+  "starterCode": "function getCoords() {\n  return {x: 10, y: 20};\n}\nconst {x, y} = getCoords();\nconsole.log(x, y);",
+  "solution": "function getCoords() {\n  return {x: 10, y: 20};\n}\nconst {x, y} = getCoords();\nconsole.log(x, y);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10 20"
+    }
+  ],
+  "hints": [
+    "Destructure return value",
+    "Extract x and y"
+  ]
+}

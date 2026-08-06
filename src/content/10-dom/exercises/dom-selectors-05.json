@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-05",
+  "title": "getElementsByClassName Type",
+  "starterCode": "const els = document.getElementsByClassName('box');\nconsole.log(typeof els);",
+  "solution": "const els = document.getElementsByClassName('box');\nconsole.log(typeof els);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "object"
+    }
+  ],
+  "hints": [
+    "Returns an HTMLCollection",
+    "HTMLCollection is an object type"
+  ]
+}

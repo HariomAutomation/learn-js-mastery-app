@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-15",
+  "title": "Dropdown Menu",
+  "starterCode": "// Click to toggle dropdown visibility\nconsole.log(\"dropdown toggle pattern\");",
+  "solution": "// Click to toggle dropdown visibility\nconsole.log(\"dropdown toggle pattern\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "dropdown toggle pattern"
+    }
+  ],
+  "hints": [
+    "Toggle open class on click",
+    "Close on outside click"
+  ]
+}

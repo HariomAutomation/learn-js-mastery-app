@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-43",
+  "title": "IsExtensible",
+  "starterCode": "const obj1 = {a: 1};\nconst obj2 = Object.preventExtensions({a: 1});\nconsole.log(Object.isExtensible(obj1));\nconsole.log(Object.isExtensible(obj2));",
+  "solution": "const obj1 = {a: 1};\nconst obj2 = Object.preventExtensions({a: 1});\nconsole.log(Object.isExtensible(obj1));\nconsole.log(Object.isExtensible(obj2));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true\nfalse"
+    }
+  ],
+  "hints": [
+    "isExtensible check",
+    "Normal vs prevented"
+  ]
+}

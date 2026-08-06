@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-10",
+  "title": "State Pattern",
+  "starterCode": "class State {\n  handle() { return 'default'; }\n}\nclass ActiveState extends State {\n  handle() { return 'active'; }\n}\nclass InactiveState extends State {\n  handle() { return 'inactive'; }\n}\nconst states = { active: new ActiveState(), inactive: new InactiveState() };\nconsole.log(states.active.handle());",
+  "solution": "class State {\n  handle() { return 'default'; }\n}\nclass ActiveState extends State {\n  handle() { return 'active'; }\n}\nclass InactiveState extends State {\n  handle() { return 'inactive'; }\n}\nconst states = { active: new ActiveState(), inactive: new InactiveState() };\nconsole.log(states.active.handle());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "active"
+    }
+  ],
+  "hints": [
+    "Each state is a class",
+    "Switch between state objects"
+  ]
+}

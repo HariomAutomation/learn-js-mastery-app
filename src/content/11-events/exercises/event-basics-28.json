@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-28",
+  "title": "preventDefault",
+  "starterCode": "const form = document.querySelector('form');\nform.addEventListener('submit', function(e) {\n  e.preventDefault();\n  console.log('prevented');\n});",
+  "solution": "const form = document.querySelector('form');\nform.addEventListener('submit', function(e) {\n  e.preventDefault();\n  console.log('prevented');\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "prevented"
+    }
+  ],
+  "hints": [
+    "preventDefault stops default behavior",
+    "Form won't submit/reload"
+  ]
+}

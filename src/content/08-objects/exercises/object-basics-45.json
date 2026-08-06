@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-45",
+  "title": "Complete 8",
+  "starterCode": "const obj = {a: 1, b: 2, c: 3};\nconst values = Object.values(obj);\nconsole.log(Math.max(...values));",
+  "solution": "const obj = {a: 1, b: 2, c: 3};\nconst values = Object.values(obj);\nconsole.log(Math.max(...values));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3"
+    }
+  ],
+  "hints": [
+    "Object.values gets values",
+    "Spread for Math.max"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-arithmetic-comparison-05",
+  "title": "Modulo operator",
+  "starterCode": "const result = 17 % 5;\nconsole.log(result);",
+  "solution": "const result = 17 % 5;\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2"
+    }
+  ],
+  "hints": [
+    "% returns the remainder",
+    "17 divided by 5 leaves remainder 2"
+  ]
+}

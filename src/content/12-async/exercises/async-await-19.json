@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-19",
+  "title": "Async Class Method",
+  "starterCode": "class API {\n  async fetchData() {\n    return 'data';\n  }\n}\nnew API().fetchData().then(d => console.log(d));",
+  "solution": "class API {\n  async fetchData() {\n    return 'data';\n  }\n}\nnew API().fetchData().then(d => console.log(d));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "data"
+    }
+  ],
+  "hints": [
+    "Methods can be async",
+    "Returns promise"
+  ]
+}

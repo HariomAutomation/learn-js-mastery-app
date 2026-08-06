@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-08",
+  "title": "Mouseenter Event",
+  "starterCode": "const box = document.querySelector('.box');\nbox.addEventListener('mouseenter', function(e) {\n  console.log('entered');\n});",
+  "solution": "const box = document.querySelector('.box');\nbox.addEventListener('mouseenter', function(e) {\n  console.log('entered');\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "entered"
+    }
+  ],
+  "hints": [
+    "Fires when mouse enters element",
+    "Does not bubble"
+  ]
+}

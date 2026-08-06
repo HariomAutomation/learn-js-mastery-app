@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-47",
+  "title": "Get char code of a character",
+  "starterCode": "const ch = \"A\";\nconsole.log();",
+  "solution": "const ch = \"A\";\nconsole.log(ch.charCodeAt(0));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "65"
+    }
+  ],
+  "hints": [
+    "charCodeAt returns Unicode code point",
+    "A is 65 in ASCII"
+  ]
+}

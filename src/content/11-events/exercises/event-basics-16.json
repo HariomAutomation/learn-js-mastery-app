@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-16",
+  "title": "Change Event",
+  "starterCode": "const input = document.querySelector('input');\ninput.addEventListener('change', function(e) {\n  console.log('changed');\n});",
+  "solution": "const input = document.querySelector('input');\ninput.addEventListener('change', function(e) {\n  console.log('changed');\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "changed"
+    }
+  ],
+  "hints": [
+    "Fires when value changes and loses focus",
+    "Unlike input, fires once"
+  ]
+}

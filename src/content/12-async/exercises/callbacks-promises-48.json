@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-48",
+  "title": "Promise Resolve Undefined",
+  "starterCode": "Promise.resolve(undefined)\n  .then(val => console.log(typeof val));",
+  "solution": "Promise.resolve(undefined)\n  .then(val => console.log(typeof val));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "undefined"
+    }
+  ],
+  "hints": [
+    "Promise can resolve with undefined",
+    "then receives undefined"
+  ]
+}

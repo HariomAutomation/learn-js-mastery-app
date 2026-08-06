@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-24",
+  "title": "Invert Object",
+  "starterCode": "const obj = {a: 1, b: 2, c: 3};\nconst inverted = Object.fromEntries(Object.entries(obj).map(([k, v]) => [v, k]));\nconsole.log(inverted);",
+  "solution": "const obj = {a: 1, b: 2, c: 3};\nconst inverted = Object.fromEntries(Object.entries(obj).map(([k, v]) => [v, k]));\nconsole.log(inverted);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{ '1': 'a', '2': 'b', '3': 'c' }"
+    }
+  ],
+  "hints": [
+    "Swap keys and values",
+    "Map entries"
+  ]
+}

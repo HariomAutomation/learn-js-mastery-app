@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-patterns-30",
+  "title": "Sort Custom",
+  "starterCode": "const words = ['banana', 'apple', 'cherry'];\nwords.sort((a, b) => a.length - b.length);\nconsole.log(words);",
+  "solution": "const words = ['banana', 'apple', 'cherry'];\nwords.sort((a, b) => a.length - b.length);\nconsole.log(words);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 'apple', 'banana', 'cherry' ]"
+    }
+  ],
+  "hints": [
+    "Sort by length",
+    "Shorter first"
+  ]
+}

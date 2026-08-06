@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-21",
+  "title": "let loop scope",
+  "starterCode": "for (let i = 0; i < 3; i++) {\n  let x = i * 10\n  if (x === 20) console.log(x)\n}",
+  "solution": "for (let i = 0; i < 3; i++) {\n  let x = i * 10\n  if (x === 20) console.log(x)\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "20"
+    }
+  ],
+  "hints": [
+    "let scoped to loop iteration"
+  ]
+}

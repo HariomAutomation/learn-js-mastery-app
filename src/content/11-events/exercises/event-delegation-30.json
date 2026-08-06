@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-30",
+  "title": "Dynamic Content Handling",
+  "starterCode": "const container = document.querySelector('.container');\ncontainer.addEventListener('click', function(e) {\n  if (e.target.matches('.dynamic-btn')) {\n    console.log('dynamic button clicked');\n  }\n});",
+  "solution": "const container = document.querySelector('.container');\ncontainer.addEventListener('click', function(e) {\n  if (e.target.matches('.dynamic-btn')) {\n    console.log('dynamic button clicked');\n  }\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "dynamic button clicked"
+    }
+  ],
+  "hints": [
+    "matches checks if element matches selector",
+    "Works for future elements"
+  ]
+}

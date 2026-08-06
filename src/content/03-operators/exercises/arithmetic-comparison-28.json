@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-arithmetic-comparison-28",
+  "title": "Number.EPSILON for float comparison",
+  "starterCode": "const result = 0.1 + 0.2 === 0.3;\nconsole.log(result);",
+  "solution": "const result = 0.1 + 0.2 === 0.3;\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "false"
+    }
+  ],
+  "hints": [
+    "Floating point math is imprecise",
+    "0.1+0.2 is not exactly 0.3"
+  ]
+}

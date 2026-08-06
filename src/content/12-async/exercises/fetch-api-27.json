@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-27",
+  "title": "Fetch Keepalive",
+  "starterCode": "// keepalive: true for background requests\nconsole.log(\"keepalive survives page unload\");",
+  "solution": "// keepalive: true for background requests\nconsole.log(\"keepalive survives page unload\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "keepalive survives page unload"
+    }
+  ],
+  "hints": [
+    "Use for analytics beacons",
+    "Request continues after page close"
+  ]
+}

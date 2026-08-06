@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-while-32",
+  "title": "Inverted Pyramid",
+  "starterCode": "for (let i = 5; i >= 1; i--) {\n  let row = '';\n  for (let j = 0; j < 5 - i; j++) row += ' ';\n  for (let k = 0; k < 2 * i - 1; k++) row += '* ';\n  console.log(row);\n}",
+  "solution": "for (let i = 5; i >= 1; i--) {\n  let row = '';\n  for (let j = 0; j < 5 - i; j++) row += ' ';\n  for (let k = 0; k < 2 * i - 1; k++) row += '* ';\n  console.log(row);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "* * * * * * * * * \n  * * * * * * * \n    * * * * * \n      * * * \n        * "
+    }
+  ],
+  "hints": [
+    "Decrease stars each row",
+    "Add spaces before stars"
+  ]
+}

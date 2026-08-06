@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-40",
+  "title": "Custom Event Dispatch",
+  "starterCode": "const el = document.querySelector('.box');\nconst event = new CustomEvent('alert', { detail: 'warning' });\nel.addEventListener('alert', (e) => console.log(e.detail));\nel.dispatchEvent(event);",
+  "solution": "const el = document.querySelector('.box');\nconst event = new CustomEvent('alert', { detail: 'warning' });\nel.addEventListener('alert', (e) => console.log(e.detail));\nel.dispatchEvent(event);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "warning"
+    }
+  ],
+  "hints": [
+    "Create CustomEvent with detail",
+    "dispatchEvent triggers it"
+  ]
+}

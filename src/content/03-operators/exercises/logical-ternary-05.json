@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-05",
+  "title": "NOT operator",
+  "starterCode": "const result = !true;\nconsole.log(result);",
+  "solution": "const result = !true;\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "false"
+    }
+  ],
+  "hints": [
+    "! inverts boolean value",
+    "!true is false"
+  ]
+}

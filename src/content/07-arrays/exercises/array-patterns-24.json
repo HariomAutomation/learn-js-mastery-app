@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-patterns-24",
+  "title": "Difference Filter",
+  "starterCode": "const arr1 = [1, 2, 3, 4, 5];\nconst arr2 = [3, 4, 5];\nconst diff = arr1.filter(x => !arr2.includes(x));\nconsole.log(diff);",
+  "solution": "const arr1 = [1, 2, 3, 4, 5];\nconst arr2 = [3, 4, 5];\nconst diff = arr1.filter(x => !arr2.includes(x));\nconsole.log(diff);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 1, 2 ]"
+    }
+  ],
+  "hints": [
+    "Filter with !includes",
+    "Not in second array"
+  ]
+}

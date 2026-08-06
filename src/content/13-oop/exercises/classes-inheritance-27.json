@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-27",
+  "title": "Inheritance Chain",
+  "starterCode": "class A { foo() { return 'A'; } }\nclass B extends A { foo() { return 'B'; } }\nclass C extends B {}\nconsole.log(new C().foo());",
+  "solution": "class A { foo() { return 'A'; } }\nclass B extends A { foo() { return 'B'; } }\nclass C extends B {}\nconsole.log(new C().foo());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "B"
+    }
+  ],
+  "hints": [
+    "C inherits from B",
+    "B overrides foo"
+  ]
+}

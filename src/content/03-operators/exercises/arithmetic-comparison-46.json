@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-arithmetic-comparison-46",
+  "title": "parseFloat",
+  "starterCode": "const result = parseFloat(\"3.14em\");\nconsole.log(result);",
+  "solution": "const result = parseFloat(\"3.14em\");\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3.14"
+    }
+  ],
+  "hints": [
+    "parseFloat parses decimal numbers",
+    "Stops at 'e'"
+  ]
+}

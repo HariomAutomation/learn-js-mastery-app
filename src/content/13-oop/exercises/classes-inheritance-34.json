@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-34",
+  "title": "Method Overriding",
+  "starterCode": "class Animal {\n  speak() { return '...'; }\n}\nclass Cat extends Animal {\n  speak() { return 'meow'; }\n}\nconsole.log(new Cat().speak());",
+  "solution": "class Animal {\n  speak() { return '...'; }\n}\nclass Cat extends Animal {\n  speak() { return 'meow'; }\n}\nconsole.log(new Cat().speak());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "meow"
+    }
+  ],
+  "hints": [
+    "Override parent method",
+    "Same method name"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-while-06",
+  "title": "Continue Statement",
+  "starterCode": "for (let i = 0; i < 5; i++) {\n  if (i === 2) continue;\n  console.log(i);\n}",
+  "solution": "for (let i = 0; i < 5; i++) {\n  if (i === 2) continue;\n  console.log(i);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "0\n1\n3\n4"
+    }
+  ],
+  "hints": [
+    "continue skips current iteration",
+    "Use with if statement"
+  ]
+}

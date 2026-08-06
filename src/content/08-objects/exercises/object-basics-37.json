@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-object-basics-37",
+  "title": "Practice 8",
+  "starterCode": "const obj1 = {a: 1, b: {c: 2}};\nconst obj2 = {...obj1};\nobj2.b.c = 99;\nconsole.log(obj1.b.c);",
+  "solution": "const obj1 = {a: 1, b: {c: 2}};\nconst obj2 = {...obj1};\nobj2.b.c = 99;\nconsole.log(obj1.b.c);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "99"
+    }
+  ],
+  "hints": [
+    "Shallow clone only",
+    "Nested objects shared"
+  ]
+}

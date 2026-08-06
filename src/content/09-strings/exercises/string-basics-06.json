@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-06",
+  "title": "Index Access",
+  "starterCode": "const str = 'hello';\nconsole.log(str[1]);",
+  "solution": "const str = 'hello';\nconsole.log(str[1]);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "e"
+    }
+  ],
+  "hints": [
+    "Zero-based indexing",
+    "Bracket notation"
+  ]
+}

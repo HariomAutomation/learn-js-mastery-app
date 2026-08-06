@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-14",
+  "title": "Spread doesn't deep copy",
+  "starterCode": "const original = { a: { b: 1 } };\nconst copy = { ...original };\ncopy.a.b = 99;\nconsole.log();",
+  "solution": "const original = { a: { b: 1 } };\nconst copy = { ...original };\ncopy.a.b = 99;\nconsole.log(original.a.b);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "99"
+    }
+  ],
+  "hints": [
+    "Spread is only shallow",
+    "Nested objects still share references"
+  ]
+}

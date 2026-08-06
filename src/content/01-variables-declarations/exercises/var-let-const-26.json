@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-var-let-const-26",
+  "title": "let reassign string",
+  "starterCode": "let s = \"hello\"\ns = s + \" world\"\nconsole.log(s)",
+  "solution": "let s = \"hello\"\ns = s + \" world\"\nconsole.log(s)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hello world"
+    }
+  ],
+  "hints": [
+    "Strings are immutable, but let can reassign"
+  ]
+}

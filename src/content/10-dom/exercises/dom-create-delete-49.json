@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-49",
+  "title": "createElement Tag",
+  "starterCode": "const el = document.createElement('input');\nconsole.log(el.tagName);",
+  "solution": "const el = document.createElement('input');\nconsole.log(el.tagName);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "INPUT"
+    }
+  ],
+  "hints": [
+    "createElement takes tag name",
+    "Returns uppercase tagName"
+  ]
+}

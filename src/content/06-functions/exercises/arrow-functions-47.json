@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-47",
+  "title": "Arrow Return Bool",
+  "starterCode": "const isPositive = x => x > 0;\nconsole.log(isPositive(5));\nconsole.log(isPositive(-3));",
+  "solution": "const isPositive = x => x > 0;\nconsole.log(isPositive(5));\nconsole.log(isPositive(-3));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true\nfalse"
+    }
+  ],
+  "hints": [
+    "Expression returns boolean",
+    "Implicit return"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-50",
+  "title": "Promise Race Tie",
+  "starterCode": "Promise.race([\n  Promise.resolve('a'),\n  Promise.resolve('b')\n]).then(w => console.log(w));",
+  "solution": "Promise.race([\n  Promise.resolve('a'),\n  Promise.resolve('b')\n]).then(w => console.log(w));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "a"
+    }
+  ],
+  "hints": [
+    "Both resolve synchronously",
+    "First in array wins"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-var-let-const-23",
+  "title": "let block boundary for",
+  "starterCode": "for (let i = 0; i < 2; i++) {\n  let x = i * 10\n  console.log(x)\n}",
+  "solution": "for (let i = 0; i < 2; i++) {\n  let x = i * 10\n  console.log(x)\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "0\n10"
+    }
+  ],
+  "hints": [
+    "let is scoped to loop block"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-methods-06",
+  "title": "Splice Insert",
+  "starterCode": "const arr = ['a', 'c', 'd'];\narr.____(1, 0, 'b');\nconsole.log(arr);",
+  "solution": "const arr = ['a', 'c', 'd'];\narr.splice(1, 0, 'b');\nconsole.log(arr);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 'a', 'b', 'c', 'd' ]"
+    }
+  ],
+  "hints": [
+    "splice(index, 0, item) inserts",
+    "No elements removed"
+  ]
+}

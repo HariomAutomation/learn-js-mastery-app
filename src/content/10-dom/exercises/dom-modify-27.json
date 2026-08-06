@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-27",
+  "title": "dataset Delete",
+  "starterCode": "const el = document.querySelector('.item');\nel.dataset.id = '100';\ndelete el.dataset.id;\nconsole.log(el.dataset.id);",
+  "solution": "const el = document.querySelector('.item');\nel.dataset.id = '100';\ndelete el.dataset.id;\nconsole.log(el.dataset.id);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "undefined"
+    }
+  ],
+  "hints": [
+    "delete removes dataset property",
+    "Returns undefined when deleted"
+  ]
+}

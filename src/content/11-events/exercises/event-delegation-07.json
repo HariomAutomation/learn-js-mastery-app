@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-07",
+  "title": "preventDefault Delegated",
+  "starterCode": "const list = document.querySelector('ul');\nlist.addEventListener('click', function(e) {\n  if (e.target.tagName === 'A') {\n    e.preventDefault();\n    console.log('link blocked');\n  }\n});",
+  "solution": "const list = document.querySelector('ul');\nlist.addEventListener('click', function(e) {\n  if (e.target.tagName === 'A') {\n    e.preventDefault();\n    console.log('link blocked');\n  }\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "link blocked"
+    }
+  ],
+  "hints": [
+    "Check target to conditionally prevent",
+    "Links won't navigate"
+  ]
+}

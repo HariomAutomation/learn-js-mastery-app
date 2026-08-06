@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-29",
+  "title": "Strategy Complete",
+  "starterCode": "class Sorter {\n  constructor(strategy) { this.strategy = strategy; }\n  sort(arr) { return this.strategy(arr); }\n}\nconst asc = (arr) => [...arr].sort((a, b) => a - b);\nconst desc = (arr) => [...arr].sort((a, b) => b - a);\nconst sorter = new Sorter(asc);\nconsole.log(sorter.sort([3, 1, 2]));",
+  "solution": "class Sorter {\n  constructor(strategy) { this.strategy = strategy; }\n  sort(arr) { return this.strategy(arr); }\n}\nconst asc = (arr) => [...arr].sort((a, b) => a - b);\nconst desc = (arr) => [...arr].sort((a, b) => b - a);\nconst sorter = new Sorter(asc);\nconsole.log(sorter.sort([3, 1, 2]));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1,2,3"
+    }
+  ],
+  "hints": [
+    "Inject strategy",
+    "Swap algorithm at runtime"
+  ]
+}

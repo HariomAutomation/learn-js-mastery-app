@@ -1,0 +1,17 @@
+{
+  "id": "04-control-flow-early-return-50",
+  "title": "Early return with array method",
+  "starterCode": "function sumPositive(arr) {\n  if (!Array.isArray(arr)) return 0;\n  return arr.filter(n => n > 0).reduce((sum, n) => sum + n, 0);\n}\nconsole.log(sumPositive([-1, 2, -3, 4]));",
+  "solution": "function sumPositive(arr) {\n  if (!Array.isArray(arr)) return 0;\n  return arr.filter(n => n > 0).reduce((sum, n) => sum + n, 0);\n}\nconsole.log(sumPositive([-1, 2, -3, 4]));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "6"
+    }
+  ],
+  "hints": [
+    "arr is an array",
+    "filter keeps positive numbers",
+    "reduce sums them"
+  ]
+}

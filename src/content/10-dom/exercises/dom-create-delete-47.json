@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-47",
+  "title": "Fragment Batch Insert",
+  "starterCode": "const frag = document.createDocumentFragment();\nfor (let i = 0; i < 3; i++) {\n  frag.appendChild(document.createElement('div'));\n}\nconst container = document.createElement('div');\ncontainer.appendChild(frag);\nconsole.log(container.children.length);",
+  "solution": "const frag = document.createDocumentFragment();\nfor (let i = 0; i < 3; i++) {\n  frag.appendChild(document.createElement('div'));\n}\nconst container = document.createElement('div');\ncontainer.appendChild(frag);\nconsole.log(container.children.length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3"
+    }
+  ],
+  "hints": [
+    "Fragment children move to container",
+    "Efficient batch operation"
+  ]
+}

@@ -1,0 +1,54 @@
+[
+  {
+    "question": "Object mein keys hamesha kis type ke hote hain?",
+    "options": ["Number", "String", "Boolean", "Any type"],
+    "correctIndex": 1,
+    "explanation": "Object keys hamesha strings hote hain. Number bhi string mein convert ho jaata hai. Symbol bhi ho sakta hai (rare)."
+  },
+  {
+    "question": "Optional chaining (?.) kya karta hai?",
+    "options": ["Error throw karta hai", "Safe access — undefined return karta hai agar property nahi hai", "Property delete karta hai", "Object copy karta hai"],
+    "correctIndex": 1,
+    "explanation": "?. safe access karta hai. Agar nested property undefined hai to error nahi, undefined return karta hai."
+  },
+  {
+    "question": "Shallow copy aur deep copy mein kya farq hai?",
+    "options": ["Koi farq nahi", "Shallow sirf 1 level copy karta hai, deep saari levels", "Deep sirf 1 level, shallow saari levels", "Shallow slow hai"],
+    "correctIndex": 1,
+    "explanation": "Shallow copy ({...obj}) sirf pehle level ki properties copy karta hai. Nested objects same reference rahenge. Deep copy independent copies banata hai."
+  },
+  {
+    "question": "Object.entries() kya return karta hai?",
+    "options": ["Array of keys", "Array of values", "Array of [key, value] pairs", "Object"],
+    "correctIndex": 2,
+    "explanation": "Object.entries() [[key1, val1], [key2, val2]] format mein array return karta hai. Useful for iteration."
+  },
+  {
+    "question": "delete obj.key kya karta hai?",
+    "options": ["Key ki value null karta hai", "Key aur value dono delete karta hai", "Object ko clone karta hai", "Error throw karta hai"],
+    "correctIndex": 1,
+    "explanation": "delete operator object se key-value pair completely remove karta hai. Key ab access karne par undefined milega."
+  },
+  {
+    "question": "JSON.parse(JSON.stringify(obj)) ka limitation kya hai?",
+    "options": [
+      "Functions, undefined, Date lose ho jaate hain",
+      "Sirf 1 level copy karta hai",
+      "Error throw karta hai",
+      "Koi limitation nahi"
+    ],
+    "correctIndex": 0,
+    "explanation": "JSON method functions, undefined, Date, Symbol sab lose kar deta hai. Sirf plain data (strings, numbers, arrays, objects) sahi kaam karta hai."
+  },
+  {
+    "question": "Computed properties [key]: value kab use hoti hain?",
+    "options": [
+      "Jab key static ho",
+      "Jab variable ko key ki tarah use karna ho",
+      "Jab object copy karna ho",
+      "Jab property delete karni ho"
+    ],
+    "correctIndex": 1,
+    "explanation": "Computed properties jab variable ko key banana padta hai: { [dynamicKey]: value }. Key runtime pe decide hoti hai."
+  }
+]

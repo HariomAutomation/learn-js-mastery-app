@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-15",
+  "title": "innerHTML Create",
+  "starterCode": "const el = document.createElement('div');\nel.innerHTML = '<span>Hi</span>';\nconsole.log(el.children.length);",
+  "solution": "const el = document.createElement('div');\nel.innerHTML = '<span>Hi</span>';\nconsole.log(el.children.length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1"
+    }
+  ],
+  "hints": [
+    "innerHTML creates DOM elements",
+    "Parse HTML into elements"
+  ]
+}

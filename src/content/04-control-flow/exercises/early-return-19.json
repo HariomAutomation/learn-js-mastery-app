@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-early-return-19",
+  "title": "Guard function - no email",
+  "starterCode": "function isValidEmail(email) {\n  if (!email) return false;\n  if (typeof email !== 'string') return false;\n  return email.includes('@');\n}\nconsole.log(isValidEmail(''));",
+  "solution": "function isValidEmail(email) {\n  if (!email) return false;\n  if (typeof email !== 'string') return false;\n  return email.includes('@');\n}\nconsole.log(isValidEmail(''));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "false"
+    }
+  ],
+  "hints": [
+    "'' is falsy",
+    "First guard returns false"
+  ]
+}

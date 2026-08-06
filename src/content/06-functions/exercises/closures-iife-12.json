@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-closures-iife-12",
+  "title": "IIFE With Arguments",
+  "starterCode": "const result = (function(a, b) {\n  return a + b;\n})(3, 7);\nconsole.log(result);",
+  "solution": "const result = (function(a, b) {\n  return a + b;\n})(3, 7);\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10"
+    }
+  ],
+  "hints": [
+    "Pass args after function",
+    "Return value"
+  ]
+}

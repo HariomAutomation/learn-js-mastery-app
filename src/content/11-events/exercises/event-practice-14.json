@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-14",
+  "title": "Sticky Header",
+  "starterCode": "// Scroll to add fixed class to header\nconsole.log(\"sticky header pattern\");",
+  "solution": "// Scroll to add fixed class to header\nconsole.log(\"sticky header pattern\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "sticky header pattern"
+    }
+  ],
+  "hints": [
+    "Check scroll position",
+    "Add/remove fixed class"
+  ]
+}

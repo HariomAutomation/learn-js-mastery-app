@@ -1,0 +1,22 @@
+[
+  { "question": "Closure kya hai?", "options": ["Inner function + outer vars ka access", "Class", "Loop", "Object"], "correctIndex": 0, "explanation": "Inner function outer scope ko remember karta hai." },
+  { "question": "function outer() { let x = 10; return function() { return x } } — inner x kaise access karta hai?", "options": ["Closure se", "Global se", "Prototype se", "Nahi karta"], "correctIndex": 0, "explanation": "Closure — outer variable ki memory." },
+  { "question": "Counter closure pattern:", "options": ["let count = 0; return () => ++count", "return count = 0", "for (count)", "Object"], "correctIndex": 0, "explanation": "Closure private state banata hai." },
+  { "question": "IIFE ka full form?", "options": ["Immediately Invoked Function Expression", "Inline Function", "Index Function", "Internal File"], "correctIndex": 0, "explanation": "Immediately Invoked Function Expression." },
+  { "question": "IIFE ka syntax?", "options": ["(function() { ... })()", "function() {}()", "function(){ }()", "All correct"], "correctIndex": 0, "explanation": "Parens wrap + call — IFFE." },
+  { "question": "IIFE ka purpose?", "options": ["Scope create karna, global pollution rokna", "Loop banana", "Class banna", "Style"], "correctIndex": 0, "explanation": "Private scope — global mein na pade." },
+  { "question": "Loop closure bug kya hai?", "options": ["var ka shared scope", "let ka block scope", "Return", "Parameter"], "correctIndex": 0, "explanation": "var loop mein ek hi binding — let fix karta hai." },
+  { "question": "for (let i=0; i<3; i++) setTimeout(() => console.log(i)) → ?", "options": ["0, 1, 2", "3, 3, 3", "0, 0, 0", "Error"], "correctIndex": 0, "explanation": "let block scope — har iteration alag i." },
+  { "question": "for (var i=0; i<3; i++) setTimeout(() => console.log(i)) → ?", "options": ["3, 3, 3", "0, 1, 2", "1, 2, 3", "Error"], "correctIndex": 0, "explanation": "var shared — closure sab 3 dekhte hain." },
+  { "question": "Closure ki memory kab free hoti hai?", "options": ["Jab outer function destroy", "Kabhi nahi", "Immediately", "Page reload pe"], "correctIndex": 0, "explanation": "Jab tak closure exists, vars memory mein." },
+  { "question": "IIFE kya return kar sakta hai?", "options": ["Kuch bhi — value", "Sirf undefined", "Object only", "Function only"], "correctIndex": 0, "explanation": "IIFE normal expression ki tarah value deta hai." },
+  { "question": "let res = (function(a,b) { return a*b })(3,4) → res?", "options": ["12", "7", "34", "undefined"], "correctIndex": 0, "explanation": "3 * 4 = 12." },
+  { "question": "Module pattern kya use karta hai?", "options": ["IIFE + closure", "Class + extends", "Loop", "Array"], "correctIndex": 0, "explanation": "IIFE mein private vars + public API return." },
+  { "question": "Closure chain — nested functions?", "options": ["Har level access hai", "Sirf ek level", "Koi access nahi", "Error"], "correctIndex": 0, "explanation": "Lexical scope — inner ko saare outer access." },
+  { "question": "let x = 5; function f() { return x } — x kaise milta hai?", "options": ["Lexical scope (closure)", "Global", "Hoisting", "Impossible"], "correctIndex": 0, "explanation": "Function apne defining scope ko access karta hai." },
+  { "question": "IIFE mein 'use strict' kyu daalte the?", "options": ["Scope-safe strict mode", "Speed", "For loops", "Types"], "correctIndex": 0, "explanation": "IIFE ko strict banata tha, baaki file normal." },
+  { "question": "Closure counter: const inc = counter(); inc(); inc(); → ?", "options": ["1, 2", "1, 1", "0, 0", "Error"], "correctIndex": 0, "explanation": "Private count har call pe update." },
+  { "question": "Arrow function closure mein this kaise hota hai?", "options": ["Lexical — outer this", "Apna this", "Global", "Undefined"], "correctIndex": 0, "explanation": "Arrow outer ka this inherit karta hai." },
+  { "question": "Private variable closure se kaise banate hain?", "options": ["IIFE/closure ke andar rakho", "let global", "var global", "const public"], "correctIndex": 0, "explanation": "Inner scope — bahar se access nahi." },
+  { "question": "Why IIFE syntax (function(){})()?", "options": ["Statement vs expression issue", "Style choice", "Speed", "Types"], "correctIndex": 0, "explanation": "Statement shuru hone se bachne ke liye parens." }
+]

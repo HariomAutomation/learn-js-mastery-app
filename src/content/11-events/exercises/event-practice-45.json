@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-45",
+  "title": "Click Outside",
+  "starterCode": "// Close modal when clicking outside\nconsole.log(\"click outside pattern\");",
+  "solution": "// Close modal when clicking outside\nconsole.log(\"click outside pattern\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "click outside pattern"
+    }
+  ],
+  "hints": [
+    "Check if target is modal itself",
+    "Close on backdrop click"
+  ]
+}

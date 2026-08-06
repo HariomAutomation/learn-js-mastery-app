@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-48",
+  "title": "Switch with bitwise OR",
+  "starterCode": "const flags = 5;\nswitch (flags) {\n  case 1: console.log('flag1'); break;\n  case 2: console.log('flag2'); break;\n  case 3: console.log('flag3'); break;\n  default: console.log('other');\n}",
+  "solution": "const flags = 5;\nswitch (flags) {\n  case 1: console.log('flag1'); break;\n  case 2: console.log('flag2'); break;\n  case 3: console.log('flag3'); break;\n  default: console.log('other');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "other"
+    }
+  ],
+  "hints": [
+    "5 doesn't match 1, 2, or 3",
+    "default executes"
+  ]
+}

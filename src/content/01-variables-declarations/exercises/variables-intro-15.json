@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-variables-intro-15",
+  "title": "Block scope shadowing",
+  "starterCode": "let x = \"outer\"\nif (true) {\n  let x = \"inner\"\n  console.log(x)\n}\nconsole.log(x)",
+  "solution": "let x = \"outer\"\nif (true) {\n  let x = \"inner\"\n  console.log(x)\n}\nconsole.log(x)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "inner\nouter"
+    }
+  ],
+  "hints": [
+    "let is block-scoped"
+  ]
+}

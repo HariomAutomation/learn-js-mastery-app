@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-14",
+  "title": "classList toggle",
+  "starterCode": "const el = document.querySelector('.box');\nel.classList.toggle('active');\nconsole.log(el.classList.contains('active'));",
+  "solution": "const el = document.querySelector('.box');\nel.classList.toggle('active');\nconsole.log(el.classList.contains('active'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "toggle adds if not present, removes if present",
+    "Returns true if added"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-31",
+  "title": "Count Letters",
+  "starterCode": "function countLetters(str) {\n  return str.split('').reduce((acc, c) => ({...acc, [c]: (acc[c] || 0) + 1}), {});\n}\nconsole.log(countLetters('hello'));",
+  "solution": "function countLetters(str) {\n  return str.split('').reduce((acc, c) => ({...acc, [c]: (acc[c] || 0) + 1}), {});\n}\nconsole.log(countLetters('hello'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{ h: 1, e: 1, l: 2, o: 1 }"
+    }
+  ],
+  "hints": [
+    "Reduce to frequency",
+    "Count each letter"
+  ]
+}

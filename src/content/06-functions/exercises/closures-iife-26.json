@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-closures-iife-26",
+  "title": "Private Data",
+  "starterCode": "function createUser(name, salary) {\n  return {\n    getName: () => name,\n    getSalary: () => salary,\n    raise: (amount) => { salary += amount; }\n  };\n}\nconst user = createUser('Alice', 50000);\nconsole.log(user.getName());\nuser.raise(5000);\nconsole.log(user.getSalary());",
+  "solution": "function createUser(name, salary) {\n  return {\n    getName: () => name,\n    getSalary: () => salary,\n    raise: (amount) => { salary += amount; }\n  };\n}\nconst user = createUser('Alice', 50000);\nconsole.log(user.getName());\nuser.raise(5000);\nconsole.log(user.getSalary());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Alice\n55000"
+    }
+  ],
+  "hints": [
+    "salary is private",
+    "Methods access it"
+  ]
+}

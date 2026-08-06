@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-modify-09",
+  "title": "getComputedStyle",
+  "starterCode": "const el = document.querySelector('.box');\nconst computed = window.getComputedStyle(el);\nconsole.log(typeof computed);",
+  "solution": "const el = document.querySelector('.box');\nconst computed = window.getComputedStyle(el);\nconsole.log(typeof computed);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "object"
+    }
+  ],
+  "hints": [
+    "getComputedStyle returns CSSStyleDeclaration",
+    "Shows computed (final) styles"
+  ]
+}

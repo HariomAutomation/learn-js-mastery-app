@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-15",
+  "title": "stopImmediatePropagation",
+  "starterCode": "const btn = document.querySelector('button');\nbtn.addEventListener('click', function(e) {\n  e.stopImmediatePropagation();\n  console.log('first');\n});\nbtn.addEventListener('click', function() {\n  console.log('second');\n});",
+  "solution": "const btn = document.querySelector('button');\nbtn.addEventListener('click', function(e) {\n  e.stopImmediatePropagation();\n  console.log('first');\n});\nbtn.addEventListener('click', function() {\n  console.log('second');\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "first"
+    }
+  ],
+  "hints": [
+    "stopImmediatePropagation stops all handlers",
+    "Even on same element"
+  ]
+}

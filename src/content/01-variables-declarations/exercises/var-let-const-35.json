@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-var-let-const-35",
+  "title": "let scope example",
+  "starterCode": "let x = 1\nfunction test() {\n  console.log(x)\n}\ntest()",
+  "solution": "let x = 1\nfunction test() {\n  console.log(x)\n}\ntest()",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1"
+    }
+  ],
+  "hints": [
+    "let in global scope is accessible"
+  ]
+}

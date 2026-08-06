@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-23",
+  "title": "This Binding Patterns",
+  "starterCode": "const obj = {\n  value: 42,\n  getValue: function() {\n    return () => this.value;\n  }\n};\nconsole.log(obj.getValue()());",
+  "solution": "const obj = {\n  value: 42,\n  getValue: function() {\n    return () => this.value;\n  }\n};\nconsole.log(obj.getValue()());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "42"
+    }
+  ],
+  "hints": [
+    "Arrow captures this",
+    "From outer function"
+  ]
+}

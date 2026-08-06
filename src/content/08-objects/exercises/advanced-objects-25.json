@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-advanced-objects-25",
+  "title": "FromEntries Practice",
+  "starterCode": "const entries = [['x', 10], ['y', 20], ['z', 30]];\nconst obj = Object.fromEntries(entries);\nconsole.log(obj.x + obj.y + obj.z);",
+  "solution": "const entries = [['x', 10], ['y', 20], ['z', 30]];\nconst obj = Object.fromEntries(entries);\nconsole.log(obj.x + obj.y + obj.z);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "60"
+    }
+  ],
+  "hints": [
+    "fromEntries converts",
+    "Sum values"
+  ]
+}

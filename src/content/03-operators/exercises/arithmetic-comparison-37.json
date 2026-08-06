@@ -1,0 +1,15 @@
+{
+  "id": "03-operators-arithmetic-comparison-37",
+  "title": "Compound addition (+=)",
+  "starterCode": "let x = 10;\nx += 5;\nconsole.log(x);",
+  "solution": "let x = 10;\nx += 5;\nconsole.log(x);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "15"
+    }
+  ],
+  "hints": [
+    "x += 5 is the same as x = x + 5"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-26",
+  "title": "Event Sourcing",
+  "starterCode": "class EventStore {\n  constructor() { this.events = []; }\n  add(event) { this.events.push(event); }\n  getEvents() { return this.events; }\n}\nconst store = new EventStore();\nstore.add({ type: 'created', data: {} });\nconsole.log(store.getEvents().length);",
+  "solution": "class EventStore {\n  constructor() { this.events = []; }\n  add(event) { this.events.push(event); }\n  getEvents() { return this.events; }\n}\nconst store = new EventStore();\nstore.add({ type: 'created', data: {} });\nconsole.log(store.getEvents().length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1"
+    }
+  ],
+  "hints": [
+    "Store events instead of state",
+    "Rebuild state from events"
+  ]
+}

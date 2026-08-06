@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-patterns-practice-04",
+  "title": "Fibonacci Loop",
+  "starterCode": "let a = 0, b = 1;\nfor (let i = 0; i < 10; i++) {\n  process.stdout.write(a + ' ');\n  [a, b] = [b, a + b];\n}\nconsole.log();",
+  "solution": "let a = 0, b = 1;\nfor (let i = 0; i < 10; i++) {\n  process.stdout.write(a + ' ');\n  [a, b] = [b, a + b];\n}\nconsole.log();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "0 1 1 2 3 5 8 13 21 34 "
+    }
+  ],
+  "hints": [
+    "Swap with destructuring",
+    "Start with 0 and 1"
+  ]
+}

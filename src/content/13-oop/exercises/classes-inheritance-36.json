@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-36",
+  "title": "Class Complete",
+  "starterCode": "// Classes: declaration, inheritance, private, static\nconsole.log(\"classes complete\");",
+  "solution": "// Classes: declaration, inheritance, private, static\nconsole.log(\"classes complete\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "classes complete"
+    }
+  ],
+  "hints": [
+    "Review all class concepts",
+    "Practice building class hierarchies"
+  ]
+}

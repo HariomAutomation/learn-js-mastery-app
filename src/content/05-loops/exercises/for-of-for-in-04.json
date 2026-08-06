@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-04",
+  "title": "For...Of Sets",
+  "starterCode": "const set = new Set([1, 2, 3]);\nfor (const val of set) {\n  console.log(val);\n}",
+  "solution": "const set = new Set([1, 2, 3]);\nfor (const val of set) {\n  console.log(val);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1\n2\n3"
+    }
+  ],
+  "hints": [
+    "Set has unique values",
+    "Iterates in insertion order"
+  ]
+}

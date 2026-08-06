@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-29",
+  "title": "Group Anagrams",
+  "starterCode": "function groupAnagrams(strs) {\n  const map = {};\n  for (const s of strs) {\n    const key = s.split('').sort().join('');\n    map[key] = map[key] || [];\n    map[key].push(s);\n  }\n  return Object.values(map);\n}\nconsole.log(groupAnagrams(['eat','tea','tan','ate','nat','bat']));",
+  "solution": "function groupAnagrams(strs) {\n  const map = {};\n  for (const s of strs) {\n    const key = s.split('').sort().join('');\n    map[key] = map[key] || [];\n    map[key].push(s);\n  }\n  return Object.values(map);\n}\nconsole.log(groupAnagrams(['eat','tea','tan','ate','nat','bat']));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ [ 'eat', 'tea', 'ate' ], [ 'tan', 'nat' ], [ 'bat' ] ]"
+    }
+  ],
+  "hints": [
+    "Sort chars as key",
+    "Group by anagram"
+  ]
+}

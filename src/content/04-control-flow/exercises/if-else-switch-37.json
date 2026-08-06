@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-37",
+  "title": "Switch with undefined",
+  "starterCode": "const value = undefined;\nswitch (value) {\n  case null:\n    console.log('null');\n    break;\n  case undefined:\n    console.log('undefined');\n    break;\n  default:\n    console.log('other');\n}",
+  "solution": "const value = undefined;\nswitch (value) {\n  case null:\n    console.log('null');\n    break;\n  case undefined:\n    console.log('undefined');\n    break;\n  default:\n    console.log('other');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "undefined"
+    }
+  ],
+  "hints": [
+    "undefined matches case undefined",
+    "switch uses === comparison"
+  ]
+}

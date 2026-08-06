@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-15",
+  "title": "Array reference sharing",
+  "starterCode": "const a = [1, 2];\nconst b = a;\nb.push(3);\nconsole.log();",
+  "solution": "const a = [1, 2];\nconst b = a;\nb.push(3);\nconsole.log(a.length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3"
+    }
+  ],
+  "hints": [
+    "Arrays are objects too",
+    "Modifying b modifies a"
+  ]
+}

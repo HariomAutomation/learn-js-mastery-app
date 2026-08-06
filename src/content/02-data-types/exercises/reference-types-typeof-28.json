@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-28",
+  "title": "typeof undefined",
+  "starterCode": "let x;\nconsole.log();",
+  "solution": "let x;\nconsole.log(typeof x);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "undefined"
+    }
+  ],
+  "hints": [
+    "typeof undefined returns 'undefined'",
+    "This is the correct behavior"
+  ]
+}

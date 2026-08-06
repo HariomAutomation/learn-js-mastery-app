@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-36",
+  "title": "Arrow Destructure Array",
+  "starterCode": "const process = ([a, b]) => a + b;\nconsole.log(process([3, 7]));",
+  "solution": "const process = ([a, b]) => a + b;\nconsole.log(process([3, 7]));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10"
+    }
+  ],
+  "hints": [
+    "Destructure in param",
+    "Sum elements"
+  ]
+}

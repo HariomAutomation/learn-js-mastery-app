@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-31",
+  "title": "OR returns last if all falsy",
+  "starterCode": "const result = 0 || \"\" || null;\nconsole.log(result);",
+  "solution": "const result = 0 || \"\" || null;\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "null"
+    }
+  ],
+  "hints": [
+    "|| returns last value if all falsy",
+    "All are falsy"
+  ]
+}

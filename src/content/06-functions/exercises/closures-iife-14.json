@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-closures-iife-14",
+  "title": "Private Methods",
+  "starterCode": "function createBank() {\n  let balance = 0;\n  function validate(amount) {\n    return amount > 0;\n  }\n  return {\n    deposit: (amount) => {\n      if (validate(amount)) balance += amount;\n    },\n    getBalance: () => balance\n  };\n}\nconst bank = createBank();\nbank.deposit(100);\nbank.deposit(50);\nconsole.log(bank.getBalance());",
+  "solution": "function createBank() {\n  let balance = 0;\n  function validate(amount) {\n    return amount > 0;\n  }\n  return {\n    deposit: (amount) => {\n      if (validate(amount)) balance += amount;\n    },\n    getBalance: () => balance\n  };\n}\nconst bank = createBank();\nbank.deposit(100);\nbank.deposit(50);\nconsole.log(bank.getBalance());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "150"
+    }
+  ],
+  "hints": [
+    "validate is private",
+    "Not exposed in return"
+  ]
+}

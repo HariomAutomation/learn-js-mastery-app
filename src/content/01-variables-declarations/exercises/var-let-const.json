@@ -1,0 +1,11 @@
+{
+  "id": "01-variables-declarations-var-let-const",
+  "title": "var vs let vs const ka farq check karo",
+  "starterCode": "// Is code ko run karo aur har line ka result socho\n{\n  var a = 10\n  let b = 20\n  const c = 30\n}\n\nconsole.log(a)\n// console.log(b) // is line ko uncomment karo\n// console.log(c) // is line ko uncomment karo\n",
+  "solution": "{\n  var a = 10\n  let b = 20\n  const c = 30\n}\nconsole.log(a) // 10 — var block ke bahar bhi accessible\n// console.log(b) // ReferenceError — let block scoped\n// console.log(c) // ReferenceError — const block scoped",
+  "tests": [{ "input": [], "expected": "10" }],
+  "hints": [
+    "var block {} ke bahar bhi chalta hai",
+    "let aur const block ke andar hi rehte hain"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-26",
+  "title": "Animation Trigger",
+  "starterCode": "// Scroll to trigger animation\nconsole.log(\"scroll animation trigger\");",
+  "solution": "// Scroll to trigger animation\nconsole.log(\"scroll animation trigger\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "scroll animation trigger"
+    }
+  ],
+  "hints": [
+    "Check element position",
+    "Add animate class when visible"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-32",
+  "title": "Await Promise.allSettled",
+  "starterCode": "async function allSettled() {\n  const results = await Promise.allSettled([\n    Promise.resolve('ok'),\n    Promise.reject('fail')\n  ]);\n  console.log(results.length);\n}\nallSettled();",
+  "solution": "async function allSettled() {\n  const results = await Promise.allSettled([\n    Promise.resolve('ok'),\n    Promise.reject('fail')\n  ]);\n  console.log(results.length);\n}\nallSettled();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2"
+    }
+  ],
+  "hints": [
+    "allSettled never rejects",
+    "Returns all results"
+  ]
+}

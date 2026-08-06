@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-function-basics-06",
+  "title": "Rest Parameters",
+  "starterCode": "function sum(...nums) {\n  let total = 0;\n  for (const n of nums) {\n    total += n;\n  }\n  return total;\n}\nconsole.log(sum(1, 2, 3, 4));",
+  "solution": "function sum(...nums) {\n  let total = 0;\n  for (const n of nums) {\n    total += n;\n  }\n  return total;\n}\nconsole.log(sum(1, 2, 3, 4));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10"
+    }
+  ],
+  "hints": [
+    "...args collects arguments",
+    "Use for...of to iterate"
+  ]
+}

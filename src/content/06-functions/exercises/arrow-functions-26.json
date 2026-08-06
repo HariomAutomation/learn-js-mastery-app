@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-26",
+  "title": "Arrow Vs Expression",
+  "starterCode": "const add1 = function(a, b) { return a + b; };\nconst add2 = (a, b) => a + b;\nconsole.log(add1(2, 3));\nconsole.log(add2(2, 3));",
+  "solution": "const add1 = function(a, b) { return a + b; };\nconst add2 = (a, b) => a + b;\nconsole.log(add1(2, 3));\nconsole.log(add2(2, 3));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "5\n5"
+    }
+  ],
+  "hints": [
+    "Both produce same result",
+    "Arrow is shorter"
+  ]
+}

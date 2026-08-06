@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-29",
+  "title": "Delegation vs Direct",
+  "starterCode": "// Direct: listener on each element\n// Delegation: one listener on parent\nconsole.log(\"delegation is more efficient\");",
+  "solution": "// Direct: listener on each element\n// Delegation: one listener on parent\nconsole.log(\"delegation is more efficient\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "delegation is more efficient"
+    }
+  ],
+  "hints": [
+    "Fewer listeners = less memory",
+    "Works with dynamic elements"
+  ]
+}

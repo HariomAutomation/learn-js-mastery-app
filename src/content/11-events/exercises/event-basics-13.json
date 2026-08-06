@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-13",
+  "title": "Dblclick Event",
+  "starterCode": "const box = document.querySelector('.box');\nbox.addEventListener('dblclick', function(e) {\n  console.log('double clicked');\n});",
+  "solution": "const box = document.querySelector('.box');\nbox.addEventListener('dblclick', function(e) {\n  console.log('double clicked');\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "double clicked"
+    }
+  ],
+  "hints": [
+    "dblclick fires on double click",
+    "Must click twice quickly"
+  ]
+}

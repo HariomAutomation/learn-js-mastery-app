@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-16",
+  "title": "Hoisting order",
+  "starterCode": "console.log(typeof a)\nvar a = 1\nfunction a() {}\nconsole.log(typeof a)",
+  "solution": "console.log(typeof a)\nvar a = 1\nfunction a() {}\nconsole.log(typeof a)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "function\nnumber"
+    }
+  ],
+  "hints": [
+    "Function hoisted first, then var"
+  ]
+}

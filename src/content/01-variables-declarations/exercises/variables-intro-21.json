@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-variables-intro-21",
+  "title": "BigInt operations",
+  "starterCode": "console.log(BigInt(9007199254740991) + 1n)",
+  "solution": "console.log(BigInt(9007199254740991) + 1n)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "9007199254740992"
+    }
+  ],
+  "hints": [
+    "Use n suffix for BigInt literals"
+  ]
+}

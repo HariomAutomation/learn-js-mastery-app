@@ -1,0 +1,22 @@
+[
+  { "question": "JavaScript mein kitne primitive types hain?", "options": ["5", "6", "7", "8"], "correctIndex": 2, "explanation": "7 primitives: string, number, boolean, undefined, null, symbol, bigint." },
+  { "question": "Kaunsa primitive type nahi hai?", "options": ["string", "object", "number", "boolean"], "correctIndex": 1, "explanation": "Object reference type hai, primitive nahi." },
+  { "question": "typeof \"hello\" kya return karta hai?", "options": ["hello", "string", "text", "char"], "correctIndex": 1, "explanation": "typeof \"hello\" = \"string\"." },
+  { "question": "BigInt kaise likha jaata hai?", "options": ["123", "123.0", "123n", "\"123\""], "correctIndex": 2, "explanation": "BigInt ke end mein n suffix: 123n." },
+  { "question": "Symbol ka use kahan hota hai?", "options": ["Unique identifiers banane ke liye", "Numbers ke liye", "Strings ke liye", "Loops ke liye"], "correctIndex": 0, "explanation": "Symbol guaranteed unique identifier banata hai — object keys mein use hota hai." },
+  { "question": "undefined ka matlab kya hai?", "options": ["Intentionally empty value", "Variable declared lekin value assign nahi", "Zero value", "Error value"], "correctIndex": 1, "explanation": "undefined = kabhi assign nahi hua. null = intentionally empty." },
+  { "question": "null ka matlab kya hai?", "options": ["Variable undefined hai", "Intentional empty value — khud set kiya", "Zero hai", "Error hai"], "correctIndex": 1, "explanation": "null ko developer deliberately set karta hai — 'kuch nahi hai'." },
+  { "question": "typeof null ka output?", "options": ["null", "undefined", "object", "number"], "correctIndex": 2, "explanation": "typeof null = 'object' — JS ka historical bug." },
+  { "question": "typeof 123n ka output?", "options": ["number", "bigint", "object", "string"], "correctIndex": 1, "explanation": "typeof 123n = 'bigint'." },
+  { "question": "Primitive types immutable hote hain?", "options": ["Nahi", "Haan — value change nahi ho sakti, naya banata hai", "Sirf strings", "Sirf numbers"], "correctIndex": 1, "explanation": "Primitives immutable hain — operations nayi value return karte hain." },
+  { "question": "3.14 kis type ki value hai?", "options": ["string", "number", "float", "decimal"], "correctIndex": 1, "explanation": "JS mein float alag type nahi — sab number." },
+  { "question": "let x; x ki value kya hai?", "options": ["null", "undefined", "0", "NaN"], "correctIndex": 1, "explanation": "Bina assignment ke let x undefined hota hai." },
+  { "question": "typeof Symbol() ka output?", "options": ["object", "symbol", "string", "function"], "correctIndex": 1, "explanation": "typeof Symbol() = 'symbol'." },
+  { "question": "Primitive value kahan store hoti hai?", "options": ["Heap mein", "Directly (stack mein)", "Database mein", "File mein"], "correctIndex": 1, "explanation": "Primitives directly value ke roop mein store hote hain (call stack)." },
+  { "question": "String literal kaise likhte hain?", "options": ["\"text\", 'text', ya `text`", "Sirf \"text\"", "Sirf 'text'", "text bina quotes"], "correctIndex": 0, "explanation": "Strings double, single, ya backtick quotes se ban sakte hain." },
+  { "question": "Boolean ke kitne possible values?", "options": ["1", "2 (true, false)", "3", "4"], "correctIndex": 1, "explanation": "Boolean sirf true ya false — 2 values." },
+  { "question": "-99 kis type ki value hai?", "options": ["string", "number", "boolean", "bigint"], "correctIndex": 1, "explanation": "Negative numbers bhi number type hain." },
+  { "question": "typeof function(){} ka output?", "options": ["object", "function", "method", "undefined"], "correctIndex": 1, "explanation": "Functions ko typeof 'function' deta hai — special case." },
+  { "question": "Primitive aur reference type mein sabse bada farq?", "options": ["Primitive value se copy, reference pointer se copy", "Koi farq nahi", "Reference fast hai", "Primitive only in browser"], "correctIndex": 0, "explanation": "Primitives copy by value; objects/arrays copy by reference." },
+  { "question": "typeof \"Sheryians\" ka result?", "options": ["Sheryians", "string", "text", "object"], "correctIndex": 1, "explanation": "typeof kisi bhi string value ka 'string' return karta hai." }
+]

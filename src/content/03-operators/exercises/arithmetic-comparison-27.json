@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-arithmetic-comparison-27",
+  "title": "Comparison chaining",
+  "starterCode": "const result = 1 < 2 && 2 < 3;\nconsole.log(result);",
+  "solution": "const result = 1 < 2 && 2 < 3;\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "&& requires both sides to be true",
+    "1<2 is true AND 2<3 is true"
+  ]
+}

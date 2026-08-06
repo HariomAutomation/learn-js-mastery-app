@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-44",
+  "title": "create Element Attribute",
+  "starterCode": "const el = document.createElement('button');\nel.setAttribute('type', 'submit');\nconsole.log(el.getAttribute('type'));",
+  "solution": "const el = document.createElement('button');\nel.setAttribute('type', 'submit');\nconsole.log(el.getAttribute('type'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "submit"
+    }
+  ],
+  "hints": [
+    "Set attributes after creation",
+    "Use setAttribute"
+  ]
+}

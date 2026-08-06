@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-18",
+  "title": "Optional chaining method",
+  "starterCode": "const obj = { greet: () => 'hi' };\nconst result = obj?.greet();\nconsole.log(result);",
+  "solution": "const obj = { greet: () => 'hi' };\nconst result = obj?.greet();\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hi"
+    }
+  ],
+  "hints": [
+    "?. can be used for method calls",
+    "obj exists and has greet method"
+  ]
+}

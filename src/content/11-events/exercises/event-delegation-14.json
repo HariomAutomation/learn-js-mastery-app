@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-14",
+  "title": "Capture Demo",
+  "starterCode": "document.addEventListener('click', function() {\n  console.log('capture');\n}, true);\nconsole.log('capture phase listener');",
+  "solution": "document.addEventListener('click', function() {\n  console.log('capture');\n}, true);\nconsole.log('capture phase listener');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "capture phase listener"
+    }
+  ],
+  "hints": [
+    "true as third arg means capture",
+    "Fires before bubble phase"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-function-basics-21",
+  "title": "Callback Function",
+  "starterCode": "function doAction(callback) {\n  callback();\n}\ndoAction(function() {\n  console.log('Action done!');\n});",
+  "solution": "function doAction(callback) {\n  callback();\n}\ndoAction(function() {\n  console.log('Action done!');\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Action done!"
+    }
+  ],
+  "hints": [
+    "Pass function as argument",
+    "Call it inside"
+  ]
+}

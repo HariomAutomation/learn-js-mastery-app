@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-closures-iife-34",
+  "title": "Memoize Function",
+  "starterCode": "function memoize(fn) {\n  const cache = {};\n  return function(...args) {\n    const key = JSON.stringify(args);\n    if (key in cache) return cache[key];\n    cache[key] = fn(...args);\n    return cache[key];\n  };\n}\nconst square = memoize(x => x * x);\nconsole.log(square(4));\nconsole.log(square(4));",
+  "solution": "function memoize(fn) {\n  const cache = {};\n  return function(...args) {\n    const key = JSON.stringify(args);\n    if (key in cache) return cache[key];\n    cache[key] = fn(...args);\n    return cache[key];\n  };\n}\nconst square = memoize(x => x * x);\nconsole.log(square(4));\nconsole.log(square(4));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "16\n16"
+    }
+  ],
+  "hints": [
+    "Cache results",
+    "Check cache first"
+  ]
+}

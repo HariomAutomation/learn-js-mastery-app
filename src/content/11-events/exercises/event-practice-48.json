@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-48",
+  "title": "Pinch Zoom",
+  "starterCode": "// Two finger touch for pinch\nconsole.log(\"pinch zoom pattern\");",
+  "solution": "// Two finger touch for pinch\nconsole.log(\"pinch zoom pattern\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "pinch zoom pattern"
+    }
+  ],
+  "hints": [
+    "Use two touch points",
+    "Calculate distance change"
+  ]
+}

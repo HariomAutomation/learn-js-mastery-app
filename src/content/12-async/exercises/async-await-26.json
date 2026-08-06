@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-26",
+  "title": "Async Retry",
+  "starterCode": "async function retry(fn, attempts) {\n  try {\n    return await fn();\n  } catch (err) {\n    if (attempts <= 1) throw err;\n    return retry(fn, attempts - 1);\n  }\n}\nlet count = 0;\nretry(async () => {\n  count++;\n  if (count < 3) throw new Error('fail');\n  return 'success';\n}, 3).then(r => console.log(r));",
+  "solution": "async function retry(fn, attempts) {\n  try {\n    return await fn();\n  } catch (err) {\n    if (attempts <= 1) throw err;\n    return retry(fn, attempts - 1);\n  }\n}\nlet count = 0;\nretry(async () => {\n  count++;\n  if (count < 3) throw new Error('fail');\n  return 'success';\n}, 3).then(r => console.log(r));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "success"
+    }
+  ],
+  "hints": [
+    "Try/catch with retry logic",
+    "Recursive retry on failure"
+  ]
+}

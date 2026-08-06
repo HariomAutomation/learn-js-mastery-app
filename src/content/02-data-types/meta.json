@@ -1,0 +1,8 @@
+{
+  "id": "02-data-types",
+  "title": "Data Types & Type System",
+  "order": 2,
+  "description": "Primitive vs Reference types, typeof, type coercion, truthy/falsy values.",
+  "prerequisites": ["01-variables-declarations"],
+  "lessonCount": 3
+}

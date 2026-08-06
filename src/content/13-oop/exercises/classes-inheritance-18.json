@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-18",
+  "title": "Mixin Pattern",
+  "starterCode": "function Timestamped(Base) {\n  return class extends Base {\n    createdAt = new Date();\n  }\n}\nclass User { constructor(name) { this.name = name; } }\nclass TimestampedUser extends Timestamped(User) {}\nconsole.log(new TimestampedUser('John').name);",
+  "solution": "function Timestamped(Base) {\n  return class extends Base {\n    createdAt = new Date();\n  }\n}\nclass User { constructor(name) { this.name = name; } }\nclass TimestampedUser extends Timestamped(User) {}\nconsole.log(new TimestampedUser('John').name);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "John"
+    }
+  ],
+  "hints": [
+    "Mixin is a function returning class",
+    "Extends base class"
+  ]
+}

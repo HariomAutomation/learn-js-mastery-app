@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-09",
+  "title": "Check typeof null (bug)",
+  "starterCode": "console.log();",
+  "solution": "console.log(typeof null);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "object"
+    }
+  ],
+  "hints": [
+    "This is a historical bug",
+    "null should be 'null' but returns 'object'"
+  ]
+}

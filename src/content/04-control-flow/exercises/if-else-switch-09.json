@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-09",
+  "title": "Switch with break",
+  "starterCode": "const fruit = 'apple';\nswitch (fruit) {\n  case 'apple':\n    console.log('red');\n    break;\n  case 'banana':\n    console.log('yellow');\n    break;\n  default:\n    console.log('other');\n}",
+  "solution": "const fruit = 'apple';\nswitch (fruit) {\n  case 'apple':\n    console.log('red');\n    break;\n  case 'banana':\n    console.log('yellow');\n    break;\n  default:\n    console.log('other');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "red"
+    }
+  ],
+  "hints": [
+    "break prevents fallthrough",
+    "Only apple case executes"
+  ]
+}

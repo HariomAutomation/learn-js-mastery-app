@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-20",
+  "title": "Common Prefix",
+  "starterCode": "function commonPrefix(arr) {\n  let prefix = arr[0];\n  for (let i = 1; i < arr.length; i++) {\n    while (arr[i].indexOf(prefix) !== 0) {\n      prefix = prefix.slice(0, -1);\n    }\n  }\n  return prefix;\n}\nconsole.log(commonPrefix(['flower', 'flow', 'flight']));",
+  "solution": "function commonPrefix(arr) {\n  let prefix = arr[0];\n  for (let i = 1; i < arr.length; i++) {\n    while (arr[i].indexOf(prefix) !== 0) {\n      prefix = prefix.slice(0, -1);\n    }\n  }\n  return prefix;\n}\nconsole.log(commonPrefix(['flower', 'flow', 'flight']));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "fl"
+    }
+  ],
+  "hints": [
+    "Start with first word",
+    "Trim until match"
+  ]
+}

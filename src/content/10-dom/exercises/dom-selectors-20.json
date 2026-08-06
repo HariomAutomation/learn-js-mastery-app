@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-20",
+  "title": "Null Handling",
+  "starterCode": "const el = document.querySelector('.nonexistent');\nconsole.log(el === null);",
+  "solution": "const el = document.querySelector('.nonexistent');\nconsole.log(el === null);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "querySelector returns null when no match",
+    "Compare with strict equality"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-47",
+  "title": "Memento Pattern",
+  "starterCode": "class Editor {\n  constructor() { this.text = ''; }\n  type(t) { this.text += t; }\n  save() { return { text: this.text }; }\n  restore(s) { this.text = s.text; }\n}\nconst e = new Editor();\ne.type('a ');\nconst snap = e.save();\ne.type('b');\ne.restore(snap);\nconsole.log(e.text);",
+  "solution": "class Editor {\n  constructor() { this.text = ''; }\n  type(t) { this.text += t; }\n  save() { return { text: this.text }; }\n  restore(s) { this.text = s.text; }\n}\nconst e = new Editor();\ne.type('a ');\nconst snap = e.save();\ne.type('b');\ne.restore(snap);\nconsole.log(e.text);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "a "
+    }
+  ],
+  "hints": [
+    "Save creates snapshot",
+    "Restore reverts to snapshot"
+  ]
+}

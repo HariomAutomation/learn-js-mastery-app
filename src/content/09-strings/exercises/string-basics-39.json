@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-39",
+  "title": "Split Practice",
+  "starterCode": "const str = 'hello world';\nconst words = str.split(' ');\nconsole.log(words.length);",
+  "solution": "const str = 'hello world';\nconst words = str.split(' ');\nconsole.log(words.length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2"
+    }
+  ],
+  "hints": [
+    "Split by space",
+    "Count words"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-methods-36",
+  "title": "Search Regex",
+  "starterCode": "console.log('hello world'.search(/world/));",
+  "solution": "console.log('hello world'.search(/world/));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "6"
+    }
+  ],
+  "hints": [
+    "search returns index",
+    "Like indexOf with regex"
+  ]
+}

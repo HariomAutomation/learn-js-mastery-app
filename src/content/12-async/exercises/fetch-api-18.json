@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-18",
+  "title": "Fetch Text",
+  "starterCode": "// response.text() for plain text\nconsole.log(\"text() returns string\");",
+  "solution": "// response.text() for plain text\nconsole.log(\"text() returns string\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "text() returns string"
+    }
+  ],
+  "hints": [
+    "text() reads response as string",
+    "For plain text responses"
+  ]
+}

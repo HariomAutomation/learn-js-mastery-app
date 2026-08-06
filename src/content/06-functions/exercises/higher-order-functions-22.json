@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-higher-order-functions-22",
+  "title": "Negate Predicate",
+  "starterCode": "function negate(predicate) {\n  return (...args) => !predicate(...args);\n}\nconst isOdd = x => x % 2 !== 0;\nconst isEven = negate(isOdd);\nconsole.log(isEven(2));\nconsole.log(isEven(3));",
+  "solution": "function negate(predicate) {\n  return (...args) => !predicate(...args);\n}\nconst isOdd = x => x % 2 !== 0;\nconst isEven = negate(isOdd);\nconsole.log(isEven(2));\nconsole.log(isEven(3));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true\nfalse"
+    }
+  ],
+  "hints": [
+    "Return opposite result",
+    "Use spread args"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-patterns-48",
+  "title": "Compact Falsy",
+  "starterCode": "const arr = [0, 1, false, 2, NaN, 3, '', 4];\nconst compact = arr.filter(Boolean);\nconsole.log(compact);",
+  "solution": "const arr = [0, 1, false, 2, NaN, 3, '', 4];\nconst compact = arr.filter(Boolean);\nconsole.log(compact);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 1, 2, 3, 4 ]"
+    }
+  ],
+  "hints": [
+    "Boolean removes falsy",
+    "Keep truthy values"
+  ]
+}

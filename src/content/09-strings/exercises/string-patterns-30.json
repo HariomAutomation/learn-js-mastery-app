@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-30",
+  "title": "Reverse Words",
+  "starterCode": "function reverseWords(str) {\n  return str.split(' ').reverse().join(' ');\n}\nconsole.log(reverseWords('hello world foo'));",
+  "solution": "function reverseWords(str) {\n  return str.split(' ').reverse().join(' ');\n}\nconsole.log(reverseWords('hello world foo'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "foo world hello"
+    }
+  ],
+  "hints": [
+    "Split by space",
+    "Reverse array"
+  ]
+}

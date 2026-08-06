@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-49",
+  "title": "Chain of Responsibility",
+  "starterCode": "class Handler {\n  setNext(h) { this.next = h; return h; }\n  handle(r) { return this.next ? this.next.handle(r) : null; }\n}\nclass A extends Handler {\n  handle(r) { return r.a ? 'a ok' : super.handle(r); }\n}\nconst chain = new A();\nchain.setNext(new Handler());\nconsole.log(chain.handle({ a: true }));",
+  "solution": "class Handler {\n  setNext(h) { this.next = h; return h; }\n  handle(r) { return this.next ? this.next.handle(r) : null; }\n}\nclass A extends Handler {\n  handle(r) { return r.a ? 'a ok' : super.handle(r); }\n}\nconst chain = new A();\nchain.setNext(new Handler());\nconsole.log(chain.handle({ a: true }));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "a ok"
+    }
+  ],
+  "hints": [
+    "Chain handlers",
+    "Each handles or passes to next"
+  ]
+}

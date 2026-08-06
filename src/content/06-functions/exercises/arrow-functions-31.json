@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-arrow-functions-31",
+  "title": "Arrow Reduce Object",
+  "starterCode": "const arr = [{v:1}, {v:2}, {v:3}];\nconst sum = arr.reduce((acc, obj) => acc + obj.v, 0);\nconsole.log(sum);",
+  "solution": "const arr = [{v:1}, {v:2}, {v:3}];\nconst sum = arr.reduce((acc, obj) => acc + obj.v, 0);\nconsole.log(sum);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "6"
+    }
+  ],
+  "hints": [
+    "Access property",
+    "Accumulate sum"
+  ]
+}

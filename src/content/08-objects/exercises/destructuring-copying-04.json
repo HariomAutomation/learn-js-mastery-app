@@ -1,0 +1,16 @@
+{
+  "id": "08-objects-destructuring-copying-04",
+  "title": "Rename Variables",
+  "starterCode": "const obj = {name: 'Alice'};\nconst {name: userName} = obj;\nconsole.log(userName);",
+  "solution": "const obj = {name: 'Alice'};\nconst {name: userName} = obj;\nconsole.log(userName);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "Alice"
+    }
+  ],
+  "hints": [
+    "Rename with colon",
+    "New variable name"
+  ]
+}

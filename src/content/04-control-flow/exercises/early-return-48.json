@@ -1,0 +1,17 @@
+{
+  "id": "04-control-flow-early-return-48",
+  "title": "Early return boolean - type check",
+  "starterCode": "function isString(value) {\n  if (value === null) return false;\n  if (value === undefined) return false;\n  return typeof value === 'string';\n}\nconsole.log(isString('hello'));",
+  "solution": "function isString(value) {\n  if (value === null) return false;\n  if (value === undefined) return false;\n  return typeof value === 'string';\n}\nconsole.log(isString('hello'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "value is not null",
+    "value is not undefined",
+    "typeof is 'string'"
+  ]
+}

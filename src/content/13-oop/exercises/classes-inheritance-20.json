@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-20",
+  "title": "toStringTag",
+  "starterCode": "class Collection {\n  get [Symbol.toStringTag]() { return 'Collection'; }\n}\nconsole.log(Object.prototype.toString.call(new Collection()));",
+  "solution": "class Collection {\n  get [Symbol.toStringTag]() { return 'Collection'; }\n}\nconsole.log(Object.prototype.toString.call(new Collection()));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[object Collection]"
+    }
+  ],
+  "hints": [
+    "Symbol.toStringTag sets type string",
+    "Used by Object.prototype.toString"
+  ]
+}

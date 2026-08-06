@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-18",
+  "title": "Error Pattern",
+  "starterCode": "async function safe(fn) {\n  try {\n    return await fn();\n  } catch (err) {\n    return 'fallback';\n  }\n}\nsafe(() => Promise.reject('err')).then(r => console.log(r));",
+  "solution": "async function safe(fn) {\n  try {\n    return await fn();\n  } catch (err) {\n    return 'fallback';\n  }\n}\nsafe(() => Promise.reject('err')).then(r => console.log(r));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "fallback"
+    }
+  ],
+  "hints": [
+    "Wrap in try/catch",
+    "Return fallback on error"
+  ]
+}

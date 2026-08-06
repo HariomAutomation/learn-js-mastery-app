@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-49",
+  "title": "Map String Length",
+  "starterCode": "const words = ['hello', 'hi', 'hey'];\nconst lengths = words.____(w => w.length);\nconsole.log(lengths);",
+  "solution": "const words = ['hello', 'hi', 'hey'];\nconst lengths = words.map(w => w.length);\nconsole.log(lengths);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 5, 2, 3 ]"
+    }
+  ],
+  "hints": [
+    "Map to string length",
+    "Return length property"
+  ]
+}

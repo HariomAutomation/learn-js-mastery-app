@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-01",
+  "title": "Class Declaration",
+  "starterCode": "class Animal {\n  // TODO: add constructor\n}\nconst a = new Animal();\nconsole.log(typeof a);",
+  "solution": "class Animal {\n  constructor() {\n    this.type = 'animal';\n  }\n}\nconst a = new Animal();\nconsole.log(typeof a);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "object"
+    }
+  ],
+  "hints": [
+    "Class creates a constructor function",
+    "typeof object for instances"
+  ]
+}

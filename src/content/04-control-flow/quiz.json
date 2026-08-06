@@ -1,0 +1,43 @@
+[
+  {
+    "question": "switch-case mein break kyu zaroori hai?",
+    "options": ["Optional hai", "Fall-through rokne ke liye", "Syntax requirement", "Performance ke liye"],
+    "correctIndex": 1,
+    "explanation": "break nahi hone par saare cases execute ho jaate hain (fall-through). break se sirf matching case run hota hai."
+  },
+  {
+    "question": "Early return pattern ka fayda kya hai?",
+    "options": ["Code fast chalta hai", "Deep nesting avoid, readable code", "Memory bachti hai", "Error handling easy"],
+    "correctIndex": 1,
+    "explanation": "Early return se edge cases pehle handle hote hain, main logic readable rehti hai, nesting kam hoti hai."
+  },
+  {
+    "question": "if/else if chain mein order matter karta hai kyun?",
+    "options": ["Nahi karta", "Pehla true match hota hai, baaki skip", "Syntax rule", "Performance"],
+    "correctIndex": 1,
+    "explanation": "if/else if top-down check hota hai. Pehla true condition match hota hai, baaki skip. Isliye pehle strict condition rakho."
+  },
+  {
+    "question": "Kaunsa falsy value nahi hai?",
+    "options": ["0", "\"0\"", "null", "undefined"],
+    "correctIndex": 1,
+    "explanation": "\"0\" truthy hai (non-empty string). Sirf 6 falsy values hain: false, 0, \"\", null, undefined, NaN."
+  },
+  {
+    "question": "switch-case ka default block kab run hota hai?",
+    "options": ["Hamesha pehle", "Koi case match nahi hua tab", "Hamesha last mein", "Error hone par"],
+    "correctIndex": 1,
+    "explanation": "default tab run hota hai jab koi bhi case match nahi hota. Else jaisa hai switch ka."
+  },
+  {
+    "question": "Kya if statement mein truthy/falsy directly use kar sakte hain?",
+    "options": [
+      "Nahi, sirf boolean use hota hai",
+      "Haan, if (name) agar name non-empty string hai to true",
+      "Sirf numbers chalenge",
+      "Sirf true/false chalenge"
+    ],
+    "correctIndex": 1,
+    "explanation": "if (\"hello\") truthy hai to andar aaega. if (\"\") falsy hai to nahi aaega. Truthy/falsy direct use kar sakte hain."
+  }
+]

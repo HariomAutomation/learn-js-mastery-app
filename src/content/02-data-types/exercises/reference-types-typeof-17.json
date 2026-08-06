@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-17",
+  "title": "typeof function",
+  "starterCode": "function greet() {}\nconsole.log();",
+  "solution": "function greet() {}\nconsole.log(typeof greet);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "function"
+    }
+  ],
+  "hints": [
+    "Functions have special typeof",
+    "Returns 'function' not 'object'"
+  ]
+}

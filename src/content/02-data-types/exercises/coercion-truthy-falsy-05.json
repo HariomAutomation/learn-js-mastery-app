@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-05",
+  "title": "Check if null is falsy",
+  "starterCode": "if (null) {\n  console.log('truthy');\n} else {\n  console.log('falsy');\n}",
+  "solution": "if (null) {\n  console.log('truthy');\n} else {\n  console.log('falsy');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "falsy"
+    }
+  ],
+  "hints": [
+    "null is always falsy",
+    "It represents absence of value"
+  ]
+}

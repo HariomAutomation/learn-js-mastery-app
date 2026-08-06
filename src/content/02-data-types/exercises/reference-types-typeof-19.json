@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-19",
+  "title": "Check if property exists",
+  "starterCode": "const obj = { a: 1, b: 2 };\nconsole.log();",
+  "solution": "const obj = { a: 1, b: 2 };\nconsole.log('a' in obj);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "'in' operator checks property existence",
+    "Returns true if property exists"
+  ]
+}

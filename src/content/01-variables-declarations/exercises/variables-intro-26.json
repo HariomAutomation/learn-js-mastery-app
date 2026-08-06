@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-variables-intro-26",
+  "title": "Destructuring with default",
+  "starterCode": "const { x = 10, y = 20 } = { x: 5 }\nconsole.log(x, y)",
+  "solution": "const { x = 10, y = 20 } = { x: 5 }\nconsole.log(x, y)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "5 20"
+    }
+  ],
+  "hints": [
+    "Defaults used when property missing"
+  ]
+}

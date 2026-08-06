@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-arithmetic-comparison-49",
+  "title": "Integer check",
+  "starterCode": "const result = Number.isInteger(42);\nconsole.log(result);",
+  "solution": "const result = Number.isInteger(42);\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "Number.isInteger checks if value is an integer",
+    "42 is an integer"
+  ]
+}

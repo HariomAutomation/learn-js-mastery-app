@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-37",
+  "title": "Await Promise",
+  "starterCode": "async function wait() {\n  const val = await Promise.resolve(10);\n  console.log(val);\n}\nwait();",
+  "solution": "async function wait() {\n  const val = await Promise.resolve(10);\n  console.log(val);\n}\nwait();",
+  "tests": [
+    {
+      "input": [],
+      "expected": "10"
+    }
+  ],
+  "hints": [
+    "await pauses until resolved",
+    "Returns resolved value"
+  ]
+}

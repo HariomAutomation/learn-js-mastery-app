@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-map-filter-reduce-29",
+  "title": "Reduce Max",
+  "starterCode": "const nums = [3, 7, 2, 9, 4];\nconst max = nums.____((a, b) => Math.max(a, b), -Infinity);\nconsole.log(max);",
+  "solution": "const nums = [3, 7, 2, 9, 4];\nconst max = nums.reduce((a, b) => Math.max(a, b), -Infinity);\nconsole.log(max);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "9"
+    }
+  ],
+  "hints": [
+    "Use Math.max",
+    "Start with -Infinity"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-11",
+  "title": "Mixin",
+  "starterCode": "const Serializable = {\n  serialize() { return JSON.stringify(this); }\n};\nclass User {\n  constructor(name) { this.name = name; }\n}\nObject.assign(User.prototype, Serializable);\nconsole.log(new User('John').serialize());",
+  "solution": "const Serializable = {\n  serialize() { return JSON.stringify(this); }\n};\nclass User {\n  constructor(name) { this.name = name; }\n}\nObject.assign(User.prototype, Serializable);\nconsole.log(new User('John').serialize());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "{\"name\":\"John\"}"
+    }
+  ],
+  "hints": [
+    "Mixin is object with methods",
+    "Object.assign adds to prototype"
+  ]
+}

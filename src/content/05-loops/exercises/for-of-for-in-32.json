@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-32",
+  "title": "Object Keys Count",
+  "starterCode": "const obj = {a: 1, b: 2, c: 3, d: 4};\nconsole.log(Object.keys(obj).length);",
+  "solution": "const obj = {a: 1, b: 2, c: 3, d: 4};\nconsole.log(Object.keys(obj).length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "4"
+    }
+  ],
+  "hints": [
+    "Object.keys() returns array",
+    "Check length"
+  ]
+}

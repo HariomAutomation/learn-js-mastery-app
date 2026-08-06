@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-basics-05",
+  "title": "String Length",
+  "starterCode": "const str = 'hello';\nconsole.log(str.____);",
+  "solution": "const str = 'hello';\nconsole.log(str.length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "5"
+    }
+  ],
+  "hints": [
+    "length property",
+    "Count of characters"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-closures-iife-32",
+  "title": "Private Array",
+  "starterCode": "function createStack() {\n  const items = [];\n  return {\n    push: (item) => items.push(item),\n    pop: () => items.pop(),\n    peek: () => items[items.length - 1],\n    size: () => items.length\n  };\n}\nconst stack = createStack();\nstack.push(10);\nstack.push(20);\nconsole.log(stack.peek());\nconsole.log(stack.size());",
+  "solution": "function createStack() {\n  const items = [];\n  return {\n    push: (item) => items.push(item),\n    pop: () => items.pop(),\n    peek: () => items[items.length - 1],\n    size: () => items.length\n  };\n}\nconst stack = createStack();\nstack.push(10);\nstack.push(20);\nconsole.log(stack.peek());\nconsole.log(stack.size());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "20\n2"
+    }
+  ],
+  "hints": [
+    "Private items array",
+    "Public methods only"
+  ]
+}

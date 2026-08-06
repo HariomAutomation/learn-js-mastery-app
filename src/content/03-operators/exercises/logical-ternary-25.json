@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-logical-ternary-25",
+  "title": "Nullish assignment with zero",
+  "starterCode": "let x = 0;\nx ??= 'default';\nconsole.log(x);",
+  "solution": "let x = 0;\nx ??= 'default';\nconsole.log(x);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "0"
+    }
+  ],
+  "hints": [
+    "?? only triggers on null/undefined",
+    "0 is not null or undefined, so no assignment"
+  ]
+}

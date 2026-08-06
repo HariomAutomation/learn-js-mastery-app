@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-11",
+  "title": "Load Event",
+  "starterCode": "window.addEventListener('load', function() {\n  console.log('loaded');\n});",
+  "solution": "window.addEventListener('load', function() {\n  console.log('loaded');\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "loaded"
+    }
+  ],
+  "hints": [
+    "Fires when page fully loads",
+    "Includes images and resources"
+  ]
+}

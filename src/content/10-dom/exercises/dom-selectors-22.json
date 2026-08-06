@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-22",
+  "title": "Selector Performance",
+  "starterCode": "// querySelector vs getElementById\nconsole.log(\"getElementById is faster than querySelector\");",
+  "solution": "// getElementById is faster than querySelector\nconsole.log(\"getElementById is faster than querySelector\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "getElementById is faster than querySelector"
+    }
+  ],
+  "hints": [
+    "getElementById uses direct lookup",
+    "querySelector parses CSS selectors"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-variables-intro-14",
+  "title": "const object mutation",
+  "starterCode": "const obj = { x: 1 }\nobj.x = 99\nconsole.log(obj.x)",
+  "solution": "const obj = { x: 1 }\nobj.x = 99\nconsole.log(obj.x)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "99"
+    }
+  ],
+  "hints": [
+    "const prevents reassignment, not mutation"
+  ]
+}

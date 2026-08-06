@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-methods-21",
+  "title": "Split Limit",
+  "starterCode": "const str = 'a,b,c,d';\nconsole.log(str.split(',', 2));",
+  "solution": "const str = 'a,b,c,d';\nconsole.log(str.split(',', 2));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 'a', 'b' ]"
+    }
+  ],
+  "hints": [
+    "Limit splits",
+    "Max 2 elements"
+  ]
+}

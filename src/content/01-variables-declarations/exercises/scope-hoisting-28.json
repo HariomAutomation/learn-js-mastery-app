@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-28",
+  "title": "TDZ reference error",
+  "starterCode": "try {\n  x = 1\n  let x\n} catch(e) {\n  console.log(\"error\")\n}",
+  "solution": "try {\n  x = 1\n  let x\n} catch(e) {\n  console.log(\"error\")\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "error"
+    }
+  ],
+  "hints": [
+    "let is in TDZ before declaration"
+  ]
+}

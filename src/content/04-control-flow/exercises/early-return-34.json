@@ -1,0 +1,17 @@
+{
+  "id": "04-control-flow-early-return-34",
+  "title": "Nested guard - invalid method",
+  "starterCode": "function processRequest(request) {\n  if (!request) return 'no request';\n  if (!request.method) return 'no method';\n  if (request.method !== 'GET' && request.method !== 'POST') return 'invalid method';\n  return `processing ${request.method}`;\n}\nconsole.log(processRequest({ method: 'DELETE' }));",
+  "solution": "function processRequest(request) {\n  if (!request) return 'no request';\n  if (!request.method) return 'no method';\n  if (request.method !== 'GET' && request.method !== 'POST') return 'invalid method';\n  return `processing ${request.method}`;\n}\nconsole.log(processRequest({ method: 'DELETE' }));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "invalid method"
+    }
+  ],
+  "hints": [
+    "request is truthy",
+    "method exists",
+    "DELETE is not GET or POST"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-var-let-const-05",
+  "title": "let TDZ",
+  "starterCode": "try {\n  console.log(x)\n  let x = 5\n} catch(e) {\n  console.log(\"TDZ\")\n}",
+  "solution": "try {\n  console.log(x)\n  let x = 5\n} catch(e) {\n  console.log(\"TDZ\")\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "TDZ"
+    }
+  ],
+  "hints": [
+    "let has temporal dead zone"
+  ]
+}

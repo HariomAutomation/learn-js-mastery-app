@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-41",
+  "title": "Adapter Pattern",
+  "starterCode": "class OldAPI { getData() { return { f: 'A', l: 'B' }; } }\nclass Adapter {\n  constructor(old) { this.old = old; }\n  getName() { const d = this.old.getData(); return d.f + ' ' + d.l; }\n}\nconsole.log(new Adapter(new OldAPI()).getName());",
+  "solution": "class OldAPI { getData() { return { f: 'A', l: 'B' }; } }\nclass Adapter {\n  constructor(old) { this.old = old; }\n  getName() { const d = this.old.getData(); return d.f + ' ' + d.l; }\n}\nconsole.log(new Adapter(new OldAPI()).getName());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "A B"
+    }
+  ],
+  "hints": [
+    "Adapter wraps old interface",
+    "Converts to new interface"
+  ]
+}

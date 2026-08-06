@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-33",
+  "title": "Key Press Tracker",
+  "starterCode": "document.addEventListener('keydown', function(e) {\n  console.log(e.key);\n});",
+  "solution": "document.addEventListener('keydown', function(e) {\n  console.log(e.key);\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "a"
+    }
+  ],
+  "hints": [
+    "Track each key press",
+    "Display the key pressed"
+  ]
+}

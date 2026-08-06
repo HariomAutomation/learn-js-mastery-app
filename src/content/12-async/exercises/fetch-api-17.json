@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-17",
+  "title": "Fetch Blob",
+  "starterCode": "// response.blob() for binary data\nconsole.log(\"blob() returns a Blob\");",
+  "solution": "// response.blob() for binary data\nconsole.log(\"blob() returns a Blob\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "blob() returns a Blob"
+    }
+  ],
+  "hints": [
+    "Blob is binary data",
+    "Use for files and images"
+  ]
+}

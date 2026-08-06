@@ -1,0 +1,16 @@
+{
+  "id": "04-control-flow-if-else-switch-41",
+  "title": "If with comparison operators",
+  "starterCode": "const a = 10;\nconst b = 20;\nif (a < b) {\n  console.log('a is smaller');\n} else if (a > b) {\n  console.log('a is larger');\n} else {\n  console.log('equal');\n}",
+  "solution": "const a = 10;\nconst b = 20;\nif (a < b) {\n  console.log('a is smaller');\n} else if (a > b) {\n  console.log('a is larger');\n} else {\n  console.log('equal');\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "a is smaller"
+    }
+  ],
+  "hints": [
+    "10 < 20 is true",
+    "First condition matches"
+  ]
+}

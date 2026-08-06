@@ -1,0 +1,16 @@
+{
+  "id": "12-async-fetch-api-11",
+  "title": "Fetch Options",
+  "starterCode": "// Options: method, headers, body, mode, credentials\nconsole.log(\"method, headers, body are common\");",
+  "solution": "// Options: method, headers, body, mode, credentials\nconsole.log(\"method, headers, body are common\");",
+  "tests": [
+    {
+      "input": [],
+      "expected": "method, headers, body are common"
+    }
+  ],
+  "hints": [
+    "method is GET, POST, etc.",
+    "body is request payload"
+  ]
+}

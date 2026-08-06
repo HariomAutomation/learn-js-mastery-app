@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-methods-22",
+  "title": "Split Regex",
+  "starterCode": "const str = 'hello world 123';\nconsole.log(str.split(/\\s+/));",
+  "solution": "const str = 'hello world 123';\nconsole.log(str.split(/\\s+/));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ 'hello', 'world', '123' ]"
+    }
+  ],
+  "hints": [
+    "Regex split",
+    "Split on whitespace"
+  ]
+}

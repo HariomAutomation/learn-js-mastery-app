@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-variables-intro-06",
+  "title": "Reassign let variable",
+  "starterCode": "let count = 0\ncount = count + 5\nconsole.log(count)",
+  "solution": "let count = 0\ncount = count + 5\nconsole.log(count)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "5"
+    }
+  ],
+  "hints": [
+    "let allows reassignment"
+  ]
+}

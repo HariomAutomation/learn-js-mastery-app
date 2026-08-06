@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-oop-patterns-15",
+  "title": "Command",
+  "starterCode": "class Command {\n  execute() {}\n}\nclass AddCommand extends Command {\n  constructor(receiver, value) { super(); this.receiver = receiver; this.value = value; }\n  execute() { this.receiver.value += this.value; }\n}\nconst obj = { value: 0 };\nnew AddCommand(obj, 5).execute();\nconsole.log(obj.value);",
+  "solution": "class Command {\n  execute() {}\n}\nclass AddCommand extends Command {\n  constructor(receiver, value) { super(); this.receiver = receiver; this.value = value; }\n  execute() { this.receiver.value += this.value; }\n}\nconst obj = { value: 0 };\nnew AddCommand(obj, 5).execute();\nconsole.log(obj.value);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "5"
+    }
+  ],
+  "hints": [
+    "Command encapsulates action",
+    "execute() performs the action"
+  ]
+}

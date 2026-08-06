@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-29",
+  "title": "typeof doesn't throw for undeclared",
+  "starterCode": "console.log();",
+  "solution": "console.log(typeof undeclaredVar);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "undefined"
+    }
+  ],
+  "hints": [
+    "typeof is safe for undeclared variables",
+    "Other operations would throw ReferenceError"
+  ]
+}

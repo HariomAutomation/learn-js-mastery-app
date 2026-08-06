@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-46",
+  "title": "Promise.all Empty",
+  "starterCode": "Promise.all([])\n  .then(r => console.log(r.length));",
+  "solution": "Promise.all([])\n  .then(r => console.log(r.length));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "0"
+    }
+  ],
+  "hints": [
+    "Promise.all with empty array",
+    "Resolves to empty array"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-47",
+  "title": "Object.values returns values",
+  "starterCode": "const obj = { a: 1, b: 2, c: 3 };\nconsole.log();",
+  "solution": "const obj = { a: 1, b: 2, c: 3 };\nconsole.log(Object.values(obj));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1,2,3"
+    }
+  ],
+  "hints": [
+    "Object.values returns just the values",
+    "It's an array of the values"
+  ]
+}

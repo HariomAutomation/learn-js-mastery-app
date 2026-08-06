@@ -1,0 +1,15 @@
+{
+  "id": "03-operators-arithmetic-comparison-26",
+  "title": "Less than or equal",
+  "starterCode": "const result = 3 <= 10;\nconsole.log(result);",
+  "solution": "const result = 3 <= 10;\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "<= checks if left is less than or equal to right"
+  ]
+}

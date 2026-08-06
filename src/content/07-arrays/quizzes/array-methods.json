@@ -1,0 +1,22 @@
+[
+  { "question": "arr.push(5) kya karta hai?", "options": ["End mein add, length return", "Start mein add", "Delete", "Sort"], "correctIndex": 0, "explanation": "Push end mein add karta hai." },
+  { "question": "arr.pop() kya return karta hai?", "options": ["Last element", "Length", "First element", "Array"], "correctIndex": 0, "explanation": "Pop last element hata kar return." },
+  { "question": "arr.shift() kya karta hai?", "options": ["First element remove", "Last add", "Sort", "Reverse"], "correctIndex": 0, "explanation": "Shift front se hataata hai." },
+  { "question": "arr.unshift(1) kya karta hai?", "options": ["Start mein add", "End mein add", "Delete", "Find"], "correctIndex": 0, "explanation": "Unshift front mein add." },
+  { "question": "arr.length — kya batata hai?", "options": ["Element count", "Type", "Last value", "Index"], "correctIndex": 0, "explanation": "Length = kitne elements." },
+  { "question": "arr.indexOf(5) — kya return karta hai?", "options": ["Pehla index ya -1", "Boolean", "Element", "Length"], "correctIndex": 0, "explanation": "Milne pe index, warna -1." },
+  { "question": "arr.includes(5) kya return karta hai?", "options": ["true/false", "Index", "Element", "Number"], "correctIndex": 0, "explanation": "Presence check — boolean." },
+  { "question": "arr.slice(1, 3) kya return karta hai?", "options": ["New array index 1-2", "Original array", "Delete karta hai", "Object"], "correctIndex": 0, "explanation": "Slice copy — original untouched, end exclusive." },
+  { "question": "arr.splice(1, 2) kya karta hai?", "options": ["Index 1 se 2 elements delete", "Copy", "Sort", "Reverse"], "correctIndex": 0, "explanation": "Splice mutate karta hai — delete/replace." },
+  { "question": "[1,2,3].concat([4]) → ?", "options": ["[1,2,3,4]", "[4]", "[1,2,3]", "Error"], "correctIndex": 0, "explanation": "Concat join karke nayi array." },
+  { "question": "[1,2,3].join(\"-\") → ?", "options": ["\"1-2-3\"", "\"123\"", "\"1,2,3\"", "[1-2-3]"], "correctIndex": 0, "explanation": "Join string banata hai." },
+  { "question": "arr.reverse() kya karta hai?", "options": ["Original array reverse", "Nayi array deta hai", "Sort", "Copy"], "correctIndex": 0, "explanation": "Reverse in-place mutate karta hai." },
+  { "question": "arr.sort() default sort kaisa hota hai?", "options": ["String/lexical order", "Numeric order", "Random", "Descending"], "correctIndex": 0, "explanation": "Default string sort — [10,2] → [10,2]!" },
+  { "question": "[10, 2].sort((a,b) => a - b) → ?", "options": ["[2,10]", "[10,2]", "[10]", "Error"], "correctIndex": 0, "explanation": "Comparator ke saath numeric sort." },
+  { "question": "arr.fill(0) kya karta hai?", "options": ["Saare elements 0", "Length 0", "Sort", "Pop"], "correctIndex": 0, "explanation": "Sab elements ko given value." },
+  { "question": "Array.isArray([]) → ?", "options": ["true", "false", "[]", "Error"], "correctIndex": 0, "explanation": "Array check ka reliable tarika." },
+  { "question": "typeof [] kya hota hai?", "options": ["\"object\"", "\"array\"", "\"list\"", "\"function\""], "correctIndex": 0, "explanation": "Arrays objects hain — Array.isArray use karo." },
+  { "question": "arr.indexOf vs includes — kab kya?", "options": ["indexOf index/-1, includes bool", "Dono same", "Includes index deta", "Dono bool"], "correctIndex": 0, "explanation": "Index chahiye → indexOf, bas check → includes." },
+  { "question": "arr.push(1); arr.push(2); arr.pop() → arr?", "options": ["[1]", "[1,2]", "[2]", "[]"], "correctIndex": 0, "explanation": "Push 1,2 then pop 2 — [1]." },
+  { "question": "Nested array access: [[1,2],[3,4]][1][0] → ?", "options": ["3", "2", "1", "4"], "correctIndex": 0, "explanation": "Second array ka pehla element." }
+]

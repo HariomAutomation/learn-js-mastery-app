@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-methods-13",
+  "title": "FindIndex",
+  "starterCode": "const nums = [10, 20, 30, 40];\nconst idx = nums.____(x => x === 30);\nconsole.log(idx);",
+  "solution": "const nums = [10, 20, 30, 40];\nconst idx = nums.findIndex(x => x === 30);\nconsole.log(idx);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2"
+    }
+  ],
+  "hints": [
+    "findIndex returns index",
+    "Returns -1 if not found"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-while-15",
+  "title": "Nested Break",
+  "starterCode": "for (let i = 0; i < 3; i++) {\n  for (let j = 0; j < 3; j++) {\n    if (j === 1) break;\n    console.log(i + j);\n  }\n}",
+  "solution": "for (let i = 0; i < 3; i++) {\n  for (let j = 0; j < 3; j++) {\n    if (j === 1) break;\n    console.log(i + j);\n  }\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "0\n1\n2"
+    }
+  ],
+  "hints": [
+    "break only exits inner loop",
+    "Check j value for break"
+  ]
+}

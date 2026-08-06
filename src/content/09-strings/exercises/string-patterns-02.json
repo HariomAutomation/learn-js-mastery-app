@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-02",
+  "title": "Count Vowels",
+  "starterCode": "function countVowels(str) {\n  return (str.match(/[aeiou]/gi) || []).length;\n}\nconsole.log(countVowels('hello world'));",
+  "solution": "function countVowels(str) {\n  return (str.match(/[aeiou]/gi) || []).length;\n}\nconsole.log(countVowels('hello world'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3"
+    }
+  ],
+  "hints": [
+    "Match vowels globally",
+    "Case-insensitive"
+  ]
+}

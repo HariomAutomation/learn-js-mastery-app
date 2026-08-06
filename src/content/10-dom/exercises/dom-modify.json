@@ -1,0 +1,12 @@
+{
+  "id": "10-dom-dom-modify",
+  "title": "DOM modify karo — text changes simulate karo",
+  "starterCode": "// DOM text manipulation simulation\nlet pageText = \"Welcome to our website\"\n\n// 1. Text change karo\npageText = // \"Welcome\" ko \"Hello\" se replace karo\nconsole.log(pageText) // \"Hello to our website\"\n\n// 2. Text uppercase karo\nconst upperText = // pageText ko uppercase banao\nconsole.log(upperText) // \"HELLO TO OUR WEBSITE\"\n\n// 3. Text mein se words count karo\nconst wordCount = // pageText ke words count karo\nconsole.log(wordCount) // 4\n\n// 4. Text prepend karo (shuru mein add karo)\npageText = // pageText ke shuru mein \">> \" add karo\nconsole.log(pageText) // \">> Hello to our website\"\n\n// 5. Text truncate karo (15 chars tak)\nconst truncated = // pageText ko 15 chars tak kaato, \"...\" lagao\nconsole.log(truncated) // \">> Hello to ou...\"",
+  "solution": "let pageText = \"Welcome to our website\"\npageText = pageText.replace(\"Welcome\", \"Hello\")\nconsole.log(pageText)\nconst upperText = pageText.toUpperCase()\nconsole.log(upperText)\nconst wordCount = pageText.split(\" \").length\nconsole.log(wordCount)\npageText = \">> \" + pageText\nconsole.log(pageText)\nconst truncated = pageText.length > 15 ? pageText.slice(0, 15) + \"...\" : pageText\nconsole.log(truncated)",
+  "tests": [{ "input": [], "expected": "Hello to our website\nHELLO TO OUR WEBSITE\n4\n>> Hello to our website\n>> Hello to ou..." }],
+  "hints": [
+    "replace() se ek word doosre se badal sakte ho",
+    "Word count: split(\" \").length — spaces se words alag karo aur count lo",
+    "Truncation: slice(0, 15) + \"...\" — condition lagao ki length zyada hai to kaato"
+  ]
+}

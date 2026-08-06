@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-50",
+  "title": "Selector Practice",
+  "starterCode": "const el = document.querySelector('input[type=\"email\"]');\nconsole.log(el);",
+  "solution": "const el = document.querySelector('input[type=\"email\"]');\nconsole.log(el);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "null"
+    }
+  ],
+  "hints": [
+    "Use attribute selector with value",
+    "Combines tag and attribute"
+  ]
+}

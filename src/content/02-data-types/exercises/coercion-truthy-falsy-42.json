@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-42",
+  "title": "Minus with string and number",
+  "starterCode": "console.log(\"10\" - 3);",
+  "solution": "console.log(\"10\" - 3);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "7"
+    }
+  ],
+  "hints": [
+    "- always does math",
+    "String is converted to number"
+  ]
+}

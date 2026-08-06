@@ -1,0 +1,17 @@
+{
+  "id": "04-control-flow-early-return-08",
+  "title": "Multiple exit points - moderator",
+  "starterCode": "function getRole(user) {\n  if (!user) return 'anonymous';\n  if (user.isAdmin) return 'admin';\n  if (user.isMod) return 'moderator';\n  return 'user';\n}\nconsole.log(getRole({ isMod: true }));",
+  "solution": "function getRole(user) {\n  if (!user) return 'anonymous';\n  if (user.isAdmin) return 'admin';\n  if (user.isMod) return 'moderator';\n  return 'user';\n}\nconsole.log(getRole({ isMod: true }));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "moderator"
+    }
+  ],
+  "hints": [
+    "user is truthy",
+    "isAdmin is undefined (falsy)",
+    "isMod is true"
+  ]
+}

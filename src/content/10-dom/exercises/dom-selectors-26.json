@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-selectors-26",
+  "title": "dataset Property",
+  "starterCode": "const el = document.querySelector('[data-name]');\nconsole.log(typeof el.dataset);",
+  "solution": "const el = document.querySelector('[data-name]');\nconsole.log(typeof el.dataset);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "object"
+    }
+  ],
+  "hints": [
+    "dataset returns a DOMStringMap",
+    "It's an object mapping data attributes"
+  ]
+}

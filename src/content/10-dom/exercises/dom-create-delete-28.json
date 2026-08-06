@@ -1,0 +1,16 @@
+{
+  "id": "10-dom-dom-create-delete-28",
+  "title": "remove All Children",
+  "starterCode": "const parent = document.createElement('div');\nparent.innerHTML = '<p>A</p><p>B</p><p>C</p>';\nwhile (parent.firstChild) parent.removeChild(parent.firstChild);\nconsole.log(parent.children.length);",
+  "solution": "const parent = document.createElement('div');\nparent.innerHTML = '<p>A</p><p>B</p><p>C</p>';\nwhile (parent.firstChild) parent.removeChild(parent.firstChild);\nconsole.log(parent.children.length);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "0"
+    }
+  ],
+  "hints": [
+    "Loop while firstChild exists",
+    "Remove each child"
+  ]
+}

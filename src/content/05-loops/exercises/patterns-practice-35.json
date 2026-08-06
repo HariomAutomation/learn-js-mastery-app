@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-patterns-practice-35",
+  "title": "Matrix Transpose",
+  "starterCode": "const m = [[1,2,3],[4,5,6]];\nfor (let j = 0; j < 3; j++) {\n  let row = '';\n  for (let i = 0; i < 2; i++) {\n    row += m[i][j] + ' ';\n  }\n  console.log(row);\n}",
+  "solution": "const m = [[1,2,3],[4,5,6]];\nfor (let j = 0; j < 3; j++) {\n  let row = '';\n  for (let i = 0; i < 2; i++) {\n    row += m[i][j] + ' ';\n  }\n  console.log(row);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1 4 \n2 5 \n3 6 "
+    }
+  ],
+  "hints": [
+    "Swap rows and columns",
+    "Outer loop columns"
+  ]
+}

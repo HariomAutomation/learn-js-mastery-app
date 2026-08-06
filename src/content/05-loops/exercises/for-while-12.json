@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-while-12",
+  "title": "Loop Variable Scope",
+  "starterCode": "for (let i = 0; i < 3; i++) {\n  console.log(i);\n}",
+  "solution": "for (let i = 0; i < 3; i++) {\n  console.log(i);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "0\n1\n2"
+    }
+  ],
+  "hints": [
+    "let in for loop is block scoped",
+    "i only accessible inside loop"
+  ]
+}

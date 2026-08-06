@@ -1,0 +1,16 @@
+{
+  "id": "03-operators-arithmetic-comparison-29",
+  "title": "Using Math.abs for float comparison",
+  "starterCode": "const result = Math.abs(0.1 + 0.2 - 0.3) < Number.EPSILON;\nconsole.log(result);",
+  "solution": "const result = Math.abs(0.1 + 0.2 - 0.3) < Number.EPSILON;\nconsole.log(result);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true"
+    }
+  ],
+  "hints": [
+    "Use Math.abs for absolute difference",
+    "Compare difference to Number.EPSILON"
+  ]
+}

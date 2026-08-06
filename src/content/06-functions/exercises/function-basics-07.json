@@ -1,0 +1,16 @@
+{
+  "id": "06-functions-function-basics-07",
+  "title": "Return Statement",
+  "starterCode": "function square(n) {\n  return n * n;\n}\nconsole.log(square(4));",
+  "solution": "function square(n) {\n  return n * n;\n}\nconsole.log(square(4));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "16"
+    }
+  ],
+  "hints": [
+    "Return the result",
+    "n squared"
+  ]
+}

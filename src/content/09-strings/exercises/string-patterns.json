@@ -1,0 +1,12 @@
+{
+  "id": "09-strings-string-patterns",
+  "title": "String patterns — capitalize, reverse, count vowels",
+  "starterCode": "// 1. Pehla letter capitalize karo\nfunction capitalize(str) {\n  // your code here\n}\nconsole.log(capitalize(\"hello\")) // \"Hello\"\nconsole.log(capitalize(\"javaScript\")) // \"JavaScript\"\n\n// 2. String ko reverse karo\nfunction reverseString(str) {\n  // your code here — split, reverse, join use karo\n}\nconsole.log(reverseString(\"hello\")) // \"olleh\"\nconsole.log(reverseString(\"naman\")) // \"naman\"\n\n// 3. Vowels kitne hain count karo\nfunction countVowels(str) {\n  // your code here\n}\nconsole.log(countVowels(\"hello world\")) // 3\nconsole.log(countVowels(\"AEIOU\")) // 5\nconsole.log(countVowels(\"rhythm\")) // 0",
+  "solution": "function capitalize(str) {\n  return str.charAt(0).toUpperCase() + str.slice(1)\n}\nconsole.log(capitalize(\"hello\"))\nconsole.log(capitalize(\"javaScript\"))\n\nfunction reverseString(str) {\n  return str.split(\"\").reverse().join(\"\")\n}\nconsole.log(reverseString(\"hello\"))\nconsole.log(reverseString(\"naman\"))\n\nfunction countVowels(str) {\n  const vowels = str.match(/[aeiouAEIOU]/g)\n  return vowels ? vowels.length : 0\n}\nconsole.log(countVowels(\"hello world\"))\nconsole.log(countVowels(\"AEIOU\"))\nconsole.log(countVowels(\"rhythm\"))",
+  "tests": [{ "input": [], "expected": "Hello\nJavaScript\nolleh\nnaman\n3\n5\n0" }],
+  "hints": [
+    "Capitalize: charAt(0).toUpperCase() + slice(1) se pehla letter bada aur baaki same",
+    "Reverse: split(\"\") se array banao, reverse() karo, join(\"\") se wapas string banao",
+    "Vowels count: regex /[aeiouAEIOU]/g se saare vowels match karo, .length se count lo"
+  ]
+}

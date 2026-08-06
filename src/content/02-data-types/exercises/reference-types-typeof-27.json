@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-reference-types-typeof-27",
+  "title": "Object identity check",
+  "starterCode": "const a = {};\nconst b = a;\nconst c = {};\nconsole.log(a === b, a === c);",
+  "solution": "const a = {};\nconst b = a;\nconst c = {};\nconsole.log(a === b, a === c);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "true false"
+    }
+  ],
+  "hints": [
+    "=== checks reference equality",
+    "Same reference = true, different = false"
+  ]
+}

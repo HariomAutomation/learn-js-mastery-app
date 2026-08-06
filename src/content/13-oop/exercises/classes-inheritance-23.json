@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-23",
+  "title": "Private Method",
+  "starterCode": "class Foo {\n  #secret() { return 42; }\n  reveal() { return this.#secret(); }\n}\nconsole.log(new Foo().reveal());",
+  "solution": "class Foo {\n  #secret() { return 42; }\n  reveal() { return this.#secret(); }\n}\nconsole.log(new Foo().reveal());",
+  "tests": [
+    {
+      "input": [],
+      "expected": "42"
+    }
+  ],
+  "hints": [
+    "# before method name makes it private",
+    "Can only call from class"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-15",
+  "title": "For...Of With Arguments",
+  "starterCode": "function sum() {\n  let total = 0;\n  for (const num of arguments) {\n    total += num;\n  }\n  return total;\n}\nconsole.log(sum(1, 2, 3));",
+  "solution": "function sum() {\n  let total = 0;\n  for (const num of arguments) {\n    total += num;\n  }\n  return total;\n}\nconsole.log(sum(1, 2, 3));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "6"
+    }
+  ],
+  "hints": [
+    "arguments is array-like",
+    "Use for...of on it"
+  ]
+}

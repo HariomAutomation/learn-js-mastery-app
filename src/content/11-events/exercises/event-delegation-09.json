@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-delegation-09",
+  "title": "Data Attribute Delegation",
+  "starterCode": "const list = document.querySelector('ul');\nlist.addEventListener('click', function(e) {\n  const id = e.target.dataset.id;\n  console.log(id);\n});",
+  "solution": "const list = document.querySelector('ul');\nlist.addEventListener('click', function(e) {\n  const id = e.target.dataset.id;\n  console.log(id);\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "123"
+    }
+  ],
+  "hints": [
+    "Use data-* attributes for identification",
+    "Read with dataset property"
+  ]
+}

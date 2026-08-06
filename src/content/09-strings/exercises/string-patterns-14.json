@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-patterns-14",
+  "title": "Kebab Case",
+  "starterCode": "function kebabCase(str) {\n  return str.replace(/([A-Z])/g, '-$1').toLowerCase().replace(/^-/, '');\n}\nconsole.log(kebabCase('helloWorld'));",
+  "solution": "function kebabCase(str) {\n  return str.replace(/([A-Z])/g, '-$1').toLowerCase().replace(/^-/, '');\n}\nconsole.log(kebabCase('helloWorld'));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hello-world"
+    }
+  ],
+  "hints": [
+    "Dash before caps",
+    "Lowercase all"
+  ]
+}

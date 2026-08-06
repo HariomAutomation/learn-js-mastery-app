@@ -1,0 +1,16 @@
+{
+  "id": "05-loops-for-of-for-in-18",
+  "title": "For...Of With Continue",
+  "starterCode": "const arr = [1, 2, 3, 4, 5];\nfor (const val of arr) {\n  if (val % 2 === 0) continue;\n  console.log(val);\n}",
+  "solution": "const arr = [1, 2, 3, 4, 5];\nfor (const val of arr) {\n  if (val % 2 === 0) continue;\n  console.log(val);\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1\n3\n5"
+    }
+  ],
+  "hints": [
+    "continue skips iteration",
+    "Check for even to skip"
+  ]
+}

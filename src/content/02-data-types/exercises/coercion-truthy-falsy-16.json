@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-16",
+  "title": "Boolean() conversion",
+  "starterCode": "console.log(Boolean(0));",
+  "solution": "console.log(Boolean(0));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "false"
+    }
+  ],
+  "hints": [
+    "Boolean() converts to boolean",
+    "0 is falsy"
+  ]
+}

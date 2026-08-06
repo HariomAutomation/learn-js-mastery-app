@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-49",
+  "title": "Object to string conversion",
+  "starterCode": "console.log({} + '');",
+  "solution": "console.log({} + '');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[object Object]"
+    }
+  ],
+  "hints": [
+    "Objects use toString()",
+    "Default is '[object Object]'"
+  ]
+}

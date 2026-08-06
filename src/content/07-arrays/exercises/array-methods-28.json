@@ -1,0 +1,16 @@
+{
+  "id": "07-arrays-array-methods-28",
+  "title": "Entries",
+  "starterCode": "const arr = ['x', 'y', 'z'];\nconst entries = arr.____();\nconsole.log([...entries]);",
+  "solution": "const arr = ['x', 'y', 'z'];\nconst entries = arr.entries();\nconsole.log([...entries]);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[ [ 0, 'x' ], [ 1, 'y' ], [ 2, 'z' ] ]"
+    }
+  ],
+  "hints": [
+    "entries() returns [index, value]",
+    "Spread to see pairs"
+  ]
+}

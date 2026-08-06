@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-practice-32",
+  "title": "Click Counter",
+  "starterCode": "const btn = document.querySelector('button');\nlet count = 0;\nbtn.addEventListener('click', () => {\n  count++;\n  console.log(count);\n});",
+  "solution": "const btn = document.querySelector('button');\nlet count = 0;\nbtn.addEventListener('click', () => {\n  count++;\n  console.log(count);\n});",
+  "tests": [
+    {
+      "input": [],
+      "expected": "1"
+    }
+  ],
+  "hints": [
+    "Increment count on each click",
+    "Display updated count"
+  ]
+}

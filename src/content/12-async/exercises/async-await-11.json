@@ -1,0 +1,16 @@
+{
+  "id": "12-async-async-await-11",
+  "title": "Async Map",
+  "starterCode": "async function mapAsync(items) {\n  return Promise.all(items.map(async item => {\n    return await Promise.resolve(item * 2);\n  }));\n}\nmapAsync([1, 2, 3]).then(r => console.log(r));",
+  "solution": "async function mapAsync(items) {\n  return Promise.all(items.map(async item => {\n    return await Promise.resolve(item * 2);\n  }));\n}\nmapAsync([1, 2, 3]).then(r => console.log(r));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2,4,6"
+    }
+  ],
+  "hints": [
+    "Map with async callback",
+    "Use Promise.all for parallel"
+  ]
+}

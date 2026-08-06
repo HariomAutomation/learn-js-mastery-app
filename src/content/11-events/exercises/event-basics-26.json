@@ -1,0 +1,16 @@
+{
+  "id": "11-events-event-basics-26",
+  "title": "Capture Option",
+  "starterCode": "document.addEventListener('click', function() {\n  console.log('capture');\n}, { capture: true });\nconsole.log('capture listener');",
+  "solution": "document.addEventListener('click', function() {\n  console.log('capture');\n}, { capture: true });\nconsole.log('capture listener');",
+  "tests": [
+    {
+      "input": [],
+      "expected": "capture listener"
+    }
+  ],
+  "hints": [
+    "capture: true fires during capture phase",
+    "Before bubbling phase"
+  ]
+}

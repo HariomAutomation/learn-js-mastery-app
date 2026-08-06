@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-variables-intro-03",
+  "title": "Swap two variables",
+  "starterCode": "let a = 1, b = 2\n// swap a and b\nconsole.log(a, b)",
+  "solution": "let a = 1, b = 2\n[a, b] = [b, a]\nconsole.log(a, b)",
+  "tests": [
+    {
+      "input": [],
+      "expected": "2 1"
+    }
+  ],
+  "hints": [
+    "Use destructuring"
+  ]
+}

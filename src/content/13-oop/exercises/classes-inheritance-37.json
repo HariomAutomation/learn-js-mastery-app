@@ -1,0 +1,16 @@
+{
+  "id": "13-oop-classes-inheritance-37",
+  "title": "Class Constructor",
+  "starterCode": "class Book {\n  constructor(title) { this.title = title; }\n}\nconst b = new Book('JS');\nconsole.log(b.title);",
+  "solution": "class Book {\n  constructor(title) { this.title = title; }\n}\nconst b = new Book('JS');\nconsole.log(b.title);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "JS"
+    }
+  ],
+  "hints": [
+    "constructor initializes instance",
+    "this refers to new object"
+  ]
+}

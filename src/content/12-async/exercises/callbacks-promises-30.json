@@ -1,0 +1,16 @@
+{
+  "id": "12-async-callbacks-promises-30",
+  "title": "Promise Practice",
+  "starterCode": "Promise.resolve('practice')\n  .then(x => x + ' makes perfect')\n  .then(x => console.log(x));",
+  "solution": "Promise.resolve('practice')\n  .then(x => x + ' makes perfect')\n  .then(x => console.log(x));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "practice makes perfect"
+    }
+  ],
+  "hints": [
+    "Chain promises together",
+    "Transform values in then"
+  ]
+}

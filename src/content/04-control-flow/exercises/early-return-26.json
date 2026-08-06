@@ -1,0 +1,17 @@
+{
+  "id": "04-control-flow-early-return-26",
+  "title": "Early return with object",
+  "starterCode": "function createUser(name, age) {\n  if (!name) return { error: 'name required' };\n  if (age < 0) return { error: 'invalid age' };\n  return { name, age, status: 'active' };\n}\nconsole.log(createUser('Alice', 25));",
+  "solution": "function createUser(name, age) {\n  if (!name) return { error: 'name required' };\n  if (age < 0) return { error: 'invalid age' };\n  return { name, age, status: 'active' };\n}\nconsole.log(createUser('Alice', 25));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "[object Object]"
+    }
+  ],
+  "hints": [
+    "name is truthy",
+    "age is positive",
+    "Returns user object"
+  ]
+}

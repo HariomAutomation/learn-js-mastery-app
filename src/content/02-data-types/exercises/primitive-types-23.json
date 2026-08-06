@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-primitive-types-23",
+  "title": "Declare a variable without assigning a value",
+  "starterCode": "let x;\nconsole.log(x);",
+  "solution": "let x;\nconsole.log(x);",
+  "tests": [
+    {
+      "input": [],
+      "expected": "undefined"
+    }
+  ],
+  "hints": [
+    "Uninitialized variables are undefined",
+    "Just declare with let and no assignment"
+  ]
+}

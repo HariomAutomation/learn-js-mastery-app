@@ -1,0 +1,16 @@
+{
+  "id": "02-data-types-coercion-truthy-falsy-37",
+  "title": "Implicit conversion in if condition",
+  "starterCode": "const val = \"hello\";\nif (val) {\n  console.log(\"truthy\");\n} else {\n  console.log(\"falsy\");\n}",
+  "solution": "const val = \"hello\";\nif (val) {\n  console.log(\"truthy\");\n} else {\n  console.log(\"falsy\");\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "truthy"
+    }
+  ],
+  "hints": [
+    "Non-empty strings are truthy",
+    "if converts to boolean"
+  ]
+}

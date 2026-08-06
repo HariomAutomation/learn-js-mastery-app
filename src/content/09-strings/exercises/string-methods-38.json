@@ -1,0 +1,16 @@
+{
+  "id": "09-strings-string-methods-38",
+  "title": "Search Pattern",
+  "starterCode": "const str = 'abc123def';\nconsole.log(str.search(/\\d/));",
+  "solution": "const str = 'abc123def';\nconsole.log(str.search(/\\d/));",
+  "tests": [
+    {
+      "input": [],
+      "expected": "3"
+    }
+  ],
+  "hints": [
+    "Find first digit",
+    "Returns index"
+  ]
+}
