@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Mastery — Learn JavaScript</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --bg: #0a0a0f;
+            --surface: #12121a;
+            --border: #1e1e2e;
+            --text: #e4e4e7;
+            --text-muted: #71717a;
+            --primary: #facc15;
+            --primary-dark: #eab308;
+            --accent: #3b82f6;
+            --green: #22c55e;
+            --purple: #a855f7;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 15, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+            padding: 16px 0;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span { color: var(--text); }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover { color: var(--text); }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.2s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: var(--surface);
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        /* Hero */
+        .hero {
+            padding: 160px 0 100px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(250, 204, 21, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background: rgba(250, 204, 21, 0.1);
+            border: 1px solid rgba(250, 204, 21, 0.2);
+            border-radius: 100px;
+            font-size: 0.85rem;
+            color: var(--primary);
+            margin-bottom: 24px;
+        }
+
+        .badge::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--primary);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+
+        h1 .highlight {
+            background: linear-gradient(135deg, var(--primary), #f97316);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+        }
+
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            padding: 60px 0;
+        }
+
+        .stat-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            transition: border-color 0.3s;
+        }
+
+        .stat-card:hover { border-color: var(--primary); }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1;
+        }
+
+        .stat-label {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 8px;
+        }
+
+        /* Features */
+        .features {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .feature-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-4px);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* Course Modules */
+        .modules {
+            padding: 80px 0;
+            background: var(--surface);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
+        }
+
+        .module-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            transition: border-color 0.2s;
+        }
+
+        .module-card:hover { border-color: var(--primary); }
+
+        .module-num {
+            width: 40px;
+            height: 40px;
+            min-width: 40px;
+            background: rgba(250, 204, 21, 0.1);
+            color: var(--primary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .module-info h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .module-info p {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        .module-info .module-meta {
+            display: flex;
+            gap: 12px;
+            margin-top: 8px;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .module-meta span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* Tech Stack */
+        .tech {
+            padding: 80px 0;
+        }
+
+        .tech-grid {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+
+        .tech-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            padding: 24px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            min-width: 100px;
+            transition: border-color 0.2s;
+        }
+
+        .tech-item:hover { border-color: var(--primary); }
+
+        .tech-item .icon {
+            font-size: 2rem;
+        }
+
+        .tech-item span {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* CTA */
+        .cta {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, rgba(250, 204, 21, 0.1), rgba(59, 130, 246, 0.1));
+            border: 1px solid rgba(250, 204, 21, 0.2);
+            border-radius: 24px;
+            padding: 64px 48px;
+        }
+
+        .cta-box h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .cta-box p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 32px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+
+        footer p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .stats { grid-template-columns: repeat(2, 1fr); }
+            .features-grid { grid-template-columns: 1fr; }
+            .hero-buttons { flex-direction: column; align-items: center; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="container">
+        <a href="#" class="logo">⚡ <span>JS Mastery</span></a>
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#course">Course</a>
+            <a href="#tech">Tech Stack</a>
+            <a href="https://github.com/HariomAutomation/learn-js-mastery-app" class="btn btn-primary" target="_blank">
+                ⬇ Download App
+            </a>
+        </div>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="container">
+        <div class="badge">Now Available for Windows, Mac & Linux</div>
+        <h1>Master <span class="highlight">JavaScript</span><br>From Zero to Hero</h1>
+        <p>A complete desktop course app with 1,893+ hands-on exercises, built-in code editor, and auto-tracking progress. Learn JavaScript the practical way.</p>
+        <div class="hero-buttons">
+            <a href="https://github.com/HariomAutomation/learn-js-mastery-app/releases" class="btn btn-primary" target="_blank">
+                ⬇ Download for Free
+            </a>
+            <a href="https://github.com/HariomAutomation/learn-js-mastery-app" class="btn btn-secondary" target="_blank">
+                View Source Code →
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="stats container">
+    <div class="stat-card">
+        <div class="stat-number">1,893+</div>
+        <div class="stat-label">Practice Exercises</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number">38</div>
+        <div class="stat-label">In-Depth Lessons</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number">13</div>
+        <div class="stat-label">Complete Modules</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Free & Open Source</div>
+    </div>
+</section>
+
+<section class="features" id="features">
+    <div class="container">
+        <div class="section-header">
+            <h2>Everything You Need to Learn</h2>
+            <p>Built for developers who learn by doing, not just watching.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon" style="background: rgba(250, 204, 21, 0.1);">💻</div>
+                <h3>Built-in Code Editor</h3>
+                <p>Write and test code directly in the app with CodeMirror-powered editor featuring syntax highlighting and auto-completion.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" style="background: rgba(34, 197, 94, 0.1);">✅</div>
+                <h3>Auto-Graded Exercises</h3>
+                <p>Each exercise comes with starter code, tests, and instant feedback. Know immediately if your solution works.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" style="background: rgba(168, 85, 247, 0.1);">📊</div>
+                <h3>Progress Tracking</h3>
+                <p>Track your learning journey with automatic progress saves. Pick up exactly where you left off.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" style="background: rgba(59, 130, 246, 0.1);">🧠</div>
+                <h3>Smart Quizzes</h3>
+                <p>Test your knowledge after each lesson with our quiz engine. Auto-complete lessons when you finish.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" style="background: rgba(239, 68, 68, 0.1);">💡</div>
+                <h3>Helpful Hints</h3>
+                <p>Stuck on an exercise? Get progressive hints that guide you without giving away the answer.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" style="background: rgba(20, 184, 166, 0.1);">🌐</div>
+                <h3>Works Offline</h3>
+                <p>Download once, learn anywhere. No internet connection required after installation.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="modules" id="course">
+    <div class="container">
+        <div class="section-header">
+            <h2>Complete Course Structure</h2>
+            <p>From variables to design patterns — everything covered.</p>
+        </div>
+        <div class="modules-grid">
+            <div class="module-card">
+                <div class="module-num">01</div>
+                <div class="module-info">
+                    <h4>Variables & Declarations</h4>
+                    <p>var, let, const, scope, hoisting</p>
+                    <div class="module-meta"><span>📖 3 lessons</span><span>✏️ 108 exercises</span></div>
+                </div>
+            </div>
+            <div class="module-card">
+                <div class="module-num">02</div>
+                <div class="module-info">
+                    <h4>Data Types</h4>
+                    <p>Primitives, references, coercion</p>
+                    <div class="module-meta"><span>📖 3 lessons</span><span>✏️ 150 exercises</span></div>
+                </div>
+            </div>
+            <div class="module-card">
+                <div class="module-num">03</div>
+                <div class="module-info">
+                    <h4>Operators</h4>
+                    <p>Arithmetic, comparison, logical, ternary</p>
+                    <div class="module-meta"><span>📖 2 lessons</span><span>✏️ 100 exercises</span></div>
+                </div>
+            </div>
+            <div class="module-card">
+                <div class="module-num">04</div>
+                <div class="module-info">
+                    <h4>Control Flow</h4>
+                    <p>if/else, switch, early return</p>
+                    <div class="module-meta"><span>📖 2 lessons</span><span>✏️ 100 exercises</span></div>
+                </div>
+            </div>
+            <div class="module-card">
+                <div class="module-num">05</div>
+                <div class="module-info">
+                    <h4>Loops</h4>
+                    <p>for, while, for-of, patterns</p>
+                    <div class="module-meta"><span>📖 3 lessons</span><span>✏️ 150 exercises</span></div>
+                </div>
+            </div>
+            <div class="module-card">
+                <div class="module-num">06</div>
+                <div class="module-info">
+                    <h4>Functions</h4>
+                    <p>Basics, arrows, closures, HOFs</p>
+                    <div class="module-meta"><span>📖 4 lessons</span><span>✏️ 200 exercises</span></div>
+                </div>
+            </div>
+            <div class="module-card">
+                <div class="module-num">07</div>
+                <div class="module-info">
+                    <h4>Arrays</h4>
+                    <p>Methods, map/filter/reduce, patterns</p>
+                    <div class="module-meta"><span>📖 3 lessons</span><span>✏️ 150 exercises</span></div>
+                </div>
+            </div>
+            <div class="module-card">
+                <div class="module-num">08</div>
+                <div class="module-info">
+                    <h4>Objects</h4>
+                    <p>Basics, destructuring, advanced</p>
+                    <div class="module-meta"><span>📖 3 lessons</span><span>✏️ 150 exercises</span></div>
+                </div>
+            </div>
+            <div class="module-card">
+                <div class="module-num">09</div>
+                <div class="module-info">
+                    <h4>Strings</h4>
+                    <p>Methods, patterns, manipulation</p>
+                    <div class="module-meta"><span>📖 3 lessons</span><span>✏️ 150 exercises</span></div>
+                </div>
+            </div>
+            <div class="module-card">
+                <div class="module-num">10</div>
+                <div class="module-info">
+                    <h4>DOM Manipulation</h4>
+                    <p>Selectors, modify, create/delete</p>
+                    <div class="module-meta"><span>📖 3 lessons</span><span>✏️ 150 exercises</span></div>
+                </div>
+            </div>
+            <div class="module-card">
+                <div class="module-num">11</div>
+                <div class="module-info">
+                    <h4>Events</h4>
+                    <p>Basics, delegation, practice</p>
+                    <div class="module-meta"><span>📖 3 lessons</span><span>✏️ 150 exercises</span></div>
+                </div>
+            </div>
+            <div class="module-card">
+                <div class="module-num">12</div>
+                <div class="module-info">
+                    <h4>Async JavaScript</h4>
+                    <p>Callbacks, promises, async/await, fetch</p>
+                    <div class="module-meta"><span>📖 3 lessons</span><span>✏️ 150 exercises</span></div>
+                </div>
+            </div>
+            <div class="module-card">
+                <div class="module-num">13</div>
+                <div class="module-info">
+                    <h4>OOP</h4>
+                    <p>Classes, prototypes, design patterns</p>
+                    <div class="module-meta"><span>📖 3 lessons</span><span>✏️ 150 exercises</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="tech" id="tech">
+    <div class="container">
+        <div class="section-header">
+            <h2>Built with Modern Tech</h2>
+            <p>Powered by the tools professional developers use daily.</p>
+        </div>
+        <div class="tech-grid">
+            <div class="tech-item">
+                <div class="icon">⚛️</div>
+                <span>React 18</span>
+            </div>
+            <div class="tech-item">
+                <div class="icon">📘</div>
+                <span>TypeScript</span>
+            </div>
+            <div class="tech-item">
+                <div class="icon">⚡</div>
+                <span>Electron</span>
+            </div>
+            <div class="tech-item">
+                <div class="icon">🔧</div>
+                <span>Vite</span>
+            </div>
+            <div class="tech-item">
+                <div class="icon">🐻</div>
+                <span>Zustand</span>
+            </div>
+            <div class="tech-item">
+                <div class="icon">📝</div>
+                <span>CodeMirror</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <div class="cta-box">
+            <h2>Ready to Master JavaScript?</h2>
+            <p>Join thousands of developers learning JavaScript the practical way. 100% free and open source.</p>
+            <div class="cta-buttons">
+                <a href="https://github.com/HariomAutomation/learn-js-mastery-app/releases" class="btn btn-primary" target="_blank">
+                    ⬇ Download Now
+                </a>
+                <a href="https://github.com/HariomAutomation/learn-js-mastery-app" class="btn btn-secondary" target="_blank">
+                    Star on GitHub ⭐
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>Built with ❤️ by <a href="https://github.com/HariomAutomation" target="_blank">HariomAutomation</a> · Open Source under MIT License</p>
+    </div>
+</footer>
+
+</body>
+</html>
