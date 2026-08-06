@@ -1,0 +1,1 @@
+const t="01-variables-declarations-variables-intro-22",o="void operator",e="console.log(void 0)",s="console.log(void 0)",n=[{input:[],expected:"undefined"}],i=["void evaluates and returns undefined"],a={id:t,title:o,starterCode:e,solution:s,tests:n,hints:i};export{a as default,i as hints,t as id,s as solution,e as starterCode,n as tests,o as title};

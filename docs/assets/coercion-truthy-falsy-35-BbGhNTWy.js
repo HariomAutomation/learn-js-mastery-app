@@ -1,0 +1,1 @@
+const t="02-data-types-coercion-truthy-falsy-35",o="Space string is truthy",s='console.log(Boolean(" "));',e='console.log(Boolean(" "));',n=[{input:[],expected:"true"}],c=["A space is a character","Non-empty strings are truthy"],r={id:t,title:o,starterCode:s,solution:e,tests:n,hints:c};export{r as default,c as hints,t as id,e as solution,s as starterCode,n as tests,o as title};

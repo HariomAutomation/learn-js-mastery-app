@@ -1,0 +1,1 @@
+const t="09-strings-string-methods-28",s="PadStart",o="console.log('42'.padStart(5, '0'));",e="console.log('42'.padStart(5, '0'));",n=[{input:[],expected:"00042"}],i=["Pad with zeros","To length 5"],d={id:t,title:s,starterCode:o,solution:e,tests:n,hints:i};export{d as default,i as hints,t as id,e as solution,o as starterCode,n as tests,s as title};

@@ -1,0 +1,1 @@
+const s="09-strings-string-basics-26",t="ToUpperCase",e="console.log('hello'.toUpperCase());",o="console.log('hello'.toUpperCase());",n=[{input:[],expected:"HELLO"}],l=["toUpperCase converts","All uppercase"],c={id:s,title:t,starterCode:e,solution:o,tests:n,hints:l};export{c as default,l as hints,s as id,o as solution,e as starterCode,n as tests,t as title};

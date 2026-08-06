@@ -1,0 +1,1 @@
+const t="02-data-types-coercion-truthy-falsy-20",o="Unary plus conversion",s='console.log(+"42");',e='console.log(+"42");',n=[{input:[],expected:"42"}],r=["+ before a value converts to number","It's a shorthand for Number()"],c={id:t,title:o,starterCode:s,solution:e,tests:n,hints:r};export{c as default,r as hints,t as id,e as solution,s as starterCode,n as tests,o as title};

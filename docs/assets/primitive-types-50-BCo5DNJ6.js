@@ -1,0 +1,1 @@
+const t="02-data-types-primitive-types-50",e="Convert boolean to number",o="console.log(Number(true));",s="console.log(Number(true));",n=[{input:[],expected:"1"}],i=["true becomes 1","false becomes 0"],r={id:t,title:e,starterCode:o,solution:s,tests:n,hints:i};export{r as default,i as hints,t as id,s as solution,o as starterCode,n as tests,e as title};

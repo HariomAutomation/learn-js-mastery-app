@@ -1,0 +1,11 @@
+const n="06-functions-closures-iife-39",t="Pipe Function",s=`const pipe = (...fns) => x => fns.reduce((v, f) => f(v), x);
+const add1 = x => x + 1;
+const double = x => x * 2;
+const square = x => x * x;
+const transform = pipe(add1, double, square);
+console.log(transform(3));`,o=`const pipe = (...fns) => x => fns.reduce((v, f) => f(v), x);
+const add1 = x => x + 1;
+const double = x => x * 2;
+const square = x => x * x;
+const transform = pipe(add1, double, square);
+console.log(transform(3));`,e=[{input:[],expected:"64"}],c=["Left to right execution","Reduce to chain"],i={id:n,title:t,starterCode:s,solution:o,tests:e,hints:c};export{i as default,c as hints,n as id,o as solution,s as starterCode,e as tests,t as title};

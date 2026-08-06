@@ -1,0 +1,11 @@
+const e="10-dom-dom-create-delete-13",t="replaceChild",n=`const parent = document.createElement('div');
+const old = document.createElement('p');
+parent.appendChild(old);
+const newEl = document.createElement('span');
+parent.replaceChild(newEl, old);
+console.log(parent.children[0].tagName);`,o=`const parent = document.createElement('div');
+const old = document.createElement('p');
+parent.appendChild(old);
+const newEl = document.createElement('span');
+parent.replaceChild(newEl, old);
+console.log(parent.children[0].tagName);`,l=[{input:[],expected:"SPAN"}],d=["replaceChild(newNode, oldNode)","Check the tag of remaining child"],c={id:e,title:t,starterCode:n,solution:o,tests:l,hints:d};export{c as default,d as hints,e as id,o as solution,n as starterCode,l as tests,t as title};

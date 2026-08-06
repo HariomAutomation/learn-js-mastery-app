@@ -1,0 +1,1 @@
+const t="09-strings-string-methods-41",e="Trim Start",s="console.log('  hello  '.trimStart());",o="console.log('  hello  '.trimStart());",i=[{input:[],expected:"hello  "}],n=["Remove leading whitespace","Keep trailing"],l={id:t,title:e,starterCode:s,solution:o,tests:i,hints:n};export{l as default,n as hints,t as id,o as solution,s as starterCode,i as tests,e as title};

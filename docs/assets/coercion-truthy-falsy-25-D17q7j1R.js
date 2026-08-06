@@ -1,0 +1,1 @@
+const t="02-data-types-coercion-truthy-falsy-25",o="Numeric comparison",s='console.log(2 > "12");',e='console.log(2 > "12");',n=[{input:[],expected:"false"}],c=["Number on left converts string to number","2 > 12 is false"],i={id:t,title:o,starterCode:s,solution:e,tests:n,hints:c};export{i as default,c as hints,t as id,e as solution,s as starterCode,n as tests,o as title};

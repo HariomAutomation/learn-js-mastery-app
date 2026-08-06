@@ -1,0 +1,1 @@
+const t="02-data-types-coercion-truthy-falsy-29",e="undefined coerces to NaN",o="console.log(undefined + 5);",n="console.log(undefined + 5);",s=[{input:[],expected:"NaN"}],c=["undefined converts to NaN","Any math with NaN is NaN"],i={id:t,title:e,starterCode:o,solution:n,tests:s,hints:c};export{i as default,c as hints,t as id,n as solution,o as starterCode,s as tests,e as title};

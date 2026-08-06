@@ -1,0 +1,1 @@
+const t="02-data-types-coercion-truthy-falsy-43",o="Multiply with string",s='console.log("3" * 2);',e='console.log("3" * 2);',n=[{input:[],expected:"6"}],i=["* does math","String is converted to number"],c={id:t,title:o,starterCode:s,solution:e,tests:n,hints:i};export{c as default,i as hints,t as id,e as solution,s as starterCode,n as tests,o as title};

@@ -1,0 +1,2 @@
+const e="08-objects-destructuring-copying-12",t="Default Parameter",n="function greet({name = 'World', age = 0} = {}) {\n  console.log(`${name}: ${age}`);\n}\ngreet();\ngreet({name: 'Alice'});",o="function greet({name = 'World', age = 0} = {}) {\n  console.log(`${name}: ${age}`);\n}\ngreet();\ngreet({name: 'Alice'});",s=[{input:[],expected:`World: 0
+Alice: 0`}],a=["Default param values","Default whole object"],r={id:e,title:t,starterCode:n,solution:o,tests:s,hints:a};export{r as default,a as hints,e as id,o as solution,n as starterCode,s as tests,t as title};

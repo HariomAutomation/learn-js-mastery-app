@@ -1,0 +1,1 @@
+const t="02-data-types-coercion-truthy-falsy-18",o="String() conversion from number",n="console.log(String(42));",s="console.log(String(42));",e=[{input:[],expected:"42"}],r=["String() converts to string","Returns '42' not 42"],i={id:t,title:o,starterCode:n,solution:s,tests:e,hints:r};export{i as default,r as hints,t as id,s as solution,n as starterCode,e as tests,o as title};

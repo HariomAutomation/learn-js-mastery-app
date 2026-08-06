@@ -1,0 +1,1 @@
+const t="09-strings-string-methods-12",s="Slice Wrap",o="console.log('hello'.slice(1, 10));",e="console.log('hello'.slice(1, 10));",n=[{input:[],expected:"ello"}],l=["End beyond length ok","Clamps to end"],i={id:t,title:s,starterCode:o,solution:e,tests:n,hints:l};export{i as default,l as hints,t as id,e as solution,o as starterCode,n as tests,s as title};

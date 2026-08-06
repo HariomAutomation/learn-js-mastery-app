@@ -1,0 +1,1 @@
+const t="02-data-types-coercion-truthy-falsy-14",o="Strict equality no coercion",s='console.log(5 === "5");',e='console.log(5 === "5");',n=[{input:[],expected:"false"}],c=["=== checks type and value","No conversion happens"],i={id:t,title:o,starterCode:s,solution:e,tests:n,hints:c};export{i as default,c as hints,t as id,e as solution,s as starterCode,n as tests,o as title};

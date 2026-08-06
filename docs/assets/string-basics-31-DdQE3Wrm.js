@@ -1,0 +1,1 @@
+const t="09-strings-string-basics-31",s="EndsWith",o="console.log('hello world'.endsWith('world'));",e="console.log('hello world'.endsWith('world'));",n=[{input:[],expected:"true"}],i=["endsWith checks suffix","At end"],l={id:t,title:s,starterCode:o,solution:e,tests:n,hints:i};export{l as default,i as hints,t as id,e as solution,o as starterCode,n as tests,s as title};

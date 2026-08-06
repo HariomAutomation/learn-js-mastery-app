@@ -1,0 +1,1 @@
+const t="02-data-types-coercion-truthy-falsy-32",o="Boolean of empty object",e="console.log(Boolean({}));",s="console.log(Boolean({}));",n=[{input:[],expected:"true"}],c=["Objects are always truthy","Even with no properties"],l={id:t,title:o,starterCode:e,solution:s,tests:n,hints:c};export{l as default,c as hints,t as id,s as solution,e as starterCode,n as tests,o as title};

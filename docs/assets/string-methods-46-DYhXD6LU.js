@@ -1,0 +1,1 @@
+const t="09-strings-string-methods-46",s="Pad End Start",o="console.log('hi'.padStart(5).padEnd(8));",n="console.log('hi'.padStart(5).padEnd(8));",d=[{input:[],expected:"   hi    "}],e=["Chain pad methods","Pad both ends"],i={id:t,title:s,starterCode:o,solution:n,tests:d,hints:e};export{i as default,e as hints,t as id,n as solution,o as starterCode,d as tests,s as title};

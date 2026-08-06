@@ -1,0 +1,1 @@
+const t="02-data-types-coercion-truthy-falsy-27",o="Boolean coercion in arithmetic",e="console.log(true + true);",s="console.log(true + true);",n=[{input:[],expected:"2"}],c=["true converts to 1","1 + 1 = 2"],r={id:t,title:o,starterCode:e,solution:s,tests:n,hints:c};export{r as default,c as hints,t as id,s as solution,e as starterCode,n as tests,o as title};

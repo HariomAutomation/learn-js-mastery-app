@@ -1,0 +1,1 @@
+const t="09-strings-string-methods-30",o="Pad Short",s="console.log('hello'.padStart(3));",e="console.log('hello'.padStart(3));",n=[{input:[],expected:"hello"}],l=["Already longer","No padding"],d={id:t,title:o,starterCode:s,solution:e,tests:n,hints:l};export{d as default,l as hints,t as id,e as solution,s as starterCode,n as tests,o as title};

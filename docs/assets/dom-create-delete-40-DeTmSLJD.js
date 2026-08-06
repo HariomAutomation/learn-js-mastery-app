@@ -1,0 +1,11 @@
+const e="10-dom-dom-create-delete-40",t="replaceChild Return",n=`const parent = document.createElement('div');
+const old = document.createElement('p');
+parent.appendChild(old);
+const newEl = document.createElement('span');
+const removed = parent.replaceChild(newEl, old);
+console.log(removed === old);`,o=`const parent = document.createElement('div');
+const old = document.createElement('p');
+parent.appendChild(old);
+const newEl = document.createElement('span');
+const removed = parent.replaceChild(newEl, old);
+console.log(removed === old);`,d=[{input:[],expected:"true"}],l=["replaceChild returns the old node","Compare reference"],c={id:e,title:t,starterCode:n,solution:o,tests:d,hints:l};export{c as default,l as hints,e as id,o as solution,n as starterCode,d as tests,t as title};

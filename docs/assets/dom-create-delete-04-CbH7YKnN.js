@@ -1,0 +1,11 @@
+const e="10-dom-dom-create-delete-04",t="insertBefore",n=`const list = document.createElement('ul');
+const item1 = document.createElement('li');
+list.appendChild(item1);
+const item2 = document.createElement('li');
+list.insertBefore(item2, item1);
+console.log(list.children[0] === item2);`,o=`const list = document.createElement('ul');
+const item1 = document.createElement('li');
+list.appendChild(item1);
+const item2 = document.createElement('li');
+list.insertBefore(item2, item1);
+console.log(list.children[0] === item2);`,i=[{input:[],expected:"true"}],s=["insertBefore(newNode, referenceNode)","New node is placed before reference"],l={id:e,title:t,starterCode:n,solution:o,tests:i,hints:s};export{l as default,s as hints,e as id,o as solution,n as starterCode,i as tests,t as title};

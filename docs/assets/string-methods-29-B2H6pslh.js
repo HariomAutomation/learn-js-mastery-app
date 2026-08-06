@@ -1,0 +1,1 @@
+const t="09-strings-string-methods-29",s="PadEnd",o="console.log('hi'.padEnd(10, '.'));",n="console.log('hi'.padEnd(10, '.'));",e=[{input:[],expected:"hi........"}],d=["Pad with dots","At end"],i={id:t,title:s,starterCode:o,solution:n,tests:e,hints:d};export{i as default,d as hints,t as id,n as solution,o as starterCode,e as tests,s as title};

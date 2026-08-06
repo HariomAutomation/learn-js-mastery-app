@@ -1,0 +1,1 @@
+const t="02-data-types-coercion-truthy-falsy-26",s="Falsy 0 vs truthy string 0",o='console.log(0 == "0");',e='console.log(0 == "0");',n=[{input:[],expected:"true"}],c=["== coerces types","0 and '0' are loosely equal"],l={id:t,title:s,starterCode:o,solution:e,tests:n,hints:c};export{l as default,c as hints,t as id,e as solution,o as starterCode,n as tests,s as title};

@@ -1,0 +1,1 @@
+const t="09-strings-string-methods-20",s="Split Empty",o="console.log(''.split(','));",e="console.log(''.split(','));",n=[{input:[],expected:"[ '' ]"}],i=["Empty string split","Returns array with empty"],l={id:t,title:s,starterCode:o,solution:e,tests:n,hints:i};export{l as default,i as hints,t as id,e as solution,o as starterCode,n as tests,s as title};

@@ -1,0 +1,1 @@
+const t="02-data-types-coercion-truthy-falsy-13",o="Loose equality with type coercion",e='console.log(5 == "5");',s='console.log(5 == "5");',c=[{input:[],expected:"true"}],n=["== does type coercion","It converts types to compare"],i={id:t,title:o,starterCode:e,solution:s,tests:c,hints:n};export{i as default,n as hints,t as id,s as solution,e as starterCode,c as tests,o as title};

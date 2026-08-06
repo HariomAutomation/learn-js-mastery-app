@@ -1,0 +1,1 @@
+const o="02-data-types-coercion-truthy-falsy-16",t="Boolean() conversion",s="console.log(Boolean(0));",e="console.log(Boolean(0));",n=[{input:[],expected:"false"}],l=["Boolean() converts to boolean","0 is falsy"],c={id:o,title:t,starterCode:s,solution:e,tests:n,hints:l};export{c as default,l as hints,o as id,e as solution,s as starterCode,n as tests,t as title};
