@@ -89,7 +89,7 @@ button {
 .content-area {
   flex: 1;
   background: #11111b;
-  color: #cdd6f4;
+  color: #fff;
   padding: 2rem;
   overflow-y: auto;
   position: relative;
@@ -99,7 +99,7 @@ button {
 .sidebar {
   width: 290px;
   background: linear-gradient(180deg, #1e1e2e 0%, #181825 100%);
-  color: #cdd6f4;
+  color: #fff;
   overflow-y: auto;
   padding: 1rem;
   flex-shrink: 0;
@@ -130,7 +130,7 @@ button {
   padding: 0.5rem;
   background: none;
   border: none;
-  color: #cdd6f4;
+  color: #fff;
   cursor: pointer;
   text-align: left;
   font-size: 0.875rem;
@@ -201,7 +201,7 @@ button {
 
 .lesson-item:hover {
   background: #313244;
-  color: #cdd6f4;
+  color: #fff;
 }
 
 .lesson-item.active {
@@ -290,7 +290,7 @@ button {
 
 .btn-secondary {
   background: #45475a;
-  color: #cdd6f4;
+  color: #fff;
 }
 
 .btn-secondary:hover:not(:disabled) {
@@ -383,7 +383,7 @@ button {
 .hero-title {
   font-size: 2.2rem;
   font-weight: 800;
-  color: #cdd6f4;
+  color: #fff;
   line-height: 1.2;
   margin-bottom: 0.75rem;
 }
@@ -445,7 +445,7 @@ button {
 
 .hero-level-title {
   font-weight: 600;
-  color: #cdd6f4;
+  color: #fff;
 }
 
 .hero-level-xp {
@@ -492,7 +492,7 @@ button {
 .stat-tile-value {
   font-size: 1.25rem;
   font-weight: 800;
-  color: #cdd6f4;
+  color: #fff;
 }
 
 .stat-tile-label {
@@ -545,7 +545,7 @@ button {
   border-radius: 14px;
   cursor: pointer;
   text-align: left;
-  color: #cdd6f4;
+  color: #fff;
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
   animation: fadeInUp 0.4s ease both;
 }
@@ -633,7 +633,7 @@ button {
 }
 
 .recommend-list strong {
-  color: #cdd6f4;
+  color: #fff;
 }
 
 .recommend-arrow {
@@ -692,7 +692,7 @@ button {
 .ring-label {
   font-size: 0.95rem;
   font-weight: 800;
-  color: #cdd6f4;
+  color: #fff;
 }
 
 .ring-sublabel {
@@ -753,13 +753,13 @@ button {
 .lesson-title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #cdd6f4;
+  color: #fff;
 }
 
 .lesson-body {
   line-height: 1.7;
   font-size: 0.9375rem;
-  color: #cdd6f4;
+  color: #fff;
 }
 
 .lesson-body h1,
@@ -859,7 +859,7 @@ button {
 .task-title {
   font-size: 1.05rem;
   font-weight: 700;
-  color: #cdd6f4;
+  color: #fff;
 }
 
 .task-instructions {
@@ -877,7 +877,7 @@ button {
 }
 
 .task-line:first-child {
-  color: #cdd6f4;
+  color: #fff;
   font-weight: 500;
 }
 
@@ -919,7 +919,7 @@ button {
 .code-editor {
   width: 100%;
   background: #11111b;
-  color: #cdd6f4;
+  color: #fff;
   border: 1px solid #313244;
   border-radius: 8px;
   padding: 0.75rem;
@@ -1043,7 +1043,7 @@ button {
 .test-case-name {
   font-size: 0.8rem;
   font-weight: 600;
-  color: #cdd6f4;
+  color: #fff;
 }
 
 .test-case-body {
@@ -1159,7 +1159,7 @@ button {
   font-size: 1rem;
   font-weight: 500;
   margin-bottom: 1rem;
-  color: #cdd6f4;
+  color: #fff;
 }
 
 .options-list {
@@ -1177,7 +1177,7 @@ button {
   background: #11111b;
   border: 1px solid #313244;
   border-radius: 8px;
-  color: #cdd6f4;
+  color: #fff;
   cursor: pointer;
   text-align: left;
   font-size: 0.875rem;
@@ -1277,7 +1277,7 @@ button {
 .quiz-result-value {
   font-size: 1.1rem;
   font-weight: 800;
-  color: #cdd6f4;
+  color: #fff;
 }
 
 .quiz-result-label {
@@ -1354,7 +1354,7 @@ button {
 .stat-value {
   font-size: 1rem;
   font-weight: 700;
-  color: #cdd6f4;
+  color: #fff;
 }
 
 .stat-label {
@@ -1476,7 +1476,7 @@ button {
   position: relative;
   font-size: 1.8rem;
   font-weight: 800;
-  color: #cdd6f4;
+  color: #fff;
   margin-bottom: 0.75rem;
 }
 
@@ -1521,7 +1521,7 @@ button {
 .exam-rule strong {
   display: block;
   font-size: 0.85rem;
-  color: #cdd6f4;
+  color: #fff;
 }
 
 .exam-rule span:not(.exam-rule-icon) {
@@ -1743,7 +1743,7 @@ button {
 }
 
 .palette-summary strong {
-  color: #cdd6f4;
+  color: #fff;
 }
 
 .palette-submit {
@@ -1804,7 +1804,7 @@ button {
 .certificate-title {
   font-size: 1.5rem;
   font-weight: 800;
-  color: #cdd6f4;
+  color: #fff;
   margin-bottom: 0.75rem;
 }
 
@@ -1857,7 +1857,7 @@ button {
 .result-stat-value {
   font-size: 1.15rem;
   font-weight: 800;
-  color: #cdd6f4;
+  color: #fff;
 }
 
 .result-stat-label {
@@ -1951,7 +1951,7 @@ button {
   border-radius: 6px;
   background: none;
   border: none;
-  color: #cdd6f4;
+  color: #fff;
   cursor: pointer;
   transition: background 0.2s;
 }
@@ -2021,7 +2021,7 @@ button {
   flex: 1;
   background: none;
   border: none;
-  color: #cdd6f4;
+  color: #fff;
   font-size: 1rem;
   outline: none;
   font-family: inherit;
@@ -2054,7 +2054,7 @@ button {
   padding: 0.6rem 0.75rem;
   background: none;
   border: none;
-  color: #cdd6f4;
+  color: #fff;
   border-radius: 6px;
   cursor: pointer;
   text-align: left;
@@ -2198,7 +2198,7 @@ button {
 
 .exam-history-score {
   font-size: 0.875rem;
-  color: #cdd6f4;
+  color: #fff;
   font-weight: 500;
 }
 
@@ -2268,7 +2268,7 @@ button {
   background: #181825;
   border: 1px solid #313244;
   border-radius: 8px;
-  color: #cdd6f4;
+  color: #fff;
   padding: 0.75rem;
   font-family: inherit;
   font-size: 0.875rem;
@@ -2314,22 +2314,22 @@ button {
 /* ===== LIGHT THEME ===== */
 [data-theme="light"] {
   background: #e4e7ed;
-  color: #4c4f69;
+  color: #1e1e2e;
 }
 
 [data-theme="light"] .content-area {
   background: #e4e7ed;
-  color: #4c4f69;
+  color: #1e1e2e;
 }
 
 [data-theme="light"] .sidebar {
   background: linear-gradient(180deg, #d4d8e0 0%, #d4d8e0 100%);
   border-right-color: #c0c4ce;
-  color: #4c4f69;
+  color: #1e1e2e;
 }
 
 [data-theme="light"] .module-header {
-  color: #4c4f69;
+  color: #1e1e2e;
 }
 
 [data-theme="light"] .module-header:hover {
@@ -2358,7 +2358,7 @@ button {
 
 [data-theme="light"] .lesson-item:hover {
   background: #c0c4ce;
-  color: #4c4f69;
+  color: #1e1e2e;
 }
 
 [data-theme="light"] .lesson-item.active {
@@ -2372,7 +2372,7 @@ button {
 
 [data-theme="light"] .btn-secondary {
   background: #c0c4ce;
-  color: #4c4f69;
+  color: #1e1e2e;
 }
 
 [data-theme="light"] .btn-secondary:hover:not(:disabled) {
@@ -2385,14 +2385,14 @@ button {
 
 [data-theme="light"] .btn-ghost:hover {
   background: #c0c4ce;
-  color: #4c4f69;
+  color: #1e1e2e;
 }
 
 [data-theme="light"] .code-editor,
 [data-theme="light"] .note-textarea {
   background: #d4d8e0;
   border-color: #c0c4ce;
-  color: #4c4f69;
+  color: #1e1e2e;
 }
 
 [data-theme="light"] .search-modal {
@@ -2405,7 +2405,7 @@ button {
 }
 
 [data-theme="light"] .search-input {
-  color: #4c4f69;
+  color: #1e1e2e;
 }
 
 [data-theme="light"] .exam-history-item {
@@ -2416,17 +2416,17 @@ button {
 [data-theme="light"] .quiz-engine {
   background: #d4d8e0;
   border-color: #c0c4ce;
-  color: #4c4f69;
+  color: #1e1e2e;
 }
 
 [data-theme="light"] .question-text {
-  color: #4c4f69;
+  color: #1e1e2e;
 }
 
 [data-theme="light"] .option-item {
   background: #d4d8e0;
   border-color: #c0c4ce;
-  color: #4c4f69;
+  color: #1e1e2e;
 }
 
 [data-theme="light"] .option-item:hover:not(.selected):not(:disabled) {
@@ -2449,7 +2449,7 @@ button {
 }
 
 [data-theme="light"] .task-title {
-  color: #4c4f69;
+  color: #1e1e2e;
 }
 
 [data-theme="light"] .task-line {
@@ -2458,7 +2458,7 @@ button {
 }
 
 [data-theme="light"] .task-line:first-child {
-  color: #4c4f69;
+  color: #1e1e2e;
 }
 
 [data-theme="light"] .playground-editor-label {
@@ -2466,7 +2466,7 @@ button {
 }
 
 [data-theme="light"] .playground-title {
-  color: #4c4f69;
+  color: #1e1e2e;
 }
 
 [data-theme="light"] .smart-card,
@@ -2491,6 +2491,15 @@ button {
 
 [data-theme="light"] .lesson-viewer {
   background: #eff1f5;
+  color: #1e1e2e;
+}
+
+[data-theme="light"] .lesson-viewer .lesson-title {
+  color: #1e1e2e;
+}
+
+[data-theme="light"] .lesson-viewer .lesson-body {
+  color: #1e1e2e;
 }
 
 [data-theme="light"] .code-output {
@@ -2521,7 +2530,7 @@ button {
 
 [data-theme="light"] .palette-item {
   background: #d4d8e0;
-  color: #4c4f69;
+  color: #1e1e2e;
 }
 
 [data-theme="light"] .palette-item.answered {
@@ -2551,7 +2560,7 @@ button {
 }
 
 [data-theme="light"] .hero-title {
-  color: #4c4f69;
+  color: #1e1e2e;
 }
 
 [data-theme="light"] .hero-wala {
@@ -2577,7 +2586,7 @@ button {
 }
 
 [data-theme="light"] .hero-level-title {
-  color: #4c4f69;
+  color: #1e1e2e;
 }
 
 [data-theme="light"] .hero-level-xp {
@@ -2598,7 +2607,7 @@ button {
 }
 
 [data-theme="light"] .stat-tile-value {
-  color: #4c4f69;
+  color: #1e1e2e;
 }
 
 [data-theme="light"] .stat-tile-label {
@@ -2612,7 +2621,7 @@ button {
 [data-theme="light"] .mastery-card {
   background: #d4d8e0;
   border-color: #c0c4ce;
-  color: #4c4f69;
+  color: #1e1e2e;
 }
 
 [data-theme="light"] .mastery-card:hover {
@@ -2625,7 +2634,7 @@ button {
 }
 
 [data-theme="light"] .mastery-card-title {
-  color: #4c4f69;
+  color: #1e1e2e;
 }
 
 [data-theme="light"] .mastery-card-sub {
@@ -2647,7 +2656,7 @@ button {
 }
 
 [data-theme="light"] .recommend-list strong {
-  color: #4c4f69;
+  color: #1e1e2e;
 }
 
 [data-theme="light"] .recommend-arrow {
