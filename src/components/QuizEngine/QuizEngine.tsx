@@ -7,17 +7,19 @@ import { Confetti } from "@/components/Confetti/Confetti"
 interface QuizEngineProps {
   questions: QuizQuestion[]
   lessonId?: string
+  moduleId?: string
   lessonTitle?: string
   onComplete?: () => void
 }
 
-export function QuizEngine({ questions, lessonId, lessonTitle, onComplete }: QuizEngineProps) {
+export function QuizEngine({ questions, lessonId, moduleId, lessonTitle, onComplete }: QuizEngineProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [selectedOption, setSelectedOption] = useState<number | null>(null)
   const [showExplanation, setShowExplanation] = useState(false)
   const [score, setScore] = useState(0)
   const [completed, setCompleted] = useState(false)
   const [answers, setAnswers] = useState<(number | null)[]>(new Array(questions.length).fill(null))
+  const [reviewMode, setReviewMode] = useState(false)
   const recordedRef = useRef(false)
   const onCompleteFired = useRef(false)
   const recordQuizScore = useAppStore((s) => s.recordQuizScore)
@@ -26,6 +28,13 @@ export function QuizEngine({ questions, lessonId, lessonTitle, onComplete }: Qui
   useEffect(() => {
     recordedRef.current = false
     onCompleteFired.current = false
+    setCurrentIndex(0)
+    setSelectedOption(null)
+    setShowExplanation(false)
+    setScore(0)
+    setCompleted(false)
+    setAnswers(new Array(questions.length).fill(null))
+    setReviewMode(false)
   }, [questions])
 
   if (questions.length === 0) {
@@ -41,7 +50,7 @@ export function QuizEngine({ questions, lessonId, lessonTitle, onComplete }: Qui
   const progressPercent = Math.round((answeredCount / questions.length) * 100)
 
   function handleSelect(optionIndex: number) {
-    if (showExplanation) return
+    if (showExplanation || reviewMode) return
     setSelectedOption(optionIndex)
   }
 
@@ -75,11 +84,20 @@ export function QuizEngine({ questions, lessonId, lessonTitle, onComplete }: Qui
     setScore(0)
     setCompleted(false)
     setAnswers(new Array(questions.length).fill(null))
+    setReviewMode(false)
     recordedRef.current = false
     onCompleteFired.current = false
   }
 
-  if (completed) {
+  function handleReview() {
+    setReviewMode(true)
+    setCompleted(false)
+    setCurrentIndex(0)
+    setSelectedOption(null)
+    setShowExplanation(false)
+  }
+
+  if (completed && !reviewMode) {
     const percentage = Math.round((score / questions.length) * 100)
     const bestScore = lessonId ? useAppStore.getState().quizScores[lessonId] : undefined
     const isImprovement = bestScore !== undefined && percentage >= bestScore
@@ -92,6 +110,15 @@ export function QuizEngine({ questions, lessonId, lessonTitle, onComplete }: Qui
         if (current === undefined || percentage > current) {
           recordQuizScore(lessonId, percentage)
           addXP(isImprovement || wasFirstAttempt ? 30 : 10)
+        }
+      } else if (moduleId) {
+        const moduleKey = `module-${moduleId}`
+        const current = useAppStore.getState().quizScores[moduleKey]
+        const wasFirst = current === undefined
+        const isBetter = current !== undefined && percentage > current
+        if (wasFirst || isBetter) {
+          recordQuizScore(moduleKey, percentage)
+          addXP(50)
         }
       } else {
         addXP(10)
@@ -144,10 +171,75 @@ export function QuizEngine({ questions, lessonId, lessonTitle, onComplete }: Qui
             <button className="btn btn-primary" onClick={handleRestart}>
               Retry Quiz
             </button>
-            <button className="btn btn-secondary" onClick={handleRestart}>
-              Review Questions
+            <button className="btn btn-secondary" onClick={handleReview}>
+              Review Answers
             </button>
           </div>
+        </div>
+      </div>
+    )
+  }
+
+  if (reviewMode) {
+    const q = questions[currentIndex]
+    const userAnswer = answers[currentIndex]
+    const isCorrect = userAnswer === q.correctIndex
+
+    return (
+      <div className="quiz-engine">
+        <div className="quiz-header">
+          <h3 className="quiz-title">{lessonTitle ? `${lessonTitle} — Review` : "Review Answers"}</h3>
+          <span className="quiz-progress">
+            {currentIndex + 1} / {questions.length}
+          </span>
+        </div>
+
+        <div className="quiz-progress-bar">
+          <div className="quiz-progress-fill" style={{ width: `${((currentIndex + 1) / questions.length) * 100}%` }} />
+        </div>
+
+        <div className="quiz-question" key={currentIndex}>
+          <p className="question-text">{q.question}</p>
+          <div className="options-list">
+            {q.options.map((option, i) => {
+              let optionClass = "option-item"
+              if (i === q.correctIndex) {
+                optionClass += " correct"
+              } else if (i === userAnswer && i !== q.correctIndex) {
+                optionClass += " incorrect"
+              }
+              return (
+                <button key={i} className={optionClass} disabled>
+                  <span className="option-letter">{String.fromCharCode(65 + i)}</span>
+                  <span className="option-text">{option}</span>
+                </button>
+              )
+            })}
+          </div>
+        </div>
+
+        <div className="quiz-explanation animate-in">
+          <p>
+            <strong>{isCorrect ? "✅ Sahi jawab! " : "❌ Galat jawab. "}</strong>
+            {q.explanation}
+          </p>
+        </div>
+
+        <div className="quiz-actions">
+          {currentIndex > 0 && (
+            <button className="btn btn-secondary" onClick={() => setCurrentIndex((i) => i - 1)}>
+              ← Previous
+            </button>
+          )}
+          {currentIndex < questions.length - 1 ? (
+            <button className="btn btn-primary" onClick={() => setCurrentIndex((i) => i + 1)}>
+              Next →
+            </button>
+          ) : (
+            <button className="btn btn-primary" onClick={handleRestart}>
+              Back to Results
+            </button>
+          )}
         </div>
       </div>
     )

@@ -30,6 +30,7 @@ function openDB(): Promise<IDBDatabase> {
 
 export interface StoredProgress {
   completedLessons: string[]
+  completedExercises: string[]
   quizScores: Record<string, number>
   xp: number
   streak: number
@@ -41,6 +42,7 @@ export interface StoredProgress {
 interface UserStoreRecord extends UserState {
   id: string
   completedLessons: string[]
+  completedExercises: string[]
   quizScores: Record<string, number>
   bookmarks: string[]
   notes: Record<string, string>
@@ -58,6 +60,7 @@ export async function loadProgress(): Promise<StoredProgress | null> {
       if (result) {
         resolve({
           completedLessons: result.completedLessons || [],
+          completedExercises: result.completedExercises || [],
           quizScores: result.quizScores || {},
           xp: result.xp,
           streak: result.streak,
@@ -81,6 +84,7 @@ export async function saveProgress(progress: StoredProgress): Promise<void> {
     const request = store.put({
       id: "main",
       completedLessons: progress.completedLessons,
+      completedExercises: progress.completedExercises || [],
       quizScores: progress.quizScores || {},
       xp: progress.xp,
       streak: progress.streak,

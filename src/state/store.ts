@@ -13,6 +13,7 @@ interface AppState {
   streak: number
   lastActive: string
   completedLessons: string[]
+  completedExercises: string[]
   quizScores: Record<string, number>
   bookmarks: string[]
   notes: Record<string, string>
@@ -22,12 +23,28 @@ interface AppState {
   setCurrentLesson: (id: string | null) => void
   setView: (view: View) => void
   completeLesson: (lessonId: string) => void
+  completeExercise: (exerciseId: string) => void
   recordQuizScore: (lessonId: string, percent: number) => void
   addXP: (amount: number) => void
   initProgress: () => Promise<void>
   toggleBookmark: (lessonId: string) => void
   saveNote: (lessonId: string, content: string) => void
   startModuleQuiz: (moduleId: string) => void
+}
+
+function saveState(state: Partial<AppState>) {
+  const s = useAppStore.getState()
+  saveProgress({
+    completedLessons: s.completedLessons,
+    completedExercises: s.completedExercises,
+    quizScores: s.quizScores,
+    xp: s.xp,
+    streak: s.streak,
+    lastActive: s.lastActive,
+    bookmarks: s.bookmarks,
+    notes: s.notes,
+    ...state,
+  })
 }
 
 export const useAppStore = create<AppState>((set, get) => ({
@@ -39,6 +56,7 @@ export const useAppStore = create<AppState>((set, get) => ({
   streak: 0,
   lastActive: "",
   completedLessons: [],
+  completedExercises: [],
   quizScores: {},
   bookmarks: [],
   notes: {},
@@ -60,31 +78,22 @@ export const useAppStore = create<AppState>((set, get) => ({
     set({ completedLessons: newCompleted })
     get().addXP(25)
   },
+  completeExercise: (exerciseId) => {
+    const { completedExercises } = get()
+    if (completedExercises.includes(exerciseId)) return
+    const newCompleted = [...completedExercises, exerciseId]
+    set({ completedExercises: newCompleted })
+    get().addXP(10)
+  },
   recordQuizScore: (lessonId, percent) => {
     const scores = { ...get().quizScores, [lessonId]: percent }
     set({ quizScores: scores })
-    saveProgress({
-      completedLessons: get().completedLessons,
-      quizScores: scores,
-      xp: get().xp,
-      streak: get().streak,
-      lastActive: get().lastActive,
-      bookmarks: get().bookmarks,
-      notes: get().notes,
-    })
+    saveState({ quizScores: scores })
   },
   addXP: (amount) => {
     const newXP = get().xp + amount
     set({ xp: newXP })
-    saveProgress({
-      completedLessons: get().completedLessons,
-      quizScores: get().quizScores,
-      xp: newXP,
-      streak: get().streak,
-      lastActive: get().lastActive,
-      bookmarks: get().bookmarks,
-      notes: get().notes,
-    })
+    saveState({ xp: newXP })
   },
   toggleBookmark: (lessonId) => {
     const { bookmarks } = get()
@@ -92,28 +101,12 @@ export const useAppStore = create<AppState>((set, get) => ({
       ? bookmarks.filter((id) => id !== lessonId)
       : [...bookmarks, lessonId]
     set({ bookmarks: newBookmarks })
-    saveProgress({
-      completedLessons: get().completedLessons,
-      quizScores: get().quizScores,
-      xp: get().xp,
-      streak: get().streak,
-      lastActive: get().lastActive,
-      bookmarks: newBookmarks,
-      notes: get().notes,
-    })
+    saveState({ bookmarks: newBookmarks })
   },
   saveNote: (lessonId, content) => {
     const newNotes = { ...get().notes, [lessonId]: content }
     set({ notes: newNotes })
-    saveProgress({
-      completedLessons: get().completedLessons,
-      quizScores: get().quizScores,
-      xp: get().xp,
-      streak: get().streak,
-      lastActive: get().lastActive,
-      bookmarks: get().bookmarks,
-      notes: newNotes,
-    })
+    saveState({ notes: newNotes })
   },
   initProgress: async () => {
     const progress = await loadProgress()
@@ -140,6 +133,7 @@ export const useAppStore = create<AppState>((set, get) => ({
         xp: progress.xp || 0,
         streak,
         completedLessons: progress.completedLessons || [],
+        completedExercises: progress.completedExercises || [],
         quizScores: progress.quizScores || {},
         bookmarks: progress.bookmarks || [],
         notes: progress.notes || {},
@@ -148,7 +142,7 @@ export const useAppStore = create<AppState>((set, get) => ({
     } else {
       const today = new Date().toISOString().split("T")[0]
       set({ streak: 1, lastActive: today })
-      saveProgress({ completedLessons: [], quizScores: {}, xp: 0, streak: 1, lastActive: today, bookmarks: [], notes: {} })
+      saveProgress({ completedLessons: [], completedExercises: [], quizScores: {}, xp: 0, streak: 1, lastActive: today, bookmarks: [], notes: {} })
     }
   },
 }))

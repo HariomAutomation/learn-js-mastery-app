@@ -1,4 +1,4 @@
-import { useEffect, useState, useMemo } from "react"
+import { useEffect, useState, useMemo, useRef } from "react"
 import { useAppStore } from "@/state/store"
 import {
   lessonTitleFromId,
@@ -19,9 +19,11 @@ interface SearchResult {
 
 export function SearchModal({ onClose }: { onClose: () => void }) {
   const [query, setQuery] = useState("")
+  const [selectedIndex, setSelectedIndex] = useState(0)
   const completedLessons = useAppStore((s) => s.completedLessons)
   const setCurrentModule = useAppStore((s) => s.setCurrentModule)
   const setCurrentLesson = useAppStore((s) => s.setCurrentLesson)
+  const inputRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
     function handleKey(e: KeyboardEvent) {
@@ -76,6 +78,14 @@ export function SearchModal({ onClose }: { onClose: () => void }) {
     return items.slice(0, 15)
   }, [query, completedLessons])
 
+  useEffect(() => {
+    setSelectedIndex(0)
+  }, [results.length, query])
+
+  useEffect(() => {
+    inputRef.current?.focus()
+  }, [])
+
   function handleSelect(item: SearchResult) {
     if (item.type === "module") {
       setCurrentModule(item.id)
@@ -89,17 +99,32 @@ export function SearchModal({ onClose }: { onClose: () => void }) {
     onClose()
   }
 
+  function handleKeyDown(e: React.KeyboardEvent) {
+    if (e.key === "ArrowDown") {
+      e.preventDefault()
+      setSelectedIndex((i) => Math.min(i + 1, results.length - 1))
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault()
+      setSelectedIndex((i) => Math.max(i - 1, 0))
+    } else if (e.key === "Enter" && results.length > 0) {
+      e.preventDefault()
+      handleSelect(results[selectedIndex])
+    }
+  }
+
   return (
     <div className="search-overlay" onClick={onClose}>
       <div className="search-modal" onClick={(e) => e.stopPropagation()}>
         <div className="search-input-wrap">
           <span className="search-icon">🔍</span>
           <input
+            ref={inputRef}
             className="search-input"
             type="text"
             placeholder="Search lessons, modules... (e.g. closures, map, DOM, async)"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
+            onKeyDown={handleKeyDown}
             autoFocus
           />
           <kbd className="search-kbd">ESC</kbd>
@@ -107,11 +132,12 @@ export function SearchModal({ onClose }: { onClose: () => void }) {
         {query.trim().length > 0 && (
           <div className="search-results">
             {results.length > 0 ? (
-              results.map((item) => (
+              results.map((item, i) => (
                 <button
                   key={item.id}
-                  className="search-result-item"
+                  className={`search-result-item ${i === selectedIndex ? "selected" : ""}`}
                   onClick={() => handleSelect(item)}
+                  onMouseEnter={() => setSelectedIndex(i)}
                 >
                   <div className="search-result-left">
                     <span className="search-result-title">{item.title}</span>

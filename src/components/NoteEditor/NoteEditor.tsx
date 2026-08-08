@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useAppStore } from "@/state/store"
 
 interface NoteEditorProps {
@@ -10,6 +10,10 @@ export function NoteEditor({ lessonId }: NoteEditorProps) {
   const saveNote = useAppStore((s) => s.saveNote)
   const [isOpen, setIsOpen] = useState(false)
   const [draft, setDraft] = useState(notes[lessonId] ?? "")
+
+  useEffect(() => {
+    setDraft(notes[lessonId] ?? "")
+  }, [lessonId, notes])
 
   function handleSave() {
     saveNote(lessonId, draft)
@@ -30,9 +34,14 @@ export function NoteEditor({ lessonId }: NoteEditorProps) {
             placeholder="Yahan apne notes likho... Key concepts, doubts, shortcuts — sab yahan!"
             rows={5}
           />
-          <button className="btn btn-primary note-save" onClick={handleSave}>
-            Save Note
-          </button>
+          <div className="note-actions">
+            <button className="btn btn-primary note-save" onClick={handleSave}>
+              Save Note
+            </button>
+            {draft !== (notes[lessonId] ?? "") && (
+              <span className="note-unsaved">Unsaved changes</span>
+            )}
+          </div>
         </div>
       )}
     </div>
