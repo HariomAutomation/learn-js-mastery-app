@@ -3,6 +3,8 @@ import CodeMirror from "@uiw/react-codemirror"
 import { javascript } from "@codemirror/lang-javascript"
 import { EditorView, keymap } from "@codemirror/view"
 import { indentWithTab } from "@codemirror/commands"
+import { HighlightStyle, syntaxHighlighting } from "@codemirror/language"
+import { tags } from "@lezer/highlight"
 import { useAppStore } from "@/state/store"
 
 interface ExerciseTest {
@@ -181,6 +183,16 @@ const lightTheme = EditorView.theme(
   { dark: false }
 )
 
+const darkVarHighlight = HighlightStyle.define([
+  { tag: tags.variableName, color: "#f9e2af" },
+  { tag: tags.propertyName, color: "#a6e3a1" },
+])
+
+const lightVarHighlight = HighlightStyle.define([
+  { tag: tags.variableName, color: "#df8e1d" },
+  { tag: tags.propertyName, color: "#40a02b" },
+])
+
 export function CodePlayground({
   title,
   starterCode = "",
@@ -347,7 +359,12 @@ export function CodePlayground({
         <CodeMirror
           value={code}
           onChange={(value) => setCode(value)}
-          extensions={[javascript(), EditorView.lineWrapping, keymap.of([indentWithTab])]}
+          extensions={[
+            javascript(),
+            syntaxHighlighting(theme === "light" ? lightVarHighlight : darkVarHighlight),
+            EditorView.lineWrapping,
+            keymap.of([indentWithTab]),
+          ]}
           theme={currentTheme}
           placeholder="// Yahan apna code likho..."
           basicSetup={{
@@ -449,7 +466,12 @@ export function CodePlayground({
                 <CodeMirror
                   value={solution}
                   readOnly
-                  extensions={[javascript(), EditorView.lineWrapping, keymap.of([indentWithTab])]}
+                  extensions={[
+                    javascript(),
+                    syntaxHighlighting(theme === "light" ? lightVarHighlight : darkVarHighlight),
+                    EditorView.lineWrapping,
+                    keymap.of([indentWithTab]),
+                  ]}
                   theme={currentTheme}
                   basicSetup={{
                     lineNumbers: true,
