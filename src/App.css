@@ -3486,6 +3486,9 @@ button {
     background: rgba(17, 17, 27, 0.6);
     z-index: 50;
     border: none;
+  }
+}
+
 /* ===== MOBILE MENU ===== */
 .mobile-menu-btn {
   display: none;
@@ -3580,7 +3583,7 @@ button {
   .quiz-completed-actions .btn {
     width: 100%;
   }
-}
+
   .hero-title {
     font-size: 1.5rem;
   }
