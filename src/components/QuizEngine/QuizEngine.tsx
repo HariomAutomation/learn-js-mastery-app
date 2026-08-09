@@ -1,18 +1,19 @@
 import { useEffect, useRef, useState } from "react"
 import type { QuizQuestion } from "@/types/content"
 import { useAppStore } from "@/state/store"
-import { XP_PER_QUIZ_NEW, XP_PER_QUIZ_RETRY } from "@/constants"
+import { XP_PER_QUIZ_NEW, XP_PER_QUIZ_RETRY, XP_PER_QUIZ_MODULE } from "@/constants"
 import { ProgressRing } from "@/components/ProgressRing/ProgressRing"
 import { Confetti } from "@/components/Confetti/Confetti"
 
 interface QuizEngineProps {
   questions: QuizQuestion[]
   lessonId?: string
+  moduleId?: string
   lessonTitle?: string
   onComplete?: () => void
 }
 
-export function QuizEngine({ questions, lessonId, lessonTitle, onComplete }: QuizEngineProps) {
+export function QuizEngine({ questions, lessonId, moduleId, lessonTitle, onComplete }: QuizEngineProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [selectedOption, setSelectedOption] = useState<number | null>(null)
   const [showExplanation, setShowExplanation] = useState(false)
@@ -42,10 +43,19 @@ export function QuizEngine({ questions, lessonId, lessonTitle, onComplete }: Qui
         recordQuizScore(lessonId, percentage)
         addXP(best === undefined || percentage >= best ? XP_PER_QUIZ_NEW : XP_PER_QUIZ_RETRY)
       }
+    } else if (moduleId) {
+      const moduleKey = `module-${moduleId}`
+      const current = useAppStore.getState().quizScores[moduleKey]
+      const wasFirst = current === undefined
+      const isBetter = current !== undefined && percentage > current
+      if (wasFirst || isBetter) {
+        recordQuizScore(moduleKey, percentage)
+        addXP(XP_PER_QUIZ_MODULE)
+      }
     } else {
       addXP(XP_PER_QUIZ_RETRY)
     }
-  }, [completed, percentage, lessonId, recordQuizScore, addXP])
+  }, [completed, percentage, lessonId, moduleId, recordQuizScore, addXP])
 
   useEffect(() => {
     if (!completed || !onComplete || onCompleteFired.current) return
@@ -157,7 +167,11 @@ export function QuizEngine({ questions, lessonId, lessonTitle, onComplete }: Qui
   }
 
   if (completed) {
-    const bestScore = lessonId ? useAppStore.getState().quizScores[lessonId] : undefined
+    const bestScore = lessonId
+      ? useAppStore.getState().quizScores[lessonId]
+      : moduleId
+        ? useAppStore.getState().quizScores[`module-${moduleId}`]
+        : undefined
     const isImprovement = bestScore !== undefined && percentage >= bestScore
     const wasFirstAttempt = bestScore === undefined
 

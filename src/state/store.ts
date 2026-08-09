@@ -16,6 +16,7 @@ interface AppState {
   streak: number
   lastActive: string
   completedLessons: string[]
+  completedExercises: string[]
   quizScores: Record<string, number>
   bookmarks: string[]
   notes: Record<string, string>
@@ -26,6 +27,7 @@ interface AppState {
   setCurrentLesson: (id: string | null) => void
   setView: (view: View) => void
   completeLesson: (lessonId: string) => void
+  completeExercise: (exerciseId: string) => void
   recordQuizScore: (lessonId: string, percent: number) => void
   addXP: (amount: number) => void
   initProgress: () => Promise<void>
@@ -43,6 +45,7 @@ function persistState(): void {
   const s = useAppStore.getState()
   saveProgress({
     completedLessons: s.completedLessons,
+    completedExercises: s.completedExercises,
     quizScores: s.quizScores,
     xp: s.xp,
     streak: s.streak,
@@ -85,6 +88,7 @@ export const useAppStore = create<AppState>((set, get) => ({
   streak: 0,
   lastActive: "",
   completedLessons: [],
+  completedExercises: [],
   quizScores: {},
   bookmarks: [],
   notes: {},
@@ -106,6 +110,13 @@ export const useAppStore = create<AppState>((set, get) => ({
     set({ completedLessons: [...completedLessons, lessonId] })
     set({ xp: get().xp + XP_PER_LESSON })
     persistSoon()
+  },
+  completeExercise: (exerciseId) => {
+    const { completedExercises } = get()
+    if (completedExercises.includes(exerciseId)) return
+    const newCompleted = [...completedExercises, exerciseId]
+    set({ completedExercises: newCompleted })
+    get().addXP(10)
   },
   recordQuizScore: (lessonId, percent) => {
     set({ quizScores: { ...get().quizScores, [lessonId]: percent } })
@@ -153,6 +164,7 @@ export const useAppStore = create<AppState>((set, get) => ({
         xp: progress.xp || 0,
         streak,
         completedLessons: progress.completedLessons || [],
+        completedExercises: progress.completedExercises || [],
         quizScores: progress.quizScores || {},
         bookmarks: progress.bookmarks || [],
         notes: progress.notes || {},

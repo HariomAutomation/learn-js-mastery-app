@@ -12,10 +12,11 @@ interface SidebarProps {
   theme: "dark" | "light"
   onToggleTheme: () => void
   onOpenSearch: () => void
-  onCloseSidebar: () => void
+  isOpen: boolean
+  onClose: () => void
 }
 
-export function Sidebar({ theme, onToggleTheme, onOpenSearch, onCloseSidebar }: SidebarProps) {
+export function Sidebar({ theme, onToggleTheme, onOpenSearch, isOpen, onClose }: SidebarProps) {
   const currentModule = useAppStore((s) => s.currentModule)
   const currentLesson = useAppStore((s) => s.currentLesson)
   const setCurrentModule = useAppStore((s) => s.setCurrentModule)
@@ -26,8 +27,32 @@ export function Sidebar({ theme, onToggleTheme, onOpenSearch, onCloseSidebar }: 
   const quizScores = useAppStore((s) => s.quizScores)
   const view = useAppStore((s) => s.view)
 
+  function handleLessonClick(lessonId: string) {
+    setCurrentLesson(lessonId)
+    onClose()
+  }
+
+  function handleDashboardClick() {
+    setView("home")
+    onClose()
+  }
+
+  function handleExamClick() {
+    setView("exam")
+    onClose()
+  }
+
+  function handleModuleClick(modId: string) {
+    setCurrentModule(currentModule === modId ? null : modId)
+  }
+
+  function handleModuleQuizClick(modId: string) {
+    startModuleQuiz(modId)
+    onClose()
+  }
+
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar ${isOpen ? "sidebar-open" : ""}`}>
       <div className="sidebar-top">
         <h2 className="sidebar-title">JS Mastery</h2>
         <div className="sidebar-actions">
@@ -42,7 +67,7 @@ export function Sidebar({ theme, onToggleTheme, onOpenSearch, onCloseSidebar }: 
       <nav>
         <button
           className={`module-header home-btn ${view === "home" ? "active" : ""}`}
-          onClick={() => { setView("home"); onCloseSidebar() }}
+          onClick={handleDashboardClick}
         >
           <span className="module-order">🏠</span>
           <span className="module-title">Dashboard</span>
@@ -62,7 +87,7 @@ export function Sidebar({ theme, onToggleTheme, onOpenSearch, onCloseSidebar }: 
             <div key={modId} className="module-group">
               <button
                 className={`module-header ${isExpanded ? "active" : ""}`}
-                onClick={() => setCurrentModule(isExpanded ? null : modId)}
+                onClick={() => handleModuleClick(modId)}
               >
                 <span className="module-order">{meta.order}</span>
                 <span className="module-title">{meta.title}</span>
@@ -80,7 +105,7 @@ export function Sidebar({ theme, onToggleTheme, onOpenSearch, onCloseSidebar }: 
                       <li key={lessonId}>
                         <button
                           className={`lesson-item ${currentLesson === lessonId ? "active" : ""}`}
-                          onClick={() => { setCurrentLesson(lessonId); onCloseSidebar() }}
+                          onClick={() => handleLessonClick(lessonId)}
                         >
                           {i + 1}. {lessonTitle(slug)}
                           {isDone && <span className="lesson-dot done">✓</span>}
@@ -95,7 +120,7 @@ export function Sidebar({ theme, onToggleTheme, onOpenSearch, onCloseSidebar }: 
                     <li>
                       <button
                         className="lesson-item module-quiz-btn"
-                        onClick={() => { startModuleQuiz(modId); onCloseSidebar() }}
+                        onClick={() => handleModuleQuizClick(modId)}
                       >
                         📝 Module Quiz
                       </button>
@@ -109,7 +134,7 @@ export function Sidebar({ theme, onToggleTheme, onOpenSearch, onCloseSidebar }: 
 
         <button
           className={`home-btn exam-btn ${view === "exam" ? "active" : ""}`}
-          onClick={() => { setView("exam"); onCloseSidebar() }}
+          onClick={handleExamClick}
         >
           <span className="module-order">🎓</span>
           <span className="module-title">Final Exam</span>

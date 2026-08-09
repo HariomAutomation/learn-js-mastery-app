@@ -17,8 +17,10 @@ export function ExamCenter() {
   const [flags, setFlags] = useState<boolean[]>([])
   const [current, setCurrent] = useState(0)
   const [timeLeft, setTimeLeft] = useState(EXAM_TIME_LIMIT)
-  const [confirmOpen, setConfirmOpen] = useState(false)
-  const [studentName, setStudentName] = useState("")
+  const [studentName, setStudentName] = useState(() => localStorage.getItem("js-mastery-name") || "")
+  const [showConfirmStart, setShowConfirmStart] = useState(false)
+  const [showConfirmSubmit, setShowConfirmSubmit] = useState(false)
+  const [showNameInput, setShowNameInput] = useState(false)
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
   const timeLeftRef = useRef(EXAM_TIME_LIMIT)
   const finalizedRef = useRef(false)
@@ -37,6 +39,7 @@ export function ExamCenter() {
   )
   const percent = questions.length > 0 ? Math.round((score / questions.length) * 100) : 0
   const passed = percent >= PASS_PERCENT
+  const unanswered = answers.filter((a) => a === null).length
 
   function finalize() {
     if (finalizedRef.current) return
@@ -70,8 +73,8 @@ export function ExamCenter() {
     setTimeLeft(EXAM_TIME_LIMIT)
     timeLeftRef.current = EXAM_TIME_LIMIT
     finalizedRef.current = false
-    setConfirmOpen(false)
     setPhase("running")
+    setShowConfirmStart(false)
     timerRef.current = setInterval(() => {
       timeLeftRef.current = Math.max(0, timeLeftRef.current - 1)
       setTimeLeft(timeLeftRef.current)
@@ -83,20 +86,40 @@ export function ExamCenter() {
     }, 1000)
   }
 
-  function requestSubmit() {
-    const unanswered = answers.filter((a) => a === null).length
-    if (unanswered > 0) {
-      setConfirmOpen(true)
-    } else {
-      submitExam()
+  function handleStartClick() {
+    if (!studentName.trim()) {
+      setShowNameInput(true)
+      return
     }
+    setShowConfirmStart(true)
   }
 
-  function submitExam() {
-    setConfirmOpen(false)
+  function confirmStart() {
+    localStorage.setItem("js-mastery-name", studentName.trim())
+    startExam()
+  }
+
+  function handleSubmit() {
+    if (unanswered > 0) {
+      setShowConfirmSubmit(true)
+      return
+    }
+    doSubmit()
+  }
+
+  function doSubmit() {
     if (timerRef.current) clearInterval(timerRef.current)
     setPhase("result")
+    setShowConfirmSubmit(false)
     finalize()
+  }
+
+  function handleSaveName() {
+    if (studentName.trim()) {
+      localStorage.setItem("js-mastery-name", studentName.trim())
+      setShowNameInput(false)
+      setShowConfirmStart(true)
+    }
   }
 
   const mm = Math.floor(timeLeft / 60)
@@ -151,9 +174,48 @@ export function ExamCenter() {
               </div>
             </div>
           </div>
-          <button className="btn btn-primary exam-start" onClick={startExam}>
-            Start Exam Now →
-          </button>
+
+          {showNameInput && (
+            <div className="name-input-section">
+              <label className="name-label">Apna naam daalo certificate ke liye:</label>
+              <div className="name-input-row">
+                <input
+                  className="name-input"
+                  type="text"
+                  placeholder="Enter your name..."
+                  value={studentName}
+                  onChange={(e) => setStudentName(e.target.value)}
+                  onKeyDown={(e) => e.key === "Enter" && handleSaveName()}
+                  autoFocus
+                />
+                <button className="btn btn-primary" onClick={handleSaveName} disabled={!studentName.trim()}>
+                  Save
+                </button>
+              </div>
+            </div>
+          )}
+
+          {showConfirmStart && (
+            <div className="confirm-dialog">
+              <p className="confirm-text">
+                Exam shuru kar rahe ho <strong>{studentName}</strong>? Timer start ho jayega!
+              </p>
+              <div className="confirm-actions">
+                <button className="btn btn-primary" onClick={confirmStart}>
+                  Start Exam Now →
+                </button>
+                <button className="btn btn-secondary" onClick={() => setShowConfirmStart(false)}>
+                  Cancel
+                </button>
+              </div>
+            </div>
+          )}
+
+          {!showNameInput && !showConfirmStart && (
+            <button className="btn btn-primary exam-start" onClick={handleStartClick}>
+              Start Exam Now →
+            </button>
+          )}
         </div>
       </div>
     )
@@ -168,10 +230,10 @@ export function ExamCenter() {
             <div className="certificate">
               <span className="certificate-top">🎓 JS MASTERY CERTIFICATION</span>
               <div className="certificate-seal">✓</div>
-              <h2 className="certificate-title">Congratulations!</h2>
+              <h2 className="certificate-title">Congratulations, {studentName || "Learner"}!</h2>
               <p className="certificate-text">
                 Aapne JavaScript Mastery Final Exam <strong>pass</strong> kar liya hai!
-                Ab aap officially kahenge: <em>“JS aa gayi!”</em> 🎉
+                Ab aap officially kahenge: <em>"JS aa gayi!"</em> 🎉
               </p>
             </div>
           ) : (
@@ -207,7 +269,7 @@ export function ExamCenter() {
               </div>
               <div className="result-stat">
                 <span className="result-stat-value">
-                  {passed ? `+${XP_PER_EXAM_PASS} XP` : `+${XP_PER_EXAM_FAIL} XP`}
+                  {passed ? "+100 XP" : "+20 XP"}
                 </span>
                 <span className="result-stat-label">Reward</span>
               </div>
@@ -215,26 +277,16 @@ export function ExamCenter() {
           </div>
 
           <div className="result-actions">
-            <button className="btn btn-primary" onClick={startExam}>
+            <button className="btn btn-primary" onClick={handleStartClick}>
               🔄 Try Again
             </button>
             {passed && (
-              <div className="certificate-name-wrap">
-                <input
-                  className="certificate-name-input"
-                  type="text"
-                  placeholder="Apna naam likho (certificate ke liye)"
-                  value={studentName}
-                  onChange={(e) => setStudentName(e.target.value)}
-                  maxLength={40}
-                />
-                <button
-                  className="btn btn-success"
-                  onClick={() => generateCertificate(studentName.trim() || "JS Learner", percent, new Date().toLocaleDateString("en-IN"))}
-                >
-                  📜 Download Certificate
-                </button>
-              </div>
+              <button
+                className="btn btn-success"
+                onClick={() => generateCertificate(studentName || "JavaScript Learner", percent, new Date().toLocaleDateString("en-IN"))}
+              >
+                📜 Download Certificate
+              </button>
             )}
             <button className="btn btn-secondary" onClick={() => useAppStore.getState().setView("home")}>
               🏠 Back to Dashboard
@@ -249,6 +301,31 @@ export function ExamCenter() {
 
   return (
     <div className="exam-center">
+      {showConfirmSubmit && (
+        <div className="confirm-overlay">
+          <div className="confirm-dialog">
+            <p className="confirm-text">
+              {unanswered > 0 ? (
+                <>
+                  <strong>{unanswered}</strong> question{unanswered > 1 ? "s" : ""} unanswered hai{unanswered > 1 ? "n" : ""}.
+                  Submit karna hai?
+                </>
+              ) : (
+                "Sab questions ka answer de diya. Submit karna hai?"
+              )}
+            </p>
+            <div className="confirm-actions">
+              <button className="btn btn-primary" onClick={doSubmit}>
+                Yes, Submit
+              </button>
+              <button className="btn btn-secondary" onClick={() => setShowConfirmSubmit(false)}>
+                Go Back
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className="exam-running">
         <header className="exam-header">
           <div className="exam-header-left">
@@ -320,7 +397,8 @@ export function ExamCenter() {
               ) : (
                 <button
                   className="btn btn-success"
-                  onClick={requestSubmit}
+                  onClick={handleSubmit}
+                  disabled={answers.every((a) => a === null)}
                 >
                   Submit Exam ✓
                 </button>
@@ -358,32 +436,12 @@ export function ExamCenter() {
                 Flagged: <strong>{flags.filter(Boolean).length}</strong>
               </span>
             </div>
-            <button className="btn btn-success palette-submit" onClick={requestSubmit}>
+            <button className="btn btn-success palette-submit" onClick={handleSubmit}>
               Finish & Submit
             </button>
           </aside>
         </div>
       </div>
-
-      {confirmOpen && (
-        <div className="exam-confirm-overlay" onClick={() => setConfirmOpen(false)}>
-          <div className="exam-confirm" onClick={(e) => e.stopPropagation()}>
-            <h3 className="exam-confirm-title">⚠️ Submit karne se pehle soch lo!</h3>
-            <p className="exam-confirm-text">
-              {questions.length - answers.filter((a) => a !== null).length} questions still unanswered hain.
-              Unanswered questions ko <strong>galat</strong> count kiya jayega.
-            </p>
-            <div className="exam-confirm-actions">
-              <button className="btn btn-secondary" onClick={() => setConfirmOpen(false)}>
-                ← Keep Working
-              </button>
-              <button className="btn btn-success" onClick={submitExam}>
-                Finish & Submit ✓
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   )
 }
