@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-variables-intro-04",
-  "title": "typeof check",
-  "starterCode": "const val = 42\nconsole.log(typeof val)",
-  "solution": "const val = 42\nconsole.log(typeof val)",
+  "title": "BMI calculator",
+  "starterCode": "const weight = 70  // kg\nconst height = 1.75  // meters\n// BMI = weight / (height * height)\n// Return karo BMI (2 decimal places)\n",
+  "solution": "const weight = 70\nconst height = 1.75\nconst bmi = weight / (height * height)\nreturn Math.round(bmi * 100) / 100",
   "tests": [
     {
       "input": [],
-      "expected": "number"
+      "expected": 22.86
     }
   ],
   "hints": [
-    "typeof returns a string"
+    "weight / (height ** 2) se BMI aata hai",
+    "Math.round(bmi * 100) / 100 se 2 decimal milenge"
   ]
 }

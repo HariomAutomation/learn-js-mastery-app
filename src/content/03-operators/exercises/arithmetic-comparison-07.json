@@ -1,16 +1,16 @@
 {
-  "id": "03-operators-arithmetic-comparison-07",
-  "title": "Post increment",
-  "starterCode": "let x = 5;\nconst result = x++;\nconsole.log(result);",
-  "solution": "let x = 5;\nconst result = x++;\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-07",
+  "title": "Math.max se largest number",
+  "starterCode": "// 5 numbers hain, sabse bada nikalo\nconst nums = [23, 45, 12, 67, 34]\n// TODO: Math.max use karo with spread\n",
+  "solution": "const nums = [23, 45, 12, 67, 34]\nreturn Math.max(...nums)",
   "tests": [
     {
       "input": [],
-      "expected": "5"
+      "expected": 67
     }
   ],
   "hints": [
-    "Post increment returns value THEN increments",
-    "x is 6 after, but result is 5"
+    "...arr se array individual arguments mein convert hota hai",
+    "Math.max(...nums) se max milta hai"
   ]
 }

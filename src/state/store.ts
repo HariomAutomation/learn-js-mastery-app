@@ -1,8 +1,11 @@
 import { create } from "zustand"
 import type { ModuleMeta } from "@/types/content"
 import { loadProgress, saveProgress } from "@/db/progress"
+import { XP_PER_LESSON } from "@/constants"
 
 export type View = "home" | "lesson" | "exam" | "moduleQuiz"
+
+const SAVE_DEBOUNCE_MS = 400
 
 interface AppState {
   modules: ModuleMeta[]
@@ -17,6 +20,7 @@ interface AppState {
   bookmarks: string[]
   notes: Record<string, string>
   currentModuleQuizId: string | null
+  examVersion: number
   setModules: (modules: ModuleMeta[]) => void
   setCurrentModule: (id: string | null) => void
   setCurrentLesson: (id: string | null) => void
@@ -28,6 +32,48 @@ interface AppState {
   toggleBookmark: (lessonId: string) => void
   saveNote: (lessonId: string, content: string) => void
   startModuleQuiz: (moduleId: string) => void
+  bumpExamVersion: () => void
+}
+
+function todayISO(): string {
+  return new Date().toISOString().split("T")[0]
+}
+
+function persistState(): void {
+  const s = useAppStore.getState()
+  saveProgress({
+    completedLessons: s.completedLessons,
+    quizScores: s.quizScores,
+    xp: s.xp,
+    streak: s.streak,
+    lastActive: s.lastActive,
+    bookmarks: s.bookmarks,
+    notes: s.notes,
+  }).catch(() => {
+    // Best-effort persistence — ignore IndexedDB failures
+  })
+}
+
+let saveTimer: ReturnType<typeof setTimeout> | null = null
+
+function persistSoon(): void {
+  if (saveTimer) clearTimeout(saveTimer)
+  saveTimer = setTimeout(() => {
+    saveTimer = null
+    persistState()
+  }, SAVE_DEBOUNCE_MS)
+}
+
+function flushPendingSave(): void {
+  if (saveTimer) {
+    clearTimeout(saveTimer)
+    saveTimer = null
+    persistState()
+  }
+}
+
+if (typeof window !== "undefined") {
+  window.addEventListener("beforeunload", flushPendingSave)
 }
 
 export const useAppStore = create<AppState>((set, get) => ({
@@ -43,6 +89,7 @@ export const useAppStore = create<AppState>((set, get) => ({
   bookmarks: [],
   notes: {},
   currentModuleQuizId: null,
+  examVersion: 0,
   setModules: (modules) => set({ modules }),
   setCurrentModule: (id) => set({ currentModule: id, currentLesson: null }),
   setCurrentLesson: (id) => {
@@ -56,35 +103,17 @@ export const useAppStore = create<AppState>((set, get) => ({
   completeLesson: (lessonId) => {
     const { completedLessons } = get()
     if (completedLessons.includes(lessonId)) return
-    const newCompleted = [...completedLessons, lessonId]
-    set({ completedLessons: newCompleted })
-    get().addXP(25)
+    set({ completedLessons: [...completedLessons, lessonId] })
+    set({ xp: get().xp + XP_PER_LESSON })
+    persistSoon()
   },
   recordQuizScore: (lessonId, percent) => {
-    const scores = { ...get().quizScores, [lessonId]: percent }
-    set({ quizScores: scores })
-    saveProgress({
-      completedLessons: get().completedLessons,
-      quizScores: scores,
-      xp: get().xp,
-      streak: get().streak,
-      lastActive: get().lastActive,
-      bookmarks: get().bookmarks,
-      notes: get().notes,
-    })
+    set({ quizScores: { ...get().quizScores, [lessonId]: percent } })
+    persistSoon()
   },
   addXP: (amount) => {
-    const newXP = get().xp + amount
-    set({ xp: newXP })
-    saveProgress({
-      completedLessons: get().completedLessons,
-      quizScores: get().quizScores,
-      xp: newXP,
-      streak: get().streak,
-      lastActive: get().lastActive,
-      bookmarks: get().bookmarks,
-      notes: get().notes,
-    })
+    set({ xp: get().xp + amount })
+    persistSoon()
   },
   toggleBookmark: (lessonId) => {
     const { bookmarks } = get()
@@ -92,33 +121,17 @@ export const useAppStore = create<AppState>((set, get) => ({
       ? bookmarks.filter((id) => id !== lessonId)
       : [...bookmarks, lessonId]
     set({ bookmarks: newBookmarks })
-    saveProgress({
-      completedLessons: get().completedLessons,
-      quizScores: get().quizScores,
-      xp: get().xp,
-      streak: get().streak,
-      lastActive: get().lastActive,
-      bookmarks: newBookmarks,
-      notes: get().notes,
-    })
+    persistSoon()
   },
   saveNote: (lessonId, content) => {
-    const newNotes = { ...get().notes, [lessonId]: content }
-    set({ notes: newNotes })
-    saveProgress({
-      completedLessons: get().completedLessons,
-      quizScores: get().quizScores,
-      xp: get().xp,
-      streak: get().streak,
-      lastActive: get().lastActive,
-      bookmarks: get().bookmarks,
-      notes: newNotes,
-    })
+    set({ notes: { ...get().notes, [lessonId]: content } })
+    persistSoon()
   },
+  bumpExamVersion: () => set((s) => ({ examVersion: s.examVersion + 1 })),
   initProgress: async () => {
     const progress = await loadProgress()
+    const today = todayISO()
     if (progress) {
-      const today = new Date().toISOString().split("T")[0]
       const lastActive = progress.lastActive
       let streak = progress.streak
 
@@ -145,10 +158,10 @@ export const useAppStore = create<AppState>((set, get) => ({
         notes: progress.notes || {},
         lastActive: today,
       })
+      persistSoon()
     } else {
-      const today = new Date().toISOString().split("T")[0]
       set({ streak: 1, lastActive: today })
-      saveProgress({ completedLessons: [], quizScores: {}, xp: 0, streak: 1, lastActive: today, bookmarks: [], notes: {} })
+      persistSoon()
     }
   },
 }))

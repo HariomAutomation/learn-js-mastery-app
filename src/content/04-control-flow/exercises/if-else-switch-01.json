@@ -1,16 +1,36 @@
 {
-  "id": "04-control-flow-if-else-switch-01",
-  "title": "Basic if statement",
-  "starterCode": "const age = 20;\nif (age >= 18) {\n  console.log('adult');\n}",
-  "solution": "const age = 20;\nif (age >= 18) {\n  console.log('adult');\n}",
+  "id": "04-control-flow-01-if-else-switch-01",
+  "title": "Age based ticket price decide karo",
+  "starterCode": "// function ticketPrice(age) mein age do\n// < 5: \"Free\", 5-12: 100, 13-59: 250, 60+: 150\n// \"Free\", 100, 250, ya 150 return karo\n",
+  "solution": "function ticketPrice(age) {\n  if (age < 5) return \"Free\"\n  else if (age <= 12) return 100\n  else if (age <= 59) return 250\n  else return 150\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "adult"
+      "input": [
+        3
+      ],
+      "expected": "Free"
+    },
+    {
+      "input": [
+        10
+      ],
+      "expected": 100
+    },
+    {
+      "input": [
+        30
+      ],
+      "expected": 250
+    },
+    {
+      "input": [
+        65
+      ],
+      "expected": 150
     }
   ],
   "hints": [
-    "if executes block when condition is true",
-    "20 >= 18 is true"
+    "if-else if chain se age ranges check karo",
+    "Har condition ka alag return value hai"
   ]
 }

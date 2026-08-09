@@ -1,16 +1,19 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-47",
-  "title": "Implicit conversion in template literal",
-  "starterCode": "const num = 42;\nconsole.log(`Number: ${num}`);",
-  "solution": "const num = 42;\nconsole.log(`Number: ${num}`);",
+  "id": "02-data-types-03-coercion-truthy-falsy-47",
+  "title": "Proxy apply with new",
+  "starterCode": "function Factory(type) {\n  this.type = type\n}\nconst ProxiedFactory = new Proxy(Factory, {\n  apply(target, thisArg, args) {\n    return new target(...args)\n  }\n})\nconst obj = ProxiedFactory(\"user\")\nreturn {\n  type: obj.type,\n  instanceof: obj instanceof Factory\n}\n",
+  "solution": "function Factory(type) {\n  this.type = type\n}\nconst ProxiedFactory = new Proxy(Factory, {\n  apply(target, thisArg, args) {\n    return new target(...args)\n  }\n})\nconst obj = ProxiedFactory(\"user\")\nreturn {\n  type: obj.type,\n  instanceof: obj instanceof Factory\n}",
   "tests": [
     {
       "input": [],
-      "expected": "Number: 42"
+      "expected": {
+        "type": "user",
+        "instanceof": true
+      }
     }
   ],
   "hints": [
-    "Template literals convert to string",
-    "No explicit conversion needed"
+    "Proxy apply trap mein new target() se instance bana sakte ho",
+    "Function call ko constructor call mein convert kar sakte ho"
   ]
 }

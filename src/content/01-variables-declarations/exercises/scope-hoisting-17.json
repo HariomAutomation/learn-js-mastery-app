@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-scope-hoisting-17",
-  "title": "TDZ reference",
-  "starterCode": "try {\n  let x = x\n} catch(e) {\n  console.log(\"TDZ\")\n}",
-  "solution": "try {\n  let x = x\n} catch(e) {\n  console.log(\"TDZ\")\n}",
+  "title": "Shadowing in nested blocks",
+  "starterCode": "let x = 1\nif (true) {\n  let x = 2\n  if (true) {\n    let x = 3\n    return x\n  }\n}\n",
+  "solution": "let x = 1\nif (true) {\n  let x = 2\n  if (true) {\n    let x = 3\n    return x\n  }\n}",
   "tests": [
     {
       "input": [],
-      "expected": "TDZ"
+      "expected": 3
     }
   ],
   "hints": [
-    "Cannot use let before declaration"
+    "Innermost let x wins",
+    "Each block has its own x"
   ]
 }

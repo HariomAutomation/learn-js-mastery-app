@@ -1,16 +1,40 @@
 {
-  "id": "04-control-flow-early-return-15",
-  "title": "Fail fast on non-array",
-  "starterCode": "function processArray(arr) {\n  if (!Array.isArray(arr)) return [];\n  if (arr.length === 0) return [];\n  return arr.map(x => x * 2);\n}\nconsole.log(processArray('not an array'));",
-  "solution": "function processArray(arr) {\n  if (!Array.isArray(arr)) return [];\n  if (arr.length === 0) return [];\n  return arr.map(x => x * 2);\n}\nconsole.log(processArray('not an array'));",
+  "id": "04-control-flow-02-early-return-15",
+  "title": "Type checking guard pattern",
+  "starterCode": "// function add(a, b) mein do values do\n// Agar dono numbers nahi: \"Both must be numbers\"\n// Agar sirf a number nahi: \"First must be a number\"\n// Agar sirf b number nahi: \"Second must be a number\"\n// Warna sum return karo\n",
+  "solution": "function add(a, b) {\n  if (typeof a !== \"number\" && typeof b !== \"number\") return \"Both must be numbers\"\n  if (typeof a !== \"number\") return \"First must be a number\"\n  if (typeof b !== \"number\") return \"Second must be a number\"\n  return a + b\n}",
   "tests": [
     {
-      "input": [],
-      "expected": ""
+      "input": [
+        5,
+        3
+      ],
+      "expected": 8
+    },
+    {
+      "input": [
+        "five",
+        3
+      ],
+      "expected": "First must be a number"
+    },
+    {
+      "input": [
+        5,
+        "three"
+      ],
+      "expected": "Second must be a number"
+    },
+    {
+      "input": [
+        "five",
+        "three"
+      ],
+      "expected": "Both must be numbers"
     }
   ],
   "hints": [
-    "'not an array' is not an array",
-    "Returns empty array"
+    "Pehle dono check karo, phir ek ek karke check karo",
+    "Error messages specific honi chahiye"
   ]
 }

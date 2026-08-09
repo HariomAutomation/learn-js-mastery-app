@@ -1,16 +1,21 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-25",
-  "title": "Numeric comparison",
-  "starterCode": "console.log(2 > \"12\");",
-  "solution": "console.log(2 > \"12\");",
+  "id": "02-data-types-03-coercion-truthy-falsy-25",
+  "title": "Set value coercion",
+  "starterCode": "const set = new Set()\nset.add(1)\nset.add(\"1\")\nset.add(true)\nset.add(1)\nreturn {\n  hasNum: set.has(1),\n  hasStr: set.has(\"1\"),\n  hasBool: set.has(true),\n  size: set.size\n}\n",
+  "solution": "const set = new Set()\nset.add(1)\nset.add(\"1\")\nset.add(true)\nset.add(1)\nreturn {\n  hasNum: set.has(1),\n  hasStr: set.has(\"1\"),\n  hasBool: set.has(true),\n  size: set.size\n}",
   "tests": [
     {
       "input": [],
-      "expected": "false"
+      "expected": {
+        "hasNum": true,
+        "hasStr": true,
+        "hasBool": true,
+        "size": 3
+      }
     }
   ],
   "hints": [
-    "Number on left converts string to number",
-    "2 > 12 is false"
+    "Set bhi === comparison use karta hai",
+    "Duplicate add nahi hota — same value wala"
   ]
 }

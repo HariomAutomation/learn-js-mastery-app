@@ -1,16 +1,24 @@
 {
-  "id": "05-loops-patterns-practice-29",
-  "title": "Binary Pattern",
-  "starterCode": "for (let i = 0; i < 4; i++) {\n  let row = '';\n  for (let j = 0; j < 4; j++) {\n    row += (i + j) % 2;\n  }\n  console.log(row);\n}",
-  "solution": "for (let i = 0; i < 4; i++) {\n  let row = '';\n  for (let j = 0; j < 4; j++) {\n    row += (i + j) % 2;\n  }\n  console.log(row);\n}",
+  "id": "05-03-patterns-practice-29",
+  "title": "Array ke elements ko reverse without extra array",
+  "starterCode": "function reverseInPlace(arr) {\n  // TODO: array ko in-place reverse karo\n}",
+  "solution": "function reverseInPlace(arr) {\n  let left = 0, right = arr.length - 1;\n  while (left < right) {\n    [arr[left], arr[right]] = [arr[right], arr[left]];\n    left++;\n    right--;\n  }\n  return arr;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "0101\n1010\n0101\n1010"
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "expected": "5,4,3,2,1"
     }
   ],
   "hints": [
-    "Use (i+j)%2",
-    "Alternating pattern"
+    "Two pointers use karo — start aur end",
+    "Swap karte jao aur dono taraf move karo"
   ]
 }

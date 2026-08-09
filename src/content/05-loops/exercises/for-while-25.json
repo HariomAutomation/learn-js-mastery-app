@@ -1,16 +1,18 @@
 {
-  "id": "05-loops-for-while-25",
-  "title": "Build String In Loop",
-  "starterCode": "let result = \"\";\nfor (let i = 65; i < 70; i++) {\n  result += String.fromCharCode(i);\n}\nconsole.log(result);",
-  "solution": "let result = \"\";\nfor (let i = 65; i < 70; i++) {\n  result += String.fromCharCode(i);\n}\nconsole.log(result);",
+  "id": "05-01-for-while-25",
+  "title": "For loop se string me character frequency nikalo",
+  "starterCode": "function charFreq(str) {\n  // TODO: har character ki frequency count karo\n}",
+  "solution": "function charFreq(str) {\n  const freq = {};\n  for (const char of str) {\n    freq[char] = (freq[char] || 0) + 1;\n  }\n  return freq;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "ABCDE"
+      "input": [
+        "hello"
+      ],
+      "expected": "{\"h\":1,\"e\":1,\"l\":2,\"o\":1}"
     }
   ],
   "hints": [
-    "ASCII A is 65",
-    "Use String.fromCharCode()"
+    "Object me count track karo",
+    "freq[char] = (freq[char] || 0) + 1 pattern use karo"
   ]
 }

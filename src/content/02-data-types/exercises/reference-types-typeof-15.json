@@ -1,16 +1,19 @@
 {
-  "id": "02-data-types-reference-types-typeof-15",
-  "title": "Array reference sharing",
-  "starterCode": "const a = [1, 2];\nconst b = a;\nb.push(3);\nconsole.log();",
-  "solution": "const a = [1, 2];\nconst b = a;\nb.push(3);\nconsole.log(a.length);",
+  "id": "02-data-types-02-reference-types-typeof-15",
+  "title": "WeakRef basics",
+  "starterCode": "let obj = { data: \"important\" }\nconst ref = new WeakRef(obj)\nconst derefed = ref.deref()\nobj = null\nreturn {\n  derefedExists: derefed !== undefined,\n  derefedData: derefed?.data\n}\n",
+  "solution": "let obj = { data: \"important\" }\nconst ref = new WeakRef(obj)\nconst derefed = ref.deref()\nobj = null\nreturn {\n  derefedExists: derefed !== undefined,\n  derefedData: derefed?.data\n}",
   "tests": [
     {
       "input": [],
-      "expected": "3"
+      "expected": {
+        "derefedExists": true,
+        "derefedData": "important"
+      }
     }
   ],
   "hints": [
-    "Arrays are objects too",
-    "Modifying b modifies a"
+    "WeakRef se garbage collection rokta nahi",
+    "deref() se actual object milta hai"
   ]
 }

@@ -1,17 +1,36 @@
 {
-  "id": "04-control-flow-early-return-36",
-  "title": "Early return boolean - not adult",
-  "starterCode": "function isAdult(age) {\n  if (typeof age !== 'number') return false;\n  if (age < 0) return false;\n  return age >= 18;\n}\nconsole.log(isAdult(15));",
-  "solution": "function isAdult(age) {\n  if (typeof age !== 'number') return false;\n  if (age < 0) return false;\n  return age >= 18;\n}\nconsole.log(isAdult(15));",
+  "id": "04-control-flow-02-early-return-36",
+  "title": "Guard for email domain check",
+  "starterCode": "// function getDomain(email) mein email string do\n// Agar string nahi: null\n// Agar @ nahi hai: null\n// Warna @ ke baad ka part return karo\n",
+  "solution": "function getDomain(email) {\n  if (typeof email !== \"string\") return null\n  if (!email.includes(\"@\")) return null\n  return email.split(\"@\")[1]\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "false"
+      "input": [
+        "test@gmail.com"
+      ],
+      "expected": "gmail.com"
+    },
+    {
+      "input": [
+        "invalid"
+      ],
+      "expected": null
+    },
+    {
+      "input": [
+        123
+      ],
+      "expected": null
+    },
+    {
+      "input": [
+        "test@"
+      ],
+      "expected": ""
     }
   ],
   "hints": [
-    "age is a number",
-    "age is positive",
-    "15 >= 18 is false"
+    "@ se split karo",
+    "Dusra part domain hai"
   ]
 }

@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-variables-intro-49",
+  "title": "Retry function",
+  "starterCode": "// Function banao jo async function ko max retries tak try kare\nfunction retry(fn, maxRetries, delay) {\n  // TODO\n}",
+  "solution": "async function retry(fn, maxRetries, delay) {\n  for (let i = 0; i < maxRetries; i++) {\n    try {\n      return await fn()\n    } catch (e) {\n      if (i === maxRetries - 1) throw e\n      await new Promise(r => setTimeout(r, delay))\n    }\n  }\n}",
+  "tests": [
+    {
+      "input": []
+    }
+  ],
+  "hints": [
+    "for loop mein try-catch lagao",
+    "Har failure pe delay se wait karo"
+  ]
+}

@@ -1,16 +1,25 @@
 {
-  "id": "05-loops-for-of-for-in-35",
-  "title": "For...In With Object.keys",
-  "starterCode": "const obj = {a: 10, b: 20, c: 30};\nconst keys = Object.keys(obj);\nfor (let i = 0; i < keys.length; i++) {\n  console.log(keys[i] + ': ' + obj[keys[i]]);\n}",
-  "solution": "const obj = {a: 10, b: 20, c: 30};\nconst keys = Object.keys(obj);\nfor (let i = 0; i < keys.length; i++) {\n  console.log(keys[i] + ': ' + obj[keys[i]]);\n}",
+  "id": "05-02-for-of-for-in-35",
+  "title": "For-of se array ke group banao size ke hisaab se",
+  "starterCode": "function groupInGroups(arr, size) {\n  // TODO: [[1,2],[3,4],[5]] type me groups banao\n}",
+  "solution": "function groupInGroups(arr, size) {\n  const result = [];\n  let group = [];\n  for (const item of arr) {\n    group.push(item);\n    if (group.length === size) {\n      result.push(group);\n      group = [];\n    }\n  }\n  if (group.length) result.push(group);\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "a: 10\nb: 20\nc: 30"
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        2
+      ],
+      "expected": "1,2,3,4,5"
     }
   ],
   "hints": [
-    "Get keys array first",
-    "Access with index"
+    "Temporary group collect karo",
+    "Size barabar hone pe result me push karo"
   ]
 }

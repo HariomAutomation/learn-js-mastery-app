@@ -1,16 +1,19 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-44",
-  "title": "Divide with string",
-  "starterCode": "console.log(\"10\" / 2);",
-  "solution": "console.log(\"10\" / 2);",
+  "id": "02-data-types-03-coercion-truthy-falsy-44",
+  "title": "Proxy get with receiver",
+  "starterCode": "const handler = {\n  get(target, prop, receiver) {\n    if (prop === \"fullName\") {\n      return target.firstName + \" \" + target.lastName\n    }\n    return Reflect.get(target, prop, receiver)\n  }\n}\nconst person = new Proxy({ firstName: \"Hariom\", lastName: \"Kumar\" }, handler)\nreturn {\n  fullName: person.fullName,\n  firstName: person.firstName\n}\n",
+  "solution": "const handler = {\n  get(target, prop, receiver) {\n    if (prop === \"fullName\") {\n      return target.firstName + \" \" + target.lastName\n    }\n    return Reflect.get(target, prop, receiver)\n  }\n}\nconst person = new Proxy({ firstName: \"Hariom\", lastName: \"Kumar\" }, handler)\nreturn {\n  fullName: person.fullName,\n  firstName: person.firstName\n}",
   "tests": [
     {
       "input": [],
-      "expected": "5"
+      "expected": {
+        "fullName": "Hariom Kumar",
+        "firstName": "Hariom"
+      }
     }
   ],
   "hints": [
-    "/ does math",
-    "String is converted to number"
+    "Receiver wo object hai jispe property access ho rahi hai",
+    "Reflect.get se default behavior follow hota hai"
   ]
 }

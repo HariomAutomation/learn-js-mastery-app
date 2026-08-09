@@ -1,16 +1,23 @@
 {
-  "id": "03-operators-logical-ternary-19",
-  "title": "Short circuit AND assignment",
-  "starterCode": "let x = 0;\nconst result = x && (x = 5);\nconsole.log(x);",
-  "solution": "let x = 0;\nconst result = x && (x = 5);\nconsole.log(x);",
+  "id": "03-operators-02-logical-ternary-19",
+  "title": "Complex nested ternary",
+  "starterCode": "// Shipping cost calculate karo\n// Weight < 1: 50, 1-5: 100, 5-20: 200, > 20: 500\n// Express ho to double\nconst weight = 8\nconst isExpress = false\n// TODO: cost nikalo\n",
+  "solution": "const weight = 8\nconst isExpress = false\nconst baseCost = weight < 1 ? 50 : weight <= 5 ? 100 : weight <= 20 ? 200 : 500\nconst totalCost = isExpress ? baseCost * 2 : baseCost\nreturn totalCost",
   "tests": [
     {
       "input": [],
-      "expected": "0"
+      "expected": 200
+    },
+    {
+      "input": [
+        0.5,
+        true
+      ],
+      "expected": 100
     }
   ],
   "hints": [
-    "&& short-circuits on first falsy",
-    "x is 0 (falsy), so assignment never happens"
+    "Pehle base cost nikalo",
+    "Phir express check karo"
   ]
 }

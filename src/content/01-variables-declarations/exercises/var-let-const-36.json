@@ -1,15 +1,37 @@
 {
   "id": "01-variables-declarations-var-let-const-36",
-  "title": "const reference check 2",
-  "starterCode": "const a = [1, 2]\nconst b = a\nb.push(3)\nconsole.log(a.length)",
-  "solution": "const a = [1, 2]\nconst b = a\nb.push(3)\nconsole.log(a.length)",
+  "title": "Chunk iterator",
+  "starterCode": "// Iterator banao jo array ko chunks mein yield kare\nfunction* chunkIterator(arr, size) {\n  // TODO\n}\n",
+  "solution": "function* chunkIterator(arr, size) {\n  for (let i = 0; i < arr.length; i += size) {\n    yield arr.slice(i, i + size)\n  }\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "3"
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        2
+      ],
+      "expected": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5
+        ]
+      ]
     }
   ],
   "hints": [
-    "Same reference"
+    "Generator function * lagao",
+    "yield se values ek ek karke return hoti hain"
   ]
 }

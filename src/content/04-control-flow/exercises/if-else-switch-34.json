@@ -1,16 +1,42 @@
 {
-  "id": "04-control-flow-if-else-switch-34",
-  "title": "Switch with boolean",
-  "starterCode": "const isOnline = true;\nswitch (isOnline) {\n  case true:\n    console.log('online');\n    break;\n  case false:\n    console.log('offline');\n    break;\n}",
-  "solution": "const isOnline = true;\nswitch (isOnline) {\n  case true:\n    console.log('online');\n    break;\n  case false:\n    console.log('offline');\n    break;\n}",
+  "id": "04-control-flow-01-if-else-switch-34",
+  "title": "Nested if se number properties",
+  "starterCode": "// function numberProps(num) mein number do\n// Return: { isPositive, isEven, isMultipleOf3 }\n",
+  "solution": "function numberProps(num) {\n  return {\n    isPositive: num > 0,\n    isEven: num % 2 === 0,\n    isMultipleOf3: num % 3 === 0\n  }\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "online"
+      "input": [
+        6
+      ],
+      "expected": {
+        "isPositive": true,
+        "isEven": true,
+        "isMultipleOf3": true
+      }
+    },
+    {
+      "input": [
+        -3
+      ],
+      "expected": {
+        "isPositive": false,
+        "isEven": false,
+        "isMultipleOf3": true
+      }
+    },
+    {
+      "input": [
+        7
+      ],
+      "expected": {
+        "isPositive": true,
+        "isEven": false,
+        "isMultipleOf3": false
+      }
     }
   ],
   "hints": [
-    "true matches case true",
-    "break exits switch"
+    "Ternary operator se boolean values banao",
+    "Modulo se even/multiple check karo"
   ]
 }

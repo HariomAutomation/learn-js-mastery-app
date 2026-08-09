@@ -1,16 +1,19 @@
 {
-  "id": "03-operators-logical-ternary-26",
-  "title": "De Morgan's Law NOT AND",
-  "starterCode": "const result = !(true && false);\nconsole.log(result);",
-  "solution": "const result = !(true && false);\nconsole.log(result);",
+  "id": "03-operators-02-logical-ternary-26",
+  "title": "Short circuit evaluation chain",
+  "starterCode": "// Safe nested access with defaults\nconst data = { user: { posts: [{ title: \"Hello\" }] } }\n// TODO: safe access karo with fallback\n",
+  "solution": "const data = { user: { posts: [{ title: \"Hello\" }] } }\nconst title = data && data.user && data.user.posts && data.user.posts[0] && data.user.posts[0].title || \"No title\"\nconst author = data && data.user && data.user.author && data.user.author.name || \"Unknown\"\nreturn { title, author }",
   "tests": [
     {
       "input": [],
-      "expected": "true"
+      "expected": {
+        "title": "Hello",
+        "author": "Unknown"
+      }
     }
   ],
   "hints": [
-    "De Morgan: !(A && B) === !A || !B",
-    "!(true && false) === !true || !false === true"
+    "&& chain se safe access hota hai",
+    "|| se fallback milta hai"
   ]
 }

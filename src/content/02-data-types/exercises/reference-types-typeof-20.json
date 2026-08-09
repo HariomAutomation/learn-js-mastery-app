@@ -1,16 +1,41 @@
 {
-  "id": "02-data-types-reference-types-typeof-20",
-  "title": "Object.keys returns array",
-  "starterCode": "const obj = { x: 1, y: 2 };\nconsole.log();",
-  "solution": "const obj = { x: 1, y: 2 };\nconsole.log(Object.keys(obj));",
+  "id": "02-data-types-02-reference-types-typeof-20",
+  "title": "Object.keys values entries",
+  "starterCode": "const user = { name: \"Hariom\", age: 25, city: \"Jaipur\" }\nreturn {\n  keys: Object.keys(user),\n  values: Object.values(user),\n  entries: Object.entries(user)\n}\n",
+  "solution": "const user = { name: \"Hariom\", age: 25, city: \"Jaipur\" }\nreturn {\n  keys: Object.keys(user),\n  values: Object.values(user),\n  entries: Object.entries(user)\n}",
   "tests": [
     {
       "input": [],
-      "expected": "x,y"
+      "expected": {
+        "keys": [
+          "name",
+          "age",
+          "city"
+        ],
+        "values": [
+          "Hariom",
+          25,
+          "Jaipur"
+        ],
+        "entries": [
+          [
+            "name",
+            "Hariom"
+          ],
+          [
+            "age",
+            25
+          ],
+          [
+            "city",
+            "Jaipur"
+          ]
+        ]
+      }
     }
   ],
   "hints": [
-    "Object.keys returns an array of keys",
-    "console.log shows array without brackets in some environments"
+    "Object.keys() sirf keys return karta hai",
+    "Object.values() sirf values return karta hai"
   ]
 }

@@ -1,15 +1,19 @@
 {
   "id": "01-variables-declarations-var-let-const-13",
-  "title": "const initialization",
-  "starterCode": "try {\n  const x\n} catch(e) {\n  console.log(\"error\")\n}",
-  "solution": "try {\n  const x\n} catch(e) {\n  console.log(\"error\")\n}",
+  "title": "Bug: let in for-of loop",
+  "starterCode": "const arr = [\"a\", \"b\", \"c\"]\nlet result = []\nfor (let x of arr) {\n  result.push(x)\n}\nreturn result\n",
+  "solution": "const arr = [\"a\", \"b\", \"c\"]\nlet result = []\nfor (let x of arr) {\n  result.push(x)\n}\nreturn result",
   "tests": [
     {
       "input": [],
-      "expected": "error"
+      "expected": [
+        "a",
+        "b",
+        "c"
+      ]
     }
   ],
   "hints": [
-    "const must be initialized"
+    "for-of se har iteration ka independent x hota hai"
   ]
 }

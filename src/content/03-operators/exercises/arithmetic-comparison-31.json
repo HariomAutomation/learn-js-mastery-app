@@ -1,15 +1,16 @@
 {
-  "id": "03-operators-arithmetic-comparison-31",
-  "title": "Math.ceil",
-  "starterCode": "const result = Math.ceil(4.1);\nconsole.log(result);",
-  "solution": "const result = Math.ceil(4.1);\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-31",
+  "title": "NaN check karo",
+  "starterCode": "// Check karo result NaN hai ya nahi\nconst result = \"hello\" * 10\n// TODO: isNaN use karo\n",
+  "solution": "const result = \"hello\" * 10\nreturn isNaN(result)",
   "tests": [
     {
       "input": [],
-      "expected": "5"
+      "expected": true
     }
   ],
   "hints": [
-    "Math.ceil rounds up to nearest integer"
+    "isNaN() NaN detect karta hai",
+    "String * number = NaN"
   ]
 }

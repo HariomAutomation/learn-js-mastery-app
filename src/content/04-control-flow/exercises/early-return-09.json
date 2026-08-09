@@ -1,17 +1,42 @@
 {
-  "id": "04-control-flow-early-return-09",
-  "title": "Readability with early return",
-  "starterCode": "function calculateShipping(weight, isInternational) {\n  if (weight <= 0) return 0;\n  if (isInternational) return weight * 5;\n  return weight * 2;\n}\nconsole.log(calculateShipping(10, false));",
-  "solution": "function calculateShipping(weight, isInternational) {\n  if (weight <= 0) return 0;\n  if (isInternational) return weight * 5;\n  return weight * 2;\n}\nconsole.log(calculateShipping(10, false));",
+  "id": "04-control-flow-02-early-return-09",
+  "title": "Chained validation with guards",
+  "starterCode": "// function processAge(age)\n// String hai to parseFloat karo\n// Number nahi hai: \"Invalid age\"\n// < 0: \"Age cannot be negative\"\n// > 150: \"Age too high\"\n// Warna number return karo\n",
+  "solution": "function processAge(age) {\n  if (typeof age === \"string\") age = parseFloat(age)\n  if (typeof age !== \"number\" || Number.isNaN(age)) return \"Invalid age\"\n  if (age < 0) return \"Age cannot be negative\"\n  if (age > 150) return \"Age too high\"\n  return age\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "20"
+      "input": [
+        25
+      ],
+      "expected": 25
+    },
+    {
+      "input": [
+        "30"
+      ],
+      "expected": 30
+    },
+    {
+      "input": [
+        "abc"
+      ],
+      "expected": "Invalid age"
+    },
+    {
+      "input": [
+        -5
+      ],
+      "expected": "Age cannot be negative"
+    },
+    {
+      "input": [
+        200
+      ],
+      "expected": "Age too high"
     }
   ],
   "hints": [
-    "weight is 10, not <= 0",
-    "isInternational is false",
-    "Returns weight * 2"
+    "String ko number mein convert karo pehle",
+    "Phir har validation ke liye early return karo"
   ]
 }

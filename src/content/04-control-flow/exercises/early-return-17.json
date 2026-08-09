@@ -1,16 +1,33 @@
 {
-  "id": "04-control-flow-early-return-17",
-  "title": "Early return in loop - no match",
-  "starterCode": "function hasNegative(arr) {\n  for (const num of arr) {\n    if (num < 0) return true;\n  }\n  return false;\n}\nconsole.log(hasNegative([1, 2, 3, 4]));",
-  "solution": "function hasNegative(arr) {\n  for (const num of arr) {\n    if (num < 0) return true;\n  }\n  return false;\n}\nconsole.log(hasNegative([1, 2, 3, 4]));",
+  "id": "04-control-flow-02-early-return-17",
+  "title": "Function composition with guards",
+  "starterCode": "// function pipe(value, ...fns) mein value aur functions do\n// Agar value null/undefined hai: value return karo\n// Agar fns empty hai: value return karo\n// Warna har function se pass karo\n",
+  "solution": "function pipe(value, ...fns) {\n  if (value === null || value === undefined) return value\n  if (fns.length === 0) return value\n  return fns.reduce((acc, fn) => fn(acc), value)\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "false"
+      "input": [
+        5,
+        null,
+        null
+      ],
+      "expected": 11
+    },
+    {
+      "input": [
+        null,
+        null
+      ],
+      "expected": null
+    },
+    {
+      "input": [
+        5
+      ],
+      "expected": 5
     }
   ],
   "hints": [
-    "No negative numbers found",
-    "Returns false after loop"
+    "Reduce se functions ek ek apply hoti hain",
+    "Null/undefined pe seedha return karo"
   ]
 }

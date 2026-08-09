@@ -1,16 +1,28 @@
 {
-  "id": "03-operators-arithmetic-comparison-50",
-  "title": "Float integer check",
-  "starterCode": "const result = Number.isInteger(42.5);\nconsole.log(result);",
-  "solution": "const result = Number.isInteger(42.5);\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-50",
+  "title": "Temperature range check",
+  "starterCode": "// Temperature hai, check karo kaunse category mein aata hai\n// < 0: \"Freezing\", 0-15: \"Cold\", 16-25: \"Pleasant\", 26-35: \"Warm\", > 35: \"Hot\"\nconst temp = 28\n// TODO: category return karo\n",
+  "solution": "const temp = 28\nreturn temp < 0 ? \"Freezing\" : temp <= 15 ? \"Cold\" : temp <= 25 ? \"Pleasant\" : temp <= 35 ? \"Warm\" : \"Hot\"",
   "tests": [
     {
       "input": [],
-      "expected": "false"
+      "expected": "Warm"
+    },
+    {
+      "input": [
+        5
+      ],
+      "expected": "Cold"
+    },
+    {
+      "input": [
+        -10
+      ],
+      "expected": "Freezing"
     }
   ],
   "hints": [
-    "42.5 is not an integer",
-    "Number.isInteger returns false for floats"
+    "Nested ternary operators use karo",
+    "Order matters — pehle < 0 check karo"
   ]
 }

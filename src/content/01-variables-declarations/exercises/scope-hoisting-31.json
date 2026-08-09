@@ -1,0 +1,16 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-31",
+  "title": "Getter setter scope",
+  "starterCode": "const obj = {\n  _val: 0,\n  get val() { return this._val },\n  set val(v) { this._val = v }\n}\nobj.val = 42\nreturn obj.val\n",
+  "solution": "const obj = {\n  _val: 0,\n  get val() { return this._val },\n  set val(v) { this._val = v }\n}\nobj.val = 42\nreturn obj.val",
+  "tests": [
+    {
+      "input": [],
+      "expected": 42
+    }
+  ],
+  "hints": [
+    "Getter/setter act like properties",
+    "set val(v) updates _val, get val returns it"
+  ]
+}

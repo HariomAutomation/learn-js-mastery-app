@@ -1,15 +1,36 @@
 {
   "id": "01-variables-declarations-variables-intro-23",
-  "title": "Comma operator",
-  "starterCode": "const x = (1, 2, 3)\nconsole.log(x)",
-  "solution": "const x = (1, 2, 3)\nconsole.log(x)",
+  "title": "Fibonacci nth term",
+  "starterCode": "// Function banao jo nth Fibonacci number return kare\n// fib(0) = 0, fib(1) = 1, fib(n) = fib(n-1) + fib(n-2)\nfunction fib(n) {\n  // TODO\n}\n",
+  "solution": "function fib(n) {\n  if (n <= 0) return 0\n  if (n === 1) return 1\n  let a = 0, b = 1\n  for (let i = 2; i <= n; i++) {\n    [a, b] = [b, a + b]\n  }\n  return b\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "3"
+      "input": [
+        0
+      ],
+      "expected": 0
+    },
+    {
+      "input": [
+        1
+      ],
+      "expected": 1
+    },
+    {
+      "input": [
+        6
+      ],
+      "expected": 8
+    },
+    {
+      "input": [
+        10
+      ],
+      "expected": 55
     }
   ],
   "hints": [
-    "Comma returns last value"
+    "Base case: fib(0)=0, fib(1)=1",
+    "Loop se iterative solve karo recursion se fast hoga"
   ]
 }

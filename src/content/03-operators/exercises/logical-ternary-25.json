@@ -1,16 +1,22 @@
 {
-  "id": "03-operators-logical-ternary-25",
-  "title": "Nullish assignment with zero",
-  "starterCode": "let x = 0;\nx ??= 'default';\nconsole.log(x);",
-  "solution": "let x = 0;\nx ??= 'default';\nconsole.log(x);",
+  "id": "03-operators-02-logical-ternary-25",
+  "title": "Logical in array methods",
+  "starterCode": "// Numbers ko filter aur transform karo\nconst nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n// TODO: sirf even numbers ka square nikalo\n",
+  "solution": "const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nreturn nums.filter(n => n % 2 === 0).map(n => n * n)",
   "tests": [
     {
       "input": [],
-      "expected": "0"
+      "expected": [
+        4,
+        16,
+        36,
+        64,
+        100
+      ]
     }
   ],
   "hints": [
-    "?? only triggers on null/undefined",
-    "0 is not null or undefined, so no assignment"
+    "filter se even nikalo",
+    "map se square karo"
   ]
 }

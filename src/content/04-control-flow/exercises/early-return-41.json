@@ -1,16 +1,71 @@
 {
-  "id": "04-control-flow-early-return-41",
-  "title": "Guard clause - cannot vote",
-  "starterCode": "function canVote(age, citizen) {\n  if (age < 18 || !citizen) return false;\n  return true;\n}\nconsole.log(canVote(16, true));",
-  "solution": "function canVote(age, citizen) {\n  if (age < 18 || !citizen) return false;\n  return true;\n}\nconsole.log(canVote(16, true));",
+  "id": "04-control-flow-02-early-return-41",
+  "title": "Guard for array chunking",
+  "starterCode": "// function chunk(arr, size) mein array aur chunk size do\n// Agar array nahi: []\n// Agar size <= 0: []\n// Warna chunks mein divide karo\n",
+  "solution": "function chunk(arr, size) {\n  if (!Array.isArray(arr)) return []\n  if (size <= 0) return []\n  const chunks = []\n  for (let i = 0; i < arr.length; i += size) {\n    chunks.push(arr.slice(i, i + size))\n  }\n  return chunks\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "false"
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        2
+      ],
+      "expected": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5
+        ]
+      ]
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          3
+        ],
+        5
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "input": [
+        [],
+        2
+      ],
+      "expected": []
+    },
+    {
+      "input": [
+        [
+          1,
+          2
+        ],
+        0
+      ],
+      "expected": []
     }
   ],
   "hints": [
-    "16 < 18 is true",
-    "true || false is true, guard triggers"
+    "Loop mein slice se chunks banao",
+    "Step size se array ko divide karo"
   ]
 }

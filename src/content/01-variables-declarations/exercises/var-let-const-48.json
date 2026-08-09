@@ -1,0 +1,16 @@
+{
+  "id": "01-variables-declarations-var-let-const-48",
+  "title": "Computed property names",
+  "starterCode": "const key = \"name\"\nconst obj = { [key]: \"test\" }\nreturn obj.name\n",
+  "solution": "const key = \"name\"\nconst obj = { [key]: \"test\" }\nreturn obj.name",
+  "tests": [
+    {
+      "input": [],
+      "expected": "test"
+    }
+  ],
+  "hints": [
+    "[key] in object literal computes the property name",
+    "key = \"name\" so obj.name = \"test\""
+  ]
+}

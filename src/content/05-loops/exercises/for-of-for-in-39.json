@@ -1,16 +1,22 @@
 {
-  "id": "05-loops-for-of-for-in-39",
-  "title": "For...In String Indices",
-  "starterCode": "const str = \"abc\";\nfor (const index in str) {\n  console.log(index + \": \" + str[index]);\n}",
-  "solution": "const str = \"abc\";\nfor (const index in str) {\n  console.log(index + \": \" + str[index]);\n}",
+  "id": "05-02-for-of-for-in-39",
+  "title": "For-of se array ke elements ko string me join karo conditionally",
+  "starterCode": "function joinTruthy(arr) {\n  // TODO: sirf truthy values ko string me join karo space se\n}",
+  "solution": "function joinTruthy(arr) {\n  const result = [];\n  for (const item of arr) {\n    if (item) result.push(String(item));\n  }\n  return result.join(\" \");\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "0: a\n1: b\n2: c"
+      "input": [
+        "hello",
+        null,
+        "world",
+        0,
+        "foo"
+      ],
+      "expected": "hello world foo"
     }
   ],
   "hints": [
-    "for...in on string gives indices",
-    "Access char with index"
+    "Truthy check karo",
+    "String me convert karke array me push karo"
   ]
 }

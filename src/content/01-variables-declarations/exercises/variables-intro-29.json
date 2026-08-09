@@ -1,15 +1,49 @@
 {
   "id": "01-variables-declarations-variables-intro-29",
-  "title": "Computed property name",
-  "starterCode": "const key = \"age\"\nconst obj = { [key]: 25 }\nconsole.log(obj.age)",
-  "solution": "const key = \"age\"\nconst obj = { [key]: 25 }\nconsole.log(obj.age)",
+  "title": "Group by property",
+  "starterCode": "// Function banao jo array ko property se group kare\n// groupBy([{type:\"fruit\",name:\"apple\"}, {type:\"veggie\",name:\"carrot\"}, {type:\"fruit\",name:\"banana\"}], \"type\")\n// = { fruit: [{...}, {...}], veggie: [{...}] }\nfunction groupBy(arr, key) {\n  // TODO\n}\n",
+  "solution": "function groupBy(arr, key) {\n  return arr.reduce((groups, item) => {\n    const val = item[key]\n    groups[val] = groups[val] || []\n    groups[val].push(item)\n    return groups\n  }, {})\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "25"
+      "input": [
+        [
+          {
+            "type": "fruit",
+            "name": "apple"
+          },
+          {
+            "type": "veggie",
+            "name": "carrot"
+          },
+          {
+            "type": "fruit",
+            "name": "banana"
+          }
+        ],
+        "type"
+      ],
+      "expected": {
+        "fruit": [
+          {
+            "type": "fruit",
+            "name": "apple"
+          },
+          {
+            "type": "fruit",
+            "name": "banana"
+          }
+        ],
+        "veggie": [
+          {
+            "type": "veggie",
+            "name": "carrot"
+          }
+        ]
+      }
     }
   ],
   "hints": [
-    "[] computes the key"
+    "reduce se object build karo",
+    "Har group ka array initialize karo"
   ]
 }

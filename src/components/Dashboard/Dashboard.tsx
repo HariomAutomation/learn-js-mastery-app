@@ -1,4 +1,4 @@
-import { useMemo } from "react"
+import { memo, useMemo, useState } from "react"
 import { useAppStore } from "@/state/store"
 import modulesMeta from "@/content/modules"
 import type { ModuleMeta } from "@/types/content"
@@ -13,6 +13,32 @@ import {
 import { ProgressRing } from "@/components/ProgressRing/ProgressRing"
 import { Confetti } from "@/components/Confetti/Confetti"
 import { ExamHistory } from "@/components/ExamHistory/ExamHistory"
+
+interface MasteryCardProps {
+  code: string
+  title: string
+  percent: number
+  completedLabel: string
+  onClick: () => void
+}
+
+const MasteryCard = memo(function MasteryCard({ code, title, percent, completedLabel, onClick }: MasteryCardProps) {
+  return (
+    <button className="mastery-card" onClick={onClick}>
+      <ProgressRing
+        percent={percent}
+        size={72}
+        stroke={7}
+        label={`${percent}%`}
+      />
+      <div className="mastery-card-info">
+        <span className="mastery-card-code">{code}</span>
+        <span className="mastery-card-title">{title}</span>
+        <span className="mastery-card-sub">{completedLabel}</span>
+      </div>
+    </button>
+  )
+})
 
 function levelForXP(xp: number): { level: number; title: string } {
   const level = Math.floor(xp / 100) + 1
@@ -37,7 +63,11 @@ export function Dashboard() {
   const completedLessons = useAppStore((s) => s.completedLessons)
   const quizScores = useAppStore((s) => s.quizScores)
   const setCurrentModule = useAppStore((s) => s.setCurrentModule)
+  const setCurrentLesson = useAppStore((s) => s.setCurrentLesson)
   const setView = useAppStore((s) => s.setView)
+  const [onboardingDismissed, setOnboardingDismissed] = useState(false)
+
+  const completedSet = useMemo(() => new Set(completedLessons), [completedLessons])
 
   const totalLessons = allLessonIds().length
   const { level, title } = levelForXP(xp)
@@ -60,7 +90,7 @@ export function Dashboard() {
         let totalQuiz = 0
         for (let i = 0; i < slugs.length; i++) {
           const id = lessonIdFor(modId, i, slugs[i])
-          if (completedLessons.includes(id)) completed++
+          if (completedSet.has(id)) completed++
           const s = quizScores[id]
           if (s !== undefined) {
             totalScore += s
@@ -80,7 +110,7 @@ export function Dashboard() {
           masterPercent: Math.max(0, Math.min(100, masterPercent)),
         }
       }),
-    [completedLessons, quizScores]
+    [completedSet, quizScores]
   )
 
   const weakModules = useMemo(
@@ -97,18 +127,51 @@ export function Dashboard() {
       const slugs = lessonSlugs[mod] ?? []
       for (let i = 0; i < slugs.length; i++) {
         const id = lessonIdFor(mod, i, slugs[i])
-        if (!completedLessons.includes(id)) return { id, modId: mod, slug: slugs[i], index: i }
+        if (!completedSet.has(id)) return { id, modId: mod, slug: slugs[i], index: i }
       }
     }
     return null
-  }, [completedLessons])
+  }, [completedSet])
 
   const allDone = completedLessons.length >= totalLessons
   const showConfetti = allDone || (quizAverage >= 85 && Object.keys(quizScores).length > 0)
+  const isNewUser = completedLessons.length === 0
+
+  function startNextLesson() {
+    if (nextLesson) {
+      setCurrentModule(nextLesson.modId)
+      setCurrentLesson(nextLesson.id)
+    }
+  }
 
   return (
     <div className="dashboard">
       <Confetti active={showConfetti} count={40} />
+
+      {isNewUser && !onboardingDismissed && (
+        <section className="onboarding-card">
+          <div className="onboarding-content">
+            <span className="onboarding-emoji">🚀</span>
+            <div>
+              <h3 className="onboarding-title">Shuru karne ka plan!</h3>
+              <p className="onboarding-text">
+                38 lessons, har ek ke saath practice + quiz. Lesson padho → code run karo →
+                quiz 80%+ lo → agla lesson. End mein Final Exam aur certificate!
+              </p>
+            </div>
+          </div>
+          <div className="onboarding-actions">
+            {nextLesson && (
+              <button className="btn btn-primary" onClick={startNextLesson}>
+                ▶ Pehli Lesson: {lessonTitle(nextLesson.slug)}
+              </button>
+            )}
+            <button className="btn btn-ghost" onClick={() => setOnboardingDismissed(true)}>
+              Skip
+            </button>
+          </div>
+        </section>
+      )}
 
       <header className="dashboard-hero">
         <div className="hero-glow" />
@@ -126,12 +189,7 @@ export function Dashboard() {
             {!allDone ? (
               <button
                 className="btn btn-primary hero-cta"
-                onClick={() => {
-                  if (nextLesson) {
-                    setCurrentModule(nextLesson.modId)
-                    useAppStore.getState().setCurrentLesson(nextLesson.id)
-                  }
-                }}
+                onClick={startNextLesson}
               >
                 ▶ Continue Learning{nextLesson ? `: ${lessonTitle(nextLesson.slug)}` : ""}
               </button>
@@ -197,26 +255,14 @@ export function Dashboard() {
           </div>
           <div className="mastery-cards">
             {moduleStats.map((m) => (
-              <button
+              <MasteryCard
                 key={m.id}
-                className="mastery-card"
+                code={moduleIcon(m.id)}
+                title={m.meta?.title ?? m.id}
+                percent={m.masterPercent}
+                completedLabel={`${m.completed}/${m.total} lessons${m.quizScore !== null ? ` · Quiz ${m.quizScore}%` : " · Quiz not done"}`}
                 onClick={() => setCurrentModule(m.id)}
-              >
-                <ProgressRing
-                  percent={m.masterPercent}
-                  size={72}
-                  stroke={7}
-                  label={`${m.masterPercent}%`}
-                />
-                <div className="mastery-card-info">
-                  <span className="mastery-card-code">{moduleIcon(m.id)}</span>
-                  <span className="mastery-card-title">{m.meta?.title ?? m.id}</span>
-                  <span className="mastery-card-sub">
-                    {m.completed}/{m.total} lessons
-                    {m.quizScore !== null ? ` · Quiz ${m.quizScore}%` : " · Quiz not done"}
-                  </span>
-                </div>
-              </button>
+              />
             ))}
           </div>
         </div>

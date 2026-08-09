@@ -1,16 +1,22 @@
 {
-  "id": "02-data-types-reference-types-typeof-18",
-  "title": "typeof symbol",
-  "starterCode": "const s = Symbol('id');\nconsole.log();",
-  "solution": "const s = Symbol('id');\nconsole.log(typeof s);",
+  "id": "02-data-types-02-reference-types-typeof-18",
+  "title": "Symbol.iterator protocol",
+  "starterCode": "const range = {\n  from: 1,\n  to: 5,\n  [Symbol.iterator]() {\n    // TODO\n  }\n}\nconst result = []\nfor (const num of range) {\n  result.push(num)\n}\nreturn result\n",
+  "solution": "const range = {\n  from: 1,\n  to: 5,\n  [Symbol.iterator]() {\n    let current = this.from\n    const last = this.to\n    return {\n      next() {\n        if (current <= last) {\n          return { value: current++, done: false }\n        }\n        return { done: true }\n      }\n    }\n  }\n}\nconst result = []\nfor (const num of range) {\n  result.push(num)\n}\nreturn result",
   "tests": [
     {
       "input": [],
-      "expected": "symbol"
+      "expected": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
     }
   ],
   "hints": [
-    "Symbols are a primitive type",
-    "typeof correctly returns 'symbol'"
+    "Symbol.iterator method object ko iterable banata hai",
+    "next() method { value, done } return karta hai"
   ]
 }

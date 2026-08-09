@@ -1,16 +1,30 @@
 {
-  "id": "02-data-types-primitive-types-08",
-  "title": "Access first character of a string",
-  "starterCode": "const str = \"Hello\";\nconst first = ;\nconsole.log(first);",
-  "solution": "const str = \"Hello\";\nconst first = str[0];\nconsole.log(first);",
+  "id": "02-data-types-01-primitive-types-08",
+  "title": "NaN detect karo",
+  "starterCode": "function isActualNaN(val) {\n  // TODO: Object.is use karo\n}\n",
+  "solution": "function isActualNaN(val) {\n  return Object.is(val, NaN)\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "H"
+      "input": [
+        null
+      ],
+      "expected": true
+    },
+    {
+      "input": [
+        42
+      ],
+      "expected": false
+    },
+    {
+      "input": [
+        "hello"
+      ],
+      "expected": false
     }
   ],
   "hints": [
-    "Strings are indexed starting at 0",
-    "Use bracket notation"
+    "Object.is(NaN, NaN) true deta hai",
+    "typeof NaN 'number' hai"
   ]
 }

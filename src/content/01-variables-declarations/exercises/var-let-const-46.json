@@ -1,0 +1,16 @@
+{
+  "id": "01-variables-declarations-var-let-const-46",
+  "title": "Scope with default params",
+  "starterCode": "const x = 10\nfunction test(x = x + 1) {\n  return x\n}\ntry {\n  return test()\n} catch(e) {\n  return \"TDZ error\"\n}\n",
+  "solution": "const x = 10\nfunction test(x = x + 1) {\n  return x\n}\ntry {\n  return test()\n} catch(e) {\n  return \"TDZ error\"\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": "TDZ error"
+    }
+  ],
+  "hints": [
+    "Default param x is in TDZ when evaluated",
+    "x = x + 1 tries to access x before it's initialized"
+  ]
+}

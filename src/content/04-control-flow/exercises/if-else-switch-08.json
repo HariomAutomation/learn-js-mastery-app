@@ -1,16 +1,36 @@
 {
-  "id": "04-control-flow-if-else-switch-08",
-  "title": "Switch fallthrough danger",
-  "starterCode": "const fruit = 'apple';\nswitch (fruit) {\n  case 'apple':\n    console.log('red');\n  case 'banana':\n    console.log('yellow');\n    break;\n  default:\n    console.log('other');\n}",
-  "solution": "const fruit = 'apple';\nswitch (fruit) {\n  case 'apple':\n    console.log('red');\n  case 'banana':\n    console.log('yellow');\n    break;\n  default:\n    console.log('other');\n}",
+  "id": "04-control-flow-01-if-else-switch-08",
+  "title": "Switch with fall-through for months",
+  "starterCode": "// function getSeason(month) mein number 1-12 do\n// 12,1,2: \"Winter\", 3,4,5: \"Spring\", 6,7,8: \"Summer\", 9,10,11: \"Autumn\"\n",
+  "solution": "function getSeason(month) {\n  switch (month) {\n    case 12: case 1: case 2: return \"Winter\"\n    case 3: case 4: case 5: return \"Spring\"\n    case 6: case 7: case 8: return \"Summer\"\n    case 9: case 10: case 11: return \"Autumn\"\n    default: return \"Invalid month\"\n  }\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "red\nyellow"
+      "input": [
+        1
+      ],
+      "expected": "Winter"
+    },
+    {
+      "input": [
+        5
+      ],
+      "expected": "Spring"
+    },
+    {
+      "input": [
+        8
+      ],
+      "expected": "Summer"
+    },
+    {
+      "input": [
+        10
+      ],
+      "expected": "Autumn"
     }
   ],
   "hints": [
-    "Missing break causes fallthrough",
-    "apple matches, then falls to banana"
+    "Fall-through se multiple cases ek saath handle hote hain",
+    "Break ki zaroorat nahi kyunki return hai"
   ]
 }

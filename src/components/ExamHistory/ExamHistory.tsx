@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react"
 import { getExamResults } from "@/db/progress"
+import { useAppStore } from "@/state/store"
 import type { ExamResult } from "@/db/schema"
 
 export function ExamHistory() {
   const [results, setResults] = useState<ExamResult[]>([])
+  const examVersion = useAppStore((s) => s.examVersion)
 
   useEffect(() => {
     getExamResults().then(setResults)
-  }, [])
+  }, [examVersion])
 
   if (results.length === 0) {
     return (

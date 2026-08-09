@@ -1,16 +1,36 @@
 {
-  "id": "04-control-flow-if-else-switch-47",
-  "title": "If with string length",
-  "starterCode": "const str = \"hello\";\nif (str.length > 3) {\n  console.log(\"long\");\n} else {\n  console.log(\"short\");\n}",
-  "solution": "const str = \"hello\";\nif (str.length > 3) {\n  console.log(\"long\");\n} else {\n  console.log(\"short\");\n}",
+  "id": "04-control-flow-01-if-else-switch-47",
+  "title": "Switch se simple encryption",
+  "starterCode": "// function encrypt(char) mein single character do\n// A->Z, B->Y, C->X ... Z->A (reverse alphabet)\n// Non-letter: same return karo\n",
+  "solution": "function encrypt(char) {\n  const lower = char.toLowerCase()\n  if (lower >= \"a\" && lower <= \"z\") {\n    const code = lower.charCodeAt(0)\n    const encrypted = String.fromCharCode(122 - code + 97)\n    return char === char.toUpperCase() ? encrypted.toUpperCase() : encrypted\n  }\n  return char\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "long"
+      "input": [
+        "A"
+      ],
+      "expected": "Z"
+    },
+    {
+      "input": [
+        "b"
+      ],
+      "expected": "y"
+    },
+    {
+      "input": [
+        "M"
+      ],
+      "expected": "N"
+    },
+    {
+      "input": [
+        "1"
+      ],
+      "expected": "1"
     }
   ],
   "hints": [
-    "str.length is 5",
-    "5 > 3 is true"
+    "charCodeAt se ASCII code milta hai",
+    "122 = 'z' ka code, 97 = 'a' ka code"
   ]
 }

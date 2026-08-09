@@ -1,16 +1,24 @@
 {
-  "id": "05-loops-patterns-practice-23",
-  "title": "Reverse String Loop",
-  "starterCode": "const str = \"abcdef\";\nlet result = \"\";\nfor (let i = str.length - 1; i >= 0; i--) {\n  result += str[i];\n}\nconsole.log(result);",
-  "solution": "const str = \"abcdef\";\nlet result = \"\";\nfor (let i = str.length - 1; i >= 0; i--) {\n  result += str[i];\n}\nconsole.log(result);",
+  "id": "05-03-patterns-practice-23",
+  "title": "Array ke elements ko rotate by one position",
+  "starterCode": "function rotateByOne(arr) {\n  // TODO: array ko ek position right se rotate karo\n}",
+  "solution": "function rotateByOne(arr) {\n  if (arr.length <= 1) return arr;\n  const last = arr[arr.length - 1];\n  for (let i = arr.length - 1; i > 0; i--) {\n    arr[i] = arr[i - 1];\n  }\n  arr[0] = last;\n  return arr;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "fedcba"
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "expected": "5,1,2,3,4"
     }
   ],
   "hints": [
-    "Start at end",
-    "Decrement index"
+    "Last element save karo",
+    "Sab elements ko ek position right shift karo"
   ]
 }

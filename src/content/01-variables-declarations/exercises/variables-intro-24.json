@@ -1,15 +1,30 @@
 {
   "id": "01-variables-declarations-variables-intro-24",
-  "title": "Spread string to array",
-  "starterCode": "const arr = [...\"hello\"]\nconsole.log(arr.length)",
-  "solution": "const arr = [...\"hello\"]\nconsole.log(arr.length)",
+  "title": "Palindrome checker",
+  "starterCode": "// Function banao jo check kare string palindrome hai ya nahi\n// Ignore case aur non-alphanumeric characters\nfunction isPalindrome(str) {\n  // TODO\n}\n",
+  "solution": "function isPalindrome(str) {\n  const cleaned = str.toLowerCase().replace(/[^a-z0-9]/g, \"\")\n  return cleaned === cleaned.split(\"\").reverse().join(\"\")\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "5"
+      "input": [
+        "racecar"
+      ],
+      "expected": true
+    },
+    {
+      "input": [
+        "A man a plan a canal Panama"
+      ],
+      "expected": true
+    },
+    {
+      "input": [
+        "hello"
+      ],
+      "expected": false
     }
   ],
   "hints": [
-    "Spread unpacks string into chars"
+    "Pehle string clean karo — lowercase + special chars hatao",
+    "Reverse karke compare karo"
   ]
 }

@@ -1,16 +1,899 @@
-{
-  "id": "06-functions-closures-iife-01",
-  "title": "Closure Basics",
-  "starterCode": "function outer() {\n  let count = 0;\n  return function inner() {\n    count++;\n    console.log(count);\n  };\n}\nconst fn = outer();\nfn();\nfn();",
-  "solution": "function outer() {\n  let count = 0;\n  return function inner() {\n    count++;\n    console.log(count);\n  };\n}\nconst fn = outer();\nfn();\nfn();",
-  "tests": [
-    {
-      "input": [],
-      "expected": "1\n2"
-    }
-  ],
-  "hints": [
-    "Inner function remembers outer",
-    "Count persists between calls"
-  ]
-}
+[
+  {
+    "id": "functions-closures-iife-01",
+    "title": "closure se counter banao jo increment kare",
+    "starterCode": "function createCounter() {\n  // TODO: return object with increment, getCount\n}",
+    "solution": "function createCounter() {\n  let count = 0;\n  return {\n    increment: () => ++count,\n    getCount: () => count\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "counter created"
+        ]
+      },
+      {
+        "input": [],
+        "expected": [
+          "increment -> 1 -> 2"
+        ]
+      }
+    ],
+    "hints": [
+      "private variable count use karo",
+      "methods count ko access karenge"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-02",
+    "title": "IIFE se immediately variable initialize karo",
+    "starterCode": "const result = (function() {\n  // TODO: return 42\n})();",
+    "solution": "const result = (function() {\n  return 42;\n})();",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          42
+        ]
+      }
+    ],
+    "hints": [
+      "IIFE format ()() use karo"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-03",
+    "title": "closure se ek function banao jo private variable store kare",
+    "starterCode": "function createStorage() {\n  // TODO: return get/set methods\n}",
+    "solution": "function createStorage() {\n  let data = {};\n  return {\n    set: (key, val) => data[key] = val,\n    get: (key) => data[key]\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "storage created"
+        ]
+      }
+    ],
+    "hints": [
+      "data ko closure mein rakho"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-04",
+    "title": "closure se function banao jo call count track kare",
+    "starterCode": "function createTracker() {\n  // TODO: return track function\n}",
+    "solution": "function createTracker() {\n  let calls = 0;\n  return function() {\n    return ++calls;\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "call -> 1, call -> 2"
+        ]
+      }
+    ],
+    "hints": [
+      "private counter use karo"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-05",
+    "title": "IIFE se global namespace pollution se bachao",
+    "starterCode": "const myLib = (function() {\n  // TODO: return public API\n})",
+    "solution": "const myLib = (function() {\n  const _private = 'secret';\n  return {\n    init: () => _private\n  };\n})();",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "myLib.init() -> secret"
+        ]
+      }
+    ],
+    "hints": [
+      "_private variable banao",
+      "return karo public API"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-06",
+    "title": "closure se memoization function banao",
+    "starterCode": "function memoize(fn) {\n  // TODO: return memoized function\n}",
+    "solution": "function memoize(fn) {\n  const cache = {};\n  return function(...args) {\n    const key = JSON.stringify(args);\n    if (key in cache) return cache[key];\n    return cache[key] = fn(...args);\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "memoized function created"
+        ]
+      }
+    ],
+    "hints": [
+      "cache object use karo",
+      "JSON.stringify key banao"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-07",
+    "title": "closure se once function banao jo sirf ek baar execute ho",
+    "starterCode": "function once(fn) {\n  // TODO: return function that runs once\n}",
+    "solution": "function once(fn) {\n  let called = false;\n  let result;\n  return function(...args) {\n    if (!called) {\n      called = true;\n      result = fn(...args);\n    }\n    return result;\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "first call -> runs, second call -> cached"
+        ]
+      }
+    ],
+    "hints": [
+      "called flag use karo"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-08",
+    "title": "IIFE se immediately array initialize karo",
+    "starterCode": "const data = (function() {\n  // TODO: return [1,2,3,4,5]\n})();",
+    "solution": "const data = (function() {\n  return [1,2,3,4,5];\n})();",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    ],
+    "hints": [
+      "IIFE se array return karo"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-09",
+    "title": "closure se counter banao jo decrement bhi kare",
+    "starterCode": "function createFullCounter() {\n  // TODO: return increment, decrement, getCount\n}",
+    "solution": "function createFullCounter() {\n  let count = 0;\n  return {\n    increment: () => ++count,\n    decrement: () => --count,\n    getCount: () => count\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "full counter created"
+        ]
+      }
+    ],
+    "hints": [
+      "closure methods banao"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-10",
+    "title": "closure se function banao jo private variable mein state store kare",
+    "starterCode": "function createState(initial) {\n  // TODO: return getState, setState\n}",
+    "solution": "function createState(initial) {\n  let state = initial;\n  return {\n    getState: () => state,\n    setState: (newState) => state = newState\n  };\n}",
+    "tests": [
+      {
+        "input": [
+          "hello"
+        ],
+        "expected": [
+          "getState -> hello"
+        ]
+      }
+    ],
+    "hints": [
+      "state ko closure mein rakho"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-11",
+    "title": "closure se function banao jo arguments ko remember kare",
+    "starterCode": "function createGreeter(greeting) {\n  // TODO: return function that adds greeting\n}",
+    "solution": "function createGreeter(greeting) {\n  return function(name) {\n    return `${greeting}, ${name}!`;\n  };\n}",
+    "tests": [
+      {
+        "input": [
+          "Hello"
+        ],
+        "expected": [
+          "greet -> Hello, World!"
+        ]
+      }
+    ],
+    "hints": [
+      "greeting parameter closure mein store hoga"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-12",
+    "title": "IIFE se module pattern implement karo",
+    "starterCode": "const calculator = (function() {\n  // TODO: return add, subtract, multiply, divide\n})",
+    "solution": "const calculator = (function() {\n  return {\n    add: (a,b) => a+b,\n    subtract: (a,b) => a-b,\n    multiply: (a,b) => a*b,\n    divide: (a,b) => a/b\n  };\n})();",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "calculator.add(1,2) -> 3"
+        ]
+      }
+    ],
+    "hints": [
+      "object return karo IIFE se"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-13",
+    "title": "closure se function banao jo多次 calls ko queue kare",
+    "starterCode": "function createQueue() {\n  // TODO: return enqueue, processAll\n}",
+    "solution": "function createQueue() {\n  const queue = [];\n  return {\n    enqueue: (fn) => queue.push(fn),\n    processAll: () => queue.forEach(fn => fn())\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "queue created"
+        ]
+      }
+    ],
+    "hints": [
+      "queue array closure mein rakho"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-14",
+    "title": "closure se function banao jo call frequency limit kare",
+    "starterCode": "function throttle(fn, limit) {\n  // TODO: return throttled function\n}",
+    "solution": "function throttle(fn, limit) {\n  let lastCall = 0;\n  return function(...args) {\n    const now = Date.now();\n    if (now - lastCall >= limit) {\n      lastCall = now;\n      return fn(...args);\n    }\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "throttled function created"
+        ]
+      }
+    ],
+    "hints": [
+      "Date.now() use karo",
+      "lastCall track karo"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-15",
+    "title": "closure se debounce function banao",
+    "starterCode": "function debounce(fn, delay) {\n  // TODO: return debounced function\n}",
+    "solution": "function debounce(fn, delay) {\n  let timer;\n  return function(...args) {\n    clearTimeout(timer);\n    timer = setTimeout(() => fn(...args), delay);\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "debounced function created"
+        ]
+      }
+    ],
+    "hints": [
+      "setTimeout clearTimeout use karo"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-16",
+    "title": "closure se function banao jo private variable mein history maintain kare",
+    "starterCode": "function createHistory() {\n  // TODO: return add, undo, getAll\n}",
+    "solution": "function createHistory() {\n  const history = [];\n  return {\n    add: (item) => history.push(item),\n    undo: () => history.pop(),\n    getAll: () => [...history]\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "history created"
+        ]
+      }
+    ],
+    "hints": [
+      "history array closure mein rakho"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-17",
+    "title": "IIFE se configuration object banao",
+    "starterCode": "const config = (function() {\n  // TODO: return config object\n})",
+    "solution": "const config = (function() {\n  return {\n    apiUrl: 'https://api.example.com',\n    timeout: 5000\n  };\n})();",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "config.apiUrl -> https://api.example.com"
+        ]
+      }
+    ],
+    "hints": [
+      "object return karo"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-18",
+    "title": "closure se function banao jo多次 arguments ko aggregate kare",
+    "starterCode": "function createAggregator() {\n  // TODO: return add, getSum\n}",
+    "solution": "function createAggregator() {\n  let sum = 0;\n  return {\n    add: (n) => sum += n,\n    getSum: () => sum\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "aggregator created"
+        ]
+      }
+    ],
+    "hints": [
+      "sum variable use karo"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-19",
+    "title": "closure se function banao jo state machine implement kare",
+    "starterCode": "function createFSM(initial) {\n  // TODO: return transition, getState\n}",
+    "solution": "function createFSM(initial) {\n  let state = initial;\n  return {\n    transition: (newState) => state = newState,\n    getState: () => state\n  };\n}",
+    "tests": [
+      {
+        "input": [
+          "idle"
+        ],
+        "expected": [
+          "getState -> idle"
+        ]
+      }
+    ],
+    "hints": [
+      "state variable closure mein rakho"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-20",
+    "title": "closure se function banao jo multiple closures ko share kare",
+    "starterCode": "function createSharedScope() {\n  // TODO: return functions that share variable\n}",
+    "solution": "function createSharedScope() {\n  let shared = 0;\n  return {\n    incA: () => ++shared,\n    incB: () => ++shared,\n    getShared: () => shared\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "shared scope created"
+        ]
+      }
+    ],
+    "hints": [
+      "shared variable sab functions access karenge"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-21",
+    "title": "closure se function banao jo event listener manage kare",
+    "starterCode": "function createEventManager() {\n  // TODO: return on, emit, off\n}",
+    "solution": "function createEventManager() {\n  const events = {};\n  return {\n    on: (event, fn) => {\n      if (!events[event]) events[event] = [];\n      events[event].push(fn);\n    },\n    emit: (event, ...args) => {\n      (events[event]||[]).forEach(fn => fn(...args));\n    },\n    off: (event) => delete events[event]\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "event manager created"
+        ]
+      }
+    ],
+    "hints": [
+      "events object use karo"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-22",
+    "title": "closure se function banao jo private property hai encapsulate kare",
+    "starterCode": "function createPerson(name, age) {\n  // TODO: return public API\n}",
+    "solution": "function createPerson(name, age) {\n  return {\n    getName: () => name,\n    getAge: () => age,\n    toString: () => `${name} (${age})`\n  };\n}",
+    "tests": [
+      {
+        "input": [
+          "Rahul",
+          25
+        ],
+        "expected": [
+          "getName -> Rahul"
+        ]
+      }
+    ],
+    "hints": [
+      "closure se variables protect karo"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-23",
+    "title": "IIFE se global variables se bachke code chalao",
+    "starterCode": "(function() {\n  // TODO: local scope mein code likho\n})();",
+    "solution": "(function() {\n  const localVar = 'I am local';\n  return localVar;\n})();",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "I am local"
+        ]
+      }
+    ],
+    "hints": [
+      "IIFE ke andar variables local hain"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-24",
+    "title": "closure se function banao jo lazy evaluation kare",
+    "starterCode": "function lazy(fn) {\n  // TODO: return lazy evaluated function\n}",
+    "solution": "function lazy(fn) {\n  let result;\n  let computed = false;\n  return function() {\n    if (!computed) {\n      result = fn();\n      computed = true;\n    }\n    return result;\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "lazy function created"
+        ]
+      }
+    ],
+    "hints": [
+      "computed flag use karo"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-25",
+    "title": "closure se function banao jo多次 calls ke baad result return kare",
+    "starterCode": "function createCaller(fn, times) {\n  // TODO: return function that calls fn after times calls\n}",
+    "solution": "function createCaller(fn, times) {\n  let count = 0;\n  return function(...args) {\n    count++;\n    if (count >= times) return fn(...args);\n    return undefined;\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "caller created"
+        ]
+      }
+    ],
+    "hints": [
+      "count track karo"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-26",
+    "title": "closure se function banao jo singleton pattern implement kare",
+    "starterCode": "function createSingleton(factory) {\n  // TODO: return getInstance\n}",
+    "solution": "function createSingleton(factory) {\n  let instance = null;\n  return function() {\n    if (!instance) instance = factory();\n    return instance;\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "singleton created"
+        ]
+      }
+    ],
+    "hints": [
+      "instance null se start karo"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-27",
+    "title": "closure se function banao jo immutable state maintain kare",
+    "starterCode": "function immutableState(initial) {\n  // TODO: return getState, update\n}",
+    "solution": "function immutableState(initial) {\n  let state = initial;\n  return {\n    getState: () => state,\n    update: (newState) => state = {...state, ...newState}\n  };\n}",
+    "tests": [
+      {
+        "input": [
+          {
+            "count": 0
+          }
+        ],
+        "expected": [
+          "update({count:1}) -> {count:1}"
+        ]
+      }
+    ],
+    "hints": [
+      "spread operator se merge karo"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-28",
+    "title": "IIFE se private counter banao",
+    "starterCode": "const counter = (function() {\n  // TODO: return counter object\n})",
+    "solution": "const counter = (function() {\n  let count = 0;\n  return {\n    increment: () => ++count,\n    getCount: () => count\n  };\n})();",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "counter.increment() -> 1"
+        ]
+      }
+    ],
+    "hints": [
+      "IIFE closure use karo"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-29",
+    "title": "closure se function banao jo multiple memoized functions share kare",
+    "starterCode": "function createMemoPool() {\n  // TODO: return memoize function\n}",
+    "solution": "function createMemoPool() {\n  const pool = {};\n  return {\n    memoize: (key, fn) => {\n      return function(...args) {\n        const k = key + JSON.stringify(args);\n        if (!pool[k]) pool[k] = fn(...args);\n        return pool[k];\n      };\n    }\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "memo pool created"
+        ]
+      }
+    ],
+    "hints": [
+      "shared cache object use karo"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-30",
+    "title": "closure se function banao jo cleanup function return kare",
+    "starterCode": "function createCleanup(fn) {\n  // TODO: return { execute, cleanup }\n}",
+    "solution": "function createCleanup(fn) {\n  let resources = [];\n  return {\n    execute: (...args) => {\n      const result = fn(...args);\n      resources.push(result);\n      return result;\n    },\n    cleanup: () => { resources = []; }\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "cleanup created"
+        ]
+      }
+    ],
+    "hints": [
+      "resources array track karo"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-31",
+    "title": "closure se function banao jo callback queue manage kare",
+    "starterCode": "function createCallbackQueue() {\n  // TODO: return push, process\n}",
+    "solution": "function createCallbackQueue() {\n  const queue = [];\n  return {\n    push: (cb) => queue.push(cb),\n    process: () => queue.forEach(cb => cb())\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "callback queue created"
+        ]
+      }
+    ],
+    "hints": [
+      "queue array use karo"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-32",
+    "title": "closure se function banao jo lazy loading implement kare",
+    "starterCode": "function lazyLoad(factory) {\n  // TODO: return function that loads on first call\n}",
+    "solution": "function lazyLoad(factory) {\n  let instance;\n  return function() {\n    if (!instance) instance = factory();\n    return instance;\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "lazy loader created"
+        ]
+      }
+    ],
+    "hints": [
+      "factory function ko first call pe run karo"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-33",
+    "title": "closure se function banao jo cached computation kare",
+    "starterCode": "function cachedCompute(key, fn) {\n  // TODO: return function with cache\n}",
+    "solution": "function cachedCompute(key, fn) {\n  const cache = {};\n  return function(...args) {\n    const k = key + JSON.stringify(args);\n    if (!(k in cache)) cache[k] = fn(...args);\n    return cache[k];\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "cached compute created"
+        ]
+      }
+    ],
+    "hints": [
+      "cache object use karo"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-34",
+    "title": "closure se function banao jo rate limiter ho",
+    "starterCode": "function rateLimiter(fn, maxPerSec) {\n  // TODO: return rate limited function\n}",
+    "solution": "function rateLimiter(fn, maxPerSec) {\n  const timestamps = [];\n  return function(...args) {\n    const now = Date.now();\n    while(timestamps.length && timestamps[0] <= now - 1000) timestamps.shift();\n    if (timestamps.length >= maxPerSec) return 'rate limited';\n    timestamps.push(now);\n    return fn(...args);\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "rate limiter created"
+        ]
+      }
+    ],
+    "hints": [
+      "timestamps array use karo"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-35",
+    "title": "closure se function banao jo event emitter ho",
+    "starterCode": "function createEmitter() {\n  // TODO: return on, emit\n}",
+    "solution": "function createEmitter() {\n  const listeners = {};\n  return {\n    on: (event, fn) => {\n      if (!listeners[event]) listeners[event] = [];\n      listeners[event].push(fn);\n    },\n    emit: (event, ...args) => {\n      (listeners[event]||[]).forEach(fn => fn(...args));\n    }\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "emitter created"
+        ]
+      }
+    ],
+    "hints": [
+      "listeners object use karo"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-36",
+    "title": "closure se function banao jo state transitions ko log kare",
+    "starterCode": "function createLoggedState(initial) {\n  // TODO: return transition, getLog\n}",
+    "solution": "function createLoggedState(initial) {\n  let state = initial;\n  const log = [];\n  return {\n    transition: (newState) => {\n      log.push({from: state, to: newState});\n      state = newState;\n    },\n    getLog: () => [...log],\n    getState: () => state\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "logged state created"
+        ]
+      }
+    ],
+    "hints": [
+      "log array maintain karo"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-37",
+    "title": "closure se function banao jo multiple arguments ko curry kare",
+    "starterCode": "function curry(fn) {\n  // TODO: return curried function\n}",
+    "solution": "function curry(fn) {\n  return function curried(...args) {\n    if (args.length >= fn.length) return fn(...args);\n    return (...args2) => curried(...args, ...args2);\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "curry function created"
+        ]
+      }
+    ],
+    "hints": [
+      "recursive currying use karo"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-38",
+    "title": "IIFE se app state initialize karo",
+    "starterCode": "const appState = (function() {\n  // TODO: return initial state object\n})",
+    "solution": "const appState = (function() {\n  return {\n    user: null,\n    theme: 'light',\n    notifications: []\n  };\n})();",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "app state initialized"
+        ]
+      }
+    ],
+    "hints": [
+      "state object return karo"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-39",
+    "title": "closure se function banao jo multiple promises ko manage kare",
+    "starterCode": "function promiseManager() {\n  // TODO: return add, resolveAll\n}",
+    "solution": "function promiseManager() {\n  const promises = [];\n  return {\n    add: (p) => promises.push(p),\n    resolveAll: () => Promise.all(promises)\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "promise manager created"
+        ]
+      }
+    ],
+    "hints": [
+      "promises array use karo"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-40",
+    "title": "closure se function banao jo private method ho",
+    "starterCode": "function createService() {\n  // TODO: return public API with private methods\n}",
+    "solution": "function createService() {\n  function privateMethod() { return 'private'; }\n  return {\n    publicMethod: () => privateMethod()\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "service created"
+        ]
+      }
+    ],
+    "hints": [
+      "private method ko closure mein rakho"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-41",
+    "title": "closure se function banao jo caching strategy implement kare",
+    "starterCode": "function createLRU(maxSize) {\n  // TODO: return get, set\n}",
+    "solution": "function createLRU(maxSize) {\n  const cache = new Map();\n  return {\n    get: (key) => {\n      if (!cache.has(key)) return undefined;\n      const val = cache.get(key);\n      cache.delete(key);\n      cache.set(key, val);\n      return val;\n    },\n    set: (key, val) => {\n      if (cache.has(key)) cache.delete(key);\n      if (cache.size >= maxSize) cache.delete(cache.keys().next().value);\n      cache.set(key, val);\n    }\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "LRU cache created"
+        ]
+      }
+    ],
+    "hints": [
+      "Map use karo",
+      "order maintain karo"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-42",
+    "title": "closure se function banao jo retry logic implement kare",
+    "starterCode": "function retry(fn, maxAttempts) {\n  // TODO: return function that retries on failure\n}",
+    "solution": "function retry(fn, maxAttempts) {\n  return async function(...args) {\n    for (let i = 0; i < maxAttempts; i++) {\n      try { return await fn(...args); }\n      catch(e) { if (i === maxAttempts-1) throw e; }\n    }\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "retry function created"
+        ]
+      }
+    ],
+    "hints": [
+      "async await use karo",
+      "catch block mein retry karo"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-43",
+    "title": "closure se function banao jo middleware pattern implement kare",
+    "starterCode": "function createMiddleware() {\n  // TODO: return use, execute\n}",
+    "solution": "function createMiddleware() {\n  const middlewares = [];\n  return {\n    use: (fn) => middlewares.push(fn),\n    execute: async (req) => {\n      let result = req;\n      for (const mw of middlewares) result = await mw(result);\n      return result;\n    }\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "middleware created"
+        ]
+      }
+    ],
+    "hints": [
+      "middlewares array use karo"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-44",
+    "title": "closure se function banao jo state machine transitions define kare",
+    "starterCode": "function createStateMachine(transitions, initial) {\n  // TODO: return transition, getState\n}",
+    "solution": "function createStateMachine(transitions, initial) {\n  let state = initial;\n  return {\n    transition: (event) => {\n      const next = transitions[state]?.[event];\n      if (next) state = next;\n      return state;\n    },\n    getState: () => state\n  };\n}",
+    "tests": [
+      {
+        "input": [
+          {
+            "idle": {
+              "start": "running"
+            },
+            "running": {
+              "stop": "idle"
+            }
+          },
+          "idle"
+        ],
+        "expected": [
+          "transition('start') -> running"
+        ]
+      }
+    ],
+    "hints": [
+      "transitions object use karo"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-45",
+    "title": "closure se function banao jo request/response interceptor ho",
+    "starterCode": "function createInterceptor() {\n  // TODO: return requestInterceptor, responseInterceptor\n}",
+    "solution": "function createInterceptor() {\n  const reqInterceptors = [];\n  const resInterceptors = [];\n  return {\n    addRequestInterceptor: (fn) => reqInterceptors.push(fn),\n    addResponseInterceptor: (fn) => resInterceptors.push(fn),\n    processRequest: (req) => reqInterceptors.reduce((r,fn)=>fn(r),req),\n    processResponse: (res) => resInterceptors.reduce((r,fn)=>fn(r),res)\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "interceptor created"
+        ]
+      }
+    ],
+    "hints": [
+      "interceptors arrays use karo"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-46",
+    "title": "closure se function banao jo configuration override pattern implement kare",
+    "starterCode": "function createConfig(defaults) {\n  // TODO: return get, override\n}",
+    "solution": "function createConfig(defaults) {\n  let overrides = {};\n  return {\n    get: (key) => overrides[key] ?? defaults[key],\n    override: (key, val) => overrides[key] = val,\n    reset: () => overrides = {}\n  };\n}",
+    "tests": [
+      {
+        "input": [
+          {
+            "theme": "light"
+          }
+        ],
+        "expected": [
+          "get('theme') -> light"
+        ]
+      }
+    ],
+    "hints": [
+      "defaults aur overrides alag rakho"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-47",
+    "title": "closure se function banao jo subscription pattern implement kare",
+    "starterCode": "function createPubSub() {\n  // TODO: return subscribe, publish\n}",
+    "solution": "function createPubSub() {\n  const subscribers = {};\n  return {\n    subscribe: (topic, fn) => {\n      if (!subscribers[topic]) subscribers[topic] = [];\n      subscribers[topic].push(fn);\n      return () => { subscribers[topic] = subscribers[topic].filter(f => f !== fn); };\n    },\n    publish: (topic, data) => {\n      (subscribers[topic]||[]).forEach(fn => fn(data));\n    }\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "pubsub created"
+        ]
+      }
+    ],
+    "hints": [
+      "subscribers object use karo",
+      "unsubscribe function return karo"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-48",
+    "title": "closure se function banao jo connection pool manage kare",
+    "starterCode": "function createConnectionPool(maxSize) {\n  // TODO: return acquire, release\n}",
+    "solution": "function createConnectionPool(maxSize) {\n  const pool = [];\n  const active = [];\n  for (let i = 0; i < maxSize; i++) pool.push({id: i});\n  return {\n    acquire: () => {\n      const conn = pool.pop();\n      if (conn) active.push(conn);\n      return conn;\n    },\n    release: (conn) => {\n      const idx = active.findIndex(c => c.id === conn.id);\n      if (idx >= 0) {\n        active.splice(idx, 1);\n        pool.push(conn);\n      }\n    },\n    size: () => pool.length\n  };\n}",
+    "tests": [
+      {
+        "input": [
+          3
+        ],
+        "expected": [
+          "acquire -> {id:0}, release, size -> 1"
+        ]
+      }
+    ],
+    "hints": [
+      "pool array manage karo"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-49",
+    "title": "closure se function banao jo event-driven state management kare",
+    "starterCode": "function createEventStore() {\n  // TODO: return dispatch, getState, subscribe\n}",
+    "solution": "function createEventStore() {\n  let state = {};\n  const listeners = [];\n  return {\n    dispatch: (event) => {\n      state = {...state, ...event};\n      listeners.forEach(fn => fn(state));\n    },\n    getState: () => ({...state}),\n    subscribe: (fn) => { listeners.push(fn); return () => listeners.splice(listeners.indexOf(fn),1); }\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "event store created"
+        ]
+      }
+    ],
+    "hints": [
+      "state spread operator se update karo"
+    ]
+  },
+  {
+    "id": "functions-closures-iife-50",
+    "title": "closure se function banao jo lazy singleton ho",
+    "starterCode": "function createLazySingleton(factory) {\n  // TODO: return getInstance\n}",
+    "solution": "function createLazySingleton(factory) {\n  let instance = null;\n  return function() {\n    if (instance === null) {\n      instance = factory();\n    }\n    return instance;\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "lazy singleton created"
+        ]
+      }
+    ],
+    "hints": [
+      "null check karo",
+      "first call pe factory run karo"
+    ]
+  }
+]

@@ -1,15 +1,21 @@
 {
   "id": "01-variables-declarations-variables-intro-14",
-  "title": "const object mutation",
-  "starterCode": "const obj = { x: 1 }\nobj.x = 99\nconsole.log(obj.x)",
-  "solution": "const obj = { x: 1 }\nobj.x = 99\nconsole.log(obj.x)",
+  "title": "Nested object mutate karo",
+  "starterCode": "const config = { db: { host: \"localhost\", port: 3306 } }\n// Port ko 5432 karke config return karo\n",
+  "solution": "const config = { db: { host: \"localhost\", port: 3306 } }\nconfig.db.port = 5432\nreturn config",
   "tests": [
     {
       "input": [],
-      "expected": "99"
+      "expected": {
+        "db": {
+          "host": "localhost",
+          "port": 5432
+        }
+      }
     }
   ],
   "hints": [
-    "const prevents reassignment, not mutation"
+    "config.db.port = 5432 likho",
+    "Nested property access dot notation se hota hai"
   ]
 }

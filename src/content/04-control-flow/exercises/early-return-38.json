@@ -1,17 +1,51 @@
 {
-  "id": "04-control-flow-early-return-38",
-  "title": "Early return with default parameter",
-  "starterCode": "function greet(name = 'Guest') {\n  if (!name) return 'Hello, stranger!';\n  return `Hello, ${name}!`;\n}\nconsole.log(greet());",
-  "solution": "function greet(name = 'Guest') {\n  if (!name) return 'Hello, stranger!';\n  return `Hello, ${name}!`;\n}\nconsole.log(greet());",
+  "id": "04-control-flow-02-early-return-38",
+  "title": "Guard for array element existence",
+  "starterCode": "// function includes(arr, value) mein array aur value do\n// Agar array nahi: false\n// Agar value nahi: false\n// Warna includes return karo\n",
+  "solution": "function includes(arr, value) {\n  if (!Array.isArray(arr)) return false\n  if (value === undefined || value === null) return false\n  return arr.includes(value)\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "Hello, Guest!"
+      "input": [
+        [
+          1,
+          2,
+          3
+        ],
+        2
+      ],
+      "expected": true
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          3
+        ],
+        4
+      ],
+      "expected": false
+    },
+    {
+      "input": [
+        null,
+        1
+      ],
+      "expected": false
+    },
+    {
+      "input": [
+        [
+          1,
+          2
+        ],
+        null
+      ],
+      "expected": false
     }
   ],
   "hints": [
-    "Default parameter gives 'Guest'",
-    "'Guest' is truthy",
-    "Returns greeting"
+    "Array type check karo pehle",
+    "Value existence bhi check karo"
   ]
 }

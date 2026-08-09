@@ -1,0 +1,33 @@
+{
+  "id": "01-variables-declarations-variables-intro-43",
+  "title": "Deep flatten array",
+  "starterCode": "// Array ko fully flatten karo (kitne bhi levels ho)\n// deepFlatten([1, [2, [3, [4]]]]) = [1, 2, 3, 4]\nfunction deepFlatten(arr) {\n  // TODO\n}",
+  "solution": "function deepFlatten(arr) {\n  return arr.flat(Infinity)\n}",
+  "tests": [
+    {
+      "input": [
+        [
+          1,
+          [
+            2,
+            [
+              3,
+              [
+                4
+              ]
+            ]
+          ]
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  ],
+  "hints": [
+    "flat(Infinity) se sab levels flatten hoti hain"
+  ]
+}

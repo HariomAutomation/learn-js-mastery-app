@@ -1,16 +1,21 @@
 {
-  "id": "02-data-types-primitive-types-21",
-  "title": "Create a true boolean",
-  "starterCode": "const isReady = ;\nconsole.log(isReady);",
-  "solution": "const isReady = true;\nconsole.log(isReady);",
+  "id": "02-data-types-01-primitive-types-21",
+  "title": "String comparison",
+  "starterCode": "return {\n  appleVsBanana: \"apple\" < \"banana\",\n  abcVsAbc: \"abc\" === \"abc\",\n  caseSensitive: \"Apple\" !== \"apple\",\n  lengthCompare: \"hi\".length < \"hello\".length\n}\n",
+  "solution": "return {\n  appleVsBanana: \"apple\" < \"banana\",\n  abcVsAbc: \"abc\" === \"abc\",\n  caseSensitive: \"Apple\" !== \"apple\",\n  lengthCompare: \"hi\".length < \"hello\".length\n}",
   "tests": [
     {
       "input": [],
-      "expected": "true"
+      "expected": {
+        "appleVsBanana": true,
+        "abcVsAbc": true,
+        "caseSensitive": true,
+        "lengthCompare": true
+      }
     }
   ],
   "hints": [
-    "Boolean literals are true or false",
-    "No quotes needed"
+    "Strings alphabetical order mein compare hoti hain",
+    "Case-sensitive comparison hota hai"
   ]
 }

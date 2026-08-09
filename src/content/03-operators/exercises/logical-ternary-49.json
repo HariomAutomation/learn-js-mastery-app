@@ -1,16 +1,21 @@
 {
-  "id": "03-operators-logical-ternary-49",
-  "title": "Nullish vs OR with false",
-  "starterCode": "const result = false ?? 'default';\nconsole.log(result);",
-  "solution": "const result = false ?? 'default';\nconsole.log(result);",
+  "id": "03-operators-02-logical-ternary-49",
+  "title": "Logical pattern for defaults",
+  "starterCode": "// Settings merge with deep defaults\nconst userSettings = { theme: \"dark\", notifications: null, sound: undefined }\n// TODO: defaults ke saath merge karo\n",
+  "solution": "const userSettings = { theme: \"dark\", notifications: null, sound: undefined }\nconst defaults = { theme: \"light\", notifications: true, sound: true, autoSave: true }\nreturn {\n  theme: userSettings.theme ?? defaults.theme,\n  notifications: userSettings.notifications ?? defaults.notifications,\n  sound: userSettings.sound ?? defaults.sound,\n  autoSave: userSettings.autoSave ?? defaults.autoSave\n}",
   "tests": [
     {
       "input": [],
-      "expected": "false"
+      "expected": {
+        "theme": "dark",
+        "notifications": true,
+        "sound": true,
+        "autoSave": true
+      }
     }
   ],
   "hints": [
-    "?? only triggers on null/undefined",
-    "false is not null or undefined"
+    "?? sirf null/undefined pe default lega",
+    "User settings hain to wohi rahegi"
   ]
 }

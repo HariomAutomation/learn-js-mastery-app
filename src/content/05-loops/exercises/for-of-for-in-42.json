@@ -1,16 +1,20 @@
 {
-  "id": "05-loops-for-of-for-in-42",
-  "title": "For...In Object Entries",
-  "starterCode": "const user = {name: 'Tom', age: 30, job: 'dev'};\nfor (const key in user) {\n  if (user.hasOwnProperty(key)) {\n    console.log(`${key}: ${user[key]}`);\n  }\n}",
-  "solution": "const user = {name: 'Tom', age: 30, job: 'dev'};\nfor (const key in user) {\n  if (user.hasOwnProperty(key)) {\n    console.log(`${key}: ${user[key]}`);\n  }\n}",
+  "id": "05-02-for-of-for-in-42",
+  "title": "For-in se object ke keys ko camelCase se snake_case me convert karo",
+  "starterCode": "function snakeKeys(obj) {\n  // TODO: keys ko snake_case me convert karo\n  // {firstName:\"John\"} -> {first_name:\"John\"}\n}",
+  "solution": "function snakeKeys(obj) {\n  const result = {};\n  for (const key in obj) {\n    if (!Object.prototype.hasOwnProperty.call(obj, key)) continue;\n    const snake = key.replace(/([a-z])([A-Z])/g, \"$1_$2\").toLowerCase();\n    result[snake] = obj[key];\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "name: Tom\nage: 30\njob: dev"
+      "input": [
+        {
+          "firstName": "John"
+        }
+      ],
+      "expected": "{\"first_name\":\"John\"}"
     }
   ],
   "hints": [
-    "Use template literal",
-    "Check own properties"
+    "CamelCase ke gaps me underscore dalo",
+    "Regex se pattern match karo"
   ]
 }

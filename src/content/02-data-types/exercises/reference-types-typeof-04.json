@@ -1,16 +1,29 @@
 {
-  "id": "02-data-types-reference-types-typeof-04",
-  "title": "Check typeof an array (tricky!)",
-  "starterCode": "const arr = [1, 2, 3];\nconsole.log();",
-  "solution": "const arr = [1, 2, 3];\nconsole.log(typeof arr);",
+  "id": "02-data-types-02-reference-types-typeof-04",
+  "title": "typeof for all types",
+  "starterCode": "const values = [42, \"hello\", true, null, undefined, Symbol(\"x\"), 42n, {}, [], function() {}, new Date()]\nreturn values.map(v => typeof v)\n",
+  "solution": "const values = [42, \"hello\", true, null, undefined, Symbol(\"x\"), 42n, {}, [], function() {}, new Date()]\nreturn values.map(v => typeof v)",
   "tests": [
     {
       "input": [],
-      "expected": "object"
+      "expected": [
+        "number",
+        "string",
+        "boolean",
+        "object",
+        "undefined",
+        "symbol",
+        "bigint",
+        "object",
+        "object",
+        "function",
+        "object"
+      ]
     }
   ],
   "hints": [
-    "typeof doesn't distinguish arrays",
-    "Arrays are technically objects"
+    "typeof null 'object' hai (JS ka bug)",
+    "typeof [] bhi 'object' hai",
+    "typeof function 'function' hai"
   ]
 }

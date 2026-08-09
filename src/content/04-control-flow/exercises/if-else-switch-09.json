@@ -1,16 +1,44 @@
 {
-  "id": "04-control-flow-if-else-switch-09",
-  "title": "Switch with break",
-  "starterCode": "const fruit = 'apple';\nswitch (fruit) {\n  case 'apple':\n    console.log('red');\n    break;\n  case 'banana':\n    console.log('yellow');\n    break;\n  default:\n    console.log('other');\n}",
-  "solution": "const fruit = 'apple';\nswitch (fruit) {\n  case 'apple':\n    console.log('red');\n    break;\n  case 'banana':\n    console.log('yellow');\n    break;\n  default:\n    console.log('other');\n}",
+  "id": "04-control-flow-01-if-else-switch-09",
+  "title": "Calculator operations using switch",
+  "starterCode": "// function calculate(a, op, b) mein do numbers aur operator do\n// \"+\", \"-\", \"*\", \"/\" ke liye result return karo\n// Division by zero: \"Cannot divide by zero\"\n// Invalid operator: \"Unknown operator\"\n",
+  "solution": "function calculate(a, op, b) {\n  switch (op) {\n    case \"+\": return a + b\n    case \"-\": return a - b\n    case \"*\": return a * b\n    case \"/\": return b !== 0 ? a / b : \"Cannot divide by zero\"\n    default: return \"Unknown operator\"\n  }\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "red"
+      "input": [
+        10,
+        "+",
+        5
+      ],
+      "expected": 15
+    },
+    {
+      "input": [
+        10,
+        "-",
+        5
+      ],
+      "expected": 5
+    },
+    {
+      "input": [
+        10,
+        "*",
+        5
+      ],
+      "expected": 50
+    },
+    {
+      "input": [
+        10,
+        "/",
+        0
+      ],
+      "expected": "Cannot divide by zero"
     }
   ],
   "hints": [
-    "break prevents fallthrough",
-    "Only apple case executes"
+    "Switch mein har operator ka case banao",
+    "Division by zero pe special case handle karo"
   ]
 }

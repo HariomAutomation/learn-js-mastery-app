@@ -1,16 +1,21 @@
 {
-  "id": "05-loops-patterns-practice-46",
-  "title": "Bubble Sort Loop",
-  "starterCode": "function bubbleSort(arr) {\n  const n = arr.length;\n  for (let i = 0; i < n - 1; i++) {\n    for (let j = 0; j < n - i - 1; j++) {\n      if (arr[j] > arr[j + 1]) {\n        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];\n      }\n    }\n  }\n  return arr;\n}\nconsole.log(bubbleSort([64, 34, 25, 12, 22]));",
-  "solution": "function bubbleSort(arr) {\n  const n = arr.length;\n  for (let i = 0; i < n - 1; i++) {\n    for (let j = 0; j < n - i - 1; j++) {\n      if (arr[j] > arr[j + 1]) {\n        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];\n      }\n    }\n  }\n  return arr;\n}\nconsole.log(bubbleSort([64, 34, 25, 12, 22]));",
+  "id": "05-03-patterns-practice-46",
+  "title": "Array ke minimum swaps to sort count karo",
+  "starterCode": "function minSwaps(arr) {\n  // TODO: array ko sort karne ke liye kitne minimum swaps chahiye\n}",
+  "solution": "function minSwaps(arr) {\n  const n = arr.length;\n  const indexed = arr.map((val, idx) => ({ val, idx }));\n  indexed.sort((a, b) => a.val - b.val);\n  const visited = new Array(n).fill(false);\n  let swaps = 0;\n  for (let i = 0; i < n; i++) {\n    if (visited[i] || indexed[i].idx === i) continue;\n    let cycleSize = 0, j = i;\n    while (!visited[j]) {\n      visited[j] = true;\n      j = indexed[j].idx;\n      cycleSize++;\n    }\n    if (cycleSize > 0) swaps += cycleSize - 1;\n  }\n  return swaps;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "[ 12, 22, 25, 34, 64 ]"
+      "input": [
+        4,
+        3,
+        1,
+        2
+      ],
+      "expected": 3
     }
   ],
   "hints": [
-    "Nested loop",
-    "Swap adjacent elements"
+    "Cycle detection approach use karo",
+    "Har cycle me (size-1) swaps lagte hain"
   ]
 }

@@ -1,0 +1,16 @@
+{
+  "id": "01-variables-declarations-var-let-const-42",
+  "title": "let in catch block",
+  "starterCode": "try {\n  throw new Error(\"fail\")\n} catch (e) {\n  let msg = e.message\n}\nreturn typeof msg\n",
+  "solution": "try {\n  throw new Error(\"fail\")\n} catch (e) {\n  let msg = e.message\n}\nreturn typeof msg",
+  "tests": [
+    {
+      "input": [],
+      "expected": "undefined"
+    }
+  ],
+  "hints": [
+    "let msg is scoped to catch block",
+    "msg not accessible outside"
+  ]
+}

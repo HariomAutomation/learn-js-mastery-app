@@ -1,16 +1,21 @@
 {
-  "id": "05-loops-for-of-for-in-02",
-  "title": "For...Of Strings",
-  "starterCode": "const str = \"Hi\";\nfor (const char of str) {\n  console.log(char);\n}",
-  "solution": "const str = \"Hi\";\nfor (const char of str) {\n  console.log(char);\n}",
+  "id": "05-02-for-of-for-in-02",
+  "title": "For-in se object ke properties iterate karo",
+  "starterCode": "function objectKeys(obj) {\n  // TODO: for-in use karke object ke sab keys return karo array me\n}",
+  "solution": "function objectKeys(obj) {\n  const keys = [];\n  for (const key in obj) {\n    if (Object.prototype.hasOwnProperty.call(obj, key)) keys.push(key);\n  }\n  return keys;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "H\ni"
+      "input": [
+        {
+          "a": 1,
+          "b": 2
+        }
+      ],
+      "expected": "a,b"
     }
   ],
   "hints": [
-    "Iterate over characters",
-    "Each char is a string"
+    "For-in se keys milti hain",
+    "hasOwnProperty check karo taaki inherited properties na aaye"
   ]
 }

@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-scope-hoisting-23",
-  "title": "scope and this",
-  "starterCode": "const obj = {\n  x: 10,\n  getX() { return this.x }\n}\nconsole.log(obj.getX())",
-  "solution": "const obj = {\n  x: 10,\n  getX() { return this.x }\n}\nconsole.log(obj.getX())",
+  "title": "Hoisting in try block",
+  "starterCode": "try {\n  console.log(x)\n} catch(e) {\n  return \"error\"\n}\nvar x = 5\nreturn x\n",
+  "solution": "try {\n  console.log(x)\n} catch(e) {\n  return \"error\"\n}\nvar x = 5\nreturn x",
   "tests": [
     {
       "input": [],
-      "expected": "10"
+      "expected": 5
     }
   ],
   "hints": [
-    "this depends on call site"
+    "var x is hoisted to function/global scope",
+    "try block can see hoisted x (undefined)"
   ]
 }

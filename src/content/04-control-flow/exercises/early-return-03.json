@@ -1,16 +1,36 @@
 {
-  "id": "04-control-flow-early-return-03",
-  "title": "Guard clause pattern",
-  "starterCode": "function getDiscount(price, isVIP) {\n  if (price <= 0) return 0;\n  return isVIP ? price * 0.2 : price * 0.1;\n}\nconsole.log(getDiscount(100, true));",
-  "solution": "function getDiscount(price, isVIP) {\n  if (price <= 0) return 0;\n  return isVIP ? price * 0.2 : price * 0.1;\n}\nconsole.log(getDiscount(100, true));",
+  "id": "04-control-flow-02-early-return-03",
+  "title": "Early return for number validation",
+  "starterCode": "// function double(num) mein number do\n// Agar number nahi hai: null\n// Warna double return karo\n",
+  "solution": "function double(num) {\n  if (typeof num !== \"number\" || Number.isNaN(num)) return null\n  return num * 2\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "20"
+      "input": [
+        5
+      ],
+      "expected": 10
+    },
+    {
+      "input": [
+        -3
+      ],
+      "expected": -6
+    },
+    {
+      "input": [
+        "hello"
+      ],
+      "expected": null
+    },
+    {
+      "input": [
+        null
+      ],
+      "expected": null
     }
   ],
   "hints": [
-    "price is 100, not <= 0",
-    "isVIP is true, so 20% discount"
+    "typeof check se type validate hota hai",
+    "NaN bhi special case hai"
   ]
 }

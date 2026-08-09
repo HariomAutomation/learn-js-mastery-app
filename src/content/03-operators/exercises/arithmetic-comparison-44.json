@@ -1,16 +1,16 @@
 {
-  "id": "03-operators-arithmetic-comparison-44",
-  "title": "String number conversion",
-  "starterCode": "const result = Number(\"42\");\nconsole.log(result);",
-  "solution": "const result = Number(\"42\");\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-44",
+  "title": "Simple interest calculate",
+  "starterCode": "// Principal 5000, Rate 8%, Time 3 years\n// SI = (P * R * T) / 100\nconst principal = 5000\nconst rate = 8\nconst time = 3\n// TODO: simple interest nikalo\n",
+  "solution": "const principal = 5000\nconst rate = 8\nconst time = 3\nconst si = (principal * rate * time) / 100\nreturn si",
   "tests": [
     {
       "input": [],
-      "expected": "42"
+      "expected": 1200
     }
   ],
   "hints": [
-    "Number() converts string to number",
-    "Result is a number type"
+    "SI = P * R * T / 100",
+    "5000 * 8 * 3 / 100 = 1200"
   ]
 }

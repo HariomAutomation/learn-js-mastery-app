@@ -1,16 +1,20 @@
 {
-  "id": "03-operators-logical-ternary-32",
-  "title": "NOT with truthy",
-  "starterCode": "const result = !1;\nconsole.log(result);",
-  "solution": "const result = !1;\nconsole.log(result);",
+  "id": "03-operators-02-logical-ternary-32",
+  "title": "Logical assignment in reducer",
+  "starterCode": "// Cart items ko count karo\nconst items = [\"apple\", \"banana\", \"apple\", \"orange\", \"banana\", \"apple\"]\n// TODO: count objects banao using ||= \n",
+  "solution": "const items = [\"apple\", \"banana\", \"apple\", \"orange\", \"banana\", \"apple\"]\nconst counts = {}\nitems.forEach(item => {\n  counts[item] = (counts[item] || 0) + 1\n})\nreturn counts",
   "tests": [
     {
       "input": [],
-      "expected": "false"
+      "expected": {
+        "apple": 3,
+        "banana": 2,
+        "orange": 1
+      }
     }
   ],
   "hints": [
-    "! converts to boolean then inverts",
-    "1 is truthy, so !1 is false"
+    "counts[item] ||= 0 se default 0 set hota hai",
+    "Phir 1 add karo"
   ]
 }

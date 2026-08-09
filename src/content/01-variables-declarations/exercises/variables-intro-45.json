@@ -1,0 +1,36 @@
+{
+  "id": "01-variables-declarations-variables-intro-45",
+  "title": "Pagination helper",
+  "starterCode": "// Array ko paginated chunks mein divide karo with metadata\n// paginate([1,2,3,4,5,6,7], 2, 2) = {data: [3,4], page: 2, totalPages: 4, total: 7}\nfunction paginate(arr, pageSize, page) {\n  // TODO\n}",
+  "solution": "function paginate(arr, pageSize, page) {\n  const totalPages = Math.ceil(arr.length / pageSize)\n  const start = (page - 1) * pageSize\n  const data = arr.slice(start, start + pageSize)\n  return { data, page, totalPages, total: arr.length }\n}",
+  "tests": [
+    {
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        2,
+        2
+      ],
+      "expected": {
+        "data": [
+          3,
+          4
+        ],
+        "page": 2,
+        "totalPages": 4,
+        "total": 7
+      }
+    }
+  ],
+  "hints": [
+    "Math.ceil se total pages nikalo",
+    "slice((page-1)*size, page*size) se data lo"
+  ]
+}

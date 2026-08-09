@@ -1,16 +1,36 @@
 {
-  "id": "02-data-types-reference-types-typeof-19",
-  "title": "Check if property exists",
-  "starterCode": "const obj = { a: 1, b: 2 };\nconsole.log();",
-  "solution": "const obj = { a: 1, b: 2 };\nconsole.log('a' in obj);",
+  "id": "02-data-types-02-reference-types-typeof-19",
+  "title": "Object.entries and fromEntries",
+  "starterCode": "const original = { a: 1, b: 2, c: 3 }\nconst entries = Object.entries(original)\nconst doubled = entries.map(([k, v]) => [k, v * 2])\nconst rebuilt = Object.fromEntries(doubled)\nreturn {\n  entries: entries,\n  doubled: rebuilt\n}\n",
+  "solution": "const original = { a: 1, b: 2, c: 3 }\nconst entries = Object.entries(original)\nconst doubled = entries.map(([k, v]) => [k, v * 2])\nconst rebuilt = Object.fromEntries(doubled)\nreturn {\n  entries: entries,\n  doubled: rebuilt\n}",
   "tests": [
     {
       "input": [],
-      "expected": "true"
+      "expected": {
+        "entries": [
+          [
+            "a",
+            1
+          ],
+          [
+            "b",
+            2
+          ],
+          [
+            "c",
+            3
+          ]
+        ],
+        "doubled": {
+          "a": 2,
+          "b": 4,
+          "c": 6
+        }
+      }
     }
   ],
   "hints": [
-    "'in' operator checks property existence",
-    "Returns true if property exists"
+    "Object.entries() se [key, value] pairs milte hain",
+    "Object.fromEntries() se wapas object banta hai"
   ]
 }

@@ -1,16 +1,31 @@
 {
-  "id": "05-loops-patterns-practice-50",
-  "title": "Fibonacci Array",
-  "starterCode": "const n = 7;\nconst fib = [0, 1];\nfor (let i = 2; i < n; i++) {\n  fib.push(fib[i-1] + fib[i-2]);\n}\nconsole.log(fib);",
-  "solution": "const n = 7;\nconst fib = [0, 1];\nfor (let i = 2; i < n; i++) {\n  fib.push(fib[i-1] + fib[i-2]);\n}\nconsole.log(fib);",
+  "id": "05-03-patterns-practice-50",
+  "title": "Comprehensive array processing — chaining operations banao",
+  "starterCode": "function pipeline(arr, operations) {\n  // TODO: operations array ke hisaab se process karo\n  // [{type:\"filter\",fn:n=>n>2}, {type:\"map\",fn:n=>n*2}]\n}",
+  "solution": "function pipeline(arr, operations) {\n  let result = [...arr];\n  for (const op of operations) {\n    if (op.type === \"filter\") result = result.filter(op.fn);\n    else if (op.type === \"map\") result = result.map(op.fn);\n    else if (op.type === \"sort\") result = result.sort(op.fn);\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "[ 0, 1, 1, 2, 3, 5, 8 ]"
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          {
+            "type": "filter"
+          },
+          {
+            "type": "map"
+          }
+        ]
+      ],
+      "expected": "6,8"
     }
   ],
   "hints": [
-    "Start with [0, 1]",
-    "Sum previous two"
+    "Operation type ke hisaab se array method apply karo",
+    "Result chain karte jaao"
   ]
 }

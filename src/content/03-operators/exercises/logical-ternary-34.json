@@ -1,16 +1,20 @@
 {
-  "id": "03-operators-logical-ternary-34",
-  "title": "NOT with empty string",
-  "starterCode": "const result = !'';\nconsole.log(result);",
-  "solution": "const result = !'';\nconsole.log(result);",
+  "id": "03-operators-02-logical-ternary-34",
+  "title": "Short circuit for validation",
+  "starterCode": "// Form validation with short circuit\nconst form = { name: \"Hariom\", email: \"\", age: 15 }\n// TODO: validate karo using && and ||\n",
+  "solution": "const form = { name: \"Hariom\", email: \"\", age: 15 }\nreturn {\n  nameValid: form.name && form.name.length > 0,\n  emailValid: form.email && form.email.includes(\"@\"),\n  ageValid: form.age >= 18\n}",
   "tests": [
     {
       "input": [],
-      "expected": "true"
+      "expected": {
+        "nameValid": "Hariom",
+        "emailValid": false,
+        "ageValid": false
+      }
     }
   ],
   "hints": [
-    "Empty string is falsy",
-    "!'' is true"
+    "&& pehla falsy value return karta hai",
+    "Empty string false return hogi"
   ]
 }

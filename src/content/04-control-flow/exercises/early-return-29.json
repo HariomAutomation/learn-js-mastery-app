@@ -1,16 +1,36 @@
 {
-  "id": "04-control-flow-early-return-29",
-  "title": "Validation chain - valid",
-  "starterCode": "function validate(data) {\n  if (!data) return 'no data';\n  if (!data.username) return 'no username';\n  if (data.username.length < 3) return 'username too short';\n  return 'valid';\n}\nconsole.log(validate({ username: 'alice' }));",
-  "solution": "function validate(data) {\n  if (!data) return 'no data';\n  if (!data.username) return 'no username';\n  if (data.username.length < 3) return 'username too short';\n  return 'valid';\n}\nconsole.log(validate({ username: 'alice' }));",
+  "id": "04-control-flow-02-early-return-29",
+  "title": "Guard for date validation",
+  "starterCode": "// function isValidDate(dateStr) mein string do \"YYYY-MM-DD\"\n// Agar string nahi: false\n// Format match nahi: false\n// Invalid date: false\n// Warna true\n",
+  "solution": "function isValidDate(dateStr) {\n  if (typeof dateStr !== \"string\") return false\n  if (!/^d{4}-d{2}-d{2}$/.test(dateStr)) return false\n  const date = new Date(dateStr)\n  if (isNaN(date.getTime())) return false\n  return true\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "valid"
+      "input": [
+        "2024-01-15"
+      ],
+      "expected": true
+    },
+    {
+      "input": [
+        "2024/01/15"
+      ],
+      "expected": false
+    },
+    {
+      "input": [
+        "invalid"
+      ],
+      "expected": false
+    },
+    {
+      "input": [
+        123
+      ],
+      "expected": false
     }
   ],
   "hints": [
-    "All guards pass",
-    "Returns 'valid'"
+    "Regex se format check karo",
+    "new Date() se actual date validate karo"
   ]
 }

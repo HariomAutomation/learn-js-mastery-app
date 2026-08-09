@@ -1,0 +1,16 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-46",
+  "title": "Promise.race behavior",
+  "starterCode": "const fast = new Promise(r => setTimeout(() => r(\"fast\"), 10))\nconst slow = new Promise(r => setTimeout(() => r(\"slow\"), 100))\nreturn await Promise.race([fast, slow])\n",
+  "solution": "const fast = new Promise(r => setTimeout(() => r(\"fast\"), 10))\nconst slow = new Promise(r => setTimeout(() => r(\"slow\"), 100))\nreturn await Promise.race([fast, slow])",
+  "tests": [
+    {
+      "input": [],
+      "expected": "fast"
+    }
+  ],
+  "hints": [
+    "Promise.race resolves with first settled promise",
+    "fast resolves first"
+  ]
+}

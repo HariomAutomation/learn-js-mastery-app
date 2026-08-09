@@ -1,16 +1,40 @@
 {
-  "id": "04-control-flow-if-else-switch-11",
-  "title": "Truthy number condition",
-  "starterCode": "const count = 0;\nif (count) {\n  console.log('has count');\n} else {\n  console.log('no count');\n}",
-  "solution": "const count = 0;\nif (count) {\n  console.log('has count');\n} else {\n  console.log('no count');\n}",
+  "id": "04-control-flow-01-if-else-switch-11",
+  "title": "Nested if se BMI category batao",
+  "starterCode": "// function bmiCategory(weight, height) mein kg aur meters do\n// BMI = weight / (height * height)\n// < 18.5: \"Underweight\", 18.5-24.9: \"Normal\", 25-29.9: \"Overweight\", >=30: \"Obese\"\n",
+  "solution": "function bmiCategory(weight, height) {\n  const bmi = weight / (height * height)\n  if (bmi < 18.5) return \"Underweight\"\n  else if (bmi <= 24.9) return \"Normal\"\n  else if (bmi <= 29.9) return \"Overweight\"\n  else return \"Obese\"\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "no count"
+      "input": [
+        50,
+        1.7
+      ],
+      "expected": "Normal"
+    },
+    {
+      "input": [
+        100,
+        1.7
+      ],
+      "expected": "Overweight"
+    },
+    {
+      "input": [
+        40,
+        1.7
+      ],
+      "expected": "Underweight"
+    },
+    {
+      "input": [
+        120,
+        1.7
+      ],
+      "expected": "Obese"
     }
   ],
   "hints": [
-    "0 is falsy",
-    "else block executes"
+    "Pehle BMI calculate karo formula se",
+    "Phir ranges ke hisaab se category return karo"
   ]
 }

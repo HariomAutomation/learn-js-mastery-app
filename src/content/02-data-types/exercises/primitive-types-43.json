@@ -1,16 +1,22 @@
 {
-  "id": "02-data-types-primitive-types-43",
-  "title": "Check if value is NaN with Number.isNaN",
-  "starterCode": "console.log(Number.isNaN(NaN));",
-  "solution": "console.log(Number.isNaN(NaN));",
+  "id": "02-data-types-01-primitive-types-43",
+  "title": "String search methods",
+  "starterCode": "const sentence = \"JavaScript is awesome and JavaScript is fun\"\nreturn {\n  indexOfFirst: sentence.indexOf(\"JavaScript\"),\n  lastIndexOf: sentence.lastIndexOf(\"JavaScript\"),\n  includes: sentence.includes(\"awesome\"),\n  startsWith: sentence.startsWith(\"JavaScript\"),\n  endsWith: sentence.endsWith(\"fun\")\n}\n",
+  "solution": "const sentence = \"JavaScript is awesome and JavaScript is fun\"\nreturn {\n  indexOfFirst: sentence.indexOf(\"JavaScript\"),\n  lastIndexOf: sentence.lastIndexOf(\"JavaScript\"),\n  includes: sentence.includes(\"awesome\"),\n  startsWith: sentence.startsWith(\"JavaScript\"),\n  endsWith: sentence.endsWith(\"fun\")\n}",
   "tests": [
     {
       "input": [],
-      "expected": "true"
+      "expected": {
+        "indexOfFirst": 0,
+        "lastIndexOf": 31,
+        "includes": true,
+        "startsWith": true,
+        "endsWith": true
+      }
     }
   ],
   "hints": [
-    "Number.isNaN is more reliable than isNaN",
-    "It only returns true for actual NaN"
+    "indexOf pehla occurrence index deta hai",
+    "lastIndexOf last occurrence index deta hai"
   ]
 }

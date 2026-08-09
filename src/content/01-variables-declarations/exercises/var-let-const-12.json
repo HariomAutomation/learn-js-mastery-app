@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-var-let-const-12",
-  "title": "var global pollution",
-  "starterCode": "var x = 1\nfunction test() {\n  var x = 2\n}\ntest()\nconsole.log(x)",
-  "solution": "var x = 1\nfunction test() {\n  var x = 2\n}\ntest()\nconsole.log(x)",
+  "title": "Bug: const reference sharing",
+  "starterCode": "const a = { x: 1 }\nconst b = a\nb.x = 99\nreturn a.x\n",
+  "solution": "const a = { x: 1 }\nconst b = a\nb.x = 99\nreturn a.x",
   "tests": [
     {
       "input": [],
-      "expected": "1"
+      "expected": 99
     }
   ],
   "hints": [
-    "function var is local"
+    "Objects by reference copy hote hain",
+    "b aur a same object point karte hain"
   ]
 }

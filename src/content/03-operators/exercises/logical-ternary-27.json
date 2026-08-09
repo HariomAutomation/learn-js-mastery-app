@@ -1,16 +1,20 @@
 {
-  "id": "03-operators-logical-ternary-27",
-  "title": "De Morgan's Law NOT OR",
-  "starterCode": "const result = !(true || false);\nconsole.log(result);",
-  "solution": "const result = !(true || false);\nconsole.log(result);",
+  "id": "03-operators-02-logical-ternary-27",
+  "title": "Nullish coalescing assignment chain",
+  "starterCode": "// Multiple defaults set karo\nlet config1 = null\nlet config2 = undefined\nlet config3 = \"custom\"\n// TODO: ??= use karo chain mein\n",
+  "solution": "let config1 = null\nlet config2 = undefined\nlet config3 = \"custom\"\nconfig1 ??= \"default1\"\nconfig2 ??= \"default2\"\nconfig3 ??= \"default3\"\nreturn { config1, config2, config3 }",
   "tests": [
     {
       "input": [],
-      "expected": "false"
+      "expected": {
+        "config1": "default1",
+        "config2": "default2",
+        "config3": "custom"
+      }
     }
   ],
   "hints": [
-    "De Morgan: !(A || B) === !A && !B",
-    "!(true || false) === !true && !false === false"
+    "??= sirf null/undefined pe assign karta hai",
+    "config3 pehle se hai to change nahi hoga"
   ]
 }

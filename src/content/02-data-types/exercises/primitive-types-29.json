@@ -1,16 +1,25 @@
 {
-  "id": "02-data-types-primitive-types-29",
-  "title": "Check typeof undefined",
-  "starterCode": "let x;\nconsole.log();",
-  "solution": "let x;\nconsole.log(typeof x);",
+  "id": "02-data-types-01-primitive-types-29",
+  "title": "Set for unique values",
+  "starterCode": "const arr = [1, 2, 2, 3, 3, 3, 4]\nconst unique = new Set(arr)\nreturn {\n  uniqueArray: [...unique],\n  size: unique.size,\n  has3: unique.has(3)\n}\n",
+  "solution": "const arr = [1, 2, 2, 3, 3, 3, 4]\nconst unique = new Set(arr)\nreturn {\n  uniqueArray: [...unique],\n  size: unique.size,\n  has3: unique.has(3)\n}",
   "tests": [
     {
       "input": [],
-      "expected": "undefined"
+      "expected": {
+        "uniqueArray": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "size": 4,
+        "has3": true
+      }
     }
   ],
   "hints": [
-    "typeof undefined returns 'undefined'",
-    "This is the only case where typeof matches the value"
+    "Set sirf unique values rakhta hai",
+    "Spread operator se array mein convert karo"
   ]
 }

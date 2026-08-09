@@ -1,16 +1,44 @@
 {
-  "id": "04-control-flow-if-else-switch-50",
-  "title": "Switch with comma in case",
-  "starterCode": "const day = 'Sat';\nswitch (day) {\n  case 'Sat':\n  case 'Sun':\n    console.log('weekend');\n    break;\n  default:\n    console.log('weekday');\n}",
-  "solution": "const day = 'Sat';\nswitch (day) {\n  case 'Sat':\n  case 'Sun':\n    console.log('weekend');\n    break;\n  default:\n    console.log('weekday');\n}",
+  "id": "04-control-flow-01-if-else-switch-50",
+  "title": "Nested if se final complex problem",
+  "starterCode": "// function processOrder(quantity, price, isMember)\n// quantity <= 0 ya price <= 0: \"Invalid order\"\n// Total = quantity * price\n// Member: 20% discount\n// Total > 5000: extra 5% discount\n// Final total return karo\n",
+  "solution": "function processOrder(quantity, price, isMember) {\n  if (quantity <= 0 || price <= 0) return \"Invalid order\"\n  let total = quantity * price\n  if (isMember) total *= 0.8\n  if (total > 5000) total *= 0.95\n  return total\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "weekend"
+      "input": [
+        10,
+        100,
+        true
+      ],
+      "expected": 800
+    },
+    {
+      "input": [
+        100,
+        100,
+        true
+      ],
+      "expected": 7600
+    },
+    {
+      "input": [
+        100,
+        100,
+        false
+      ],
+      "expected": 9500
+    },
+    {
+      "input": [
+        0,
+        100,
+        false
+      ],
+      "expected": "Invalid order"
     }
   ],
   "hints": [
-    "Sat matches first case",
-    "Falls through to weekend"
+    "Pehle input validation karo",
+    "Phir member discount, phir bulk discount apply karo"
   ]
 }

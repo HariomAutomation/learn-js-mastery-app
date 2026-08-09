@@ -1,16 +1,25 @@
 {
-  "id": "05-loops-for-of-for-in-48",
-  "title": "For...Of Map Keys",
-  "starterCode": "const map = new Map([['x', 1], ['y', 2], ['z', 3]]);\nfor (const key of map.keys()) {\n  console.log(key);\n}",
-  "solution": "const map = new Map([['x', 1], ['y', 2], ['z', 3]]);\nfor (const key of map.keys()) {\n  console.log(key);\n}",
+  "id": "05-02-for-of-for-in-48",
+  "title": "For-in se object ke values ko default se replace karo",
+  "starterCode": "function withDefaults(obj, defaults) {\n  // TODO: null/undefined values ko defaults se replace karo\n}",
+  "solution": "function withDefaults(obj, defaults) {\n  const result = { ...obj };\n  for (const key in defaults) {\n    if (!Object.prototype.hasOwnProperty.call(defaults, key)) continue;\n    if (result[key] === null || result[key] === undefined) {\n      result[key] = defaults[key];\n    }\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "x\ny\nz"
+      "input": [
+        {
+          "a": 1,
+          "b": null
+        },
+        {
+          "b": 2,
+          "c": 3
+        }
+      ],
+      "expected": "{\"a\":1,\"b\":2,\"c\":3}"
     }
   ],
   "hints": [
-    "Use keys() method",
-    "Iterates map keys"
+    "For-in se defaults iterate karo",
+    "Null/undefined check karke replace karo"
   ]
 }

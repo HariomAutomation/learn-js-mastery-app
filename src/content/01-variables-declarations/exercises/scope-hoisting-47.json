@@ -1,0 +1,16 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-47",
+  "title": "Dynamic import scope",
+  "starterCode": "// In browser this would be:\n// const module = await import(\"./module.js\")\n// For now, simulate:\nreturn \"module loaded\"\n",
+  "solution": "return \"module loaded\"",
+  "tests": [
+    {
+      "input": [],
+      "expected": "module loaded"
+    }
+  ],
+  "hints": [
+    "Dynamic import() loads modules on demand",
+    "Returns a Promise that resolves to the module"
+  ]
+}

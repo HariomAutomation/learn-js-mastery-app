@@ -1,16 +1,28 @@
 {
-  "id": "05-loops-for-while-38",
-  "title": "Palindrome Number Check",
-  "starterCode": "let num = 121;\nlet original = num;\nlet rev = 0;\nwhile (num > 0) {\n  rev = rev * 10 + num % 10;\n  num = Math.floor(num / 10);\n}\nconsole.log(original === rev);",
-  "solution": "let num = 121;\nlet original = num;\nlet rev = 0;\nwhile (num > 0) {\n  rev = rev * 10 + num % 10;\n  num = Math.floor(num / 10);\n}\nconsole.log(original === rev);",
+  "id": "05-01-for-while-38",
+  "title": "Nested loop se 2D array me search karo",
+  "starterCode": "function searchMatrix(matrix, target) {\n  // TODO: sorted matrix me target dhundho\n}",
+  "solution": "function searchMatrix(matrix, target) {\n  for (let i = 0; i < matrix.length; i++) {\n    for (let j = 0; j < matrix[i].length; j++) {\n      if (matrix[i][j] === target) return [i, j];\n    }\n  }\n  return null;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "true"
+      "input": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        3
+      ],
+      "expected": "1,0"
     }
   ],
   "hints": [
-    "Save original number",
-    "Reverse and compare"
+    "Outer loop rows ke liye, inner loop columns ke liye",
+    "Milte hi position return karo"
   ]
 }

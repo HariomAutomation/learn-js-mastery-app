@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-variables-intro-50",
+  "title": "Mini LRU Cache",
+  "starterCode": "// LRU Cache banao with maxSize\nfunction createLRU(maxSize) {\n  const cache = new Map()\n  return {\n    get: (key) => { /* TODO */ },\n    set: (key, value) => { /* TODO */ }\n  }\n}",
+  "solution": "function createLRU(maxSize) {\n  const cache = new Map()\n  return {\n    get: (key) => {\n      if (!cache.has(key)) return -1\n      const val = cache.get(key)\n      cache.delete(key)\n      cache.set(key, val)\n      return val\n    },\n    set: (key, value) => {\n      cache.delete(key)\n      if (cache.size >= maxSize) {\n        cache.delete(cache.keys().next().value)\n      }\n      cache.set(key, value)\n    }\n  }\n}",
+  "tests": [
+    {
+      "input": []
+    }
+  ],
+  "hints": [
+    "Map maintain order rakhta hai",
+    "Get pe entry ko end mein move karo, set pe oldest hatao"
+  ]
+}

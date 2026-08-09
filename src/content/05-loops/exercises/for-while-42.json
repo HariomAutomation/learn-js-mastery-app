@@ -1,16 +1,22 @@
 {
-  "id": "05-loops-for-while-42",
-  "title": "Reverse Matrix Rows",
-  "starterCode": "const matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];\nfor (let i = 0; i < matrix.length; i++) {\n  console.log(matrix[i].reverse().join(' '));\n}",
-  "solution": "const matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];\nfor (let i = 0; i < matrix.length; i++) {\n  console.log(matrix[i].reverse().join(' '));\n}",
+  "id": "05-01-for-while-42",
+  "title": "For loop se array ke subarrays generate karo",
+  "starterCode": "function subarrays(arr) {\n  // TODO: array ke sabhi possible subarrays return karo\n}",
+  "solution": "function subarrays(arr) {\n  const result = [];\n  for (let i = 0; i < arr.length; i++) {\n    for (let j = i; j < arr.length; j++) {\n      result.push(arr.slice(i, j + 1));\n    }\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "3 2 1\n6 5 4\n9 8 7"
+      "input": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": "1,1,2,1,2,3,2,2,3,3"
     }
   ],
   "hints": [
-    "Use reverse() method",
-    "Join with space"
+    "Outer loop start index ke liye",
+    "Inner loop end index ke liye"
   ]
 }

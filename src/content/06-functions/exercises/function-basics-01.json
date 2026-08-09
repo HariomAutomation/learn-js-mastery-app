@@ -1,16 +1,1435 @@
-{
-  "id": "06-functions-function-basics-01",
-  "title": "Function Declaration",
-  "starterCode": "function greet() {\n  console.log('Hello!');\n}\ngreet();",
-  "solution": "function greet() {\n  console.log('Hello!');\n}\ngreet();",
-  "tests": [
-    {
-      "input": [],
-      "expected": "Hello!"
-    }
-  ],
-  "hints": [
-    "Use function keyword",
-    "Call function after"
-  ]
-}
+[
+  {
+    "id": "functions-function-basics-01",
+    "title": "function banao jo two numbers add kare",
+    "starterCode": "function add(a, b) {\n  // TODO: return a + b\n}",
+    "solution": "function add(a, b) {\n  return a + b;\n}",
+    "tests": [
+      {
+        "input": [
+          2,
+          3
+        ],
+        "expected": [
+          5
+        ]
+      },
+      {
+        "input": [
+          10,
+          20
+        ],
+        "expected": [
+          30
+        ]
+      },
+      {
+        "input": [
+          -1,
+          1
+        ],
+        "expected": [
+          0
+        ]
+      }
+    ],
+    "hints": [
+      "return keyword use karo",
+      "a aur b ko add karke return karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-02",
+    "title": "function banao jo number ka factorial calculate kare",
+    "starterCode": "function factorial(n) {\n  // TODO: return n!\n}",
+    "solution": "function factorial(n) {\n  if (n <= 1) return 1;\n  return n * factorial(n - 1);\n}",
+    "tests": [
+      {
+        "input": [
+          5
+        ],
+        "expected": [
+          120
+        ]
+      },
+      {
+        "input": [
+          0
+        ],
+        "expected": [
+          1
+        ]
+      },
+      {
+        "input": [
+          1
+        ],
+        "expected": [
+          1
+        ]
+      }
+    ],
+    "hints": [
+      "base case check karo: n <= 1",
+      "recursion use karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-03",
+    "title": "function banao jo string reverse kare",
+    "starterCode": "function reverseStr(s) {\n  // TODO: return reversed string\n}",
+    "solution": "function reverseStr(s) {\n  return s.split('').reverse().join('');\n}",
+    "tests": [
+      {
+        "input": [
+          "hello"
+        ],
+        "expected": [
+          "olleh"
+        ]
+      },
+      {
+        "input": [
+          "abc"
+        ],
+        "expected": [
+          "cba"
+        ]
+      },
+      {
+        "input": [
+          "a"
+        ],
+        "expected": [
+          "a"
+        ]
+      }
+    ],
+    "hints": [
+      "split, reverse, join use karo",
+      "string ko array mein convert karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-04",
+    "title": "function banao jo number check kare prime hai ya nahi",
+    "starterCode": "function isPrime(n) {\n  // TODO: return true if prime\n}",
+    "solution": "function isPrime(n) {\n  if (n < 2) return false;\n  for (let i = 2; i <= Math.sqrt(n); i++) {\n    if (n % i === 0) return false;\n  }\n  return true;\n}",
+    "tests": [
+      {
+        "input": [
+          7
+        ],
+        "expected": [
+          true
+        ]
+      },
+      {
+        "input": [
+          4
+        ],
+        "expected": [
+          false
+        ]
+      },
+      {
+        "input": [
+          2
+        ],
+        "expected": [
+          true
+        ]
+      }
+    ],
+    "hints": [
+      "2 se kam prime nahi hota",
+      "sqrt tak check karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-05",
+    "title": "function banao jo array mein sabse bada number dhundhe",
+    "starterCode": "function findMax(arr) {\n  // TODO: return max element\n}",
+    "solution": "function findMax(arr) {\n  return Math.max(...arr);\n}",
+    "tests": [
+      {
+        "input": [
+          [
+            1,
+            5,
+            3
+          ]
+        ],
+        "expected": [
+          5
+        ]
+      },
+      {
+        "input": [
+          [
+            10,
+            2,
+            8
+          ]
+        ],
+        "expected": [
+          10
+        ]
+      }
+    ],
+    "hints": [
+      "Math.max spread operator use karo",
+      "ya loop se compare karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-06",
+    "title": "function banao jo palindrome check kare",
+    "starterCode": "function isPalindrome(s) {\n  // TODO: return true if palindrome\n}",
+    "solution": "function isPalindrome(s) {\n  return s === s.split('').reverse().join('');\n}",
+    "tests": [
+      {
+        "input": [
+          "madam"
+        ],
+        "expected": [
+          true
+        ]
+      },
+      {
+        "input": [
+          "hello"
+        ],
+        "expected": [
+          false
+        ]
+      }
+    ],
+    "hints": [
+      "reverse karke compare karo",
+      "case sensitive hai"
+    ]
+  },
+  {
+    "id": "functions-function-basics-07",
+    "title": "function banao jo Fahrenheit ko Celsius convert kare",
+    "starterCode": "function toCelsius(f) {\n  // TODO: return (f - 32) * 5/9\n}",
+    "solution": "function toCelsius(f) {\n  return (f - 32) * 5 / 9;\n}",
+    "tests": [
+      {
+        "input": [
+          210
+        ],
+        "expected": [
+          100
+        ]
+      },
+      {
+        "input": [
+          32
+        ],
+        "expected": [
+          0
+        ]
+      }
+    ],
+    "hints": [
+      "formula yaad karo",
+      "(f-32) * 5/9"
+    ]
+  },
+  {
+    "id": "functions-function-basics-08",
+    "title": "function banao jo counts vowels in string",
+    "starterCode": "function countVowels(s) {\n  // TODO: return count of vowels\n}",
+    "solution": "function countVowels(s) {\n  return (s.match(/[aeiou]/gi) || []).length;\n}",
+    "tests": [
+      {
+        "input": [
+          "hello"
+        ],
+        "expected": [
+          2
+        ]
+      },
+      {
+        "input": [
+          "aeiou"
+        ],
+        "expected": [
+          5
+        ]
+      }
+    ],
+    "hints": [
+      "regex match use karo",
+      "gi flag mat bhoolna"
+    ]
+  },
+  {
+    "id": "functions-function-basics-09",
+    "title": "function banao jo array flatten kare",
+    "starterCode": "function flatten(arr) {\n  // TODO: return flat array\n}",
+    "solution": "function flatten(arr) {\n  return arr.flat(Infinity);\n}",
+    "tests": [
+      {
+        "input": [
+          [
+            1,
+            [
+              2,
+              [
+                3
+              ]
+            ]
+          ]
+        ],
+        "expected": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "input": [
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        "expected": [
+          1,
+          2,
+          3
+        ]
+      }
+    ],
+    "hints": [
+      "flat() method use karo",
+      "Infinity depth pass karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-10",
+    "title": "function banao jo array chunk kare",
+    "starterCode": "function chunk(arr, size) {\n  // TODO: return chunked array\n}",
+    "solution": "function chunk(arr, size) {\n  const result = [];\n  for (let i = 0; i < arr.length; i += size) {\n    result.push(arr.slice(i, i + size));\n  }\n  return result;\n}",
+    "tests": [
+      {
+        "input": [
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          2
+        ],
+        "expected": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            5
+          ]
+        ]
+      },
+      {
+        "input": [
+          [
+            1,
+            2,
+            3
+          ],
+          1
+        ],
+        "expected": [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ]
+        ]
+      }
+    ],
+    "hints": [
+      "slice use karo",
+      "size se iterate karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-11",
+    "title": "function banao jo sum of array calculate kare",
+    "starterCode": "function sumArray(arr) {\n  // TODO: return sum\n}",
+    "solution": "function sumArray(arr) {\n  return arr.reduce((acc, val) => acc + val, 0);\n}",
+    "tests": [
+      {
+        "input": [
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        "expected": [
+          6
+        ]
+      },
+      {
+        "input": [
+          [
+            10,
+            -5,
+            5
+          ]
+        ],
+        "expected": [
+          10
+        ]
+      }
+    ],
+    "hints": [
+      "reduce method use karo",
+      "accumulator 0 se start karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-12",
+    "title": "function banao jo array sort kare ascending order mein",
+    "starterCode": "function sortAsc(arr) {\n  // TODO: return sorted array\n}",
+    "solution": "function sortAsc(arr) {\n  return [...arr].sort((a, b) => a - b);\n}",
+    "tests": [
+      {
+        "input": [
+          [
+            3,
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "input": [
+          [
+            5,
+            4,
+            3,
+            2,
+            1
+          ]
+        ],
+        "expected": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    ],
+    "hints": [
+      "spread operator se copy karo",
+      "sort comparator function"
+    ]
+  },
+  {
+    "id": "functions-function-basics-13",
+    "title": "function banao jo string mein word count kare",
+    "starterCode": "function wordCount(s) {\n  // TODO: return number of words\n}",
+    "solution": "function wordCount(s) {\n  return s.trim().split(/\\s+/).length;\n}",
+    "tests": [
+      {
+        "input": [
+          "hello world"
+        ],
+        "expected": [
+          2
+        ]
+      },
+      {
+        "input": [
+          "  hello  world  "
+        ],
+        "expected": [
+          2
+        ]
+      }
+    ],
+    "hints": [
+      "trim karo",
+      "whitespace se split karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-14",
+    "title": "function banao jo object keys return kare array mein",
+    "starterCode": "function getKeys(obj) {\n  // TODO: return array of keys\n}",
+    "solution": "function getKeys(obj) {\n  return Object.keys(obj);\n}",
+    "tests": [
+      {
+        "input": [
+          {
+            "a": 1,
+            "b": 2
+          }
+        ],
+        "expected": [
+          "a",
+          "b"
+        ]
+      }
+    ],
+    "hints": [
+      "Object.keys() use karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-15",
+    "title": "function banao jo object values return kare array mein",
+    "starterCode": "function getValues(obj) {\n  // TODO: return array of values\n}",
+    "solution": "function getValues(obj) {\n  return Object.values(obj);\n}",
+    "tests": [
+      {
+        "input": [
+          {
+            "a": 1,
+            "b": 2
+          }
+        ],
+        "expected": [
+          1,
+          2
+        ]
+      }
+    ],
+    "hints": [
+      "Object.values() use karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-16",
+    "title": "function banao jo number ke digits ka sum kare",
+    "starterCode": "function digitSum(n) {\n  // TODO: return sum of digits\n}",
+    "solution": "function digitSum(n) {\n  return String(n).split('').reduce((s, d) => s + Number(d), 0);\n}",
+    "tests": [
+      {
+        "input": [
+          1234
+        ],
+        "expected": [
+          10
+        ]
+      },
+      {
+        "input": [
+          0
+        ],
+        "expected": [
+          0
+        ]
+      }
+    ],
+    "hints": [
+      "number ko string mein convert karo",
+      "har digit ka number lekar add karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-17",
+    "title": "function banao jo two strings anagram hai ya nahi check kare",
+    "starterCode": "function isAnagram(a, b) {\n  // TODO: return true if anagram\n}",
+    "solution": "function isAnagram(a, b) {\n  return a.split('').sort().join('') === b.split('').sort().join('');\n}",
+    "tests": [
+      {
+        "input": [
+          "listen",
+          "silent"
+        ],
+        "expected": [
+          true
+        ]
+      },
+      {
+        "input": [
+          "hello",
+          "world"
+        ],
+        "expected": [
+          false
+        ]
+      }
+    ],
+    "hints": [
+      "dono strings ko sort karo",
+      "compare karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-18",
+    "title": "function banao jo number ko Roman numeral mein convert kare",
+    "starterCode": "function toRoman(num) {\n  // TODO: return roman string\n}",
+    "solution": "function toRoman(num) {\n  const map = [[1000,'M'],[900,'CM'],[500,'D'],[400,'CD'],[100,'C'],[90,'XC'],[50,'L'],[40,'XL'],[10,'X'],[9,'IX'],[5,'V'],[4,'IV'],[1,'I']];\n  let result = '';\n  for (const [val, sym] of map) {\n    while (num >= val) { result += sym; num -= val; }\n  }\n  return result;\n}",
+    "tests": [
+      {
+        "input": [
+          3
+        ],
+        "expected": [
+          "III"
+        ]
+      },
+      {
+        "input": [
+          58
+        ],
+        "expected": [
+          "LVIII"
+        ]
+      },
+      {
+        "input": [
+          1994
+        ],
+        "expected": [
+          "MCMXCIV"
+        ]
+      }
+    ],
+    "hints": [
+      "greedy approach use karo",
+      "descending order mein check karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-19",
+    "title": "function banao jo array mein duplicate remove kare",
+    "starterCode": "function removeDuplicates(arr) {\n  // TODO: return array without duplicates\n}",
+    "solution": "function removeDuplicates(arr) {\n  return [...new Set(arr)];\n}",
+    "tests": [
+      {
+        "input": [
+          [
+            1,
+            2,
+            2,
+            3,
+            3,
+            3
+          ]
+        ],
+        "expected": [
+          1,
+          2,
+          3
+        ]
+      }
+    ],
+    "hints": [
+      "Set use karo",
+      "spread operator se convert karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-20",
+    "title": "function banao jo array mein second largest number dhundhe",
+    "starterCode": "function secondLargest(arr) {\n  // TODO: return second largest\n}",
+    "solution": "function secondLargest(arr) {\n  const unique = [...new Set(arr)].sort((a,b) => b-a);\n  return unique[1];\n}",
+    "tests": [
+      {
+        "input": [
+          [
+            1,
+            5,
+            3,
+            5,
+            2
+          ]
+        ],
+        "expected": [
+          3
+        ]
+      }
+    ],
+    "hints": [
+      "duplicates hatao",
+      "sort karke second element lo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-21",
+    "title": "function banao jo deep clone object kare",
+    "starterCode": "function deepClone(obj) {\n  // TODO: return deep cloned object\n}",
+    "solution": "function deepClone(obj) {\n  return JSON.parse(JSON.stringify(obj));\n}",
+    "tests": [
+      {
+        "input": [
+          {
+            "a": {
+              "b": 1
+            }
+          }
+        ],
+        "expected": [
+          {
+            "a": {
+              "b": 1
+            }
+          }
+        ]
+      }
+    ],
+    "hints": [
+      "JSON parse stringify use karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-22",
+    "title": "function banao jo array ko reverse kare",
+    "starterCode": "function reverseArr(arr) {\n  // TODO: return reversed array\n}",
+    "solution": "function reverseArr(arr) {\n  return [...arr].reverse();\n}",
+    "tests": [
+      {
+        "input": [
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        "expected": [
+          3,
+          2,
+          1
+        ]
+      }
+    ],
+    "hints": [
+      "spread operator se copy karo",
+      "reverse() use karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-23",
+    "title": "function banao jo given range ke numbers return kare",
+    "starterCode": "function range(start, end) {\n  // TODO: return array from start to end\n}",
+    "solution": "function range(start, end) {\n  return Array.from({length: end - start + 1}, (_, i) => start + i);\n}",
+    "tests": [
+      {
+        "input": [
+          1,
+          5
+        ],
+        "expected": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    ],
+    "hints": [
+      "Array.from use karo",
+      "length calculate karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-24",
+    "title": "function banao jo number ke all factors return kare",
+    "starterCode": "function factors(n) {\n  // TODO: return array of factors\n}",
+    "solution": "function factors(n) {\n  const result = [];\n  for (let i = 1; i <= n; i++) {\n    if (n % i === 0) result.push(i);\n  }\n  return result;\n}",
+    "tests": [
+      {
+        "input": [
+          12
+        ],
+        "expected": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          12
+        ]
+      },
+      {
+        "input": [
+          1
+        ],
+        "expected": [
+          1
+        ]
+      }
+    ],
+    "hints": [
+      "1 se n tak iterate karo",
+      "modulo check karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-25",
+    "title": "function banao jo object ko array mein convert kare",
+    "starterCode": "function objToArray(obj) {\n  // TODO: return array of [key, value] pairs\n}",
+    "solution": "function objToArray(obj) {\n  return Object.entries(obj);\n}",
+    "tests": [
+      {
+        "input": [
+          {
+            "a": 1,
+            "b": 2
+          }
+        ],
+        "expected": [
+          [
+            "a",
+            1
+          ],
+          [
+            "b",
+            2
+          ]
+        ]
+      }
+    ],
+    "hints": [
+      "Object.entries() use karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-26",
+    "title": "function banao jo string ke characters ka frequency count kare",
+    "starterCode": "function charFreq(s) {\n  // TODO: return frequency object\n}",
+    "solution": "function charFreq(s) {\n  const freq = {};\n  for (const ch of s) {\n    freq[ch] = (freq[ch] || 0) + 1;\n  }\n  return freq;\n}",
+    "tests": [
+      {
+        "input": [
+          "hello"
+        ],
+        "expected": [
+          {
+            "h": 1,
+            "e": 1,
+            "l": 2,
+            "o": 1
+          }
+        ]
+      }
+    ],
+    "hints": [
+      "object mein count karo",
+      "har character ke liye check karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-27",
+    "title": "function banao jo array ke saare numbers ka product return kare",
+    "starterCode": "function product(arr) {\n  // TODO: return product of all numbers\n}",
+    "solution": "function product(arr) {\n  return arr.reduce((acc, val) => acc * val, 1);\n}",
+    "tests": [
+      {
+        "input": [
+          [
+            1,
+            2,
+            3,
+            4
+          ]
+        ],
+        "expected": [
+          24
+        ]
+      },
+      {
+        "input": [
+          [
+            2,
+            5
+          ]
+        ],
+        "expected": [
+          10
+        ]
+      }
+    ],
+    "hints": [
+      "reduce use karo",
+      "initial value 1 rakho"
+    ]
+  },
+  {
+    "id": "functions-function-basics-28",
+    "title": "function banao jo given string mein se vowels hata de",
+    "starterCode": "function removeVowels(s) {\n  // TODO: return string without vowels\n}",
+    "solution": "function removeVowels(s) {\n  return s.replace(/[aeiou]/gi, '');\n}",
+    "tests": [
+      {
+        "input": [
+          "hello world"
+        ],
+        "expected": [
+          "hll wrld"
+        ]
+      }
+    ],
+    "hints": [
+      "regex replace use karo",
+      "gi flag lagao"
+    ]
+  },
+  {
+    "id": "functions-function-basics-29",
+    "title": "function banao jo array ke elements ko double kare",
+    "starterCode": "function doubleArr(arr) {\n  // TODO: return array with doubled values\n}",
+    "solution": "function doubleArr(arr) {\n  return arr.map(x => x * 2);\n}",
+    "tests": [
+      {
+        "input": [
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        "expected": [
+          2,
+          4,
+          6
+        ]
+      }
+    ],
+    "hints": [
+      "map method use karo",
+      "har element ko 2 se multiply karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-30",
+    "title": "function banao jo number ki power calculate kare",
+    "starterCode": "function power(base, exp) {\n  // TODO: return base^exp\n}",
+    "solution": "function power(base, exp) {\n  return Math.pow(base, exp);\n}",
+    "tests": [
+      {
+        "input": [
+          2,
+          3
+        ],
+        "expected": [
+          8
+        ]
+      },
+      {
+        "input": [
+          5,
+          0
+        ],
+        "expected": [
+          1
+        ]
+      }
+    ],
+    "hints": [
+      "Math.pow use karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-31",
+    "title": "function banao jo object ko freeze kare",
+    "starterCode": "function freezeObj(obj) {\n  // TODO: return frozen object\n}",
+    "solution": "function freezeObj(obj) {\n  return Object.freeze(obj);\n}",
+    "tests": [
+      {
+        "input": [
+          {
+            "a": 1
+          }
+        ],
+        "expected": [
+          "frozen object"
+        ]
+      }
+    ],
+    "hints": [
+      "Object.freeze() use karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-32",
+    "title": "function banao jo array ke first element return kare",
+    "starterCode": "function first(arr) {\n  // TODO: return first element\n}",
+    "solution": "function first(arr) {\n  return arr[0];\n}",
+    "tests": [
+      {
+        "input": [
+          [
+            10,
+            20,
+            30
+          ]
+        ],
+        "expected": [
+          10
+        ]
+      }
+    ],
+    "hints": [
+      "index 0 se access karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-33",
+    "title": "function banao jo array ke last element return kare",
+    "starterCode": "function last(arr) {\n  // TODO: return last element\n}",
+    "solution": "function last(arr) {\n  return arr[arr.length - 1];\n}",
+    "tests": [
+      {
+        "input": [
+          [
+            10,
+            20,
+            30
+          ]
+        ],
+        "expected": [
+          30
+        ]
+      }
+    ],
+    "hints": [
+      "length - 1 se access karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-34",
+    "title": "function banao jo number ko string mein convert kare",
+    "starterCode": "function numToString(n) {\n  // TODO: return string version\n}",
+    "solution": "function numToString(n) {\n  return String(n);\n}",
+    "tests": [
+      {
+        "input": [
+          42
+        ],
+        "expected": [
+          "42"
+        ]
+      }
+    ],
+    "hints": [
+      "String() use karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-35",
+    "title": "function banao jo string ko number mein convert kare",
+    "starterCode": "function strToNum(s) {\n  // TODO: return number version\n}",
+    "solution": "function strToNum(s) {\n  return Number(s);\n}",
+    "tests": [
+      {
+        "input": [
+          "42"
+        ],
+        "expected": [
+          42
+        ]
+      }
+    ],
+    "hints": [
+      "Number() use karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-36",
+    "title": "function banao jo array mein sabse chhota number dhundhe",
+    "starterCode": "function findMin(arr) {\n  // TODO: return min element\n}",
+    "solution": "function findMin(arr) {\n  return Math.min(...arr);\n}",
+    "tests": [
+      {
+        "input": [
+          [
+            5,
+            3,
+            8,
+            1
+          ]
+        ],
+        "expected": [
+          1
+        ]
+      }
+    ],
+    "hints": [
+      "Math.min spread use karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-37",
+    "title": "function banao jo given number even hai ya nahi check kare",
+    "starterCode": "function isEven(n) {\n  // TODO: return true if even\n}",
+    "solution": "function isEven(n) {\n  return n % 2 === 0;\n}",
+    "tests": [
+      {
+        "input": [
+          4
+        ],
+        "expected": [
+          true
+        ]
+      },
+      {
+        "input": [
+          7
+        ],
+        "expected": [
+          false
+        ]
+      }
+    ],
+    "hints": [
+      "modulo 2 check karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-38",
+    "title": "function banao jo given number odd hai ya nahi check kare",
+    "starterCode": "function isOdd(n) {\n  // TODO: return true if odd\n}",
+    "solution": "function isOdd(n) {\n  return n % 2 !== 0;\n}",
+    "tests": [
+      {
+        "input": [
+          3
+        ],
+        "expected": [
+          true
+        ]
+      },
+      {
+        "input": [
+          4
+        ],
+        "expected": [
+          false
+        ]
+      }
+    ],
+    "hints": [
+      "modulo 2 check karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-39",
+    "title": "function banao jo string capitalize kare",
+    "starterCode": "function capitalize(s) {\n  // TODO: return capitalized string\n}",
+    "solution": "function capitalize(s) {\n  return s.charAt(0).toUpperCase() + s.slice(1);\n}",
+    "tests": [
+      {
+        "input": [
+          "hello"
+        ],
+        "expected": [
+          "Hello"
+        ]
+      }
+    ],
+    "hints": [
+      "pehla character uppercase karo",
+      "baaki slice se lo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-40",
+    "title": "function banao jo string ke words ko reverse kare",
+    "starterCode": "function reverseWords(s) {\n  // TODO: return reversed words string\n}",
+    "solution": "function reverseWords(s) {\n  return s.split(' ').reverse().join(' ');\n}",
+    "tests": [
+      {
+        "input": [
+          "hello world"
+        ],
+        "expected": [
+          "world hello"
+        ]
+      }
+    ],
+    "hints": [
+      "split space se",
+      "reverse join karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-41",
+    "title": "function banao jo array mein elements ka average calculate kare",
+    "starterCode": "function average(arr) {\n  // TODO: return average\n}",
+    "solution": "function average(arr) {\n  return arr.reduce((s,v) => s+v, 0) / arr.length;\n}",
+    "tests": [
+      {
+        "input": [
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        ],
+        "expected": [
+          3
+        ]
+      }
+    ],
+    "hints": [
+      "sum divide by length"
+    ]
+  },
+  {
+    "id": "functions-function-basics-42",
+    "title": "function banao jo array ke saare strings ko uppercase kare",
+    "starterCode": "function toUpperAll(arr) {\n  // TODO: return uppercase array\n}",
+    "solution": "function toUpperAll(arr) {\n  return arr.map(s => s.toUpperCase());\n}",
+    "tests": [
+      {
+        "input": [
+          [
+            "a",
+            "b",
+            "c"
+          ]
+        ],
+        "expected": [
+          "A",
+          "B",
+          "C"
+        ]
+      }
+    ],
+    "hints": [
+      "map se toUpperCase karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-43",
+    "title": "function banao jo number ke factorial iterative way se calculate kare",
+    "starterCode": "function factIter(n) {\n  // TODO: return factorial iteratively\n}",
+    "solution": "function factIter(n) {\n  let result = 1;\n  for (let i = 2; i <= n; i++) result *= i;\n  return result;\n}",
+    "tests": [
+      {
+        "input": [
+          5
+        ],
+        "expected": [
+          120
+        ]
+      },
+      {
+        "input": [
+          0
+        ],
+        "expected": [
+          1
+        ]
+      }
+    ],
+    "hints": [
+      "loop use karo",
+      "result 1 se start karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-44",
+    "title": "function banao jo object ka shallow merge kare",
+    "starterCode": "function merge(a, b) {\n  // TODO: return merged object\n}",
+    "solution": "function merge(a, b) {\n  return {...a, ...b};\n}",
+    "tests": [
+      {
+        "input": [
+          {
+            "x": 1
+          },
+          {
+            "y": 2
+          }
+        ],
+        "expected": [
+          {
+            "x": 1,
+            "y": 2
+          }
+        ]
+      }
+    ],
+    "hints": [
+      "spread operator use karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-45",
+    "title": "function banao jo array ke elements ko square kare",
+    "starterCode": "function squareArr(arr) {\n  // TODO: return squared array\n}",
+    "solution": "function squareArr(arr) {\n  return arr.map(x => x * x);\n}",
+    "tests": [
+      {
+        "input": [
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        "expected": [
+          1,
+          4,
+          9
+        ]
+      }
+    ],
+    "hints": [
+      "map use karo",
+      "x*x karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-46",
+    "title": "function banao jo given number positive, negative ya zero hai bataye",
+    "starterCode": "function classify(n) {\n  // TODO: return positive/negative/zero\n}",
+    "solution": "function classify(n) {\n  if (n > 0) return 'positive';\n  if (n < 0) return 'negative';\n  return 'zero';\n}",
+    "tests": [
+      {
+        "input": [
+          5
+        ],
+        "expected": [
+          "positive"
+        ]
+      },
+      {
+        "input": [
+          -3
+        ],
+        "expected": [
+          "negative"
+        ]
+      },
+      {
+        "input": [
+          0
+        ],
+        "expected": [
+          "zero"
+        ]
+      }
+    ],
+    "hints": [
+      "if-else use karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-47",
+    "title": "function banao jo given array mein missing number dhundhe 1 to n",
+    "starterCode": "function missing(arr) {\n  // TODO: return missing number\n}",
+    "solution": "function missing(arr) {\n  const n = arr.length + 1;\n  return n * (n + 1) / 2 - arr.reduce((s,v) => s+v, 0);\n}",
+    "tests": [
+      {
+        "input": [
+          [
+            1,
+            2,
+            4,
+            5
+          ]
+        ],
+        "expected": [
+          3
+        ]
+      }
+    ],
+    "hints": [
+      "formula use karo",
+      "sum of n numbers minus array sum"
+    ]
+  },
+  {
+    "id": "functions-function-basics-48",
+    "title": "function banao jo given object ke values ko array mein return kare",
+    "starterCode": "function vals(obj) {\n  // TODO: return values array\n}",
+    "solution": "function vals(obj) {\n  return Object.values(obj);\n}",
+    "tests": [
+      {
+        "input": [
+          {
+            "a": 1,
+            "b": 2,
+            "c": 3
+          }
+        ],
+        "expected": [
+          1,
+          2,
+          3
+        ]
+      }
+    ],
+    "hints": [
+      "Object.values() use karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-49",
+    "title": "function banao jo number ko binary string mein convert kare",
+    "starterCode": "function toBinary(n) {\n  // TODO: return binary string\n}",
+    "solution": "function toBinary(n) {\n  return n.toString(2);\n}",
+    "tests": [
+      {
+        "input": [
+          10
+        ],
+        "expected": [
+          "1010"
+        ]
+      },
+      {
+        "input": [
+          0
+        ],
+        "expected": [
+          "0"
+        ]
+      }
+    ],
+    "hints": [
+      "toString(2) use karo"
+    ]
+  },
+  {
+    "id": "functions-function-basics-50",
+    "title": "function banao jo binary string ko number mein convert kare",
+    "starterCode": "function fromBinary(s) {\n  // TODO: return decimal number\n}",
+    "solution": "function fromBinary(s) {\n  return parseInt(s, 2);\n}",
+    "tests": [
+      {
+        "input": [
+          "1010"
+        ],
+        "expected": [
+          10
+        ]
+      }
+    ],
+    "hints": [
+      "parseInt base 2 use karo"
+    ]
+  }
+]

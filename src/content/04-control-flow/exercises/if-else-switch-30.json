@@ -1,16 +1,37 @@
 {
-  "id": "04-control-flow-if-else-switch-30",
-  "title": "Nested switch with fallthrough",
-  "starterCode": "const x = 1;\nconst y = 1;\nswitch (x) {\n  case 1:\n    console.log('x=1');\n  case 2:\n    console.log('x=2');\n    break;\n  default:\n    console.log('other');\n}",
-  "solution": "const x = 1;\nconst y = 1;\nswitch (x) {\n  case 1:\n    console.log('x=1');\n  case 2:\n    console.log('x=2');\n    break;\n  default:\n    console.log('other');\n}",
+  "id": "04-control-flow-01-if-else-switch-30",
+  "title": "Nested if seLeap year check",
+  "starterCode": "// function isLeapYear(year) mein year do\n// divisible by 400: true\n// divisible by 100 but not 400: false\n// divisible by 4 but not 100: true\n// Baaki: false\n",
+  "solution": "function isLeapYear(year) {\n  if (year % 400 === 0) return true\n  if (year % 100 === 0) return false\n  if (year % 4 === 0) return true\n  return false\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "x=1\nx=2"
+      "input": [
+        2000
+      ],
+      "expected": true
+    },
+    {
+      "input": [
+        1900
+      ],
+      "expected": false
+    },
+    {
+      "input": [
+        2024
+      ],
+      "expected": true
+    },
+    {
+      "input": [
+        2023
+      ],
+      "expected": false
     }
   ],
   "hints": [
-    "case 1 has no break",
-    "Falls through to case 2"
+    "400 sabse pehle check karo",
+    "Phir 100 check karo",
+    "Phir 4 check karo"
   ]
 }

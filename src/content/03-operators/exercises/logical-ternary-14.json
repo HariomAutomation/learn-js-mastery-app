@@ -1,16 +1,19 @@
 {
-  "id": "03-operators-logical-ternary-14",
-  "title": "OR vs Nullish with zero",
-  "starterCode": "const result = 0 || 'default';\nconsole.log(result);",
-  "solution": "const result = 0 || 'default';\nconsole.log(result);",
+  "id": "03-operators-02-logical-ternary-14",
+  "title": "Safe property access",
+  "starterCode": "// Nested object se safe access karo\nconst user = { profile: { address: { city: \"Delhi\" } } }\n// TODO: optional chaining + nullish use karo\n",
+  "solution": "const user = { profile: { address: { city: \"Delhi\" } } }\nconst city = user?.profile?.address?.city ?? \"Unknown\"\nconst zip = user?.profile?.address?.zip ?? \"N/A\"\nreturn { city, zip }",
   "tests": [
     {
       "input": [],
-      "expected": "default"
+      "expected": {
+        "city": "Delhi",
+        "zip": "N/A"
+      }
     }
   ],
   "hints": [
-    "|| treats 0 as falsy",
-    "0 is falsy, so returns 'default'"
+    "?. se safe access hota hai",
+    "?? se default milta hai agar undefined ho"
   ]
 }

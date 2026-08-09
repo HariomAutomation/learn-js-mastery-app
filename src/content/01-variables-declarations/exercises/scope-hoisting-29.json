@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-scope-hoisting-29",
-  "title": "scope chain lookup order",
-  "starterCode": "var x = 1\nfunction a() {\n  console.log(x)\n}\nfunction b() {\n  var x = 2\n  a()\n}\nb()",
-  "solution": "var x = 1\nfunction a() {\n  console.log(x)\n}\nfunction b() {\n  var x = 2\n  a()\n}\nb()",
+  "title": "Module scope simulation",
+  "starterCode": "// Simulate module scope with IIFE\nconst module = (function() {\n  const private = \"secret\"\n  return {\n    get: () => private\n  }\n})()\nreturn module.get()\n",
+  "solution": "const module = (function() {\n  const private = \"secret\"\n  return {\n    get: () => private\n  }\n})()\nreturn module.get()",
   "tests": [
     {
       "input": [],
-      "expected": "1"
+      "expected": "secret"
     }
   ],
   "hints": [
-    "a looks at its own scope chain, not b's"
+    "IIFE creates module scope",
+    "private is not accessible outside"
   ]
 }

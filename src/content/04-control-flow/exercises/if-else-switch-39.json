@@ -1,16 +1,36 @@
 {
-  "id": "04-control-flow-if-else-switch-39",
-  "title": "If with empty object",
-  "starterCode": "const obj = {};\nif (obj.name) {\n  console.log('has name');\n} else {\n  console.log('no name');\n}",
-  "solution": "const obj = {};\nif (obj.name) {\n  console.log('has name');\n} else {\n  console.log('no name');\n}",
+  "id": "04-control-flow-01-if-else-switch-39",
+  "title": "Switch se Vowel ya Consonant",
+  "starterCode": "// function isVowel(char) mein single character do\n// Vowel: true, Consonant: false, Not letter: null\n",
+  "solution": "function isVowel(char) {\n  const lower = char.toLowerCase()\n  switch (lower) {\n    case \"a\": case \"e\": case \"i\": case \"o\": case \"u\":\n      return true\n    default:\n      if (lower >= \"a\" && lower <= \"z\") return false\n      return null\n  }\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "no name"
+      "input": [
+        "a"
+      ],
+      "expected": true
+    },
+    {
+      "input": [
+        "A"
+      ],
+      "expected": true
+    },
+    {
+      "input": [
+        "b"
+      ],
+      "expected": false
+    },
+    {
+      "input": [
+        "1"
+      ],
+      "expected": null
     }
   ],
   "hints": [
-    "obj.name is undefined",
-    "undefined is falsy"
+    "Switch se vowels check karo",
+    "Default mein letter hai ya nahi check karo"
   ]
 }

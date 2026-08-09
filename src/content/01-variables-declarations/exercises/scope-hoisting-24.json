@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-scope-hoisting-24",
-  "title": "nested function scope",
-  "starterCode": "function a() {\n  const x = 1\n  return function b() {\n    return function c() {\n      return x\n    }\n  }\n}\nconsole.log(a()()())",
-  "solution": "function a() {\n  const x = 1\n  return function b() {\n    return function c() {\n      return x\n    }\n  }\n}\nconsole.log(a()()())",
+  "title": "Block-scoped function in if",
+  "starterCode": "if (true) {\n  function test() { return \"yes\" }\n}\ntry {\n  return test()\n} catch(e) {\n  return \"not accessible\"\n}\n",
+  "solution": "if (true) {\n  function test() { return \"yes\" }\n}\ntry {\n  return test()\n} catch(e) {\n  return \"not accessible\"\n}",
   "tests": [
     {
       "input": [],
-      "expected": "1"
+      "expected": "yes"
     }
   ],
   "hints": [
-    "Scope chain traverses all levels"
+    "Function declarations in blocks are tricky",
+    "In browsers, function is accessible outside the block"
   ]
 }

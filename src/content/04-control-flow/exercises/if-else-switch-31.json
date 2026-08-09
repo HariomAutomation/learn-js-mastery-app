@@ -1,16 +1,38 @@
 {
-  "id": "04-control-flow-if-else-switch-31",
-  "title": "If with negation",
-  "starterCode": "const isLoggedIn = false;\nif (!isLoggedIn) {\n  console.log('please log in');\n} else {\n  console.log('welcome');\n}",
-  "solution": "const isLoggedIn = false;\nif (!isLoggedIn) {\n  console.log('please log in');\n} else {\n  console.log('welcome');\n}",
+  "id": "04-control-flow-01-if-else-switch-31",
+  "title": "Guard clause se object validate karo",
+  "starterCode": "// function getUserName(user) mein object do\n// Agar user null/undefined hai: \"No user\"\n// Agar name nahi hai: \"No name\"\n// Warna user.name return karo\n",
+  "solution": "function getUserName(user) {\n  if (!user) return \"No user\"\n  if (!user.name) return \"No name\"\n  return user.name\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "please log in"
+      "input": [
+        {
+          "name": "Hariom"
+        }
+      ],
+      "expected": "Hariom"
+    },
+    {
+      "input": [
+        null
+      ],
+      "expected": "No user"
+    },
+    {
+      "input": [
+        null
+      ],
+      "expected": "No user"
+    },
+    {
+      "input": [
+        {}
+      ],
+      "expected": "No name"
     }
   ],
   "hints": [
-    "!false is true",
-    "if block executes"
+    "!user se null/undefined dono check hote hain",
+    "Guard clause se nesting bachao"
   ]
 }

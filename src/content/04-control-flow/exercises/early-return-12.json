@@ -1,16 +1,36 @@
 {
-  "id": "04-control-flow-early-return-12",
-  "title": "Default fallback pattern",
-  "starterCode": "function getConfig(key) {\n  const config = { theme: 'dark', lang: 'en' };\n  return config[key] ?? 'default';\n}\nconsole.log(getConfig('theme'));",
-  "solution": "function getConfig(key) {\n  const config = { theme: 'dark', lang: 'en' };\n  return config[key] ?? 'default';\n}\nconsole.log(getConfig('theme'));",
+  "id": "04-control-flow-02-early-return-12",
+  "title": "Guard clause for input sanitization",
+  "starterCode": "// function sanitizeInput(input)\n// Agar string nahi: \"\"\n// Trim karo\n// Empty hai to: \"\"\n// Warna lowercase return karo\n",
+  "solution": "function sanitizeInput(input) {\n  if (typeof input !== \"string\") return \"\"\n  const trimmed = input.trim()\n  if (trimmed.length === 0) return \"\"\n  return trimmed.toLowerCase()\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "dark"
+      "input": [
+        "  Hello World  "
+      ],
+      "expected": "hello world"
+    },
+    {
+      "input": [
+        "  "
+      ],
+      "expected": ""
+    },
+    {
+      "input": [
+        123
+      ],
+      "expected": ""
+    },
+    {
+      "input": [
+        null
+      ],
+      "expected": ""
     }
   ],
   "hints": [
-    "config.theme exists",
-    "?? returns value if not null/undefined"
+    "typeof se string type check karo",
+    "Trim se spaces hati hain"
   ]
 }

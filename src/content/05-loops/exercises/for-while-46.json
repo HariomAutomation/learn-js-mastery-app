@@ -1,16 +1,22 @@
 {
-  "id": "05-loops-for-while-46",
-  "title": "For Loop Range",
-  "starterCode": "for (let i = 10; i <= 20; i++) {\n  console.log(i);\n}",
-  "solution": "for (let i = 10; i <= 20; i++) {\n  console.log(i);\n}",
+  "id": "05-01-for-while-46",
+  "title": "For loop se array ke middle element dhundho",
+  "starterCode": "function middle(arr) {\n  // TODO: array ka middle element do (odd length ke liye)\n}",
+  "solution": "function middle(arr) {\n  if (arr.length === 0) return undefined;\n  return arr[Math.floor(arr.length / 2)];\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20"
+      "input": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "expected": 3
     }
   ],
   "hints": [
-    "Start at 10",
-    "Include 20 with <="
+    "Length / 2 se index milta hai",
+    "Math.floor use karo integer index ke liye"
   ]
 }

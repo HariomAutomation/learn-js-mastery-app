@@ -1,16 +1,20 @@
 {
-  "id": "02-data-types-primitive-types-26",
-  "title": "Check type of a number with typeof",
-  "starterCode": "const age = 25;\nconsole.log();",
-  "solution": "const age = 25;\nconsole.log(typeof age);",
+  "id": "02-data-types-01-primitive-types-26",
+  "title": "Nullish coalescing operator",
+  "starterCode": "const username = null\nconst age = 0\nconst score = \"\"\nreturn {\n  name: username ?? \"Guest\",\n  userAge: age ?? 18,\n  userScore: score ?? 100\n}\n",
+  "solution": "const username = null\nconst age = 0\nconst score = \"\"\nreturn {\n  name: username ?? \"Guest\",\n  userAge: age ?? 18,\n  userScore: score ?? 100\n}",
   "tests": [
     {
       "input": [],
-      "expected": "number"
+      "expected": {
+        "name": "Guest",
+        "userAge": 0,
+        "userScore": ""
+      }
     }
   ],
   "hints": [
-    "typeof works on any value",
-    "Numbers return 'number'"
+    "?? sirf null/undefined ke liye default deta hai",
+    "0 aur '' ko valid value maanta hai"
   ]
 }

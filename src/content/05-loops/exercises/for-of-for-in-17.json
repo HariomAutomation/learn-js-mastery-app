@@ -1,16 +1,25 @@
 {
-  "id": "05-loops-for-of-for-in-17",
-  "title": "For...Of With Break",
-  "starterCode": "const arr = [1, 2, 3, 4, 5];\nfor (const val of arr) {\n  if (val === 3) break;\n  console.log(val);\n}",
-  "solution": "const arr = [1, 2, 3, 4, 5];\nfor (const val of arr) {\n  if (val === 3) break;\n  console.log(val);\n}",
+  "id": "05-02-for-of-for-in-17",
+  "title": "For-of se array ke elements ko chunks me divide karo",
+  "starterCode": "function chunk(arr, size) {\n  // TODO: array ko equal size ke chunks me todo\n}",
+  "solution": "function chunk(arr, size) {\n  const result = [];\n  for (let i = 0; i < arr.length; i += size) {\n    result.push(arr.slice(i, i + size));\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "1\n2"
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        2
+      ],
+      "expected": "1,2,3,4,5"
     }
   ],
   "hints": [
-    "break exits loop",
-    "Check before logging"
+    "For loop use karo with step size",
+    "Slice se chunk nikalo"
   ]
 }

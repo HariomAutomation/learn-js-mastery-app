@@ -1,16 +1,19 @@
 {
-  "id": "03-operators-logical-ternary-31",
-  "title": "OR returns last if all falsy",
-  "starterCode": "const result = 0 || \"\" || null;\nconsole.log(result);",
-  "solution": "const result = 0 || \"\" || null;\nconsole.log(result);",
+  "id": "03-operators-02-logical-ternary-31",
+  "title": "Chained ternary for discount",
+  "starterCode": "// Order amount ke basis pe discount\n// < 100: 0%, 100-500: 5%, 500-1000: 10%, > 1000: 15%\nconst amount = 750\n// TODO: discount percentage nikalo\n",
+  "solution": "const amount = 750\nconst discount = amount < 100 ? 0 : amount <= 500 ? 5 : amount <= 1000 ? 10 : 15\nconst finalPrice = amount - (amount * discount / 100)\nreturn { discount, finalPrice }",
   "tests": [
     {
       "input": [],
-      "expected": "null"
+      "expected": {
+        "discount": 10,
+        "finalPrice": 675
+      }
     }
   ],
   "hints": [
-    "|| returns last value if all falsy",
-    "All are falsy"
+    "Chained ternary se ranges check karo",
+    "Final price = amount - discount"
   ]
 }

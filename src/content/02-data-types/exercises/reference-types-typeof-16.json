@@ -1,16 +1,32 @@
 {
-  "id": "02-data-types-reference-types-typeof-16",
-  "title": "Copy array with spread",
-  "starterCode": "const a = [1, 2, 3];\nconst b = ;\nb.push(4);\nconsole.log(a.length);",
-  "solution": "const a = [1, 2, 3];\nconst b = [...a];\nb.push(4);\nconsole.log(a.length);",
+  "id": "02-data-types-02-reference-types-typeof-16",
+  "title": "TypedArray overview",
+  "starterCode": "const int8 = new Int8Array([1, 2, 3])\nconst uint8 = new Uint8Array([255, 0, 128])\nconst float32 = new Float32Array([1.5, 2.5])\nreturn {\n  int8: Array.from(int8),\n  uint8: Array.from(uint8),\n  float32: Array.from(float32),\n  float32Bytes: float32.BYTES_PER_ELEMENT\n}\n",
+  "solution": "const int8 = new Int8Array([1, 2, 3])\nconst uint8 = new Uint8Array([255, 0, 128])\nconst float32 = new Float32Array([1.5, 2.5])\nreturn {\n  int8: Array.from(int8),\n  uint8: Array.from(uint8),\n  float32: Array.from(float32),\n  float32Bytes: float32.BYTES_PER_ELEMENT\n}",
   "tests": [
     {
       "input": [],
-      "expected": "3"
+      "expected": {
+        "int8": [
+          1,
+          2,
+          3
+        ],
+        "uint8": [
+          255,
+          0,
+          128
+        ],
+        "float32": [
+          1.5,
+          2.5
+        ],
+        "float32Bytes": 4
+      }
     }
   ],
   "hints": [
-    "Spread creates a new array",
-    "Original is not affected"
+    "TypedArrays fixed-size hain",
+    "BYTES_PER_ELEMENT se size pata chalta hai"
   ]
 }

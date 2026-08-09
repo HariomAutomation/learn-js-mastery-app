@@ -1,16 +1,19 @@
 {
-  "id": "03-operators-logical-ternary-43",
-  "title": "Logical assignment with null",
-  "starterCode": "let x = null;\nx ??= 'initialized';\nconsole.log(x);",
-  "solution": "let x = null;\nx ??= 'initialized';\nconsole.log(x);",
+  "id": "03-operators-02-logical-ternary-43",
+  "title": "Short circuit memo pattern",
+  "starterCode": "// Expensive computation ko cache karo\nlet cachedResult = null\nfunction compute() {\n  // TODO: agar cached hai to return karo, nahi to compute karo\n}\nreturn { first: compute(), second: compute() }",
+  "solution": "let cachedResult = null\nfunction compute() {\n  return cachedResult !== null ? cachedResult : (cachedResult = 42 * 42)\n}\nreturn { first: compute(), second: compute() }",
   "tests": [
     {
       "input": [],
-      "expected": "initialized"
+      "expected": {
+        "first": 1764,
+        "second": 1764
+      }
     }
   ],
   "hints": [
-    "??= only assigns if null/undefined",
-    "x is null, so assignment happens"
+    "Short circuit se cached value return hoti hai",
+    "Assignment expression value return karta hai"
   ]
 }

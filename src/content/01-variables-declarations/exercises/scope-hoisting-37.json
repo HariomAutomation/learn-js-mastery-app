@@ -1,0 +1,16 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-37",
+  "title": "Template literal multiline",
+  "starterCode": "const name = \"JS\"\nconst str = `Hello\n${name}\nWorld`\nreturn str.split(\"\\n\").length\n",
+  "solution": "const name = \"JS\"\nconst str = `Hello\n${name}\nWorld`\nreturn str.split(\"\\n\").length",
+  "tests": [
+    {
+      "input": [],
+      "expected": 3
+    }
+  ],
+  "hints": [
+    "Template literals support multiline strings",
+    "split on newline gives 3 parts"
+  ]
+}

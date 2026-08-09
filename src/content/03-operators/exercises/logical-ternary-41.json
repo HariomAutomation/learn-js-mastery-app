@@ -1,16 +1,28 @@
 {
-  "id": "03-operators-logical-ternary-41",
-  "title": "Short circuit OR return value",
-  "starterCode": "const result = false || \"fallback\";\nconsole.log(result);",
-  "solution": "const result = false || \"fallback\";\nconsole.log(result);",
+  "id": "03-operators-02-logical-ternary-41",
+  "title": "Ternary for string building",
+  "starterCode": "// Greeting message banao time ke hisaab se\nconst hour = 14\n// TODO: Good Morning/Afternoon/Evening/Night\n",
+  "solution": "const hour = 14\nconst greeting = hour < 12 ? \"Good Morning\" : hour < 17 ? \"Good Afternoon\" : hour < 21 ? \"Good Evening\" : \"Good Night\"\nreturn greeting",
   "tests": [
     {
       "input": [],
-      "expected": "fallback"
+      "expected": "Good Afternoon"
+    },
+    {
+      "input": [
+        8
+      ],
+      "expected": "Good Morning"
+    },
+    {
+      "input": [
+        22
+      ],
+      "expected": "Good Night"
     }
   ],
   "hints": [
-    "|| returns first truthy",
-    "false is falsy, so returns 'fallback'"
+    "Hours ke range check karo",
+    "Chained ternary use karo"
   ]
 }

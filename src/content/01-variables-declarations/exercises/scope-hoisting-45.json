@@ -1,0 +1,20 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-45",
+  "title": "Promise.all scope",
+  "starterCode": "const p1 = Promise.resolve(1)\nconst p2 = Promise.resolve(2)\nconst p3 = Promise.resolve(3)\nreturn await Promise.all([p1, p2, p3])\n",
+  "solution": "const p1 = Promise.resolve(1)\nconst p2 = Promise.resolve(2)\nconst p3 = Promise.resolve(3)\nreturn await Promise.all([p1, p2, p3])",
+  "tests": [
+    {
+      "input": [],
+      "expected": [
+        1,
+        2,
+        3
+      ]
+    }
+  ],
+  "hints": [
+    "Promise.all resolves all promises",
+    "Returns array of resolved values"
+  ]
+}

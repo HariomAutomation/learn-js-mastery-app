@@ -1,16 +1,27 @@
 {
-  "id": "05-loops-for-while-23",
-  "title": "Matrix Iteration",
-  "starterCode": "const matrix = [[1, 2], [3, 4]];\nfor (let i = 0; i < matrix.length; i++) {\n  for (let j = 0; j < matrix[i].length; j++) {\n    console.log(matrix[i][j]);\n  }\n}",
-  "solution": "const matrix = [[1, 2], [3, 4]];\nfor (let i = 0; i < matrix.length; i++) {\n  for (let j = 0; j < matrix[i].length; j++) {\n    console.log(matrix[i][j]);\n  }\n}",
+  "id": "05-01-for-while-23",
+  "title": "Nested loop se matrix transpose karo",
+  "starterCode": "function transpose(matrix) {\n  // TODO: matrix ka transpose nikalo\n}",
+  "solution": "function transpose(matrix) {\n  const rows = matrix.length;\n  const cols = matrix[0].length;\n  const result = [];\n  for (let j = 0; j < cols; j++) {\n    const row = [];\n    for (let i = 0; i < rows; i++) row.push(matrix[i][j]);\n    result.push(row);\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "1\n2\n3\n4"
+      "input": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "expected": "1,4,2,5,3,6"
     }
   ],
   "hints": [
-    "Access rows first",
-    "Then columns"
+    "Rows aur columns swap karo",
+    "Inner loop pehle columns ke liye chalega"
   ]
 }

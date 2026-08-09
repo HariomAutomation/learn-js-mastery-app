@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-variables-intro-16",
-  "title": "Falsy value check",
-  "starterCode": "console.log(Boolean(0))\nconsole.log(Boolean(\"\"))\nconsole.log(Boolean(null))",
-  "solution": "console.log(Boolean(0))\nconsole.log(Boolean(\"\"))\nconsole.log(Boolean(null))",
+  "title": "var block scope leak fix karo",
+  "starterCode": "// Bug: var a block ke bahar leak ho raha hai\n// Fix karo — a aur b dono sirf block mein accessible hona chahiye\nif (true) {\n  var a = 1\n  let b = 2\n}\nconsole.log(a, typeof b)\nreturn a\n",
+  "solution": "if (true) {\n  let a = 1\n  let b = 2\n}\nreturn typeof a === \"undefined\" ? \"fixed\" : \"not fixed\"",
   "tests": [
     {
       "input": [],
-      "expected": "false\nfalse\nfalse"
+      "expected": "fixed"
     }
   ],
   "hints": [
-    "0, '', null are falsy"
+    "var → let se block scope milta hai",
+    "let block ke bahar accessible nahi hota"
   ]
 }

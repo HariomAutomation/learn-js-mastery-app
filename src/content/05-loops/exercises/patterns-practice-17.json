@@ -1,16 +1,22 @@
 {
-  "id": "05-loops-patterns-practice-17",
-  "title": "Palindrome Number Check",
-  "starterCode": "let num = 1221;\nlet orig = num;\nlet rev = 0;\nwhile (num > 0) {\n  rev = rev * 10 + num % 10;\n  num = Math.floor(num / 10);\n}\nconsole.log(orig === rev);",
-  "solution": "let num = 1221;\nlet orig = num;\nlet rev = 0;\nwhile (num > 0) {\n  rev = rev * 10 + num % 10;\n  num = Math.floor(num / 10);\n}\nconsole.log(orig === rev);",
+  "id": "05-03-patterns-practice-17",
+  "title": "Array ke gaps dhundho",
+  "starterCode": "function findGaps(arr) {\n  // TODO: sorted array me missing ranges dhundho\n  // [1,2,4,5,7] -> [[3,3],[6,6]]\n}",
+  "solution": "function findGaps(arr) {\n  const gaps = [];\n  for (let i = 1; i < arr.length; i++) {\n    if (arr[i] - arr[i-1] > 1) {\n      gaps.push([arr[i-1] + 1, arr[i] - 1]);\n    }\n  }\n  return gaps;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "true"
+      "input": [
+        1,
+        2,
+        4,
+        5,
+        7
+      ],
+      "expected": "[[3,3],[6,6]]"
     }
   ],
   "hints": [
-    "Save original",
-    "Reverse and compare"
+    "Consecutive elements ke beech gap check karo",
+    "Gap hai toh range push karo"
   ]
 }

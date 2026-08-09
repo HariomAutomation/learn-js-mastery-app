@@ -1,15 +1,36 @@
 {
   "id": "01-variables-declarations-variables-intro-09",
-  "title": "Undefined vs null",
-  "starterCode": "let a\nconst b = null\nconsole.log(a, b)",
-  "solution": "let a\nconst b = null\nconsole.log(a, b)",
+  "title": "Type checking function",
+  "starterCode": "// Function banao jo value ka type return kare\n// Agar array ho to \"array\" return karo\n// Agar null ho to \"null\" return karo\n// Baki sab ke liye typeof return karo\nfunction checkType(val) {\n  // TODO\n}\n",
+  "solution": "function checkType(val) {\n  if (val === null) return \"null\"\n  if (Array.isArray(val)) return \"array\"\n  return typeof val\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "undefined null"
+      "input": [
+        42
+      ],
+      "expected": "number"
+    },
+    {
+      "input": [
+        "hello"
+      ],
+      "expected": "string"
+    },
+    {
+      "input": [
+        []
+      ],
+      "expected": "array"
+    },
+    {
+      "input": [
+        null
+      ],
+      "expected": "null"
     }
   ],
   "hints": [
-    "Uninitialized let is undefined"
+    "Array.isArray() se array check hota hai",
+    "null === null true deta hai, typeof null \"object\" deta hai"
   ]
 }

@@ -1,16 +1,22 @@
 {
-  "id": "02-data-types-primitive-types-18",
-  "title": "Create a hexadecimal number",
-  "starterCode": "const hex = ;\nconsole.log(hex);",
-  "solution": "const hex = 0xFF;\nconsole.log(hex);",
+  "id": "02-data-types-01-primitive-types-18",
+  "title": "Variable naming conventions",
+  "starterCode": "const camelCase = \"userAge\"\nconst PascalCase = \"UserProfile\"\nconst snake_case = \"user_name\"\nconst SCREAMING = \"MAX_SIZE\"\nreturn { camelCase, PascalCase, snake_case, SCREAMING }\n",
+  "solution": "const camelCase = \"userAge\"\nconst PascalCase = \"UserProfile\"\nconst snake_case = \"user_name\"\nconst SCREAMING = \"MAX_SIZE\"\nreturn { camelCase, PascalCase, snake_case, SCREAMING }",
   "tests": [
     {
       "input": [],
-      "expected": "255"
+      "expected": {
+        "camelCase": "userAge",
+        "PascalCase": "UserProfile",
+        "snake_case": "user_name",
+        "SCREAMING": "MAX_SIZE"
+      }
     }
   ],
   "hints": [
-    "Hex uses 0x prefix",
-    "FF in hex equals 255 in decimal"
+    "camelCase: variables ke liye",
+    "PascalCase: classes/components ke liye",
+    "SCREAMING_SNAKE: constants ke liye"
   ]
 }

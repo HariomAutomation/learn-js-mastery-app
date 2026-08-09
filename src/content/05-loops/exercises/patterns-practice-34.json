@@ -1,16 +1,31 @@
 {
-  "id": "05-loops-patterns-practice-34",
-  "title": "Number Spiral",
-  "starterCode": "let num = 1;\nfor (let i = 0; i < 3; i++) {\n  let row = '';\n  for (let j = 0; j < 3; j++) {\n    row += num++ + ' ';\n  }\n  console.log(row);\n}",
-  "solution": "let num = 1;\nfor (let i = 0; i < 3; i++) {\n  let row = '';\n  for (let j = 0; j < 3; j++) {\n    row += num++ + ' ';\n  }\n  console.log(row);\n}",
+  "id": "05-03-patterns-practice-34",
+  "title": "2D array me column-wise sum nikalo",
+  "starterCode": "function columnSums(matrix) {\n  // TODO: har column ka sum nikalo\n}",
+  "solution": "function columnSums(matrix) {\n  if (!matrix.length) return [];\n  const cols = matrix[0].length;\n  const sums = Array(cols).fill(0);\n  for (let i = 0; i < matrix.length; i++) {\n    for (let j = 0; j < cols; j++) {\n      sums[j] += matrix[i][j];\n    }\n  }\n  return sums;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "1 2 3 \n4 5 6 \n7 8 9 "
+      "input": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            6
+          ]
+        ]
+      ],
+      "expected": "9,12"
     }
   ],
   "hints": [
-    "Use post-increment",
-    "Build row string"
+    "Columns ki length se sums array banao",
+    "Row-wise traverse karte jaao aur add karo"
   ]
 }

@@ -1,16 +1,22 @@
 {
-  "id": "03-operators-logical-ternary-24",
-  "title": "Nullish coalescing assignment (??=)",
-  "starterCode": "let x = null;\nx ??= 'default';\nconsole.log(x);",
-  "solution": "let x = null;\nx ??= 'default';\nconsole.log(x);",
+  "id": "03-operators-02-logical-ternary-24",
+  "title": "Ternary with function calls",
+  "starterCode": "// Math operations ternary se choose karo\nconst operation = \"square\"\nconst num = 5\n// TODO: operation ke hisaab se result\n",
+  "solution": "const operation = \"square\"\nconst num = 5\nconst result = operation === \"square\" ? num * num : operation === \"cube\" ? num * num * num : num\nreturn result",
   "tests": [
     {
       "input": [],
-      "expected": "default"
+      "expected": 25
+    },
+    {
+      "input": [
+        "cube"
+      ],
+      "expected": 125
     }
   ],
   "hints": [
-    "x ??= 'default' means x = x ?? 'default'",
-    "x is null, so assignment happens"
+    "Ternary mein function calls bhi kar sakte ho",
+    "Nested ternary se multiple operations"
   ]
 }

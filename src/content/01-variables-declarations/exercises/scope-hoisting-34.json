@@ -1,0 +1,16 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-34",
+  "title": "Spread in function call",
+  "starterCode": "function sum(a, b, c) { return a + b + c }\nconst nums = [1, 2, 3]\nreturn sum(...nums)\n",
+  "solution": "function sum(a, b, c) { return a + b + c }\nconst nums = [1, 2, 3]\nreturn sum(...nums)",
+  "tests": [
+    {
+      "input": [],
+      "expected": 6
+    }
+  ],
+  "hints": [
+    "...spread expands array into arguments",
+    "sum(1, 2, 3) = 6"
+  ]
+}

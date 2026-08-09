@@ -1,16 +1,20 @@
 {
-  "id": "02-data-types-reference-types-typeof-33",
-  "title": "RegExp is object",
-  "starterCode": "const r = /abc/;\nconsole.log();",
-  "solution": "const r = /abc/;\nconsole.log(typeof r);",
+  "id": "02-data-types-02-reference-types-typeof-33",
+  "title": "Optional chaining with method call",
+  "starterCode": "const user1 = { name: \"Hariom\", greet() { return \"Hello!\" } }\nconst user2 = { name: \"Amit\" }\nreturn {\n  greet1: user1.greet?.(),\n  greet2: user2.greet?.(),\n  upper1: user1.name?.toUpperCase?.(),\n  upper2: user2.name?.toUpperCase?.()\n}\n",
+  "solution": "const user1 = { name: \"Hariom\", greet() { return \"Hello!\" } }\nconst user2 = { name: \"Amit\" }\nreturn {\n  greet1: user1.greet?.(),\n  greet2: user2.greet?.(),\n  upper1: user1.name?.toUpperCase?.(),\n  upper2: user2.name?.toUpperCase?.()\n}",
   "tests": [
     {
       "input": [],
-      "expected": "object"
+      "expected": {
+        "greet1": "Hello!",
+        "upper1": "HARIOM",
+        "upper2": "AMIT"
+      }
     }
   ],
   "hints": [
-    "Regular expressions are objects",
-    "typeof returns 'object'"
+    "?.() se safe method call hota hai",
+    "Agar method exist nahi karta to undefined return hota hai"
   ]
 }

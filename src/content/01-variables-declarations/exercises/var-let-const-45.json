@@ -1,0 +1,20 @@
+{
+  "id": "01-variables-declarations-var-let-const-45",
+  "title": "Variable in for-in loop",
+  "starterCode": "const obj = {a: 1, b: 2, c: 3}\nconst keys = []\nfor (let key in obj) {\n  keys.push(key)\n}\nreturn keys\n",
+  "solution": "const obj = {a: 1, b: 2, c: 3}\nconst keys = []\nfor (let key in obj) {\n  keys.push(key)\n}\nreturn keys",
+  "tests": [
+    {
+      "input": [],
+      "expected": [
+        "a",
+        "b",
+        "c"
+      ]
+    }
+  ],
+  "hints": [
+    "for-in iterates over object keys",
+    "let key gets each key one by one"
+  ]
+}

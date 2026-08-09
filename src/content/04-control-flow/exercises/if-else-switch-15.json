@@ -1,16 +1,44 @@
 {
-  "id": "04-control-flow-if-else-switch-15",
-  "title": "Multiple cases same block",
-  "starterCode": "const month = 'Jan';\nswitch (month) {\n  case 'Dec':\n  case 'Jan':\n  case 'Feb':\n    console.log('winter');\n    break;\n  case 'Mar':\n  case 'Apr':\n  case 'May':\n    console.log('spring');\n    break;\n  default:\n    console.log('other');\n}",
-  "solution": "const month = 'Jan';\nswitch (month) {\n  case 'Dec':\n  case 'Jan':\n  case 'Feb':\n    console.log('winter');\n    break;\n  case 'Mar':\n  case 'Apr':\n  case 'May':\n    console.log('spring');\n    break;\n  default:\n    console.log('other');\n}",
+  "id": "04-control-flow-01-if-else-switch-15",
+  "title": "Form validation multiple conditions",
+  "starterCode": "// function validateForm(name, email, age) mein three values do\n// Name empty: \"Name is required\"\n// Email mein @ nahi: \"Invalid email\"\n// Age < 18: \"Must be 18+\"\n// Sab valid: \"Form is valid\"\n",
+  "solution": "function validateForm(name, email, age) {\n  if (!name) return \"Name is required\"\n  if (!email.includes(\"@\")) return \"Invalid email\"\n  if (age < 18) return \"Must be 18+\"\n  return \"Form is valid\"\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "winter"
+      "input": [
+        "",
+        "test@test.com",
+        25
+      ],
+      "expected": "Name is required"
+    },
+    {
+      "input": [
+        "Hariom",
+        "invalid",
+        25
+      ],
+      "expected": "Invalid email"
+    },
+    {
+      "input": [
+        "Hariom",
+        "test@test.com",
+        15
+      ],
+      "expected": "Must be 18+"
+    },
+    {
+      "input": [
+        "Hariom",
+        "test@test.com",
+        25
+      ],
+      "expected": "Form is valid"
     }
   ],
   "hints": [
-    "Multiple cases can share code",
-    "Jan matches, falls to winter"
+    "Har validation ke liye alag if check karo",
+    "Guard clause pattern use karo pehle pehle"
   ]
 }

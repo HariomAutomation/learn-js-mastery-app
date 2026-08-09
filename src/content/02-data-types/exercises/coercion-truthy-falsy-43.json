@@ -1,16 +1,20 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-43",
-  "title": "Multiply with string",
-  "starterCode": "console.log(\"3\" * 2);",
-  "solution": "console.log(\"3\" * 2);",
+  "id": "02-data-types-03-coercion-truthy-falsy-43",
+  "title": "Symbol.toPrimitive with hint",
+  "starterCode": "const temp = {\n  celsius: 100,\n  [Symbol.toPrimitive](hint) {\n    if (hint === \"number\") return this.celsius\n    if (hint === \"string\") return this.celsius + \"°C\"\n    return this.celsius + 273.15\n  }\n}\nreturn {\n  asNum: +temp,\n  asStr: \"\" + temp,\n  asDefault: temp + 0\n}\n",
+  "solution": "const temp = {\n  celsius: 100,\n  [Symbol.toPrimitive](hint) {\n    if (hint === \"number\") return this.celsius\n    if (hint === \"string\") return this.celsius + \"°C\"\n    return this.celsius + 273.15\n  }\n}\nreturn {\n  asNum: +temp,\n  asStr: \"\" + temp,\n  asDefault: temp + 0\n}",
   "tests": [
     {
       "input": [],
-      "expected": "6"
+      "expected": {
+        "asNum": 100,
+        "asStr": "100°C",
+        "asDefault": 373.15
+      }
     }
   ],
   "hints": [
-    "* does math",
-    "String is converted to number"
+    "hint 'default' tab aata hai jab + use hota hai",
+    "Har hint ke liye alag behavior de sakte ho"
   ]
 }

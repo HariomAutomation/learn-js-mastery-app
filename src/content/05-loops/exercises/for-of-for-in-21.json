@@ -1,16 +1,23 @@
 {
-  "id": "05-loops-for-of-for-in-21",
-  "title": "For...In Alphabetical Keys",
-  "starterCode": "const obj = {c: 3, a: 1, b: 2};\nconst sorted = Object.keys(obj).sort();\nfor (const key of sorted) {\n  console.log(key + ':' + obj[key]);\n}",
-  "solution": "const obj = {c: 3, a: 1, b: 2};\nconst sorted = Object.keys(obj).sort();\nfor (const key of sorted) {\n  console.log(key + ':' + obj[key]);\n}",
+  "id": "05-02-for-of-for-in-21",
+  "title": "For-of se array ke sum aur average nikalo",
+  "starterCode": "function sumAndAvg(arr) {\n  // TODO: sum aur average return karo object me\n}",
+  "solution": "function sumAndAvg(arr) {\n  let sum = 0;\n  for (const num of arr) sum += num;\n  return { sum, average: arr.length ? sum / arr.length : 0 };\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "a:1\nb:2\nc:3"
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "expected": "{\"sum\":10,\"average\":2.5}"
     }
   ],
   "hints": [
-    "Sort keys alphabetically",
-    "Use for...of on sorted array"
+    "For-me sum karo",
+    "Length se divide karo average ke liye"
   ]
 }

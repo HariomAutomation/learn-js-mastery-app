@@ -1,16 +1,16 @@
 {
-  "id": "03-operators-arithmetic-comparison-06",
-  "title": "Exponentiation",
-  "starterCode": "const result = 2 ** 3;\nconsole.log(result);",
-  "solution": "const result = 2 ** 3;\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-06",
+  "title": "Circle area calculate karo",
+  "starterCode": "// Radius 5 hai, area = π × r²\nconst radius = 5\n// TODO: Math.PI use karo\n",
+  "solution": "const radius = 5\nconst area = Math.PI * radius * radius\nreturn area",
   "tests": [
     {
       "input": [],
-      "expected": "8"
+      "expected": 78.53981633974483
     }
   ],
   "hints": [
-    "Use the ** operator",
-    "2 raised to the power of 3"
+    "Math.PI se pi milta hai",
+    "Area = π * r * r"
   ]
 }

@@ -1,16 +1,18 @@
 {
-  "id": "05-loops-for-while-01",
-  "title": "For Loop Basics",
-  "starterCode": "for (let i = 0; i < 5; i++) {\n  console.log(i);\n}",
-  "solution": "for (let i = 0; i < 5; i++) {\n  console.log(i);\n}",
+  "id": "05-01-for-while-01",
+  "title": "1 se n tak sum nikalo using for loop",
+  "starterCode": "function sumToN(n) {\n  // TODO: 1+2+...+n return karo\n}",
+  "solution": "function sumToN(n) {\n  let sum = 0;\n  for (let i = 1; i <= n; i++) sum += i;\n  return sum;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "0\n1\n2\n3\n4"
+      "input": [
+        10
+      ],
+      "expected": 55
     }
   ],
   "hints": [
-    "Initialize i at 0",
-    "Use i++ to increment"
+    "For loop 1 se n tak chalao",
+    "Sum variable initialize karo 0 se"
   ]
 }

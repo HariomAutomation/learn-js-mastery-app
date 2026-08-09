@@ -1,16 +1,18 @@
 {
-  "id": "05-loops-for-while-34",
-  "title": "Fibonacci Loop",
-  "starterCode": "let a = 0, b = 1;\nfor (let i = 0; i < 7; i++) {\n  console.log(a);\n  let temp = a;\n  a = b;\n  b = temp + b;\n}",
-  "solution": "let a = 0, b = 1;\nfor (let i = 0; i < 7; i++) {\n  console.log(a);\n  let temp = a;\n  a = b;\n  b = temp + b;\n}",
+  "id": "05-01-for-while-34",
+  "title": "While loop se digit sum nikalo recursively ki jagah",
+  "starterCode": "function digitSum(n) {\n  // TODO: number ke digits ka sum using while\n}",
+  "solution": "function digitSum(n) {\n  let sum = 0;\n  let num = Math.abs(n);\n  while (num > 0) {\n    sum += num % 10;\n    num = Math.floor(num / 10);\n  }\n  return sum;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "0\n1\n1\n2\n3\n5\n8"
+      "input": [
+        1234
+      ],
+      "expected": 10
     }
   ],
   "hints": [
-    "Start with 0 and 1",
-    "Swap and add"
+    "%10 se last digit nikalo aur sum me add karo",
+    "/10 se last digit hatao"
   ]
 }

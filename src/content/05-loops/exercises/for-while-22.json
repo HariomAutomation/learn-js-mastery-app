@@ -1,16 +1,19 @@
 {
-  "id": "05-loops-for-while-22",
-  "title": "Reverse String Loop",
-  "starterCode": "const str = \"Hello\";\nlet reversed = \"\";\nfor (let i = str.length - 1; i >= 0; i--) {\n  reversed += str[i];\n}\nconsole.log(reversed);",
-  "solution": "const str = \"Hello\";\nlet reversed = \"\";\nfor (let i = str.length - 1; i >= 0; i--) {\n  reversed += str[i];\n}\nconsole.log(reversed);",
+  "id": "05-01-for-while-22",
+  "title": "While loop se power function banao",
+  "starterCode": "function power(base, exp) {\n  // TODO: base^exp while loop se calculate karo\n}",
+  "solution": "function power(base, exp) {\n  let result = 1;\n  let i = exp;\n  while (i > 0) {\n    result *= base;\n    i--;\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "olleH"
+      "input": [
+        2,
+        3
+      ],
+      "expected": 8
     }
   ],
   "hints": [
-    "Start from last index",
-    "Decrement i"
+    "Result 1 se initialize karo",
+    "Exp baar multiply karo"
   ]
 }

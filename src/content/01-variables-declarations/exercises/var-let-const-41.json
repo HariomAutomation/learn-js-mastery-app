@@ -1,0 +1,16 @@
+{
+  "id": "01-variables-declarations-var-let-const-41",
+  "title": "Variable hoisting quiz",
+  "starterCode": "// What does this return?\nvar a = 1\nfunction a() {}\nconsole.log(typeof a)\nreturn typeof a\n",
+  "solution": "var a = 1\nfunction a() {}\nconsole.log(typeof a)\nreturn typeof a",
+  "tests": [
+    {
+      "input": [],
+      "expected": "number"
+    }
+  ],
+  "hints": [
+    "Function declaration hoisted, but var assignment overwrites it",
+    "a becomes 1 (number) after assignment"
+  ]
+}

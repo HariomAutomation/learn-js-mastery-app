@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-variables-intro-18",
-  "title": "const array push",
-  "starterCode": "const arr = [1, 2]\narr.push(3)\nconsole.log(arr)",
-  "solution": "const arr = [1, 2]\narr.push(3)\nconsole.log(arr)",
+  "title": "Redeclaration error fix karo",
+  "starterCode": "// Bug: do var declarations error nahi deti — ye galat hai\n// Fix karo using let (error aana chahiye)\ntry {\n  let x = 1\n  let x = 2\n  return \"no error\"\n} catch(e) {\n  return \"error caught\"\n}\n",
+  "solution": "try {\n  let x = 1\n  let x = 2\n  return \"no error\"\n} catch(e) {\n  return \"error caught\"\n}",
   "tests": [
     {
       "input": [],
-      "expected": "[1,2,3]"
+      "expected": "error caught"
     }
   ],
   "hints": [
-    "const allows mutation"
+    "let se same scope mein dobara declare nahi kar sakte",
+    "var se redeclaration allowed hai, let/const se nahi"
   ]
 }

@@ -1,16 +1,42 @@
 {
-  "id": "04-control-flow-if-else-switch-26",
-  "title": "Multiple if/else if conditions",
-  "starterCode": "const temp = 25;\nif (temp < 0) {\n  console.log('freezing');\n} else if (temp < 15) {\n  console.log('cold');\n} else if (temp < 25) {\n  console.log('mild');\n} else {\n  console.log('hot');\n}",
-  "solution": "const temp = 25;\nif (temp < 0) {\n  console.log('freezing');\n} else if (temp < 15) {\n  console.log('cold');\n} else if (temp < 25) {\n  console.log('mild');\n} else {\n  console.log('hot');\n}",
+  "id": "04-control-flow-01-if-else-switch-26",
+  "title": "Nested ternary se grade batao",
+  "starterCode": "// function gradeFromScore(score) mein number do\n// >=90: \"A\", >=80: \"B\", >=70: \"C\", >=60: \"D\", <60: \"F\"\n// Nested ternary operator use karo\n",
+  "solution": "function gradeFromScore(score) {\n  return score >= 90 ? \"A\" : score >= 80 ? \"B\" : score >= 70 ? \"C\" : score >= 60 ? \"D\" : \"F\"\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "hot"
+      "input": [
+        95
+      ],
+      "expected": "A"
+    },
+    {
+      "input": [
+        85
+      ],
+      "expected": "B"
+    },
+    {
+      "input": [
+        75
+      ],
+      "expected": "C"
+    },
+    {
+      "input": [
+        65
+      ],
+      "expected": "D"
+    },
+    {
+      "input": [
+        50
+      ],
+      "expected": "F"
     }
   ],
   "hints": [
-    "25 is not < 0, not < 15, not < 25",
-    "Falls to else"
+    "condition ? true : false syntax use karo",
+    "Nested ternary ek line mein chalta hai"
   ]
 }

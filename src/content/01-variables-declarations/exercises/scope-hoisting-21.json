@@ -1,15 +1,20 @@
 {
   "id": "01-variables-declarations-scope-hoisting-21",
-  "title": "let loop scope",
-  "starterCode": "for (let i = 0; i < 3; i++) {\n  let x = i * 10\n  if (x === 20) console.log(x)\n}",
-  "solution": "for (let i = 0; i < 3; i++) {\n  let x = i * 10\n  if (x === 20) console.log(x)\n}",
+  "title": "Closure in loop — fix",
+  "starterCode": "// Fix: each function should return its index\nconst fns = []\nfor (var i = 0; i < 3; i++) {\n  fns.push(function() { return i })\n}\nreturn fns.map(f => f())\n",
+  "solution": "const fns = []\nfor (let i = 0; i < 3; i++) {\n  fns.push(function() { return i })\n}\nreturn fns.map(f => f())",
   "tests": [
     {
       "input": [],
-      "expected": "20"
+      "expected": [
+        0,
+        1,
+        2
+      ]
     }
   ],
   "hints": [
-    "let scoped to loop iteration"
+    "Change var to let for per-iteration scope",
+    "Each closure captures different i"
   ]
 }

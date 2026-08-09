@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-variables-intro-08",
-  "title": "Boolean negation",
-  "starterCode": "const isRaining = false\nconsole.log(!isRaining)",
-  "solution": "const isRaining = false\nconsole.log(!isRaining)",
+  "title": "Discount calculator",
+  "starterCode": "const originalPrice = 1000\nconst discountPercent = 20\n// Final price calculate karo aur return karo\n",
+  "solution": "const originalPrice = 1000\nconst discountPercent = 20\nconst finalPrice = originalPrice - (originalPrice * discountPercent / 100)\nreturn finalPrice",
   "tests": [
     {
       "input": [],
-      "expected": "true"
+      "expected": 800
     }
   ],
   "hints": [
-    "! inverts boolean"
+    "Discount = price * percent / 100",
+    "Final = original - discount"
   ]
 }

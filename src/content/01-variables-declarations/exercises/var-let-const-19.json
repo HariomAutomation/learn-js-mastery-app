@@ -1,15 +1,15 @@
 {
   "id": "01-variables-declarations-var-let-const-19",
-  "title": "var name shadow",
-  "starterCode": "var x = 1\nfunction test() {\n  var x = 2\n  console.log(x)\n}\ntest()\nconsole.log(x)",
-  "solution": "var x = 1\nfunction test() {\n  var x = 2\n  console.log(x)\n}\ntest()\nconsole.log(x)",
+  "title": "var in nested functions",
+  "starterCode": "function a() {\n  var x = 1\n  function b() {\n    var x = 2\n    function c() {\n      return x\n    }\n    return c()\n  }\n  return b()\n}\nreturn a()\n",
+  "solution": "function a() {\n  var x = 1\n  function b() {\n    var x = 2\n    function c() {\n      return x\n    }\n    return c()\n  }\n  return b()\n}\nreturn a()",
   "tests": [
     {
       "input": [],
-      "expected": "2\n1"
+      "expected": 2
     }
   ],
   "hints": [
-    "Function var shadows global"
+    "c() mein sabse paas ka x = 2 milta hai"
   ]
 }

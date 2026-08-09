@@ -1,16 +1,33 @@
 {
-  "id": "04-control-flow-early-return-32",
-  "title": "Guard benefits - clean code",
-  "starterCode": "function divide(a, b) {\n  if (b === 0) return Infinity;\n  return a / b;\n}\nconsole.log(divide(10, 0));",
-  "solution": "function divide(a, b) {\n  if (b === 0) return Infinity;\n  return a / b;\n}\nconsole.log(divide(10, 0));",
+  "id": "04-control-flow-02-early-return-32",
+  "title": "Guard for string length",
+  "starterCode": "// function truncate(str, maxLen) mein string aur max length do\n// Agar string nahi: \"\"\n// Agar length <= maxLen: original string\n// Warna truncated string with \"...\" do\n",
+  "solution": "function truncate(str, maxLen) {\n  if (typeof str !== \"string\") return \"\"\n  if (str.length <= maxLen) return str\n  return str.slice(0, maxLen) + \"...\"\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "Infinity"
+      "input": [
+        "Hello World",
+        5
+      ],
+      "expected": "Hello..."
+    },
+    {
+      "input": [
+        "Hi",
+        10
+      ],
+      "expected": "Hi"
+    },
+    {
+      "input": [
+        null,
+        5
+      ],
+      "expected": ""
     }
   ],
   "hints": [
-    "b is 0, guard returns Infinity",
-    "No nested else needed"
+    "Slice se pehle maxLen characters lo",
+    "... add karo end mein"
   ]
 }

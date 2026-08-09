@@ -1,16 +1,22 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-33",
-  "title": "String 'false' is truthy",
-  "starterCode": "console.log(Boolean(\"false\"));",
-  "solution": "console.log(Boolean(\"false\"));",
+  "id": "02-data-types-03-coercion-truthy-falsy-33",
+  "title": "Number.isInteger check",
+  "starterCode": "return {\n  isInt42: Number.isInteger(42),\n  isInt42_5: Number.isInteger(42.5),\n  isIntStr: Number.isInteger(\"42\"),\n  isIntNaN: Number.isInteger(NaN),\n  isIntInf: Number.isInteger(Infinity)\n}\n",
+  "solution": "return {\n  isInt42: Number.isInteger(42),\n  isInt42_5: Number.isInteger(42.5),\n  isIntStr: Number.isInteger(\"42\"),\n  isIntNaN: Number.isInteger(NaN),\n  isIntInf: Number.isInteger(Infinity)\n}",
   "tests": [
     {
       "input": [],
-      "expected": "true"
+      "expected": {
+        "isInt42": true,
+        "isInt42_5": false,
+        "isIntStr": false,
+        "isIntNaN": false,
+        "isIntInf": false
+      }
     }
   ],
   "hints": [
-    "Any non-empty string is truthy",
-    "Even the string 'false'"
+    "Number.isInteger() sirf integers ke liye true deta hai",
+    "Strings aur NaN ke liye false"
   ]
 }

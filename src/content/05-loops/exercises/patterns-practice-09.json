@@ -1,16 +1,25 @@
 {
-  "id": "05-loops-patterns-practice-09",
-  "title": "Matrix Traversal",
-  "starterCode": "const m = [[1,2,3],[4,5,6],[7,8,9]];\nfor (let i = 0; i < 3; i++) {\n  for (let j = 0; j < 3; j++) {\n    process.stdout.write(m[i][j] + ' ');\n  }\n  console.log();\n}",
-  "solution": "const m = [[1,2,3],[4,5,6],[7,8,9]];\nfor (let i = 0; i < 3; i++) {\n  for (let j = 0; j < 3; j++) {\n    process.stdout.write(m[i][j] + ' ');\n  }\n  console.log();\n}",
+  "id": "05-03-patterns-practice-09",
+  "title": "2D array ko 1D array me flatten karo",
+  "starterCode": "function flatten2D(arr) {\n  // TODO: [[1,2],[3,4],[5]] -> [1,2,3,4,5]\n}",
+  "solution": "function flatten2D(arr) {\n  const result = [];\n  for (const row of arr) {\n    for (const item of row) result.push(item);\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "1 2 3 \n4 5 6 \n7 8 9 "
+      "input": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "expected": "1,2,3,4"
     }
   ],
   "hints": [
-    "Outer for rows",
-    "Inner for columns"
+    "Nested loop se traverse karo",
+    "Har element ko result me push karo"
   ]
 }

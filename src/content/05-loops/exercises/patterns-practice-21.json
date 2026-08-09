@@ -1,16 +1,25 @@
 {
-  "id": "05-loops-patterns-practice-21",
-  "title": "Reverse Matrix Rows",
-  "starterCode": "const m = [[1,2,3],[4,5,6],[7,8,9]];\nfor (let i = 0; i < m.length; i++) {\n  let row = '';\n  for (let j = m[i].length - 1; j >= 0; j--) {\n    row += m[i][j] + ' ';\n  }\n  console.log(row);\n}",
-  "solution": "const m = [[1,2,3],[4,5,6],[7,8,9]];\nfor (let i = 0; i < m.length; i++) {\n  let row = '';\n  for (let j = m[i].length - 1; j >= 0; j--) {\n    row += m[i][j] + ' ';\n  }\n  console.log(row);\n}",
+  "id": "05-03-patterns-practice-21",
+  "title": "Nested loop se array ke triplets dhundho jinka sum zero ho",
+  "starterCode": "function threeSum(arr) {\n  // TODO: sab triplets dhundho jinka sum 0 ho\n}",
+  "solution": "function threeSum(arr) {\n  const result = [];\n  const sorted = [...arr].sort((a, b) => a - b);\n  for (let i = 0; i < sorted.length - 2; i++) {\n    if (i > 0 && sorted[i] === sorted[i-1]) continue;\n    let left = i + 1, right = sorted.length - 1;\n    while (left < right) {\n      const sum = sorted[i] + sorted[left] + sorted[right];\n      if (sum === 0) {\n        result.push([sorted[i], sorted[left], sorted[right]]);\n        while (left < right && sorted[left] === sorted[left+1]) left++;\n        while (left < right && sorted[right] === sorted[right-1]) right--;\n        left++; right--;\n      } else if (sum < 0) left++;\n      else right--;\n    }\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "3 2 1 \n6 5 4 \n9 8 7 "
+      "input": [
+        [
+          -1,
+          0,
+          1,
+          2,
+          -1,
+          -4
+        ]
+      ],
+      "expected": "[[-1,-1,2],[-1,0,1]]"
     }
   ],
   "hints": [
-    "Iterate backwards",
-    "Build row string"
+    "Array sort karo pehle",
+    "Ek element fix karo aur two pointers use karo baaki ke liye"
   ]
 }

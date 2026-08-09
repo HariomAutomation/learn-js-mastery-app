@@ -1,16 +1,22 @@
 {
-  "id": "03-operators-logical-ternary-50",
-  "title": "Optional chaining with method on null",
-  "starterCode": "const obj = null;\nconst result = obj?.toString();\nconsole.log(result);",
-  "solution": "const obj = null;\nconst result = obj?.toString();\nconsole.log(result);",
+  "id": "03-operators-02-logical-ternary-50",
+  "title": "Complete logical assessment",
+  "starterCode": "// E-commerce pricing logic implement karo\nconst item = { price: 2000, category: \"electronics\", isMember: true, couponCode: \"SAVE10\" }\n// TODO: calculate final price with all conditions\n",
+  "solution": "const item = { price: 2000, category: \"electronics\", isMember: true, couponCode: \"SAVE10\" }\nconst basePrice = item.price\nconst memberDiscount = item.isMember ? basePrice * 0.1 : 0\nconst categoryDiscount = item.category === \"electronics\" ? (basePrice - memberDiscount) * 0.05 : 0\nconst couponDiscount = item.couponCode === \"SAVE10\" ? (basePrice - memberDiscount - categoryDiscount) * 0.1 : 0\nconst finalPrice = basePrice - memberDiscount - categoryDiscount - couponDiscount\nreturn { basePrice, memberDiscount, categoryDiscount, couponDiscount, finalPrice }",
   "tests": [
     {
       "input": [],
-      "expected": "undefined"
+      "expected": {
+        "basePrice": 2000,
+        "memberDiscount": 200,
+        "categoryDiscount": 90,
+        "couponDiscount": 171,
+        "finalPrice": 1539
+      }
     }
   ],
   "hints": [
-    "?. returns undefined if object is null",
-    "No error is thrown"
+    "Ternary se discounts conditionally apply karo",
+    "Order matters — pehle member discount"
   ]
 }

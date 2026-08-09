@@ -1,16 +1,21 @@
 {
-  "id": "03-operators-logical-ternary-10",
-  "title": "Nested ternary",
-  "starterCode": "const score = 85;\nconst result = score >= 90 ? 'A' : score >= 80 ? 'B' : 'C';\nconsole.log(result);",
-  "solution": "const score = 85;\nconst result = score >= 90 ? 'A' : score >= 80 ? 'B' : 'C';\nconsole.log(result);",
+  "id": "03-operators-02-logical-ternary-10",
+  "title": "Nullish vs OR difference",
+  "starterCode": "// Dono operators ka difference dekho\nconst zero = 0\nconst empty = \"\"\nconst falseVal = false\nreturn {\n  orZero: zero || \"default\",\n  nullishZero: zero ?? \"default\",\n  orEmpty: empty || \"default\",\n  nullishEmpty: empty ?? \"default\"\n}",
+  "solution": "const zero = 0\nconst empty = \"\"\nconst falseVal = false\nreturn {\n  orZero: zero || \"default\",\n  nullishZero: zero ?? \"default\",\n  orEmpty: empty || \"default\",\n  nullishEmpty: empty ?? \"default\"\n}",
   "tests": [
     {
       "input": [],
-      "expected": "B"
+      "expected": {
+        "orZero": "default",
+        "nullishZero": 0,
+        "orEmpty": "default",
+        "nullishEmpty": ""
+      }
     }
   ],
   "hints": [
-    "85 is not >= 90, so check second ternary",
-    "85 >= 80 is true"
+    "|| falsy values ke liye bhi default deta hai",
+    "?? sirf null/undefined ke liye default deta hai"
   ]
 }

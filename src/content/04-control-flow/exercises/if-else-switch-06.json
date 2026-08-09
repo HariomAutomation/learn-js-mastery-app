@@ -1,16 +1,33 @@
 {
-  "id": "04-control-flow-if-else-switch-06",
-  "title": "Switch/case basic",
-  "starterCode": "const day = 'Monday';\nswitch (day) {\n  case 'Monday':\n    console.log('Start of week');\n    break;\n  case 'Friday':\n    console.log('End of week');\n    break;\n  default:\n    console.log('Midweek');\n}",
-  "solution": "const day = 'Monday';\nswitch (day) {\n  case 'Monday':\n    console.log('Start of week');\n    break;\n  case 'Friday':\n    console.log('End of week');\n    break;\n  default:\n    console.log('Midweek');\n}",
+  "id": "04-control-flow-01-if-else-switch-06",
+  "title": "Nested if se voting eligibility check",
+  "starterCode": "// function canVote(age, citizen) mein age aur boolean citizen do\n// citizen true aur age >= 18: \"Eligible to vote\"\n// citizen false: \"Not a citizen\"\n// age < 18: \"Too young\"\n",
+  "solution": "function canVote(age, citizen) {\n  if (citizen) {\n    if (age >= 18) return \"Eligible to vote\"\n    else return \"Too young\"\n  } else {\n    return \"Not a citizen\"\n  }\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "Start of week"
+      "input": [
+        25,
+        true
+      ],
+      "expected": "Eligible to vote"
+    },
+    {
+      "input": [
+        15,
+        true
+      ],
+      "expected": "Too young"
+    },
+    {
+      "input": [
+        30,
+        false
+      ],
+      "expected": "Not a citizen"
     }
   ],
   "hints": [
-    "switch matches day against cases",
-    "Monday matches first case"
+    "Pehle citizenship check karo",
+    "Phir nested mein age check karo"
   ]
 }

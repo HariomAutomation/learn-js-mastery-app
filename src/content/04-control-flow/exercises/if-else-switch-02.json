@@ -1,16 +1,30 @@
 {
-  "id": "04-control-flow-if-else-switch-02",
-  "title": "If statement with falsy condition",
-  "starterCode": "const age = 15;\nif (age >= 18) {\n  console.log('adult');\n}",
-  "solution": "const age = 15;\nif (age >= 18) {\n  console.log('adult');\n}",
+  "id": "04-control-flow-01-if-else-switch-02",
+  "title": "Positive, negative ya zero check",
+  "starterCode": "// function checkNumber(num) mein number do\n// positive, negative, ya zero return karo\n",
+  "solution": "function checkNumber(num) {\n  if (num > 0) return \"positive\"\n  else if (num < 0) return \"negative\"\n  else return \"zero\"\n}",
   "tests": [
     {
-      "input": [],
-      "expected": ""
+      "input": [
+        5
+      ],
+      "expected": "positive"
+    },
+    {
+      "input": [
+        -3
+      ],
+      "expected": "negative"
+    },
+    {
+      "input": [
+        0
+      ],
+      "expected": "zero"
     }
   ],
   "hints": [
-    "15 >= 18 is false",
-    "Block doesn't execute"
+    "num > 0 se positive check hota hai",
+    "num < 0 se negative check hota hai"
   ]
 }

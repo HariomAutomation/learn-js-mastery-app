@@ -1,16 +1,20 @@
 {
-  "id": "03-operators-logical-ternary-46",
-  "title": "Logical AND for conditional execution",
-  "starterCode": "const showGreeting = true;\nconst result = showGreeting && 'Welcome!';\nconsole.log(result);",
-  "solution": "const showGreeting = true;\nconst result = showGreeting && 'Welcome!';\nconsole.log(result);",
+  "id": "03-operators-02-logical-ternary-46",
+  "title": "Nullish in API response",
+  "starterCode": "// API response handle karo with defaults\nconst response = { data: { user: { name: \"Hariom\", settings: null } } }\n// TODO: safe access with defaults\n",
+  "solution": "const response = { data: { user: { name: \"Hariom\", settings: null } } }\nreturn {\n  name: response?.data?.user?.name ?? \"Unknown\",\n  theme: response?.data?.user?.settings?.theme ?? \"light\",\n  fontSize: response?.data?.user?.settings?.fontSize ?? 14\n}",
   "tests": [
     {
       "input": [],
-      "expected": "Welcome!"
+      "expected": {
+        "name": "Hariom",
+        "theme": "light",
+        "fontSize": 14
+      }
     }
   ],
   "hints": [
-    "&& returns last value if all truthy",
-    "showGreeting is true"
+    "?. se safe nested access",
+    "?? se default values"
   ]
 }

@@ -1,6 +1,11 @@
 import type { Exercise } from "@/types/content"
-import allExercises from "@/data/all-exercises.json"
 
-export function loadExercisesForLesson(lessonId: string): Exercise[] {
-  return (allExercises as Record<string, Exercise[]>)[lessonId] ?? []
+let cache: Record<string, Exercise[]> | null = null
+
+export async function loadExercisesForLesson(lessonId: string): Promise<Exercise[]> {
+  if (!cache) {
+    const data = await import("@/data/all-exercises.json")
+    cache = data.default as Record<string, Exercise[]>
+  }
+  return cache[lessonId] ?? []
 }

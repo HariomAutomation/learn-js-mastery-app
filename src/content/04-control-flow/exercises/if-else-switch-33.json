@@ -1,16 +1,36 @@
 {
-  "id": "04-control-flow-if-else-switch-33",
-  "title": "If with array check",
-  "starterCode": "const items = [1, 2, 3];\nif (items.length > 0) {\n  console.log('has items');\n} else {\n  console.log('empty');\n}",
-  "solution": "const items = [1, 2, 3];\nif (items.length > 0) {\n  console.log('has items');\n} else {\n  console.log('empty');\n}",
+  "id": "04-control-flow-01-if-else-switch-33",
+  "title": "Switch se day type batao",
+  "starterCode": "// function dayType(day) mein string day name do\n// \"Monday\"-\"Friday\": \"Weekday\", \"Saturday\",\"Sunday\": \"Weekend\"\n// Invalid: \"Invalid day\"\n",
+  "solution": "function dayType(day) {\n  switch (day.toLowerCase()) {\n    case \"monday\": case \"tuesday\": case \"wednesday\": case \"thursday\": case \"friday\":\n      return \"Weekday\"\n    case \"saturday\": case \"sunday\":\n      return \"Weekend\"\n    default:\n      return \"Invalid day\"\n  }\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "has items"
+      "input": [
+        "Monday"
+      ],
+      "expected": "Weekday"
+    },
+    {
+      "input": [
+        "Friday"
+      ],
+      "expected": "Weekday"
+    },
+    {
+      "input": [
+        "Saturday"
+      ],
+      "expected": "Weekend"
+    },
+    {
+      "input": [
+        "Funday"
+      ],
+      "expected": "Invalid day"
     }
   ],
   "hints": [
-    "items.length is 3",
-    "3 > 0 is true"
+    "Fall-through se weekdays group karo",
+    "toLowerCase se case-insensitive karo"
   ]
 }

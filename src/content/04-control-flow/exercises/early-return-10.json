@@ -1,16 +1,48 @@
 {
-  "id": "04-control-flow-early-return-10",
-  "title": "Error handling early return",
-  "starterCode": "function parseJSON(str) {\n  if (typeof str !== 'string') return null;\n  try {\n    return JSON.parse(str);\n  } catch {\n    return null;\n  }\n}\nconsole.log(parseJSON('{\"a\": 1}'));",
-  "solution": "function parseJSON(str) {\n  if (typeof str !== 'string') return null;\n  try {\n    return JSON.parse(str);\n  } catch {\n    return null;\n  }\n}\nconsole.log(parseJSON('{\"a\": 1}'));",
+  "id": "04-control-flow-02-early-return-10",
+  "title": "API response handler with guards",
+  "starterCode": "// function extractData(response)\n// Agar response null: \"No response\"\n// Agar response.ok nahi: \"Request failed\"\n// Agar response.data nahi: \"No data\"\n// Warna response.data return karo\n",
+  "solution": "function extractData(response) {\n  if (!response) return \"No response\"\n  if (!response.ok) return \"Request failed\"\n  if (!response.data) return \"No data\"\n  return response.data\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "[object Object]"
+      "input": [
+        {
+          "ok": true,
+          "data": {
+            "users": []
+          }
+        }
+      ],
+      "expected": {
+        "users": []
+      }
+    },
+    {
+      "input": [
+        {
+          "ok": false,
+          "error": "404"
+        }
+      ],
+      "expected": "Request failed"
+    },
+    {
+      "input": [
+        {
+          "ok": true
+        }
+      ],
+      "expected": "No data"
+    },
+    {
+      "input": [
+        null
+      ],
+      "expected": "No response"
     }
   ],
   "hints": [
-    "str is a string, guard passes",
-    "JSON.parse succeeds"
+    "Har level pe ek ek guard clause lagao",
+    "Pehle existence, phir value check karo"
   ]
 }

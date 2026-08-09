@@ -1,16 +1,20 @@
 {
-  "id": "03-operators-logical-ternary-33",
-  "title": "NOT with falsy",
-  "starterCode": "const result = !0;\nconsole.log(result);",
-  "solution": "const result = !0;\nconsole.log(result);",
+  "id": "03-operators-02-logical-ternary-33",
+  "title": "Nullish with ternary",
+  "starterCode": "// Config values ko merge karo with defaults\nconst defaults = { color: \"blue\", size: \"medium\", weight: 10 }\nconst userConfig = { color: null, size: \"large\", weight: 0 }\n// TODO: merge with ?? and ternary\n",
+  "solution": "const defaults = { color: \"blue\", size: \"medium\", weight: 10 }\nconst userConfig = { color: null, size: \"large\", weight: 0 }\nreturn {\n  color: userConfig.color ?? defaults.color,\n  size: userConfig.size ?? defaults.size,\n  weight: userConfig.weight ?? defaults.weight\n}",
   "tests": [
     {
       "input": [],
-      "expected": "true"
+      "expected": {
+        "color": "blue",
+        "size": "large",
+        "weight": 0
+      }
     }
   ],
   "hints": [
-    "! converts to boolean then inverts",
-    "0 is falsy, so !0 is true"
+    "?? sirf null/undefined pe default lega",
+    "0 valid weight hai, default nahi replace karega"
   ]
 }

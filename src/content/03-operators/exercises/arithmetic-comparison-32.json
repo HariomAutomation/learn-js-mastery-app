@@ -1,16 +1,19 @@
 {
-  "id": "03-operators-arithmetic-comparison-32",
-  "title": "Math.round",
-  "starterCode": "const result = Math.round(4.5);\nconsole.log(result);",
-  "solution": "const result = Math.round(4.5);\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-32",
+  "title": "Number.isNaN use karo",
+  "starterCode": "// Precise NaN check karo\nconst val1 = NaN\nconst val2 = \"hello\"\nreturn {\n  val1IsNaN: Number.isNaN(val1),\n  val2IsNaN: Number.isNaN(val2)\n}",
+  "solution": "const val1 = NaN\nconst val2 = \"hello\"\nreturn {\n  val1IsNaN: Number.isNaN(val1),\n  val2IsNaN: Number.isNaN(val2)\n}",
   "tests": [
     {
       "input": [],
-      "expected": "5"
+      "expected": {
+        "val1IsNaN": true,
+        "val2IsNaN": false
+      }
     }
   ],
   "hints": [
-    "Math.round rounds to nearest integer",
-    ".5 rounds up"
+    "Number.isNaN() sirf actual NaN ko detect karta hai",
+    "isNaN() string ko bhi NaN maanta hai"
   ]
 }

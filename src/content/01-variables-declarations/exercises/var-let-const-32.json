@@ -1,15 +1,15 @@
 {
   "id": "01-variables-declarations-var-let-const-32",
-  "title": "let inside block",
-  "starterCode": "{\n  let x = 10\n}\nconsole.log(typeof x)",
-  "solution": "{\n  let x = 10\n}\nconsole.log(typeof x)",
+  "title": "Private counter class",
+  "starterCode": "// Private counter banao — count directly access nahi hona chahiye\nclass Counter {\n  #count = 0\n  // TODO: increment, decrement, getValue methods\n}\n",
+  "solution": "class Counter {\n  #count = 0\n  increment() { this.#count++ }\n  decrement() { this.#count-- }\n  getValue() { return this.#count }\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "undefined"
+      "input": []
     }
   ],
   "hints": [
-    "let is block-scoped"
+    "# se private field banti hai",
+    "Sirf methods se access ho sakta hai"
   ]
 }

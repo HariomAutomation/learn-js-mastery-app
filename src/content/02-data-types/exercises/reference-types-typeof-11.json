@@ -1,16 +1,25 @@
 {
-  "id": "02-data-types-reference-types-typeof-11",
-  "title": "Shallow copy with spread operator",
-  "starterCode": "const original = { a: 1, b: 2 };\nconst copy = ;\nconsole.log(copy);",
-  "solution": "const original = { a: 1, b: 2 };\nconst copy = { ...original };\nconsole.log(copy);",
+  "id": "02-data-types-02-reference-types-typeof-11",
+  "title": "Object freeze vs seal",
+  "starterCode": "const frozen = Object.freeze({ name: \"Hariom\", age: 25 })\ntry { frozen.age = 26 } catch(e) {}\ntry { frozen.name = \"Amit\" } catch(e) {}\nconst sealed = Object.seal({ name: \"Rahul\", age: 30 })\nsealed.age = 31\ntry { sealed.city = \"Delhi\" } catch(e) {}\nreturn {\n  frozen: frozen,\n  sealed: sealed\n}\n",
+  "solution": "const frozen = Object.freeze({ name: \"Hariom\", age: 25 })\ntry { frozen.age = 26 } catch(e) {}\ntry { frozen.name = \"Amit\" } catch(e) {}\nconst sealed = Object.seal({ name: \"Rahul\", age: 30 })\nsealed.age = 31\ntry { sealed.city = \"Delhi\" } catch(e) {}\nreturn {\n  frozen: frozen,\n  sealed: sealed\n}",
   "tests": [
     {
       "input": [],
-      "expected": "{ a: 1, b: 2 }"
+      "expected": {
+        "frozen": {
+          "name": "Hariom",
+          "age": 25
+        },
+        "sealed": {
+          "name": "Rahul",
+          "age": 31
+        }
+      }
     }
   ],
   "hints": [
-    "... spreads the properties",
-    "Creates a new object"
+    "freeze se kuch bhi modify nahi ho sakta",
+    "seal se existing properties modify ho sakti hain, add/delete nahi"
   ]
 }

@@ -42,12 +42,22 @@ export async function loadAllQuizQuestions(): Promise<QuizQuestion[]> {
   return results.flat()
 }
 
+function mulberry32(seed: number): () => number {
+  let a = seed >>> 0
+  return () => {
+    a = (a + 0x6d2b79f5) | 0
+    let t = Math.imul(a ^ (a >>> 15), 1 | a)
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296
+  }
+}
+
 export function shuffleQuestions<T>(items: T[], count: number, seed = 0): T[] {
   const pool = [...items]
+  const rand = mulberry32(seed)
   for (let i = pool.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1))
+    const j = Math.floor(rand() * (i + 1))
     ;[pool[i], pool[j]] = [pool[j], pool[i]]
   }
-  void seed
   return pool.slice(0, count)
 }

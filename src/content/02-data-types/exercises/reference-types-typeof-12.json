@@ -1,16 +1,21 @@
 {
-  "id": "02-data-types-reference-types-typeof-12",
-  "title": "Shallow copy with Object.assign",
-  "starterCode": "const original = { a: 1 };\nconst copy = ;\nconsole.log(copy);",
-  "solution": "const original = { a: 1 };\nconst copy = Object.assign({}, original);\nconsole.log(copy);",
+  "id": "02-data-types-02-reference-types-typeof-12",
+  "title": "Map vs Object for dynamic keys",
+  "starterCode": "const map = new Map()\nconst objKey = { id: 1 }\nmap.set(objKey, \"user1\")\nmap.set(42, \"answer\")\nmap.set(\"name\", \"Hariom\")\nreturn {\n  user: map.get(objKey),\n  answer: map.get(42),\n  name: map.get(\"name\"),\n  size: map.size\n}\n",
+  "solution": "const map = new Map()\nconst objKey = { id: 1 }\nmap.set(objKey, \"user1\")\nmap.set(42, \"answer\")\nmap.set(\"name\", \"Hariom\")\nreturn {\n  user: map.get(objKey),\n  answer: map.get(42),\n  name: map.get(\"name\"),\n  size: map.size\n}",
   "tests": [
     {
       "input": [],
-      "expected": "{ a: 1 }"
+      "expected": {
+        "user": "user1",
+        "answer": "answer",
+        "name": "Hariom",
+        "size": 3
+      }
     }
   ],
   "hints": [
-    "Object.assign copies properties",
-    "First arg is target, rest are sources"
+    "Map mein koi bhi type key ho sakti hai",
+    "Object mein sirf string/symbol keys hoti hain"
   ]
 }

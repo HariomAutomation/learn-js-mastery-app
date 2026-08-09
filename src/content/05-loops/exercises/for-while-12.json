@@ -1,16 +1,19 @@
 {
-  "id": "05-loops-for-while-12",
-  "title": "Loop Variable Scope",
-  "starterCode": "for (let i = 0; i < 3; i++) {\n  console.log(i);\n}",
-  "solution": "for (let i = 0; i < 3; i++) {\n  console.log(i);\n}",
+  "id": "05-01-for-while-12",
+  "title": "While loop se GCD nikalo",
+  "starterCode": "function gcd(a, b) {\n  // TODO: Euclidean algorithm while loop se implement karo\n}",
+  "solution": "function gcd(a, b) {\n  while (b !== 0) {\n    [a, b] = [b, a % b];\n  }\n  return a;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "0\n1\n2"
+      "input": [
+        12,
+        8
+      ],
+      "expected": 4
     }
   ],
   "hints": [
-    "let in for loop is block scoped",
-    "i only accessible inside loop"
+    "Jab tak b 0 nahi hota tab tak: a=b, b=a%b",
+    "Loop ke baad a me GCD hoga"
   ]
 }

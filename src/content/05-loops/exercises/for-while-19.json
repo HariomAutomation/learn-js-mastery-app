@@ -1,16 +1,18 @@
 {
-  "id": "05-loops-for-while-19",
-  "title": "Modulo Pattern",
-  "starterCode": "for (let i = 1; i <= 10; i++) {\n  if (i % 2 === 0) console.log(i);\n}",
-  "solution": "for (let i = 1; i <= 10; i++) {\n  if (i % 2 === 0) console.log(i);\n}",
+  "id": "05-01-for-while-19",
+  "title": "While loop se decimal to binary convert karo",
+  "starterCode": "function toBinary(n) {\n  // TODO: number ko binary string me convert karo using while\n}",
+  "solution": "function toBinary(n) {\n  if (n === 0) return \"0\";\n  let binary = \"\";\n  let num = Math.abs(n);\n  while (num > 0) {\n    binary = (num % 2) + binary;\n    num = Math.floor(num / 2);\n  }\n  return n < 0 ? \"-\" + binary : binary;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "2\n4\n6\n8\n10"
+      "input": [
+        10
+      ],
+      "expected": "1010"
     }
   ],
   "hints": [
-    "Use modulo to check even",
-    "i % 2 === 0 means even"
+    "%2 se remainder (0 ya 1) nikalo",
+    "/2 se number ko chhota karo"
   ]
 }

@@ -1,16 +1,22 @@
 {
-  "id": "03-operators-logical-ternary-35",
-  "title": "Ternary with truthy condition",
-  "starterCode": "const result = \"yes\" ? \"affirmed\" : \"denied\";\nconsole.log(result);",
-  "solution": "const result = \"yes\" ? \"affirmed\" : \"denied\";\nconsole.log(result);",
+  "id": "03-operators-02-logical-ternary-35",
+  "title": "Ternary for array access",
+  "starterCode": "// Safe array access with default\nconst colors = [\"red\", \"green\", \"blue\"]\nconst index = 5\n// TODO: ternary se safe access\n",
+  "solution": "const colors = [\"red\", \"green\", \"blue\"]\nconst index = 5\nconst color = index < colors.length ? colors[index] : \"not found\"\nreturn color",
   "tests": [
     {
       "input": [],
-      "expected": "affirmed"
+      "expected": "not found"
+    },
+    {
+      "input": [
+        1
+      ],
+      "expected": "green"
     }
   ],
   "hints": [
-    "Non-empty string is truthy",
-    "Ternary returns first value"
+    "Pehle bounds check karo",
+    "Index valid hai to element, nahi to default"
   ]
 }

@@ -1,16 +1,19 @@
 {
-  "id": "03-operators-logical-ternary-28",
-  "title": "AND returns last truthy",
-  "starterCode": "const result = 1 && 2 && 3;\nconsole.log(result);",
-  "solution": "const result = 1 && 2 && 3;\nconsole.log(result);",
+  "id": "03-operators-02-logical-ternary-28",
+  "title": "Ternary in object values",
+  "starterCode": "// Status ke hisaab se color assign karo\nconst status = \"success\"\nconst colors = {\n  success: status === \"success\" ? \"green\" : status === \"error\" ? \"red\" : \"gray\",\n  // TODO: icon bhi assign karo\n}\nreturn colors",
+  "solution": "const status = \"success\"\nconst colors = {\n  success: status === \"success\" ? \"green\" : status === \"error\" ? \"red\" : \"gray\",\n  icon: status === \"success\" ? \"✓\" : status === \"error\" ? \"✗\" : \"?\"\n}\nreturn colors",
   "tests": [
     {
       "input": [],
-      "expected": "3"
+      "expected": {
+        "success": "green",
+        "icon": "✓"
+      }
     }
   ],
   "hints": [
-    "&& returns last value if all truthy",
-    "1, 2, 3 are all truthy"
+    "Object values mein ternary use kar sakte ho",
+    "Status ke hisaab se value choose karo"
   ]
 }

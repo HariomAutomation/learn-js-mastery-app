@@ -1,16 +1,22 @@
 {
-  "id": "05-loops-for-of-for-in-14",
-  "title": "For...Of Characters",
-  "starterCode": "const str = \"cat\";\nlet result = \"\";\nfor (const ch of str) {\n  result += ch.toUpperCase();\n}\nconsole.log(result);",
-  "solution": "const str = \"cat\";\nlet result = \"\";\nfor (const ch of str) {\n  result += ch.toUpperCase();\n}\nconsole.log(result);",
+  "id": "05-02-for-of-for-in-14",
+  "title": "For-in se object ke keys ko sorted array me do",
+  "starterCode": "function sortedKeys(obj) {\n  // TODO: object ke keys sorted order me return karo\n}",
+  "solution": "function sortedKeys(obj) {\n  const keys = [];\n  for (const key in obj) {\n    if (Object.prototype.hasOwnProperty.call(obj, key)) keys.push(key);\n  }\n  return keys.sort();\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "CAT"
+      "input": [
+        {
+          "c": 3,
+          "a": 1,
+          "b": 2
+        }
+      ],
+      "expected": "a,b,c"
     }
   ],
   "hints": [
-    "Iterate characters",
-    "Use toUpperCase()"
+    "For-in se keys nikalo",
+    "Array.sort() se sort karo"
   ]
 }

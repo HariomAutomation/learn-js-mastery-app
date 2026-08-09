@@ -1,16 +1,20 @@
 {
-  "id": "02-data-types-primitive-types-31",
-  "title": "Convert string to number with Number()",
-  "starterCode": "const str = \"42\";\nconst num = ;\nconsole.log(num + 8);",
-  "solution": "const str = \"42\";\nconst num = Number(str);\nconsole.log(num + 8);",
+  "id": "02-data-types-01-primitive-types-31",
+  "title": "String padding methods",
+  "starterCode": "const num = \"42\"\nreturn {\n  padded: num.padStart(5, \"0\"),\n  rightPadded: \"hi\".padEnd(10, \"!\"),\n  both: \"5\".padStart(3, \"0\").padEnd(6, \".\")\n}\n",
+  "solution": "const num = \"42\"\nreturn {\n  padded: num.padStart(5, \"0\"),\n  rightPadded: \"hi\".padEnd(10, \"!\"),\n  both: \"5\".padStart(3, \"0\").padEnd(6, \".\")\n}",
   "tests": [
     {
       "input": [],
-      "expected": "50"
+      "expected": {
+        "padded": "00042",
+        "rightPadded": "hi!!!!!!!",
+        "both": "005..."
+      }
     }
   ],
   "hints": [
-    "Number() converts strings to numbers",
-    "Then you can do math with it"
+    "padStart(length, char) se left se pad hota hai",
+    "padEnd(length, char) se right se pad hota hai"
   ]
 }

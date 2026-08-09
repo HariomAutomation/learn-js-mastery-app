@@ -1,17 +1,44 @@
 {
-  "id": "04-control-flow-early-return-35",
-  "title": "Early return boolean",
-  "starterCode": "function isAdult(age) {\n  if (typeof age !== 'number') return false;\n  if (age < 0) return false;\n  return age >= 18;\n}\nconsole.log(isAdult(25));",
-  "solution": "function isAdult(age) {\n  if (typeof age !== 'number') return false;\n  if (age < 0) return false;\n  return age >= 18;\n}\nconsole.log(isAdult(25));",
+  "id": "04-control-flow-02-early-return-35",
+  "title": "Guard for object merge",
+  "starterCode": "// function mergeObjects(obj1, obj2) mein dono objects do\n// Agar koi bhi object nahi: {}\n// Dono ka spread merge karo\n",
+  "solution": "function mergeObjects(obj1, obj2) {\n  if (typeof obj1 !== \"object\" || obj1 === null) return {}\n  if (typeof obj2 !== \"object\" || obj2 === null) return {}\n  return { ...obj1, ...obj2 }\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "true"
+      "input": [
+        {
+          "a": 1
+        },
+        {
+          "b": 2
+        }
+      ],
+      "expected": {
+        "a": 1,
+        "b": 2
+      }
+    },
+    {
+      "input": [
+        {
+          "a": 1
+        },
+        null
+      ],
+      "expected": {}
+    },
+    {
+      "input": [
+        null,
+        {
+          "b": 2
+        }
+      ],
+      "expected": {}
     }
   ],
   "hints": [
-    "age is a number",
-    "age is positive",
-    "25 >= 18 is true"
+    "typeof object aur null dono check karo",
+    "Spread operator se merge hota hai"
   ]
 }

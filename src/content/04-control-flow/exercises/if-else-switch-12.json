@@ -1,16 +1,44 @@
 {
-  "id": "04-control-flow-if-else-switch-12",
-  "title": "Guard clause pattern",
-  "starterCode": "function greet(name) {\n  if (!name) return;\n  console.log(`Hello, ${name}!`);\n}\ngreet('Alice');",
-  "solution": "function greet(name) {\n  if (!name) return;\n  console.log(`Hello, ${name}!`);\n}\ngreet('Alice');",
+  "id": "04-control-flow-01-if-else-switch-12",
+  "title": "Nested if se discount calculate karo",
+  "starterCode": "// function calculateDiscount(amount, isMember, isNew)\n// Member aur new: 30% off\n// Sirf member: 20% off\n// Sirf new: 10% off\n// Dono nahi: 0% off\n",
+  "solution": "function calculateDiscount(amount, isMember, isNew) {\n  if (isMember && isNew) return amount * 0.7\n  else if (isMember) return amount * 0.8\n  else if (isNew) return amount * 0.9\n  else return amount\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "Hello, Alice!"
+      "input": [
+        1000,
+        true,
+        true
+      ],
+      "expected": 700
+    },
+    {
+      "input": [
+        1000,
+        true,
+        false
+      ],
+      "expected": 800
+    },
+    {
+      "input": [
+        1000,
+        false,
+        true
+      ],
+      "expected": 900
+    },
+    {
+      "input": [
+        1000,
+        false,
+        false
+      ],
+      "expected": 1000
     }
   ],
   "hints": [
-    "Guard clause exits early if condition met",
-    "!name is false for 'Alice'"
+    "&& se dono conditions check hoti hain",
+    "Pehle combined condition check karo phir alag alag"
   ]
 }

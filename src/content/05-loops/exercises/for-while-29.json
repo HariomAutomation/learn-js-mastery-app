@@ -1,16 +1,18 @@
 {
-  "id": "05-loops-for-while-29",
-  "title": "Palindrome Check Loop",
-  "starterCode": "const str = \"racecar\";\nlet isPalindrome = true;\nfor (let i = 0; i < str.length / 2; i++) {\n  if (str[i] !== str[str.length - 1 - i]) {\n    isPalindrome = false;\n    break;\n  }\n}\nconsole.log(isPalindrome);",
-  "solution": "const str = \"racecar\";\nlet isPalindrome = true;\nfor (let i = 0; i < str.length / 2; i++) {\n  if (str[i] !== str[str.length - 1 - i]) {\n    isPalindrome = false;\n    break;\n  }\n}\nconsole.log(isPalindrome);",
+  "id": "05-01-for-while-29",
+  "title": "While loop se number ke digits reverse karo",
+  "starterCode": "function reverseDigits(n) {\n  // TODO: number ke digits reverse karo\n}",
+  "solution": "function reverseDigits(n) {\n  let reversed = 0;\n  let num = Math.abs(n);\n  while (num > 0) {\n    reversed = reversed * 10 + (num % 10);\n    num = Math.floor(num / 10);\n  }\n  return n < 0 ? -reversed : reversed;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "true"
+      "input": [
+        1234
+      ],
+      "expected": 4321
     }
   ],
   "hints": [
-    "Compare characters from both ends",
-    "Only check half the string"
+    "%10 se last digit nikalo",
+    "reversed * 10 + digit se reverse banta hai"
   ]
 }

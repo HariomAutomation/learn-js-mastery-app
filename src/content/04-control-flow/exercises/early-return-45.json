@@ -1,16 +1,36 @@
 {
-  "id": "04-control-flow-early-return-45",
-  "title": "Early return with try/catch",
-  "starterCode": "function safeParse(str) {\n  if (!str) return null;\n  try {\n    return JSON.parse(str);\n  } catch {\n    return null;\n  }\n}\nconsole.log(safeParse('{\"key\": \"value\"}'));",
-  "solution": "function safeParse(str) {\n  if (!str) return null;\n  try {\n    return JSON.parse(str);\n  } catch {\n    return null;\n  }\n}\nconsole.log(safeParse('{\"key\": \"value\"}'));",
+  "id": "04-control-flow-02-early-return-45",
+  "title": "Guard for string trimming",
+  "starterCode": "// function clean(str) mein string do\n// Agar string nahi: \"\"\n// Trim karo\n// Empty hai to: \"\"\n// Warna cleaned string do\n",
+  "solution": "function clean(str) {\n  if (typeof str !== \"string\") return \"\"\n  const trimmed = str.trim()\n  if (trimmed.length === 0) return \"\"\n  return trimmed\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "[object Object]"
+      "input": [
+        "  hello  "
+      ],
+      "expected": "hello"
+    },
+    {
+      "input": [
+        "   "
+      ],
+      "expected": ""
+    },
+    {
+      "input": [
+        123
+      ],
+      "expected": ""
+    },
+    {
+      "input": [
+        "hi"
+      ],
+      "expected": "hi"
     }
   ],
   "hints": [
-    "str is truthy",
-    "JSON.parse succeeds"
+    "Trim se leading/trailing spaces hati hain",
+    "Empty check karo baad mein"
   ]
 }

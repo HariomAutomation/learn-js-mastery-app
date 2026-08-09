@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-variables-intro-07",
-  "title": "String to number conversion",
-  "starterCode": "const str = \"42\"\nconsole.log(Number(str) + 8)",
-  "solution": "const str = \"42\"\nconsole.log(Number(str) + 8)",
+  "title": "Boolean logic — rain check",
+  "starterCode": "const isRaining = false\nconst hasUmbrella = true\n// Agar barish ho rahi hai aur umbrella hai to \"Go\" return karo\n// Varna \"Stay\" return karo\n",
+  "solution": "const isRaining = false\nconst hasUmbrella = true\nreturn isRaining && hasUmbrella ? \"Go\" : \"Stay\"",
   "tests": [
     {
       "input": [],
-      "expected": "50"
+      "expected": "Stay"
     }
   ],
   "hints": [
-    "Use Number() to convert"
+    "&& means AND — dono true hone chahiye",
+    "Ternary operator: condition ? true : false"
   ]
 }

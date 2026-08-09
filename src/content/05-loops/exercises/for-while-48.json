@@ -1,16 +1,20 @@
 {
-  "id": "05-loops-for-while-48",
-  "title": "Nested Loop Multiplication",
-  "starterCode": "for (let i = 1; i <= 3; i++) {\n  for (let j = 1; j <= 3; j++) {\n    console.log(i + 'x' + j + '=' + (i*j));\n  }\n}",
-  "solution": "for (let i = 1; i <= 3; i++) {\n  for (let j = 1; j <= 3; j++) {\n    console.log(i + 'x' + j + '=' + (i*j));\n  }\n}",
+  "id": "05-01-for-while-48",
+  "title": "For loop se array ke running average nikalo",
+  "starterCode": "function runningAverage(arr) {\n  // TODO: har index pe ab tak ka average array me do\n  // [1,2,3] -> [1, 1.5, 2]\n}",
+  "solution": "function runningAverage(arr) {\n  const result = [];\n  let sum = 0;\n  for (let i = 0; i < arr.length; i++) {\n    sum += arr[i];\n    result.push(sum / (i + 1));\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "1x1=1\n1x2=2\n1x3=3\n2x1=2\n2x2=4\n2x3=6\n3x1=3\n3x2=6\n3x3=9"
+      "input": [
+        1,
+        2,
+        3
+      ],
+      "expected": "1,1.5,2"
     }
   ],
   "hints": [
-    "Outer loop for first number",
-    "Inner loop for second"
+    "Running sum maintain karo",
+    "Sum / (i+1) se average nikalo"
   ]
 }

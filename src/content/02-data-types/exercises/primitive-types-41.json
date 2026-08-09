@@ -1,16 +1,25 @@
 {
-  "id": "02-data-types-primitive-types-41",
-  "title": "Use includes to check substring",
-  "starterCode": "const str = \"Hello World\";\nconsole.log();",
-  "solution": "const str = \"Hello World\";\nconsole.log(str.includes(\"World\"));",
+  "id": "02-data-types-01-primitive-types-41",
+  "title": "Type conversion chart",
+  "starterCode": "return {\n  numToString: String(123),\n  boolToString: String(true),\n  stringToNum: Number(\"456\"),\n  boolToNum: Number(false),\n  numToBool: Boolean(0),\n  stringToBool: Boolean(\"hello\"),\n  nullToNum: Number(null),\n  undefinedToNum: Number(undefined)\n}\n",
+  "solution": "return {\n  numToString: String(123),\n  boolToString: String(true),\n  stringToNum: Number(\"456\"),\n  boolToNum: Number(false),\n  numToBool: Boolean(0),\n  stringToBool: Boolean(\"hello\"),\n  nullToNum: Number(null),\n  undefinedToNum: Number(undefined)\n}",
   "tests": [
     {
       "input": [],
-      "expected": "true"
+      "expected": {
+        "numToString": "123",
+        "boolToString": "true",
+        "stringToNum": 456,
+        "boolToNum": 0,
+        "numToBool": false,
+        "stringToBool": true,
+        "nullToNum": 0,
+        "undefinedToNum": null
+      }
     }
   ],
   "hints": [
-    "includes returns a boolean",
-    "Check if substring exists in string"
+    "String() se kuch bhi string ban sakta hai",
+    "Number(null) = 0, Number(undefined) = NaN"
   ]
 }

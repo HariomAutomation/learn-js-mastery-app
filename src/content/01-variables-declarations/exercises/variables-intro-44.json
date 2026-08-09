@@ -1,0 +1,30 @@
+{
+  "id": "01-variables-declarations-variables-intro-44",
+  "title": "Object flatten",
+  "starterCode": "// Nested object ko flatten karo\n// flatten({a: 1, b: {c: 2, d: {e: 3}}}) = {a:1, \"b.c\":2, \"b.d.e\":3}\nfunction flattenObj(obj, prefix = \"\") {\n  // TODO\n}",
+  "solution": "function flattenObj(obj, prefix = \"\") {\n  return Object.entries(obj).reduce((acc, [key, val]) => {\n    const newKey = prefix ? `${prefix}.${key}` : key\n    if (typeof val === \"object\" && val !== null && !Array.isArray(val)) {\n      Object.assign(acc, flattenObj(val, newKey))\n    } else {\n      acc[newKey] = val\n    }\n    return acc\n  }, {})\n}",
+  "tests": [
+    {
+      "input": [
+        {
+          "a": 1,
+          "b": {
+            "c": 2,
+            "d": {
+              "e": 3
+            }
+          }
+        }
+      ],
+      "expected": {
+        "a": 1,
+        "b.c": 2,
+        "b.d.e": 3
+      }
+    }
+  ],
+  "hints": [
+    "Recursion se nested objects jao",
+    "Prefix mein path build karte jao"
+  ]
+}

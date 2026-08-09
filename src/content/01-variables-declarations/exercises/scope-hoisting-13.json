@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-scope-hoisting-13",
-  "title": "Loop var vs let",
-  "starterCode": "for (var i = 0; i < 2; i++) {}\nconsole.log(i)\nfor (let j = 0; j < 2; j++) {}\ntry {\n  console.log(j)\n} catch(e) {\n  console.log(\"error\")\n}",
-  "solution": "for (var i = 0; i < 2; i++) {}\nconsole.log(i)\nfor (let j = 0; j < 2; j++) {}\ntry {\n  console.log(j)\n} catch(e) {\n  console.log(\"error\")\n}",
+  "title": "Nested IIFE scope",
+  "starterCode": "(function() {\n  var a = 1\n  (function() {\n    var b = 2\n    (function() {\n      return a + b\n    })()\n  })()\n})()\n",
+  "solution": "(function() {\n  var a = 1\n  (function() {\n    var b = 2\n    (function() {\n      return a + b\n    })()\n  })()\n})()",
   "tests": [
     {
       "input": [],
-      "expected": "2\nerror"
+      "expected": 3
     }
   ],
   "hints": [
-    "var leaks, let stays in block"
+    "Each IIFE can see parent IIFE variables",
+    "a=1, b=2, sum=3"
   ]
 }

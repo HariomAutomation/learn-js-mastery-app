@@ -1,16 +1,44 @@
 {
-  "id": "04-control-flow-if-else-switch-29",
-  "title": "Guard clause with null user",
-  "starterCode": "function processUser(user) {\n  if (!user) return 'no user';\n  if (!user.name) return 'no name';\n  return `Processing ${user.name}`;\n}\nconsole.log(processUser(null));",
-  "solution": "function processUser(user) {\n  if (!user) return 'no user';\n  if (!user.name) return 'no name';\n  return `Processing ${user.name}`;\n}\nconsole.log(processUser(null));",
+  "id": "04-control-flow-01-if-else-switch-29",
+  "title": "Switch se simple calculator with chain",
+  "starterCode": "// function calc(a, op, b) mein do numbers aur operator do\n// \"+\", \"-\", \"*\", \"/\" ke liye calculate karo\n// Division by zero handle karo\n",
+  "solution": "function calc(a, op, b) {\n  switch (op) {\n    case \"+\": return a + b\n    case \"-\": return a - b\n    case \"*\": return a * b\n    case \"/\":\n      if (b === 0) return \"Cannot divide by zero\"\n      return a / b\n    default: return \"Invalid operator\"\n  }\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "no user"
+      "input": [
+        15,
+        "+",
+        5
+      ],
+      "expected": 20
+    },
+    {
+      "input": [
+        15,
+        "-",
+        5
+      ],
+      "expected": 10
+    },
+    {
+      "input": [
+        15,
+        "*",
+        3
+      ],
+      "expected": 45
+    },
+    {
+      "input": [
+        15,
+        "/",
+        0
+      ],
+      "expected": "Cannot divide by zero"
     }
   ],
   "hints": [
-    "null is falsy",
-    "First guard returns early"
+    "Switch ke andar bhi if use kar sakte ho",
+    null
   ]
 }

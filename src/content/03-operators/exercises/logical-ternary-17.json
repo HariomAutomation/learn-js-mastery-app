@@ -1,16 +1,16 @@
 {
-  "id": "03-operators-logical-ternary-17",
-  "title": "Optional chaining exists",
-  "starterCode": "const user = { name: 'Alice', address: { street: '123 Main St' } };\nconst result = user?.address?.street;\nconsole.log(result);",
-  "solution": "const user = { name: 'Alice', address: { street: '123 Main St' } };\nconst result = user?.address?.street;\nconsole.log(result);",
+  "id": "03-operators-02-logical-ternary-17",
+  "title": "Multiple conditions AND",
+  "starterCode": "// Credit card eligibility check\nconst age = 25\nconst income = 50000\nconst creditScore = 750\n// TODO: sab conditions check karo\n",
+  "solution": "const age = 25\nconst income = 50000\nconst creditScore = 750\nconst eligible = age >= 21 && income >= 30000 && creditScore >= 700\nreturn eligible",
   "tests": [
     {
       "input": [],
-      "expected": "123 Main St"
+      "expected": true
     }
   ],
   "hints": [
-    "?. safely accesses nested properties",
-    "All properties exist"
+    "&& se sab conditions true honi chahiye",
+    "Age, income, credit score sab check karo"
   ]
 }

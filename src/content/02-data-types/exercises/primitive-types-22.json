@@ -1,16 +1,20 @@
 {
-  "id": "02-data-types-primitive-types-22",
-  "title": "Create a false boolean",
-  "starterCode": "const isActive = ;\nconsole.log(isActive);",
-  "solution": "const isActive = false;\nconsole.log(isActive);",
+  "id": "02-data-types-01-primitive-types-22",
+  "title": "Number methods practical",
+  "starterCode": "const num = 123.456\nreturn {\n  twoDecimals: parseFloat(num.toFixed(2)),\n  fourPrecision: parseFloat(num.toPrecision(4)),\n  truncated: parseInt(num)\n}\n",
+  "solution": "const num = 123.456\nreturn {\n  twoDecimals: parseFloat(num.toFixed(2)),\n  fourPrecision: parseFloat(num.toPrecision(4)),\n  truncated: parseInt(num)\n}",
   "tests": [
     {
       "input": [],
-      "expected": "false"
+      "expected": {
+        "twoDecimals": 123.46,
+        "fourPrecision": 123.5,
+        "truncated": 123
+      }
     }
   ],
   "hints": [
-    "Use the keyword false",
-    "Make sure it's lowercase"
+    "toFixed(n) se n decimal places milte hain",
+    "toPrecision(n) se n significant digits milte hain"
   ]
 }

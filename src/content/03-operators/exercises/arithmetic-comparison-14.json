@@ -1,16 +1,16 @@
 {
-  "id": "03-operators-arithmetic-comparison-14",
-  "title": "Modulo with negative dividend",
-  "starterCode": "const result = -7 % 3;\nconsole.log(result);",
-  "solution": "const result = -7 % 3;\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-14",
+  "title": "Math.round se round karo",
+  "starterCode": "// Average score nikalo aur round karo\nconst scores = [85, 92, 78, 90, 88]\n// TODO: average nikalo aur round karo\n",
+  "solution": "const scores = [85, 92, 78, 90, 88]\nconst avg = scores.reduce((a, b) => a + b, 0) / scores.length\nreturn Math.round(avg)",
   "tests": [
     {
       "input": [],
-      "expected": "-1"
+      "expected": 87
     }
   ],
   "hints": [
-    "Sign follows the dividend",
-    "-7 = -3*3 + 2, but JS gives -1"
+    "Sum / length se average milta hai",
+    "Math.round() nearest integer deta hai"
   ]
 }

@@ -1,16 +1,36 @@
 {
-  "id": "04-control-flow-early-return-42",
-  "title": "Early return in filter callback",
-  "starterCode": "const numbers = [1, 2, 3, 4, 5, 6];\nconst evens = numbers.filter(n => {\n  if (n % 2 !== 0) return false;\n  return true;\n});\nconsole.log(evens);",
-  "solution": "const numbers = [1, 2, 3, 4, 5, 6];\nconst evens = numbers.filter(n => {\n  if (n % 2 !== 0) return false;\n  return true;\n});\nconsole.log(evens);",
+  "id": "04-control-flow-02-early-return-42",
+  "title": "Guard for string reversal",
+  "starterCode": "// function reverse(str) mein string do\n// Agar string nahi: \"\"\n// Agar empty string: \"\"\n// Warna reverse string return karo\n",
+  "solution": "function reverse(str) {\n  if (typeof str !== \"string\") return \"\"\n  return str.split(\"\").reverse().join(\"\")\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "2,4,6"
+      "input": [
+        "hello"
+      ],
+      "expected": "olleh"
+    },
+    {
+      "input": [
+        ""
+      ],
+      "expected": ""
+    },
+    {
+      "input": [
+        123
+      ],
+      "expected": ""
+    },
+    {
+      "input": [
+        "a"
+      ],
+      "expected": "a"
     }
   ],
   "hints": [
-    "filter keeps elements where callback returns true",
-    "Even numbers pass the check"
+    "split('') se array banta hai",
+    "reverse() se array reverse hota hai"
   ]
 }

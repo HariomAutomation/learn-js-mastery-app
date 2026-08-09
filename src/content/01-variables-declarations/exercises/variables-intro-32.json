@@ -1,15 +1,58 @@
 {
   "id": "01-variables-declarations-variables-intro-32",
-  "title": "Array.at negative index",
-  "starterCode": "const arr = [10, 20, 30]\nconsole.log(arr.at(-1))",
-  "solution": "const arr = [10, 20, 30]\nconsole.log(arr.at(-1))",
+  "title": "Chunk array into groups",
+  "starterCode": "// Array ko size ke chunks mein divide karo\n// chunk([1,2,3,4,5], 2) = [[1,2],[3,4],[5]]\nfunction chunk(arr, size) {\n  // TODO\n}",
+  "solution": "function chunk(arr, size) {\n  const chunks = []\n  for (let i = 0; i < arr.length; i += size) {\n    chunks.push(arr.slice(i, i + size))\n  }\n  return chunks\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "30"
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        2
+      ],
+      "expected": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5
+        ]
+      ]
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "c"
+        ],
+        1
+      ],
+      "expected": [
+        [
+          "a"
+        ],
+        [
+          "b"
+        ],
+        [
+          "c"
+        ]
+      ]
     }
   ],
   "hints": [
-    ".at(-1) returns last element"
+    "Loop mein i += size se jump hota hai",
+    "slice(i, i+size) se chunk milta hai"
   ]
 }

@@ -1,16 +1,40 @@
 {
-  "id": "04-control-flow-if-else-switch-48",
-  "title": "Switch with bitwise OR",
-  "starterCode": "const flags = 5;\nswitch (flags) {\n  case 1: console.log('flag1'); break;\n  case 2: console.log('flag2'); break;\n  case 3: console.log('flag3'); break;\n  default: console.log('other');\n}",
-  "solution": "const flags = 5;\nswitch (flags) {\n  case 1: console.log('flag1'); break;\n  case 2: console.log('flag2'); break;\n  case 3: console.log('flag3'); break;\n  default: console.log('other');\n}",
+  "id": "04-control-flow-01-if-else-switch-48",
+  "title": "Nested if se complex validation",
+  "starterCode": "// function validateAgeGender(age, gender)\n// Age < 0 ya > 150: \"Invalid age\"\n// Gender \"M\"/\"F\"/\"Other\": valid\n// Baaki: \"Invalid gender\"\n// Sab valid: \"Valid\"\n",
+  "solution": "function validateAgeGender(age, gender) {\n  if (age < 0 || age > 150) return \"Invalid age\"\n  if (gender !== \"M\" && gender !== \"F\" && gender !== \"Other\") return \"Invalid gender\"\n  return \"Valid\"\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "other"
+      "input": [
+        25,
+        "M"
+      ],
+      "expected": "Valid"
+    },
+    {
+      "input": [
+        -5,
+        "M"
+      ],
+      "expected": "Invalid age"
+    },
+    {
+      "input": [
+        25,
+        "X"
+      ],
+      "expected": "Invalid gender"
+    },
+    {
+      "input": [
+        200,
+        "F"
+      ],
+      "expected": "Invalid age"
     }
   ],
   "hints": [
-    "5 doesn't match 1, 2, or 3",
-    "default executes"
+    "Age range check pehle karo",
+    "Gender sirf teen values accept karta hai"
   ]
 }

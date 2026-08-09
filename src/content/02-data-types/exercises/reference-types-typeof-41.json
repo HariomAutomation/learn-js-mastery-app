@@ -1,16 +1,20 @@
 {
-  "id": "02-data-types-reference-types-typeof-41",
-  "title": "WeakMap holds object keys",
-  "starterCode": "const wm = new WeakMap();\nconst obj = {};\nwm.set(obj, 42);\nconsole.log();",
-  "solution": "const wm = new WeakMap();\nconst obj = {};\nwm.set(obj, 42);\nconsole.log(wm.get(obj));",
+  "id": "02-data-types-02-reference-types-typeof-41",
+  "title": "Proxy has trap",
+  "starterCode": "const range = new Proxy({ min: 1, max: 100 }, {\n  has(target, prop) {\n    const num = Number(prop)\n    return !isNaN(num) && num >= target.min && num <= target.max\n  }\n})\nreturn {\n  has50: 50 in range,\n  has150: 150 in range,\n  hasName: \"name\" in range\n}\n",
+  "solution": "const range = new Proxy({ min: 1, max: 100 }, {\n  has(target, prop) {\n    const num = Number(prop)\n    return !isNaN(num) && num >= target.min && num <= target.max\n  }\n})\nreturn {\n  has50: 50 in range,\n  has150: 150 in range,\n  hasName: \"name\" in range\n}",
   "tests": [
     {
       "input": [],
-      "expected": "42"
+      "expected": {
+        "has50": true,
+        "has150": false,
+        "hasName": false
+      }
     }
   ],
   "hints": [
-    "WeakMap keys must be objects",
-    "It allows garbage collection"
+    "Proxy has trap 'in' operator intercept karta hai",
+    "Custom logic se range check kar sakte ho"
   ]
 }

@@ -1,16 +1,52 @@
 {
-  "id": "04-control-flow-if-else-switch-35",
-  "title": "If/else if with string comparison",
-  "starterCode": "const role = 'admin';\nif (role === 'admin') {\n  console.log('full access');\n} else if (role === 'user') {\n  console.log('limited access');\n} else {\n  console.log('no access');\n}",
-  "solution": "const role = 'admin';\nif (role === 'admin') {\n  console.log('full access');\n} else if (role === 'user') {\n  console.log('limited access');\n} else {\n  console.log('no access');\n}",
+  "id": "04-control-flow-01-if-else-switch-35",
+  "title": "Guard clause se array access",
+  "starterCode": "// function getElement(arr, index) mein array aur index do\n// Agar array nahi hai: \"Invalid array\"\n// Agar index out of bounds: \"Index out of bounds\"\n// Warna element return karo\n",
+  "solution": "function getElement(arr, index) {\n  if (!Array.isArray(arr)) return \"Invalid array\"\n  if (index < 0 || index >= arr.length) return \"Index out of bounds\"\n  return arr[index]\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "full access"
+      "input": [
+        [
+          10,
+          20,
+          30
+        ],
+        1
+      ],
+      "expected": 20
+    },
+    {
+      "input": [
+        [
+          10,
+          20,
+          30
+        ],
+        5
+      ],
+      "expected": "Index out of bounds"
+    },
+    {
+      "input": [
+        null,
+        0
+      ],
+      "expected": "Invalid array"
+    },
+    {
+      "input": [
+        [
+          10,
+          20,
+          30
+        ],
+        -1
+      ],
+      "expected": "Index out of bounds"
     }
   ],
   "hints": [
-    "role === 'admin' is true",
-    "First condition matches"
+    "Array.isArray() se array type check karo",
+    "Index < 0 ya >= length ho to error"
   ]
 }

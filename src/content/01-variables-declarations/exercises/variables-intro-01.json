@@ -1,15 +1,20 @@
 {
   "id": "01-variables-declarations-variables-intro-01",
-  "title": "Declare and log a variable",
-  "starterCode": "const x = 10\nconsole.log(x)",
-  "solution": "const x = 10\nconsole.log(x)",
+  "title": "Apna profile banao",
+  "starterCode": "// const se name aur city declare karo\n// let se age declare karo\n// Teeno ko return karo as object: { name, city, age }\n",
+  "solution": "const name = \"Hariom\"\nconst city = \"Jaipur\"\nlet age = 25\nreturn { name, city, age }",
   "tests": [
     {
       "input": [],
-      "expected": "10"
+      "expected": {
+        "name": "Hariom",
+        "city": "Jaipur",
+        "age": 25
+      }
     }
   ],
   "hints": [
-    "Use const for constants"
+    "const se constant value, let se reassignable variable banata hai",
+    "return { name, city, age } likho"
   ]
 }

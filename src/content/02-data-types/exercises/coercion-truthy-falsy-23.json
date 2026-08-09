@@ -1,16 +1,21 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-23",
-  "title": "NaN is not equal to itself",
-  "starterCode": "console.log(NaN === NaN);",
-  "solution": "console.log(NaN === NaN);",
+  "id": "02-data-types-03-coercion-truthy-falsy-23",
+  "title": "Array.includes with coercion",
+  "starterCode": "const arr = [0, 1, 2, 3, \"0\", \"1\"]\nreturn {\n  hasZero: arr.includes(0),\n  hasStringZero: arr.includes(\"0\"),\n  indexOfZero: arr.indexOf(0),\n  indexOfStringZero: arr.indexOf(\"0\")\n}\n",
+  "solution": "const arr = [0, 1, 2, 3, \"0\", \"1\"]\nreturn {\n  hasZero: arr.includes(0),\n  hasStringZero: arr.includes(\"0\"),\n  indexOfZero: arr.indexOf(0),\n  indexOfStringZero: arr.indexOf(\"0\")\n}",
   "tests": [
     {
       "input": [],
-      "expected": "false"
+      "expected": {
+        "hasZero": true,
+        "hasStringZero": true,
+        "indexOfZero": 0,
+        "indexOfStringZero": 4
+      }
     }
   ],
   "hints": [
-    "NaN is the only value not equal to itself",
-    "Use Number.isNaN() to check"
+    "includes() === comparison use karta hai",
+    "0 aur '0' alag hain === se"
   ]
 }

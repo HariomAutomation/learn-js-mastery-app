@@ -1,16 +1,23 @@
 {
-  "id": "02-data-types-primitive-types-45",
-  "title": "Parse integer with radix",
-  "starterCode": "console.log(Number.parseInt(\"FF\", 16));",
-  "solution": "console.log(Number.parseInt(\"FF\", 16));",
+  "id": "02-data-types-01-primitive-types-45",
+  "title": "Number parseInt aur parseFloat",
+  "starterCode": "return {\n  parseInt: parseInt(\"42px\"),\n  parseIntRadix: parseInt(\"1010\", 2),\n  parseFloat: parseFloat(\"3.14em\"),\n  parseIntNaN: parseInt(\"hello\"),\n  unaryPlus: +\"42\",\n  doubleNot: !!1\n}\n",
+  "solution": "return {\n  parseInt: parseInt(\"42px\"),\n  parseIntRadix: parseInt(\"1010\", 2),\n  parseFloat: parseFloat(\"3.14em\"),\n  parseIntNaN: parseInt(\"hello\"),\n  unaryPlus: +\"42\",\n  doubleNot: !!1\n}",
   "tests": [
     {
       "input": [],
-      "expected": "255"
+      "expected": {
+        "parseInt": 42,
+        "parseIntRadix": 10,
+        "parseFloat": 3.14,
+        "parseIntNaN": null,
+        "unaryPlus": 42,
+        "doubleNot": true
+      }
     }
   ],
   "hints": [
-    "The second parameter is the radix",
-    "16 means hexadecimal"
+    "parseInt non-numeric characters ignore karta hai",
+    "Radix parameter base specify karta hai"
   ]
 }

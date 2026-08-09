@@ -1,16 +1,21 @@
 {
-  "id": "02-data-types-reference-types-typeof-13",
-  "title": "Deep copy with structuredClone",
-  "starterCode": "const original = { a: { b: 1 } };\nconst copy = ;\nconsole.log(copy.a.b);",
-  "solution": "const original = { a: { b: 1 } };\nconst copy = structuredClone(original);\nconsole.log(copy.a.b);",
+  "id": "02-data-types-02-reference-types-typeof-13",
+  "title": "Prototype chain detection",
+  "starterCode": "const obj = { x: 1, y: 2 }\nconst arr = [1, 2, 3]\nreturn {\n  objProto: Object.getPrototypeOf(obj).constructor.name,\n  arrProto: Object.getPrototypeOf(arr).constructor.name,\n  objHasOwnProperty: obj.hasOwnProperty(\"x\"),\n  arrHasMap: typeof arr.map === \"function\"\n}\n",
+  "solution": "const obj = { x: 1, y: 2 }\nconst arr = [1, 2, 3]\nreturn {\n  objProto: Object.getPrototypeOf(obj).constructor.name,\n  arrProto: Object.getPrototypeOf(arr).constructor.name,\n  objHasOwnProperty: obj.hasOwnProperty(\"x\"),\n  arrHasMap: typeof arr.map === \"function\"\n}",
   "tests": [
     {
       "input": [],
-      "expected": "1"
+      "expected": {
+        "objProto": "Object",
+        "arrProto": "Array",
+        "objHasOwnProperty": true,
+        "arrHasMap": true
+      }
     }
   ],
   "hints": [
-    "structuredClone creates deep copies",
-    "Nested objects are fully cloned"
+    "getPrototypeOf se prototype milta hai",
+    "Prototype chain se methods inherit hote hain"
   ]
 }

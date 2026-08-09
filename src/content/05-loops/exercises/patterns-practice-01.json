@@ -1,16 +1,18 @@
 {
-  "id": "05-loops-patterns-practice-01",
-  "title": "Star Pyramid",
-  "starterCode": "for (let i = 1; i <= 5; i++) {\n  let row = ' '.repeat(5-i) + '* '.repeat(i);\n  console.log(row);\n}",
-  "solution": "for (let i = 1; i <= 5; i++) {\n  let row = ' '.repeat(5-i) + '* '.repeat(i);\n  console.log(row);\n}",
+  "id": "05-03-patterns-practice-01",
+  "title": "Nested loop se multiplication matrix banao",
+  "starterCode": "function multiplicationMatrix(n) {\n  // TODO: n x n multiplication table matrix banao\n}",
+  "solution": "function multiplicationMatrix(n) {\n  const matrix = [];\n  for (let i = 1; i <= n; i++) {\n    const row = [];\n    for (let j = 1; j <= n; j++) row.push(i * j);\n    matrix.push(row);\n  }\n  return matrix;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "    * \n   * * \n  * * * \n * * * * \n* * * * * "
+      "input": [
+        3
+      ],
+      "expected": "1,2,3,2,4,6,3,6,9"
     }
   ],
   "hints": [
-    "Add spaces before stars",
-    "Number of stars increases"
+    "Outer loop rows ke liye, inner loop columns ke liye",
+    "i * j se value nikalo"
   ]
 }

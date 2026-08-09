@@ -1,15 +1,16 @@
 {
-  "id": "03-operators-arithmetic-comparison-41",
-  "title": "Compound modulo (%=)",
-  "starterCode": "let x = 17;\nx %= 5;\nconsole.log(x);",
-  "solution": "let x = 17;\nx %= 5;\nconsole.log(x);",
+  "id": "03-operators-01-arithmetic-comparison-41",
+  "title": "BMI calculator",
+  "starterCode": "// Weight (kg) aur height (m) diya hai\n// BMI = weight / (height * height)\nconst weight = 70\nconst height = 1.75\n// TODO: BMI nikalo aur 1 decimal place\n",
+  "solution": "const weight = 70\nconst height = 1.75\nconst bmi = weight / (height * height)\nreturn parseFloat(bmi.toFixed(1))",
   "tests": [
     {
       "input": [],
-      "expected": "2"
+      "expected": 22.9
     }
   ],
   "hints": [
-    "x %= 5 is the same as x = x % 5"
+    "BMI formula: weight / height²",
+    "toFixed(1) se 1 decimal place"
   ]
 }

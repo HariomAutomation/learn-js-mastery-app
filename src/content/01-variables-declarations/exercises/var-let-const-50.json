@@ -1,0 +1,21 @@
+{
+  "id": "01-variables-declarations-var-let-const-50",
+  "title": "Nullish coalescing",
+  "starterCode": "const a = null\nconst b = undefined\nconst c = 0\nconst d = \"\"\nreturn [a ?? \"default\", b ?? \"default\", c ?? \"default\", d ?? \"default\"]\n",
+  "solution": "const a = null\nconst b = undefined\nconst c = 0\nconst d = \"\"\nreturn [a ?? \"default\", b ?? \"default\", c ?? \"default\", d ?? \"default\"]",
+  "tests": [
+    {
+      "input": [],
+      "expected": [
+        "default",
+        "default",
+        0,
+        ""
+      ]
+    }
+  ],
+  "hints": [
+    "?? only checks null/undefined, not falsy values",
+    "0 and \"\" are not null/undefined so they pass through"
+  ]
+}

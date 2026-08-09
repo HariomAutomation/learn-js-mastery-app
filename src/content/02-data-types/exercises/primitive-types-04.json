@@ -1,16 +1,20 @@
 {
-  "id": "02-data-types-primitive-types-04",
-  "title": "Create an empty string",
-  "starterCode": "const empty = ;\nconsole.log(empty.length);",
-  "solution": "const empty = '';\nconsole.log(empty.length);",
+  "id": "02-data-types-01-primitive-types-04",
+  "title": "undefined vs null check",
+  "starterCode": "const undefinedVar = undefined\nconst nullVar = null\nreturn {\n  undefinedType: typeof undefinedVar,\n  nullType: typeof nullVar,\n  undefinedValue: undefinedVar,\n  nullValue: nullVar\n}\n",
+  "solution": "const undefinedVar = undefined\nconst nullVar = null\nreturn {\n  undefinedType: typeof undefinedVar,\n  nullType: typeof nullVar,\n  undefinedValue: undefinedVar,\n  nullValue: nullVar\n}",
   "tests": [
     {
       "input": [],
-      "expected": "0"
+      "expected": {
+        "undefinedType": "undefined",
+        "nullType": "object",
+        "nullValue": null
+      }
     }
   ],
   "hints": [
-    "An empty string has no characters",
-    "Use two quotes with nothing between them"
+    "typeof undefined returns 'undefined'",
+    "typeof null returns 'object' (JS bug)"
   ]
 }

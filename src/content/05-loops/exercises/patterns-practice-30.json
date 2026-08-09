@@ -1,16 +1,35 @@
 {
-  "id": "05-loops-patterns-practice-30",
-  "title": "While Countdown",
-  "starterCode": "let count = 10;\nwhile (count >= 0) {\n  console.log(count);\n  count -= 2;\n}",
-  "solution": "let count = 10;\nwhile (count >= 0) {\n  console.log(count);\n  count -= 2;\n}",
+  "id": "05-03-patterns-practice-30",
+  "title": "2D array me maximum sum submatrix dhundho",
+  "starterCode": "function maxSumSubmatrix(matrix) {\n  // TODO: k x k size ka maximum sum submatrix find karo\n}",
+  "solution": "function maxSumSubmatrix(matrix, k) {\n  const rows = matrix.length, cols = matrix[0].length;\n  let maxSum = -Infinity;\n  for (let i = 0; i <= rows - k; i++) {\n    for (let j = 0; j <= cols - k; j++) {\n      let sum = 0;\n      for (let r = i; r < i + k; r++) {\n        for (let c = j; c < j + k; c++) sum += matrix[r][c];\n      }\n      maxSum = Math.max(maxSum, sum);\n    }\n  }\n  return maxSum;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "10\n8\n6\n4\n2\n0"
+      "input": [
+        [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            4,
+            5,
+            6
+          ],
+          [
+            7,
+            8,
+            9
+          ]
+        ],
+        2
+      ],
+      "expected": 28
     }
   ],
   "hints": [
-    "Start at 10",
-    "Decrement by 2"
+    "Sliding window approach use karo",
+    "Har possible position pe sum nikalo"
   ]
 }

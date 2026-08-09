@@ -1,16 +1,22 @@
 {
-  "id": "05-loops-patterns-practice-41",
-  "title": "GCD Loop",
-  "starterCode": "function gcd(a, b) {\n  while (b !== 0) {\n    let temp = b;\n    b = a % b;\n    a = temp;\n  }\n  return a;\n}\nconsole.log(gcd(48, 18));",
-  "solution": "function gcd(a, b) {\n  while (b !== 0) {\n    let temp = b;\n    b = a % b;\n    a = temp;\n  }\n  return a;\n}\nconsole.log(gcd(48, 18));",
+  "id": "05-03-patterns-practice-41",
+  "title": "Nested loop se array ke median nikalo",
+  "starterCode": "function median(arr) {\n  // TODO: sorted array ka median do\n}",
+  "solution": "function median(arr) {\n  const sorted = [...arr].sort((a, b) => a - b);\n  const mid = Math.floor(sorted.length / 2);\n  if (sorted.length % 2 === 0) {\n    return (sorted[mid - 1] + sorted[mid]) / 2;\n  }\n  return sorted[mid];\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "6"
+      "input": [
+        3,
+        1,
+        4,
+        1,
+        5
+      ],
+      "expected": 3
     }
   ],
   "hints": [
-    "Euclidean algorithm",
-    "Modulo operation"
+    "Pehle sort karo",
+    "Odd length: middle element, Even: average of two middles"
   ]
 }

@@ -1,16 +1,23 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-07",
-  "title": "Check if NaN is falsy",
-  "starterCode": "if (NaN) {\n  console.log('truthy');\n} else {\n  console.log('falsy');\n}",
-  "solution": "if (NaN) {\n  console.log('truthy');\n} else {\n  console.log('falsy');\n}",
+  "id": "02-data-types-03-coercion-truthy-falsy-07",
+  "title": "Logical operators return values",
+  "starterCode": "return {\n  or1: \"hello\" || \"world\",\n  or2: \"\" || \"default\",\n  or3: null || \"fallback\",\n  and1: \"hello\" && \"world\",\n  and2: \"\" && \"world\",\n  and3: null && \"value\"\n}\n",
+  "solution": "return {\n  or1: \"hello\" || \"world\",\n  or2: \"\" || \"default\",\n  or3: null || \"fallback\",\n  and1: \"hello\" && \"world\",\n  and2: \"\" && \"world\",\n  and3: null && \"value\"\n}",
   "tests": [
     {
       "input": [],
-      "expected": "falsy"
+      "expected": {
+        "or1": "hello",
+        "or2": "default",
+        "or3": "fallback",
+        "and1": "world",
+        "and2": "",
+        "and3": null
+      }
     }
   ],
   "hints": [
-    "NaN is falsy",
-    "It stands for Not a Number"
+    "|| pehla truthy value return karta hai",
+    "&& last value return karta hai agar sab truthy ho"
   ]
 }

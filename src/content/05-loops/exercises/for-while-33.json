@@ -1,16 +1,24 @@
 {
-  "id": "05-loops-for-while-33",
-  "title": "Number Triangle",
-  "starterCode": "for (let i = 1; i <= 5; i++) {\n  let row = '';\n  for (let j = 1; j <= i; j++) {\n    row += j + ' ';\n  }\n  console.log(row);\n}",
-  "solution": "for (let i = 1; i <= 5; i++) {\n  let row = '';\n  for (let j = 1; j <= i; j++) {\n    row += j + ' ';\n  }\n  console.log(row);\n}",
+  "id": "05-01-for-while-33",
+  "title": "For loop se array ke elements ko group karo",
+  "starterCode": "function groupBy(arr, fn) {\n  // TODO: array ko function ke result ke hisaab se group karo\n}",
+  "solution": "function groupBy(arr, fn) {\n  const groups = {};\n  for (const item of arr) {\n    const key = fn(item);\n    (groups[key] = groups[key] || []).push(item);\n  }\n  return groups;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "1 \n1 2 \n1 2 3 \n1 2 3 4 \n1 2 3 4 5 "
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4
+        ],
+        null
+      ],
+      "expected": "{\"odd\":[1,3],\"even\":[2,4]}"
     }
   ],
   "hints": [
-    "Print j instead of star",
-    "j goes from 1 to i"
+    "Function se key nikalo",
+    "Groups object me push karo"
   ]
 }

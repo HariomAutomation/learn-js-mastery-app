@@ -1,16 +1,33 @@
 {
-  "id": "04-control-flow-if-else-switch-10",
-  "title": "Truthy/falsy if condition",
-  "starterCode": "const name = '';\nif (name) {\n  console.log('has name');\n} else {\n  console.log('no name');\n}",
-  "solution": "const name = '';\nif (name) {\n  console.log('has name');\n} else {\n  console.log('no name');\n}",
+  "id": "04-control-flow-01-if-else-switch-10",
+  "title": "Guard clause se early return karo",
+  "starterCode": "// function divide(a, b) mein do numbers do\n// Agar b === 0 hai to \"Cannot divide by zero\" return karo (pehle hi)\n// Warna a/b return karo\n",
+  "solution": "function divide(a, b) {\n  if (b === 0) return \"Cannot divide by zero\"\n  return a / b\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "no name"
+      "input": [
+        10,
+        2
+      ],
+      "expected": 5
+    },
+    {
+      "input": [
+        7,
+        0
+      ],
+      "expected": "Cannot divide by zero"
+    },
+    {
+      "input": [
+        0,
+        5
+      ],
+      "expected": 0
     }
   ],
   "hints": [
-    "Empty string is falsy",
-    "else block executes"
+    "Guard clause function ke start mein hota hai",
+    "Early return se nesting kam hoti hai"
   ]
 }

@@ -1,16 +1,48 @@
 {
-  "id": "04-control-flow-early-return-21",
-  "title": "Null check - null input",
-  "starterCode": "function getLength(str) {\n  if (str === null) return 0;\n  if (str === undefined) return 0;\n  return str.length;\n}\nconsole.log(getLength(null));",
-  "solution": "function getLength(str) {\n  if (str === null) return 0;\n  if (str === undefined) return 0;\n  return str.length;\n}\nconsole.log(getLength(null));",
+  "id": "04-control-flow-02-early-return-21",
+  "title": "Guard clause for number range",
+  "starterCode": "// function classify(n) mein number do\n// < 0: \"negative\", 0: \"zero\", 1-10: \"small\", 11-100: \"medium\", >100: \"large\"\n// Non-number: \"not a number\"\n",
+  "solution": "function classify(n) {\n  if (typeof n !== \"number\" || Number.isNaN(n)) return \"not a number\"\n  if (n < 0) return \"negative\"\n  if (n === 0) return \"zero\"\n  if (n <= 10) return \"small\"\n  if (n <= 100) return \"medium\"\n  return \"large\"\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "0"
+      "input": [
+        -5
+      ],
+      "expected": "negative"
+    },
+    {
+      "input": [
+        0
+      ],
+      "expected": "zero"
+    },
+    {
+      "input": [
+        5
+      ],
+      "expected": "small"
+    },
+    {
+      "input": [
+        50
+      ],
+      "expected": "medium"
+    },
+    {
+      "input": [
+        200
+      ],
+      "expected": "large"
+    },
+    {
+      "input": [
+        "abc"
+      ],
+      "expected": "not a number"
     }
   ],
   "hints": [
-    "str is null",
-    "First guard returns 0"
+    "Type check pehle karo",
+    "Ranges ascending mein check karo"
   ]
 }

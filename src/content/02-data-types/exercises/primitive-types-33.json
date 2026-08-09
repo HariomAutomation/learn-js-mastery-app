@@ -1,16 +1,20 @@
 {
-  "id": "02-data-types-primitive-types-33",
-  "title": "Use template literal with variable",
-  "starterCode": "const name = \"Bob\";\nconst age = 30;\nconsole.log();",
-  "solution": "const name = \"Bob\";\nconst age = 30;\nconsole.log(`Name: ${name}, Age: ${age}`);",
+  "id": "02-data-types-01-primitive-types-33",
+  "title": "String repetition",
+  "starterCode": "const dash = \"-\"\nreturn {\n  dashes: dash.repeat(5),\n  pattern: \"ha\".repeat(3),\n  empty: \"\".repeat(10)\n}\n",
+  "solution": "const dash = \"-\"\nreturn {\n  dashes: dash.repeat(5),\n  pattern: \"ha\".repeat(3),\n  empty: \"\".repeat(10)\n}",
   "tests": [
     {
       "input": [],
-      "expected": "Name: Bob, Age: 30"
+      "expected": {
+        "dashes": "-----",
+        "pattern": "hahaha",
+        "empty": ""
+      }
     }
   ],
   "hints": [
-    "Use backticks for template literals",
-    "Wrap variables in ${}"
+    "repeat(n) se string n baar repeat hoti hai",
+    "0 ya negative number pe empty string return hoti hai"
   ]
 }

@@ -1,16 +1,32 @@
 {
-  "id": "05-loops-for-of-for-in-41",
-  "title": "For...Of Set Union",
-  "starterCode": "const set1 = new Set([1, 2, 3]);\nconst set2 = new Set([2, 3, 4]);\nconst union = new Set([...set1, ...set2]);\nfor (const val of union) {\n  console.log(val);\n}",
-  "solution": "const set1 = new Set([1, 2, 3]);\nconst set2 = new Set([2, 3, 4]);\nconst union = new Set([...set1, ...set2]);\nfor (const val of union) {\n  console.log(val);\n}",
+  "id": "05-02-for-of-for-in-41",
+  "title": "For-of se array ke elements ko group by property",
+  "starterCode": "function groupBy(arr, key) {\n  // TODO: array ke objects ko key ke value se group karo\n}",
+  "solution": "function groupBy(arr, key) {\n  const groups = {};\n  for (const item of arr) {\n    const groupKey = item[key];\n    (groups[groupKey] = groups[groupKey] || []).push(item);\n  }\n  return groups;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "1\n2\n3\n4"
+      "input": [
+        [
+          {
+            "type": "a",
+            "v": 1
+          },
+          {
+            "type": "b",
+            "v": 2
+          },
+          {
+            "type": "a",
+            "v": 3
+          }
+        ],
+        "type"
+      ],
+      "expected": "{\"a\":[{\"type\":\"a\",\"v\":1},{\"type\":\"a\",\"v\":3}],\"b\":[{\"type\":\"b\",\"v\":2}]}"
     }
   ],
   "hints": [
-    "Spread sets into new Set",
-    "Union removes duplicates"
+    "Item ke property se key nikalo",
+    "Groups me push karo"
   ]
 }

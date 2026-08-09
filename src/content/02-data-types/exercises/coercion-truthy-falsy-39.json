@@ -1,16 +1,19 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-39",
-  "title": "Double NOT preserves truthiness",
-  "starterCode": "console.log(!!42);",
-  "solution": "console.log(!!42);",
+  "id": "02-data-types-03-coercion-truthy-falsy-39",
+  "title": "Proxy construct with validation",
+  "starterCode": "function User(name, age) {\n  this.name = name\n  this.age = age\n}\nconst ValidatedUser = new Proxy(User, {\n  construct(target, args) {\n    if (args[1] < 0) throw new Error(\"Age cannot be negative\")\n    return new target(...args)\n  }\n})\nconst user1 = new ValidatedUser(\"Hariom\", 25)\ntry {\n  const user2 = new ValidatedUser(\"Amit\", -5)\n} catch(e) {\n  return { user1: user1.name, error: e.message }\n}\n",
+  "solution": "function User(name, age) {\n  this.name = name\n  this.age = age\n}\nconst ValidatedUser = new Proxy(User, {\n  construct(target, args) {\n    if (args[1] < 0) throw new Error(\"Age cannot be negative\")\n    return new target(...args)\n  }\n})\nconst user1 = new ValidatedUser(\"Hariom\", 25)\ntry {\n  const user2 = new ValidatedUser(\"Amit\", -5)\n} catch(e) {\n  return { user1: user1.name, error: e.message }\n}",
   "tests": [
     {
       "input": [],
-      "expected": "true"
+      "expected": {
+        "user1": "Hariom",
+        "error": "Age cannot be negative"
+      }
     }
   ],
   "hints": [
-    "42 is truthy",
-    "!! converts to boolean"
+    "Proxy construct trap constructor validation ke liye hai",
+    "Throw se invalid instances ban kar sakte ho"
   ]
 }

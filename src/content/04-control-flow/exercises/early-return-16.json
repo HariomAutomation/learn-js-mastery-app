@@ -1,16 +1,36 @@
 {
-  "id": "04-control-flow-early-return-16",
-  "title": "Early return in loop",
-  "starterCode": "function hasNegative(arr) {\n  for (const num of arr) {\n    if (num < 0) return true;\n  }\n  return false;\n}\nconsole.log(hasNegative([1, 2, -3, 4]));",
-  "solution": "function hasNegative(arr) {\n  for (const num of arr) {\n    if (num < 0) return true;\n  }\n  return false;\n}\nconsole.log(hasNegative([1, 2, -3, 4]));",
+  "id": "04-control-flow-02-early-return-16",
+  "title": "Boundary check with guard",
+  "starterCode": "// function setScore(score) mein number do\n// < 0: \"Score cannot be negative\"\n// > 100: \"Score cannot exceed 100\"\n// Warna score return karo\n",
+  "solution": "function setScore(score) {\n  if (typeof score !== \"number\" || Number.isNaN(score)) return \"Invalid score\"\n  if (score < 0) return \"Score cannot be negative\"\n  if (score > 100) return \"Score cannot exceed 100\"\n  return score\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "true"
+      "input": [
+        75
+      ],
+      "expected": 75
+    },
+    {
+      "input": [
+        -5
+      ],
+      "expected": "Score cannot be negative"
+    },
+    {
+      "input": [
+        105
+      ],
+      "expected": "Score cannot exceed 100"
+    },
+    {
+      "input": [
+        null
+      ],
+      "expected": "Invalid score"
     }
   ],
   "hints": [
-    "Loop finds -3",
-    "Returns true immediately"
+    "Pehle type check karo",
+    "Phir boundary values check karo"
   ]
 }

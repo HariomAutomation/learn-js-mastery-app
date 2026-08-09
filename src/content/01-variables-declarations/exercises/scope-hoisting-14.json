@@ -1,15 +1,20 @@
 {
   "id": "01-variables-declarations-scope-hoisting-14",
-  "title": "Global pollution",
-  "starterCode": "var x = 1\nfunction test() {\n  x = 99\n}\ntest()\nconsole.log(x)",
-  "solution": "var x = 1\nfunction test() {\n  x = 99\n}\ntest()\nconsole.log(x)",
+  "title": "Loop variable scope with let",
+  "starterCode": "const funcs = []\nfor (let i = 0; i < 3; i++) {\n  funcs.push(() => i)\n}\nreturn funcs.map(f => f())\n",
+  "solution": "const funcs = []\nfor (let i = 0; i < 3; i++) {\n  funcs.push(() => i)\n}\nreturn funcs.map(f => f())",
   "tests": [
     {
       "input": [],
-      "expected": "99"
+      "expected": [
+        0,
+        1,
+        2
+      ]
     }
   ],
   "hints": [
-    "Global var is modified everywhere"
+    "let in for-loop creates per-iteration binding",
+    "Each closure captures different i value"
   ]
 }

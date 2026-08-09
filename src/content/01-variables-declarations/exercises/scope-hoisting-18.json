@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-scope-hoisting-18",
-  "title": "Function declaration hoisting",
-  "starterCode": "test()\nfunction test() { console.log(\"hoisted\") }",
-  "solution": "test()\nfunction test() { console.log(\"hoisted\") }",
+  "title": "Switch case block scope",
+  "starterCode": "let result = \"none\"\nswitch(1) {\n  case 1:\n    let msg = \"hello\"\n    result = msg\n    break\n}\nreturn result\n",
+  "solution": "let result = \"none\"\nswitch(1) {\n  case 1:\n    let msg = \"hello\"\n    result = msg\n    break\n}\nreturn result",
   "tests": [
     {
       "input": [],
-      "expected": "hoisted"
+      "expected": "hello"
     }
   ],
   "hints": [
-    "Function declarations are fully hoisted"
+    "case is a block, let msg is scoped to it",
+    "result captures msg's value"
   ]
 }

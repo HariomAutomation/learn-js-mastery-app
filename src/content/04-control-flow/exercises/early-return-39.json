@@ -1,17 +1,44 @@
 {
-  "id": "04-control-flow-early-return-39",
-  "title": "Early return with default - empty",
-  "starterCode": "function greet(name = 'Guest') {\n  if (!name) return 'Hello, stranger!';\n  return `Hello, ${name}!`;\n}\nconsole.log(greet(''));",
-  "solution": "function greet(name = 'Guest') {\n  if (!name) return 'Hello, stranger!';\n  return `Hello, ${name}!`;\n}\nconsole.log(greet(''));",
+  "id": "04-control-flow-02-early-return-39",
+  "title": "Guard for string replacement",
+  "starterCode": "// function replaceAll(str, search, replacement) mein teen strings do\n// Agar koi bhi string nahi: \"\"\n// Agar search empty: original string\n// Warna replaceAll use karo\n",
+  "solution": "function replaceAll(str, search, replacement) {\n  if (typeof str !== \"string\" || typeof search !== \"string\" || typeof replacement !== \"string\") return \"\"\n  if (search.length === 0) return str\n  return str.replaceAll(search, replacement)\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "Hello, stranger!"
+      "input": [
+        "Hello World",
+        "World",
+        "JS"
+      ],
+      "expected": "Hello JS"
+    },
+    {
+      "input": [
+        "aaa",
+        "a",
+        "b"
+      ],
+      "expected": "bbb"
+    },
+    {
+      "input": [
+        "Hello",
+        "",
+        "X"
+      ],
+      "expected": "Hello"
+    },
+    {
+      "input": [
+        123,
+        "2",
+        "X"
+      ],
+      "expected": ""
     }
   ],
   "hints": [
-    "'' overrides default",
-    "'' is falsy",
-    "Guard triggers"
+    "Sab strings ka type check karo",
+    "Empty search pe original return karo"
   ]
 }

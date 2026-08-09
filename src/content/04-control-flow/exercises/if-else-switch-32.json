@@ -1,16 +1,40 @@
 {
-  "id": "04-control-flow-if-else-switch-32",
-  "title": "Switch with numeric ranges",
-  "starterCode": "const score = 75;\nlet grade;\nswitch (true) {\n  case score >= 90: grade = 'A'; break;\n  case score >= 80: grade = 'B'; break;\n  case score >= 70: grade = 'C'; break;\n  default: grade = 'F';\n}\nconsole.log(grade);",
-  "solution": "const score = 75;\nlet grade;\nswitch (true) {\n  case score >= 90: grade = 'A'; break;\n  case score >= 80: grade = 'B'; break;\n  case score >= 70: grade = 'C'; break;\n  default: grade = 'F';\n}\nconsole.log(grade);",
+  "id": "04-control-flow-01-if-else-switch-32",
+  "title": "Nested if se shipping cost",
+  "starterCode": "// function shippingCost(weight, isExpress)\n// <=1kg: 50, <=5kg: 100, >5kg: 200\n// Express hai to 2x charge karo\n",
+  "solution": "function shippingCost(weight, isExpress) {\n  let cost\n  if (weight <= 1) cost = 50\n  else if (weight <= 5) cost = 100\n  else cost = 200\n  return isExpress ? cost * 2 : cost\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "C"
+      "input": [
+        0.5,
+        false
+      ],
+      "expected": 50
+    },
+    {
+      "input": [
+        3,
+        false
+      ],
+      "expected": 100
+    },
+    {
+      "input": [
+        10,
+        false
+      ],
+      "expected": 200
+    },
+    {
+      "input": [
+        0.5,
+        true
+      ],
+      "expected": 100
     }
   ],
   "hints": [
-    "switch(true) matches first true case",
-    "75 >= 70 is true"
+    "Pehle weight se cost nikalo",
+    "Phir express check karke multiply karo"
   ]
 }

@@ -1,16 +1,40 @@
 {
-  "id": "04-control-flow-early-return-06",
-  "title": "Return undefined early",
-  "starterCode": "function findUser(users, id) {\n  if (!users) return undefined;\n  if (!id) return undefined;\n  return users.find(u => u.id === id);\n}\nconst users = [{ id: 1, name: 'Alice' }];\nconsole.log(findUser(users, 1));",
-  "solution": "function findUser(users, id) {\n  if (!users) return undefined;\n  if (!id) return undefined;\n  return users.find(u => u.id === id);\n}\nconst users = [{ id: 1, name: 'Alice' }];\nconsole.log(findUser(users, 1));",
+  "id": "04-control-flow-02-early-return-06",
+  "title": "Default parameter with guard",
+  "starterCode": "// function createUser(name, age = 18, city = \"Unknown\")\n// Agar name falsy hai: \"Name is required\"\n// Warna { name, age, city } return karo\n",
+  "solution": "function createUser(name, age = 18, city = \"Unknown\") {\n  if (!name) return \"Name is required\"\n  return { name, age, city }\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "[object Object]"
+      "input": [
+        "Hariom",
+        25,
+        "Jaipur"
+      ],
+      "expected": {
+        "name": "Hariom",
+        "age": 25,
+        "city": "Jaipur"
+      }
+    },
+    {
+      "input": [
+        "Amit"
+      ],
+      "expected": {
+        "name": "Amit",
+        "age": 18,
+        "city": "Unknown"
+      }
+    },
+    {
+      "input": [
+        ""
+      ],
+      "expected": "Name is required"
     }
   ],
   "hints": [
-    "Both guards pass",
-    "find returns matching user object"
+    "Default parameters se missing values handle hoti hain",
+    "Guard clause se required fields validate karo"
   ]
 }

@@ -1,15 +1,19 @@
 {
   "id": "01-variables-declarations-variables-intro-11",
-  "title": "Augmented assignment",
-  "starterCode": "let x = 10\nx += 5\nx -= 3\nconsole.log(x)",
-  "solution": "let x = 10\nx += 5\nx -= 3\nconsole.log(x)",
+  "title": "const se object banao aur modify karo",
+  "starterCode": "const user = { name: \"Amit\", age: 25 }\n// Object ke andar age update karo 26 karke\n// Return the updated user\n",
+  "solution": "const user = { name: \"Amit\", age: 25 }\nuser.age = 26\nreturn user",
   "tests": [
     {
       "input": [],
-      "expected": "12"
+      "expected": {
+        "name": "Amit",
+        "age": 26
+      }
     }
   ],
   "hints": [
-    "+= adds, -= subtracts"
+    "const se reassign nahi hota, but object ke properties change ho sakti hain",
+    "user.age = 26 karo"
   ]
 }

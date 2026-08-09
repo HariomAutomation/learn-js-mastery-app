@@ -45,7 +45,7 @@ A comprehensive JavaScript learning desktop application built with Electron, Vit
 - **State:** Zustand
 - **Code Editor:** CodeMirror 6
 - **Markdown:** react-markdown + remark-gfm
-- **Styling:** Tailwind CSS
+- **Styling:** Vanilla CSS (App.css)
 
 ## Getting Started
 

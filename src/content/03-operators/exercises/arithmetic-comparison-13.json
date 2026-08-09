@@ -1,16 +1,16 @@
 {
-  "id": "03-operators-arithmetic-comparison-13",
-  "title": "Multiplication with string coercion",
-  "starterCode": "const result = \"4\" * 2;\nconsole.log(result);",
-  "solution": "const result = \"4\" * 2;\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-13",
+  "title": "Math.floor use karo",
+  "starterCode": "// Coins mein change nikalo — sirf purane coins\nconst amount = 47\nconst coinValue = 10\n// TODO: floor use karo\n",
+  "solution": "const amount = 47\nconst coinValue = 10\nconst coins = Math.floor(amount / coinValue)\nreturn coins",
   "tests": [
     {
       "input": [],
-      "expected": "8"
+      "expected": 4
     }
   ],
   "hints": [
-    "* always coerces to numbers",
-    "The result is a number"
+    "Math.floor() neeche round karta hai",
+    "47/10 = 4.7, floor se 4"
   ]
 }

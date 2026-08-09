@@ -1,16 +1,40 @@
 {
-  "id": "04-control-flow-early-return-43",
-  "title": "Early return - flatten nested",
-  "starterCode": "function getStatusColor(status) {\n  if (status === 'active') return 'green';\n  if (status === 'pending') return 'yellow';\n  if (status === 'error') return 'red';\n  return 'gray';\n}\nconsole.log(getStatusColor('pending'));",
-  "solution": "function getStatusColor(status) {\n  if (status === 'active') return 'green';\n  if (status === 'pending') return 'yellow';\n  if (status === 'error') return 'red';\n  return 'gray';\n}\nconsole.log(getStatusColor('pending'));",
+  "id": "04-control-flow-02-early-return-43",
+  "title": "Guard for number comparison",
+  "starterCode": "// function compare(a, b) mein do values do\n// Agar dono numbers nahi: null\n// Agar a > b: 1, a < b: -1, a === b: 0\n",
+  "solution": "function compare(a, b) {\n  if (typeof a !== \"number\" || typeof b !== \"number\") return null\n  if (a > b) return 1\n  if (a < b) return -1\n  return 0\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "yellow"
+      "input": [
+        5,
+        3
+      ],
+      "expected": 1
+    },
+    {
+      "input": [
+        3,
+        5
+      ],
+      "expected": -1
+    },
+    {
+      "input": [
+        5,
+        5
+      ],
+      "expected": 0
+    },
+    {
+      "input": [
+        "a",
+        5
+      ],
+      "expected": null
     }
   ],
   "hints": [
-    "status is 'pending'",
-    "Second guard matches"
+    "Dono ka type number check karo",
+    "Standard comparison result do"
   ]
 }

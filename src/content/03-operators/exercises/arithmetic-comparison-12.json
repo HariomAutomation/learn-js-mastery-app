@@ -1,16 +1,16 @@
 {
-  "id": "03-operators-arithmetic-comparison-12",
-  "title": "Subtraction with string coercion",
-  "starterCode": "const result = \"10\" - 3;\nconsole.log(result);",
-  "solution": "const result = \"10\" - 3;\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-12",
+  "title": "Math.ceil use karo",
+  "starterCode": "// Students ki books chahiye — partial bhi puri count karo\nconst totalItems = 23\nconst perBox = 5\n// TODO: kitne boxes chahiye (ceil use karo)\n",
+  "solution": "const totalItems = 23\nconst perBox = 5\nconst boxes = Math.ceil(totalItems / perBox)\nreturn boxes",
   "tests": [
     {
       "input": [],
-      "expected": "7"
+      "expected": 5
     }
   ],
   "hints": [
-    "- always coerces to numbers",
-    "The result is a number"
+    "Math.ceil() upar round karta hai",
+    "23/5 = 4.6, ceil se 5"
   ]
 }

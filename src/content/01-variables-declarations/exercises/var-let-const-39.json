@@ -1,15 +1,19 @@
 {
   "id": "01-variables-declarations-var-let-const-39",
-  "title": "const reassign object",
-  "starterCode": "const obj = { a: 1 }\ntry {\n  obj = { b: 2 }\n} catch(e) {\n  console.log(\"error\")\n}",
-  "solution": "const obj = { a: 1 }\ntry {\n  obj = { b: 2 }\n} catch(e) {\n  console.log(\"error\")\n}",
+  "title": "Variable scoping in switch",
+  "starterCode": "switch(1) {\n  case 1:\n    var x = \"from case 1\"\n    // fall through\n  case 2:\n    let y = \"from case 2\"\n    break\n}\nreturn { x, typeofY: typeof y }\n",
+  "solution": "switch(1) {\n  case 1:\n    var x = \"from case 1\"\n  case 2:\n    let y = \"from case 2\"\n    break\n}\nreturn { x, typeofY: typeof y }",
   "tests": [
     {
       "input": [],
-      "expected": "error"
+      "expected": {
+        "x": "from case 1",
+        "typeofY": "undefined"
+      }
     }
   ],
   "hints": [
-    "const cannot reassign variable"
+    "var x switch ke bahar accessible hai",
+    "let y sirf case 2 block mein hai"
   ]
 }

@@ -1,16 +1,36 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-13",
-  "title": "Loose equality with type coercion",
-  "starterCode": "console.log(5 == \"5\");",
-  "solution": "console.log(5 == \"5\");",
+  "id": "02-data-types-03-coercion-truthy-falsy-13",
+  "title": "Ternary operator practical",
+  "starterCode": "function getAgeCategory(age) {\n  // TODO: use nested ternary\n  // < 13: \"Child\", 13-17: \"Teen\", 18-64: \"Adult\", 65+: \"Senior\"\n}\n",
+  "solution": "function getAgeCategory(age) {\n  return age < 13 ? \"Child\" : age < 18 ? \"Teen\" : age < 65 ? \"Adult\" : \"Senior\"\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "true"
+      "input": [
+        10
+      ],
+      "expected": "Child"
+    },
+    {
+      "input": [
+        15
+      ],
+      "expected": "Teen"
+    },
+    {
+      "input": [
+        30
+      ],
+      "expected": "Adult"
+    },
+    {
+      "input": [
+        70
+      ],
+      "expected": "Senior"
     }
   ],
   "hints": [
-    "== does type coercion",
-    "It converts types to compare"
+    "condition ? trueValue : falseValue",
+    "Nested ternary mein readability ka khayal rakho"
   ]
 }

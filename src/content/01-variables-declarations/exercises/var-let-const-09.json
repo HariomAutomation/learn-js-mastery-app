@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-var-let-const-09",
-  "title": "let redeclaration error",
-  "starterCode": "try {\n  let x = 1\n  let x = 2\n} catch(e) {\n  console.log(\"error\")\n}",
-  "solution": "try {\n  let x = 1\n  let x = 2\n} catch(e) {\n  console.log(\"error\")\n}",
+  "title": "Bug: var in function param shadows",
+  "starterCode": "function test(x) {\n  var x = 10\n  return x\n}\nreturn test(5)\n",
+  "solution": "function test(x) {\n  var x = 10\n  return x\n}\nreturn test(5)",
   "tests": [
     {
       "input": [],
-      "expected": "error"
+      "expected": 10
     }
   ],
   "hints": [
-    "let does not allow redeclaration"
+    "var x = 10 shadows the parameter x",
+    "Inner x wins — returns 10"
   ]
 }

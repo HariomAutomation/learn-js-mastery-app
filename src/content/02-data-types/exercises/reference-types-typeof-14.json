@@ -1,16 +1,51 @@
 {
-  "id": "02-data-types-reference-types-typeof-14",
-  "title": "Spread doesn't deep copy",
-  "starterCode": "const original = { a: { b: 1 } };\nconst copy = { ...original };\ncopy.a.b = 99;\nconsole.log();",
-  "solution": "const original = { a: { b: 1 } };\nconst copy = { ...original };\ncopy.a.b = 99;\nconsole.log(original.a.b);",
+  "id": "02-data-types-02-reference-types-typeof-14",
+  "title": "Deep comparison function",
+  "starterCode": "function deepEqual(a, b) {\n  // TODO\n}\n",
+  "solution": "function deepEqual(a, b) {\n  if (a === b) return true\n  if (a === null || b === null) return false\n  if (typeof a !== typeof b) return false\n  if (typeof a !== \"object\") return a === b\n  const keysA = Object.keys(a)\n  const keysB = Object.keys(b)\n  if (keysA.length !== keysB.length) return false\n  return keysA.every(key => deepEqual(a[key], b[key]))\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "99"
+      "input": [
+        {
+          "x": 1,
+          "y": 2
+        },
+        {
+          "x": 1,
+          "y": 2
+        }
+      ],
+      "expected": true
+    },
+    {
+      "input": [
+        {
+          "x": 1
+        },
+        {
+          "x": 2
+        }
+      ],
+      "expected": false
+    },
+    {
+      "input": [
+        {
+          "a": {
+            "b": 1
+          }
+        },
+        {
+          "a": {
+            "b": 1
+          }
+        }
+      ],
+      "expected": true
     }
   ],
   "hints": [
-    "Spread is only shallow",
-    "Nested objects still share references"
+    "Recursion se nested objects compare karo",
+    "Pehle type aur length check karo"
   ]
 }

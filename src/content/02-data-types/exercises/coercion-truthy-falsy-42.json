@@ -1,16 +1,31 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-42",
-  "title": "Minus with string and number",
-  "starterCode": "console.log(\"10\" - 3);",
-  "solution": "console.log(\"10\" - 3);",
+  "id": "02-data-types-03-coercion-truthy-falsy-42",
+  "title": "Array.from with mapFn",
+  "starterCode": "const result1 = Array.from({ length: 5 }, (_, i) => i + 1)\nconst result2 = Array.from(\"hello\", c => c.toUpperCase())\nreturn {\n  range: result1,\n  upper: result2\n}\n",
+  "solution": "const result1 = Array.from({ length: 5 }, (_, i) => i + 1)\nconst result2 = Array.from(\"hello\", c => c.toUpperCase())\nreturn {\n  range: result1,\n  upper: result2\n}",
   "tests": [
     {
       "input": [],
-      "expected": "7"
+      "expected": {
+        "range": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "upper": [
+          "H",
+          "E",
+          "L",
+          "L",
+          "O"
+        ]
+      }
     }
   ],
   "hints": [
-    "- always does math",
-    "String is converted to number"
+    "Array.from第二个参数 se mapping hota hai",
+    "Array-like objects se array bana sakte ho"
   ]
 }

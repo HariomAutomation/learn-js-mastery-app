@@ -1,15 +1,15 @@
 {
   "id": "01-variables-declarations-var-let-const-02",
-  "title": "let block scope",
-  "starterCode": "if (true) {\n  let x = 10\n}\nconsole.log(typeof x)",
-  "solution": "if (true) {\n  let x = 10\n}\nconsole.log(typeof x)",
+  "title": "Bug: loop counter leaking",
+  "starterCode": "// Fix: i loop ke bahar accessible nahi hona chahiye\nfor (var i = 0; i < 3; i++) {}\nreturn typeof i === \"undefined\" ? \"fixed\" : \"not fixed\"\n",
+  "solution": "for (let i = 0; i < 3; i++) {}\nreturn typeof i === \"undefined\" ? \"fixed\" : \"not fixed\"",
   "tests": [
     {
       "input": [],
-      "expected": "undefined"
+      "expected": "fixed"
     }
   ],
   "hints": [
-    "let is block-scoped"
+    "let se i block scoped ho jayega"
   ]
 }

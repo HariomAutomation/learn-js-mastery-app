@@ -1,16 +1,20 @@
 {
-  "id": "02-data-types-primitive-types-13",
-  "title": "Create a negative number",
-  "starterCode": "const temp = ;\nconsole.log(temp);",
-  "solution": "const temp = -10;\nconsole.log(temp);",
+  "id": "02-data-types-01-primitive-types-13",
+  "title": "Number precision problem",
+  "starterCode": "const result = 0.1 + 0.2\nreturn {\n  result: result,\n  isExactlyPointThree: result === 0.3,\n  workaround: Math.round(result * 100) / 100\n}",
+  "solution": "const result = 0.1 + 0.2\nreturn {\n  result: result,\n  isExactlyPointThree: result === 0.3,\n  workaround: Math.round(result * 100) / 100\n}",
   "tests": [
     {
       "input": [],
-      "expected": "-10"
+      "expected": {
+        "result": 0.30000000000000004,
+        "isExactlyPointThree": false,
+        "workaround": 0.3
+      }
     }
   ],
   "hints": [
-    "Put a minus sign before the number",
-    "Negative numbers are just regular numbers with a sign"
+    "Floating point precision issue hai",
+    "Math.round ya toFixed use karo workaround ke liye"
   ]
 }

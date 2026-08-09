@@ -1,16 +1,42 @@
 {
-  "id": "04-control-flow-if-else-switch-40",
-  "title": "Switch with function return",
-  "starterCode": "function getHttpStatus(code) {\n  switch (code) {\n    case 200: return 'OK';\n    case 301: return 'Moved';\n    case 404: return 'Not Found';\n    case 500: return 'Error';\n    default: return 'Unknown';\n  }\n}\nconsole.log(getHttpStatus(301));",
-  "solution": "function getHttpStatus(code) {\n  switch (code) {\n    case 200: return 'OK';\n    case 301: return 'Moved';\n    case 404: return 'Not Found';\n    case 500: return 'Error';\n    default: return 'Unknown';\n  }\n}\nconsole.log(getHttpStatus(301));",
+  "id": "04-control-flow-01-if-else-switch-40",
+  "title": "Guard clause se nested object access",
+  "starterCode": "// function getCity(user) mein object do\n// Safe access karo: user.address.city\n// Agar kuch bhi missing hai: \"Unknown\"\n",
+  "solution": "function getCity(user) {\n  if (!user) return \"Unknown\"\n  if (!user.address) return \"Unknown\"\n  if (!user.address.city) return \"Unknown\"\n  return user.address.city\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "Moved"
+      "input": [
+        {
+          "address": {
+            "city": "Jaipur"
+          }
+        }
+      ],
+      "expected": "Jaipur"
+    },
+    {
+      "input": [
+        {
+          "address": {}
+        }
+      ],
+      "expected": "Unknown"
+    },
+    {
+      "input": [
+        {}
+      ],
+      "expected": "Unknown"
+    },
+    {
+      "input": [
+        null
+      ],
+      "expected": "Unknown"
     }
   ],
   "hints": [
-    "switch can return from function",
-    "301 matches case 301"
+    "Har level pe null check karo",
+    "Guard clause pattern se optional chaining jaisa kaam hota hai"
   ]
 }

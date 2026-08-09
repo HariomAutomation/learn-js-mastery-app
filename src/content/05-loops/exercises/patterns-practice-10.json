@@ -1,16 +1,23 @@
 {
-  "id": "05-loops-patterns-practice-10",
-  "title": "Hollow Rectangle",
-  "starterCode": "for (let i = 0; i < 4; i++) {\n  let row = '';\n  for (let j = 0; j < 6; j++) {\n    if (i === 0 || i === 3 || j === 0 || j === 5) {\n      row += '#';\n    } else {\n      row += ' ';\n    }\n  }\n  console.log(row);\n}",
-  "solution": "for (let i = 0; i < 4; i++) {\n  let row = '';\n  for (let j = 0; j < 6; j++) {\n    if (i === 0 || i === 3 || j === 0 || j === 5) {\n      row += '#';\n    } else {\n      row += ' ';\n    }\n  }\n  console.log(row);\n}",
+  "id": "05-03-patterns-practice-10",
+  "title": "Array me leaders dhundho",
+  "starterCode": "function findLeaders(arr) {\n  // TODO: wo elements jo apne baad ke sab se bade hain\n  // [16,17,4,3,5,2] -> [17,5,2]\n}",
+  "solution": "function findLeaders(arr) {\n  const leaders = [arr[arr.length - 1]];\n  let maxFromRight = arr[arr.length - 1];\n  for (let i = arr.length - 2; i >= 0; i--) {\n    if (arr[i] > maxFromRight) {\n      maxFromRight = arr[i];\n      leaders.unshift(arr[i]);\n    }\n  }\n  return leaders;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "######\n#    #\n#    #\n######"
+      "input": [
+        16,
+        17,
+        4,
+        3,
+        5,
+        2
+      ],
+      "expected": "17,5,2"
     }
   ],
   "hints": [
-    "Print # on borders",
-    "Spaces inside"
+    "Right se left traverse karo",
+    "Max se bada hai toh leader hai"
   ]
 }

@@ -1,15 +1,16 @@
 {
-  "id": "03-operators-arithmetic-comparison-02",
-  "title": "Subtract two numbers",
-  "starterCode": "const result = 10 - 4;\nconsole.log(result);",
-  "solution": "const result = 10 - 4;\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-02",
+  "title": "Discount price nikalo",
+  "starterCode": "// Original price 1500 hai, 25% discount hai\n// Final price return karo\nconst originalPrice = 1500\n// TODO: discount lagao\n",
+  "solution": "const originalPrice = 1500\nconst discount = originalPrice * 0.25\nconst finalPrice = originalPrice - discount\nreturn finalPrice",
   "tests": [
     {
       "input": [],
-      "expected": "6"
+      "expected": 1125
     }
   ],
   "hints": [
-    "Use the - operator"
+    "Discount = price * percentage/100",
+    "Final = original - discount"
   ]
 }

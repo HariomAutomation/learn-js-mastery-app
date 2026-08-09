@@ -1,15 +1,30 @@
 {
   "id": "01-variables-declarations-variables-intro-25",
-  "title": "Rest parameters sum",
-  "starterCode": "function sum(...nums) {\n  return nums.reduce((a, b) => a + b, 0)\n}\nconsole.log(sum(1, 2, 3, 4))",
-  "solution": "function sum(...nums) {\n  return nums.reduce((a, b) => a + b, 0)\n}\nconsole.log(sum(1, 2, 3, 4))",
+  "title": "Even or Odd without modulo",
+  "starterCode": "// Function banao jo check kare number even hai ya odd\n// Bitwise AND operator use karo (modulo nahi chalega)\nfunction evenOrOdd(n) {\n  // TODO\n}\n",
+  "solution": "function evenOrOdd(n) {\n  return (n & 1) === 0 ? \"even\" : \"odd\"\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "10"
+      "input": [
+        4
+      ],
+      "expected": "even"
+    },
+    {
+      "input": [
+        7
+      ],
+      "expected": "odd"
+    },
+    {
+      "input": [
+        0
+      ],
+      "expected": "even"
     }
   ],
   "hints": [
-    "... collects args into array"
+    "n & 1 — agar last bit 0 hai to even",
+    "Bitwise AND se LSB check hota hai"
   ]
 }

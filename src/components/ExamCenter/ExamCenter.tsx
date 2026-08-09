@@ -6,10 +6,7 @@ import { useAppStore } from "@/state/store"
 import { ProgressRing } from "@/components/ProgressRing/ProgressRing"
 import { Confetti } from "@/components/Confetti/Confetti"
 import { generateCertificate } from "@/utils/certificate"
-
-const EXAM_SIZE = 20
-const TIME_LIMIT = 20 * 60
-const PASS_PERCENT = 70
+import { EXAM_SIZE, EXAM_TIME_LIMIT, PASS_PERCENT, XP_PER_EXAM_PASS, XP_PER_EXAM_FAIL } from "@/constants"
 
 type Phase = "intro" | "running" | "result"
 
@@ -19,11 +16,14 @@ export function ExamCenter() {
   const [answers, setAnswers] = useState<(number | null)[]>([])
   const [flags, setFlags] = useState<boolean[]>([])
   const [current, setCurrent] = useState(0)
-  const [timeLeft, setTimeLeft] = useState(TIME_LIMIT)
+  const [timeLeft, setTimeLeft] = useState(EXAM_TIME_LIMIT)
+  const [confirmOpen, setConfirmOpen] = useState(false)
+  const [studentName, setStudentName] = useState("")
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
-  const timeLeftRef = useRef(TIME_LIMIT)
+  const timeLeftRef = useRef(EXAM_TIME_LIMIT)
   const finalizedRef = useRef(false)
   const addXP = useAppStore((s) => s.addXP)
+  const bumpExamVersion = useAppStore((s) => s.bumpExamVersion)
 
   useEffect(() => {
     return () => {
@@ -52,23 +52,25 @@ export function ExamCenter() {
       score: finalScore,
       total: questions.length,
       passed: finalPassed,
-      timeUsed: TIME_LIMIT - timeLeftRef.current,
+      timeUsed: EXAM_TIME_LIMIT - timeLeftRef.current,
     }).then(() => {
-      if (finalPassed) addXP(100)
-      else addXP(20)
+      if (finalPassed) addXP(XP_PER_EXAM_PASS)
+      else addXP(XP_PER_EXAM_FAIL)
+      bumpExamVersion()
     })
   }
 
   async function startExam() {
     const all = await loadAllQuizQuestions()
-    const qs = shuffleQuestions(all, EXAM_SIZE)
+    const qs = shuffleQuestions(all, EXAM_SIZE, Math.floor(Math.random() * 2 ** 31))
     setQuestions(qs)
     setAnswers(new Array(qs.length).fill(null))
     setFlags(new Array(qs.length).fill(false))
     setCurrent(0)
-    setTimeLeft(TIME_LIMIT)
-    timeLeftRef.current = TIME_LIMIT
+    setTimeLeft(EXAM_TIME_LIMIT)
+    timeLeftRef.current = EXAM_TIME_LIMIT
     finalizedRef.current = false
+    setConfirmOpen(false)
     setPhase("running")
     timerRef.current = setInterval(() => {
       timeLeftRef.current = Math.max(0, timeLeftRef.current - 1)
@@ -81,7 +83,17 @@ export function ExamCenter() {
     }, 1000)
   }
 
-  function handleSubmit() {
+  function requestSubmit() {
+    const unanswered = answers.filter((a) => a === null).length
+    if (unanswered > 0) {
+      setConfirmOpen(true)
+    } else {
+      submitExam()
+    }
+  }
+
+  function submitExam() {
+    setConfirmOpen(false)
     if (timerRef.current) clearInterval(timerRef.current)
     setPhase("result")
     finalize()
@@ -190,12 +202,12 @@ export function ExamCenter() {
                 <span className="result-stat-label">Correct</span>
               </div>
               <div className="result-stat">
-                <span className="result-stat-value">{formatTime(TIME_LIMIT - timeLeft)}</span>
+                <span className="result-stat-value">{formatTime(EXAM_TIME_LIMIT - timeLeft)}</span>
                 <span className="result-stat-label">Time Used</span>
               </div>
               <div className="result-stat">
                 <span className="result-stat-value">
-                  {passed ? "+100 XP" : "+20 XP"}
+                  {passed ? `+${XP_PER_EXAM_PASS} XP` : `+${XP_PER_EXAM_FAIL} XP`}
                 </span>
                 <span className="result-stat-label">Reward</span>
               </div>
@@ -207,12 +219,22 @@ export function ExamCenter() {
               🔄 Try Again
             </button>
             {passed && (
-              <button
-                className="btn btn-success"
-                onClick={() => generateCertificate("JS Learner", percent, new Date().toLocaleDateString("en-IN"))}
-              >
-                📜 Download Certificate
-              </button>
+              <div className="certificate-name-wrap">
+                <input
+                  className="certificate-name-input"
+                  type="text"
+                  placeholder="Apna naam likho (certificate ke liye)"
+                  value={studentName}
+                  onChange={(e) => setStudentName(e.target.value)}
+                  maxLength={40}
+                />
+                <button
+                  className="btn btn-success"
+                  onClick={() => generateCertificate(studentName.trim() || "JS Learner", percent, new Date().toLocaleDateString("en-IN"))}
+                >
+                  📜 Download Certificate
+                </button>
+              </div>
             )}
             <button className="btn btn-secondary" onClick={() => useAppStore.getState().setView("home")}>
               🏠 Back to Dashboard
@@ -298,8 +320,7 @@ export function ExamCenter() {
               ) : (
                 <button
                   className="btn btn-success"
-                  onClick={handleSubmit}
-                  disabled={answers.every((a) => a === null)}
+                  onClick={requestSubmit}
                 >
                   Submit Exam ✓
                 </button>
@@ -337,12 +358,32 @@ export function ExamCenter() {
                 Flagged: <strong>{flags.filter(Boolean).length}</strong>
               </span>
             </div>
-            <button className="btn btn-success palette-submit" onClick={handleSubmit}>
+            <button className="btn btn-success palette-submit" onClick={requestSubmit}>
               Finish & Submit
             </button>
           </aside>
         </div>
       </div>
+
+      {confirmOpen && (
+        <div className="exam-confirm-overlay" onClick={() => setConfirmOpen(false)}>
+          <div className="exam-confirm" onClick={(e) => e.stopPropagation()}>
+            <h3 className="exam-confirm-title">⚠️ Submit karne se pehle soch lo!</h3>
+            <p className="exam-confirm-text">
+              {questions.length - answers.filter((a) => a !== null).length} questions still unanswered hain.
+              Unanswered questions ko <strong>galat</strong> count kiya jayega.
+            </p>
+            <div className="exam-confirm-actions">
+              <button className="btn btn-secondary" onClick={() => setConfirmOpen(false)}>
+                ← Keep Working
+              </button>
+              <button className="btn btn-success" onClick={submitExam}>
+                Finish & Submit ✓
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

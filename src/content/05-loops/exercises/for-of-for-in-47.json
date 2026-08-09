@@ -1,16 +1,23 @@
 {
-  "id": "05-loops-for-of-for-in-47",
-  "title": "For...In Nested Object",
-  "starterCode": "const config = {\n  db: { host: 'localhost', port: 5432 },\n  app: { name: 'MyApp' }\n};\nfor (const key in config) {\n  if (config.hasOwnProperty(key)) {\n    console.log(key + ': ' + JSON.stringify(config[key]));\n  }\n}",
-  "solution": "const config = {\n  db: { host: 'localhost', port: 5432 },\n  app: { name: 'MyApp' }\n};\nfor (const key in config) {\n  if (config.hasOwnProperty(key)) {\n    console.log(key + ': ' + JSON.stringify(config[key]));\n  }\n}",
+  "id": "05-02-for-of-for-in-47",
+  "title": "For-of se array ke unique consecutive pairs banao",
+  "starterCode": "function consecutivePairs(arr) {\n  // TODO: [1,2,3,4] -> [[1,2],[2,3],[3,4]]\n}",
+  "solution": "function consecutivePairs(arr) {\n  const result = [];\n  for (let i = 0; i < arr.length - 1; i++) {\n    result.push([arr[i], arr[i + 1]]);\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "db: {\"host\":\"localhost\",\"port\":5432}\napp: {\"name\":\"MyApp\"}"
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "expected": "1,2,2,3,3,4"
     }
   ],
   "hints": [
-    "JSON.stringify to print",
-    "Check own properties"
+    "Loop me i aur i+1 ke pairs banao",
+    "Length - 1 tak chalao"
   ]
 }

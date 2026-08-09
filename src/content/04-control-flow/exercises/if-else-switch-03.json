@@ -1,16 +1,36 @@
 {
-  "id": "04-control-flow-if-else-switch-03",
-  "title": "If/else statement",
-  "starterCode": "const age = 15;\nif (age >= 18) {\n  console.log('adult');\n} else {\n  console.log('minor');\n}",
-  "solution": "const age = 15;\nif (age >= 18) {\n  console.log('adult');\n} else {\n  console.log('minor');\n}",
+  "id": "04-control-flow-01-if-else-switch-03",
+  "title": "Even ya odd number batao",
+  "starterCode": "// function evenOdd(num) mein number do\n// \"even\" ya \"odd\" return karo\n",
+  "solution": "function evenOdd(num) {\n  if (num % 2 === 0) return \"even\"\n  else return \"odd\"\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "minor"
+      "input": [
+        4
+      ],
+      "expected": "even"
+    },
+    {
+      "input": [
+        7
+      ],
+      "expected": "odd"
+    },
+    {
+      "input": [
+        0
+      ],
+      "expected": "even"
+    },
+    {
+      "input": [
+        -2
+      ],
+      "expected": "even"
     }
   ],
   "hints": [
-    "else block executes when condition is false",
-    "15 < 18"
+    "% (modulo) operator se remainder milta hai",
+    "0 remainder means even hai"
   ]
 }

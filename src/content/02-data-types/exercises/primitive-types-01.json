@@ -1,16 +1,20 @@
 {
-  "id": "02-data-types-primitive-types-01",
-  "title": "Create a string using double quotes",
-  "starterCode": "const greeting = \"Hello\";\nconsole.log(greeting);",
-  "solution": "const greeting = \"Hello\";\nconsole.log(greeting);",
+  "id": "02-data-types-01-primitive-types-01",
+  "title": "String banalo profile se",
+  "starterCode": "// Name, city aur country variables banao (sab strings)\n// Return as object: { name, city, country }\n",
+  "solution": "const name = \"Hariom\"\nconst city = \"Jaipur\"\nconst country = \"India\"\nreturn { name, city, country }",
   "tests": [
     {
       "input": [],
-      "expected": "Hello"
+      "expected": {
+        "name": "Hariom",
+        "city": "Jaipur",
+        "country": "India"
+      }
     }
   ],
   "hints": [
-    "Use double quotes to create a string",
-    "Assign the string to a variable"
+    "const ya let se string variables declare karo",
+    "Double quotes ya single quotes use karo"
   ]
 }

@@ -1,16 +1,16 @@
 {
-  "id": "03-operators-arithmetic-comparison-43",
-  "title": "Type coercion in subtraction",
-  "starterCode": "const result = true - 1;\nconsole.log(result);",
-  "solution": "const result = true - 1;\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-43",
+  "title": "Distance formula calculate karo",
+  "starterCode": "// Do points (x1,y1) aur (x2,y2) hain\n// Distance = √((x2-x1)² + (y2-y1)²)\nconst x1 = 1, y1 = 2\nconst x2 = 4, y2 = 6\n// TODO: distance nikalo\n",
+  "solution": "const x1 = 1, y1 = 2\nconst x2 = 4, y2 = 6\nconst distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2))\nreturn distance",
   "tests": [
     {
       "input": [],
-      "expected": "0"
+      "expected": 5
     }
   ],
   "hints": [
-    "true coerces to 1 in numeric context",
-    "1 - 1 = 0"
+    "Math.pow se squares nikalo",
+    "Math.sqrt se root nikalo"
   ]
 }

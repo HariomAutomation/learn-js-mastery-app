@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-scope-hoisting-20",
-  "title": "const block scope",
-  "starterCode": "if (true) {\n  const x = 10\n  console.log(x)\n}\nconsole.log(typeof x)",
-  "solution": "if (true) {\n  const x = 10\n  console.log(x)\n}\nconsole.log(typeof x)",
+  "title": "Temporal Dead Zone visualization",
+  "starterCode": "let a = \"outer\"\nfunction test() {\n  try {\n    console.log(a)\n  } catch(e) {\n    return \"TDZ in function\"\n  }\n  let a = \"inner\"\n}\nreturn test()\n",
+  "solution": "let a = \"outer\"\nfunction test() {\n  try {\n    console.log(a)\n  } catch(e) {\n    return \"TDZ in function\"\n  }\n  let a = \"inner\"\n}\nreturn test()",
   "tests": [
     {
       "input": [],
-      "expected": "10\nundefined"
+      "expected": "TDZ in function"
     }
   ],
   "hints": [
-    "const is block-scoped"
+    "let a inside function shadows outer a",
+    "Before declaration, a is in TDZ"
   ]
 }

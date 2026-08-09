@@ -1,15 +1,20 @@
 {
   "id": "01-variables-declarations-var-let-const-22",
-  "title": "var hoisting demo",
-  "starterCode": "console.log(a)\nvar a = 10\nconsole.log(a)",
-  "solution": "console.log(a)\nvar a = 10\nconsole.log(a)",
+  "title": "Closure captures variable",
+  "starterCode": "function makeCounter() {\n  let count = 0\n  return function() {\n    return ++count\n  }\n}\nconst counter = makeCounter()\nreturn [counter(), counter(), counter()]\n",
+  "solution": "function makeCounter() {\n  let count = 0\n  return function() {\n    return ++count\n  }\n}\nconst counter = makeCounter()\nreturn [counter(), counter(), counter()]",
   "tests": [
     {
       "input": [],
-      "expected": "undefined\n10"
+      "expected": [
+        1,
+        2,
+        3
+      ]
     }
   ],
   "hints": [
-    "var is hoisted, let is not"
+    "Closure parent ke variables ko yaad rakhta hai",
+    "Har call pe count badhta hai"
   ]
 }

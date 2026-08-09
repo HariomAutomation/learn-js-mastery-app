@@ -1,15 +1,27 @@
 {
-  "id": "03-operators-arithmetic-comparison-04",
-  "title": "Divide two numbers",
-  "starterCode": "const result = 20 / 4;\nconsole.log(result);",
-  "solution": "const result = 20 / 4;\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-04",
+  "title": "Multiplication table banao",
+  "starterCode": "// 7 ka table return karo array mein [7, 14, 21, 28, 35, 42, 49, 56, 63, 70]\nconst n = 7\n// TODO: loop ya map use karo\n",
+  "solution": "const n = 7\nreturn Array.from({ length: 10 }, (_, i) => n * (i + 1))",
   "tests": [
     {
       "input": [],
-      "expected": "5"
+      "expected": [
+        7,
+        14,
+        21,
+        28,
+        35,
+        42,
+        49,
+        56,
+        63,
+        70
+      ]
     }
   ],
   "hints": [
-    "Use the / operator"
+    "Array.from se 10 elements banao",
+    "n * (i + 1) se multiples milenge"
   ]
 }

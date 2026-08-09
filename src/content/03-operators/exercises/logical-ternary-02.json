@@ -1,16 +1,16 @@
 {
-  "id": "03-operators-logical-ternary-02",
-  "title": "Logical AND with falsy first",
-  "starterCode": "const result = 0 && 42;\nconsole.log(result);",
-  "solution": "const result = 0 && 42;\nconsole.log(result);",
+  "id": "03-operators-02-logical-ternary-02",
+  "title": "OR operator practical",
+  "starterCode": "// Admin ya moderator ho to access milega\nconst isAdmin = false\nconst isModerator = true\n// TODO: access check karo\n",
+  "solution": "const isAdmin = false\nconst isModerator = true\nconst canAccess = isAdmin || isModerator\nreturn canAccess",
   "tests": [
     {
       "input": [],
-      "expected": "0"
+      "expected": true
     }
   ],
   "hints": [
-    "&& short-circuits on first falsy",
-    "0 is falsy"
+    "|| ek bhi true hone pe true deta hai",
+    "Dono false ho to false"
   ]
 }

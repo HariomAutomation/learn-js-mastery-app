@@ -1,16 +1,23 @@
 {
-  "id": "05-loops-for-of-for-in-49",
-  "title": "For...Of Array Spread",
-  "starterCode": "const arr = [1, 2, 3];\nconst copy = [...arr];\nfor (const val of copy) {\n  console.log(val);\n}",
-  "solution": "const arr = [1, 2, 3];\nconst copy = [...arr];\nfor (const val of copy) {\n  console.log(val);\n}",
+  "id": "05-02-for-of-for-in-49",
+  "title": "For-of se array ke element frequency map banao",
+  "starterCode": "function frequencyMap(arr) {\n  // TODO: har element ki frequency count karo\n}",
+  "solution": "function frequencyMap(arr) {\n  const freq = new Map();\n  for (const item of arr) {\n    freq.set(item, (freq.get(item) || 0) + 1);\n  }\n  return Object.fromEntries(freq);\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "1\n2\n3"
+      "input": [
+        "a",
+        "b",
+        "a",
+        "c",
+        "b",
+        "a"
+      ],
+      "expected": "{\"a\":3,\"b\":2,\"c\":1}"
     }
   ],
   "hints": [
-    "Spread creates copy",
-    "Iterate copy"
+    "Map use karo frequency track karne ke liye",
+    "Object.fromEntries se object me convert karo"
   ]
 }

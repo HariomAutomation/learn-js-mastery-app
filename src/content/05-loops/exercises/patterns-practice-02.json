@@ -1,16 +1,23 @@
 {
-  "id": "05-loops-patterns-practice-02",
-  "title": "Number Triangle",
-  "starterCode": "for (let i = 1; i <= 5; i++) {\n  let row = '';\n  for (let j = 1; j <= i; j++) {\n    row += j;\n  }\n  console.log(row);\n}",
-  "solution": "for (let i = 1; i <= 5; i++) {\n  let row = '';\n  for (let j = 1; j <= i; j++) {\n    row += j;\n  }\n  console.log(row);\n}",
+  "id": "05-03-patterns-practice-02",
+  "title": "Array se duplicates remove karo preserving order",
+  "starterCode": "function removeDuplicates(arr) {\n  // TODO: duplicates hatao par order maintain karo\n}",
+  "solution": "function removeDuplicates(arr) {\n  const seen = new Set();\n  const result = [];\n  for (const item of arr) {\n    if (!seen.has(item)) {\n      seen.add(item);\n      result.push(item);\n    }\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "1\n12\n123\n1234\n12345"
+      "input": [
+        3,
+        1,
+        2,
+        1,
+        3,
+        4
+      ],
+      "expected": "3,1,2,4"
     }
   ],
   "hints": [
-    "Print j value",
-    "Concatenate numbers"
+    "Set use karo seen elements track karne ke liye",
+    "Pehli baar milne pe hi add karo"
   ]
 }

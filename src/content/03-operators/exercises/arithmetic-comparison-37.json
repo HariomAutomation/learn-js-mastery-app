@@ -1,15 +1,19 @@
 {
-  "id": "03-operators-arithmetic-comparison-37",
-  "title": "Compound addition (+=)",
-  "starterCode": "let x = 10;\nx += 5;\nconsole.log(x);",
-  "solution": "let x = 10;\nx += 5;\nconsole.log(x);",
+  "id": "03-operators-01-arithmetic-comparison-37",
+  "title": "parseFloat use karo",
+  "starterCode": "// Decimal number nikalo string se\nconst measurement = \"12.5cm\"\nconst price = \"$99.95\"\nreturn {\n  cm: parseFloat(measurement),\n  dollars: parseFloat(price)\n}",
+  "solution": "const measurement = \"12.5cm\"\nconst price = \"$99.95\"\nreturn {\n  cm: parseFloat(measurement),\n  dollars: parseFloat(price)\n}",
   "tests": [
     {
       "input": [],
-      "expected": "15"
+      "expected": {
+        "cm": 12.5,
+        "dollars": 99.95
+      }
     }
   ],
   "hints": [
-    "x += 5 is the same as x = x + 5"
+    "parseFloat decimal tak number nikalta hai",
+    "Non-numeric characters ignore hote hain"
   ]
 }

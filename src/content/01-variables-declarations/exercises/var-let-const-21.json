@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-var-let-const-21",
-  "title": "const getter setter",
-  "starterCode": "const obj = { _x: 1, get x() { return this._x } }\nconsole.log(obj.x)",
-  "solution": "const obj = { _x: 1, get x() { return this._x } }\nconsole.log(obj.x)",
+  "title": "IIFE scope isolation",
+  "starterCode": "const result = (function() {\n  var secret = 42\n  return secret\n})()\nreturn result\n",
+  "solution": "const result = (function() {\n  var secret = 42\n  return secret\n})()\nreturn result",
   "tests": [
     {
       "input": [],
-      "expected": "1"
+      "expected": 42
     }
   ],
   "hints": [
-    "getter returns value"
+    "IIFE turant execute hota hai",
+    "Variable IIFE ke scope mein confined hai"
   ]
 }

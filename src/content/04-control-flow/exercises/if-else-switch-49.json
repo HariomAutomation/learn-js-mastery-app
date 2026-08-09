@@ -1,16 +1,42 @@
 {
-  "id": "04-control-flow-if-else-switch-49",
-  "title": "If with template literal condition",
-  "starterCode": "const name = \"Alice\";\nif (`Hello, ${name}` === \"Hello, Alice\") {\n  console.log(\"match\");\n} else {\n  console.log(\"no match\");\n}",
-  "solution": "const name = \"Alice\";\nif (`Hello, ${name}` === \"Hello, Alice\") {\n  console.log(\"match\");\n} else {\n  console.log(\"no match\");\n}",
+  "id": "04-control-flow-01-if-else-switch-49",
+  "title": "Switch seHttpStatus message",
+  "starterCode": "// function httpMessage(code) mein status code do\n// 200: \"OK\", 201: \"Created\", 404: \"Not Found\", 500: \"Server Error\"\n// Unknown code: \"Unknown\"\n",
+  "solution": "function httpMessage(code) {\n  switch (code) {\n    case 200: return \"OK\"\n    case 201: return \"Created\"\n    case 404: return \"Not Found\"\n    case 500: return \"Server Error\"\n    default: return \"Unknown\"\n  }\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "match"
+      "input": [
+        200
+      ],
+      "expected": "OK"
+    },
+    {
+      "input": [
+        201
+      ],
+      "expected": "Created"
+    },
+    {
+      "input": [
+        404
+      ],
+      "expected": "Not Found"
+    },
+    {
+      "input": [
+        500
+      ],
+      "expected": "Server Error"
+    },
+    {
+      "input": [
+        418
+      ],
+      "expected": "Unknown"
     }
   ],
   "hints": [
-    "Template literal produces 'Hello, Alice'",
-    "Comparison is true"
+    "HTTP status codes ke liye switch perfect hai",
+    "Default case mein Unknown return karo"
   ]
 }

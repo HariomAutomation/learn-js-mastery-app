@@ -1,16 +1,21 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-19",
-  "title": "parseInt for string parsing",
-  "starterCode": "console.log(parseInt(\"42abc\"));",
-  "solution": "console.log(parseInt(\"42abc\"));",
+  "id": "02-data-types-03-coercion-truthy-falsy-19",
+  "title": "Switch statement coercion",
+  "starterCode": "function test(x) {\n  switch(x) {\n    case 0: return \"zero\"\n    case \"\": return \"empty\"\n    case false: return \"false\"\n    case null: return \"null\"\n    default: return \"other\"\n  }\n}\nreturn {\n  test0: test(0),\n  testEmpty: test(\"\"),\n  testFalse: test(false),\n  testNull: test(null)\n}\n",
+  "solution": "function test(x) {\n  switch(x) {\n    case 0: return \"zero\"\n    case \"\": return \"empty\"\n    case false: return \"false\"\n    case null: return \"null\"\n    default: return \"other\"\n  }\n}\nreturn {\n  test0: test(0),\n  testEmpty: test(\"\"),\n  testFalse: test(false),\n  testNull: test(null)\n}",
   "tests": [
     {
       "input": [],
-      "expected": "42"
+      "expected": {
+        "test0": "zero",
+        "testEmpty": "empty",
+        "testFalse": "false",
+        "testNull": "null"
+      }
     }
   ],
   "hints": [
-    "parseInt stops at non-numeric",
-    "Parses until it can't anymore"
+    "Switch === comparison use karta hai",
+    "Pehla match milte hi break ki zaroorat nahi return se"
   ]
 }

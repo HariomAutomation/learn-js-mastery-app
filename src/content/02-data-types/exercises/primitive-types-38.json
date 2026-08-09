@@ -1,16 +1,29 @@
 {
-  "id": "02-data-types-primitive-types-38",
-  "title": "Convert string to float with parseFloat",
-  "starterCode": "const str = \"3.14abc\";\nconst num = ;\nconsole.log(num);",
-  "solution": "const str = \"3.14abc\";\nconst num = parseFloat(str);\nconsole.log(num);",
+  "id": "02-data-types-01-primitive-types-38",
+  "title": "Rest parameters",
+  "starterCode": "function sum(...numbers) {\n  // TODO\n}\n",
+  "solution": "function sum(...numbers) {\n  return numbers.reduce((acc, n) => acc + n, 0)\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "3.14"
+      "input": [
+        1,
+        2,
+        3
+      ],
+      "expected": 6
+    },
+    {
+      "input": [
+        10,
+        20,
+        30,
+        40
+      ],
+      "expected": 100
     }
   ],
   "hints": [
-    "parseFloat parses decimal numbers",
-    "It stops at the first non-numeric character"
+    "...numbers se sab arguments array mein aate hain",
+    "reduce se sum nikalo"
   ]
 }

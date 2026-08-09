@@ -1,16 +1,36 @@
 {
-  "id": "04-control-flow-if-else-switch-04",
-  "title": "If/else if/else chain",
-  "starterCode": "const score = 85;\nif (score >= 90) {\n  console.log('A');\n} else if (score >= 80) {\n  console.log('B');\n} else {\n  console.log('C');\n}",
-  "solution": "const score = 85;\nif (score >= 90) {\n  console.log('A');\n} else if (score >= 80) {\n  console.log('B');\n} else {\n  console.log('C');\n}",
+  "id": "04-control-flow-01-if-else-switch-04",
+  "title": "Grade system based on marks",
+  "starterCode": "// function getGrade(marks) mein marks do (0-100)\n// >=90: \"A+\", >=80: \"A\", >=70: \"B\", >=60: \"C\", >=50: \"D\", <50: \"F\"\n",
+  "solution": "function getGrade(marks) {\n  if (marks >= 90) return \"A+\"\n  else if (marks >= 80) return \"A\"\n  else if (marks >= 70) return \"B\"\n  else if (marks >= 60) return \"C\"\n  else if (marks >= 50) return \"D\"\n  else return \"F\"\n}",
   "tests": [
     {
-      "input": [],
+      "input": [
+        95
+      ],
+      "expected": "A+"
+    },
+    {
+      "input": [
+        82
+      ],
+      "expected": "A"
+    },
+    {
+      "input": [
+        71
+      ],
       "expected": "B"
+    },
+    {
+      "input": [
+        45
+      ],
+      "expected": "F"
     }
   ],
   "hints": [
-    "85 is not >= 90",
-    "85 >= 80 is true"
+    "Sabse pehle highest range check karo",
+    "Marks >= 90 se start karo chain"
   ]
 }

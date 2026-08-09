@@ -1,16 +1,19 @@
 {
-  "id": "02-data-types-reference-types-typeof-40",
-  "title": "Check for null explicitly",
-  "starterCode": "const val = null;\nconsole.log();",
-  "solution": "const val = null;\nconsole.log(val === null);",
+  "id": "02-data-types-02-reference-types-typeof-40",
+  "title": "Object pattern matching",
+  "starterCode": "const response = { status: 200, data: { users: [{ name: \"Hariom\" }] } }\nconst { status, data: { users: [firstUser] } } = response\nreturn { status, userName: firstUser.name }\n",
+  "solution": "const response = { status: 200, data: { users: [{ name: \"Hariom\" }] } }\nconst { status, data: { users: [firstUser] } } = response\nreturn { status, userName: firstUser.name }",
   "tests": [
     {
       "input": [],
-      "expected": "true"
+      "expected": {
+        "status": 200,
+        "userName": "Hariom"
+      }
     }
   ],
   "hints": [
-    "Use === null for null checks",
-    "typeof is unreliable for null"
+    "Nested destructuring se deep values extract hoti hain",
+    "Array destructuring bhi nested ho sakti hai"
   ]
 }

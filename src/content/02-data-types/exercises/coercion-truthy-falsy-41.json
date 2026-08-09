@@ -1,16 +1,18 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-41",
-  "title": "Plus with string and number",
-  "starterCode": "console.log(\"Age: \" + 25);",
-  "solution": "console.log(\"Age: \" + 25);",
+  "id": "02-data-types-03-coercion-truthy-falsy-41",
+  "title": "Proxy defineProperty trap",
+  "starterCode": "const data = new Proxy({}, {\n  defineProperty(target, prop, descriptor) {\n    if (prop === \"age\" && descriptor.value < 0) {\n      return false\n    }\n    return Reflect.defineProperty(target, prop, descriptor)\n  }\n})\ndata.age = 25\ntry {\n  Object.defineProperty(data, \"age\", { value: -5 })\n} catch(e) {}\nreturn { age: data.age }\n",
+  "solution": "const data = new Proxy({}, {\n  defineProperty(target, prop, descriptor) {\n    if (prop === \"age\" && descriptor.value < 0) {\n      return false\n    }\n    return Reflect.defineProperty(target, prop, descriptor)\n  }\n})\ndata.age = 25\ntry {\n  Object.defineProperty(data, \"age\", { value: -5 })\n} catch(e) {}\nreturn { age: data.age }",
   "tests": [
     {
       "input": [],
-      "expected": "Age: 25"
+      "expected": {
+        "age": 25
+      }
     }
   ],
   "hints": [
-    "String + number = concatenation",
-    "Number becomes a string"
+    "Proxy defineProperty trap defineProperty intercept karta hai",
+    "Reflect.defineProperty se default behavior follow hota hai"
   ]
 }

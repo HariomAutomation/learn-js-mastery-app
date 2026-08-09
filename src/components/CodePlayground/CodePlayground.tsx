@@ -1,34 +1,65 @@
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import CodeMirror from "@uiw/react-codemirror"
 import { javascript } from "@codemirror/lang-javascript"
-import { EditorView } from "@codemirror/view"
-
-interface ExerciseTest {
-  input: unknown[]
-  expected: unknown
-}
+import { EditorView, keymap } from "@codemirror/view"
+import { indentWithTab } from "@codemirror/commands"
 
 interface CodePlaygroundProps {
   title?: string
   starterCode?: string
   solution?: string
   hints?: string[]
-  tests?: ExerciseTest[]
+  theme?: "dark" | "light"
 }
 
-interface TestResult {
-  index: number
-  input: string
-  expected: string
-  actual: string
-  passed: boolean
+const WORKER_TIMEOUT_MS = 8000
+
+const WORKER_CODE = `
+self.onmessage = function (event) {
+  var code = event.data.code
+  var logs = []
+
+  try {
+    var originalLog = console.log
+    console.log = function () {
+      var parts = []
+      for (var i = 0; i < arguments.length; i++) {
+        var a = arguments[i]
+        if (a === undefined) parts.push("undefined")
+        else if (typeof a === "function") parts.push(String(a))
+        else if (typeof a === "object" && a !== null) {
+          try { parts.push(JSON.stringify(a, null, 2)) } catch (e) { parts.push(String(a)) }
+        } else parts.push(String(a))
+      }
+      logs.push(parts.join(" "))
+    }
+
+    var result
+    try {
+      result = new Function(code)()
+    } finally {
+      console.log = originalLog
+    }
+
+    self.postMessage({
+      type: "result",
+      logs: logs,
+      hasResult: result !== undefined,
+      result: result === undefined ? null : formatResult(result)
+    })
+  } catch (err) {
+    self.postMessage({ type: "error", error: String(err && err.stack ? err.stack : err) })
+  }
 }
 
-function stringify(value: unknown): string {
-  if (typeof value === "string") return `"${value}"`
-  if (typeof value === "object") return JSON.stringify(value)
-  return String(value)
+function formatResult(x) {
+  if (typeof x === "function") return String(x)
+  if (typeof x === "object" && x !== null) {
+    try { return JSON.stringify(x, null, 2) } catch (e) { return String(x) }
+  }
+  return String(x)
 }
+`
 
 const darkTheme = EditorView.theme({
   "&": { backgroundColor: "#181825", color: "#cdd6f4" },
@@ -48,72 +79,84 @@ const lightTheme = EditorView.theme({
   ".cm-cursor": { borderLeftColor: "#8839ef" },
 }, { dark: false })
 
-export function CodePlayground({ title, starterCode = "", solution = "", hints = [], tests = [] }: CodePlaygroundProps) {
+export function CodePlayground({ title, starterCode = "", solution = "", hints = [], theme = "dark" }: CodePlaygroundProps) {
   const [code, setCode] = useState("")
   const [output, setOutput] = useState<{ result: unknown; error: string | null } | null>(null)
-  const [testResults, setTestResults] = useState<TestResult[] | null>(null)
   const [showHints, setShowHints] = useState(false)
   const [showSolution, setShowSolution] = useState(false)
-  const theme = document.documentElement.getAttribute("data-theme") ?? "dark"
+  const [running, setRunning] = useState(false)
+  const workerRef = useRef<Worker | null>(null)
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
-  function runCode() {
-    try {
-      const logs: string[] = []
-      const originalLog = console.log
-      console.log = (...args: unknown[]) => {
-        logs.push(args.map((a) => (typeof a === "object" ? JSON.stringify(a, null, 2) : String(a))).join(" "))
-      }
+  useEffect(() => {
+    return () => cleanupWorker()
+  }, [])
 
-      const result = new Function(code)()
-      console.log = originalLog
-
-      const outputParts: string[] = []
-      if (logs.length > 0) outputParts.push(logs.join("\n"))
-      if (result !== undefined) outputParts.push("=> " + (typeof result === "object" ? JSON.stringify(result, null, 2) : String(result)))
-
-      setOutput({ result: outputParts.join("\n") || "Code executed (no output)", error: null })
-    } catch (err) {
-      setOutput({ result: null, error: String(err) })
+  function cleanupWorker() {
+    if (timerRef.current) clearTimeout(timerRef.current)
+    timerRef.current = null
+    if (workerRef.current) {
+      workerRef.current.terminate()
+      workerRef.current = null
     }
   }
 
-  function runTests() {
-    if (tests.length === 0) return
-    const results: TestResult[] = []
-    for (let i = 0; i < tests.length; i++) {
-      const test = tests[i]
-      const fnCode = `(${code})\n(${JSON.stringify(test.input)})`
-      try {
-        const actual = new Function(fnCode)()
-        results.push({
-          index: i,
-          input: test.input.map(stringify).join(", "),
-          expected: stringify(test.expected),
-          actual: stringify(actual),
-          passed: JSON.stringify(actual) === JSON.stringify(test.expected),
-        })
-      } catch (err) {
-        results.push({
-          index: i,
-          input: test.input.map(stringify).join(", "),
-          expected: stringify(test.expected),
-          actual: `Error: ${String(err)}`,
-          passed: false,
-        })
-      }
+  function runCode() {
+    if (running) return
+    const trimmed = code.trim()
+    if (!trimmed) {
+      setOutput({ result: "Code khali hai — kuch likho pehle.", error: null })
+      return
     }
-    setTestResults(results)
+    if (workerRef.current) cleanupWorker()
+
+    const blob = new Blob([WORKER_CODE], { type: "application/javascript" })
+    const url = URL.createObjectURL(blob)
+    const worker = new Worker(url)
+    workerRef.current = worker
+    setOutput(null)
+    setRunning(true)
+
+    timerRef.current = setTimeout(() => {
+      worker.terminate()
+      workerRef.current = null
+      URL.revokeObjectURL(url)
+      setRunning(false)
+      setOutput({ result: null, error: "Execution timed out — lagta hai code infinite loop mein phas gaya. (8s limit)" })
+    }, WORKER_TIMEOUT_MS)
+
+    worker.onmessage = (e: MessageEvent<{ type: string; logs?: string[]; hasResult?: boolean; result?: unknown; error?: string }>) => {
+      cleanupWorker()
+      URL.revokeObjectURL(url)
+      setRunning(false)
+      const msg = e.data
+      if (msg.type === "error") {
+        setOutput({ result: null, error: msg.error ?? "Unknown error" })
+        return
+      }
+      const parts: string[] = []
+      if (msg.logs && msg.logs.length > 0) parts.push(msg.logs.join("\n"))
+      if (msg.hasResult) parts.push("=> " + String(msg.result))
+      setOutput({ result: parts.join("\n") || "Code executed (no output)", error: null })
+    }
+
+    worker.onerror = (e) => {
+      cleanupWorker()
+      URL.revokeObjectURL(url)
+      setRunning(false)
+      setOutput({ result: null, error: e.message || "Worker error" })
+    }
+
+    worker.postMessage({ code: trimmed })
   }
 
   function resetCode() {
+    cleanupWorker()
+    setRunning(false)
     setCode("")
     setOutput(null)
-    setTestResults(null)
     setShowSolution(false)
   }
-
-  const passedCount = testResults?.filter((t) => t.passed).length ?? 0
-  const allPassed = testResults !== null && passedCount === testResults.length && testResults.length > 0
 
   const taskInstructions = starterCode
     .split("\n")
@@ -140,13 +183,8 @@ export function CodePlayground({ title, starterCode = "", solution = "", hints =
       <div className="playground-header">
         <span className="playground-editor-label">Your Code</span>
         <div className="playground-actions">
-          {tests.length > 0 && (
-            <button className="btn btn-success" onClick={runTests}>
-              ▶ Run Tests
-            </button>
-          )}
-          <button className="btn btn-primary" onClick={runCode}>
-            Run
+          <button className="btn btn-primary" onClick={runCode} disabled={running}>
+            {running ? "Running…" : "Run"}
           </button>
           <button className="btn btn-secondary" onClick={resetCode}>
             Clear
@@ -158,7 +196,7 @@ export function CodePlayground({ title, starterCode = "", solution = "", hints =
         <CodeMirror
           value={code}
           onChange={(value) => setCode(value)}
-          extensions={[javascript(), EditorView.lineWrapping]}
+          extensions={[javascript(), EditorView.lineWrapping, keymap.of([indentWithTab])]}
           theme={theme === "light" ? lightTheme : darkTheme}
           placeholder="// Yahan apna code likho..."
           basicSetup={{
@@ -171,40 +209,6 @@ export function CodePlayground({ title, starterCode = "", solution = "", hints =
           }}
         />
       </div>
-
-      {testResults && (
-        <div className={`test-results ${allPassed ? "all-pass" : ""}`}>
-          <div className="test-summary">
-            <span className="test-score">
-              {passedCount}/{testResults.length} tests passed
-            </span>
-            {allPassed && <span className="test-win">All tests passed! Concept clear hai!</span>}
-            {!allPassed && <span className="test-hint-text">Kuch tests fail — hints dekho ya try karte raho!</span>}
-          </div>
-          {testResults.map((tr) => (
-            <div key={tr.index} className={`test-case ${tr.passed ? "passed" : "failed"}`}>
-              <div className="test-case-head">
-                <span className="test-case-icon">{tr.passed ? "✓" : "✗"}</span>
-                <span className="test-case-name">Test {tr.index + 1}</span>
-              </div>
-              <div className="test-case-body">
-                <div className="test-line">
-                  <span className="test-label">Input</span>
-                  <code>({tr.input})</code>
-                </div>
-                <div className="test-line">
-                  <span className="test-label">Expected</span>
-                  <code>{tr.expected}</code>
-                </div>
-                <div className="test-line">
-                  <span className="test-label">Got</span>
-                  <code className={tr.passed ? "ok" : "bad"}>{tr.actual}</code>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
 
       {output && (
         <div className={"code-output " + (output.error ? "error" : "success")}>

@@ -1,16 +1,38 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-32",
-  "title": "Boolean of empty object",
-  "starterCode": "console.log(Boolean({}));",
-  "solution": "console.log(Boolean({}));",
+  "id": "02-data-types-03-coercion-truthy-falsy-32",
+  "title": "String to array coercion",
+  "starterCode": "const str = \"hello\"\nconst arr = Array.from(str)\nconst spread = [...str]\nconst split = str.split(\"\")\nreturn {\n  from: arr,\n  spread: spread,\n  split: split\n}\n",
+  "solution": "const str = \"hello\"\nconst arr = Array.from(str)\nconst spread = [...str]\nconst split = str.split(\"\")\nreturn {\n  from: arr,\n  spread: spread,\n  split: split\n}",
   "tests": [
     {
       "input": [],
-      "expected": "true"
+      "expected": {
+        "from": [
+          "h",
+          "e",
+          "l",
+          "l",
+          "o"
+        ],
+        "spread": [
+          "h",
+          "e",
+          "l",
+          "l",
+          "o"
+        ],
+        "split": [
+          "h",
+          "e",
+          "l",
+          "l",
+          "o"
+        ]
+      }
     }
   ],
   "hints": [
-    "Objects are always truthy",
-    "Even with no properties"
+    "Array.from() se string array ban jati hai",
+    "Spread operator bhi same kaam karta hai"
   ]
 }

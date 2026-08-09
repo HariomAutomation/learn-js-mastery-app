@@ -1,16 +1,20 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-27",
-  "title": "Boolean coercion in arithmetic",
-  "starterCode": "console.log(true + true);",
-  "solution": "console.log(true + true);",
+  "id": "02-data-types-03-coercion-truthy-falsy-27",
+  "title": "Implicit object coercion",
+  "starterCode": "const obj = {\n  valueOf() { return 42 },\n  toString() { return \"custom\" }\n}\nreturn {\n  withPlus: +obj,\n  withString: \"\" + obj,\n  withNumber: Number(obj)\n}\n",
+  "solution": "const obj = {\n  valueOf() { return 42 },\n  toString() { return \"custom\" }\n}\nreturn {\n  withPlus: +obj,\n  withString: \"\" + obj,\n  withNumber: Number(obj)\n}",
   "tests": [
     {
       "input": [],
-      "expected": "2"
+      "expected": {
+        "withPlus": 42,
+        "withString": "custom",
+        "withNumber": 42
+      }
     }
   ],
   "hints": [
-    "true converts to 1",
-    "1 + 1 = 2"
+    "Number context mein valueOf call hota hai",
+    "String context mein toString call hota hai"
   ]
 }

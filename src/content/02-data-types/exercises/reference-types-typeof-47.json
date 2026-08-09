@@ -1,16 +1,19 @@
 {
-  "id": "02-data-types-reference-types-typeof-47",
-  "title": "Object.values returns values",
-  "starterCode": "const obj = { a: 1, b: 2, c: 3 };\nconsole.log();",
-  "solution": "const obj = { a: 1, b: 2, c: 3 };\nconsole.log(Object.values(obj));",
+  "id": "02-data-types-02-reference-types-typeof-47",
+  "title": "Proxy getPrototypeOf trap",
+  "starterCode": "const proto = { greet() { return \"Hello!\" } }\nconst obj = new Proxy({}, {\n  getPrototypeOf() {\n    return proto\n  }\n})\nreturn {\n  hasGreet: typeof obj.greet === \"function\",\n  greeting: obj.greet()\n}\n",
+  "solution": "const proto = { greet() { return \"Hello!\" } }\nconst obj = new Proxy({}, {\n  getPrototypeOf() {\n    return proto\n  }\n})\nreturn {\n  hasGreet: typeof obj.greet === \"function\",\n  greeting: obj.greet()\n}",
   "tests": [
     {
       "input": [],
-      "expected": "1,2,3"
+      "expected": {
+        "hasGreet": true,
+        "greeting": "Hello!"
+      }
     }
   ],
   "hints": [
-    "Object.values returns just the values",
-    "It's an array of the values"
+    "getPrototypeOf trap prototype control karta hai",
+    "Custom prototype se methods inherit hote hain"
   ]
 }

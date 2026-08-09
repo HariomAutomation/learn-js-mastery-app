@@ -1,16 +1,16 @@
 {
-  "id": "03-operators-arithmetic-comparison-08",
-  "title": "Pre increment",
-  "starterCode": "let x = 5;\nconst result = ++x;\nconsole.log(result);",
-  "solution": "let x = 5;\nconst result = ++x;\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-08",
+  "title": "Math.min se smallest number",
+  "starterCode": "// 5 numbers hain, sabse chota nikalo\nconst nums = [23, 45, 12, 67, 34]\n// TODO: Math.min use karo\n",
+  "solution": "const nums = [23, 45, 12, 67, 34]\nreturn Math.min(...nums)",
   "tests": [
     {
       "input": [],
-      "expected": "6"
+      "expected": 12
     }
   ],
   "hints": [
-    "Pre increment increments THEN returns value",
-    "x is 6, and result is 6"
+    "Math.min() minimum value deta hai",
+    "Spread operator lagao array pe"
   ]
 }

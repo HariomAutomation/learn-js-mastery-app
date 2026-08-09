@@ -1,15 +1,20 @@
 {
   "id": "01-variables-declarations-var-let-const-24",
-  "title": "const nested object",
-  "starterCode": "const obj = { a: { b: 1 } }\nobj.a.b = 99\nconsole.log(obj.a.b)",
-  "solution": "const obj = { a: { b: 1 } }\nobj.a.b = 99\nconsole.log(obj.a.b)",
+  "title": "Loop variable capture with let",
+  "starterCode": "const fns = []\nfor (let i = 0; i < 3; i++) {\n  fns.push(() => i)\n}\nreturn fns.map(f => f())\n",
+  "solution": "const fns = []\nfor (let i = 0; i < 3; i++) {\n  fns.push(() => i)\n}\nreturn fns.map(f => f())",
   "tests": [
     {
       "input": [],
-      "expected": "99"
+      "expected": [
+        0,
+        1,
+        2
+      ]
     }
   ],
   "hints": [
-    "Nested objects are mutable"
+    "Let creates per-iteration binding",
+    "Each closure captures different i"
   ]
 }

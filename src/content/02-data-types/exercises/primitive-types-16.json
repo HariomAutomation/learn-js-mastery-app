@@ -1,16 +1,21 @@
 {
-  "id": "02-data-types-primitive-types-16",
-  "title": "Store NaN",
-  "starterCode": "const notANumber = ;\nconsole.log(notANumber);",
-  "solution": "const notANumber = NaN;\nconsole.log(notANumber);",
+  "id": "02-data-types-01-primitive-types-16",
+  "title": "String to Number conversion methods",
+  "starterCode": "const price = \"199.99\"\nreturn {\n  numFunc: Number(price),\n  parseFloat: parseFloat(price),\n  unaryPlus: +price,\n  allEqual: Number(price) === parseFloat(price) && parseFloat(price) === +price\n}\n",
+  "solution": "const price = \"199.99\"\nreturn {\n  numFunc: Number(price),\n  parseFloat: parseFloat(price),\n  unaryPlus: +price,\n  allEqual: Number(price) === parseFloat(price) && parseFloat(price) === +price\n}",
   "tests": [
     {
       "input": [],
-      "expected": "NaN"
+      "expected": {
+        "numFunc": 199.99,
+        "parseFloat": 199.99,
+        "unaryPlus": 199.99,
+        "allEqual": true
+      }
     }
   ],
   "hints": [
-    "NaN stands for Not a Number",
-    "It's a global property"
+    "Number(), parseFloat(), + sab same result dete hain",
+    "parseInt sirf integer part deta hai"
   ]
 }

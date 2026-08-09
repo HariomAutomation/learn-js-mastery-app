@@ -1,16 +1,27 @@
 {
-  "id": "02-data-types-primitive-types-36",
-  "title": "Convert number to binary string",
-  "starterCode": "const num = 10;\nconsole.log();",
-  "solution": "const num = 10;\nconsole.log(num.toString(2));",
+  "id": "02-data-types-01-primitive-types-36",
+  "title": "JSON parse aur stringify",
+  "starterCode": "const user = { name: \"Hariom\", age: 25, hobbies: [\"coding\", \"reading\"] }\nconst jsonString = JSON.stringify(user)\nconst parsed = JSON.parse(jsonString)\nreturn {\n  type: typeof jsonString,\n  parsed: parsed,\n  isDeepEqual: JSON.stringify(user) === JSON.stringify(parsed)\n}\n",
+  "solution": "const user = { name: \"Hariom\", age: 25, hobbies: [\"coding\", \"reading\"] }\nconst jsonString = JSON.stringify(user)\nconst parsed = JSON.parse(jsonString)\nreturn {\n  type: typeof jsonString,\n  parsed: parsed,\n  isDeepEqual: JSON.stringify(user) === JSON.stringify(parsed)\n}",
   "tests": [
     {
       "input": [],
-      "expected": "1010"
+      "expected": {
+        "type": "string",
+        "parsed": {
+          "name": "Hariom",
+          "age": 25,
+          "hobbies": [
+            "coding",
+            "reading"
+          ]
+        },
+        "isDeepEqual": true
+      }
     }
   ],
   "hints": [
-    "toString accepts a radix parameter",
-    "2 for binary, 8 for octal, 16 for hex"
+    "JSON.stringify se object string banta hai",
+    "JSON.parse se wapas object banta hai"
   ]
 }

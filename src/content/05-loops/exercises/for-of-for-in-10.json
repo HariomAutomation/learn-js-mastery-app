@@ -1,16 +1,21 @@
 {
-  "id": "05-loops-for-of-for-in-10",
-  "title": "Object.values()",
-  "starterCode": "const obj = {a: 1, b: 2, c: 3};\nconst values = Object.values(obj);\nconsole.log(values);",
-  "solution": "const obj = {a: 1, b: 2, c: 3};\nconst values = Object.values(obj);\nconsole.log(values);",
+  "id": "05-02-for-of-for-in-10",
+  "title": "For-in se object ko Map me convert karo",
+  "starterCode": "function toMap(obj) {\n  // TODO: object ko Map me convert karo using for-in\n}",
+  "solution": "function toMap(obj) {\n  const map = new Map();\n  for (const key in obj) {\n    if (Object.prototype.hasOwnProperty.call(obj, key)) {\n      map.set(key, obj[key]);\n    }\n  }\n  return map;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "[ 1, 2, 3 ]"
+      "input": [
+        {
+          "a": 1,
+          "b": 2
+        }
+      ],
+      "expected": "a,1,b,2"
     }
   ],
   "hints": [
-    "Object.values() returns array",
-    "Contains only values"
+    "Map constructor empty banao",
+    "For-in se iterate karo aur set() se add karo"
   ]
 }

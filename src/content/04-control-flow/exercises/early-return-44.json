@@ -1,17 +1,54 @@
 {
-  "id": "04-control-flow-early-return-44",
-  "title": "Multiple early returns in loop",
-  "starterCode": "function findFirstNegative(arr) {\n  for (const num of arr) {\n    if (typeof num !== 'number') continue;\n    if (num < 0) return num;\n  }\n  return null;\n}\nconsole.log(findFirstNegative([1, 'a', -3, 4]));",
-  "solution": "function findFirstNegative(arr) {\n  for (const num of arr) {\n    if (typeof num !== 'number') continue;\n    if (num < 0) return num;\n  }\n  return null;\n}\nconsole.log(findFirstNegative([1, 'a', -3, 4]));",
+  "id": "04-control-flow-02-early-return-44",
+  "title": "Guard for array deduplication",
+  "starterCode": "// function unique(arr) mein array do\n// Agar array nahi: []\n// Agar empty: []\n// Warna unique values return karo\n",
+  "solution": "function unique(arr) {\n  if (!Array.isArray(arr)) return []\n  if (arr.length === 0) return []\n  return [...new Set(arr)]\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "-3"
+      "input": [
+        [
+          1,
+          2,
+          2,
+          3,
+          3,
+          3
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "a"
+        ]
+      ],
+      "expected": [
+        "a",
+        "b"
+      ]
+    },
+    {
+      "input": [
+        []
+      ],
+      "expected": []
+    },
+    {
+      "input": [
+        null
+      ],
+      "expected": []
     }
   ],
   "hints": [
-    "1 is number, not negative",
-    "'a' is not number, skip",
-    "-3 is number and negative"
+    "Set sirf unique values rakhta hai",
+    "Spread operator se array mein convert karo"
   ]
 }

@@ -150,18 +150,23 @@ export function lessonIdFor(moduleId: string, index: number, slug: string): stri
   return `${moduleId}-${String(index + 1).padStart(2, "0")}-${slug}`
 }
 
+let _allIds: string[] | null = null
+
 export function allLessonIds(): string[] {
+  if (_allIds) return _allIds
   const ids: string[] = []
   for (const mod of moduleOrder) {
     const slugs = lessonSlugs[mod] ?? []
     slugs.forEach((slug, i) => ids.push(lessonIdFor(mod, i, slug)))
   }
+  _allIds = ids
   return ids
 }
 
 export function lessonSlugFromId(lessonId: string): string {
-  const idx = lessonId.lastIndexOf("-")
-  return idx === -1 ? lessonId : lessonId.slice(idx + 1)
+  // Format: {moduleId}-{XX}-{slug} — moduleId can contain dashes, so match the -XX- pattern
+  const match = lessonId.match(/-(\d{2})-(.+)$/)
+  return match ? match[2] : lessonId
 }
 
 export function lessonTitleFromId(lessonId: string): string {

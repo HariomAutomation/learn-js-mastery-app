@@ -1,16 +1,25 @@
 {
-  "id": "05-loops-for-while-15",
-  "title": "Nested Break",
-  "starterCode": "for (let i = 0; i < 3; i++) {\n  for (let j = 0; j < 3; j++) {\n    if (j === 1) break;\n    console.log(i + j);\n  }\n}",
-  "solution": "for (let i = 0; i < 3; i++) {\n  for (let j = 0; j < 3; j++) {\n    if (j === 1) break;\n    console.log(i + j);\n  }\n}",
+  "id": "05-01-for-while-15",
+  "title": "For loop se array flat karo (depth 1)",
+  "starterCode": "function flattenOnce(arr) {\n  // TODO: ek level tak flatten karo\n  // [[1,2],[3,[4]],5] -> [1,2,3,[4],5]\n}",
+  "solution": "function flattenOnce(arr) {\n  const result = [];\n  for (const item of arr) {\n    if (Array.isArray(item)) {\n      for (const sub of item) result.push(sub);\n    } else {\n      result.push(item);\n    }\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "0\n1\n2"
+      "input": [
+        [
+          1,
+          [
+            2,
+            3
+          ],
+          4
+        ]
+      ],
+      "expected": "1,2,3,4"
     }
   ],
   "hints": [
-    "break only exits inner loop",
-    "Check j value for break"
+    "Array hai toh uske elements add karo",
+    "Nahi toh direct add karo"
   ]
 }

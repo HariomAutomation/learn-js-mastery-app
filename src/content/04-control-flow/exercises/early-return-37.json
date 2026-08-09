@@ -1,17 +1,50 @@
 {
-  "id": "04-control-flow-early-return-37",
-  "title": "Early return in async pattern",
-  "starterCode": "function fetchData(url) {\n  if (!url) return Promise.reject('no url');\n  if (typeof url !== 'string') return Promise.reject('invalid url');\n  return Promise.resolve(`fetched ${url}`);\n}\nfetchData('test.com').then(console.log);",
-  "solution": "function fetchData(url) {\n  if (!url) return Promise.reject('no url');\n  if (typeof url !== 'string') return Promise.reject('invalid url');\n  return Promise.resolve(`fetched ${url}`);\n}\nfetchData('test.com').then(console.log);",
+  "id": "04-control-flow-02-early-return-37",
+  "title": "Guard for sorted array",
+  "starterCode": "// function isSorted(arr) mein array do\n// Agar array nahi: false\n// Agar empty ya single element: true\n// Ascending mein sorted hai ya nahi check karo\n",
+  "solution": "function isSorted(arr) {\n  if (!Array.isArray(arr)) return false\n  if (arr.length <= 1) return true\n  for (let i = 1; i < arr.length; i++) {\n    if (arr[i] < arr[i - 1]) return false\n  }\n  return true\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "fetched test.com"
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "input": [
+        [
+          5,
+          4,
+          3,
+          2,
+          1
+        ]
+      ],
+      "expected": false
+    },
+    {
+      "input": [
+        []
+      ],
+      "expected": true
+    },
+    {
+      "input": [
+        [
+          1
+        ]
+      ],
+      "expected": true
     }
   ],
   "hints": [
-    "url is truthy",
-    "url is a string",
-    "Returns resolved promise"
+    "Loop se consecutive elements compare karo",
+    "Agar koi bhi pair galat hai to false"
   ]
 }

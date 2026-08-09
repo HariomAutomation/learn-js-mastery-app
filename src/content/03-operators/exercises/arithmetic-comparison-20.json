@@ -1,16 +1,16 @@
 {
-  "id": "03-operators-arithmetic-comparison-20",
-  "title": "Loose equality with type coercion",
-  "starterCode": "const result = 0 == \"\";\nconsole.log(result);",
-  "solution": "const result = 0 == \"\";\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-20",
+  "title": "Less than comparison",
+  "starterCode": "// Check karo: age minimum age se kam hai ya nahi\nconst age = 16\nconst minimumAge = 18\n// TODO: < operator use karo\n",
+  "solution": "const age = 16\nconst minimumAge = 18\nreturn age < minimumAge",
   "tests": [
     {
       "input": [],
-      "expected": "true"
+      "expected": true
     }
   ],
   "hints": [
-    "== coerces types",
-    "Empty string coerces to 0"
+    "< operator less than check karta hai",
+    "16 < 18 = true"
   ]
 }

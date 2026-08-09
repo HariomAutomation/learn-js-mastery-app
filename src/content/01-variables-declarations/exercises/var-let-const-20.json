@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-var-let-const-20",
-  "title": "let block boundary",
-  "starterCode": "let x = 1\n{\n  let x = 2\n  console.log(x)\n}\nconsole.log(x)",
-  "solution": "let x = 1\n{\n  let x = 2\n  console.log(x)\n}\nconsole.log(x)",
+  "title": "Global pollution demo",
+  "starterCode": "var global = \"original\"\nfunction change() {\n  global = \"changed\"\n}\nchange()\nreturn global\n",
+  "solution": "var global = \"original\"\nfunction change() {\n  global = \"changed\"\n}\nchange()\nreturn global",
   "tests": [
     {
       "input": [],
-      "expected": "2\n1"
+      "expected": "changed"
     }
   ],
   "hints": [
-    "Block let is separate from outer"
+    "var se declare kiya variable global hota hai",
+    "Function se direct modify ho sakta hai"
   ]
 }

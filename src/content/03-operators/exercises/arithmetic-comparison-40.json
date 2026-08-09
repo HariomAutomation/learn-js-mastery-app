@@ -1,15 +1,19 @@
 {
-  "id": "03-operators-arithmetic-comparison-40",
-  "title": "Compound division (/=)",
-  "starterCode": "let x = 24;\nx /= 6;\nconsole.log(x);",
-  "solution": "let x = 24;\nx /= 6;\nconsole.log(x);",
+  "id": "03-operators-01-arithmetic-comparison-40",
+  "title": "toExponential use karo",
+  "starterCode": "// Number ko scientific notation mein convert karo\nconst atoms = 602200000000000000000000\nconst small = 0.00045\n// TODO: toExponential use karo\n",
+  "solution": "const atoms = 602200000000000000000000\nconst small = 0.00045\nreturn {\n  atoms: atoms.toExponential(2),\n  small: small.toExponential(2)\n}",
   "tests": [
     {
       "input": [],
-      "expected": "4"
+      "expected": {
+        "atoms": "6.02e+23",
+        "small": "4.50e-4"
+      }
     }
   ],
   "hints": [
-    "x /= 6 is the same as x = x / 6"
+    "toExponential(n) n digits after decimal deta hai",
+    "e+ means power of 10"
   ]
 }

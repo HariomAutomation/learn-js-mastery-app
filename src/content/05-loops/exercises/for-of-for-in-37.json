@@ -1,16 +1,26 @@
 {
-  "id": "05-loops-for-of-for-in-37",
-  "title": "For...In Object Values",
-  "starterCode": "const scores = {math: 95, science: 88, english: 92};\nfor (const key in scores) {\n  if (scores.hasOwnProperty(key)) {\n    console.log(key + ': ' + scores[key]);\n  }\n}",
-  "solution": "const scores = {math: 95, science: 88, english: 92};\nfor (const key in scores) {\n  if (scores.hasOwnProperty(key)) {\n    console.log(key + ': ' + scores[key]);\n  }\n}",
+  "id": "05-02-for-of-for-in-37",
+  "title": "For-of se array ke max subarray sum nikalo",
+  "starterCode": "function maxSubarraySum(arr) {\n  // TODO: Kadane's algorithm use karo\n}",
+  "solution": "function maxSubarraySum(arr) {\n  let maxSum = arr[0];\n  let currentSum = arr[0];\n  for (let i = 1; i < arr.length; i++) {\n    currentSum = Math.max(arr[i], currentSum + arr[i]);\n    maxSum = Math.max(maxSum, currentSum);\n  }\n  return maxSum;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "math: 95\nscience: 88\nenglish: 92"
+      "input": [
+        -2,
+        1,
+        -3,
+        4,
+        -1,
+        2,
+        1,
+        -5,
+        4
+      ],
+      "expected": 6
     }
   ],
   "hints": [
-    "Check hasOwnProperty",
-    "Access value with key"
+    "Kadane's algorithm use karo",
+    "Current sum ko reset ya continue karo"
   ]
 }

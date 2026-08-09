@@ -1,16 +1,967 @@
-{
-  "id": "06-functions-higher-order-functions-01",
-  "title": "Function As Argument",
-  "starterCode": "function doTwice(fn, value) {\n  fn(value);\n  fn(value);\n}\ndoTwice(console.log, 'Hello');",
-  "solution": "function doTwice(fn, value) {\n  fn(value);\n  fn(value);\n}\ndoTwice(console.log, 'Hello');",
-  "tests": [
-    {
-      "input": [],
-      "expected": "Hello\nHello"
-    }
-  ],
-  "hints": [
-    "Pass function as parameter",
-    "Call it twice"
-  ]
-}
+[
+  {
+    "id": "functions-higher-order-functions-01",
+    "title": "higher-order function banao jo array ke har element pe function apply kare",
+    "starterCode": "function applyToAll(arr, fn) {\n  // TODO: return mapped array\n}",
+    "solution": "function applyToAll(arr, fn) {\n  return arr.map(fn);\n}",
+    "tests": [
+      {
+        "input": [
+          [
+            1,
+            2,
+            3
+          ],
+          "x => x*2"
+        ],
+        "expected": [
+          2,
+          4,
+          6
+        ]
+      }
+    ],
+    "hints": [
+      "map method use karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-02",
+    "title": "higher-order function banao jo array filter kare condition ke basis pe",
+    "starterCode": "function filterBy(arr, condition) {\n  // TODO: return filtered array\n}",
+    "solution": "function filterBy(arr, condition) {\n  return arr.filter(condition);\n}",
+    "tests": [
+      {
+        "input": [
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "x => x > 3"
+        ],
+        "expected": [
+          4,
+          5
+        ]
+      }
+    ],
+    "hints": [
+      "filter method use karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-03",
+    "title": "higher-order function banao jo array ke elements ko reduce kare",
+    "starterCode": "function reduceArr(arr, fn, initial) {\n  // TODO: return reduced value\n}",
+    "solution": "function reduceArr(arr, fn, initial) {\n  return arr.reduce(fn, initial);\n}",
+    "tests": [
+      {
+        "input": [
+          [
+            1,
+            2,
+            3
+          ],
+          "(a,b) => a+b",
+          0
+        ],
+        "expected": [
+          6
+        ]
+      }
+    ],
+    "hints": [
+      "reduce method use karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-04",
+    "title": "higher-order function banao jo function ko多次 times call kare",
+    "starterCode": "function repeat(times, fn) {\n  // TODO: call fn times times\n}",
+    "solution": "function repeat(times, fn) {\n  for (let i = 0; i < times; i++) fn(i);\n}",
+    "tests": [
+      {
+        "input": [
+          3,
+          "i => console.log(i)"
+        ],
+        "expected": [
+          "logs 0,1,2"
+        ]
+      }
+    ],
+    "hints": [
+      "for loop use karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-05",
+    "title": "higher-order function banao jo function compose kare",
+    "starterCode": "function compose(...fns) {\n  // TODO: return composed function\n}",
+    "solution": "function compose(...fns) {\n  return (x) => fns.reduceRight((acc, fn) => fn(acc), x);\n}",
+    "tests": [
+      {
+        "input": [
+          "x => x+1",
+          "x => x*2"
+        ],
+        "expected": [
+          "composed function"
+        ]
+      }
+    ],
+    "hints": [
+      "reduceRight use karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-06",
+    "title": "higher-order function banao jo function pipe kare",
+    "starterCode": "function pipe(...fns) {\n  // TODO: return piped function\n}",
+    "solution": "function pipe(...fns) {\n  return (x) => fns.reduce((acc, fn) => fn(acc), x);\n}",
+    "tests": [
+      {
+        "input": [
+          "x => x+1",
+          "x => x*2"
+        ],
+        "expected": [
+          "piped function"
+        ]
+      }
+    ],
+    "hints": [
+      "reduce use karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-07",
+    "title": "higher-order function banao jo array ke sabse bada value dhundhe using comparator",
+    "starterCode": "function maxBy(arr, comparator) {\n  // TODO: return max element\n}",
+    "solution": "function maxBy(arr, comparator) {\n  return arr.reduce((max, item) => comparator(item, max) > 0 ? item : max);\n}",
+    "tests": [
+      {
+        "input": [
+          [
+            1,
+            2,
+            3
+          ],
+          "(a,b) => a-b"
+        ],
+        "expected": [
+          3
+        ]
+      }
+    ],
+    "hints": [
+      "reduce use karo",
+      "comparator se compare karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-08",
+    "title": "higher-order function banao jo memoize kare",
+    "starterCode": "function memoize(fn) {\n  // TODO: return memoized function\n}",
+    "solution": "function memoize(fn) {\n  const cache = new Map();\n  return function(...args) {\n    const key = JSON.stringify(args);\n    if (cache.has(key)) return cache.get(key);\n    const result = fn(...args);\n    cache.set(key, result);\n    return result;\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "memoized function created"
+        ]
+      }
+    ],
+    "hints": [
+      "Map use karo",
+      "JSON.stringify key banao"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-09",
+    "title": "higher-order function banao jo logger ho",
+    "starterCode": "function withLogger(fn) {\n  // TODO: return logged function\n}",
+    "solution": "function withLogger(fn) {\n  return function(...args) {\n    console.log(`Calling ${fn.name} with`, args);\n    const result = fn(...args);\n    console.log(`Result:`, result);\n    return result;\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "logger wrapper created"
+        ]
+      }
+    ],
+    "hints": [
+      "console.log use karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-10",
+    "title": "higher-order function banao jo timing wrapper ho",
+    "starterCode": "function withTiming(fn) {\n  // TODO: return timed function\n}",
+    "solution": "function withTiming(fn) {\n  return function(...args) {\n    const start = performance.now();\n    const result = fn(...args);\n    const end = performance.now();\n    console.log(`${fn.name} took ${end - start}ms`);\n    return result;\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "timing wrapper created"
+        ]
+      }
+    ],
+    "hints": [
+      "performance.now() use karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-11",
+    "title": "higher-order function banao jo once function ho",
+    "starterCode": "function once(fn) {\n  // TODO: return function that runs once\n}",
+    "solution": "function once(fn) {\n  let called = false;\n  let result;\n  return function(...args) {\n    if (!called) {\n      called = true;\n      result = fn(...args);\n    }\n    return result;\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "once function created"
+        ]
+      }
+    ],
+    "hints": [
+      "called flag use karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-12",
+    "title": "higher-order function banao jo debounce ho",
+    "starterCode": "function debounce(fn, delay) {\n  // TODO: return debounced function\n}",
+    "solution": "function debounce(fn, delay) {\n  let timer;\n  return function(...args) {\n    clearTimeout(timer);\n    timer = setTimeout(() => fn(...args), delay);\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "debounce created"
+        ]
+      }
+    ],
+    "hints": [
+      "setTimeout clearTimeout use karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-13",
+    "title": "higher-order function banao jo throttle ho",
+    "starterCode": "function throttle(fn, limit) {\n  // TODO: return throttled function\n}",
+    "solution": "function throttle(fn, limit) {\n  let lastCall = 0;\n  return function(...args) {\n    const now = Date.now();\n    if (now - lastCall >= limit) {\n      lastCall = now;\n      return fn(...args);\n    }\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "throttle created"
+        ]
+      }
+    ],
+    "hints": [
+      "Date.now() use karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-14",
+    "title": "higher-order function banao jo array ke elements ko group kare",
+    "starterCode": "function groupBy(arr, keyFn) {\n  // TODO: return grouped object\n}",
+    "solution": "function groupBy(arr, keyFn) {\n  return arr.reduce((groups, item) => {\n    const key = keyFn(item);\n    if (!groups[key]) groups[key] = [];\n    groups[key].push(item);\n    return groups;\n  }, {});\n}",
+    "tests": [
+      {
+        "input": [
+          [
+            1,
+            2,
+            3,
+            4
+          ],
+          "x => x%2===0?'even':'odd'"
+        ],
+        "expected": [
+          {
+            "odd": [
+              1,
+              3
+            ],
+            "even": [
+              2,
+              4
+            ]
+          }
+        ]
+      }
+    ],
+    "hints": [
+      "reduce use karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-15",
+    "title": "higher-order function banao jo curry function ho",
+    "starterCode": "function curry(fn) {\n  // TODO: return curried function\n}",
+    "solution": "function curry(fn) {\n  return function curried(...args) {\n    if (args.length >= fn.length) return fn(...args);\n    return (...args2) => curried(...args, ...args2);\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "curry created"
+        ]
+      }
+    ],
+    "hints": [
+      "recursive currying"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-16",
+    "title": "higher-order function banao jo function retry kare",
+    "starterCode": "function retry(fn, attempts) {\n  // TODO: return retried function\n}",
+    "solution": "function retry(fn, attempts) {\n  return function(...args) {\n    for (let i = 0; i < attempts; i++) {\n      try { return fn(...args); }\n      catch(e) { if (i === attempts-1) throw e; }\n    }\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "retry created"
+        ]
+      }
+    ],
+    "hints": [
+      "for loop try-catch use karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-17",
+    "title": "higher-order function banao jo conditional function ho",
+    "starterCode": "function when(condition, fn) {\n  // TODO: return function that runs only when condition is true\n}",
+    "solution": "function when(condition, fn) {\n  return function(...args) {\n    return condition() ? fn(...args) : undefined;\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "conditional function created"
+        ]
+      }
+    ],
+    "hints": [
+      "condition function check karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-18",
+    "title": "higher-order function banao jo function transform kare",
+    "starterCode": "function transform(fn, transformer) {\n  // TODO: return transformed function\n}",
+    "solution": "function transform(fn, transformer) {\n  return function(...args) {\n    return fn(...transformer(...args));\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "transform created"
+        ]
+      }
+    ],
+    "hints": [
+      "transformer arguments ko transform kare"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-19",
+    "title": "higher-order function banao jo validation wrapper ho",
+    "starterCode": "function validate(validator, fn) {\n  // TODO: return validated function\n}",
+    "solution": "function validate(validator, fn) {\n  return function(...args) {\n    if (!validator(...args)) throw new Error('Validation failed');\n    return fn(...args);\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "validator created"
+        ]
+      }
+    ],
+    "hints": [
+      "validator function check karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-20",
+    "title": "higher-order function banao jo lazy evaluation kare",
+    "starterCode": "function lazy(fn) {\n  // TODO: return lazy function\n}",
+    "solution": "function lazy(fn) {\n  let result;\n  let computed = false;\n  return function() {\n    if (!computed) {\n      result = fn();\n      computed = true;\n    }\n    return result;\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "lazy created"
+        ]
+      }
+    ],
+    "hints": [
+      "computed flag use karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-21",
+    "title": "higher-order function banao jo batch processing kare",
+    "starterCode": "function batchProcess(arr, batchSize, fn) {\n  // TODO: process in batches\n}",
+    "solution": "function batchProcess(arr, batchSize, fn) {\n  const results = [];\n  for (let i = 0; i < arr.length; i += batchSize) {\n    results.push(fn(arr.slice(i, i + batchSize)));\n  }\n  return results;\n}",
+    "tests": [
+      {
+        "input": [
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          2,
+          "batch => batch.reduce((s,v)=>s+v,0)"
+        ],
+        "expected": [
+          3,
+          7,
+          5
+        ]
+      }
+    ],
+    "hints": [
+      "slice se batch banao",
+      "for loop use karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-22",
+    "title": "higher-order function banao jo concurrency limit set kare",
+    "starterCode": "function concurrencyLimit(tasks, limit) {\n  // TODO: run tasks with concurrency limit\n}",
+    "solution": "async function concurrencyLimit(tasks, limit) {\n  const results = [];\n  let idx = 0;\n  async function runNext() {\n    while (idx < tasks.length) {\n      const i = idx++;\n      results[i] = await tasks[i]();\n    }\n  }\n  await Promise.all(Array.from({length: Math.min(limit, tasks.length)}, runNext));\n  return results;\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "concurrency limited execution"
+        ]
+      }
+    ],
+    "hints": [
+      "async/await use karo",
+      "Promise.all use karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-23",
+    "title": "higher-order function banao jo event emitter ho",
+    "starterCode": "function createEventEmitter() {\n  // TODO: return on, emit, off\n}",
+    "solution": "function createEventEmitter() {\n  const listeners = {};\n  return {\n    on: (event, fn) => {\n      if (!listeners[event]) listeners[event] = [];\n      listeners[event].push(fn);\n    },\n    emit: (event, ...args) => {\n      (listeners[event]||[]).forEach(fn => fn(...args));\n    },\n    off: (event, fn) => {\n      if (listeners[event]) listeners[event] = listeners[event].filter(f => f !== fn);\n    }\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "emitter created"
+        ]
+      }
+    ],
+    "hints": [
+      "listeners object use karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-24",
+    "title": "higher-order function banao jo middleware chain banaye",
+    "starterCode": "function createMiddlewareChain() {\n  // TODO: return use, execute\n}",
+    "solution": "function createMiddlewareChain() {\n  const middlewares = [];\n  return {\n    use: (fn) => middlewares.push(fn),\n    execute: (data) => middlewares.reduce((result, mw) => mw(result), data)\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "middleware chain created"
+        ]
+      }
+    ],
+    "hints": [
+      "reduce se chain chalao"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-25",
+    "title": "higher-order function banao jo stream processing kare",
+    "starterCode": "function createStream() {\n  // TODO: return map, filter, reduce\n}",
+    "solution": "function createStream() {\n  return {\n    map: (arr, fn) => arr.map(fn),\n    filter: (arr, fn) => arr.filter(fn),\n    reduce: (arr, fn, init) => arr.reduce(fn, init)\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "stream created"
+        ]
+      }
+    ],
+    "hints": [
+      "methods banao"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-26",
+    "title": "higher-order function banao jo result object return kare",
+    "starterCode": "function withResult(fn) {\n  // TODO: return function with result wrapper\n}",
+    "solution": "function withResult(fn) {\n  return function(...args) {\n    try {\n      return { ok: true, value: fn(...args) };\n    } catch(e) {\n      return { ok: false, error: e.message };\n    }\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "result wrapper created"
+        ]
+      }
+    ],
+    "hints": [
+      "try-catch use karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-27",
+    "title": "higher-order function banao jo pipeline of transformations banaye",
+    "starterCode": "function pipeline(...fns) {\n  // TODO: return pipeline function\n}",
+    "solution": "function pipeline(...fns) {\n  return (input) => fns.reduce((val, fn) => fn(val), input);\n}",
+    "tests": [
+      {
+        "input": [
+          "x => x*2",
+          "x => x+1"
+        ],
+        "expected": [
+          "pipeline function"
+        ]
+      }
+    ],
+    "hints": [
+      "reduce use karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-28",
+    "title": "higher-order function banao jo lazy map kare",
+    "starterCode": "function lazyMap(iterable, fn) {\n  // TODO: return lazy mapped iterable\n}",
+    "solution": "function lazyMap(iterable, fn) {\n  return {\n    [Symbol.iterator]: function* () {\n      for (const item of iterable) yield fn(item);\n    }\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "lazy mapper created"
+        ]
+      }
+    ],
+    "hints": [
+      "generator function use karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-29",
+    "title": "higher-order function banao jo function composition with validation",
+    "starterCode": "function composeWithValidation(...fns) {\n  // TODO: compose with input validation\n}",
+    "solution": "function composeWithValidation(...fns) {\n  return (x) => {\n    if (x === undefined || x === null) throw new Error('Invalid input');\n    return fns.reduce((acc, fn) => fn(acc), x);\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "validated compose created"
+        ]
+      }
+    ],
+    "hints": [
+      "input check karo",
+      "reduce use karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-30",
+    "title": "higher-order function banao jo async map kare",
+    "starterCode": "function asyncMap(arr, fn) {\n  // TODO: return promise of mapped array\n}",
+    "solution": "async function asyncMap(arr, fn) {\n  return Promise.all(arr.map(fn));\n}",
+    "tests": [
+      {
+        "input": [
+          [
+            1,
+            2,
+            3
+          ],
+          "async x => x*2"
+        ],
+        "expected": [
+          "promise"
+        ]
+      }
+    ],
+    "hints": [
+      "Promise.all map use karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-31",
+    "title": "higher-order function banao jo async filter kare",
+    "starterCode": "function asyncFilter(arr, fn) {\n  // TODO: return promise of filtered array\n}",
+    "solution": "async function asyncFilter(arr, fn) {\n  const results = await Promise.all(arr.map(async item => ({ item, keep: await fn(item) })));\n  return results.filter(r => r.keep).map(r => r.item);\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "async filter created"
+        ]
+      }
+    ],
+    "hints": [
+      "Promise.all use karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-32",
+    "title": "higher-order function banao jo function ko wrap kare error handling ke saath",
+    "starterCode": "function withErrorHandling(fn) {\n  // TODO: return error-handled function\n}",
+    "solution": "function withErrorHandling(fn) {\n  return function(...args) {\n    try {\n      return { success: true, data: fn(...args) };\n    } catch(e) {\n      return { success: false, error: e.message };\n    }\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "error handler created"
+        ]
+      }
+    ],
+    "hints": [
+      "try-catch use karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-33",
+    "title": "higher-order function banao jo rate limiting kare",
+    "starterCode": "function rateLimit(fn, maxCalls, timeWindow) {\n  // TODO: return rate limited function\n}",
+    "solution": "function rateLimit(fn, maxCalls, timeWindow) {\n  const calls = [];\n  return function(...args) {\n    const now = Date.now();\n    while(calls.length && calls[0] <= now - timeWindow) calls.shift();\n    if (calls.length >= maxCalls) throw new Error('Rate limit exceeded');\n    calls.push(now);\n    return fn(...args);\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "rate limiter created"
+        ]
+      }
+    ],
+    "hints": [
+      "calls array use karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-34",
+    "title": "higher-order function banao jo lazy evaluation with default value ho",
+    "starterCode": "function lazyWithDefault(fn, defaultVal) {\n  // TODO: return lazy function with default\n}",
+    "solution": "function lazyWithDefault(fn, defaultVal) {\n  let result;\n  let computed = false;\n  return function() {\n    if (!computed) {\n      result = fn();\n      computed = true;\n    }\n    return result ?? defaultVal;\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "lazy with default created"
+        ]
+      }
+    ],
+    "hints": [
+      "computed flag use karo",
+      "?? operator use karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-35",
+    "title": "higher-order function banao jo array ke elements ko sort kare custom comparator se",
+    "starterCode": "function sortBy(arr, comparator) {\n  // TODO: return sorted array\n}",
+    "solution": "function sortBy(arr, comparator) {\n  return [...arr].sort(comparator);\n}",
+    "tests": [
+      {
+        "input": [
+          [
+            3,
+            1,
+            2
+          ],
+          "(a,b)=>a-b"
+        ],
+        "expected": [
+          1,
+          2,
+          3
+        ]
+      }
+    ],
+    "hints": [
+      "spread sort use karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-36",
+    "title": "higher-order function banao jo function ko timeout de",
+    "starterCode": "function withTimeout(fn, timeout) {\n  // TODO: return function with timeout\n}",
+    "solution": "function withTimeout(fn, timeout) {\n  return function(...args) {\n    return Promise.race([\n      Promise.resolve(fn(...args)),\n      new Promise((_, reject) => setTimeout(() => reject(new Error('Timeout')), timeout))\n    ]);\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "timeout wrapper created"
+        ]
+      }
+    ],
+    "hints": [
+      "Promise.race use karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-37",
+    "title": "higher-order function banao jo deep clone kare",
+    "starterCode": "function deepClone(obj) {\n  // TODO: return deep cloned object\n}",
+    "solution": "function deepClone(obj) {\n  if (obj === null || typeof obj !== 'object') return obj;\n  if (Array.isArray(obj)) return obj.map(item => deepClone(item));\n  return Object.fromEntries(Object.entries(obj).map(([k, v]) => [k, deepClone(v)]));\n}",
+    "tests": [
+      {
+        "input": [
+          {
+            "a": {
+              "b": 1
+            }
+          }
+        ],
+        "expected": [
+          {
+            "a": {
+              "b": 1
+            }
+          }
+        ]
+      }
+    ],
+    "hints": [
+      "recursion use karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-38",
+    "title": "higher-order function banao jo object ke properties ko transform kare",
+    "starterCode": "function mapValues(obj, fn) {\n  // TODO: return transformed object\n}",
+    "solution": "function mapValues(obj, fn) {\n  return Object.fromEntries(\n    Object.entries(obj).map(([k, v]) => [k, fn(v)])\n  );\n}",
+    "tests": [
+      {
+        "input": [
+          {
+            "a": 1,
+            "b": 2
+          }
+        ],
+        "expected": "(x) => x*10, {a:10,b:20}"
+      }
+    ],
+    "hints": [
+      "Object.entries map use karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-39",
+    "title": "higher-order function banao jo function composition with async support",
+    "starterCode": "function asyncCompose(...fns) {\n  // TODO: return async composed function\n}",
+    "solution": "function asyncCompose(...fns) {\n  return (x) => fns.reduceRight(async (acc, fn) => fn(await acc), Promise.resolve(x));\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "async compose created"
+        ]
+      }
+    ],
+    "hints": [
+      "async reduceRight use karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-40",
+    "title": "higher-order function banao jo memoize with TTL ho",
+    "starterCode": "function memoizeWithTTL(fn, ttl) {\n  // TODO: return memoized function with TTL\n}",
+    "solution": "function memoizeWithTTL(fn, ttl) {\n  const cache = new Map();\n  return function(...args) {\n    const key = JSON.stringify(args);\n    if (cache.has(key)) {\n      const entry = cache.get(key);\n      if (Date.now() - entry.time < ttl) return entry.value;\n    }\n    const value = fn(...args);\n    cache.set(key, { value, time: Date.now() });\n    return value;\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "TTL memo created"
+        ]
+      }
+    ],
+    "hints": [
+      "Map use karo",
+      "Date.now() check karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-41",
+    "title": "higher-order function banao jo retry with exponential backoff kare",
+    "starterCode": "function retryWithBackoff(fn, maxRetries) {\n  // TODO: return retried function with backoff\n}",
+    "solution": "function retryWithBackoff(fn, maxRetries) {\n  return async function(...args) {\n    for (let i = 0; i <= maxRetries; i++) {\n      try { return await fn(...args); }\n      catch(e) { if (i === maxRetries) throw e; await new Promise(r => setTimeout(r, 2**i * 100)); }\n    }\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "backoff retry created"
+        ]
+      }
+    ],
+    "hints": [
+      "async/await use karo",
+      "setTimeout delay"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-42",
+    "title": "higher-order function banao jo batch processing with concurrency kare",
+    "starterCode": "function batchWithConcurrency(arr, batchSize, fn) {\n  // TODO: process in batches with concurrency\n}",
+    "solution": "async function batchWithConcurrency(arr, batchSize, fn) {\n  const results = [];\n  for (let i = 0; i < arr.length; i += batchSize) {\n    const batch = arr.slice(i, i + batchSize);\n    results.push(...await Promise.all(batch.map(fn)));\n  }\n  return results;\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "batch processor created"
+        ]
+      }
+    ],
+    "hints": [
+      "Promise.all batch use karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-43",
+    "title": "higher-order function banao jo event-driven async processing kare",
+    "starterCode": "function createAsyncEventProcessor() {\n  // TODO: return process, onComplete\n}",
+    "solution": "function createAsyncEventProcessor() {\n  const queue = [];\n  let processing = false;\n  return {\n    process: (fn) => {\n      queue.push(fn);\n      if (!processing) {\n        processing = true;\n        (async () => {\n          while (queue.length) await queue.shift()();\n          processing = false;\n        })();\n      }\n    }\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "async event processor created"
+        ]
+      }
+    ],
+    "hints": [
+      "queue use karo",
+      "async processing"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-44",
+    "title": "higher-order function banao jo retry with condition ho",
+    "starterCode": "function retryUntil(fn, condition, maxAttempts) {\n  // TODO: retry until condition is met\n}",
+    "solution": "async function retryUntil(fn, condition, maxAttempts) {\n  for (let i = 0; i < maxAttempts; i++) {\n    const result = await fn();\n    if (condition(result)) return result;\n  }\n  throw new Error('Max attempts reached');\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "conditional retry created"
+        ]
+      }
+    ],
+    "hints": [
+      "async/await use karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-45",
+    "title": "higher-order function banao jo pipeline with async support ho",
+    "starterCode": "function asyncPipeline(...fns) {\n  // TODO: return async pipeline\n}",
+    "solution": "function asyncPipeline(...fns) {\n  return (x) => fns.reduce(async (acc, fn) => fn(await acc), Promise.resolve(x));\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "async pipeline created"
+        ]
+      }
+    ],
+    "hints": [
+      "async reduce use karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-46",
+    "title": "higher-order function banao jo function caching with LRU ho",
+    "starterCode": "function lruCache(fn, maxSize) {\n  // TODO: return LRU cached function\n}",
+    "solution": "function lruCache(fn, maxSize) {\n  const cache = new Map();\n  return function(...args) {\n    const key = JSON.stringify(args);\n    if (cache.has(key)) {\n      const val = cache.get(key);\n      cache.delete(key);\n      cache.set(key, val);\n      return val;\n    }\n    const result = fn(...args);\n    if (cache.size >= maxSize) cache.delete(cache.keys().next().value);\n    cache.set(key, result);\n    return result;\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "LRU cache created"
+        ]
+      }
+    ],
+    "hints": [
+      "Map use karo",
+      "order maintain karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-47",
+    "title": "higher-order function banao jo state management kare",
+    "starterCode": "function createStore(initialState, reducers) {\n  // TODO: return getState, dispatch\n}",
+    "solution": "function createStore(initialState, reducers) {\n  let state = {...initialState};\n  const listeners = [];\n  return {\n    getState: () => ({...state}),\n    dispatch: (action) => {\n      const reducer = reducers[action.type];\n      if (reducer) {\n        state = {...state, ...reducer(state, action)};\n        listeners.forEach(fn => fn(state));\n      }\n    },\n    subscribe: (fn) => { listeners.push(fn); return () => listeners.splice(listeners.indexOf(fn),1); }\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "store created"
+        ]
+      }
+    ],
+    "hints": [
+      "state object use karo",
+      "listeners track karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-48",
+    "title": "higher-order function banao jo request interceptor pattern implement kare",
+    "starterCode": "function createRequestInterceptor() {\n  // TODO: return addInterceptor, intercept\n}",
+    "solution": "function createRequestInterceptor() {\n  const interceptors = [];\n  return {\n    addInterceptor: (fn) => interceptors.push(fn),\n    intercept: (request) => interceptors.reduce((req, interceptor) => interceptor(req), request)\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "interceptor created"
+        ]
+      }
+    ],
+    "hints": [
+      "interceptors array use karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-49",
+    "title": "higher-order function banao jo dependency injection implement kare",
+    "starterCode": "function createDIContainer() {\n  // TODO: return register, resolve\n}",
+    "solution": "function createDIContainer() {\n  const services = {};\n  return {\n    register: (name, factory) => services[name] = factory,\n    resolve: (name) => {\n      const factory = services[name];\n      return factory ? factory() : undefined;\n    }\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "DI container created"
+        ]
+      }
+    ],
+    "hints": [
+      "services object use karo"
+    ]
+  },
+  {
+    "id": "functions-higher-order-functions-50",
+    "title": "higher-order function banao jo event sourcing pattern implement kare",
+    "starterCode": "function createEventSourcing() {\n  // TODO: return append, getEvents, getState\n}",
+    "solution": "function createEventSourcing() {\n  const events = [];\n  return {\n    append: (event) => events.push(event),\n    getEvents: () => [...events],\n    getState: (reducer, initial) => events.reduce(reducer, initial)\n  };\n}",
+    "tests": [
+      {
+        "input": [],
+        "expected": [
+          "event sourcing created"
+        ]
+      }
+    ],
+    "hints": [
+      "events array use karo"
+    ]
+  }
+]

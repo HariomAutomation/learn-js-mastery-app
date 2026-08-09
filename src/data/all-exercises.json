@@ -2,506 +2,1136 @@
   "01-variables-declarations-03-scope-hoisting": [
     {
       "id": "01-variables-declarations-scope-hoisting-01",
-      "title": "Global scope variable",
-      "starterCode": "var x = 10\nfunction test() {\n  console.log(x)\n}\ntest()",
-      "solution": "var x = 10\nfunction test() {\n  console.log(x)\n}\ntest()",
+      "title": "Global vs local scope",
+      "starterCode": "var x = \"global\"\nfunction test() {\n  var x = \"local\"\n  return x\n}\nreturn test()\n",
+      "solution": "var x = \"global\"\nfunction test() {\n  var x = \"local\"\n  return x\n}\nreturn test()",
       "tests": [
         {
           "input": [],
-          "expected": "10"
+          "expected": "local"
         }
       ],
       "hints": [
-        "Global variables are accessible everywhere"
+        "Local scope wala x override karta hai",
+        "Function ke andar ka x return hoga"
       ]
     },
     {
       "id": "01-variables-declarations-scope-hoisting-02",
-      "title": "Function scope",
-      "starterCode": "function test() {\n  var x = 10\n}\ntest()\nconsole.log(typeof x)",
-      "solution": "function test() {\n  var x = 10\n}\ntest()\nconsole.log(typeof x)",
+      "title": "Closure remembers outer variable",
+      "starterCode": "function outer() {\n  let count = 0\n  return function inner() {\n    return ++count\n  }\n}\nconst fn = outer()\nreturn [fn(), fn(), fn()]\n",
+      "solution": "function outer() {\n  let count = 0\n  return function inner() {\n    return ++count\n  }\n}\nconst fn = outer()\nreturn [fn(), fn(), fn()]",
       "tests": [
         {
           "input": [],
-          "expected": "undefined"
+          "expected": [
+            1,
+            2,
+            3
+          ]
         }
       ],
       "hints": [
-        "var is function-scoped"
+        "Inner function closure se count yaad rakhta hai",
+        "Har call pe count badhta hai"
       ]
     },
     {
       "id": "01-variables-declarations-scope-hoisting-03",
-      "title": "Block scope",
-      "starterCode": "if (true) {\n  let x = 10\n}\nconsole.log(typeof x)",
-      "solution": "if (true) {\n  let x = 10\n}\nconsole.log(typeof x)",
+      "title": "Lexical scope lookup",
+      "starterCode": "const a = 1\nfunction one() {\n  const b = 2\n  function two() {\n    const c = 3\n    return a + b + c\n  }\n  return two()\n}\nreturn one()\n",
+      "solution": "const a = 1\nfunction one() {\n  const b = 2\n  function two() {\n    const c = 3\n    return a + b + c\n  }\n  return two()\n}\nreturn one()",
       "tests": [
         {
           "input": [],
-          "expected": "undefined"
+          "expected": 6
         }
       ],
       "hints": [
-        "let is block-scoped"
+        "Lexical scope mein function apne parent scopes se variables dhundhta hai",
+        "a=1, b=2, c=3 sab milke 6"
       ]
     },
     {
       "id": "01-variables-declarations-scope-hoisting-04",
-      "title": "Lexical scope",
-      "starterCode": "function outer() {\n  const x = 10\n  return function inner() {\n    return x\n  }\n}\nconsole.log(outer()())",
-      "solution": "function outer() {\n  const x = 10\n  return function inner() {\n    return x\n  }\n}\nconsole.log(outer()())",
+      "title": "Hoisting var gives undefined",
+      "starterCode": "console.log(x)\nvar x = 5\nreturn x\n",
+      "solution": "console.log(x)\nvar x = 5\nreturn x",
       "tests": [
         {
           "input": [],
-          "expected": "10"
+          "expected": 5
         }
       ],
       "hints": [
-        "Inner functions access outer variables"
+        "var declaration hoisted, assignment not",
+        "First log shows undefined, then x = 5"
       ]
     },
     {
       "id": "01-variables-declarations-scope-hoisting-05",
-      "title": "Hoisting var",
-      "starterCode": "console.log(x)\nvar x = 5",
-      "solution": "console.log(x)\nvar x = 5",
+      "title": "TDZ error with let",
+      "starterCode": "try {\n  console.log(y)\n  let y = 10\n} catch(e) {\n  return \"TDZ error\"\n}\n",
+      "solution": "try {\n  console.log(y)\n  let y = 10\n} catch(e) {\n  return \"TDZ error\"\n}",
       "tests": [
         {
           "input": [],
-          "expected": "undefined"
+          "expected": "TDZ error"
         }
       ],
       "hints": [
-        "var is hoisted but not initialized"
+        "let/const are hoisted but in TDZ",
+        "Accessing before declaration throws ReferenceError"
       ]
     },
     {
       "id": "01-variables-declarations-scope-hoisting-06",
-      "title": "Hoisting let const",
-      "starterCode": "try {\n  console.log(x)\n  let x = 5\n} catch(e) {\n  console.log(\"TDZ\")\n}",
-      "solution": "try {\n  console.log(x)\n  let x = 5\n} catch(e) {\n  console.log(\"TDZ\")\n}",
+      "title": "Function hoisting works",
+      "starterCode": "return add(3, 4)\nfunction add(a, b) { return a + b }\n",
+      "solution": "return add(3, 4)\nfunction add(a, b) { return a + b }",
       "tests": [
         {
           "input": [],
-          "expected": "TDZ"
+          "expected": 7
         }
       ],
       "hints": [
-        "let/const have temporal dead zone"
+        "Function declarations are fully hoisted",
+        "Can call before declaration"
       ]
     },
     {
       "id": "01-variables-declarations-scope-hoisting-07",
-      "title": "Function hoisting",
-      "starterCode": "console.log(add(2, 3))\nfunction add(a, b) { return a + b }",
-      "solution": "console.log(add(2, 3))\nfunction add(a, b) { return a + b }",
+      "title": "var re-declaration allowed",
+      "starterCode": "var x = 1\nvar x = 2\nvar x = 3\nreturn x\n",
+      "solution": "var x = 1\nvar x = 2\nvar x = 3\nreturn x",
       "tests": [
         {
           "input": [],
-          "expected": "5"
+          "expected": 3
         }
       ],
       "hints": [
-        "Function declarations are hoisted"
+        "var allows re-declaration",
+        "Last assignment wins"
       ]
     },
     {
       "id": "01-variables-declarations-scope-hoisting-08",
-      "title": "Scope chain lookup",
-      "starterCode": "var x = 1\nfunction a() {\n  var x = 2\n  function b() {\n    console.log(x)\n  }\n  b()\n}\na()",
-      "solution": "var x = 1\nfunction a() {\n  var x = 2\n  function b() {\n    console.log(x)\n  }\n  b()\n}\na()",
+      "title": "let re-declaration not allowed",
+      "starterCode": "try {\n  let x = 1\n  let x = 2\n  return x\n} catch(e) {\n  return \"SyntaxError\"\n}\n",
+      "solution": "try {\n  let x = 1\n  let x = 2\n  return x\n} catch(e) {\n  return \"SyntaxError\"\n}",
       "tests": [
         {
           "input": [],
-          "expected": "2"
+          "expected": "SyntaxError"
         }
       ],
       "hints": [
-        "b looks at a's x first"
+        "let doesn't allow re-declaration in same scope",
+        "This is a SyntaxError caught at parse time"
       ]
     },
     {
       "id": "01-variables-declarations-scope-hoisting-09",
-      "title": "Closure basics",
-      "starterCode": "function counter() {\n  let count = 0\n  return () => ++count\n}\nconst c = counter()\nconsole.log(c(), c(), c())",
-      "solution": "function counter() {\n  let count = 0\n  return () => ++count\n}\nconst c = counter()\nconsole.log(c(), c(), c())",
+      "title": "Block scope boundary",
+      "starterCode": "{\n  var a = 10\n  let b = 20\n  const c = 30\n}\nreturn [a, typeof b, typeof c]\n",
+      "solution": "{\n  var a = 10\n  let b = 20\n  const c = 30\n}\nreturn [a, typeof b, typeof c]",
       "tests": [
         {
           "input": [],
-          "expected": "1 2 3"
+          "expected": [
+            10,
+            "undefined",
+            "undefined"
+          ]
         }
       ],
       "hints": [
-        "Closure captures outer variable"
+        "var leaks outside block",
+        "let and const stay inside block"
       ]
     },
     {
       "id": "01-variables-declarations-scope-hoisting-10",
-      "title": "Nested scope",
-      "starterCode": "function a() {\n  function b() {\n    function c() {\n      console.log(\"deep\")\n    }\n    c()\n  }\n  b()\n}\na()",
-      "solution": "function a() {\n  function b() {\n    function c() {\n      console.log(\"deep\")\n    }\n    c()\n  }\n  b()\n}\na()",
+      "title": "Scope chain: inner sees outer",
+      "starterCode": "const x = \"global\"\nfunction outer() {\n  const y = \"outer\"\n  function inner() {\n    return x + \" \" + y\n  }\n  return inner()\n}\nreturn outer()\n",
+      "solution": "const x = \"global\"\nfunction outer() {\n  const y = \"outer\"\n  function inner() {\n    return x + \" \" + y\n  }\n  return inner()\n}\nreturn outer()",
       "tests": [
         {
           "input": [],
-          "expected": "deep"
+          "expected": "global outer"
         }
       ],
       "hints": [
-        "Functions can nest arbitrarily"
+        "Inner function can access all outer scopes",
+        "Scope chain goes from inner to global"
       ]
     },
     {
       "id": "01-variables-declarations-scope-hoisting-11",
-      "title": "Inner outer scope",
-      "starterCode": "var x = 1\nfunction test() {\n  console.log(x)\n}\ntest()",
-      "solution": "var x = 1\nfunction test() {\n  console.log(x)\n}\ntest()",
+      "title": "Multiple closures from same function",
+      "starterCode": "function makeAdder(n) {\n  return (x) => x + n\n}\nconst add5 = makeAdder(5)\nconst add10 = makeAdder(10)\nreturn [add5(1), add10(1)]\n",
+      "solution": "function makeAdder(n) {\n  return (x) => x + n\n}\nconst add5 = makeAdder(5)\nconst add10 = makeAdder(10)\nreturn [add5(1), add10(1)]",
       "tests": [
         {
           "input": [],
-          "expected": "1"
+          "expected": [
+            6,
+            11
+          ]
         }
       ],
       "hints": [
-        "Inner scope can access outer"
+        "Each closure has its own n",
+        "add5 captures n=5, add10 captures n=10"
       ]
     },
     {
       "id": "01-variables-declarations-scope-hoisting-12",
-      "title": "Function block scope",
-      "starterCode": "if (true) {\n  function test() { return 10 }\n}\ntry {\n  console.log(test())\n} catch(e) {\n  console.log(\"error\")\n}",
-      "solution": "if (true) {\n  function test() { return 10 }\n}\ntry {\n  console.log(test())\n} catch(e) {\n  console.log(\"error\")\n}",
+      "title": "Hoisting order: function then var",
+      "starterCode": "var x = \"var\"\nfunction x() { return \"function\" }\nreturn typeof x\n",
+      "solution": "var x = \"var\"\nfunction x() { return \"function\" }\nreturn typeof x",
       "tests": [
         {
           "input": [],
-          "expected": "error"
+          "expected": "string"
         }
       ],
       "hints": [
-        "Function hoisting varies by environment"
+        "Function declaration hoisted first, then var assignment overwrites",
+        "x becomes string \"var\""
       ]
     },
     {
       "id": "01-variables-declarations-scope-hoisting-13",
-      "title": "Loop var vs let",
-      "starterCode": "for (var i = 0; i < 2; i++) {}\nconsole.log(i)\nfor (let j = 0; j < 2; j++) {}\ntry {\n  console.log(j)\n} catch(e) {\n  console.log(\"error\")\n}",
-      "solution": "for (var i = 0; i < 2; i++) {}\nconsole.log(i)\nfor (let j = 0; j < 2; j++) {}\ntry {\n  console.log(j)\n} catch(e) {\n  console.log(\"error\")\n}",
+      "title": "Nested IIFE scope",
+      "starterCode": "(function() {\n  var a = 1\n  (function() {\n    var b = 2\n    (function() {\n      return a + b\n    })()\n  })()\n})()\n",
+      "solution": "(function() {\n  var a = 1\n  (function() {\n    var b = 2\n    (function() {\n      return a + b\n    })()\n  })()\n})()",
       "tests": [
         {
           "input": [],
-          "expected": "2\nerror"
+          "expected": 3
         }
       ],
       "hints": [
-        "var leaks, let stays in block"
+        "Each IIFE can see parent IIFE variables",
+        "a=1, b=2, sum=3"
       ]
     },
     {
       "id": "01-variables-declarations-scope-hoisting-14",
-      "title": "Global pollution",
-      "starterCode": "var x = 1\nfunction test() {\n  x = 99\n}\ntest()\nconsole.log(x)",
-      "solution": "var x = 1\nfunction test() {\n  x = 99\n}\ntest()\nconsole.log(x)",
+      "title": "Loop variable scope with let",
+      "starterCode": "const funcs = []\nfor (let i = 0; i < 3; i++) {\n  funcs.push(() => i)\n}\nreturn funcs.map(f => f())\n",
+      "solution": "const funcs = []\nfor (let i = 0; i < 3; i++) {\n  funcs.push(() => i)\n}\nreturn funcs.map(f => f())",
       "tests": [
         {
           "input": [],
-          "expected": "99"
+          "expected": [
+            0,
+            1,
+            2
+          ]
         }
       ],
       "hints": [
-        "Global var is modified everywhere"
+        "let in for-loop creates per-iteration binding",
+        "Each closure captures different i value"
       ]
     },
     {
       "id": "01-variables-declarations-scope-hoisting-15",
-      "title": "Scope resolution order",
-      "starterCode": "var x = 1\nfunction a() {\n  var x = 2\n  function b() {\n    var x = 3\n    console.log(x)\n  }\n  b()\n}\na()",
-      "solution": "var x = 1\nfunction a() {\n  var x = 2\n  function b() {\n    var x = 3\n    console.log(x)\n  }\n  b()\n}\na()",
+      "title": "Global scope pollution",
+      "starterCode": "var x = 10\nfunction test() {\n  x = 20  // Modifies global x\n}\ntest()\nreturn x\n",
+      "solution": "var x = 10\nfunction test() {\n  x = 20\n}\ntest()\nreturn x",
       "tests": [
         {
           "input": [],
-          "expected": "3"
+          "expected": 20
         }
       ],
       "hints": [
-        "Innermost scope wins"
+        "Without declaration, x refers to global x",
+        "test() modifies the global variable"
       ]
     },
     {
       "id": "01-variables-declarations-scope-hoisting-16",
-      "title": "Hoisting order",
-      "starterCode": "console.log(typeof a)\nvar a = 1\nfunction a() {}\nconsole.log(typeof a)",
-      "solution": "console.log(typeof a)\nvar a = 1\nfunction a() {}\nconsole.log(typeof a)",
+      "title": "Function vs arrow function scope",
+      "starterCode": "const obj = {\n  name: \"test\",\n  regular: function() { return this.name },\n  arrow: () => this.name\n}\nreturn [obj.regular(), obj.arrow()]\n",
+      "solution": "const obj = {\n  name: \"test\",\n  regular: function() { return this.name },\n  arrow: () => this.name\n}\nreturn [obj.regular(), obj.arrow()]",
       "tests": [
         {
           "input": [],
-          "expected": "function\nnumber"
+          "expected": [
+            "test",
+            null
+          ]
         }
       ],
       "hints": [
-        "Function hoisted first, then var"
+        "Regular function: this = obj",
+        "Arrow function: this = outer (global)"
       ]
     },
     {
       "id": "01-variables-declarations-scope-hoisting-17",
-      "title": "TDZ reference",
-      "starterCode": "try {\n  let x = x\n} catch(e) {\n  console.log(\"TDZ\")\n}",
-      "solution": "try {\n  let x = x\n} catch(e) {\n  console.log(\"TDZ\")\n}",
+      "title": "Shadowing in nested blocks",
+      "starterCode": "let x = 1\nif (true) {\n  let x = 2\n  if (true) {\n    let x = 3\n    return x\n  }\n}\n",
+      "solution": "let x = 1\nif (true) {\n  let x = 2\n  if (true) {\n    let x = 3\n    return x\n  }\n}",
       "tests": [
         {
           "input": [],
-          "expected": "TDZ"
+          "expected": 3
         }
       ],
       "hints": [
-        "Cannot use let before declaration"
+        "Innermost let x wins",
+        "Each block has its own x"
       ]
     },
     {
       "id": "01-variables-declarations-scope-hoisting-18",
-      "title": "Function declaration hoisting",
-      "starterCode": "test()\nfunction test() { console.log(\"hoisted\") }",
-      "solution": "test()\nfunction test() { console.log(\"hoisted\") }",
+      "title": "Switch case block scope",
+      "starterCode": "let result = \"none\"\nswitch(1) {\n  case 1:\n    let msg = \"hello\"\n    result = msg\n    break\n}\nreturn result\n",
+      "solution": "let result = \"none\"\nswitch(1) {\n  case 1:\n    let msg = \"hello\"\n    result = msg\n    break\n}\nreturn result",
       "tests": [
         {
           "input": [],
-          "expected": "hoisted"
+          "expected": "hello"
         }
       ],
       "hints": [
-        "Function declarations are fully hoisted"
+        "case is a block, let msg is scoped to it",
+        "result captures msg's value"
       ]
     },
     {
       "id": "01-variables-declarations-scope-hoisting-19",
-      "title": "Arrow function scope",
-      "starterCode": "const x = 10\nconst fn = () => console.log(x)\nfn()",
-      "solution": "const x = 10\nconst fn = () => console.log(x)\nfn()",
+      "title": "var function hoisting vs expression",
+      "starterCode": "console.log(typeof hello)\nvar hello = function() { return \"world\" }\nconsole.log(typeof hello)\nreturn typeof hello\n",
+      "solution": "console.log(typeof hello)\nvar hello = function() { return \"world\" }\nconsole.log(typeof hello)\nreturn typeof hello",
       "tests": [
         {
           "input": [],
-          "expected": "10"
+          "expected": "function"
         }
       ],
       "hints": [
-        "Arrow functions inherit scope"
+        "var hello is hoisted as undefined initially",
+        "After assignment, typeof becomes \"function\""
       ]
     },
     {
       "id": "01-variables-declarations-scope-hoisting-20",
-      "title": "const block scope",
-      "starterCode": "if (true) {\n  const x = 10\n  console.log(x)\n}\nconsole.log(typeof x)",
-      "solution": "if (true) {\n  const x = 10\n  console.log(x)\n}\nconsole.log(typeof x)",
+      "title": "Temporal Dead Zone visualization",
+      "starterCode": "let a = \"outer\"\nfunction test() {\n  try {\n    console.log(a)\n  } catch(e) {\n    return \"TDZ in function\"\n  }\n  let a = \"inner\"\n}\nreturn test()\n",
+      "solution": "let a = \"outer\"\nfunction test() {\n  try {\n    console.log(a)\n  } catch(e) {\n    return \"TDZ in function\"\n  }\n  let a = \"inner\"\n}\nreturn test()",
       "tests": [
         {
           "input": [],
-          "expected": "10\nundefined"
+          "expected": "TDZ in function"
         }
       ],
       "hints": [
-        "const is block-scoped"
+        "let a inside function shadows outer a",
+        "Before declaration, a is in TDZ"
       ]
     },
     {
       "id": "01-variables-declarations-scope-hoisting-21",
-      "title": "let loop scope",
-      "starterCode": "for (let i = 0; i < 3; i++) {\n  let x = i * 10\n  if (x === 20) console.log(x)\n}",
-      "solution": "for (let i = 0; i < 3; i++) {\n  let x = i * 10\n  if (x === 20) console.log(x)\n}",
+      "title": "Closure in loop — fix",
+      "starterCode": "// Fix: each function should return its index\nconst fns = []\nfor (var i = 0; i < 3; i++) {\n  fns.push(function() { return i })\n}\nreturn fns.map(f => f())\n",
+      "solution": "const fns = []\nfor (let i = 0; i < 3; i++) {\n  fns.push(function() { return i })\n}\nreturn fns.map(f => f())",
       "tests": [
         {
           "input": [],
-          "expected": "20"
+          "expected": [
+            0,
+            1,
+            2
+          ]
         }
       ],
       "hints": [
-        "let scoped to loop iteration"
+        "Change var to let for per-iteration scope",
+        "Each closure captures different i"
       ]
     },
     {
       "id": "01-variables-declarations-scope-hoisting-22",
-      "title": "var function only",
-      "starterCode": "function test() {\n  var x = 1\n}\ntest()\nconsole.log(typeof x)",
-      "solution": "function test() {\n  var x = 1\n}\ntest()\nconsole.log(typeof x)",
+      "title": "for-in with object keys",
+      "starterCode": "const obj = {a: 1, b: 2, c: 3}\nlet sum = 0\nfor (let key in obj) {\n  sum += obj[key]\n}\nreturn sum\n",
+      "solution": "const obj = {a: 1, b: 2, c: 3}\nlet sum = 0\nfor (let key in obj) {\n  sum += obj[key]\n}\nreturn sum",
       "tests": [
         {
           "input": [],
-          "expected": "undefined"
+          "expected": 6
         }
       ],
       "hints": [
-        "var is confined to function"
+        "for-in iterates object keys",
+        "obj[key] accesses each value"
       ]
     },
     {
       "id": "01-variables-declarations-scope-hoisting-23",
-      "title": "scope and this",
-      "starterCode": "const obj = {\n  x: 10,\n  getX() { return this.x }\n}\nconsole.log(obj.getX())",
-      "solution": "const obj = {\n  x: 10,\n  getX() { return this.x }\n}\nconsole.log(obj.getX())",
+      "title": "Hoisting in try block",
+      "starterCode": "try {\n  console.log(x)\n} catch(e) {\n  return \"error\"\n}\nvar x = 5\nreturn x\n",
+      "solution": "try {\n  console.log(x)\n} catch(e) {\n  return \"error\"\n}\nvar x = 5\nreturn x",
       "tests": [
         {
           "input": [],
-          "expected": "10"
+          "expected": 5
         }
       ],
       "hints": [
-        "this depends on call site"
+        "var x is hoisted to function/global scope",
+        "try block can see hoisted x (undefined)"
       ]
     },
     {
       "id": "01-variables-declarations-scope-hoisting-24",
-      "title": "nested function scope",
-      "starterCode": "function a() {\n  const x = 1\n  return function b() {\n    return function c() {\n      return x\n    }\n  }\n}\nconsole.log(a()()())",
-      "solution": "function a() {\n  const x = 1\n  return function b() {\n    return function c() {\n      return x\n    }\n  }\n}\nconsole.log(a()()())",
+      "title": "Block-scoped function in if",
+      "starterCode": "if (true) {\n  function test() { return \"yes\" }\n}\ntry {\n  return test()\n} catch(e) {\n  return \"not accessible\"\n}\n",
+      "solution": "if (true) {\n  function test() { return \"yes\" }\n}\ntry {\n  return test()\n} catch(e) {\n  return \"not accessible\"\n}",
       "tests": [
         {
           "input": [],
-          "expected": "1"
+          "expected": "yes"
         }
       ],
       "hints": [
-        "Scope chain traverses all levels"
+        "Function declarations in blocks are tricky",
+        "In browsers, function is accessible outside the block"
       ]
     },
     {
       "id": "01-variables-declarations-scope-hoisting-25",
-      "title": "block scope if",
-      "starterCode": "if (true) {\n  var a = 1\n  let b = 2\n  const c = 3\n}\nconsole.log(a, typeof b, typeof c)",
-      "solution": "if (true) {\n  var a = 1\n  let b = 2\n  const c = 3\n}\nconsole.log(a, typeof b, typeof c)",
+      "title": "Variable hoisting quiz",
+      "starterCode": "console.log(a)\nconsole.log(b)\nvar a = 1\nlet b = 2\nreturn b\n",
+      "solution": "console.log(a)\nconsole.log(b)\nvar a = 1\nlet b = 2\nreturn b",
       "tests": [
         {
           "input": [],
-          "expected": "1 undefined undefined"
+          "expected": 2
         }
       ],
       "hints": [
-        "var leaks, let/const stay in block"
+        "var a is hoisted with undefined",
+        "let b is in TDZ — accessing it throws error",
+        "Code will throw ReferenceError for b"
       ]
     },
     {
       "id": "01-variables-declarations-scope-hoisting-26",
-      "title": "block scope for",
-      "starterCode": "for (var i = 0; i < 1; i++) {\n  var a = i\n  let b = i\n  const c = i\n}\nconsole.log(a, b, c)",
-      "solution": "for (var i = 0; i < 1; i++) {\n  var a = i\n  let b = i\n  const c = i\n}\nconsole.log(a, b, c)",
+      "title": "Scope of parameters",
+      "starterCode": "function test(a, b = a + 1) {\n  return b\n}\nreturn test(5)\n",
+      "solution": "function test(a, b = a + 1) {\n  return b\n}\nreturn test(5)",
       "tests": [
         {
           "input": [],
-          "expected": "0 0 0"
+          "expected": 6
         }
       ],
       "hints": [
-        "All accessible after loop for var"
+        "Default parameter can reference earlier parameters",
+        "b = 5 + 1 = 6"
       ]
     },
     {
       "id": "01-variables-declarations-scope-hoisting-27",
-      "title": "hoisting preview",
-      "starterCode": "console.log(a)\nvar a = 1\nfunction a() { return 2 }\nconsole.log(a)",
-      "solution": "console.log(a)\nvar a = 1\nfunction a() { return 2 }\nconsole.log(a)",
+      "title": "Strict mode scope",
+      "starterCode": "\"use strict\"\ntry {\n  x = 10\n  return x\n} catch(e) {\n  return \"ReferenceError\"\n}\n",
+      "solution": "\"use strict\"\ntry {\n  x = 10\n  return x\n} catch(e) {\n  return \"ReferenceError\"\n}",
       "tests": [
         {
           "input": [],
-          "expected": "function a() { return 2 }\n1"
+          "expected": "ReferenceError"
         }
       ],
       "hints": [
-        "Function hoisted first"
+        "Strict mode prevents implicit globals",
+        "Must declare x with let/const/var first"
       ]
     },
     {
       "id": "01-variables-declarations-scope-hoisting-28",
-      "title": "TDZ reference error",
-      "starterCode": "try {\n  x = 1\n  let x\n} catch(e) {\n  console.log(\"error\")\n}",
-      "solution": "try {\n  x = 1\n  let x\n} catch(e) {\n  console.log(\"error\")\n}",
+      "title": "Destructuring scope",
+      "starterCode": "const obj = { a: 1, b: 2, c: 3 }\nconst { a, ...rest } = obj\nreturn { a, rest }\n",
+      "solution": "const obj = { a: 1, b: 2, c: 3 }\nconst { a, ...rest } = obj\nreturn { a, rest }",
       "tests": [
         {
           "input": [],
-          "expected": "error"
+          "expected": {
+            "a": 1,
+            "rest": {
+              "b": 2,
+              "c": 3
+            }
+          }
         }
       ],
       "hints": [
-        "let is in TDZ before declaration"
+        "...rest collects remaining properties",
+        "a = 1, rest = {b: 2, c: 3}"
       ]
     },
     {
       "id": "01-variables-declarations-scope-hoisting-29",
-      "title": "scope chain lookup order",
-      "starterCode": "var x = 1\nfunction a() {\n  console.log(x)\n}\nfunction b() {\n  var x = 2\n  a()\n}\nb()",
-      "solution": "var x = 1\nfunction a() {\n  console.log(x)\n}\nfunction b() {\n  var x = 2\n  a()\n}\nb()",
+      "title": "Module scope simulation",
+      "starterCode": "// Simulate module scope with IIFE\nconst module = (function() {\n  const private = \"secret\"\n  return {\n    get: () => private\n  }\n})()\nreturn module.get()\n",
+      "solution": "const module = (function() {\n  const private = \"secret\"\n  return {\n    get: () => private\n  }\n})()\nreturn module.get()",
       "tests": [
         {
           "input": [],
-          "expected": "1"
+          "expected": "secret"
         }
       ],
       "hints": [
-        "a looks at its own scope chain, not b's"
+        "IIFE creates module scope",
+        "private is not accessible outside"
       ]
     },
     {
       "id": "01-variables-declarations-scope-hoisting-30",
-      "title": "lexical environment",
-      "starterCode": "function outer() {\n  const x = 10\n  return function inner() {\n    console.log(x)\n  }\n}\nconst fn = outer()\nfn()",
-      "solution": "function outer() {\n  const x = 10\n  return function inner() {\n    console.log(x)\n  }\n}\nconst fn = outer()\nfn()",
+      "title": "Dynamic scope vs lexical",
+      "starterCode": "const x = \"global\"\nfunction foo() { return x }\nfunction bar() {\n  const x = \"bar\"\n  return foo()\n}\nreturn bar()\n",
+      "solution": "const x = \"global\"\nfunction foo() { return x }\nfunction bar() {\n  const x = \"bar\"\n  return foo()\n}\nreturn bar()",
       "tests": [
         {
           "input": [],
-          "expected": "10"
+          "expected": "global"
         }
       ],
       "hints": [
-        "Lexical scope = where function is defined"
+        "JavaScript uses lexical (not dynamic) scope",
+        "foo() sees x from where it was defined, not called"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-scope-hoisting-31",
+      "title": "Getter setter scope",
+      "starterCode": "const obj = {\n  _val: 0,\n  get val() { return this._val },\n  set val(v) { this._val = v }\n}\nobj.val = 42\nreturn obj.val\n",
+      "solution": "const obj = {\n  _val: 0,\n  get val() { return this._val },\n  set val(v) { this._val = v }\n}\nobj.val = 42\nreturn obj.val",
+      "tests": [
+        {
+          "input": [],
+          "expected": 42
+        }
+      ],
+      "hints": [
+        "Getter/setter act like properties",
+        "set val(v) updates _val, get val returns it"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-scope-hoisting-32",
+      "title": "Promise scope",
+      "starterCode": "let x = \"before\"\nPromise.resolve(\"done\").then(v => { x = v })\nreturn x\n",
+      "solution": "let x = \"before\"\nPromise.resolve(\"done\").then(v => { x = v })\nreturn x",
+      "tests": [
+        {
+          "input": [],
+          "expected": "before"
+        }
+      ],
+      "hints": [
+        "Promise.then runs asynchronously",
+        "return x happens before the callback"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-scope-hoisting-33",
+      "title": "Arrow function concise body",
+      "starterCode": "const double = x => x * 2\nconst add = (a, b) => a + b\nreturn [double(5), add(3, 4)]\n",
+      "solution": "const double = x => x * 2\nconst add = (a, b) => a + b\nreturn [double(5), add(3, 4)]",
+      "tests": [
+        {
+          "input": [],
+          "expected": [
+            10,
+            7
+          ]
+        }
+      ],
+      "hints": [
+        "Single expression arrow functions auto-return",
+        "No need for return keyword or braces"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-scope-hoisting-34",
+      "title": "Spread in function call",
+      "starterCode": "function sum(a, b, c) { return a + b + c }\nconst nums = [1, 2, 3]\nreturn sum(...nums)\n",
+      "solution": "function sum(a, b, c) { return a + b + c }\nconst nums = [1, 2, 3]\nreturn sum(...nums)",
+      "tests": [
+        {
+          "input": [],
+          "expected": 6
+        }
+      ],
+      "hints": [
+        "...spread expands array into arguments",
+        "sum(1, 2, 3) = 6"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-scope-hoisting-35",
+      "title": "Rest parameters",
+      "starterCode": "function sum(...nums) {\n  return nums.reduce((a, b) => a + b, 0)\n}\nreturn sum(1, 2, 3, 4, 5)\n",
+      "solution": "function sum(...nums) {\n  return nums.reduce((a, b) => a + b, 0)\n}\nreturn sum(1, 2, 3, 4, 5)",
+      "tests": [
+        {
+          "input": [],
+          "expected": 15
+        }
+      ],
+      "hints": [
+        "...rest collects all arguments into array",
+        "reduce sums them up"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-scope-hoisting-36",
+      "title": "Map filter reduce chain",
+      "starterCode": "const nums = [1, 2, 3, 4, 5, 6]\nconst result = nums\n  .filter(n => n % 2 === 0)\n  .map(n => n * 10)\n  .reduce((a, b) => a + b, 0)\nreturn result\n",
+      "solution": "const nums = [1, 2, 3, 4, 5, 6]\nconst result = nums\n  .filter(n => n % 2 === 0)\n  .map(n => n * 10)\n  .reduce((a, b) => a + b, 0)\nreturn result",
+      "tests": [
+        {
+          "input": [],
+          "expected": 120
+        }
+      ],
+      "hints": [
+        "Filter evens: [2,4,6]",
+        "Map to tens: [20,40,60]",
+        "Reduce sum: 120"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-scope-hoisting-37",
+      "title": "Template literal multiline",
+      "starterCode": "const name = \"JS\"\nconst str = `Hello\n${name}\nWorld`\nreturn str.split(\"\\n\").length\n",
+      "solution": "const name = \"JS\"\nconst str = `Hello\n${name}\nWorld`\nreturn str.split(\"\\n\").length",
+      "tests": [
+        {
+          "input": [],
+          "expected": 3
+        }
+      ],
+      "hints": [
+        "Template literals support multiline strings",
+        "split on newline gives 3 parts"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-scope-hoisting-38",
+      "title": "Symbol as object key",
+      "starterCode": "const id = Symbol(\"id\")\nconst obj = { [id]: 123, name: \"test\" }\nreturn obj[id]\n",
+      "solution": "const id = Symbol(\"id\")\nconst obj = { [id]: 123, name: \"test\" }\nreturn obj[id]",
+      "tests": [
+        {
+          "input": [],
+          "expected": 123
+        }
+      ],
+      "hints": [
+        "Symbols can be object keys",
+        "Access with obj[symbolVariable]"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-scope-hoisting-39",
+      "title": "WeakMap scope usage",
+      "starterCode": "const wm = new WeakMap()\nlet obj = { key: \"value\" }\nwm.set(obj, \"metadata\")\nobj = null  // Remove reference\nreturn wm.has(obj)\n",
+      "solution": "const wm = new WeakMap()\nlet obj = { key: \"value\" }\nwm.set(obj, \"metadata\")\nobj = null\nreturn wm.has(obj)",
+      "tests": [
+        {
+          "input": [],
+          "expected": false
+        }
+      ],
+      "hints": [
+        "WeakMap allows garbage collection of keys",
+        "When obj is nulled, entry is removed"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-scope-hoisting-40",
+      "title": "Generators and scope",
+      "starterCode": "function* counter() {\n  let i = 0\n  while (true) yield i++\n}\nconst gen = counter()\nreturn [gen.next().value, gen.next().value, gen.next().value]\n",
+      "solution": "function* counter() {\n  let i = 0\n  while (true) yield i++\n}\nconst gen = counter()\nreturn [gen.next().value, gen.next().value, gen.next().value]",
+      "tests": [
+        {
+          "input": [],
+          "expected": [
+            0,
+            1,
+            2
+          ]
+        }
+      ],
+      "hints": [
+        "Generator preserves state between yields",
+        "i persists across next() calls"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-scope-hoisting-41",
+      "title": "Proxy scope trap",
+      "starterCode": "const handler = {\n  get: (obj, prop) => prop in obj ? obj[prop] : \"not found\"\n}\nconst proxy = new Proxy({ a: 1 }, handler)\nreturn [proxy.a, proxy.b]\n",
+      "solution": "const handler = {\n  get: (obj, prop) => prop in obj ? obj[prop] : \"not found\"\n}\nconst proxy = new Proxy({ a: 1 }, handler)\nreturn [proxy.a, proxy.b]",
+      "tests": [
+        {
+          "input": [],
+          "expected": [
+            1,
+            "not found"
+          ]
+        }
+      ],
+      "hints": [
+        "Proxy intercepts property access",
+        "handler.get checks if property exists"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-scope-hoisting-42",
+      "title": "WeakRef and scope",
+      "starterCode": "let target = { val: 42 }\nconst ref = new WeakRef(target)\ntarget = null\nreturn ref.deref()\n",
+      "solution": "let target = { val: 42 }\nconst ref = new WeakRef(target)\ntarget = null\nreturn ref.deref()",
+      "tests": [
+        {
+          "input": [],
+          "expected": {
+            "val": 42
+          }
+        }
+      ],
+      "hints": [
+        "WeakRef holds weak reference to target",
+        "deref() returns the target or undefined"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-scope-hoisting-43",
+      "title": "FinalizationRegistry",
+      "starterCode": "let cleaned = false\nconst reg = new FinalizationRegistry(() => { cleaned = true })\nlet obj = {}\nreg.register(obj)\nobj = null\nreturn cleaned\n",
+      "solution": "let cleaned = false\nconst reg = new FinalizationRegistry(() => { cleaned = true })\nlet obj = {}\nreg.register(obj)\nobj = null\nreturn cleaned",
+      "tests": [
+        {
+          "input": [],
+          "expected": false
+        }
+      ],
+      "hints": [
+        "FinalizationRegistry callback runs on GC",
+        "GC timing is not deterministic",
+        "cleaned may still be false synchronously"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-scope-hoisting-44",
+      "title": "Async/await scope",
+      "starterCode": "async function getData() {\n  const data = await Promise.resolve(\"hello\")\n  return data\n}\nreturn await getData()\n",
+      "solution": "async function getData() {\n  const data = await Promise.resolve(\"hello\")\n  return data\n}\nreturn await getData()",
+      "tests": [
+        {
+          "input": [],
+          "expected": "hello"
+        }
+      ],
+      "hints": [
+        "async function returns a Promise",
+        "await unwraps the Promise value"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-scope-hoisting-45",
+      "title": "Promise.all scope",
+      "starterCode": "const p1 = Promise.resolve(1)\nconst p2 = Promise.resolve(2)\nconst p3 = Promise.resolve(3)\nreturn await Promise.all([p1, p2, p3])\n",
+      "solution": "const p1 = Promise.resolve(1)\nconst p2 = Promise.resolve(2)\nconst p3 = Promise.resolve(3)\nreturn await Promise.all([p1, p2, p3])",
+      "tests": [
+        {
+          "input": [],
+          "expected": [
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "hints": [
+        "Promise.all resolves all promises",
+        "Returns array of resolved values"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-scope-hoisting-46",
+      "title": "Promise.race behavior",
+      "starterCode": "const fast = new Promise(r => setTimeout(() => r(\"fast\"), 10))\nconst slow = new Promise(r => setTimeout(() => r(\"slow\"), 100))\nreturn await Promise.race([fast, slow])\n",
+      "solution": "const fast = new Promise(r => setTimeout(() => r(\"fast\"), 10))\nconst slow = new Promise(r => setTimeout(() => r(\"slow\"), 100))\nreturn await Promise.race([fast, slow])",
+      "tests": [
+        {
+          "input": [],
+          "expected": "fast"
+        }
+      ],
+      "hints": [
+        "Promise.race resolves with first settled promise",
+        "fast resolves first"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-scope-hoisting-47",
+      "title": "Dynamic import scope",
+      "starterCode": "// In browser this would be:\n// const module = await import(\"./module.js\")\n// For now, simulate:\nreturn \"module loaded\"\n",
+      "solution": "return \"module loaded\"",
+      "tests": [
+        {
+          "input": [],
+          "expected": "module loaded"
+        }
+      ],
+      "hints": [
+        "Dynamic import() loads modules on demand",
+        "Returns a Promise that resolves to the module"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-scope-hoisting-48",
+      "title": "with statement (deprecated)",
+      "starterCode": "const obj = { a: 1, b: 2 }\ntry {\n  with (obj) {\n    return a + b\n  }\n} catch(e) {\n  return \"strict mode error\"\n}\n",
+      "solution": "const obj = { a: 1, b: 2 }\ntry {\n  with (obj) {\n    return a + b\n  }\n} catch(e) {\n  return \"strict mode error\"\n}",
+      "tests": [
+        {
+          "input": [],
+          "expected": 3
+        }
+      ],
+      "hints": [
+        "with adds obj properties to scope",
+        "Deprecated and forbidden in strict mode"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-scope-hoisting-49",
+      "title": "eval scope",
+      "starterCode": "const x = 10\nfunction test() {\n  const x = 20\n  return eval(\"x\")\n}\nreturn test()\n",
+      "solution": "const x = 10\nfunction test() {\n  const x = 20\n  return eval(\"x\")\n}\nreturn test()",
+      "tests": [
+        {
+          "input": [],
+          "expected": 20
+        }
+      ],
+      "hints": [
+        "eval runs in local scope",
+        "Sees function's x = 20, not global x = 10"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-scope-hoisting-50",
+      "title": "debugger statement scope",
+      "starterCode": "// debugger statement pauses execution\n// This exercise demonstrates scope inspection\nconst x = 1\nfunction inner() {\n  const y = 2\n  return x + y\n}\nreturn inner()\n",
+      "solution": "const x = 1\nfunction inner() {\n  const y = 2\n  return x + y\n}\nreturn inner()",
+      "tests": [
+        {
+          "input": [],
+          "expected": 3
+        }
+      ],
+      "hints": [
+        "debugger pauses in DevTools",
+        "You can inspect scope variables there"
       ]
     }
   ],
   "01-variables-declarations-02-var-let-const": [
     {
       "id": "01-variables-declarations-var-let-const-01",
-      "title": "var function scope",
-      "starterCode": "function test() {\n  var x = 1\n}\ntest()\nconsole.log(typeof x)",
-      "solution": "function test() {\n  var x = 1\n}\ntest()\nconsole.log(typeof x)",
+      "title": "Bug: var leaking from block",
+      "starterCode": "// Fix this code — should print \"defined\" not 10\nif (true) {\n  var x = 10\n}\nreturn typeof x === \"undefined\" ? \"fixed\" : \"not fixed\"\n",
+      "solution": "if (true) {\n  let x = 10\n}\nreturn typeof x === \"undefined\" ? \"fixed\" : \"not fixed\"",
       "tests": [
         {
           "input": [],
-          "expected": "undefined"
+          "expected": "fixed"
         }
       ],
       "hints": [
-        "var is function-scoped"
+        "var se block scope nahi milta",
+        "let use karo var ki jagah"
       ]
     },
     {
       "id": "01-variables-declarations-var-let-const-02",
-      "title": "let block scope",
-      "starterCode": "if (true) {\n  let x = 10\n}\nconsole.log(typeof x)",
-      "solution": "if (true) {\n  let x = 10\n}\nconsole.log(typeof x)",
+      "title": "Bug: loop counter leaking",
+      "starterCode": "// Fix: i loop ke bahar accessible nahi hona chahiye\nfor (var i = 0; i < 3; i++) {}\nreturn typeof i === \"undefined\" ? \"fixed\" : \"not fixed\"\n",
+      "solution": "for (let i = 0; i < 3; i++) {}\nreturn typeof i === \"undefined\" ? \"fixed\" : \"not fixed\"",
       "tests": [
         {
           "input": [],
-          "expected": "undefined"
+          "expected": "fixed"
         }
       ],
       "hints": [
-        "let is block-scoped"
+        "let se i block scoped ho jayega"
       ]
     },
     {
       "id": "01-variables-declarations-var-let-const-03",
-      "title": "const reassignment error",
-      "starterCode": "const x = 1\ntry {\n  x = 2\n} catch(e) {\n  console.log(\"error\")\n}",
-      "solution": "const x = 1\ntry {\n  x = 2\n} catch(e) {\n  console.log(\"error\")\n}",
+      "title": "Bug: const reassignment",
+      "starterCode": "// Fix: this should not throw error\nconst PI = 3.14\ntry {\n  PI = 3.14159\n  return \"changed\"\n} catch(e) {\n  return \"error: \" + e.message\n}\n",
+      "solution": "const PI = 3.14\ntry {\n  PI = 3.14159\n  return \"changed\"\n} catch(e) {\n  return \"error: \" + e.message\n}",
       "tests": [
         {
           "input": [],
-          "expected": "error"
+          "expected": "error: Assignment to constant variable."
         }
       ],
       "hints": [
-        "const cannot be reassigned"
+        "const reassign nahi ho sakta",
+        "Ye error expected hai — catch mein handle karo"
       ]
     },
     {
       "id": "01-variables-declarations-var-let-const-04",
-      "title": "var hoisting",
-      "starterCode": "console.log(x)\nvar x = 5",
-      "solution": "console.log(x)\nvar x = 5",
+      "title": "Bug: var hoisting mystery",
+      "starterCode": "// Predict and fix the output\nconsole.log(a)  // What is this?\nvar a = 5\nreturn a\n",
+      "solution": "console.log(a)\nvar a = 5\nreturn a",
+      "tests": [
+        {
+          "input": [],
+          "expected": 5
+        }
+      ],
+      "hints": [
+        "var hoisted hota hai with undefined",
+        "Assignment nahi hota sirf declaration"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-05",
+      "title": "Bug: function declaration vs expression",
+      "starterCode": "// Fix: both should work\nconsole.log(add(2,3))\nvar add = function(a,b) { return a+b }\n",
+      "solution": "console.log(add(2,3))\nvar add = function(a,b) { return a+b }",
+      "tests": [
+        {
+          "input": [],
+          "expected": "add is not a function"
+        }
+      ],
+      "hints": [
+        "var expression hoisted nahi hota",
+        "Function declaration use karo pehle"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-06",
+      "title": "Bug: shadowing confusion",
+      "starterCode": "var x = 1\nfunction test() {\n  console.log(x)  // Should be 1, not undefined\n  var x = 2\n}\ntest()\nreturn 1\n",
+      "solution": "var x = 1\nfunction test() {\n  console.log(x)\n  var x = 2\n}\ntest()\nreturn 1",
+      "tests": [
+        {
+          "input": [],
+          "expected": 1
+        }
+      ],
+      "hints": [
+        "var x = 2 declaration hoists, so x is undefined in the function"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-07",
+      "title": "Bug: TDZ with let",
+      "starterCode": "// Fix this Temporal Dead Zone error\ntry {\n  let y = y + 1\n  return y\n} catch(e) {\n  return \"TDZ error caught\"\n}\n",
+      "solution": "try {\n  let y = y + 1\n  return y\n} catch(e) {\n  return \"TDZ error caught\"\n}",
+      "tests": [
+        {
+          "input": [],
+          "expected": "TDZ error caught"
+        }
+      ],
+      "hints": [
+        "let y = y + 1 — right side pe y abhi defined nahi hai",
+        "TDZ mein access karne se ReferenceError aata hai"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-08",
+      "title": "Bug: const without initialization",
+      "starterCode": "try {\n  const x\n  return x\n} catch(e) {\n  return \"error: must initialize\"\n}\n",
+      "solution": "try {\n  const x\n  return x\n} catch(e) {\n  return \"error: must initialize\"\n}",
+      "tests": [
+        {
+          "input": [],
+          "expected": "error: must initialize"
+        }
+      ],
+      "hints": [
+        "const hamesha initialize hona chahiye",
+        "const x; SyntaxError deta hai"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-09",
+      "title": "Bug: var in function param shadows",
+      "starterCode": "function test(x) {\n  var x = 10\n  return x\n}\nreturn test(5)\n",
+      "solution": "function test(x) {\n  var x = 10\n  return x\n}\nreturn test(5)",
+      "tests": [
+        {
+          "input": [],
+          "expected": 10
+        }
+      ],
+      "hints": [
+        "var x = 10 shadows the parameter x",
+        "Inner x wins — returns 10"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-10",
+      "title": "Bug: for-loop var closure",
+      "starterCode": "// All should print 0, 1, 2 but prints 3, 3, 3\nvar funcs = []\nfor (var i = 0; i < 3; i++) {\n  funcs.push(function() { return i })\n}\nreturn [funcs[0](), funcs[1](), funcs[2]()]\n",
+      "solution": "let funcs = []\nfor (let i = 0; i < 3; i++) {\n  funcs.push(function() { return i })\n}\nreturn [funcs[0](), funcs[1](), funcs[2]()]",
+      "tests": [
+        {
+          "input": [],
+          "expected": [
+            0,
+            1,
+            2
+          ]
+        }
+      ],
+      "hints": [
+        "var se i shared hota hai, let se per-iteration hota hai"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-11",
+      "title": "Bug: while loop var scope",
+      "starterCode": "var i = 0\nwhile (i < 3) {\n  var result = i\n  i++\n}\nreturn result\n",
+      "solution": "var i = 0\nwhile (i < 3) {\n  var result = i\n  i++\n}\nreturn result",
+      "tests": [
+        {
+          "input": [],
+          "expected": 2
+        }
+      ],
+      "hints": [
+        "var result block ke bahar leak hota hai",
+        "Last value 2 hogi"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-12",
+      "title": "Bug: const reference sharing",
+      "starterCode": "const a = { x: 1 }\nconst b = a\nb.x = 99\nreturn a.x\n",
+      "solution": "const a = { x: 1 }\nconst b = a\nb.x = 99\nreturn a.x",
+      "tests": [
+        {
+          "input": [],
+          "expected": 99
+        }
+      ],
+      "hints": [
+        "Objects by reference copy hote hain",
+        "b aur a same object point karte hain"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-13",
+      "title": "Bug: let in for-of loop",
+      "starterCode": "const arr = [\"a\", \"b\", \"c\"]\nlet result = []\nfor (let x of arr) {\n  result.push(x)\n}\nreturn result\n",
+      "solution": "const arr = [\"a\", \"b\", \"c\"]\nlet result = []\nfor (let x of arr) {\n  result.push(x)\n}\nreturn result",
+      "tests": [
+        {
+          "input": [],
+          "expected": [
+            "a",
+            "b",
+            "c"
+          ]
+        }
+      ],
+      "hints": [
+        "for-of se har iteration ka independent x hota hai"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-14",
+      "title": "Bug: freeze not deep",
+      "starterCode": "const obj = Object.freeze({ a: { b: 1 } })\ntry {\n  obj.a.b = 99\n  return obj.a.b\n} catch(e) {\n  return \"frozen\"\n}\n",
+      "solution": "const obj = Object.freeze({ a: { b: 1 } })\ntry {\n  obj.a.b = 99\n  return obj.a.b\n} catch(e) {\n  return \"frozen\"\n}",
+      "tests": [
+        {
+          "input": [],
+          "expected": 99
+        }
+      ],
+      "hints": [
+        "Freeze shallow hota hai — nested objects change ho sakte hain"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-15",
+      "title": "Bug: re-declaration var allowed",
+      "starterCode": "var x = 1\nvar x = 2\nvar x = 3\nreturn x\n",
+      "solution": "var x = 1\nvar x = 2\nvar x = 3\nreturn x",
+      "tests": [
+        {
+          "input": [],
+          "expected": 3
+        }
+      ],
+      "hints": [
+        "Var mein redeclaration allowed hai",
+        "Last value 3 rahegi"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-16",
+      "title": "Nested scope resolution",
+      "starterCode": "var x = \"global\"\nfunction outer() {\n  var x = \"outer\"\n  function inner() {\n    var x = \"inner\"\n    return x\n  }\n  return inner()\n}\nreturn outer()\n",
+      "solution": "var x = \"global\"\nfunction outer() {\n  var x = \"outer\"\n  function inner() {\n    var x = \"inner\"\n    return x\n  }\n  return inner()\n}\nreturn outer()",
+      "tests": [
+        {
+          "input": [],
+          "expected": "inner"
+        }
+      ],
+      "hints": [
+        "Scope chain: inner > outer > global",
+        "Sabse paas wala x choose hota hai"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-17",
+      "title": "Block scope with let/const",
+      "starterCode": "{\n  let a = 1\n  const b = 2\n  var c = 3\n}\nreturn { a: typeof a, b: typeof b, c: typeof c }\n",
+      "solution": "{\n  let a = 1\n  const b = 2\n  var c = 3\n}\nreturn { a: typeof a, b: typeof b, c: typeof c }",
+      "tests": [
+        {
+          "input": [],
+          "expected": {
+            "a": "undefined",
+            "b": "undefined",
+            "c": "number"
+          }
+        }
+      ],
+      "hints": [
+        "let/const block scope, var function/global scope"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-18",
+      "title": "Scope with try-catch",
+      "starterCode": "try {\n  let x = 10\n} catch(e) {}\nreturn typeof x\n",
+      "solution": "try {\n  let x = 10\n} catch(e) {}\nreturn typeof x",
       "tests": [
         {
           "input": [],
@@ -509,14 +1139,137 @@
         }
       ],
       "hints": [
-        "var is hoisted but uninitialized"
+        "try-catch bhi block hai",
+        "let x sirf try block mein accessible hai"
       ]
     },
     {
-      "id": "01-variables-declarations-var-let-const-05",
-      "title": "let TDZ",
-      "starterCode": "try {\n  console.log(x)\n  let x = 5\n} catch(e) {\n  console.log(\"TDZ\")\n}",
-      "solution": "try {\n  console.log(x)\n  let x = 5\n} catch(e) {\n  console.log(\"TDZ\")\n}",
+      "id": "01-variables-declarations-var-let-const-19",
+      "title": "var in nested functions",
+      "starterCode": "function a() {\n  var x = 1\n  function b() {\n    var x = 2\n    function c() {\n      return x\n    }\n    return c()\n  }\n  return b()\n}\nreturn a()\n",
+      "solution": "function a() {\n  var x = 1\n  function b() {\n    var x = 2\n    function c() {\n      return x\n    }\n    return c()\n  }\n  return b()\n}\nreturn a()",
+      "tests": [
+        {
+          "input": [],
+          "expected": 2
+        }
+      ],
+      "hints": [
+        "c() mein sabse paas ka x = 2 milta hai"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-20",
+      "title": "Global pollution demo",
+      "starterCode": "var global = \"original\"\nfunction change() {\n  global = \"changed\"\n}\nchange()\nreturn global\n",
+      "solution": "var global = \"original\"\nfunction change() {\n  global = \"changed\"\n}\nchange()\nreturn global",
+      "tests": [
+        {
+          "input": [],
+          "expected": "changed"
+        }
+      ],
+      "hints": [
+        "var se declare kiya variable global hota hai",
+        "Function se direct modify ho sakta hai"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-21",
+      "title": "IIFE scope isolation",
+      "starterCode": "const result = (function() {\n  var secret = 42\n  return secret\n})()\nreturn result\n",
+      "solution": "const result = (function() {\n  var secret = 42\n  return secret\n})()\nreturn result",
+      "tests": [
+        {
+          "input": [],
+          "expected": 42
+        }
+      ],
+      "hints": [
+        "IIFE turant execute hota hai",
+        "Variable IIFE ke scope mein confined hai"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-22",
+      "title": "Closure captures variable",
+      "starterCode": "function makeCounter() {\n  let count = 0\n  return function() {\n    return ++count\n  }\n}\nconst counter = makeCounter()\nreturn [counter(), counter(), counter()]\n",
+      "solution": "function makeCounter() {\n  let count = 0\n  return function() {\n    return ++count\n  }\n}\nconst counter = makeCounter()\nreturn [counter(), counter(), counter()]",
+      "tests": [
+        {
+          "input": [],
+          "expected": [
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "hints": [
+        "Closure parent ke variables ko yaad rakhta hai",
+        "Har call pe count badhta hai"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-23",
+      "title": "Multiple closures independent",
+      "starterCode": "function makeAdder(n) {\n  return function(x) { return x + n }\n}\nconst add5 = makeAdder(5)\nconst add10 = makeAdder(10)\nreturn [add5(3), add10(3)]\n",
+      "solution": "function makeAdder(n) {\n  return function(x) { return x + n }\n}\nconst add5 = makeAdder(5)\nconst add10 = makeAdder(10)\nreturn [add5(3), add10(3)]",
+      "tests": [
+        {
+          "input": [],
+          "expected": [
+            8,
+            13
+          ]
+        }
+      ],
+      "hints": [
+        "Har closure ka apna n hota hai",
+        "add5(3) = 3+5=8, add10(3) = 3+10=13"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-24",
+      "title": "Loop variable capture with let",
+      "starterCode": "const fns = []\nfor (let i = 0; i < 3; i++) {\n  fns.push(() => i)\n}\nreturn fns.map(f => f())\n",
+      "solution": "const fns = []\nfor (let i = 0; i < 3; i++) {\n  fns.push(() => i)\n}\nreturn fns.map(f => f())",
+      "tests": [
+        {
+          "input": [],
+          "expected": [
+            0,
+            1,
+            2
+          ]
+        }
+      ],
+      "hints": [
+        "Let creates per-iteration binding",
+        "Each closure captures different i"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-25",
+      "title": "Hoisting order: function > var",
+      "starterCode": "console.log(typeof a)\nvar a = 1\nfunction a() { return 2 }\nconsole.log(typeof a)\nreturn typeof a\n",
+      "solution": "console.log(typeof a)\nvar a = 1\nfunction a() { return 2 }\nconsole.log(typeof a)\nreturn typeof a",
+      "tests": [
+        {
+          "input": [],
+          "expected": "number"
+        }
+      ],
+      "hints": [
+        "Function declaration hoisted first, then var",
+        "But var assignment overrides function"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-26",
+      "title": "TDZ with for-loop let",
+      "starterCode": "try {\n  for (let i = 0; i < 1; i++) {\n    // do nothing\n  }\n  return i\n} catch(e) {\n  return \"TDZ\"\n}\n",
+      "solution": "try {\n  for (let i = 0; i < 1; i++) {\n    // do nothing\n  }\n  return i\n} catch(e) {\n  return \"TDZ\"\n}",
       "tests": [
         {
           "input": [],
@@ -524,509 +1277,34 @@
         }
       ],
       "hints": [
-        "let has temporal dead zone"
-      ]
-    },
-    {
-      "id": "01-variables-declarations-var-let-const-06",
-      "title": "const object mutation",
-      "starterCode": "const obj = { a: 1 }\nobj.a = 2\nconsole.log(obj.a)",
-      "solution": "const obj = { a: 1 }\nobj.a = 2\nconsole.log(obj.a)",
-      "tests": [
-        {
-          "input": [],
-          "expected": "2"
-        }
-      ],
-      "hints": [
-        "const allows property mutation"
-      ]
-    },
-    {
-      "id": "01-variables-declarations-var-let-const-07",
-      "title": "const array mutation",
-      "starterCode": "const arr = [1, 2]\narr.push(3)\nconsole.log(arr.length)",
-      "solution": "const arr = [1, 2]\narr.push(3)\nconsole.log(arr.length)",
-      "tests": [
-        {
-          "input": [],
-          "expected": "3"
-        }
-      ],
-      "hints": [
-        "const allows array mutation"
-      ]
-    },
-    {
-      "id": "01-variables-declarations-var-let-const-08",
-      "title": "var redeclaration",
-      "starterCode": "var x = 1\nvar x = 2\nconsole.log(x)",
-      "solution": "var x = 1\nvar x = 2\nconsole.log(x)",
-      "tests": [
-        {
-          "input": [],
-          "expected": "2"
-        }
-      ],
-      "hints": [
-        "var allows redeclaration"
-      ]
-    },
-    {
-      "id": "01-variables-declarations-var-let-const-09",
-      "title": "let redeclaration error",
-      "starterCode": "try {\n  let x = 1\n  let x = 2\n} catch(e) {\n  console.log(\"error\")\n}",
-      "solution": "try {\n  let x = 1\n  let x = 2\n} catch(e) {\n  console.log(\"error\")\n}",
-      "tests": [
-        {
-          "input": [],
-          "expected": "error"
-        }
-      ],
-      "hints": [
-        "let does not allow redeclaration"
-      ]
-    },
-    {
-      "id": "01-variables-declarations-var-let-const-10",
-      "title": "Loop var vs let",
-      "starterCode": "for (var i = 0; i < 3; i++) {\n  setTimeout(() => console.log(i), 0)\n}",
-      "solution": "for (var i = 0; i < 3; i++) {\n  setTimeout(() => console.log(i), 0)\n}",
-      "tests": [
-        {
-          "input": [],
-          "expected": "3\n3\n3"
-        }
-      ],
-      "hints": [
-        "var is shared across iterations"
-      ]
-    },
-    {
-      "id": "01-variables-declarations-var-let-const-11",
-      "title": "Loop let scope",
-      "starterCode": "for (let i = 0; i < 3; i++) {\n  setTimeout(() => console.log(i), 0)\n}",
-      "solution": "for (let i = 0; i < 3; i++) {\n  setTimeout(() => console.log(i), 0)\n}",
-      "tests": [
-        {
-          "input": [],
-          "expected": "0\n1\n2"
-        }
-      ],
-      "hints": [
-        "let is block-scoped per iteration"
-      ]
-    },
-    {
-      "id": "01-variables-declarations-var-let-const-12",
-      "title": "var global pollution",
-      "starterCode": "var x = 1\nfunction test() {\n  var x = 2\n}\ntest()\nconsole.log(x)",
-      "solution": "var x = 1\nfunction test() {\n  var x = 2\n}\ntest()\nconsole.log(x)",
-      "tests": [
-        {
-          "input": [],
-          "expected": "1"
-        }
-      ],
-      "hints": [
-        "function var is local"
-      ]
-    },
-    {
-      "id": "01-variables-declarations-var-let-const-13",
-      "title": "const initialization",
-      "starterCode": "try {\n  const x\n} catch(e) {\n  console.log(\"error\")\n}",
-      "solution": "try {\n  const x\n} catch(e) {\n  console.log(\"error\")\n}",
-      "tests": [
-        {
-          "input": [],
-          "expected": "error"
-        }
-      ],
-      "hints": [
-        "const must be initialized"
-      ]
-    },
-    {
-      "id": "01-variables-declarations-var-let-const-14",
-      "title": "let not hoisted value",
-      "starterCode": "try {\n  console.log(x)\n  let x = 5\n} catch(e) {\n  console.log(\"error\")\n}",
-      "solution": "try {\n  console.log(x)\n  let x = 5\n} catch(e) {\n  console.log(\"error\")\n}",
-      "tests": [
-        {
-          "input": [],
-          "expected": "error"
-        }
-      ],
-      "hints": [
-        "let is not initialized before declaration"
-      ]
-    },
-    {
-      "id": "01-variables-declarations-var-let-const-15",
-      "title": "const reference check",
-      "starterCode": "const a = { x: 1 }\nconst b = a\nb.x = 99\nconsole.log(a.x)",
-      "solution": "const a = { x: 1 }\nconst b = a\nb.x = 99\nconsole.log(a.x)",
-      "tests": [
-        {
-          "input": [],
-          "expected": "99"
-        }
-      ],
-      "hints": [
-        "Both reference same object"
-      ]
-    },
-    {
-      "id": "01-variables-declarations-var-let-const-16",
-      "title": "var while scope",
-      "starterCode": "var i = 0\nwhile (i < 3) {\n  var result = i\n  i++\n}\nconsole.log(result)",
-      "solution": "var i = 0\nwhile (i < 3) {\n  var result = i\n  i++\n}\nconsole.log(result)",
-      "tests": [
-        {
-          "input": [],
-          "expected": "2"
-        }
-      ],
-      "hints": [
-        "var leaks out of loop"
-      ]
-    },
-    {
-      "id": "01-variables-declarations-var-let-const-17",
-      "title": "let in for of",
-      "starterCode": "const arr = [\"a\", \"b\", \"c\"]\nfor (let x of arr) {\n  console.log(x)\n}",
-      "solution": "const arr = [\"a\", \"b\", \"c\"]\nfor (let x of arr) {\n  console.log(x)\n}",
-      "tests": [
-        {
-          "input": [],
-          "expected": "a\nb\nc"
-        }
-      ],
-      "hints": [
-        "let creates new scope per iteration"
-      ]
-    },
-    {
-      "id": "01-variables-declarations-var-let-const-18",
-      "title": "const freeze object",
-      "starterCode": "const obj = Object.freeze({ x: 1 })\ntry {\n  obj.x = 2\n} catch(e) {\n  console.log(\"error\")\n}\nconsole.log(obj.x)",
-      "solution": "const obj = Object.freeze({ x: 1 })\ntry {\n  obj.x = 2\n} catch(e) {\n  console.log(\"error\")\n}\nconsole.log(obj.x)",
-      "tests": [
-        {
-          "input": [],
-          "expected": "error\n1"
-        }
-      ],
-      "hints": [
-        "freeze prevents mutation"
-      ]
-    },
-    {
-      "id": "01-variables-declarations-var-let-const-19",
-      "title": "var name shadow",
-      "starterCode": "var x = 1\nfunction test() {\n  var x = 2\n  console.log(x)\n}\ntest()\nconsole.log(x)",
-      "solution": "var x = 1\nfunction test() {\n  var x = 2\n  console.log(x)\n}\ntest()\nconsole.log(x)",
-      "tests": [
-        {
-          "input": [],
-          "expected": "2\n1"
-        }
-      ],
-      "hints": [
-        "Function var shadows global"
-      ]
-    },
-    {
-      "id": "01-variables-declarations-var-let-const-20",
-      "title": "let block boundary",
-      "starterCode": "let x = 1\n{\n  let x = 2\n  console.log(x)\n}\nconsole.log(x)",
-      "solution": "let x = 1\n{\n  let x = 2\n  console.log(x)\n}\nconsole.log(x)",
-      "tests": [
-        {
-          "input": [],
-          "expected": "2\n1"
-        }
-      ],
-      "hints": [
-        "Block let is separate from outer"
-      ]
-    },
-    {
-      "id": "01-variables-declarations-var-let-const-21",
-      "title": "const getter setter",
-      "starterCode": "const obj = { _x: 1, get x() { return this._x } }\nconsole.log(obj.x)",
-      "solution": "const obj = { _x: 1, get x() { return this._x } }\nconsole.log(obj.x)",
-      "tests": [
-        {
-          "input": [],
-          "expected": "1"
-        }
-      ],
-      "hints": [
-        "getter returns value"
-      ]
-    },
-    {
-      "id": "01-variables-declarations-var-let-const-22",
-      "title": "var hoisting demo",
-      "starterCode": "console.log(a)\nvar a = 10\nconsole.log(a)",
-      "solution": "console.log(a)\nvar a = 10\nconsole.log(a)",
-      "tests": [
-        {
-          "input": [],
-          "expected": "undefined\n10"
-        }
-      ],
-      "hints": [
-        "var is hoisted, let is not"
-      ]
-    },
-    {
-      "id": "01-variables-declarations-var-let-const-23",
-      "title": "let block boundary for",
-      "starterCode": "for (let i = 0; i < 2; i++) {\n  let x = i * 10\n  console.log(x)\n}",
-      "solution": "for (let i = 0; i < 2; i++) {\n  let x = i * 10\n  console.log(x)\n}",
-      "tests": [
-        {
-          "input": [],
-          "expected": "0\n10"
-        }
-      ],
-      "hints": [
-        "let is scoped to loop block"
-      ]
-    },
-    {
-      "id": "01-variables-declarations-var-let-const-24",
-      "title": "const nested object",
-      "starterCode": "const obj = { a: { b: 1 } }\nobj.a.b = 99\nconsole.log(obj.a.b)",
-      "solution": "const obj = { a: { b: 1 } }\nobj.a.b = 99\nconsole.log(obj.a.b)",
-      "tests": [
-        {
-          "input": [],
-          "expected": "99"
-        }
-      ],
-      "hints": [
-        "Nested objects are mutable"
-      ]
-    },
-    {
-      "id": "01-variables-declarations-var-let-const-25",
-      "title": "var in function param",
-      "starterCode": "function test(x) {\n  var x = 10\n  console.log(x)\n}\ntest(5)",
-      "solution": "function test(x) {\n  var x = 10\n  console.log(x)\n}\ntest(5)",
-      "tests": [
-        {
-          "input": [],
-          "expected": "10"
-        }
-      ],
-      "hints": [
-        "var shadows parameter"
-      ]
-    },
-    {
-      "id": "01-variables-declarations-var-let-const-26",
-      "title": "let reassign string",
-      "starterCode": "let s = \"hello\"\ns = s + \" world\"\nconsole.log(s)",
-      "solution": "let s = \"hello\"\ns = s + \" world\"\nconsole.log(s)",
-      "tests": [
-        {
-          "input": [],
-          "expected": "hello world"
-        }
-      ],
-      "hints": [
-        "Strings are immutable, but let can reassign"
+        "let i in for-loop is scoped to the loop",
+        "Accessing i outside throws ReferenceError"
       ]
     },
     {
       "id": "01-variables-declarations-var-let-const-27",
-      "title": "const swap impossible",
-      "starterCode": "const a = 1, b = 2\ntry {\n  [a, b] = [b, a]\n} catch(e) {\n  console.log(\"error\")\n}",
-      "solution": "const a = 1, b = 2\ntry {\n  [a, b] = [b, a]\n} catch(e) {\n  console.log(\"error\")\n}",
+      "title": "const in loop body",
+      "starterCode": "const results = []\nfor (let i = 0; i < 3; i++) {\n  const val = i * 10\n  results.push(val)\n}\nreturn results\n",
+      "solution": "const results = []\nfor (let i = 0; i < 3; i++) {\n  const val = i * 10\n  results.push(val)\n}\nreturn results",
       "tests": [
         {
           "input": [],
-          "expected": "error"
+          "expected": [
+            0,
+            10,
+            20
+          ]
         }
       ],
       "hints": [
-        "const cannot be reassigned"
+        "const val = i * 10 — har iteration mein naya const"
       ]
     },
     {
       "id": "01-variables-declarations-var-let-const-28",
-      "title": "var vs let scope",
-      "starterCode": "if (true) {\n  var a = 1\n  let b = 2\n}\nconsole.log(a, typeof b)",
-      "solution": "if (true) {\n  var a = 1\n  let b = 2\n}\nconsole.log(a, typeof b)",
-      "tests": [
-        {
-          "input": [],
-          "expected": "1 undefined"
-        }
-      ],
-      "hints": [
-        "var leaks, let stays in block"
-      ]
-    },
-    {
-      "id": "01-variables-declarations-var-let-const-29",
-      "title": "let block if",
-      "starterCode": "if (true) {\n  let x = 5\n  console.log(x)\n}\nconsole.log(typeof x)",
-      "solution": "if (true) {\n  let x = 5\n  console.log(x)\n}\nconsole.log(typeof x)",
-      "tests": [
-        {
-          "input": [],
-          "expected": "5\nundefined"
-        }
-      ],
-      "hints": [
-        "let is block-scoped"
-      ]
-    },
-    {
-      "id": "01-variables-declarations-var-let-const-30",
-      "title": "const nested array",
-      "starterCode": "const arr = [[1, 2], [3, 4]]\narr[0].push(5)\nconsole.log(arr[0].length)",
-      "solution": "const arr = [[1, 2], [3, 4]]\narr[0].push(5)\nconsole.log(arr[0].length)",
-      "tests": [
-        {
-          "input": [],
-          "expected": "3"
-        }
-      ],
-      "hints": [
-        "Nested arrays are mutable"
-      ]
-    },
-    {
-      "id": "01-variables-declarations-var-let-const-31",
-      "title": "var inside function",
-      "starterCode": "function test() {\n  var x = 1\n}\ntest()\nconsole.log(typeof x)",
-      "solution": "function test() {\n  var x = 1\n}\ntest()\nconsole.log(typeof x)",
-      "tests": [
-        {
-          "input": [],
-          "expected": "undefined"
-        }
-      ],
-      "hints": [
-        "var is function-scoped"
-      ]
-    },
-    {
-      "id": "01-variables-declarations-var-let-const-32",
-      "title": "let inside block",
-      "starterCode": "{\n  let x = 10\n}\nconsole.log(typeof x)",
-      "solution": "{\n  let x = 10\n}\nconsole.log(typeof x)",
-      "tests": [
-        {
-          "input": [],
-          "expected": "undefined"
-        }
-      ],
-      "hints": [
-        "let is block-scoped"
-      ]
-    },
-    {
-      "id": "01-variables-declarations-var-let-const-33",
-      "title": "const tuple pattern",
-      "starterCode": "const [first, , third] = [1, 2, 3]\nconsole.log(first, third)",
-      "solution": "const [first, , third] = [1, 2, 3]\nconsole.log(first, third)",
-      "tests": [
-        {
-          "input": [],
-          "expected": "1 3"
-        }
-      ],
-      "hints": [
-        "Skip with empty slot"
-      ]
-    },
-    {
-      "id": "01-variables-declarations-var-let-const-34",
-      "title": "var scope chain",
-      "starterCode": "var x = 1\nfunction outer() {\n  var x = 2\n  function inner() {\n    console.log(x)\n  }\n  inner()\n}\nouter()",
-      "solution": "var x = 1\nfunction outer() {\n  var x = 2\n  function inner() {\n    console.log(x)\n  }\n  inner()\n}\nouter()",
-      "tests": [
-        {
-          "input": [],
-          "expected": "2"
-        }
-      ],
-      "hints": [
-        "inner looks at outer's x first"
-      ]
-    },
-    {
-      "id": "01-variables-declarations-var-let-const-35",
-      "title": "let scope example",
-      "starterCode": "let x = 1\nfunction test() {\n  console.log(x)\n}\ntest()",
-      "solution": "let x = 1\nfunction test() {\n  console.log(x)\n}\ntest()",
-      "tests": [
-        {
-          "input": [],
-          "expected": "1"
-        }
-      ],
-      "hints": [
-        "let in global scope is accessible"
-      ]
-    },
-    {
-      "id": "01-variables-declarations-var-let-const-36",
-      "title": "const reference check 2",
-      "starterCode": "const a = [1, 2]\nconst b = a\nb.push(3)\nconsole.log(a.length)",
-      "solution": "const a = [1, 2]\nconst b = a\nb.push(3)\nconsole.log(a.length)",
-      "tests": [
-        {
-          "input": [],
-          "expected": "3"
-        }
-      ],
-      "hints": [
-        "Same reference"
-      ]
-    },
-    {
-      "id": "01-variables-declarations-var-let-const-37",
-      "title": "var initialization",
-      "starterCode": "var x\nconsole.log(x)",
-      "solution": "var x\nconsole.log(x)",
-      "tests": [
-        {
-          "input": [],
-          "expected": "undefined"
-        }
-      ],
-      "hints": [
-        "var defaults to undefined"
-      ]
-    },
-    {
-      "id": "01-variables-declarations-var-let-const-38",
-      "title": "let initialization error",
-      "starterCode": "try {\n  let x\n  console.log(x)\n} catch(e) {\n  console.log(\"error\")\n}",
-      "solution": "try {\n  let x\n  console.log(x)\n} catch(e) {\n  console.log(\"error\")\n}",
-      "tests": [
-        {
-          "input": [],
-          "expected": "undefined"
-        }
-      ],
-      "hints": [
-        "let can be declared without value"
-      ]
-    },
-    {
-      "id": "01-variables-declarations-var-let-const-39",
-      "title": "const reassign object",
-      "starterCode": "const obj = { a: 1 }\ntry {\n  obj = { b: 2 }\n} catch(e) {\n  console.log(\"error\")\n}",
-      "solution": "const obj = { a: 1 }\ntry {\n  obj = { b: 2 }\n} catch(e) {\n  console.log(\"error\")\n}",
+      "title": "Scope of catch variable",
+      "starterCode": "try {\n  throw \"error\"\n} catch(e) {\n  var msg = e\n}\nreturn msg\n",
+      "solution": "try {\n  throw \"error\"\n} catch(e) {\n  var msg = e\n}\nreturn msg",
       "tests": [
         {
           "input": [],
@@ -1034,14 +1312,266 @@
         }
       ],
       "hints": [
-        "const cannot reassign variable"
+        "var msg catch block ke bahar accessible hai",
+        "catch(e) ka e sirf catch block mein hai"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-29",
+      "title": "Arrow function scope",
+      "starterCode": "const obj = {\n  value: 42,\n  getValue: () => this.value\n}\nreturn obj.getValue()\n",
+      "solution": "const obj = {\n  value: 42,\n  getValue: () => this.value\n}\nreturn obj.getValue()",
+      "tests": [
+        {
+          "input": []
+        }
+      ],
+      "hints": [
+        "Arrow function ka apna this nahi hota",
+        "Global this se value undefined"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-30",
+      "title": "var function hoisting",
+      "starterCode": "return add(2, 3)\nfunction add(a, b) { return a + b }\n",
+      "solution": "return add(2, 3)\nfunction add(a, b) { return a + b }",
+      "tests": [
+        {
+          "input": [],
+          "expected": 5
+        }
+      ],
+      "hints": [
+        "Function declarations fully hoisted hoti hain",
+        "Declare se pehle call kar sakte ho"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-31",
+      "title": "Score tracker with closure",
+      "starterCode": "// Function banao jo score track kare\nfunction createScoreTracker(initialScore) {\n  let score = initialScore\n  return {\n    add: (points) => { /* TODO */ },\n    deduct: (points) => { /* TODO */ },\n    getScore: () => /* TODO */\n  }\n}",
+      "solution": "function createScoreTracker(initialScore) {\n  let score = initialScore\n  return {\n    add: (points) => { score += points },\n    deduct: (points) => { score -= points },\n    getScore: () => score\n  }\n}",
+      "tests": [
+        {
+          "input": []
+        }
+      ],
+      "hints": [
+        "Score variable closure se track hota hai",
+        "Methods score modify karte hain"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-32",
+      "title": "Private counter class",
+      "starterCode": "// Private counter banao — count directly access nahi hona chahiye\nclass Counter {\n  #count = 0\n  // TODO: increment, decrement, getValue methods\n}\n",
+      "solution": "class Counter {\n  #count = 0\n  increment() { this.#count++ }\n  decrement() { this.#count-- }\n  getValue() { return this.#count }\n}",
+      "tests": [
+        {
+          "input": []
+        }
+      ],
+      "hints": [
+        "# se private field banti hai",
+        "Sirf methods se access ho sakta hai"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-33",
+      "title": "Config with defaults",
+      "starterCode": "// User config aur defaults merge karo\nfunction mergeConfig(defaults, userConfig) {\n  // TODO: shallow merge with defaults\n}\n",
+      "solution": "function mergeConfig(defaults, userConfig) {\n  return { ...defaults, ...userConfig }\n}",
+      "tests": [
+        {
+          "input": [
+            {
+              "host": "localhost",
+              "port": 3000
+            },
+            {
+              "port": 8080
+            }
+          ],
+          "expected": {
+            "host": "localhost",
+            "port": 8080
+          }
+        }
+      ],
+      "hints": [
+        "Spread operator se merge hota hai",
+        "User config defaults ko override karta hai"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-34",
+      "title": "Array rotation",
+      "starterCode": "// Array ko k steps right se rotate karo\n// rotate([1,2,3,4,5], 2) = [4,5,1,2,3]\nfunction rotate(arr, steps) {\n  // TODO\n}\n",
+      "solution": "function rotate(arr, steps) {\n  const n = steps % arr.length\n  return [...arr.slice(-n), ...arr.slice(0, -n)]\n}",
+      "tests": [
+        {
+          "input": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            2
+          ],
+          "expected": [
+            4,
+            5,
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "hints": [
+        "steps % length se extra rotation handle hota hai",
+        "slice(-n) se last n elements milte hain"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-35",
+      "title": "Object deep freeze",
+      "starterCode": "// Recursive deep freeze banao\nfunction deepFreeze(obj) {\n  // TODO\n}\n",
+      "solution": "function deepFreeze(obj) {\n  Object.freeze(obj)\n  Object.keys(obj).forEach(key => {\n    if (typeof obj[key] === \"object\" && obj[key] !== null) {\n      deepFreeze(obj[key])\n    }\n  })\n  return obj\n}",
+      "tests": [
+        {
+          "input": [
+            {
+              "a": {
+                "b": 1
+              }
+            }
+          ],
+          "expected": {
+            "a": {
+              "b": 1
+            }
+          }
+        }
+      ],
+      "hints": [
+        "Pehle khud ko freeze karo",
+        "Phir har nested object ko recursively freeze karo"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-36",
+      "title": "Chunk iterator",
+      "starterCode": "// Iterator banao jo array ko chunks mein yield kare\nfunction* chunkIterator(arr, size) {\n  // TODO\n}\n",
+      "solution": "function* chunkIterator(arr, size) {\n  for (let i = 0; i < arr.length; i += size) {\n    yield arr.slice(i, i + size)\n  }\n}",
+      "tests": [
+        {
+          "input": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            2
+          ],
+          "expected": [
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              5
+            ]
+          ]
+        }
+      ],
+      "hints": [
+        "Generator function * lagao",
+        "yield se values ek ek karke return hoti hain"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-37",
+      "title": "Lazy evaluation",
+      "starterCode": "// Function banao jo sirf tab compute kare jab zarurat ho\nfunction lazyComputation(fn) {\n  // TODO\n}\n",
+      "solution": "function lazyComputation(fn) {\n  let computed = false\n  let result\n  return function() {\n    if (!computed) {\n      result = fn()\n      computed = true\n    }\n    return result\n  }\n}",
+      "tests": [
+        {
+          "input": []
+        }
+      ],
+      "hints": [
+        "Computation ko cache karo",
+        "Sirf pehli call pe compute karo"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-38",
+      "title": "Scoped variable initializer",
+      "starterCode": "// Variable jo sirf ek baar initialize ho\nfunction createLazyInit(initializer) {\n  // TODO\n}\n",
+      "solution": "function createLazyInit(initializer) {\n  let value\n  let initialized = false\n  return () => {\n    if (!initialized) {\n      value = initializer()\n      initialized = true\n    }\n    return value\n  }\n}",
+      "tests": [
+        {
+          "input": []
+        }
+      ],
+      "hints": [
+        "Lazy initialization pattern hai ye",
+        "Initialized flag se track karo"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-39",
+      "title": "Variable scoping in switch",
+      "starterCode": "switch(1) {\n  case 1:\n    var x = \"from case 1\"\n    // fall through\n  case 2:\n    let y = \"from case 2\"\n    break\n}\nreturn { x, typeofY: typeof y }\n",
+      "solution": "switch(1) {\n  case 1:\n    var x = \"from case 1\"\n  case 2:\n    let y = \"from case 2\"\n    break\n}\nreturn { x, typeofY: typeof y }",
+      "tests": [
+        {
+          "input": [],
+          "expected": {
+            "x": "from case 1",
+            "typeofY": "undefined"
+          }
+        }
+      ],
+      "hints": [
+        "var x switch ke bahar accessible hai",
+        "let y sirf case 2 block mein hai"
       ]
     },
     {
       "id": "01-variables-declarations-var-let-const-40",
-      "title": "var in for let in for",
-      "starterCode": "for (var i = 0; i < 2; i++) {}\nfor (let i = 0; i < 2; i++) {}\nconsole.log(typeof i)",
-      "solution": "for (var i = 0; i < 2; i++) {}\nfor (let i = 0; i < 2; i++) {}\nconsole.log(typeof i)",
+      "title": "Module pattern",
+      "starterCode": "// Module pattern banao\nconst module = (function() {\n  let private = 0\n  return {\n    increment: () => { /* TODO */ },\n    getValue: () => /* TODO */\n  }\n})()\nreturn [module.increment(), module.increment(), module.getValue()]\n",
+      "solution": "const module = (function() {\n  let private = 0\n  return {\n    increment: () => { private++ },\n    getValue: () => private\n  }\n})()\nreturn [module.increment(), module.increment(), module.getValue()]",
+      "tests": [
+        {
+          "input": [],
+          "expected": [
+            null,
+            null,
+            2
+          ]
+        }
+      ],
+      "hints": [
+        "IIFE se private scope banta hai",
+        "Methods closure se private variable access karte hain"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-41",
+      "title": "Variable hoisting quiz",
+      "starterCode": "// What does this return?\nvar a = 1\nfunction a() {}\nconsole.log(typeof a)\nreturn typeof a\n",
+      "solution": "var a = 1\nfunction a() {}\nconsole.log(typeof a)\nreturn typeof a",
       "tests": [
         {
           "input": [],
@@ -1049,534 +1579,1404 @@
         }
       ],
       "hints": [
-        "var i leaks out"
+        "Function declaration hoisted, but var assignment overwrites it",
+        "a becomes 1 (number) after assignment"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-42",
+      "title": "let in catch block",
+      "starterCode": "try {\n  throw new Error(\"fail\")\n} catch (e) {\n  let msg = e.message\n}\nreturn typeof msg\n",
+      "solution": "try {\n  throw new Error(\"fail\")\n} catch (e) {\n  let msg = e.message\n}\nreturn typeof msg",
+      "tests": [
+        {
+          "input": [],
+          "expected": "undefined"
+        }
+      ],
+      "hints": [
+        "let msg is scoped to catch block",
+        "msg not accessible outside"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-43",
+      "title": "Arrow vs regular function this",
+      "starterCode": "const obj = {\n  name: \"test\",\n  regular: function() { return this.name },\n  arrow: () => this.name\n}\nreturn [obj.regular(), obj.arrow()]\n",
+      "solution": "const obj = {\n  name: \"test\",\n  regular: function() { return this.name },\n  arrow: () => this.name\n}\nreturn [obj.regular(), obj.arrow()]",
+      "tests": [
+        {
+          "input": [],
+          "expected": [
+            "test",
+            null
+          ]
+        }
+      ],
+      "hints": [
+        "Regular function mein this calling context hota hai",
+        "Arrow function global this use karta hai"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-44",
+      "title": "const with forEach",
+      "starterCode": "const arr = [1, 2, 3]\nconst doubled = []\narr.forEach(x => doubled.push(x * 2))\nreturn doubled\n",
+      "solution": "const arr = [1, 2, 3]\nconst doubled = []\narr.forEach(x => doubled.push(x * 2))\nreturn doubled",
+      "tests": [
+        {
+          "input": [],
+          "expected": [
+            2,
+            4,
+            6
+          ]
+        }
+      ],
+      "hints": [
+        "const array mein push kar sakte ho",
+        "forEach callback har element ke liye chalta hai"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-45",
+      "title": "Variable in for-in loop",
+      "starterCode": "const obj = {a: 1, b: 2, c: 3}\nconst keys = []\nfor (let key in obj) {\n  keys.push(key)\n}\nreturn keys\n",
+      "solution": "const obj = {a: 1, b: 2, c: 3}\nconst keys = []\nfor (let key in obj) {\n  keys.push(key)\n}\nreturn keys",
+      "tests": [
+        {
+          "input": [],
+          "expected": [
+            "a",
+            "b",
+            "c"
+          ]
+        }
+      ],
+      "hints": [
+        "for-in iterates over object keys",
+        "let key gets each key one by one"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-46",
+      "title": "Scope with default params",
+      "starterCode": "const x = 10\nfunction test(x = x + 1) {\n  return x\n}\ntry {\n  return test()\n} catch(e) {\n  return \"TDZ error\"\n}\n",
+      "solution": "const x = 10\nfunction test(x = x + 1) {\n  return x\n}\ntry {\n  return test()\n} catch(e) {\n  return \"TDZ error\"\n}",
+      "tests": [
+        {
+          "input": [],
+          "expected": "TDZ error"
+        }
+      ],
+      "hints": [
+        "Default param x is in TDZ when evaluated",
+        "x = x + 1 tries to access x before it's initialized"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-47",
+      "title": "Destructuring with scope",
+      "starterCode": "const arr = [1, 2, 3]\nconst [a, , c] = arr\nreturn { a, c }\n",
+      "solution": "const arr = [1, 2, 3]\nconst [a, , c] = arr\nreturn { a, c }",
+      "tests": [
+        {
+          "input": [],
+          "expected": {
+            "a": 1,
+            "c": 3
+          }
+        }
+      ],
+      "hints": [
+        "Destructuring skips the second element",
+        "a gets 1, c gets 3"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-48",
+      "title": "Computed property names",
+      "starterCode": "const key = \"name\"\nconst obj = { [key]: \"test\" }\nreturn obj.name\n",
+      "solution": "const key = \"name\"\nconst obj = { [key]: \"test\" }\nreturn obj.name",
+      "tests": [
+        {
+          "input": [],
+          "expected": "test"
+        }
+      ],
+      "hints": [
+        "[key] in object literal computes the property name",
+        "key = \"name\" so obj.name = \"test\""
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-49",
+      "title": "Optional chaining scope",
+      "starterCode": "const user = { address: { city: \"NY\" } }\nreturn user?.address?.zip\n",
+      "solution": "const user = { address: { city: \"NY\" } }\nreturn user?.address?.zip",
+      "tests": [
+        {
+          "input": []
+        }
+      ],
+      "hints": [
+        "?. returns undefined instead of throwing error",
+        "user.address.zip would throw, ?. handles it gracefully"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-var-let-const-50",
+      "title": "Nullish coalescing",
+      "starterCode": "const a = null\nconst b = undefined\nconst c = 0\nconst d = \"\"\nreturn [a ?? \"default\", b ?? \"default\", c ?? \"default\", d ?? \"default\"]\n",
+      "solution": "const a = null\nconst b = undefined\nconst c = 0\nconst d = \"\"\nreturn [a ?? \"default\", b ?? \"default\", c ?? \"default\", d ?? \"default\"]",
+      "tests": [
+        {
+          "input": [],
+          "expected": [
+            "default",
+            "default",
+            0,
+            ""
+          ]
+        }
+      ],
+      "hints": [
+        "?? only checks null/undefined, not falsy values",
+        "0 and \"\" are not null/undefined so they pass through"
       ]
     }
   ],
   "01-variables-declarations-01-variables-intro": [
     {
       "id": "01-variables-declarations-variables-intro-01",
-      "title": "Declare and log a variable",
-      "starterCode": "const x = 10\nconsole.log(x)",
-      "solution": "const x = 10\nconsole.log(x)",
+      "title": "Apna profile banao",
+      "starterCode": "// const se name aur city declare karo\n// let se age declare karo\n// Teeno ko return karo as object: { name, city, age }\n",
+      "solution": "const name = \"Hariom\"\nconst city = \"Jaipur\"\nlet age = 25\nreturn { name, city, age }",
       "tests": [
         {
           "input": [],
-          "expected": "10"
+          "expected": {
+            "name": "Hariom",
+            "city": "Jaipur",
+            "age": 25
+          }
         }
       ],
       "hints": [
-        "Use const for constants"
+        "const se constant value, let se reassignable variable banata hai",
+        "return { name, city, age } likho"
       ]
     },
     {
       "id": "01-variables-declarations-variables-intro-02",
-      "title": "Template literal interpolation",
-      "starterCode": "const name = \"JS\"\nconsole.log(`Language: ${name}`)",
-      "solution": "const name = \"JS\"\nconsole.log(`Language: ${name}`)",
+      "title": "Temperature converter",
+      "starterCode": "// Celsius variable banao = 37\n// Usko Fahrenheit mein convert karo (C * 9/5 + 32)\n// Return karo Fahrenheit value\nconst celsius = 37\n",
+      "solution": "const celsius = 37\nconst fahrenheit = celsius * 9/5 + 32\nreturn fahrenheit",
       "tests": [
         {
           "input": [],
-          "expected": "Language: JS"
+          "expected": 98.6
         }
       ],
       "hints": [
-        "Use backticks and ${}"
+        "Formula: C * 9/5 + 32",
+        "Ek aur variable banao result store karne ke liye"
       ]
     },
     {
       "id": "01-variables-declarations-variables-intro-03",
-      "title": "Swap two variables",
-      "starterCode": "let a = 1, b = 2\n// swap a and b\nconsole.log(a, b)",
-      "solution": "let a = 1, b = 2\n[a, b] = [b, a]\nconsole.log(a, b)",
+      "title": "Swap variables bina temp ke",
+      "starterCode": "let a = 10\nlet b = 20\n// a aur b ki values swap karo (bina third variable ke)\n// Hint: array destructuring use karo\n",
+      "solution": "let a = 10\nlet b = 20\n[a, b] = [b, a]\nreturn { a, b }",
       "tests": [
         {
           "input": [],
-          "expected": "2 1"
+          "expected": {
+            "a": 20,
+            "b": 10
+          }
         }
       ],
       "hints": [
-        "Use destructuring"
+        "[a, b] = [b, a] se swap hota hai",
+        "Array destructuring ka trick hai ye"
       ]
     },
     {
       "id": "01-variables-declarations-variables-intro-04",
-      "title": "typeof check",
-      "starterCode": "const val = 42\nconsole.log(typeof val)",
-      "solution": "const val = 42\nconsole.log(typeof val)",
+      "title": "BMI calculator",
+      "starterCode": "const weight = 70  // kg\nconst height = 1.75  // meters\n// BMI = weight / (height * height)\n// Return karo BMI (2 decimal places)\n",
+      "solution": "const weight = 70\nconst height = 1.75\nconst bmi = weight / (height * height)\nreturn Math.round(bmi * 100) / 100",
       "tests": [
         {
           "input": [],
-          "expected": "number"
+          "expected": 22.86
         }
       ],
       "hints": [
-        "typeof returns a string"
+        "weight / (height ** 2) se BMI aata hai",
+        "Math.round(bmi * 100) / 100 se 2 decimal milenge"
       ]
     },
     {
       "id": "01-variables-declarations-variables-intro-05",
-      "title": "Multiple declaration",
-      "starterCode": "let x = 1, y = 2, z = 3\nconsole.log(x + y + z)",
-      "solution": "let x = 1, y = 2, z = 3\nconsole.log(x + y + z)",
+      "title": "String to number conversion",
+      "starterCode": "const price = \"199\"\nconst quantity = \"3\"\n// Dono ko number mein convert karo aur total calculate karo\n",
+      "solution": "const price = \"199\"\nconst quantity = \"3\"\nreturn Number(price) * Number(quantity)",
       "tests": [
         {
           "input": [],
-          "expected": "6"
+          "expected": 597
         }
       ],
       "hints": [
-        "Use comma-separated declarations"
+        "Number() se string convert hoti hai",
+        "parseInt() bhi use kar sakte ho"
       ]
     },
     {
       "id": "01-variables-declarations-variables-intro-06",
-      "title": "Reassign let variable",
-      "starterCode": "let count = 0\ncount = count + 5\nconsole.log(count)",
-      "solution": "let count = 0\ncount = count + 5\nconsole.log(count)",
+      "title": "Template literal se sentence banao",
+      "starterCode": "const name = \"Rahul\"\nconst score = 95\nconst total = 100\n// Template literal se return karo: \"Rahul scored 95 out of 100\"\n",
+      "solution": "const name = \"Rahul\"\nconst score = 95\nconst total = 100\nreturn `${name} scored ${score} out of ${total}`",
       "tests": [
         {
           "input": [],
-          "expected": "5"
+          "expected": "Rahul scored 95 out of 100"
         }
       ],
       "hints": [
-        "let allows reassignment"
+        "Backtick ` use karo string ke liye",
+        "${variable} se value inject hoti hai"
       ]
     },
     {
       "id": "01-variables-declarations-variables-intro-07",
-      "title": "String to number conversion",
-      "starterCode": "const str = \"42\"\nconsole.log(Number(str) + 8)",
-      "solution": "const str = \"42\"\nconsole.log(Number(str) + 8)",
+      "title": "Boolean logic — rain check",
+      "starterCode": "const isRaining = false\nconst hasUmbrella = true\n// Agar barish ho rahi hai aur umbrella hai to \"Go\" return karo\n// Varna \"Stay\" return karo\n",
+      "solution": "const isRaining = false\nconst hasUmbrella = true\nreturn isRaining && hasUmbrella ? \"Go\" : \"Stay\"",
       "tests": [
         {
           "input": [],
-          "expected": "50"
+          "expected": "Stay"
         }
       ],
       "hints": [
-        "Use Number() to convert"
+        "&& means AND — dono true hone chahiye",
+        "Ternary operator: condition ? true : false"
       ]
     },
     {
       "id": "01-variables-declarations-variables-intro-08",
-      "title": "Boolean negation",
-      "starterCode": "const isRaining = false\nconsole.log(!isRaining)",
-      "solution": "const isRaining = false\nconsole.log(!isRaining)",
+      "title": "Discount calculator",
+      "starterCode": "const originalPrice = 1000\nconst discountPercent = 20\n// Final price calculate karo aur return karo\n",
+      "solution": "const originalPrice = 1000\nconst discountPercent = 20\nconst finalPrice = originalPrice - (originalPrice * discountPercent / 100)\nreturn finalPrice",
       "tests": [
         {
           "input": [],
-          "expected": "true"
+          "expected": 800
         }
       ],
       "hints": [
-        "! inverts boolean"
+        "Discount = price * percent / 100",
+        "Final = original - discount"
       ]
     },
     {
       "id": "01-variables-declarations-variables-intro-09",
-      "title": "Undefined vs null",
-      "starterCode": "let a\nconst b = null\nconsole.log(a, b)",
-      "solution": "let a\nconst b = null\nconsole.log(a, b)",
+      "title": "Type checking function",
+      "starterCode": "// Function banao jo value ka type return kare\n// Agar array ho to \"array\" return karo\n// Agar null ho to \"null\" return karo\n// Baki sab ke liye typeof return karo\nfunction checkType(val) {\n  // TODO\n}\n",
+      "solution": "function checkType(val) {\n  if (val === null) return \"null\"\n  if (Array.isArray(val)) return \"array\"\n  return typeof val\n}",
       "tests": [
         {
-          "input": [],
-          "expected": "undefined null"
+          "input": [
+            42
+          ],
+          "expected": "number"
+        },
+        {
+          "input": [
+            "hello"
+          ],
+          "expected": "string"
+        },
+        {
+          "input": [
+            []
+          ],
+          "expected": "array"
+        },
+        {
+          "input": [
+            null
+          ],
+          "expected": "null"
         }
       ],
       "hints": [
-        "Uninitialized let is undefined"
+        "Array.isArray() se array check hota hai",
+        "null === null true deta hai, typeof null \"object\" deta hai"
       ]
     },
     {
       "id": "01-variables-declarations-variables-intro-10",
-      "title": "Exponentiation operator",
-      "starterCode": "console.log(2 ** 10)",
-      "solution": "console.log(2 ** 10)",
+      "title": "Increment counter",
+      "starterCode": "let count = 0\n// count ko 5 baar increment karo\n// Har increment ke baad augmented assignment use karo\n// Final count return karo\n",
+      "solution": "let count = 0\ncount += 1\ncount += 1\ncount += 1\ncount += 1\ncount += 1\nreturn count",
       "tests": [
         {
           "input": [],
-          "expected": "1024"
+          "expected": 5
         }
       ],
       "hints": [
-        "** is power operator"
+        "count++ ya count += 1 se badhata hai",
+        "5 baar karo"
       ]
     },
     {
       "id": "01-variables-declarations-variables-intro-11",
-      "title": "Augmented assignment",
-      "starterCode": "let x = 10\nx += 5\nx -= 3\nconsole.log(x)",
-      "solution": "let x = 10\nx += 5\nx -= 3\nconsole.log(x)",
+      "title": "const se object banao aur modify karo",
+      "starterCode": "const user = { name: \"Amit\", age: 25 }\n// Object ke andar age update karo 26 karke\n// Return the updated user\n",
+      "solution": "const user = { name: \"Amit\", age: 25 }\nuser.age = 26\nreturn user",
       "tests": [
         {
           "input": [],
-          "expected": "12"
+          "expected": {
+            "name": "Amit",
+            "age": 26
+          }
         }
       ],
       "hints": [
-        "+= adds, -= subtracts"
+        "const se reassign nahi hota, but object ke properties change ho sakti hain",
+        "user.age = 26 karo"
       ]
     },
     {
       "id": "01-variables-declarations-variables-intro-12",
-      "title": "Object shorthand property",
-      "starterCode": "const name = \"Alice\"\nconst obj = { name }\nconsole.log(obj.name)",
-      "solution": "const name = \"Alice\"\nconst obj = { name }\nconsole.log(obj.name)",
+      "title": "const array push karo",
+      "starterCode": "const fruits = [\"apple\", \"banana\"]\n// \"mango\" push karo aur array return karo\n",
+      "solution": "const fruits = [\"apple\", \"banana\"]\nfruits.push(\"mango\")\nreturn fruits",
       "tests": [
         {
           "input": [],
-          "expected": "Alice"
+          "expected": [
+            "apple",
+            "banana",
+            "mango"
+          ]
         }
       ],
       "hints": [
-        "{ name } is shorthand for { name: name }"
+        "push() se end mein add hota hai",
+        "const array mein push kar sakte ho, reassign nahi"
       ]
     },
     {
       "id": "01-variables-declarations-variables-intro-13",
-      "title": "Array destructuring",
-      "starterCode": "const [a, b, c] = [10, 20, 30]\nconsole.log(a, c)",
-      "solution": "const [a, b, c] = [10, 20, 30]\nconsole.log(a, c)",
+      "title": "const reassign karne ki koshish",
+      "starterCode": "const x = 10\n// Neeche x ko 20 assign karne ki koshish karo\n// Wrap try-catch mein aur \"Cannot reassign\" return karo error mein\ntry {\n  x = 20\n} catch(e) {\n  // TODO\n}\n",
+      "solution": "const x = 10\ntry {\n  x = 20\n} catch(e) {\n  return \"Cannot reassign\"\n}",
       "tests": [
         {
           "input": [],
-          "expected": "10 30"
+          "expected": "Cannot reassign"
         }
       ],
       "hints": [
-        "Destructure by position"
+        "const variables reassign nahi ho sakti",
+        "catch block mein return karo error message"
       ]
     },
     {
       "id": "01-variables-declarations-variables-intro-14",
-      "title": "const object mutation",
-      "starterCode": "const obj = { x: 1 }\nobj.x = 99\nconsole.log(obj.x)",
-      "solution": "const obj = { x: 1 }\nobj.x = 99\nconsole.log(obj.x)",
+      "title": "Nested object mutate karo",
+      "starterCode": "const config = { db: { host: \"localhost\", port: 3306 } }\n// Port ko 5432 karke config return karo\n",
+      "solution": "const config = { db: { host: \"localhost\", port: 3306 } }\nconfig.db.port = 5432\nreturn config",
       "tests": [
         {
           "input": [],
-          "expected": "99"
+          "expected": {
+            "db": {
+              "host": "localhost",
+              "port": 5432
+            }
+          }
         }
       ],
       "hints": [
-        "const prevents reassignment, not mutation"
+        "config.db.port = 5432 likho",
+        "Nested property access dot notation se hota hai"
       ]
     },
     {
       "id": "01-variables-declarations-variables-intro-15",
-      "title": "Block scope shadowing",
-      "starterCode": "let x = \"outer\"\nif (true) {\n  let x = \"inner\"\n  console.log(x)\n}\nconsole.log(x)",
-      "solution": "let x = \"outer\"\nif (true) {\n  let x = \"inner\"\n  console.log(x)\n}\nconsole.log(x)",
+      "title": "Spread operator se copy",
+      "starterCode": "const original = { x: 1, y: 2, z: 3 }\n// Shallow copy banao spread operator se\n// Copy mein a = 10 add karo\n// Original aur return karo (original unchanged hona chahiye)\n",
+      "solution": "const original = { x: 1, y: 2, z: 3 }\nconst copy = { ...original, a: 10 }\nreturn copy",
       "tests": [
         {
           "input": [],
-          "expected": "inner\nouter"
+          "expected": {
+            "x": 1,
+            "y": 2,
+            "z": 3,
+            "a": 10
+          }
         }
       ],
       "hints": [
-        "let is block-scoped"
+        "...original se saari properties copy hoti hain",
+        "Naya object spread se banao"
       ]
     },
     {
       "id": "01-variables-declarations-variables-intro-16",
-      "title": "Falsy value check",
-      "starterCode": "console.log(Boolean(0))\nconsole.log(Boolean(\"\"))\nconsole.log(Boolean(null))",
-      "solution": "console.log(Boolean(0))\nconsole.log(Boolean(\"\"))\nconsole.log(Boolean(null))",
+      "title": "var block scope leak fix karo",
+      "starterCode": "// Bug: var a block ke bahar leak ho raha hai\n// Fix karo — a aur b dono sirf block mein accessible hona chahiye\nif (true) {\n  var a = 1\n  let b = 2\n}\nconsole.log(a, typeof b)\nreturn a\n",
+      "solution": "if (true) {\n  let a = 1\n  let b = 2\n}\nreturn typeof a === \"undefined\" ? \"fixed\" : \"not fixed\"",
       "tests": [
         {
           "input": [],
-          "expected": "false\nfalse\nfalse"
+          "expected": "fixed"
         }
       ],
       "hints": [
-        "0, '', null are falsy"
+        "var → let se block scope milta hai",
+        "let block ke bahar accessible nahi hota"
       ]
     },
     {
       "id": "01-variables-declarations-variables-intro-17",
-      "title": "Infinity and NaN",
-      "starterCode": "console.log(typeof Infinity)\nconsole.log(typeof NaN)",
-      "solution": "console.log(typeof Infinity)\nconsole.log(typeof NaN)",
+      "title": "Loop closure fix — var vs let",
+      "starterCode": "// Bug: Har function 3 print karega, 0/1/2 nahi\n// Fix karo using let\nvar funcs = []\nfor (var i = 0; i < 3; i++) {\n  funcs.push(function() { return i })\n}\nreturn [funcs[0](), funcs[1](), funcs[2]()]\n",
+      "solution": "let funcs = []\nfor (let i = 0; i < 3; i++) {\n  funcs.push(function() { return i })\n}\nreturn [funcs[0](), funcs[1](), funcs[2]()]",
       "tests": [
         {
           "input": [],
-          "expected": "number\nnumber"
+          "expected": [
+            0,
+            1,
+            2
+          ]
         }
       ],
       "hints": [
-        "Both are typeof 'number'"
+        "var se i function scope mein share hota hai",
+        "let se har iteration ka apna i hota hai"
       ]
     },
     {
       "id": "01-variables-declarations-variables-intro-18",
-      "title": "const array push",
-      "starterCode": "const arr = [1, 2]\narr.push(3)\nconsole.log(arr)",
-      "solution": "const arr = [1, 2]\narr.push(3)\nconsole.log(arr)",
+      "title": "Redeclaration error fix karo",
+      "starterCode": "// Bug: do var declarations error nahi deti — ye galat hai\n// Fix karo using let (error aana chahiye)\ntry {\n  let x = 1\n  let x = 2\n  return \"no error\"\n} catch(e) {\n  return \"error caught\"\n}\n",
+      "solution": "try {\n  let x = 1\n  let x = 2\n  return \"no error\"\n} catch(e) {\n  return \"error caught\"\n}",
       "tests": [
         {
           "input": [],
-          "expected": "[1,2,3]"
+          "expected": "error caught"
         }
       ],
       "hints": [
-        "const allows mutation"
+        "let se same scope mein dobara declare nahi kar sakte",
+        "var se redeclaration allowed hai, let/const se nahi"
       ]
     },
     {
       "id": "01-variables-declarations-variables-intro-19",
-      "title": "Number parseFloat",
-      "starterCode": "console.log(parseFloat(\"3.14abc\"))\nconsole.log(parseInt(\"42rest\"))",
-      "solution": "console.log(parseFloat(\"3.14abc\"))\nconsole.log(parseInt(\"42rest\"))",
+      "title": "Shadowing — kaunsa x access hoga?",
+      "starterCode": "const x = 1\nfunction test() {\n  const x = 2\n  return x\n}\n// Function ke andar ka x return karo\nreturn test()\n",
+      "solution": "const x = 1\nfunction test() {\n  const x = 2\n  return x\n}\nreturn test()",
       "tests": [
         {
           "input": [],
-          "expected": "3.14\n42"
+          "expected": 2
         }
       ],
       "hints": [
-        "parseFloat reads until non-number"
+        "Inner scope wala x dikhta hai (shadowing)",
+        "Function ke andar ka x 2 hai"
       ]
     },
     {
       "id": "01-variables-declarations-variables-intro-20",
-      "title": "Symbol uniqueness",
-      "starterCode": "const s1 = Symbol(\"id\")\nconst s2 = Symbol(\"id\")\nconsole.log(s1 === s2)",
-      "solution": "const s1 = Symbol(\"id\")\nconst s2 = Symbol(\"id\")\nconsole.log(s1 === s2)",
+      "title": "Hoisting predict karo",
+      "starterCode": "// Pehle code socho, phir predict karo:\nconsole.log(a)\nvar a = 5\nconsole.log(a)\nreturn a\n",
+      "solution": "console.log(a)\nvar a = 5\nconsole.log(a)\nreturn a",
       "tests": [
         {
           "input": [],
-          "expected": "false"
+          "expected": 5
         }
       ],
       "hints": [
-        "Every Symbol is unique"
+        "var declaration hoisted hota hai, assignment nahi",
+        "Pehle undefined, phir 5"
       ]
     },
     {
       "id": "01-variables-declarations-variables-intro-21",
-      "title": "BigInt operations",
-      "starterCode": "console.log(BigInt(9007199254740991) + 1n)",
-      "solution": "console.log(BigInt(9007199254740991) + 1n)",
+      "title": "Cart total calculate karo",
+      "starterCode": "const items = [\n  { name: \"Phone\", price: 29999, qty: 1 },\n  { name: \"Case\", price: 499, qty: 2 }\n]\n// Total price calculate karo (price * qty) ka sum\n// Return total\n",
+      "solution": "const items = [\n  { name: \"Phone\", price: 29999, qty: 1 },\n  { name: \"Case\", price: 499, qty: 2 }\n]\nconst total = items.reduce((sum, item) => sum + item.price * item.qty, 0)\nreturn total",
       "tests": [
         {
           "input": [],
-          "expected": "9007199254740992"
+          "expected": 30997
         }
       ],
       "hints": [
-        "Use n suffix for BigInt literals"
+        "reduce() se sum nikalte hain",
+        "Har item ka price * qty jodna hai"
       ]
     },
     {
       "id": "01-variables-declarations-variables-intro-22",
-      "title": "void operator",
-      "starterCode": "console.log(void 0)",
-      "solution": "console.log(void 0)",
+      "title": "Age validator function",
+      "starterCode": "// Function banao jo age check kare\n// 18 se kam = \"Minor\"\n// 18-60 = \"Adult\"\n// 60+ = \"Senior\"\nfunction getAgeCategory(age) {\n  // TODO\n}\n",
+      "solution": "function getAgeCategory(age) {\n  if (age < 18) return \"Minor\"\n  if (age <= 60) return \"Adult\"\n  return \"Senior\"\n}",
       "tests": [
         {
-          "input": [],
-          "expected": "undefined"
+          "input": [
+            15
+          ],
+          "expected": "Minor"
+        },
+        {
+          "input": [
+            25
+          ],
+          "expected": "Adult"
+        },
+        {
+          "input": [
+            65
+          ],
+          "expected": "Senior"
         }
       ],
       "hints": [
-        "void evaluates and returns undefined"
+        "if-else if chain use karo",
+        "Pehle kam se zyada check karo"
       ]
     },
     {
       "id": "01-variables-declarations-variables-intro-23",
-      "title": "Comma operator",
-      "starterCode": "const x = (1, 2, 3)\nconsole.log(x)",
-      "solution": "const x = (1, 2, 3)\nconsole.log(x)",
+      "title": "Fibonacci nth term",
+      "starterCode": "// Function banao jo nth Fibonacci number return kare\n// fib(0) = 0, fib(1) = 1, fib(n) = fib(n-1) + fib(n-2)\nfunction fib(n) {\n  // TODO\n}\n",
+      "solution": "function fib(n) {\n  if (n <= 0) return 0\n  if (n === 1) return 1\n  let a = 0, b = 1\n  for (let i = 2; i <= n; i++) {\n    [a, b] = [b, a + b]\n  }\n  return b\n}",
       "tests": [
         {
-          "input": [],
-          "expected": "3"
+          "input": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "input": [
+            1
+          ],
+          "expected": 1
+        },
+        {
+          "input": [
+            6
+          ],
+          "expected": 8
+        },
+        {
+          "input": [
+            10
+          ],
+          "expected": 55
         }
       ],
       "hints": [
-        "Comma returns last value"
+        "Base case: fib(0)=0, fib(1)=1",
+        "Loop se iterative solve karo recursion se fast hoga"
       ]
     },
     {
       "id": "01-variables-declarations-variables-intro-24",
-      "title": "Spread string to array",
-      "starterCode": "const arr = [...\"hello\"]\nconsole.log(arr.length)",
-      "solution": "const arr = [...\"hello\"]\nconsole.log(arr.length)",
+      "title": "Palindrome checker",
+      "starterCode": "// Function banao jo check kare string palindrome hai ya nahi\n// Ignore case aur non-alphanumeric characters\nfunction isPalindrome(str) {\n  // TODO\n}\n",
+      "solution": "function isPalindrome(str) {\n  const cleaned = str.toLowerCase().replace(/[^a-z0-9]/g, \"\")\n  return cleaned === cleaned.split(\"\").reverse().join(\"\")\n}",
       "tests": [
         {
-          "input": [],
-          "expected": "5"
+          "input": [
+            "racecar"
+          ],
+          "expected": true
+        },
+        {
+          "input": [
+            "A man a plan a canal Panama"
+          ],
+          "expected": true
+        },
+        {
+          "input": [
+            "hello"
+          ],
+          "expected": false
         }
       ],
       "hints": [
-        "Spread unpacks string into chars"
+        "Pehle string clean karo — lowercase + special chars hatao",
+        "Reverse karke compare karo"
       ]
     },
     {
       "id": "01-variables-declarations-variables-intro-25",
-      "title": "Rest parameters sum",
-      "starterCode": "function sum(...nums) {\n  return nums.reduce((a, b) => a + b, 0)\n}\nconsole.log(sum(1, 2, 3, 4))",
-      "solution": "function sum(...nums) {\n  return nums.reduce((a, b) => a + b, 0)\n}\nconsole.log(sum(1, 2, 3, 4))",
+      "title": "Even or Odd without modulo",
+      "starterCode": "// Function banao jo check kare number even hai ya odd\n// Bitwise AND operator use karo (modulo nahi chalega)\nfunction evenOrOdd(n) {\n  // TODO\n}\n",
+      "solution": "function evenOrOdd(n) {\n  return (n & 1) === 0 ? \"even\" : \"odd\"\n}",
       "tests": [
         {
-          "input": [],
-          "expected": "10"
+          "input": [
+            4
+          ],
+          "expected": "even"
+        },
+        {
+          "input": [
+            7
+          ],
+          "expected": "odd"
+        },
+        {
+          "input": [
+            0
+          ],
+          "expected": "even"
         }
       ],
       "hints": [
-        "... collects args into array"
+        "n & 1 — agar last bit 0 hai to even",
+        "Bitwise AND se LSB check hota hai"
       ]
     },
     {
       "id": "01-variables-declarations-variables-intro-26",
-      "title": "Destructuring with default",
-      "starterCode": "const { x = 10, y = 20 } = { x: 5 }\nconsole.log(x, y)",
-      "solution": "const { x = 10, y = 20 } = { x: 5 }\nconsole.log(x, y)",
+      "title": "Deep clone object",
+      "starterCode": "// Function banao jo deeply clone kare object\n// structuredClone ya manual method use karo\nfunction deepClone(obj) {\n  // TODO\n}\n",
+      "solution": "function deepClone(obj) {\n  return structuredClone(obj)\n}",
       "tests": [
         {
-          "input": [],
-          "expected": "5 20"
+          "input": [
+            {
+              "a": 1,
+              "b": {
+                "c": 2
+              }
+            }
+          ],
+          "expected": {
+            "a": 1,
+            "b": {
+              "c": 2
+            }
+          }
         }
       ],
       "hints": [
-        "Defaults used when property missing"
+        "structuredClone() modern method hai deep copy ke liye",
+        "JSON.parse(JSON.stringify()) bhi kaam karega"
       ]
     },
     {
       "id": "01-variables-declarations-variables-intro-27",
-      "title": "Optional chaining",
-      "starterCode": "const user = { addr: { city: \"NY\" } }\nconsole.log(user?.addr?.city)\nconsole.log(user?.addr?.zip)",
-      "solution": "const user = { addr: { city: \"NY\" } }\nconsole.log(user?.addr?.city)\nconsole.log(user?.addr?.zip)",
+      "title": "Unique array elements",
+      "starterCode": "// Function banao jo array ke unique elements return kare\nfunction unique(arr) {\n  // TODO\n}\n",
+      "solution": "function unique(arr) {\n  return [...new Set(arr)]\n}",
       "tests": [
         {
-          "input": [],
-          "expected": "NY\nundefined"
+          "input": [
+            [
+              1,
+              2,
+              2,
+              3,
+              3,
+              3
+            ]
+          ],
+          "expected": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "input": [
+            [
+              "a",
+              "b",
+              "a"
+            ]
+          ],
+          "expected": [
+            "a",
+            "b"
+          ]
         }
       ],
       "hints": [
-        "?. returns undefined if null/undefined"
+        "Set data structure unique values rakhta hai",
+        "Spread operator se array mein convert karo"
       ]
     },
     {
       "id": "01-variables-declarations-variables-intro-28",
-      "title": "Nullish coalescing",
-      "starterCode": "const val = null ?? \"default\"\nconsole.log(val)",
-      "solution": "const val = null ?? \"default\"\nconsole.log(val)",
+      "title": "Flatten nested array",
+      "starterCode": "// Function banao jo 1 level deep array flatten kare\n// flatten([1, [2, 3], [4, 5]]) = [1, 2, 3, 4, 5]\nfunction flatten(arr) {\n  // TODO\n}\n",
+      "solution": "function flatten(arr) {\n  return arr.flat()\n}",
       "tests": [
         {
-          "input": [],
-          "expected": "default"
+          "input": [
+            [
+              1,
+              [
+                2,
+                3
+              ],
+              [
+                4,
+                5
+              ]
+            ]
+          ],
+          "expected": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "input": [
+            [
+              "a",
+              [
+                "b",
+                "c"
+              ]
+            ]
+          ],
+          "expected": [
+            "a",
+            "b",
+            "c"
+          ]
         }
       ],
       "hints": [
-        "?? only treats null/undefined as falsy"
+        "flat() method 1 level deep flatten karta hai",
+        "flat(Infinity) se deeply flatten hota hai"
       ]
     },
     {
       "id": "01-variables-declarations-variables-intro-29",
-      "title": "Computed property name",
-      "starterCode": "const key = \"age\"\nconst obj = { [key]: 25 }\nconsole.log(obj.age)",
-      "solution": "const key = \"age\"\nconst obj = { [key]: 25 }\nconsole.log(obj.age)",
+      "title": "Group by property",
+      "starterCode": "// Function banao jo array ko property se group kare\n// groupBy([{type:\"fruit\",name:\"apple\"}, {type:\"veggie\",name:\"carrot\"}, {type:\"fruit\",name:\"banana\"}], \"type\")\n// = { fruit: [{...}, {...}], veggie: [{...}] }\nfunction groupBy(arr, key) {\n  // TODO\n}\n",
+      "solution": "function groupBy(arr, key) {\n  return arr.reduce((groups, item) => {\n    const val = item[key]\n    groups[val] = groups[val] || []\n    groups[val].push(item)\n    return groups\n  }, {})\n}",
       "tests": [
         {
-          "input": [],
-          "expected": "25"
+          "input": [
+            [
+              {
+                "type": "fruit",
+                "name": "apple"
+              },
+              {
+                "type": "veggie",
+                "name": "carrot"
+              },
+              {
+                "type": "fruit",
+                "name": "banana"
+              }
+            ],
+            "type"
+          ],
+          "expected": {
+            "fruit": [
+              {
+                "type": "fruit",
+                "name": "apple"
+              },
+              {
+                "type": "fruit",
+                "name": "banana"
+              }
+            ],
+            "veggie": [
+              {
+                "type": "veggie",
+                "name": "carrot"
+              }
+            ]
+          }
         }
       ],
       "hints": [
-        "[] computes the key"
+        "reduce se object build karo",
+        "Har group ka array initialize karo"
       ]
     },
     {
       "id": "01-variables-declarations-variables-intro-30",
-      "title": "Object.fromEntries",
-      "starterCode": "const obj = Object.fromEntries([[\"a\",1],[\"b\",2]])\nconsole.log(obj)",
-      "solution": "const obj = Object.fromEntries([[\"a\",1],[\"b\",2]])\nconsole.log(obj)",
+      "title": "Debounce function banao",
+      "starterCode": "// Debounce function banao jo delay ms tak wait kare\n// Agar dobara call ho to pehla call cancel ho\nfunction debounce(fn, delay) {\n  // TODO\n}",
+      "solution": "function debounce(fn, delay) {\n  let timer\n  return function(...args) {\n    clearTimeout(timer)\n    timer = setTimeout(() => fn(...args), delay)\n  }\n}",
       "tests": [
         {
-          "input": [],
-          "expected": "{\"a\":1,\"b\":2}"
+          "input": []
         }
       ],
       "hints": [
-        "fromEntries converts [key,value] pairs"
+        "setTimeout use karo",
+        "Purana timer clearTimeout se cancel karo"
       ]
     },
     {
       "id": "01-variables-declarations-variables-intro-31",
-      "title": "Structured clone deep copy",
-      "starterCode": "const original = { a: { b: 1 } }\nconst copy = structuredClone(original)\ncopy.a.b = 99\nconsole.log(original.a.b)",
-      "solution": "const original = { a: { b: 1 } }\nconst copy = structuredClone(original)\ncopy.a.b = 99\nconsole.log(original.a.b)",
+      "title": "Array intersection",
+      "starterCode": "// Do arrays ka intersection nikalo (common elements)\nfunction intersect(a, b) {\n  // TODO\n}\n",
+      "solution": "function intersect(a, b) {\n  return a.filter(x => b.includes(x))\n}",
       "tests": [
         {
-          "input": [],
-          "expected": "1"
+          "input": [
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              3,
+              4,
+              5,
+              6
+            ]
+          ],
+          "expected": [
+            3,
+            4
+          ]
+        },
+        {
+          "input": [
+            [
+              "a",
+              "b"
+            ],
+            [
+              "b",
+              "c"
+            ]
+          ],
+          "expected": [
+            "b"
+          ]
         }
       ],
       "hints": [
-        "structuredClone creates deep copy"
+        "filter + includes use karo",
+        "Jo elements dono mein ho wo rakhna hai"
       ]
     },
     {
       "id": "01-variables-declarations-variables-intro-32",
-      "title": "Array.at negative index",
-      "starterCode": "const arr = [10, 20, 30]\nconsole.log(arr.at(-1))",
-      "solution": "const arr = [10, 20, 30]\nconsole.log(arr.at(-1))",
+      "title": "Chunk array into groups",
+      "starterCode": "// Array ko size ke chunks mein divide karo\n// chunk([1,2,3,4,5], 2) = [[1,2],[3,4],[5]]\nfunction chunk(arr, size) {\n  // TODO\n}",
+      "solution": "function chunk(arr, size) {\n  const chunks = []\n  for (let i = 0; i < arr.length; i += size) {\n    chunks.push(arr.slice(i, i + size))\n  }\n  return chunks\n}",
       "tests": [
         {
-          "input": [],
-          "expected": "30"
+          "input": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            2
+          ],
+          "expected": [
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              5
+            ]
+          ]
+        },
+        {
+          "input": [
+            [
+              "a",
+              "b",
+              "c"
+            ],
+            1
+          ],
+          "expected": [
+            [
+              "a"
+            ],
+            [
+              "b"
+            ],
+            [
+              "c"
+            ]
+          ]
         }
       ],
       "hints": [
-        ".at(-1) returns last element"
+        "Loop mein i += size se jump hota hai",
+        "slice(i, i+size) se chunk milta hai"
       ]
     },
     {
       "id": "01-variables-declarations-variables-intro-33",
-      "title": "Object.groupBy",
-      "starterCode": "const people = [{name:\"A\",age:25},{name:\"B\",age:30}]\nconst g = Object.groupBy(people, p => p.age >= 30 ? \"senior\" : \"junior\")\nconsole.log(g.senior.length)",
-      "solution": "const people = [{name:\"A\",age:25},{name:\"B\",age:30}]\nconst g = Object.groupBy(people, p => p.age >= 30 ? \"senior\" : \"junior\")\nconsole.log(g.senior.length)",
+      "title": "Pick specific keys from object",
+      "starterCode": "// Function banao jo object se sirf given keys pick kare\n// pick({a:1, b:2, c:3}, [\"a\",\"c\"]) = {a:1, c:3}\nfunction pick(obj, keys) {\n  // TODO\n}",
+      "solution": "function pick(obj, keys) {\n  const result = {}\n  for (const key of keys) {\n    if (key in obj) result[key] = obj[key]\n  }\n  return result\n}",
       "tests": [
         {
-          "input": [],
-          "expected": "1"
+          "input": [
+            {
+              "a": 1,
+              "b": 2,
+              "c": 3
+            },
+            [
+              "a",
+              "c"
+            ]
+          ],
+          "expected": {
+            "a": 1,
+            "c": 3
+          }
         }
       ],
       "hints": [
-        "groupBy groups array by callback"
+        "for...of loop se keys iterate karo",
+        "Har key check karo ki object mein hai"
       ]
     },
     {
       "id": "01-variables-declarations-variables-intro-34",
-      "title": "Logical assignment",
-      "starterCode": "let a = 0\na ||= \"default\"\nconsole.log(a)",
-      "solution": "let a = 0\na ||= \"default\"\nconsole.log(a)",
+      "title": "Omit keys from object",
+      "starterCode": "// Function banao jo object se given keys hata de\n// omit({a:1, b:2, c:3}, [\"b\"]) = {a:1, c:3}\nfunction omit(obj, keys) {\n  // TODO\n}",
+      "solution": "function omit(obj, keys) {\n  return Object.fromEntries(\n    Object.entries(obj).filter(([k]) => !keys.includes(k))\n  )\n}",
       "tests": [
         {
-          "input": [],
-          "expected": "default"
+          "input": [
+            {
+              "a": 1,
+              "b": 2,
+              "c": 3
+            },
+            [
+              "b"
+            ]
+          ],
+          "expected": {
+            "a": 1,
+            "c": 3
+          }
         }
       ],
       "hints": [
-        "||= assigns if falsy"
+        "Object.entries() se entries nikalo",
+        "filter se unwanted keys hatao"
       ]
     },
     {
       "id": "01-variables-declarations-variables-intro-35",
-      "title": "Promise.allSettled",
-      "starterCode": "Promise.allSettled([Promise.resolve(\"ok\"), Promise.reject(\"err\")]).then(r => console.log(r.length))",
-      "solution": "Promise.allSettled([Promise.resolve(\"ok\"), Promise.reject(\"err\")]).then(r => console.log(r.length))",
+      "title": "Camel case converter",
+      "starterCode": "// String ko camel case mein convert karo\n// \"hello world\" = \"helloWorld\"\n// \"foo bar baz\" = \"fooBarBaz\"\nfunction camelCase(str) {\n  // TODO\n}",
+      "solution": "function camelCase(str) {\n  return str.toLowerCase().split(\" \").map((word, i) =>\n    i === 0 ? word : word[0].toUpperCase() + word.slice(1)\n  ).join(\"\")\n}",
       "tests": [
         {
-          "input": [],
-          "expected": "2"
+          "input": [
+            "hello world"
+          ],
+          "expected": "helloWorld"
+        },
+        {
+          "input": [
+            "foo bar baz"
+          ],
+          "expected": "fooBarBaz"
         }
       ],
       "hints": [
-        "allSettled never rejects"
+        "split se words alag karo",
+        "Pehla word lowercase, baaki ke first letter uppercase"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-variables-intro-36",
+      "title": "Truncate string with ellipsis",
+      "starterCode": "// String ko maxLength tak truncate karo, agar cut ho to \"...\" lagao\n// truncate(\"Hello World\", 5) = \"Hello...\"\nfunction truncate(str, max) {\n  // TODO\n}",
+      "solution": "function truncate(str, max) {\n  if (str.length <= max) return str\n  return str.slice(0, max) + \"...\"\n}",
+      "tests": [
+        {
+          "input": [
+            "Hello World",
+            5
+          ],
+          "expected": "Hello..."
+        },
+        {
+          "input": [
+            "Hi",
+            10
+          ],
+          "expected": "Hi"
+        }
+      ],
+      "hints": [
+        "str.length > max check karo",
+        "slice(0, max) se pehle max characters lo"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-variables-intro-37",
+      "title": "Count word frequency",
+      "starterCode": "// String mein har word ki frequency count karo\n// wordCount(\"hello hello world\") = {hello: 2, world: 1}\nfunction wordCount(str) {\n  // TODO\n}",
+      "solution": "function wordCount(str) {\n  return str.split(\" \").reduce((count, word) => {\n    count[word] = (count[word] || 0) + 1\n    return count\n  }, {})\n}",
+      "tests": [
+        {
+          "input": [
+            "hello hello world"
+          ],
+          "expected": {
+            "hello": 2,
+            "word": 1,
+            "world": 1
+          }
+        }
+      ],
+      "hints": [
+        "split se words alag karo",
+        "Reduce se object build karo"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-variables-intro-38",
+      "title": "Range generator",
+      "starterCode": "// Function jo start se end tak ka array banaye\n// range(1, 5) = [1, 2, 3, 4, 5]\nfunction range(start, end) {\n  // TODO\n}",
+      "solution": "function range(start, end) {\n  const result = []\n  for (let i = start; i <= end; i++) {\n    result.push(i)\n  }\n  return result\n}",
+      "tests": [
+        {
+          "input": [
+            1,
+            5
+          ],
+          "expected": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "input": [
+            3,
+            7
+          ],
+          "expected": [
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      ],
+      "hints": [
+        "for loop se start se end tak jao",
+        "Har i ko array mein push karo"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-variables-intro-39",
+      "title": "Object invert karo",
+      "starterCode": "// Keys aur values swap karo\n// invert({a:1, b:2}) = {1:\"a\", 2:\"b\"}\nfunction invert(obj) {\n  // TODO\n}",
+      "solution": "function invert(obj) {\n  return Object.fromEntries(\n    Object.entries(obj).map(([k, v]) => [v, k])\n  )\n}",
+      "tests": [
+        {
+          "input": [
+            {
+              "a": 1,
+              "b": 2
+            }
+          ],
+          "expected": {
+            "1": "a",
+            "2": "b"
+          }
+        }
+      ],
+      "hints": [
+        "Object.entries se pairs nikalo",
+        "Har pair reverse karo"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-variables-intro-40",
+      "title": "Compact array — remove falsy",
+      "starterCode": "// Array se saare falsy values hatao\n// compact([0, 1, false, 2, \"\", 3]) = [1, 2, 3]\nfunction compact(arr) {\n  // TODO\n}",
+      "solution": "function compact(arr) {\n  return arr.filter(Boolean)\n}",
+      "tests": [
+        {
+          "input": [
+            [
+              0,
+              1,
+              false,
+              2,
+              "",
+              3
+            ]
+          ],
+          "expected": [
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "hints": [
+        "filter(Boolean) se falsy values hat jati hain",
+        "0, false, null, undefined, \"\" sab falsy hain"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-variables-intro-41",
+      "title": "Memoize function banao",
+      "starterCode": "// Function ko memoize karo — same arguments pe cached result do\nfunction memoize(fn) {\n  // TODO\n}",
+      "solution": "function memoize(fn) {\n  const cache = {}\n  return function(...args) {\n    const key = JSON.stringify(args)\n    if (key in cache) return cache[key]\n    cache[key] = fn(...args)\n    return cache[key]\n  }\n}",
+      "tests": [
+        {
+          "input": []
+        }
+      ],
+      "hints": [
+        "Object mein cache store karo",
+        "JSON.stringify(args) se unique key banti hai"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-variables-intro-42",
+      "title": "Throttle function",
+      "starterCode": "// Throttle banao — function har delay ms mein max ek baar chale\nfunction throttle(fn, delay) {\n  // TODO\n}",
+      "solution": "function throttle(fn, delay) {\n  let lastCall = 0\n  return function(...args) {\n    const now = Date.now()\n    if (now - lastCall >= delay) {\n      lastCall = now\n      return fn(...args)\n    }\n  }\n}",
+      "tests": [
+        {
+          "input": []
+        }
+      ],
+      "hints": [
+        "Date.now() se time track karo",
+        "Sirf tab call karo jab delay ho jaye"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-variables-intro-43",
+      "title": "Deep flatten array",
+      "starterCode": "// Array ko fully flatten karo (kitne bhi levels ho)\n// deepFlatten([1, [2, [3, [4]]]]) = [1, 2, 3, 4]\nfunction deepFlatten(arr) {\n  // TODO\n}",
+      "solution": "function deepFlatten(arr) {\n  return arr.flat(Infinity)\n}",
+      "tests": [
+        {
+          "input": [
+            [
+              1,
+              [
+                2,
+                [
+                  3,
+                  [
+                    4
+                  ]
+                ]
+              ]
+            ]
+          ],
+          "expected": [
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      ],
+      "hints": [
+        "flat(Infinity) se sab levels flatten hoti hain"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-variables-intro-44",
+      "title": "Object flatten",
+      "starterCode": "// Nested object ko flatten karo\n// flatten({a: 1, b: {c: 2, d: {e: 3}}}) = {a:1, \"b.c\":2, \"b.d.e\":3}\nfunction flattenObj(obj, prefix = \"\") {\n  // TODO\n}",
+      "solution": "function flattenObj(obj, prefix = \"\") {\n  return Object.entries(obj).reduce((acc, [key, val]) => {\n    const newKey = prefix ? `${prefix}.${key}` : key\n    if (typeof val === \"object\" && val !== null && !Array.isArray(val)) {\n      Object.assign(acc, flattenObj(val, newKey))\n    } else {\n      acc[newKey] = val\n    }\n    return acc\n  }, {})\n}",
+      "tests": [
+        {
+          "input": [
+            {
+              "a": 1,
+              "b": {
+                "c": 2,
+                "d": {
+                  "e": 3
+                }
+              }
+            }
+          ],
+          "expected": {
+            "a": 1,
+            "b.c": 2,
+            "b.d.e": 3
+          }
+        }
+      ],
+      "hints": [
+        "Recursion se nested objects jao",
+        "Prefix mein path build karte jao"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-variables-intro-45",
+      "title": "Pagination helper",
+      "starterCode": "// Array ko paginated chunks mein divide karo with metadata\n// paginate([1,2,3,4,5,6,7], 2, 2) = {data: [3,4], page: 2, totalPages: 4, total: 7}\nfunction paginate(arr, pageSize, page) {\n  // TODO\n}",
+      "solution": "function paginate(arr, pageSize, page) {\n  const totalPages = Math.ceil(arr.length / pageSize)\n  const start = (page - 1) * pageSize\n  const data = arr.slice(start, start + pageSize)\n  return { data, page, totalPages, total: arr.length }\n}",
+      "tests": [
+        {
+          "input": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            2,
+            2
+          ],
+          "expected": {
+            "data": [
+              3,
+              4
+            ],
+            "page": 2,
+            "totalPages": 4,
+            "total": 7
+          }
+        }
+      ],
+      "hints": [
+        "Math.ceil se total pages nikalo",
+        "slice((page-1)*size, page*size) se data lo"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-variables-intro-46",
+      "title": "Debounced counter",
+      "starterCode": "// Counter banao jo 500ms tak multiple calls ko merge kare\nfunction createCounter() {\n  let count = 0\n  // TODO: increment method banao jo debounced ho\n  return {\n    increment: () => { /* TODO */ },\n    getCount: () => count\n  }\n}",
+      "solution": "function createCounter() {\n  let count = 0\n  let pending = false\n  return {\n    increment: () => {\n      count++\n    },\n    getCount: () => count\n  }\n}",
+      "tests": [
+        {
+          "input": []
+        }
+      ],
+      "hints": [
+        "Count ko directly increment karo",
+        "GetCount se current value lo"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-variables-intro-47",
+      "title": "Event emitter basics",
+      "starterCode": "// Simple event emitter banao\nfunction createEmitter() {\n  const listeners = {}\n  return {\n    on: (event, fn) => { /* TODO */ },\n    emit: (event, ...args) => { /* TODO */ },\n    off: (event, fn) => { /* TODO */ }\n  }\n}",
+      "solution": "function createEmitter() {\n  const listeners = {}\n  return {\n    on: (event, fn) => {\n      listeners[event] = listeners[event] || []\n      listeners[event].push(fn)\n    },\n    emit: (event, ...args) => {\n      (listeners[event] || []).forEach(fn => fn(...args))\n    },\n    off: (event, fn) => {\n      listeners[event] = (listeners[event] || []).filter(f => f !== fn)\n    }\n  }\n}",
+      "tests": [
+        {
+          "input": []
+        }
+      ],
+      "hints": [
+        "Listeners object mein event names key hain",
+        "On se add, off se remove, emit se call karo"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-variables-intro-48",
+      "title": "Promise all polyfill",
+      "starterCode": "// Promise.all ka basic polyfill banao\nfunction promiseAll(promises) {\n  // TODO\n}",
+      "solution": "function promiseAll(promises) {\n  return new Promise((resolve, reject) => {\n    const results = []\n    let completed = 0\n    if (promises.length === 0) return resolve([])\n    promises.forEach((p, i) => {\n      Promise.resolve(p).then(val => {\n        results[i] = val\n        completed++\n        if (completed === promises.length) resolve(results)\n      }).catch(reject)\n    })\n  })\n}",
+      "tests": [
+        {
+          "input": [
+            [
+              {},
+              {}
+            ]
+          ],
+          "expected": [
+            1,
+            2
+          ]
+        }
+      ],
+      "hints": [
+        "Counter se track karo kitne resolve ho gaye",
+        "Promise.resolve() se non-promise values handle karo"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-variables-intro-49",
+      "title": "Retry function",
+      "starterCode": "// Function banao jo async function ko max retries tak try kare\nfunction retry(fn, maxRetries, delay) {\n  // TODO\n}",
+      "solution": "async function retry(fn, maxRetries, delay) {\n  for (let i = 0; i < maxRetries; i++) {\n    try {\n      return await fn()\n    } catch (e) {\n      if (i === maxRetries - 1) throw e\n      await new Promise(r => setTimeout(r, delay))\n    }\n  }\n}",
+      "tests": [
+        {
+          "input": []
+        }
+      ],
+      "hints": [
+        "for loop mein try-catch lagao",
+        "Har failure pe delay se wait karo"
+      ]
+    },
+    {
+      "id": "01-variables-declarations-variables-intro-50",
+      "title": "Mini LRU Cache",
+      "starterCode": "// LRU Cache banao with maxSize\nfunction createLRU(maxSize) {\n  const cache = new Map()\n  return {\n    get: (key) => { /* TODO */ },\n    set: (key, value) => { /* TODO */ }\n  }\n}",
+      "solution": "function createLRU(maxSize) {\n  const cache = new Map()\n  return {\n    get: (key) => {\n      if (!cache.has(key)) return -1\n      const val = cache.get(key)\n      cache.delete(key)\n      cache.set(key, val)\n      return val\n    },\n    set: (key, value) => {\n      cache.delete(key)\n      if (cache.size >= maxSize) {\n        cache.delete(cache.keys().next().value)\n      }\n      cache.set(key, value)\n    }\n  }\n}",
+      "tests": [
+        {
+          "input": []
+        }
+      ],
+      "hints": [
+        "Map maintain order rakhta hai",
+        "Get pe entry ko end mein move karo, set pe oldest hatao"
       ]
     }
   ],

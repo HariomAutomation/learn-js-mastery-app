@@ -1,15 +1,20 @@
 {
   "id": "01-variables-declarations-variables-intro-17",
-  "title": "Infinity and NaN",
-  "starterCode": "console.log(typeof Infinity)\nconsole.log(typeof NaN)",
-  "solution": "console.log(typeof Infinity)\nconsole.log(typeof NaN)",
+  "title": "Loop closure fix — var vs let",
+  "starterCode": "// Bug: Har function 3 print karega, 0/1/2 nahi\n// Fix karo using let\nvar funcs = []\nfor (var i = 0; i < 3; i++) {\n  funcs.push(function() { return i })\n}\nreturn [funcs[0](), funcs[1](), funcs[2]()]\n",
+  "solution": "let funcs = []\nfor (let i = 0; i < 3; i++) {\n  funcs.push(function() { return i })\n}\nreturn [funcs[0](), funcs[1](), funcs[2]()]",
   "tests": [
     {
       "input": [],
-      "expected": "number\nnumber"
+      "expected": [
+        0,
+        1,
+        2
+      ]
     }
   ],
   "hints": [
-    "Both are typeof 'number'"
+    "var se i function scope mein share hota hai",
+    "let se har iteration ka apna i hota hai"
   ]
 }

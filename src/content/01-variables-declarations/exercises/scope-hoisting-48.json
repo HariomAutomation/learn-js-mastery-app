@@ -1,0 +1,16 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-48",
+  "title": "with statement (deprecated)",
+  "starterCode": "const obj = { a: 1, b: 2 }\ntry {\n  with (obj) {\n    return a + b\n  }\n} catch(e) {\n  return \"strict mode error\"\n}\n",
+  "solution": "const obj = { a: 1, b: 2 }\ntry {\n  with (obj) {\n    return a + b\n  }\n} catch(e) {\n  return \"strict mode error\"\n}",
+  "tests": [
+    {
+      "input": [],
+      "expected": 3
+    }
+  ],
+  "hints": [
+    "with adds obj properties to scope",
+    "Deprecated and forbidden in strict mode"
+  ]
+}

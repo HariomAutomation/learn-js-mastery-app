@@ -1,16 +1,20 @@
 {
-  "id": "02-data-types-primitive-types-19",
-  "title": "Create a number with underscore separators",
-  "starterCode": "const million = ;\nconsole.log(million);",
-  "solution": "const million = 1_000_000;\nconsole.log(million);",
+  "id": "02-data-types-01-primitive-types-19",
+  "title": "Destructuring assignment",
+  "starterCode": "const user = { name: \"Amit\", age: 25, city: \"Delhi\" }\nconst { name, age, city } = user\nreturn { name, age, city }\n",
+  "solution": "const user = { name: \"Amit\", age: 25, city: \"Delhi\" }\nconst { name, age, city } = user\nreturn { name, age, city }",
   "tests": [
     {
       "input": [],
-      "expected": "1000000"
+      "expected": {
+        "name": "Amit",
+        "age": 25,
+        "city": "Delhi"
+      }
     }
   ],
   "hints": [
-    "Underscores improve readability",
-    "They don't affect the actual value"
+    "const { prop } = obj se destructuring hoti hai",
+    "Variable names property names se match hone chahiye"
   ]
 }

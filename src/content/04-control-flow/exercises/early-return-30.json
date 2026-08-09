@@ -1,16 +1,47 @@
 {
-  "id": "04-control-flow-early-return-30",
-  "title": "Early return arrays",
-  "starterCode": "function getFirstThree(arr) {\n  if (!Array.isArray(arr)) return [];\n  return arr.slice(0, 3);\n}\nconsole.log(getFirstThree([1, 2, 3, 4, 5]));",
-  "solution": "function getFirstThree(arr) {\n  if (!Array.isArray(arr)) return [];\n  return arr.slice(0, 3);\n}\nconsole.log(getFirstThree([1, 2, 3, 4, 5]));",
+  "id": "04-control-flow-02-early-return-30",
+  "title": "Guard for password match",
+  "starterCode": "// function checkPassword(password, confirmPassword)\n// Password empty: \"Password required\"\n// Password < 6 chars: \"Too short\"\n// Confirm empty: \"Confirmation required\"\n// Dono match nahi: \"Passwords do not match\"\n// Warna \"Password set successfully\"\n",
+  "solution": "function checkPassword(password, confirmPassword) {\n  if (!password) return \"Password required\"\n  if (password.length < 6) return \"Too short\"\n  if (!confirmPassword) return \"Confirmation required\"\n  if (password !== confirmPassword) return \"Passwords do not match\"\n  return \"Password set successfully\"\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "1,2,3"
+      "input": [
+        "secret123",
+        "secret123"
+      ],
+      "expected": "Password set successfully"
+    },
+    {
+      "input": [
+        "",
+        "secret123"
+      ],
+      "expected": "Password required"
+    },
+    {
+      "input": [
+        "abc",
+        "abc"
+      ],
+      "expected": "Too short"
+    },
+    {
+      "input": [
+        "secret123",
+        ""
+      ],
+      "expected": "Confirmation required"
+    },
+    {
+      "input": [
+        "secret123",
+        "different"
+      ],
+      "expected": "Passwords do not match"
     }
   ],
   "hints": [
-    "arr is an array",
-    "slice(0,3) returns first 3 elements"
+    "Har validation ke liye early return karo",
+    "Order matters — pehle password, phir confirm"
   ]
 }

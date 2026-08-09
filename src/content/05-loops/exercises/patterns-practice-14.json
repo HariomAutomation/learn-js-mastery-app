@@ -1,16 +1,34 @@
 {
-  "id": "05-loops-patterns-practice-14",
-  "title": "Fibonacci Array",
-  "starterCode": "const n = 8;\nconst fib = [0, 1];\nfor (let i = 2; i < n; i++) {\n  fib[i] = fib[i-1] + fib[i-2];\n}\nconsole.log(fib);",
-  "solution": "const n = 8;\nconst fib = [0, 1];\nfor (let i = 2; i < n; i++) {\n  fib[i] = fib[i-1] + fib[i-2];\n}\nconsole.log(fib);",
+  "id": "05-03-patterns-practice-14",
+  "title": "2D array me diagonal elements nikalo",
+  "starterCode": "function diagonals(matrix) {\n  // TODO: primary aur secondary diagonals do\n}",
+  "solution": "function diagonals(matrix) {\n  const primary = [], secondary = [];\n  const n = matrix.length;\n  for (let i = 0; i < n; i++) {\n    primary.push(matrix[i][i]);\n    secondary.push(matrix[i][n - 1 - i]);\n  }\n  return { primary, secondary };\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "[ 0, 1, 1, 2, 3, 5, 8, 13 ]"
+      "input": [
+        [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            4,
+            5,
+            6
+          ],
+          [
+            7,
+            8,
+            9
+          ]
+        ]
+      ],
+      "expected": "{\"primary\":[1,5,9],\"secondary\":[3,5,7]}"
     }
   ],
   "hints": [
-    "Start with 0 and 1",
-    "Sum previous two"
+    "Primary: matrix[i][i]",
+    "Secondary: matrix[i][n-1-i]"
   ]
 }

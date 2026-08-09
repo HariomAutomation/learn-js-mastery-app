@@ -1,16 +1,25 @@
 {
-  "id": "05-loops-patterns-practice-04",
-  "title": "Fibonacci Loop",
-  "starterCode": "let a = 0, b = 1;\nfor (let i = 0; i < 10; i++) {\n  process.stdout.write(a + ' ');\n  [a, b] = [b, a + b];\n}\nconsole.log();",
-  "solution": "let a = 0, b = 1;\nfor (let i = 0; i < 10; i++) {\n  process.stdout.write(a + ' ');\n  [a, b] = [b, a + b];\n}\nconsole.log();",
+  "id": "05-03-patterns-practice-04",
+  "title": "Array ko rotate karo k positions",
+  "starterCode": "function rotate(arr, k) {\n  // TODO: array ko k positions right rotate karo\n}",
+  "solution": "function rotate(arr, k) {\n  const n = arr.length;\n  k = k % n;\n  return [...arr.slice(n - k), ...arr.slice(0, n - k)];\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "0 1 1 2 3 5 8 13 21 34 "
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        2
+      ],
+      "expected": "4,5,1,2,3"
     }
   ],
   "hints": [
-    "Swap with destructuring",
-    "Start with 0 and 1"
+    "Modulo se actual rotation nikalo",
+    "Slice aur spread se rotate karo"
   ]
 }

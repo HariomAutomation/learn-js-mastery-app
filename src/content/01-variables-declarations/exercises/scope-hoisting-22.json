@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-scope-hoisting-22",
-  "title": "var function only",
-  "starterCode": "function test() {\n  var x = 1\n}\ntest()\nconsole.log(typeof x)",
-  "solution": "function test() {\n  var x = 1\n}\ntest()\nconsole.log(typeof x)",
+  "title": "for-in with object keys",
+  "starterCode": "const obj = {a: 1, b: 2, c: 3}\nlet sum = 0\nfor (let key in obj) {\n  sum += obj[key]\n}\nreturn sum\n",
+  "solution": "const obj = {a: 1, b: 2, c: 3}\nlet sum = 0\nfor (let key in obj) {\n  sum += obj[key]\n}\nreturn sum",
   "tests": [
     {
       "input": [],
-      "expected": "undefined"
+      "expected": 6
     }
   ],
   "hints": [
-    "var is confined to function"
+    "for-in iterates object keys",
+    "obj[key] accesses each value"
   ]
 }

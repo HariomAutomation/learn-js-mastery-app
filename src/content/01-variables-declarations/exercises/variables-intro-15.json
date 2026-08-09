@@ -1,15 +1,21 @@
 {
   "id": "01-variables-declarations-variables-intro-15",
-  "title": "Block scope shadowing",
-  "starterCode": "let x = \"outer\"\nif (true) {\n  let x = \"inner\"\n  console.log(x)\n}\nconsole.log(x)",
-  "solution": "let x = \"outer\"\nif (true) {\n  let x = \"inner\"\n  console.log(x)\n}\nconsole.log(x)",
+  "title": "Spread operator se copy",
+  "starterCode": "const original = { x: 1, y: 2, z: 3 }\n// Shallow copy banao spread operator se\n// Copy mein a = 10 add karo\n// Original aur return karo (original unchanged hona chahiye)\n",
+  "solution": "const original = { x: 1, y: 2, z: 3 }\nconst copy = { ...original, a: 10 }\nreturn copy",
   "tests": [
     {
       "input": [],
-      "expected": "inner\nouter"
+      "expected": {
+        "x": 1,
+        "y": 2,
+        "z": 3,
+        "a": 10
+      }
     }
   ],
   "hints": [
-    "let is block-scoped"
+    "...original se saari properties copy hoti hain",
+    "Naya object spread se banao"
   ]
 }

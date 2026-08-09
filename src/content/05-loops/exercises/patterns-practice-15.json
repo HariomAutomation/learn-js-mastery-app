@@ -1,16 +1,22 @@
 {
-  "id": "05-loops-patterns-practice-15",
-  "title": "Factorial With While",
-  "starterCode": "let n = 5;\nlet result = 1;\nlet i = n;\nwhile (i > 1) {\n  result *= i;\n  i--;\n}\nconsole.log(result);",
-  "solution": "let n = 5;\nlet result = 1;\nlet i = n;\nwhile (i > 1) {\n  result *= i;\n  i--;\n}\nconsole.log(result);",
+  "id": "05-03-patterns-practice-15",
+  "title": "Array ko sort without built-in sort",
+  "starterCode": "function selectionSort(arr) {\n  // TODO: selection sort implement karo\n}",
+  "solution": "function selectionSort(arr) {\n  const result = [...arr];\n  for (let i = 0; i < result.length; i++) {\n    let minIdx = i;\n    for (let j = i + 1; j < result.length; j++) {\n      if (result[j] < result[minIdx]) minIdx = j;\n    }\n    [result[i], result[minIdx]] = [result[minIdx], result[i]];\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "120"
+      "input": [
+        5,
+        3,
+        1,
+        4,
+        2
+      ],
+      "expected": "1,2,3,4,5"
     }
   ],
   "hints": [
-    "Start from n",
-    "Count down"
+    "Har position pe minimum dhundho",
+    "Swap karo current position se"
   ]
 }

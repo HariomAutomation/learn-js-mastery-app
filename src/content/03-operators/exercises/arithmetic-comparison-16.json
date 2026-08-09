@@ -1,16 +1,16 @@
 {
-  "id": "03-operators-arithmetic-comparison-16",
-  "title": "Division by zero",
-  "starterCode": "const result = 5 / 0;\nconsole.log(result);",
-  "solution": "const result = 5 / 0;\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-16",
+  "title": "Loose equality check",
+  "starterCode": "// Check karo: \"5\" aur 5 barabar hain ya nahi\nconst str = \"5\"\nconst num = 5\n// TODO: == use karo\n",
+  "solution": "const str = \"5\"\nconst num = 5\nreturn str == num",
   "tests": [
     {
       "input": [],
-      "expected": "Infinity"
+      "expected": true
     }
   ],
   "hints": [
-    "Division by zero produces Infinity",
-    "Not an error in JS"
+    "== type coercion karta hai",
+    "String '5' number 5 mein convert hota hai"
   ]
 }

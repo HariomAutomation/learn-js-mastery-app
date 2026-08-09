@@ -1,16 +1,22 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-01",
-  "title": "Check if 0 is falsy",
-  "starterCode": "if (0) {\n  console.log('truthy');\n} else {\n  console.log('falsy');\n}",
-  "solution": "if (0) {\n  console.log('truthy');\n} else {\n  console.log('falsy');\n}",
+  "id": "02-data-types-03-coercion-truthy-falsy-01",
+  "title": "Implicit string coercion",
+  "starterCode": "return {\n  numPlusStr: 5 + \"3\",\n  strPlusNum: \"5\" + 3,\n  numPlusBool: 5 + true,\n  numPlusNull: 5 + null,\n  numPlusUndef: 5 + undefined\n}\n",
+  "solution": "return {\n  numPlusStr: 5 + \"3\",\n  strPlusNum: \"5\" + 3,\n  numPlusBool: 5 + true,\n  numPlusNull: 5 + null,\n  numPlusUndef: 5 + undefined\n}",
   "tests": [
     {
       "input": [],
-      "expected": "falsy"
+      "expected": {
+        "numPlusStr": "53",
+        "strPlusNum": "53",
+        "numPlusBool": 6,
+        "numPlusNull": 5,
+        "numPlusUndef": null
+      }
     }
   ],
   "hints": [
-    "0 is one of the falsy values",
-    "Numbers can be truthy or falsy"
+    "'+' operator jab string involve ho to concat karta hai",
+    "true = 1, null = 0, undefined = NaN"
   ]
 }

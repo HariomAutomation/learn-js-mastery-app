@@ -1,16 +1,21 @@
 {
-  "id": "02-data-types-reference-types-typeof-26",
-  "title": "Primitive passed by value",
-  "starterCode": "function modify(n) { n = 10; }\nlet a = 1;\nmodify(a);\nconsole.log();",
-  "solution": "function modify(n) { n = 10; }\nlet a = 1;\nmodify(a);\nconsole.log(a);",
+  "id": "02-data-types-02-reference-types-typeof-26",
+  "title": "Object.assign merge",
+  "starterCode": "const target = { a: 1, b: 2 }\nconst source1 = { b: 3, c: 4 }\nconst source2 = { c: 5, d: 6 }\nconst merged = Object.assign(target, source1, source2)\nreturn merged\n",
+  "solution": "const target = { a: 1, b: 2 }\nconst source1 = { b: 3, c: 4 }\nconst source2 = { c: 5, d: 6 }\nconst merged = Object.assign(target, source1, source2)\nreturn merged",
   "tests": [
     {
       "input": [],
-      "expected": "1"
+      "expected": {
+        "a": 1,
+        "b": 3,
+        "c": 5,
+        "d": 6
+      }
     }
   ],
   "hints": [
-    "Primitives are copied by value",
-    "The original is not affected"
+    "Object.assign target modify karta hai",
+    "Last value wins for duplicate keys"
   ]
 }

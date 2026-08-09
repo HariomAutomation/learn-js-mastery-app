@@ -1,16 +1,23 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-16",
-  "title": "Boolean() conversion",
-  "starterCode": "console.log(Boolean(0));",
-  "solution": "console.log(Boolean(0));",
+  "id": "02-data-types-03-coercion-truthy-falsy-16",
+  "title": "Bitwise NOT operator",
+  "starterCode": "const num = 42\nreturn {\n  bitwiseNot: ~num,\n  doubleNot: ~~num,\n  floorExample: ~~3.9,\n  indexOf: ~\"hello\".indexOf(\"x\"),\n  indexOfFound: ~\"hello\".indexOf(\"e\")\n}\n",
+  "solution": "const num = 42\nreturn {\n  bitwiseNot: ~num,\n  doubleNot: ~~num,\n  floorExample: ~~3.9,\n  indexOf: ~\"hello\".indexOf(\"x\"),\n  indexOfFound: ~\"hello\".indexOf(\"e\")\n}",
   "tests": [
     {
       "input": [],
-      "expected": "false"
+      "expected": {
+        "bitwiseNot": -43,
+        "doubleNot": 42,
+        "floorExample": 3,
+        "indexOf": 0,
+        "indexOfFound": -2
+      }
     }
   ],
   "hints": [
-    "Boolean() converts to boolean",
-    "0 is falsy"
+    "~num = -(num+1)",
+    "~~num se floor hota hai (double bitwise NOT)",
+    "~(-1) = 0 — truthy/falsy check ke liye use hota hai"
   ]
 }

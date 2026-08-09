@@ -1,16 +1,25 @@
 {
-  "id": "05-loops-for-while-13",
-  "title": "For Loop With String",
-  "starterCode": "const str = \"Hello\";\nfor (let i = 0; i < str.length; i++) {\n  console.log(str[i]);\n}",
-  "solution": "const str = \"Hello\";\nfor (let i = 0; i < str.length; i++) {\n  console.log(str[i]);\n}",
+  "id": "05-01-for-while-13",
+  "title": "Continue use karke divisible by 3 wale elements hatao",
+  "starterCode": "function removeDivByThree(arr) {\n  // TODO: array se 3 se divide hone wale elements hatao\n  // Continue use karo\n}",
+  "solution": "function removeDivByThree(arr) {\n  const result = [];\n  for (const num of arr) {\n    if (num % 3 === 0) continue;\n    result.push(num);\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "H\ne\nl\nl\no"
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "expected": "1,2,4,5"
     }
   ],
   "hints": [
-    "Access string characters with []",
-    "Use .length for loop condition"
+    "3 se divisible hai toh continue se skip karo",
+    "Baaki elements result me push karo"
   ]
 }

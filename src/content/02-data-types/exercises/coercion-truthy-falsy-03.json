@@ -1,16 +1,25 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-03",
-  "title": "Check if empty string is falsy",
-  "starterCode": "if (\"\") {\n  console.log(\"truthy\");\n} else {\n  console.log(\"falsy\");\n}",
-  "solution": "if (\"\") {\n  console.log(\"truthy\");\n} else {\n  console.log(\"falsy\");\n}",
+  "id": "02-data-types-03-coercion-truthy-falsy-03",
+  "title": "Comparison operator coercion",
+  "starterCode": "return {\n  numStr: 5 == \"5\",\n  numStrStrict: 5 === \"5\",\n  boolNum: 1 == true,\n  boolNumStrict: 1 === true,\n  nullUndef: null == undefined,\n  nullUndefStrict: null === undefined,\n  emptyStrZero: \"\" == 0,\n  spaceStrZero: \" \" == 0\n}\n",
+  "solution": "return {\n  numStr: 5 == \"5\",\n  numStrStrict: 5 === \"5\",\n  boolNum: 1 == true,\n  boolNumStrict: 1 === true,\n  nullUndef: null == undefined,\n  nullUndefStrict: null === undefined,\n  emptyStrZero: \"\" == 0,\n  spaceStrZero: \" \" == 0\n}",
   "tests": [
     {
       "input": [],
-      "expected": "falsy"
+      "expected": {
+        "numStr": true,
+        "numStrStrict": false,
+        "boolNum": true,
+        "boolNumStrict": false,
+        "nullUndef": true,
+        "nullUndefStrict": false,
+        "emptyStrZero": true,
+        "spaceStrZero": true
+      }
     }
   ],
   "hints": [
-    "Empty strings are falsy",
-    "Non-empty strings are truthy"
+    "== type coercion karta hai, === nahi",
+    "null == undefined true hai, null === undefined false"
   ]
 }

@@ -1,16 +1,21 @@
 {
-  "id": "05-loops-for-while-43",
-  "title": "Fibonacci Array",
-  "starterCode": "const n = 7;\nconst fib = [0, 1];\nfor (let i = 2; i < n; i++) {\n  fib.push(fib[i-1] + fib[i-2]);\n}\nconsole.log(fib);",
-  "solution": "const n = 7;\nconst fib = [0, 1];\nfor (let i = 2; i < n; i++) {\n  fib.push(fib[i-1] + fib[i-2]);\n}\nconsole.log(fib);",
+  "id": "05-01-for-while-43",
+  "title": "Continue use karke array me strings ko capitalize karo",
+  "starterCode": "function capitalizeAll(arr) {\n  // TODO: strings ko uppercase karo, non-strings skip karo\n}",
+  "solution": "function capitalizeAll(arr) {\n  const result = [];\n  for (const item of arr) {\n    if (typeof item !== \"string\") continue;\n    result.push(item.toUpperCase());\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "[ 0, 1, 1, 2, 3, 5, 8 ]"
+      "input": [
+        "hello",
+        1,
+        "world",
+        null
+      ],
+      "expected": "HELLO,WORLD"
     }
   ],
   "hints": [
-    "Start with [0, 1]",
-    "Sum previous two"
+    "typeof se string check karo",
+    "String hai toh uppercase karo"
   ]
 }

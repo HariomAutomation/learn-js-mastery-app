@@ -12,9 +12,10 @@ interface SidebarProps {
   theme: "dark" | "light"
   onToggleTheme: () => void
   onOpenSearch: () => void
+  onCloseSidebar: () => void
 }
 
-export function Sidebar({ theme, onToggleTheme, onOpenSearch }: SidebarProps) {
+export function Sidebar({ theme, onToggleTheme, onOpenSearch, onCloseSidebar }: SidebarProps) {
   const currentModule = useAppStore((s) => s.currentModule)
   const currentLesson = useAppStore((s) => s.currentLesson)
   const setCurrentModule = useAppStore((s) => s.setCurrentModule)
@@ -41,7 +42,7 @@ export function Sidebar({ theme, onToggleTheme, onOpenSearch }: SidebarProps) {
       <nav>
         <button
           className={`module-header home-btn ${view === "home" ? "active" : ""}`}
-          onClick={() => setView("home")}
+          onClick={() => { setView("home"); onCloseSidebar() }}
         >
           <span className="module-order">🏠</span>
           <span className="module-title">Dashboard</span>
@@ -79,7 +80,7 @@ export function Sidebar({ theme, onToggleTheme, onOpenSearch }: SidebarProps) {
                       <li key={lessonId}>
                         <button
                           className={`lesson-item ${currentLesson === lessonId ? "active" : ""}`}
-                          onClick={() => setCurrentLesson(lessonId)}
+                          onClick={() => { setCurrentLesson(lessonId); onCloseSidebar() }}
                         >
                           {i + 1}. {lessonTitle(slug)}
                           {isDone && <span className="lesson-dot done">✓</span>}
@@ -94,7 +95,7 @@ export function Sidebar({ theme, onToggleTheme, onOpenSearch }: SidebarProps) {
                     <li>
                       <button
                         className="lesson-item module-quiz-btn"
-                        onClick={() => startModuleQuiz(modId)}
+                        onClick={() => { startModuleQuiz(modId); onCloseSidebar() }}
                       >
                         📝 Module Quiz
                       </button>
@@ -108,7 +109,7 @@ export function Sidebar({ theme, onToggleTheme, onOpenSearch }: SidebarProps) {
 
         <button
           className={`home-btn exam-btn ${view === "exam" ? "active" : ""}`}
-          onClick={() => setView("exam")}
+          onClick={() => { setView("exam"); onCloseSidebar() }}
         >
           <span className="module-order">🎓</span>
           <span className="module-title">Final Exam</span>

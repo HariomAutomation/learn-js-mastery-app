@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-var-let-const-26",
-  "title": "let reassign string",
-  "starterCode": "let s = \"hello\"\ns = s + \" world\"\nconsole.log(s)",
-  "solution": "let s = \"hello\"\ns = s + \" world\"\nconsole.log(s)",
+  "title": "TDZ with for-loop let",
+  "starterCode": "try {\n  for (let i = 0; i < 1; i++) {\n    // do nothing\n  }\n  return i\n} catch(e) {\n  return \"TDZ\"\n}\n",
+  "solution": "try {\n  for (let i = 0; i < 1; i++) {\n    // do nothing\n  }\n  return i\n} catch(e) {\n  return \"TDZ\"\n}",
   "tests": [
     {
       "input": [],
-      "expected": "hello world"
+      "expected": "TDZ"
     }
   ],
   "hints": [
-    "Strings are immutable, but let can reassign"
+    "let i in for-loop is scoped to the loop",
+    "Accessing i outside throws ReferenceError"
   ]
 }

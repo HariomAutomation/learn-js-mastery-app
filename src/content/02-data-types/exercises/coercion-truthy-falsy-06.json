@@ -1,16 +1,25 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-06",
-  "title": "Check if undefined is falsy",
-  "starterCode": "if (undefined) {\n  console.log('truthy');\n} else {\n  console.log('falsy');\n}",
-  "solution": "if (undefined) {\n  console.log('truthy');\n} else {\n  console.log('falsy');\n}",
+  "id": "02-data-types-03-coercion-truthy-falsy-06",
+  "title": "Double NOT for boolean",
+  "starterCode": "return {\n  emptyStr: !!\"\",\n  nonEmptyStr: !!\"hello\",\n  zero: !!0,\n  nonZero: !!42,\n  null: !!null,\n  obj: !!{},\n  arr: !![],\n  nan: !!NaN\n}\n",
+  "solution": "return {\n  emptyStr: !!\"\",\n  nonEmptyStr: !!\"hello\",\n  zero: !!0,\n  nonZero: !!42,\n  null: !!null,\n  obj: !!{},\n  arr: !![],\n  nan: !!NaN\n}",
   "tests": [
     {
       "input": [],
-      "expected": "falsy"
+      "expected": {
+        "emptyStr": false,
+        "nonEmptyStr": true,
+        "zero": false,
+        "nonZero": true,
+        "null": false,
+        "obj": true,
+        "arr": true,
+        "nan": false
+      }
     }
   ],
   "hints": [
-    "undefined is falsy",
-    "It means no value assigned"
+    "! pehle boolean mein convert karta hai, phir negate karta hai",
+    "!! value ka boolean equivalent deta hai"
   ]
 }

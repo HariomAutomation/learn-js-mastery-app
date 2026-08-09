@@ -1,16 +1,20 @@
 {
-  "id": "05-loops-for-while-17",
-  "title": "For Loop With Array",
-  "starterCode": "const nums = [10, 20, 30, 40];\nlet sum = 0;\nfor (let i = 0; i < nums.length; i++) {\n  sum += nums[i];\n}\nconsole.log(sum);",
-  "solution": "const nums = [10, 20, 30, 40];\nlet sum = 0;\nfor (let i = 0; i < nums.length; i++) {\n  sum += nums[i];\n}\nconsole.log(sum);",
+  "id": "05-01-for-while-17",
+  "title": "Break use karke palindrome dhundho",
+  "starterCode": "function firstPalindrome(arr) {\n  // TODO: array me pehla palindrome string dhundho\n}",
+  "solution": "function firstPalindrome(arr) {\n  for (const str of arr) {\n    const reversed = str.split(\"\").reverse().join(\"\");\n    if (str === reversed) return str;\n  }\n  return null;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "100"
+      "input": [
+        "abc",
+        "deed",
+        "aba"
+      ],
+      "expected": "deed"
     }
   ],
   "hints": [
-    "Access array elements with index",
-    "Use .length for loop bound"
+    "Har string ka reverse banake compare karo",
+    "Milte hi return karo"
   ]
 }

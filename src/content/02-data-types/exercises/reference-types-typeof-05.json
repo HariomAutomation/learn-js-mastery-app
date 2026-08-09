@@ -1,16 +1,20 @@
 {
-  "id": "02-data-types-reference-types-typeof-05",
-  "title": "Use Array.isArray to check arrays",
-  "starterCode": "const arr = [1, 2, 3];\nconsole.log();",
-  "solution": "const arr = [1, 2, 3];\nconsole.log(Array.isArray(arr));",
+  "id": "02-data-types-02-reference-types-typeof-05",
+  "title": "Reference equality vs value equality",
+  "starterCode": "const a = { x: 1 }\nconst b = { x: 1 }\nconst c = a\nreturn {\n  aEqualsB: a === b,\n  aEqualsC: a === c,\n  deepEquals: JSON.stringify(a) === JSON.stringify(b)\n}\n",
+  "solution": "const a = { x: 1 }\nconst b = { x: 1 }\nconst c = a\nreturn {\n  aEqualsB: a === b,\n  aEqualsC: a === c,\n  deepEquals: JSON.stringify(a) === JSON.stringify(b)\n}",
   "tests": [
     {
       "input": [],
-      "expected": "true"
+      "expected": {
+        "aEqualsB": false,
+        "aEqualsC": true,
+        "deepEquals": true
+      }
     }
   ],
   "hints": [
-    "Array.isArray is the correct way",
-    "It returns true only for arrays"
+    "=== se reference compare hota hai objects ke liye",
+    "JSON.stringify se shallow comparison ho sakti hai"
   ]
 }

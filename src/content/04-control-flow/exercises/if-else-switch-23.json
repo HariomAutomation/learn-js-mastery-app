@@ -1,16 +1,36 @@
 {
-  "id": "04-control-flow-if-else-switch-23",
-  "title": "If with logical OR",
-  "starterCode": "const isVIP = false;\nconst isAdmin = true;\nif (isVIP || isAdmin) {\n  console.log('access granted');\n} else {\n  console.log('access denied');\n}",
-  "solution": "const isVIP = false;\nconst isAdmin = true;\nif (isVIP || isAdmin) {\n  console.log('access granted');\n} else {\n  console.log('access denied');\n}",
+  "id": "04-control-flow-01-if-else-switch-23",
+  "title": "Switch se month ke days batao",
+  "starterCode": "// function daysInMonth(month) mein number 1-12 do\n// 31: Jan, Mar, May, Jul, Aug, Oct, Dec\n// 30: Apr, Jun, Sep, Nov\n// 28: Feb\n",
+  "solution": "function daysInMonth(month) {\n  switch (month) {\n    case 1: case 3: case 5: case 7: case 8: case 10: case 12: return 31\n    case 4: case 6: case 9: case 11: return 30\n    case 2: return 28\n    default: return -1\n  }\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "access granted"
+      "input": [
+        1
+      ],
+      "expected": 31
+    },
+    {
+      "input": [
+        4
+      ],
+      "expected": 30
+    },
+    {
+      "input": [
+        2
+      ],
+      "expected": 28
+    },
+    {
+      "input": [
+        13
+      ],
+      "expected": -1
     }
   ],
   "hints": [
-    "|| needs one truthy condition",
-    "isAdmin is true"
+    "Fall-through se same days wale months group karo",
+    "Default mein -1 return karo invalid month ke liye"
   ]
 }

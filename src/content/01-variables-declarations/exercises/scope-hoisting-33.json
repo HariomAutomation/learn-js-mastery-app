@@ -1,0 +1,19 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-33",
+  "title": "Arrow function concise body",
+  "starterCode": "const double = x => x * 2\nconst add = (a, b) => a + b\nreturn [double(5), add(3, 4)]\n",
+  "solution": "const double = x => x * 2\nconst add = (a, b) => a + b\nreturn [double(5), add(3, 4)]",
+  "tests": [
+    {
+      "input": [],
+      "expected": [
+        10,
+        7
+      ]
+    }
+  ],
+  "hints": [
+    "Single expression arrow functions auto-return",
+    "No need for return keyword or braces"
+  ]
+}

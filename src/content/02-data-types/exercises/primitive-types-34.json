@@ -1,16 +1,24 @@
 {
-  "id": "02-data-types-primitive-types-34",
-  "title": "Use toFixed to format a number",
-  "starterCode": "const pi = 3.14159;\nconsole.log();",
-  "solution": "const pi = 3.14159;\nconsole.log(pi.toFixed(2));",
+  "id": "02-data-types-01-primitive-types-34",
+  "title": "Math object methods",
+  "starterCode": "return {\n  pi: Math.PI,\n  sqrt16: Math.sqrt(16),\n  abs: Math.abs(-5),\n  ceil: Math.ceil(4.3),\n  floor: Math.floor(4.7),\n  round: Math.round(4.5),\n  random: typeof Math.random()\n}\n",
+  "solution": "return {\n  pi: Math.PI,\n  sqrt16: Math.sqrt(16),\n  abs: Math.abs(-5),\n  ceil: Math.ceil(4.3),\n  floor: Math.floor(4.7),\n  round: Math.round(4.5),\n  random: typeof Math.random()\n}",
   "tests": [
     {
       "input": [],
-      "expected": "3.14"
+      "expected": {
+        "pi": 3.141592653589793,
+        "sqrt16": 4,
+        "abs": 5,
+        "ceil": 5,
+        "floor": 4,
+        "round": 5,
+        "random": "number"
+      }
     }
   ],
   "hints": [
-    "toFixed takes number of decimal places",
-    "It returns a string"
+    "Math.PI se pi milta hai",
+    "ceil upar, floor neeche round karta hai"
   ]
 }

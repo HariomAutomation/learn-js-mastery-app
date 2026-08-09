@@ -1,16 +1,16 @@
 {
-  "id": "03-operators-logical-ternary-45",
-  "title": "Nullish OR default pattern",
-  "starterCode": "function greet(name) {\n  const displayName = name ?? 'Guest';\n  return `Hello, ${displayName}!`;\n}\nconsole.log(greet(''));",
-  "solution": "function greet(name) {\n  const displayName = name ?? 'Guest';\n  return `Hello, ${displayName}!`;\n}\nconsole.log(greet(''));",
+  "id": "03-operators-02-logical-ternary-45",
+  "title": "Logical in template literal",
+  "starterCode": "// Dynamic class name banao conditions se\nconst isActive = true\nconst isDisabled = false\nconst size = \"large\"\n// TODO: className string banao\n",
+  "solution": "const isActive = true\nconst isDisabled = false\nconst size = \"large\"\nconst className = `${isActive ? \"active\" : \"\"} ${isDisabled ? \"disabled\" : \"\"} ${size}`.trim()\nreturn className",
   "tests": [
     {
       "input": [],
-      "expected": "Hello, !"
+      "expected": "active large"
     }
   ],
   "hints": [
-    "?? only triggers on null/undefined",
-    "'' is not null/undefined, so no default"
+    "Template literal mein ternary use karo",
+    "trim() se extra spaces hat jati hain"
   ]
 }

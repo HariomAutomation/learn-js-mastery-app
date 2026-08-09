@@ -1,0 +1,38 @@
+{
+  "id": "01-variables-declarations-variables-intro-38",
+  "title": "Range generator",
+  "starterCode": "// Function jo start se end tak ka array banaye\n// range(1, 5) = [1, 2, 3, 4, 5]\nfunction range(start, end) {\n  // TODO\n}",
+  "solution": "function range(start, end) {\n  const result = []\n  for (let i = start; i <= end; i++) {\n    result.push(i)\n  }\n  return result\n}",
+  "tests": [
+    {
+      "input": [
+        1,
+        5
+      ],
+      "expected": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "input": [
+        3,
+        7
+      ],
+      "expected": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    }
+  ],
+  "hints": [
+    "for loop se start se end tak jao",
+    "Har i ko array mein push karo"
+  ]
+}

@@ -1,16 +1,24 @@
 {
-  "id": "05-loops-patterns-practice-48",
-  "title": "Count Vowels Loop",
-  "starterCode": "const str = \"hello world\";\nlet count = 0;\nconst vowels = \"aeiou\";\nfor (const ch of str) {\n  if (vowels.includes(ch)) count++;\n}\nconsole.log(count);",
-  "solution": "const str = \"hello world\";\nlet count = 0;\nconst vowels = \"aeiou\";\nfor (const ch of str) {\n  if (vowels.includes(ch)) count++;\n}\nconsole.log(count);",
+  "id": "05-03-patterns-practice-48",
+  "title": "Array ke consecutive runs count karo",
+  "starterCode": "function countRuns(arr) {\n  // TODO: consecutive same elements ki runs count karo\n  // [1,1,2,2,2,3,1] -> 4 runs\n}",
+  "solution": "function countRuns(arr) {\n  if (arr.length === 0) return 0;\n  let runs = 1;\n  for (let i = 1; i < arr.length; i++) {\n    if (arr[i] !== arr[i - 1]) runs++;\n  }\n  return runs;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "3"
+      "input": [
+        1,
+        1,
+        2,
+        2,
+        2,
+        3,
+        1
+      ],
+      "expected": 4
     }
   ],
   "hints": [
-    "Check each character",
-    "Use includes()"
+    "Element change hone pe count badhao",
+    "Pehla element hamesha run me hota hai"
   ]
 }

@@ -1,17 +1,44 @@
 {
-  "id": "04-control-flow-early-return-33",
-  "title": "Nested guard pattern",
-  "starterCode": "function processRequest(request) {\n  if (!request) return 'no request';\n  if (!request.method) return 'no method';\n  if (request.method !== 'GET' && request.method !== 'POST') return 'invalid method';\n  return `processing ${request.method}`;\n}\nconsole.log(processRequest({ method: 'POST' }));",
-  "solution": "function processRequest(request) {\n  if (!request) return 'no request';\n  if (!request.method) return 'no method';\n  if (request.method !== 'GET' && request.method !== 'POST') return 'invalid method';\n  return `processing ${request.method}`;\n}\nconsole.log(processRequest({ method: 'POST' }));",
+  "id": "04-control-flow-02-early-return-33",
+  "title": "Guard for number operations",
+  "starterCode": "// function clamp(val, min, max) mein teen numbers do\n// Agar koi bhi non-number: null\n// Val < min: min, Val > max: max, Baaki: val\n",
+  "solution": "function clamp(val, min, max) {\n  if (typeof val !== \"number\" || typeof min !== \"number\" || typeof max !== \"number\") return null\n  if (val < min) return min\n  if (val > max) return max\n  return val\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "processing POST"
+      "input": [
+        5,
+        0,
+        10
+      ],
+      "expected": 5
+    },
+    {
+      "input": [
+        -5,
+        0,
+        10
+      ],
+      "expected": 0
+    },
+    {
+      "input": [
+        15,
+        0,
+        10
+      ],
+      "expected": 10
+    },
+    {
+      "input": [
+        "a",
+        0,
+        10
+      ],
+      "expected": null
     }
   ],
   "hints": [
-    "request is truthy",
-    "method exists",
-    "POST is valid"
+    "Teeno parameters ka type check karo",
+    "Min/max boundaries enforce karo"
   ]
 }

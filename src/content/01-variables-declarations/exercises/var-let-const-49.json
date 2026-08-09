@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-var-let-const-49",
+  "title": "Optional chaining scope",
+  "starterCode": "const user = { address: { city: \"NY\" } }\nreturn user?.address?.zip\n",
+  "solution": "const user = { address: { city: \"NY\" } }\nreturn user?.address?.zip",
+  "tests": [
+    {
+      "input": []
+    }
+  ],
+  "hints": [
+    "?. returns undefined instead of throwing error",
+    "user.address.zip would throw, ?. handles it gracefully"
+  ]
+}

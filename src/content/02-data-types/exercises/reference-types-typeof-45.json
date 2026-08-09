@@ -1,16 +1,16 @@
 {
-  "id": "02-data-types-reference-types-typeof-45",
-  "title": "Array destructuring copies values",
-  "starterCode": "const arr = [1, 2, 3];\nconst [a, b] = arr;\nconsole.log(a, b);",
-  "solution": "const arr = [1, 2, 3];\nconst [a, b] = arr;\nconsole.log(a, b);",
+  "id": "02-data-types-02-reference-types-typeof-45",
+  "title": "Promise.any basic",
+  "starterCode": "const promises = [\n  new Promise((_, reject) => setTimeout(() => reject(\"slow\"), 100)),\n  new Promise(resolve => setTimeout(() => resolve(\"fast\"), 50)),\n  new Promise(resolve => setTimeout(() => resolve(\"faster\"), 30))\n]\nconst result = await Promise.any(promises)\nreturn result\n",
+  "solution": "const promises = [\n  new Promise((_, reject) => setTimeout(() => reject(\"slow\"), 100)),\n  new Promise(resolve => setTimeout(() => resolve(\"fast\"), 50)),\n  new Promise(resolve => setTimeout(() => resolve(\"faster\"), 30))\n]\nconst result = await Promise.any(promises)\nreturn result",
   "tests": [
     {
       "input": [],
-      "expected": "1 2"
+      "expected": "faster"
     }
   ],
   "hints": [
-    "Array destructuring extracts by position",
-    "Values are copied, not referenced"
+    "Promise.any pehla resolved promise return karta hai",
+    "Agar sab reject ho jayein to AggregateError throw hota hai"
   ]
 }

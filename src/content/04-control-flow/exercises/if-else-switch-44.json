@@ -1,16 +1,36 @@
 {
-  "id": "04-control-flow-if-else-switch-44",
-  "title": "Switch expression with arrow function",
-  "starterCode": "const getStatus = (code) => {\n  switch (code) {\n    case 200: return 'success';\n    case 404: return 'not found';\n    default: return 'error';\n  }\n};\nconsole.log(getStatus(200));",
-  "solution": "const getStatus = (code) => {\n  switch (code) {\n    case 200: return 'success';\n    case 404: return 'not found';\n    default: return 'error';\n  }\n};\nconsole.log(getStatus(200));",
+  "id": "04-control-flow-01-if-else-switch-44",
+  "title": "Switch se currency symbol",
+  "starterCode": "// function currencySymbol(code) mein string code do\n// \"INR\": \"₹\", \"USD\": \"$\", \"EUR\": \"€\", \"GBP\": \"£\"\n// Unknown: \"?\"\n",
+  "solution": "function currencySymbol(code) {\n  switch (code.toUpperCase()) {\n    case \"INR\": return \"₹\"\n    case \"USD\": return \"$\"\n    case \"EUR\": return \"€\"\n    case \"GBP\": return \"£\"\n    default: return \"?\"\n  }\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "success"
+      "input": [
+        "INR"
+      ],
+      "expected": "₹"
+    },
+    {
+      "input": [
+        "usd"
+      ],
+      "expected": "$"
+    },
+    {
+      "input": [
+        "eur"
+      ],
+      "expected": "€"
+    },
+    {
+      "input": [
+        "jpy"
+      ],
+      "expected": "?"
     }
   ],
   "hints": [
-    "Arrow function with switch",
-    "200 matches case 200"
+    "toUpperCase se case-insensitive comparison hota hai",
+    "Default case mein ? return karo"
   ]
 }

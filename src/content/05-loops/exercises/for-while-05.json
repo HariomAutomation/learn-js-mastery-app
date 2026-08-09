@@ -1,16 +1,24 @@
 {
-  "id": "05-loops-for-while-05",
-  "title": "Break Statement",
-  "starterCode": "for (let i = 0; i < 10; i++) {\n  if (i === 5) break;\n  console.log(i);\n}",
-  "solution": "for (let i = 0; i < 10; i++) {\n  if (i === 5) break;\n  console.log(i);\n}",
+  "id": "05-01-for-while-05",
+  "title": "Break use karke array me target dhundho",
+  "starterCode": "function findIndex(arr, target) {\n  // TODO: arr me target ka index dhundho using for loop with break\n}",
+  "solution": "function findIndex(arr, target) {\n  for (let i = 0; i < arr.length; i++) {\n    if (arr[i] === target) return i;\n  }\n  return -1;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "0\n1\n2\n3\n4"
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4
+        ],
+        3
+      ],
+      "expected": 2
     }
   ],
   "hints": [
-    "Use break to exit loop",
-    "Check condition before break"
+    "Milte hi return karo — automatically break ho jayega",
+    "Nahi mila toh -1 return karo"
   ]
 }

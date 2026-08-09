@@ -1,16 +1,19 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-48",
-  "title": "Array to string conversion",
-  "starterCode": "console.log([1, 2, 3] + '');",
-  "solution": "console.log([1, 2, 3] + '');",
+  "id": "02-data-types-03-coercion-truthy-falsy-48",
+  "title": "Proxy preventExtensions trap",
+  "starterCode": "const data = new Proxy({ name: \"Hariom\" }, {\n  preventExtensions(target) {\n    return Object.preventExtensions(target)\n  }\n})\nObject.preventExtensions(data)\ntry {\n  data.age = 25\n} catch(e) {}\nreturn {\n  hasName: \"name\" in data,\n  hasAge: \"age\" in data\n}\n",
+  "solution": "const data = new Proxy({ name: \"Hariom\" }, {\n  preventExtensions(target) {\n    return Object.preventExtensions(target)\n  }\n})\nObject.preventExtensions(data)\ntry {\n  data.age = 25\n} catch(e) {}\nreturn {\n  hasName: \"name\" in data,\n  hasAge: \"age\" in data\n}",
   "tests": [
     {
       "input": [],
-      "expected": "1,2,3"
+      "expected": {
+        "hasName": true,
+        "hasAge": false
+      }
     }
   ],
   "hints": [
-    "Arrays use join with comma",
-    "Default join uses commas"
+    "Proxy preventExtensions trap extensions prevent karta hai",
+    "Naye properties add nahi ho sakte"
   ]
 }

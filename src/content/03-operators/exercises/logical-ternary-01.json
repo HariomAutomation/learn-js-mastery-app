@@ -1,16 +1,16 @@
 {
-  "id": "03-operators-logical-ternary-01",
-  "title": "Logical AND with truthy values",
-  "starterCode": "const result = true && 42;\nconsole.log(result);",
-  "solution": "const result = true && 42;\nconsole.log(result);",
+  "id": "03-operators-02-logical-ternary-01",
+  "title": "AND operator practical",
+  "starterCode": "// User login check: dono conditions true honi chahiye\nconst isLoggedIn = true\nconst hasPermission = false\n// TODO: access check karo\n",
+  "solution": "const isLoggedIn = true\nconst hasPermission = false\nconst canAccess = isLoggedIn && hasPermission\nreturn canAccess",
   "tests": [
     {
       "input": [],
-      "expected": "42"
+      "expected": false
     }
   ],
   "hints": [
-    "&& returns first falsy or last value",
-    "Both are truthy, so returns last"
+    "&& dono true hone pe true deta hai",
+    "Ek bhi false ho to false"
   ]
 }

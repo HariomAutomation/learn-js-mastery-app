@@ -1,15 +1,22 @@
 {
   "id": "01-variables-declarations-scope-hoisting-28",
-  "title": "TDZ reference error",
-  "starterCode": "try {\n  x = 1\n  let x\n} catch(e) {\n  console.log(\"error\")\n}",
-  "solution": "try {\n  x = 1\n  let x\n} catch(e) {\n  console.log(\"error\")\n}",
+  "title": "Destructuring scope",
+  "starterCode": "const obj = { a: 1, b: 2, c: 3 }\nconst { a, ...rest } = obj\nreturn { a, rest }\n",
+  "solution": "const obj = { a: 1, b: 2, c: 3 }\nconst { a, ...rest } = obj\nreturn { a, rest }",
   "tests": [
     {
       "input": [],
-      "expected": "error"
+      "expected": {
+        "a": 1,
+        "rest": {
+          "b": 2,
+          "c": 3
+        }
+      }
     }
   ],
   "hints": [
-    "let is in TDZ before declaration"
+    "...rest collects remaining properties",
+    "a = 1, rest = {b: 2, c: 3}"
   ]
 }

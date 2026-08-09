@@ -1,16 +1,20 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-35",
-  "title": "Space string is truthy",
-  "starterCode": "console.log(Boolean(\" \"));",
-  "solution": "console.log(Boolean(\" \"));",
+  "id": "02-data-types-03-coercion-truthy-falsy-35",
+  "title": "Logical assignment operators",
+  "starterCode": "let a = 0\nlet b = \"\"\nlet c = \"hello\"\na ||= \"default\"\nb ||= \"default\"\nc ||= \"default\"\nreturn { a, b, c }\n",
+  "solution": "let a = 0\nlet b = \"\"\nlet c = \"hello\"\na ||= \"default\"\nb ||= \"default\"\nc ||= \"default\"\nreturn { a, b, c }",
   "tests": [
     {
       "input": [],
-      "expected": "true"
+      "expected": {
+        "a": "default",
+        "b": "default",
+        "c": "hello"
+      }
     }
   ],
   "hints": [
-    "A space is a character",
-    "Non-empty strings are truthy"
+    "||= sirf falsy value pe assign karta hai",
+    "Truthy value pe kuch nahi hota"
   ]
 }

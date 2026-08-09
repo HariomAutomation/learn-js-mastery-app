@@ -1,16 +1,19 @@
 {
-  "id": "02-data-types-reference-types-typeof-25",
-  "title": "Reference sharing in function",
-  "starterCode": "function modify(obj) { obj.x = 10; }\nconst a = { x: 1 };\nmodify(a);\nconsole.log();",
-  "solution": "function modify(obj) { obj.x = 10; }\nconst a = { x: 1 };\nmodify(a);\nconsole.log(a.x);",
+  "id": "02-data-types-02-reference-types-typeof-25",
+  "title": "Computed property names",
+  "starterCode": "const prop = \"age\"\nconst method = \"get\" + \"Name\"\nconst obj = {\n  name: \"Hariom\",\n  [prop]: 25,\n  [method]() { return this.name }\n}\nreturn {\n  age: obj.age,\n  name: obj.getName()\n}\n",
+  "solution": "const prop = \"age\"\nconst method = \"get\" + \"Name\"\nconst obj = {\n  name: \"Hariom\",\n  [prop]: 25,\n  [method]() { return this.name }\n}\nreturn {\n  age: obj.age,\n  name: obj.getName()\n}",
   "tests": [
     {
       "input": [],
-      "expected": "10"
+      "expected": {
+        "age": 25,
+        "name": "Hariom"
+      }
     }
   ],
   "hints": [
-    "Objects are passed by reference",
-    "Modifying inside affects the original"
+    "[] brackets mein expression daal sakte ho",
+    "Computed names runtime pe evaluate hote hain"
   ]
 }

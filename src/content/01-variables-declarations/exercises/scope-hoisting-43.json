@@ -1,0 +1,17 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-43",
+  "title": "FinalizationRegistry",
+  "starterCode": "let cleaned = false\nconst reg = new FinalizationRegistry(() => { cleaned = true })\nlet obj = {}\nreg.register(obj)\nobj = null\nreturn cleaned\n",
+  "solution": "let cleaned = false\nconst reg = new FinalizationRegistry(() => { cleaned = true })\nlet obj = {}\nreg.register(obj)\nobj = null\nreturn cleaned",
+  "tests": [
+    {
+      "input": [],
+      "expected": false
+    }
+  ],
+  "hints": [
+    "FinalizationRegistry callback runs on GC",
+    "GC timing is not deterministic",
+    "cleaned may still be false synchronously"
+  ]
+}

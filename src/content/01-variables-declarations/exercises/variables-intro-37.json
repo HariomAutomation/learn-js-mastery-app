@@ -1,0 +1,22 @@
+{
+  "id": "01-variables-declarations-variables-intro-37",
+  "title": "Count word frequency",
+  "starterCode": "// String mein har word ki frequency count karo\n// wordCount(\"hello hello world\") = {hello: 2, world: 1}\nfunction wordCount(str) {\n  // TODO\n}",
+  "solution": "function wordCount(str) {\n  return str.split(\" \").reduce((count, word) => {\n    count[word] = (count[word] || 0) + 1\n    return count\n  }, {})\n}",
+  "tests": [
+    {
+      "input": [
+        "hello hello world"
+      ],
+      "expected": {
+        "hello": 2,
+        "word": 1,
+        "world": 1
+      }
+    }
+  ],
+  "hints": [
+    "split se words alag karo",
+    "Reduce se object build karo"
+  ]
+}

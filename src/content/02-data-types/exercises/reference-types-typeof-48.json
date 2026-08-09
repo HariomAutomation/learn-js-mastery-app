@@ -1,16 +1,19 @@
 {
-  "id": "02-data-types-reference-types-typeof-48",
-  "title": "Frozen object can't be modified",
-  "starterCode": "const obj = Object.freeze({ x: 1 });\nobj.x = 2;\nconsole.log();",
-  "solution": "const obj = Object.freeze({ x: 1 });\nobj.x = 2;\nconsole.log(obj.x);",
+  "id": "02-data-types-02-reference-types-typeof-48",
+  "title": "Object literal enhancement",
+  "starterCode": "const name = \"Hariom\"\nconst age = 25\nconst greet = function() { return \"Hello!\" }\nconst user = { name, age, greet, toString() { return this.name } }\nreturn {\n  str: user.toString(),\n  hello: user.greet()\n}\n",
+  "solution": "const name = \"Hariom\"\nconst age = 25\nconst greet = function() { return \"Hello!\" }\nconst user = { name, age, greet, toString() { return this.name } }\nreturn {\n  str: user.toString(),\n  hello: user.greet()\n}",
   "tests": [
     {
       "input": [],
-      "expected": "1"
+      "expected": {
+        "str": "Hariom",
+        "hello": "Hello!"
+      }
     }
   ],
   "hints": [
-    "freeze prevents modifications",
-    "Silently fails in non-strict mode"
+    "Shorthand properties: { name } instead of { name: name }",
+    "Method shorthand: greet() {} instead of greet: function() {}"
   ]
 }

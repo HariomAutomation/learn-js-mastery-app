@@ -1,15 +1,19 @@
 {
   "id": "01-variables-declarations-scope-hoisting-11",
-  "title": "Inner outer scope",
-  "starterCode": "var x = 1\nfunction test() {\n  console.log(x)\n}\ntest()",
-  "solution": "var x = 1\nfunction test() {\n  console.log(x)\n}\ntest()",
+  "title": "Multiple closures from same function",
+  "starterCode": "function makeAdder(n) {\n  return (x) => x + n\n}\nconst add5 = makeAdder(5)\nconst add10 = makeAdder(10)\nreturn [add5(1), add10(1)]\n",
+  "solution": "function makeAdder(n) {\n  return (x) => x + n\n}\nconst add5 = makeAdder(5)\nconst add10 = makeAdder(10)\nreturn [add5(1), add10(1)]",
   "tests": [
     {
       "input": [],
-      "expected": "1"
+      "expected": [
+        6,
+        11
+      ]
     }
   ],
   "hints": [
-    "Inner scope can access outer"
+    "Each closure has its own n",
+    "add5 captures n=5, add10 captures n=10"
   ]
 }

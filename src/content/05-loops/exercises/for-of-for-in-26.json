@@ -1,16 +1,22 @@
 {
-  "id": "05-loops-for-of-for-in-26",
-  "title": "Key Value Pair",
-  "starterCode": "const obj = {name: 'Bob', job: 'dev'};\nfor (const [k, v] of Object.entries(obj)) {\n  console.log(k + ' = ' + v);\n}",
-  "solution": "const obj = {name: 'Bob', job: 'dev'};\nfor (const [k, v] of Object.entries(obj)) {\n  console.log(k + ' = ' + v);\n}",
+  "id": "05-02-for-of-for-in-26",
+  "title": "For-in se object ka deep clone banao",
+  "starterCode": "function deepClone(obj) {\n  // TODO: manually deep clone karo without JSON methods\n}",
+  "solution": "function deepClone(obj) {\n  if (typeof obj !== \"object\" || obj === null) return obj;\n  const clone = Array.isArray(obj) ? [] : {};\n  for (const key in obj) {\n    if (Object.prototype.hasOwnProperty.call(obj, key)) {\n      clone[key] = deepClone(obj[key]);\n    }\n  }\n  return clone;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "name = Bob\njob = dev"
+      "input": [
+        {
+          "a": {
+            "b": 1
+          }
+        }
+      ],
+      "expected": "{\"a\":{\"b\":1}}"
     }
   ],
   "hints": [
-    "Destructure entries",
-    "Format output"
+    "Recursion use karo nested values ke liye",
+    "Array.isArray se array/object differentiate karo"
   ]
 }

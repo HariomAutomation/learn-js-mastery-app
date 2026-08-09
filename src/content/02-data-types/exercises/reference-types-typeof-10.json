@@ -1,16 +1,23 @@
 {
-  "id": "02-data-types-reference-types-typeof-10",
-  "title": "Use instanceof for type checking",
-  "starterCode": "const d = new Date();\nconsole.log();",
-  "solution": "const d = new Date();\nconsole.log(d instanceof Date);",
+  "id": "02-data-types-02-reference-types-typeof-10",
+  "title": "Mutable vs immutable data",
+  "starterCode": "const str = \"hello\"\ntry { str[0] = \"H\" } catch(e) {}\nconst arr = [1, 2, 3]\narr[0] = 100\nreturn {\n  strUnchanged: str,\n  arrChanged: arr\n}\n",
+  "solution": "const str = \"hello\"\ntry { str[0] = \"H\" } catch(e) {}\nconst arr = [1, 2, 3]\narr[0] = 100\nreturn {\n  strUnchanged: str,\n  arrChanged: arr\n}",
   "tests": [
     {
       "input": [],
-      "expected": "true"
+      "expected": {
+        "strUnchanged": "hello",
+        "arrChanged": [
+          100,
+          2,
+          3
+        ]
+      }
     }
   ],
   "hints": [
-    "instanceof checks prototype chain",
-    "Returns true for Date objects"
+    "Strings immutable hain — modify nahi ho sakti",
+    "Arrays mutable hain — elements change ho sakte hain"
   ]
 }

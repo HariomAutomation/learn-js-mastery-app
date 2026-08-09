@@ -1,16 +1,25 @@
 {
-  "id": "05-loops-for-while-18",
-  "title": "While Parsing Input",
-  "starterCode": "let num = 12345;\nlet digits = 0;\nwhile (num > 0) {\n  digits++;\n  num = Math.floor(num / 10);\n}\nconsole.log(digits);",
-  "solution": "let num = 12345;\nlet digits = 0;\nwhile (num > 0) {\n  digits++;\n  num = Math.floor(num / 10);\n}\nconsole.log(digits);",
+  "id": "05-01-for-while-18",
+  "title": "For loop se array rotate karo",
+  "starterCode": "function rotateRight(arr, k) {\n  // TODO: array ko k positions right se rotate karo\n  // [1,2,3,4,5], 2 -> [4,5,1,2,3]\n}",
+  "solution": "function rotateRight(arr, k) {\n  const n = arr.length;\n  const result = [];\n  for (let i = 0; i < n; i++) {\n    result.push(arr[(i - k % n + n) % n]);\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "5"
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        2
+      ],
+      "expected": "4,5,1,2,3"
     }
   ],
   "hints": [
-    "Divide by 10 to remove last digit",
-    "Count each iteration"
+    "Modulo se index wrap karo",
+    "Formula: (i - k % n + n) % n"
   ]
 }

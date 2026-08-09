@@ -1,16 +1,22 @@
 {
-  "id": "05-loops-for-while-49",
-  "title": "While String Reverse",
-  "starterCode": "const str = \"world\";\nlet rev = \"\";\nlet i = str.length - 1;\nwhile (i >= 0) {\n  rev += str[i];\n  i--;\n}\nconsole.log(rev);",
-  "solution": "const str = \"world\";\nlet rev = \"\";\nlet i = str.length - 1;\nwhile (i >= 0) {\n  rev += str[i];\n  i--;\n}\nconsole.log(rev);",
+  "id": "05-01-for-while-49",
+  "title": "Nested loop se array ke pairs aur unka difference nikalo",
+  "starterCode": "function allPairs(arr) {\n  // TODO: sab pairs aur unka absolute difference\n}",
+  "solution": "function allPairs(arr) {\n  const result = [];\n  for (let i = 0; i < arr.length; i++) {\n    for (let j = i + 1; j < arr.length; j++) {\n      result.push({ pair: [arr[i], arr[j]], diff: Math.abs(arr[i] - arr[j]) });\n    }\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "dlrow"
+      "input": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": "pair:[1,2],diff:1,pair:[1,3],diff:2,pair:[2,3],diff:1"
     }
   ],
   "hints": [
-    "Start at last index",
-    "Decrement to 0"
+    "Nested loop se pairs banao",
+    "Math.abs se difference nikalo"
   ]
 }

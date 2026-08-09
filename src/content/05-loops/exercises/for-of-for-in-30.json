@@ -1,16 +1,21 @@
 {
-  "id": "05-loops-for-of-for-in-30",
-  "title": "Map Size",
-  "starterCode": "const map = new Map([['a', 1], ['b', 2], ['c', 3]]);\nlet count = 0;\nfor (const [k, v] of map) {\n  count++;\n}\nconsole.log(count);",
-  "solution": "const map = new Map([['a', 1], ['b', 2], ['c', 3]]);\nlet count = 0;\nfor (const [k, v] of map) {\n  count++;\n}\nconsole.log(count);",
+  "id": "05-02-for-of-for-in-30",
+  "title": "For-in se object ko reverse karo",
+  "starterCode": "function reverseObject(obj) {\n  // TODO: keys aur values swap karo\n  // {a:1,b:2} -> {1:\"a\",2:\"b\"}\n}",
+  "solution": "function reverseObject(obj) {\n  const result = {};\n  for (const key in obj) {\n    if (Object.prototype.hasOwnProperty.call(obj, key)) {\n      result[obj[key]] = key;\n    }\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "3"
+      "input": [
+        {
+          "a": 1,
+          "b": 2
+        }
+      ],
+      "expected": "{\"1\":\"a\",\"2\":\"b\"}"
     }
   ],
   "hints": [
-    "Count iterations",
-    "Map.size also works"
+    "Values ko keys banao aur keys ko values",
+    "HasOwnProperty check mat bhoolna"
   ]
 }

@@ -1,16 +1,16 @@
 {
-  "id": "02-data-types-primitive-types-42",
-  "title": "Use indexOf to find position",
-  "starterCode": "const str = \"Hello\";\nconsole.log();",
-  "solution": "const str = \"Hello\";\nconsole.log(str.indexOf(\"ll\"));",
+  "id": "02-data-types-01-primitive-types-42",
+  "title": "Tagged template literal",
+  "starterCode": "function highlight(strings, ...values) {\n  return strings.reduce((result, str, i) => {\n    return result + str + (values[i] ? `[${values[i]}]` : \"\")\n  }, \"\")\n}\nconst name = \"Hariom\"\nconst age = 25\nreturn highlight`My name is ${name} and I am ${age} years old`\n",
+  "solution": "function highlight(strings, ...values) {\n  return strings.reduce((result, str, i) => {\n    return result + str + (values[i] ? `[${values[i]}]` : \"\")\n  }, \"\")\n}\nconst name = \"Hariom\"\nconst age = 25\nreturn highlight`My name is ${name} and I am ${age} years old`",
   "tests": [
     {
       "input": [],
-      "expected": "2"
+      "expected": "My name is [Hariom] and I am [25] years old"
     }
   ],
   "hints": [
-    "indexOf returns the position",
-    "Positions start at 0"
+    "Tagged template mein function pehle aata hai",
+    "strings array aur values array alag milte hain"
   ]
 }

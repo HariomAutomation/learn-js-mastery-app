@@ -1,16 +1,18 @@
 {
-  "id": "05-loops-for-while-41",
-  "title": "Pyramid With Numbers",
-  "starterCode": "for (let i = 1; i <= 5; i++) {\n  let row = '';\n  for (let j = 0; j < 5 - i; j++) row += ' ';\n  for (let k = 1; k <= i; k++) row += k + ' ';\n  console.log(row);\n}",
-  "solution": "for (let i = 1; i <= 5; i++) {\n  let row = '';\n  for (let j = 0; j < 5 - i; j++) row += ' ';\n  for (let k = 1; k <= i; k++) row += k + ' ';\n  console.log(row);\n}",
+  "id": "05-01-for-while-41",
+  "title": "While loop se string me words count karo",
+  "starterCode": "function wordCount(str) {\n  // TODO: string me kitne words hain\n}",
+  "solution": "function wordCount(str) {\n  if (!str.trim()) return 0;\n  let count = 1;\n  let inWord = false;\n  for (const char of str) {\n    if (char === \" \" || char === \"\\t\") {\n      inWord = false;\n    } else if (!inWord) {\n      if (count > 1 || inWord === false) count++;\n      inWord = true;\n    }\n  }\n  return str.trim() ? count : 0;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "    1 \n  1 2 \n1 2 3 \n1 2 3 4 \n1 2 3 4 5 "
+      "input": [
+        "hello world foo"
+      ],
+      "expected": 4
     }
   ],
   "hints": [
-    "Add leading spaces",
-    "Print numbers 1 to i"
+    "Space to non-space transition pe count badhao",
+    "Edge cases handle karo — empty string"
   ]
 }

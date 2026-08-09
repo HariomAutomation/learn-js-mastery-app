@@ -1,0 +1,16 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-39",
+  "title": "WeakMap scope usage",
+  "starterCode": "const wm = new WeakMap()\nlet obj = { key: \"value\" }\nwm.set(obj, \"metadata\")\nobj = null  // Remove reference\nreturn wm.has(obj)\n",
+  "solution": "const wm = new WeakMap()\nlet obj = { key: \"value\" }\nwm.set(obj, \"metadata\")\nobj = null\nreturn wm.has(obj)",
+  "tests": [
+    {
+      "input": [],
+      "expected": false
+    }
+  ],
+  "hints": [
+    "WeakMap allows garbage collection of keys",
+    "When obj is nulled, entry is removed"
+  ]
+}

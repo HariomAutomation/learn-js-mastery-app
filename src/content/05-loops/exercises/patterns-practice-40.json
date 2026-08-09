@@ -1,16 +1,25 @@
 {
-  "id": "05-loops-patterns-practice-40",
-  "title": "Digit Sum While",
-  "starterCode": "let num = 987;\nlet sum = 0;\nwhile (num > 0) {\n  sum += num % 10;\n  num = Math.floor(num / 10);\n}\nconsole.log(sum);",
-  "solution": "let num = 987;\nlet sum = 0;\nwhile (num > 0) {\n  sum += num % 10;\n  num = Math.floor(num / 10);\n}\nconsole.log(sum);",
+  "id": "05-03-patterns-practice-40",
+  "title": "Array ke pairs dhundho jinka absolute difference k ho",
+  "starterCode": "function findPairs(arr, k) {\n  // TODO: jisme |a-b| = k ho\n}",
+  "solution": "function findPairs(arr, k) {\n  const set = new Set(arr);\n  const pairs = [];\n  for (const num of set) {\n    if (set.has(num + k)) pairs.push([num, num + k]);\n  }\n  return pairs;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "24"
+      "input": [
+        [
+          1,
+          5,
+          3,
+          4,
+          2
+        ],
+        2
+      ],
+      "expected": "1,3,2,4,3,5"
     }
   ],
   "hints": [
-    "Extract digits",
-    "Sum them"
+    "Set use karo O(1) lookup ke liye",
+    "Har num ke liye num+k check karo"
   ]
 }

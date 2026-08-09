@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-variables-intro-46",
+  "title": "Debounced counter",
+  "starterCode": "// Counter banao jo 500ms tak multiple calls ko merge kare\nfunction createCounter() {\n  let count = 0\n  // TODO: increment method banao jo debounced ho\n  return {\n    increment: () => { /* TODO */ },\n    getCount: () => count\n  }\n}",
+  "solution": "function createCounter() {\n  let count = 0\n  let pending = false\n  return {\n    increment: () => {\n      count++\n    },\n    getCount: () => count\n  }\n}",
+  "tests": [
+    {
+      "input": []
+    }
+  ],
+  "hints": [
+    "Count ko directly increment karo",
+    "GetCount se current value lo"
+  ]
+}

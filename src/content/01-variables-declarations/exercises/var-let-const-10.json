@@ -1,15 +1,19 @@
 {
   "id": "01-variables-declarations-var-let-const-10",
-  "title": "Loop var vs let",
-  "starterCode": "for (var i = 0; i < 3; i++) {\n  setTimeout(() => console.log(i), 0)\n}",
-  "solution": "for (var i = 0; i < 3; i++) {\n  setTimeout(() => console.log(i), 0)\n}",
+  "title": "Bug: for-loop var closure",
+  "starterCode": "// All should print 0, 1, 2 but prints 3, 3, 3\nvar funcs = []\nfor (var i = 0; i < 3; i++) {\n  funcs.push(function() { return i })\n}\nreturn [funcs[0](), funcs[1](), funcs[2]()]\n",
+  "solution": "let funcs = []\nfor (let i = 0; i < 3; i++) {\n  funcs.push(function() { return i })\n}\nreturn [funcs[0](), funcs[1](), funcs[2]()]",
   "tests": [
     {
       "input": [],
-      "expected": "3\n3\n3"
+      "expected": [
+        0,
+        1,
+        2
+      ]
     }
   ],
   "hints": [
-    "var is shared across iterations"
+    "var se i shared hota hai, let se per-iteration hota hai"
   ]
 }

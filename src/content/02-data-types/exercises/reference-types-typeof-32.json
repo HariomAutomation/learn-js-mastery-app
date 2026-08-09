@@ -1,16 +1,19 @@
 {
-  "id": "02-data-types-reference-types-typeof-32",
-  "title": "Date is object",
-  "starterCode": "const d = new Date();\nconsole.log();",
-  "solution": "const d = new Date();\nconsole.log(typeof d);",
+  "id": "02-data-types-02-reference-types-typeof-32",
+  "title": "Spread in function call",
+  "starterCode": "const numbers = [5, 3, 8, 1, 9, 2]\nconst min = Math.min(...numbers)\nconst max = Math.max(...numbers)\nreturn { min, max }\n",
+  "solution": "const numbers = [5, 3, 8, 1, 9, 2]\nconst min = Math.min(...numbers)\nconst max = Math.max(...numbers)\nreturn { min, max }",
   "tests": [
     {
       "input": [],
-      "expected": "object"
+      "expected": {
+        "min": 1,
+        "max": 9
+      }
     }
   ],
   "hints": [
-    "Date objects are objects",
-    "instanceof is better for checking"
+    "...arr se array elements individual arguments ban jate hain",
+    "Math.min/max spread se kaam karta hai"
   ]
 }

@@ -1,16 +1,39 @@
 {
-  "id": "02-data-types-primitive-types-49",
-  "title": "Use trim to remove whitespace",
-  "starterCode": "const str = \"  hello  \";\nconsole.log();",
-  "solution": "const str = \"  hello  \";\nconsole.log(str.trim());",
+  "id": "02-data-types-01-primitive-types-49",
+  "title": "structuredClone deep copy",
+  "starterCode": "const original = {\n  name: \"Hariom\",\n  address: { city: \"Jaipur\", pin: 302001 },\n  hobbies: [\"coding\", \"reading\"]\n}\nconst clone = structuredClone(original)\nclone.name = \"Amit\"\nclone.address.city = \"Delhi\"\nreturn {\n  original: original,\n  clone: clone\n}\n",
+  "solution": "const original = {\n  name: \"Hariom\",\n  address: { city: \"Jaipur\", pin: 302001 },\n  hobbies: [\"coding\", \"reading\"]\n}\nconst clone = structuredClone(original)\nclone.name = \"Amit\"\nclone.address.city = \"Delhi\"\nreturn {\n  original: original,\n  clone: clone\n}",
   "tests": [
     {
       "input": [],
-      "expected": "hello"
+      "expected": {
+        "original": {
+          "name": "Hariom",
+          "address": {
+            "city": "Jaipur",
+            "pin": 302001
+          },
+          "hobbies": [
+            "coding",
+            "reading"
+          ]
+        },
+        "clone": {
+          "name": "Amit",
+          "address": {
+            "city": "Delhi",
+            "pin": 302001
+          },
+          "hobbies": [
+            "coding",
+            "reading"
+          ]
+        }
+      }
     }
   ],
   "hints": [
-    "trim removes spaces from both ends",
-    "It doesn't modify the original"
+    "structuredClone deeply nested objects bhi clone karta hai",
+    "Original object affect nahi hota"
   ]
 }

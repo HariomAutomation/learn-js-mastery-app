@@ -1,16 +1,23 @@
 {
-  "id": "03-operators-logical-ternary-44",
-  "title": "Logical OR default pattern",
-  "starterCode": "function greet(name) {\n  const displayName = name || 'Guest';\n  return `Hello, ${displayName}!`;\n}\nconsole.log(greet(''));",
-  "solution": "function greet(name) {\n  const displayName = name || 'Guest';\n  return `Hello, ${displayName}!`;\n}\nconsole.log(greet(''));",
+  "id": "03-operators-02-logical-ternary-44",
+  "title": "Conditional array mapping",
+  "starterCode": "// Numbers ko map karo with condition\nconst nums = [1, 2, 3, 4, 5, 6]\n// TODO: even ka square, odd ka double\n",
+  "solution": "const nums = [1, 2, 3, 4, 5, 6]\nreturn nums.map(n => n % 2 === 0 ? n * n : n * 2)",
   "tests": [
     {
       "input": [],
-      "expected": "Hello, Guest!"
+      "expected": [
+        2,
+        4,
+        6,
+        16,
+        10,
+        36
+      ]
     }
   ],
   "hints": [
-    "'' is falsy",
-    "|| returns 'Guest'"
+    "map mein ternary use karo",
+    "Even check: n % 2 === 0"
   ]
 }

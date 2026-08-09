@@ -1,15 +1,16 @@
 {
-  "id": "03-operators-arithmetic-comparison-25",
-  "title": "Greater than or equal",
-  "starterCode": "const result = 5 >= 5;\nconsole.log(result);",
-  "solution": "const result = 5 >= 5;\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-25",
+  "title": "Compound assignment *= ",
+  "starterCode": "// Price 200 hai, 3 items ka total nikalo\nlet price = 200\n// TODO: *= use karo\n",
+  "solution": "let price = 200\nprice *= 3\nreturn price",
   "tests": [
     {
       "input": [],
-      "expected": "true"
+      "expected": 600
     }
   ],
   "hints": [
-    ">= checks if left is greater than or equal to right"
+    "price *= 3 same as price = price * 3",
+    "200 * 3 = 600"
   ]
 }

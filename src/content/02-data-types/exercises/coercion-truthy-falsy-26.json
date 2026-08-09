@@ -1,16 +1,19 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-26",
-  "title": "Falsy 0 vs truthy string 0",
-  "starterCode": "console.log(0 == \"0\");",
-  "solution": "console.log(0 == \"0\");",
+  "id": "02-data-types-03-coercion-truthy-falsy-26",
+  "title": "Proxy set with coercion",
+  "starterCode": "const numObj = new Proxy({ val: 0 }, {\n  set(target, prop, value) {\n    if (typeof value !== \"number\") {\n      throw new TypeError(\"Only numbers allowed\")\n    }\n    target[prop] = value\n    return true\n  }\n})\nnumObj.val = 42\ntry { numObj.val = \"42\" } catch(e) { return { val: numObj.val, error: e.message } }\nreturn { val: numObj.val }\n",
+  "solution": "const numObj = new Proxy({ val: 0 }, {\n  set(target, prop, value) {\n    if (typeof value !== \"number\") {\n      throw new TypeError(\"Only numbers allowed\")\n    }\n    target[prop] = value\n    return true\n  }\n})\nnumObj.val = 42\ntry { numObj.val = \"42\" } catch(e) { return { val: numObj.val, error: e.message } }\nreturn { val: numObj.val }",
   "tests": [
     {
       "input": [],
-      "expected": "true"
+      "expected": {
+        "val": 42,
+        "error": "Only numbers allowed"
+      }
     }
   ],
   "hints": [
-    "== coerces types",
-    "0 and '0' are loosely equal"
+    "Proxy set trap type validation ke liye useful hai",
+    "Throw se assignment prevent hoti hai"
   ]
 }

@@ -1,15 +1,15 @@
 {
   "id": "01-variables-declarations-var-let-const-06",
-  "title": "const object mutation",
-  "starterCode": "const obj = { a: 1 }\nobj.a = 2\nconsole.log(obj.a)",
-  "solution": "const obj = { a: 1 }\nobj.a = 2\nconsole.log(obj.a)",
+  "title": "Bug: shadowing confusion",
+  "starterCode": "var x = 1\nfunction test() {\n  console.log(x)  // Should be 1, not undefined\n  var x = 2\n}\ntest()\nreturn 1\n",
+  "solution": "var x = 1\nfunction test() {\n  console.log(x)\n  var x = 2\n}\ntest()\nreturn 1",
   "tests": [
     {
       "input": [],
-      "expected": "2"
+      "expected": 1
     }
   ],
   "hints": [
-    "const allows property mutation"
+    "var x = 2 declaration hoists, so x is undefined in the function"
   ]
 }

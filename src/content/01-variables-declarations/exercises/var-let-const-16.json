@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-var-let-const-16",
-  "title": "var while scope",
-  "starterCode": "var i = 0\nwhile (i < 3) {\n  var result = i\n  i++\n}\nconsole.log(result)",
-  "solution": "var i = 0\nwhile (i < 3) {\n  var result = i\n  i++\n}\nconsole.log(result)",
+  "title": "Nested scope resolution",
+  "starterCode": "var x = \"global\"\nfunction outer() {\n  var x = \"outer\"\n  function inner() {\n    var x = \"inner\"\n    return x\n  }\n  return inner()\n}\nreturn outer()\n",
+  "solution": "var x = \"global\"\nfunction outer() {\n  var x = \"outer\"\n  function inner() {\n    var x = \"inner\"\n    return x\n  }\n  return inner()\n}\nreturn outer()",
   "tests": [
     {
       "input": [],
-      "expected": "2"
+      "expected": "inner"
     }
   ],
   "hints": [
-    "var leaks out of loop"
+    "Scope chain: inner > outer > global",
+    "Sabse paas wala x choose hota hai"
   ]
 }

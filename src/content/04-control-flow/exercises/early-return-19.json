@@ -1,16 +1,41 @@
 {
-  "id": "04-control-flow-early-return-19",
-  "title": "Guard function - no email",
-  "starterCode": "function isValidEmail(email) {\n  if (!email) return false;\n  if (typeof email !== 'string') return false;\n  return email.includes('@');\n}\nconsole.log(isValidEmail(''));",
-  "solution": "function isValidEmail(email) {\n  if (!email) return false;\n  if (typeof email !== 'string') return false;\n  return email.includes('@');\n}\nconsole.log(isValidEmail(''));",
+  "id": "04-control-flow-02-early-return-19",
+  "title": "Guard for array operations",
+  "starterCode": "// function getMax(arr) mein array do\n// Agar array nahi ya empty: null\n// Agar koi non-number: \"Invalid element\"\n// Warna maximum value do\n",
+  "solution": "function getMax(arr) {\n  if (!Array.isArray(arr) || arr.length === 0) return null\n  if (arr.some(item => typeof item !== \"number\")) return \"Invalid element\"\n  return Math.max(...arr)\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "false"
+      "input": [
+        [
+          3,
+          1,
+          4,
+          1,
+          5,
+          9
+        ]
+      ],
+      "expected": 9
+    },
+    {
+      "input": [
+        []
+      ],
+      "expected": null
+    },
+    {
+      "input": [
+        [
+          1,
+          "two",
+          3
+        ]
+      ],
+      "expected": "Invalid element"
     }
   ],
   "hints": [
-    "'' is falsy",
-    "First guard returns false"
+    "Spread operator se array Math.max mein pass hota hai",
+    "Guard clause pehle array validate karo"
   ]
 }

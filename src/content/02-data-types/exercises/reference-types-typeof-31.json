@@ -1,16 +1,16 @@
 {
-  "id": "02-data-types-reference-types-typeof-31",
-  "title": "Array is object",
-  "starterCode": "const arr = [1, 2, 3];\nconsole.log();",
-  "solution": "const arr = [1, 2, 3];\nconsole.log(typeof arr);",
+  "id": "02-data-types-02-reference-types-typeof-31",
+  "title": "Function parameter destructuring",
+  "starterCode": "function printUser({ name, age, city = \"Unknown\" }) {\n  return name + \" (\" + age + \") from \" + city\n}\nreturn printUser({ name: \"Hariom\", age: 25, city: \"Jaipur\" })\n",
+  "solution": "function printUser({ name, age, city = \"Unknown\" }) {\n  return name + \" (\" + age + \") from \" + city\n}\nreturn printUser({ name: \"Hariom\", age: 25, city: \"Jaipur\" })",
   "tests": [
     {
       "input": [],
-      "expected": "object"
+      "expected": "Hariom (25) from Jaipur"
     }
   ],
   "hints": [
-    "typeof arr returns 'object'",
-    "Use Array.isArray for proper check"
+    "Function parameters mein direct destructuring kar sakte ho",
+    "Default values se missing properties handle hoti hain"
   ]
 }

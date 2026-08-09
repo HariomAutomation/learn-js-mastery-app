@@ -1,16 +1,21 @@
 {
-  "id": "02-data-types-reference-types-typeof-03",
-  "title": "Check typeof an object",
-  "starterCode": "const obj = { a: 1 };\nconsole.log();",
-  "solution": "const obj = { a: 1 };\nconsole.log(typeof obj);",
+  "id": "02-data-types-02-reference-types-typeof-03",
+  "title": "Shallow copy vs deep copy",
+  "starterCode": "const original = { a: 1, b: { c: 2, d: 3 } }\nconst shallow = { ...original }\nshallow.a = 100\nshallow.b.c = 999\nreturn {\n  originalA: original.a,\n  originalBC: original.b.c,\n  shallowA: shallow.a,\n  shallowBC: shallow.b.c\n}\n",
+  "solution": "const original = { a: 1, b: { c: 2, d: 3 } }\nconst shallow = { ...original }\nshallow.a = 100\nshallow.b.c = 999\nreturn {\n  originalA: original.a,\n  originalBC: original.b.c,\n  shallowA: shallow.a,\n  shallowBC: shallow.b.c\n}",
   "tests": [
     {
       "input": [],
-      "expected": "object"
+      "expected": {
+        "originalA": 1,
+        "originalBC": 999,
+        "shallowA": 100,
+        "shallowBC": 999
+      }
     }
   ],
   "hints": [
-    "typeof returns 'object' for objects",
-    "Objects and arrays both return 'object'"
+    "Spread sirf shallow copy deta hai",
+    "Nested objects reference share karte hain"
   ]
 }

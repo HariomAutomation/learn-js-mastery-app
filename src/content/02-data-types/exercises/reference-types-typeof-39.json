@@ -1,16 +1,38 @@
 {
-  "id": "02-data-types-reference-types-typeof-39",
-  "title": "Null is object (typeof bug)",
-  "starterCode": "console.log();",
-  "solution": "console.log(typeof null);",
+  "id": "02-data-types-02-reference-types-typeof-39",
+  "title": "Immutability patterns",
+  "starterCode": "const state = { user: { name: \"Hariom\", scores: [10, 20, 30] } }\nconst newState = {\n  ...state,\n  user: {\n    ...state.user,\n    name: \"Amit\",\n    scores: [...state.user.scores, 40]\n  }\n}\nreturn {\n  original: state,\n  updated: newState\n}\n",
+  "solution": "const state = { user: { name: \"Hariom\", scores: [10, 20, 30] } }\nconst newState = {\n  ...state,\n  user: {\n    ...state.user,\n    name: \"Amit\",\n    scores: [...state.user.scores, 40]\n  }\n}\nreturn {\n  original: state,\n  updated: newState\n}",
   "tests": [
     {
       "input": [],
-      "expected": "object"
+      "expected": {
+        "original": {
+          "user": {
+            "name": "Hariom",
+            "scores": [
+              10,
+              20,
+              30
+            ]
+          }
+        },
+        "updated": {
+          "user": {
+            "name": "Amit",
+            "scores": [
+              10,
+              20,
+              30,
+              40
+            ]
+          }
+        }
+      }
     }
   ],
   "hints": [
-    "This is a well-known bug",
-    "It's been there since JS was created"
+    "Spread operator se shallow copy banao",
+    "Nested update ke liye nested spread use karo"
   ]
 }

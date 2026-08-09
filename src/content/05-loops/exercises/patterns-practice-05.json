@@ -1,16 +1,34 @@
 {
-  "id": "05-loops-patterns-practice-05",
-  "title": "Factorial Loop",
-  "starterCode": "let n = 6;\nlet fact = 1;\nfor (let i = 1; i <= n; i++) {\n  fact *= i;\n}\nconsole.log(fact);",
-  "solution": "let n = 6;\nlet fact = 1;\nfor (let i = 1; i <= n; i++) {\n  fact *= i;\n}\nconsole.log(fact);",
+  "id": "05-03-patterns-practice-05",
+  "title": "Nested loop se matrix me boundary elements nikalo",
+  "starterCode": "function boundaryElements(matrix) {\n  // TODO: matrix ke boundary elements ka array do\n}",
+  "solution": "function boundaryElements(matrix) {\n  if (!matrix.length) return [];\n  const result = [];\n  const rows = matrix.length, cols = matrix[0].length;\n  for (let i = 0; i < rows; i++) {\n    for (let j = 0; j < cols; j++) {\n      if (i === 0 || i === rows-1 || j === 0 || j === cols-1) {\n        result.push(matrix[i][j]);\n      }\n    }\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "720"
+      "input": [
+        [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            4,
+            5,
+            6
+          ],
+          [
+            7,
+            8,
+            9
+          ]
+        ]
+      ],
+      "expected": "1,2,3,4,6,7,8,9"
     }
   ],
   "hints": [
-    "Multiply from 1 to n",
-    "Start with 1"
+    "First/last row ya first/last column pe boundary hai",
+    "Condition check karo"
   ]
 }

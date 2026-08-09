@@ -1,16 +1,22 @@
 {
-  "id": "03-operators-logical-ternary-07",
-  "title": "Double NOT truthy value",
-  "starterCode": "const result = !!42;\nconsole.log(result);",
-  "solution": "const result = !!42;\nconsole.log(result);",
+  "id": "03-operators-02-logical-ternary-07",
+  "title": "Ternary operator basic",
+  "starterCode": "// Age check karo — adult ya minor\nconst age = 20\n// TODO: ternary use karo\n",
+  "solution": "const age = 20\nconst status = age >= 18 ? \"Adult\" : \"Minor\"\nreturn status",
   "tests": [
     {
       "input": [],
-      "expected": "true"
+      "expected": "Adult"
+    },
+    {
+      "input": [
+        15
+      ],
+      "expected": "Minor"
     }
   ],
   "hints": [
-    "!! converts to boolean",
-    "42 is truthy, so result is true"
+    "condition ? trueValue : falseValue",
+    "age >= 18 true hai to Adult"
   ]
 }

@@ -1,16 +1,16 @@
 {
-  "id": "03-operators-arithmetic-comparison-45",
-  "title": "parseInt",
-  "starterCode": "const result = parseInt(\"42px\");\nconsole.log(result);",
-  "solution": "const result = parseInt(\"42px\");\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-45",
+  "title": "Compound interest calculate",
+  "starterCode": "// Principal 5000, Rate 10%, Time 2 years, compounding yearly\n// A = P(1 + R/100)^T\nconst principal = 5000\nconst rate = 10\nconst time = 2\n// TODO: compound interest nikalo\n",
+  "solution": "const principal = 5000\nconst rate = 10\nconst time = 2\nconst amount = principal * Math.pow(1 + rate / 100, time)\nconst ci = amount - principal\nreturn ci",
   "tests": [
     {
       "input": [],
-      "expected": "42"
+      "expected": 1050
     }
   ],
   "hints": [
-    "parseInt parses until non-numeric",
-    "Stops at 'p'"
+    "A = P(1 + R/100)^T",
+    "CI = Amount - Principal"
   ]
 }

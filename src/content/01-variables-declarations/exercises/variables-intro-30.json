@@ -1,15 +1,15 @@
 {
   "id": "01-variables-declarations-variables-intro-30",
-  "title": "Object.fromEntries",
-  "starterCode": "const obj = Object.fromEntries([[\"a\",1],[\"b\",2]])\nconsole.log(obj)",
-  "solution": "const obj = Object.fromEntries([[\"a\",1],[\"b\",2]])\nconsole.log(obj)",
+  "title": "Debounce function banao",
+  "starterCode": "// Debounce function banao jo delay ms tak wait kare\n// Agar dobara call ho to pehla call cancel ho\nfunction debounce(fn, delay) {\n  // TODO\n}",
+  "solution": "function debounce(fn, delay) {\n  let timer\n  return function(...args) {\n    clearTimeout(timer)\n    timer = setTimeout(() => fn(...args), delay)\n  }\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "{\"a\":1,\"b\":2}"
+      "input": []
     }
   ],
   "hints": [
-    "fromEntries converts [key,value] pairs"
+    "setTimeout use karo",
+    "Purana timer clearTimeout se cancel karo"
   ]
 }

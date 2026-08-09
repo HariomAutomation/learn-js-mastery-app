@@ -1,16 +1,21 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-15",
-  "title": "Double NOT for boolean conversion",
-  "starterCode": "console.log(!!\"hello\");",
-  "solution": "console.log(!!\"hello\");",
+  "id": "02-data-types-03-coercion-truthy-falsy-15",
+  "title": "== vs === behavior",
+  "starterCode": "const a = \"42\"\nconst b = 42\nreturn {\n  looseEqual: a == b,\n  strictEqual: a === b,\n  looseNullUndef: null == undefined,\n  strictNullUndef: null === undefined\n}\n",
+  "solution": "const a = \"42\"\nconst b = 42\nreturn {\n  looseEqual: a == b,\n  strictEqual: a === b,\n  looseNullUndef: null == undefined,\n  strictNullUndef: null === undefined\n}",
   "tests": [
     {
       "input": [],
-      "expected": "true"
+      "expected": {
+        "looseEqual": true,
+        "strictEqual": false,
+        "looseNullUndef": true,
+        "strictNullUndef": false
+      }
     }
   ],
   "hints": [
-    "! converts to boolean and negates",
-    "Double NOT restores original truthiness"
+    "== type coercion karta hai",
+    "=== strictly compare karta hai"
   ]
 }

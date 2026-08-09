@@ -1,16 +1,18 @@
 {
-  "id": "02-data-types-primitive-types-25",
-  "title": "Check type of a string with typeof",
-  "starterCode": "const name = \"Alice\";\nconsole.log();",
-  "solution": "const name = \"Alice\";\nconsole.log(typeof name);",
+  "id": "02-data-types-01-primitive-types-25",
+  "title": "Optional chaining basic",
+  "starterCode": "const user = { profile: { address: { city: \"Mumbai\" } } }\nconst city1 = user.profile?.address?.city\nconst zip = user.profile?.address?.zip\nconst phone = user.contact?.phone\nreturn { city1, zip, phone }\n",
+  "solution": "const user = { profile: { address: { city: \"Mumbai\" } } }\nconst city1 = user.profile?.address?.city\nconst zip = user.profile?.address?.zip\nconst phone = user.contact?.phone\nreturn { city1, zip, phone }",
   "tests": [
     {
       "input": [],
-      "expected": "string"
+      "expected": {
+        "city1": "Mumbai"
+      }
     }
   ],
   "hints": [
-    "typeof returns a string of the type",
-    "Use typeof operator before the variable"
+    "?. operator se safe access hota hai",
+    "Agar path exist nahi karta to undefined return hota hai"
   ]
 }

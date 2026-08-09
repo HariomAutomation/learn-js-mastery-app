@@ -1,0 +1,19 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-41",
+  "title": "Proxy scope trap",
+  "starterCode": "const handler = {\n  get: (obj, prop) => prop in obj ? obj[prop] : \"not found\"\n}\nconst proxy = new Proxy({ a: 1 }, handler)\nreturn [proxy.a, proxy.b]\n",
+  "solution": "const handler = {\n  get: (obj, prop) => prop in obj ? obj[prop] : \"not found\"\n}\nconst proxy = new Proxy({ a: 1 }, handler)\nreturn [proxy.a, proxy.b]",
+  "tests": [
+    {
+      "input": [],
+      "expected": [
+        1,
+        "not found"
+      ]
+    }
+  ],
+  "hints": [
+    "Proxy intercepts property access",
+    "handler.get checks if property exists"
+  ]
+}

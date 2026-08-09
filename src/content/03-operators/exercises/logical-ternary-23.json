@@ -1,16 +1,19 @@
 {
-  "id": "03-operators-logical-ternary-23",
-  "title": "Logical OR assignment with truthy",
-  "starterCode": "let x = \"hello\";\nx ||= \"default\";\nconsole.log(x);",
-  "solution": "let x = \"hello\";\nx ||= \"default\";\nconsole.log(x);",
+  "id": "03-operators-02-logical-ternary-23",
+  "title": "Conditional property inclusion",
+  "starterCode": "// Object mein conditionally property add karo\nconst isAdmin = true\nconst user = {\n  name: \"Hariom\",\n  // TODO: isAdmin ho to role add karo\n}\nreturn user",
+  "solution": "const isAdmin = true\nconst user = {\n  name: \"Hariom\",\n  ...(isAdmin && { role: \"admin\" })\n}\nreturn user",
   "tests": [
     {
       "input": [],
-      "expected": "hello"
+      "expected": {
+        "name": "Hariom",
+        "role": "admin"
+      }
     }
   ],
   "hints": [
-    "x is truthy, so assignment doesn't happen",
-    "x stays as 'hello'"
+    "Spread operator se properties add hoti hain",
+    "&& false ho to empty object spread hota hai"
   ]
 }

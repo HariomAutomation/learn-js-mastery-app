@@ -1,16 +1,18 @@
 {
-  "id": "05-loops-for-while-03",
-  "title": "While Loop Basics",
-  "starterCode": "let i = 0;\nwhile (i < 5) {\n  console.log(i);\n  i++;\n}",
-  "solution": "let i = 0;\nwhile (i < 5) {\n  console.log(i);\n  i++;\n}",
+  "id": "05-01-for-while-03",
+  "title": "Prime number check karo using loop",
+  "starterCode": "function isPrime(n) {\n  // TODO: n prime hai ya nahi check karo\n}",
+  "solution": "function isPrime(n) {\n  if (n < 2) return false;\n  for (let i = 2; i * i <= n; i++) {\n    if (n % i === 0) return false;\n  }\n  return true;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "0\n1\n2\n3\n4"
+      "input": [
+        7
+      ],
+      "expected": "true"
     }
   ],
   "hints": [
-    "Initialize counter before loop",
-    "Increment inside loop"
+    "2 se kam numbers prime nahi hain",
+    "Sirf sqrt(n) tak check karo"
   ]
 }

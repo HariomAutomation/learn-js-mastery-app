@@ -1,17 +1,36 @@
 {
-  "id": "04-control-flow-early-return-08",
-  "title": "Multiple exit points - moderator",
-  "starterCode": "function getRole(user) {\n  if (!user) return 'anonymous';\n  if (user.isAdmin) return 'admin';\n  if (user.isMod) return 'moderator';\n  return 'user';\n}\nconsole.log(getRole({ isMod: true }));",
-  "solution": "function getRole(user) {\n  if (!user) return 'anonymous';\n  if (user.isAdmin) return 'admin';\n  if (user.isMod) return 'moderator';\n  return 'user';\n}\nconsole.log(getRole({ isMod: true }));",
+  "id": "04-control-flow-02-early-return-08",
+  "title": "Guard clause for email validation",
+  "starterCode": "// function isValidEmail(email) mein string do\n// Agar string nahi ya empty: false\n// Agar @ nahi hai: false\n// Agar . nahi hai @ ke baad: false\n// Warna true\n",
+  "solution": "function isValidEmail(email) {\n  if (typeof email !== \"string\" || email.length === 0) return false\n  if (!email.includes(\"@\")) return false\n  const afterAt = email.split(\"@\")[1]\n  if (!afterAt || !afterAt.includes(\".\")) return false\n  return true\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "moderator"
+      "input": [
+        "test@test.com"
+      ],
+      "expected": true
+    },
+    {
+      "input": [
+        "invalid"
+      ],
+      "expected": false
+    },
+    {
+      "input": [
+        ""
+      ],
+      "expected": false
+    },
+    {
+      "input": [
+        "test@"
+      ],
+      "expected": false
     }
   ],
   "hints": [
-    "user is truthy",
-    "isAdmin is undefined (falsy)",
-    "isMod is true"
+    "Pehle type check karo",
+    "Phir @ aur . check karo"
   ]
 }

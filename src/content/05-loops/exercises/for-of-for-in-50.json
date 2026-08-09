@@ -1,16 +1,23 @@
 {
-  "id": "05-loops-for-of-for-in-50",
-  "title": "For...In Object In",
-  "starterCode": "const obj = {a: 1, b: 2};\nconsole.log('a' in obj);\nconsole.log('c' in obj);",
-  "solution": "const obj = {a: 1, b: 2};\nconsole.log('a' in obj);\nconsole.log('c' in obj);",
+  "id": "05-02-for-of-for-in-50",
+  "title": "For-in se object ke sab keys/values pairs ko flatten karo",
+  "starterCode": "function flattenEntries(obj) {\n  // TODO: {a:1,b:{c:2}} -> [[\"a\",1],[\"b.c\",2]]\n}",
+  "solution": "function flattenEntries(obj, prefix = \"\") {\n  const result = [];\n  for (const key in obj) {\n    if (!Object.prototype.hasOwnProperty.call(obj, key)) continue;\n    const fullKey = prefix ? prefix + \".\" + key : key;\n    if (typeof obj[key] === \"object\" && obj[key] !== null && !Array.isArray(obj[key])) {\n      result.push(...flattenEntries(obj[key], fullKey));\n    } else {\n      result.push([fullKey, obj[key]]);\n    }\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "true\nfalse"
+      "input": [
+        {
+          "a": 1,
+          "b": {
+            "c": 2
+          }
+        }
+      ],
+      "expected": "[[\"a\",1],[\"b.c\",2]]"
     }
   ],
   "hints": [
-    "in operator checks key",
-    "Returns boolean"
+    "Prefix use karo nested keys ke liye",
+    "Primitive value milne pe entry add karo"
   ]
 }

@@ -1,16 +1,34 @@
 {
-  "id": "02-data-types-reference-types-typeof-01",
-  "title": "Create an object literal",
-  "starterCode": "const person = ;\nconsole.log(person.name);",
-  "solution": "const person = { name: \"Alice\", age: 25 };\nconsole.log(person.name);",
+  "id": "02-data-types-02-reference-types-typeof-01",
+  "title": "Array type check",
+  "starterCode": "function isArray(val) {\n  // TODO\n}\n",
+  "solution": "function isArray(val) {\n  return Array.isArray(val)\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "Alice"
+      "input": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "input": [
+        "hello"
+      ],
+      "expected": false
+    },
+    {
+      "input": [
+        {}
+      ],
+      "expected": false
     }
   ],
   "hints": [
-    "Objects use curly braces",
-    "Key-value pairs separated by commas"
+    "Array.isArray() sabse reliable hai",
+    "typeof [] 'object' return karta hai"
   ]
 }

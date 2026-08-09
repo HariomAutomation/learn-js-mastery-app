@@ -1,0 +1,26 @@
+{
+  "id": "01-variables-declarations-variables-intro-36",
+  "title": "Truncate string with ellipsis",
+  "starterCode": "// String ko maxLength tak truncate karo, agar cut ho to \"...\" lagao\n// truncate(\"Hello World\", 5) = \"Hello...\"\nfunction truncate(str, max) {\n  // TODO\n}",
+  "solution": "function truncate(str, max) {\n  if (str.length <= max) return str\n  return str.slice(0, max) + \"...\"\n}",
+  "tests": [
+    {
+      "input": [
+        "Hello World",
+        5
+      ],
+      "expected": "Hello..."
+    },
+    {
+      "input": [
+        "Hi",
+        10
+      ],
+      "expected": "Hi"
+    }
+  ],
+  "hints": [
+    "str.length > max check karo",
+    "slice(0, max) se pehle max characters lo"
+  ]
+}

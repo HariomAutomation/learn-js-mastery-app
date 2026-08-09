@@ -1,16 +1,36 @@
 {
-  "id": "04-control-flow-if-else-switch-05",
-  "title": "Nested if/else",
-  "starterCode": "const num = 15;\nif (num > 10) {\n  if (num > 20) {\n    console.log('large');\n  } else {\n    console.log('medium');\n  }\n} else {\n  console.log('small');\n}",
-  "solution": "const num = 15;\nif (num > 10) {\n  if (num > 20) {\n    console.log('large');\n  } else {\n    console.log('medium');\n  }\n} else {\n  console.log('small');\n}",
+  "id": "04-control-flow-01-if-else-switch-05",
+  "title": "Traffic light signal behavior",
+  "starterCode": "// function trafficLight(color) mein color string do\n// \"red\": \"Stop\", \"yellow\": \"Wait\", \"green\": \"Go\"\n// Invalid color ke liye \"Invalid color\" return karo\n",
+  "solution": "function trafficLight(color) {\n  if (color === \"red\") return \"Stop\"\n  else if (color === \"yellow\") return \"Wait\"\n  else if (color === \"green\") return \"Go\"\n  else return \"Invalid color\"\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "medium"
+      "input": [
+        "red"
+      ],
+      "expected": "Stop"
+    },
+    {
+      "input": [
+        "yellow"
+      ],
+      "expected": "Wait"
+    },
+    {
+      "input": [
+        "green"
+      ],
+      "expected": "Go"
+    },
+    {
+      "input": [
+        "blue"
+      ],
+      "expected": "Invalid color"
     }
   ],
   "hints": [
-    "15 > 10 is true, enter first block",
-    "15 > 20 is false, enter else"
+    "=== se exact string comparison karo",
+    "Default case mein error message do"
   ]
 }

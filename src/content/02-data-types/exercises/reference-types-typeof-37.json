@@ -1,16 +1,21 @@
 {
-  "id": "02-data-types-reference-types-typeof-37",
-  "title": "Object.assign merges",
-  "starterCode": "const a = { x: 1 };\nObject.assign(a, { y: 2 });\nconsole.log();",
-  "solution": "const a = { x: 1 };\nObject.assign(a, { y: 2 });\nconsole.log(a.y);",
+  "id": "02-data-types-02-reference-types-typeof-37",
+  "title": "Property existence check",
+  "starterCode": "const obj = { name: \"Hariom\", age: 25 }\nreturn {\n  dotAccess: obj.name !== undefined,\n  inOperator: \"age\" in obj,\n  hasOwn: Object.hasOwn(obj, \"name\"),\n  hasOwnProperty: obj.hasOwnProperty(\"city\"),\n  optionalChaining: obj?.city\n}\n",
+  "solution": "const obj = { name: \"Hariom\", age: 25 }\nreturn {\n  dotAccess: obj.name !== undefined,\n  inOperator: \"age\" in obj,\n  hasOwn: Object.hasOwn(obj, \"name\"),\n  hasOwnProperty: obj.hasOwnProperty(\"city\"),\n  optionalChaining: obj?.city\n}",
   "tests": [
     {
       "input": [],
-      "expected": "2"
+      "expected": {
+        "dotAccess": true,
+        "inOperator": true,
+        "hasOwn": true,
+        "hasOwnProperty": false
+      }
     }
   ],
   "hints": [
-    "Object.assign can add properties",
-    "It mutates the first argument"
+    "in operator prototype chain bhi check karta hai",
+    "Object.hasOwn() sirf own property check karta hai"
   ]
 }

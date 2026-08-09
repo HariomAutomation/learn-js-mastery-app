@@ -1,16 +1,20 @@
 {
-  "id": "05-loops-for-of-for-in-32",
-  "title": "Object Keys Count",
-  "starterCode": "const obj = {a: 1, b: 2, c: 3, d: 4};\nconsole.log(Object.keys(obj).length);",
-  "solution": "const obj = {a: 1, b: 2, c: 3, d: 4};\nconsole.log(Object.keys(obj).length);",
+  "id": "05-02-for-of-for-in-32",
+  "title": "For-in se object ke keys ko kebab-case me convert karo",
+  "starterCode": "function kebabKeys(obj) {\n  // TODO: keys ko kebab-case me convert karo\n  // {firstName:\"John\"} -> {\"first-name\":\"John\"}\n}",
+  "solution": "function kebabKeys(obj) {\n  const result = {};\n  for (const key in obj) {\n    if (!Object.prototype.hasOwnProperty.call(obj, key)) continue;\n    const kebab = key.replace(/([a-z])([A-Z])/g, \"$1-$2\").toLowerCase();\n    result[kebab] = obj[key];\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "4"
+      "input": [
+        {
+          "firstName": "John"
+        }
+      ],
+      "expected": "{\"first-name\":\"John\"}"
     }
   ],
   "hints": [
-    "Object.keys() returns array",
-    "Check length"
+    "CamelCase ke gaps me dash dalo",
+    "Regex se pattern match karo"
   ]
 }

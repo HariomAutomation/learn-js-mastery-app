@@ -1,16 +1,22 @@
 {
-  "id": "05-loops-patterns-practice-06",
-  "title": "Sum Of Digits",
-  "starterCode": "let num = 9876;\nlet sum = 0;\nwhile (num > 0) {\n  sum += num % 10;\n  num = Math.floor(num / 10);\n}\nconsole.log(sum);",
-  "solution": "let num = 9876;\nlet sum = 0;\nwhile (num > 0) {\n  sum += num % 10;\n  num = Math.floor(num / 10);\n}\nconsole.log(sum);",
+  "id": "05-03-patterns-practice-06",
+  "title": "Array ke second largest element dhundho",
+  "starterCode": "function secondLargest(arr) {\n  // TODO: array ka second largest element do\n}",
+  "solution": "function secondLargest(arr) {\n  let first = -Infinity, second = -Infinity;\n  for (const num of arr) {\n    if (num > first) {\n      second = first;\n      first = num;\n    } else if (num > second && num !== first) {\n      second = num;\n    }\n  }\n  return second === -Infinity ? undefined : second;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "30"
+      "input": [
+        5,
+        3,
+        8,
+        1,
+        9
+      ],
+      "expected": 8
     }
   ],
   "hints": [
-    "% 10 gets last digit",
-    "Floor divide by 10"
+    "Do variables track karo: first aur second",
+    "Har element ko dono se compare karo"
   ]
 }

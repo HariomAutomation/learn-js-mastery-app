@@ -1,16 +1,48 @@
 {
-  "id": "04-control-flow-if-else-switch-17",
-  "title": "Nested switch",
-  "starterCode": "const a = 1;\nconst b = 2;\nswitch (a) {\n  case 1:\n    switch (b) {\n      case 1:\n        console.log('both 1');\n        break;\n      case 2:\n        console.log('a=1 b=2');\n        break;\n    }\n    break;\n  case 2:\n    console.log('a=2');\n    break;\n}",
-  "solution": "const a = 1;\nconst b = 2;\nswitch (a) {\n  case 1:\n    switch (b) {\n      case 1:\n        console.log('both 1');\n        break;\n      case 2:\n        console.log('a=1 b=2');\n        break;\n    }\n    break;\n  case 2:\n    console.log('a=2');\n    break;\n}",
+  "id": "04-control-flow-01-if-else-switch-17",
+  "title": "Temperature description with nested if",
+  "starterCode": "// function tempDescription(tempC) mein Celsius do\n// >= 45: \"Extreme heat\", >=35: \"Very hot\", >=25: \"Warm\", >=15: \"Pleasant\", >=5: \"Cool\", <5: \"Cold\"\n",
+  "solution": "function tempDescription(tempC) {\n  if (tempC >= 45) return \"Extreme heat\"\n  else if (tempC >= 35) return \"Very hot\"\n  else if (tempC >= 25) return \"Warm\"\n  else if (tempC >= 15) return \"Pleasant\"\n  else if (tempC >= 5) return \"Cool\"\n  else return \"Cold\"\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "a=1 b=2"
+      "input": [
+        48
+      ],
+      "expected": "Extreme heat"
+    },
+    {
+      "input": [
+        38
+      ],
+      "expected": "Very hot"
+    },
+    {
+      "input": [
+        28
+      ],
+      "expected": "Warm"
+    },
+    {
+      "input": [
+        18
+      ],
+      "expected": "Pleasant"
+    },
+    {
+      "input": [
+        8
+      ],
+      "expected": "Cool"
+    },
+    {
+      "input": [
+        0
+      ],
+      "expected": "Cold"
     }
   ],
   "hints": [
-    "a is 1, enter first case",
-    "b is 2, enter inner case 2"
+    "Sabse pehle highest range check karo",
+    "Order matters — descending mein check karo"
   ]
 }

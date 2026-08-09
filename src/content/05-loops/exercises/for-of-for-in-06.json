@@ -1,16 +1,22 @@
 {
-  "id": "05-loops-for-of-for-in-06",
-  "title": "For...In Gives Indices",
-  "starterCode": "const arr = ['a', 'b', 'c'];\nfor (const i in arr) {\n  console.log(i + ': ' + arr[i]);\n}",
-  "solution": "const arr = ['a', 'b', 'c'];\nfor (const i in arr) {\n  console.log(i + ': ' + arr[i]);\n}",
+  "id": "05-02-for-of-for-in-06",
+  "title": "For-in se object ke values ko array me convert karo",
+  "starterCode": "function objectValues(obj) {\n  // TODO: for-in use karke object ke sab values ka array do\n}",
+  "solution": "function objectValues(obj) {\n  const values = [];\n  for (const key in obj) {\n    if (Object.prototype.hasOwnProperty.call(obj, key)) values.push(obj[key]);\n  }\n  return values;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "0: a\n1: b\n2: c"
+      "input": [
+        {
+          "a": 1,
+          "b": 2,
+          "c": 3
+        }
+      ],
+      "expected": "1,2,3"
     }
   ],
   "hints": [
-    "for...in on array gives indices",
-    "Indices are strings"
+    "For-in se key milti hai, obj[key] se value nikalo",
+    "hasOwnProperty check mat bhoolna"
   ]
 }

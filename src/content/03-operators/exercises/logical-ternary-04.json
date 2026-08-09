@@ -1,16 +1,22 @@
 {
-  "id": "03-operators-logical-ternary-04",
-  "title": "Logical OR with first falsy",
-  "starterCode": "const result = \"\" || \"default\";\nconsole.log(result);",
-  "solution": "const result = \"\" || \"default\";\nconsole.log(result);",
+  "id": "03-operators-02-logical-ternary-04",
+  "title": "Truthy value check",
+  "starterCode": "// User input hai, truthy hai ya nahi check karo\nconst input1 = \"hello\"\nconst input2 = \"\"\nconst input3 = 0\nconst input4 = \"0\"\nreturn {\n  i1: !!input1,\n  i2: !!input2,\n  i3: !!input3,\n  i4: !!input4\n}",
+  "solution": "const input1 = \"hello\"\nconst input2 = \"\"\nconst input3 = 0\nconst input4 = \"0\"\nreturn {\n  i1: !!input1,\n  i2: !!input2,\n  i3: !!input3,\n  i4: !!input4\n}",
   "tests": [
     {
       "input": [],
-      "expected": "default"
+      "expected": {
+        "i1": true,
+        "i2": false,
+        "i3": false,
+        "i4": true
+      }
     }
   ],
   "hints": [
-    "|| short-circuits on first truthy",
-    "Empty string is falsy"
+    "!! se boolean milta hai",
+    "Empty string aur 0 falsy hain",
+    "\"0\" string hai — truthy hai"
   ]
 }

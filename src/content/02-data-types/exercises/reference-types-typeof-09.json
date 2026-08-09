@@ -1,16 +1,21 @@
 {
-  "id": "02-data-types-reference-types-typeof-09",
-  "title": "Check typeof null (bug)",
-  "starterCode": "console.log();",
-  "solution": "console.log(typeof null);",
+  "id": "02-data-types-02-reference-types-typeof-09",
+  "title": "Pass by value vs reference",
+  "starterCode": "let x = 5\nlet y = x\ny = 10\nconst obj1 = { val: 5 }\nconst obj2 = obj1\nobj2.val = 10\nreturn {\n  x: x,\n  y: y,\n  obj1Val: obj1.val,\n  obj2Val: obj2.val\n}\n",
+  "solution": "let x = 5\nlet y = x\ny = 10\nconst obj1 = { val: 5 }\nconst obj2 = obj1\nobj2.val = 10\nreturn {\n  x: x,\n  y: y,\n  obj1Val: obj1.val,\n  obj2Val: obj2.val\n}",
   "tests": [
     {
       "input": [],
-      "expected": "object"
+      "expected": {
+        "x": 5,
+        "y": 10,
+        "obj1Val": 10,
+        "obj2Val": 10
+      }
     }
   ],
   "hints": [
-    "This is a historical bug",
-    "null should be 'null' but returns 'object'"
+    "Primitives by value copy hote hain",
+    "Objects by reference copy hote hain"
   ]
 }

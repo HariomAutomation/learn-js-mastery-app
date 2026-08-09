@@ -1,16 +1,25 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-09",
-  "title": "Check if object is truthy",
-  "starterCode": "if ({}) {\n  console.log('truthy');\n} else {\n  console.log('falsy');\n}",
-  "solution": "if ({}) {\n  console.log('truthy');\n} else {\n  console.log('falsy');\n}",
+  "id": "02-data-types-03-coercion-truthy-falsy-09",
+  "title": "String to number coercion edge cases",
+  "starterCode": "return {\n  emptyString: Number(\"\"),\n  spaceString: Number(\" \"),\n  trueString: Number(\"true\"),\n  hexString: Number(\"0xFF\"),\n  infinityString: Number(\"Infinity\"),\n  nullString: Number(null),\n  undefinedString: Number(undefined),\n  nanString: Number(\"hello\")\n}\n",
+  "solution": "return {\n  emptyString: Number(\"\"),\n  spaceString: Number(\" \"),\n  trueString: Number(\"true\"),\n  hexString: Number(\"0xFF\"),\n  infinityString: Number(\"Infinity\"),\n  nullString: Number(null),\n  undefinedString: Number(undefined),\n  nanString: Number(\"hello\")\n}",
   "tests": [
     {
       "input": [],
-      "expected": "truthy"
+      "expected": {
+        "emptyString": 0,
+        "spaceString": 0,
+        "trueString": null,
+        "hexString": 255,
+        "infinityString": null,
+        "nullString": 0,
+        "undefinedString": null,
+        "nanString": null
+      }
     }
   ],
   "hints": [
-    "Objects are always truthy",
-    "Even empty objects"
+    "Number('') = 0 hota hai",
+    "Number(null) = 0, Number(undefined) = NaN"
   ]
 }

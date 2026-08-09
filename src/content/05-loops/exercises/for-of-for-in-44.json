@@ -1,16 +1,22 @@
 {
-  "id": "05-loops-for-of-for-in-44",
-  "title": "For...In Prototype Skip",
-  "starterCode": "function Animal(name) { this.name = name; }\nAnimal.prototype.type = 'animal';\nconst cat = new Animal('Whiskers');\nfor (const key in cat) {\n  if (cat.hasOwnProperty(key)) {\n    console.log(key + ': ' + cat[key]);\n  }\n}",
-  "solution": "function Animal(name) { this.name = name; }\nAnimal.prototype.type = 'animal';\nconst cat = new Animal('Whiskers');\nfor (const key in cat) {\n  if (cat.hasOwnProperty(key)) {\n    console.log(key + ': ' + cat[key]);\n  }\n}",
+  "id": "05-02-for-of-for-in-44",
+  "title": "For-in se object ke values ko sorted array me do",
+  "starterCode": "function sortedValues(obj) {\n  // TODO: object ke values sorted array me return karo\n}",
+  "solution": "function sortedValues(obj) {\n  const values = [];\n  for (const key in obj) {\n    if (Object.prototype.hasOwnProperty.call(obj, key)) values.push(obj[key]);\n  }\n  return values.sort((a, b) => a - b);\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "name: Whiskers"
+      "input": [
+        {
+          "c": 3,
+          "a": 1,
+          "b": 2
+        }
+      ],
+      "expected": "1,2,3"
     }
   ],
   "hints": [
-    "prototype properties skipped",
-    "Only own properties"
+    "Values ka array banao",
+    "Number sort ke liye comparator use karo"
   ]
 }

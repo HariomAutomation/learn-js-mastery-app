@@ -1,16 +1,22 @@
 {
-  "id": "03-operators-logical-ternary-40",
-  "title": "Short circuit AND return value",
-  "starterCode": "const result = true && \"hello\";\nconsole.log(result);",
-  "solution": "const result = true && \"hello\";\nconsole.log(result);",
+  "id": "03-operators-02-logical-ternary-40",
+  "title": "Nested nullish coalescing",
+  "starterCode": "// Deep nested values with defaults\nconst config = {\n  db: { host: \"localhost\", port: null },\n  cache: undefined\n}\n// TODO: safe access with ??\n",
+  "solution": "const config = {\n  db: { host: \"localhost\", port: null },\n  cache: undefined\n}\nreturn {\n  host: config?.db?.host ?? \"default-host\",\n  port: config?.db?.port ?? 5432,\n  cache: config?.cache ?? { enabled: true }\n}",
   "tests": [
     {
       "input": [],
-      "expected": "hello"
+      "expected": {
+        "host": "localhost",
+        "port": 5432,
+        "cache": {
+          "enabled": true
+        }
+      }
     }
   ],
   "hints": [
-    "&& returns last value if all truthy",
-    "true is truthy, so returns 'hello'"
+    "?. se safe access, ?? se default",
+    "null bhi default lega"
   ]
 }

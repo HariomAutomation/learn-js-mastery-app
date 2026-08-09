@@ -1,16 +1,21 @@
 {
-  "id": "02-data-types-primitive-types-28",
-  "title": "Check typeof null (the famous bug)",
-  "starterCode": "console.log(typeof null);",
-  "solution": "console.log(typeof null);",
+  "id": "02-data-types-01-primitive-types-28",
+  "title": "Map data structure",
+  "starterCode": "const map = new Map()\nmap.set(\"name\", \"Hariom\")\nmap.set(42, \"answer\")\nmap.set(true, \"yes\")\nreturn {\n  name: map.get(\"name\"),\n  answer: map.get(42),\n  yes: map.get(true),\n  size: map.size\n}\n",
+  "solution": "const map = new Map()\nmap.set(\"name\", \"Hariom\")\nmap.set(42, \"answer\")\nmap.set(true, \"yes\")\nreturn {\n  name: map.get(\"name\"),\n  answer: map.get(42),\n  yes: map.get(true),\n  size: map.size\n}",
   "tests": [
     {
       "input": [],
-      "expected": "object"
+      "expected": {
+        "name": "Hariom",
+        "answer": "answer",
+        "yes": "yes",
+        "size": 3
+      }
     }
   ],
   "hints": [
-    "This is a known bug in JavaScript",
-    "It's been around since the beginning"
+    "Map kisi bhi type ki key accept karta hai",
+    "size property se count milta hai"
   ]
 }

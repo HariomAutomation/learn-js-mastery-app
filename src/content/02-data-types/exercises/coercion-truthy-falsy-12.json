@@ -1,16 +1,24 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-12",
-  "title": "String to number coercion with -",
-  "starterCode": "console.log(\"5\" - 3);",
-  "solution": "console.log(\"5\" - 3);",
+  "id": "02-data-types-03-coercion-truthy-falsy-12",
+  "title": "Unary plus conversion",
+  "starterCode": "return {\n  string: +\"42\",\n  boolean: +true,\n  null: +null,\n  undefined: +undefined,\n  emptyStr: +\"\",\n  nan: +\"hello\",\n  float: +\"3.14\"\n}\n",
+  "solution": "return {\n  string: +\"42\",\n  boolean: +true,\n  null: +null,\n  undefined: +undefined,\n  emptyStr: +\"\",\n  nan: +\"hello\",\n  float: +\"3.14\"\n}",
   "tests": [
     {
       "input": [],
-      "expected": "2"
+      "expected": {
+        "string": 42,
+        "boolean": 1,
+        "null": 0,
+        "undefined": null,
+        "emptyStr": 0,
+        "nan": null,
+        "float": 3.14
+      }
     }
   ],
   "hints": [
-    "- always does math",
-    "The string is converted to a number"
+    "+ operator sabse fast type coercion karta hai",
+    "+'' = 0, +null = 0, +undefined = NaN"
   ]
 }

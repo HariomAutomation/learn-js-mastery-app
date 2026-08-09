@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-var-let-const-04",
-  "title": "var hoisting",
-  "starterCode": "console.log(x)\nvar x = 5",
-  "solution": "console.log(x)\nvar x = 5",
+  "title": "Bug: var hoisting mystery",
+  "starterCode": "// Predict and fix the output\nconsole.log(a)  // What is this?\nvar a = 5\nreturn a\n",
+  "solution": "console.log(a)\nvar a = 5\nreturn a",
   "tests": [
     {
       "input": [],
-      "expected": "undefined"
+      "expected": 5
     }
   ],
   "hints": [
-    "var is hoisted but uninitialized"
+    "var hoisted hota hai with undefined",
+    "Assignment nahi hota sirf declaration"
   ]
 }

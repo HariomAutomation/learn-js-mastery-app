@@ -1,16 +1,22 @@
 {
-  "id": "05-loops-for-while-24",
-  "title": "Find Element In Loop",
-  "starterCode": "const arr = [5, 12, 8, 130, 44];\nfor (let i = 0; i < arr.length; i++) {\n  if (arr[i] > 10) {\n    console.log(arr[i]);\n    break;\n  }\n}",
-  "solution": "const arr = [5, 12, 8, 130, 44];\nfor (let i = 0; i < arr.length; i++) {\n  if (arr[i] > 10) {\n    console.log(arr[i]);\n    break;\n  }\n}",
+  "id": "05-01-for-while-24",
+  "title": "Break use karke array ke consecutive pairs dhundho",
+  "starterCode": "function hasConsecutive(arr) {\n  // TODO: array me koi do consecutive elements same hain ya nahi\n}",
+  "solution": "function hasConsecutive(arr) {\n  for (let i = 0; i < arr.length - 1; i++) {\n    if (arr[i] === arr[i + 1]) return true;\n  }\n  return false;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "12"
+      "input": [
+        1,
+        2,
+        3,
+        3,
+        4
+      ],
+      "expected": "true"
     }
   ],
   "hints": [
-    "Check each element",
-    "Break when found"
+    "Loop me i aur i+1 compare karo",
+    "Milte hi true return karo"
   ]
 }

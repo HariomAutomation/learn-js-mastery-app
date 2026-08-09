@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-variables-intro-13",
-  "title": "Array destructuring",
-  "starterCode": "const [a, b, c] = [10, 20, 30]\nconsole.log(a, c)",
-  "solution": "const [a, b, c] = [10, 20, 30]\nconsole.log(a, c)",
+  "title": "const reassign karne ki koshish",
+  "starterCode": "const x = 10\n// Neeche x ko 20 assign karne ki koshish karo\n// Wrap try-catch mein aur \"Cannot reassign\" return karo error mein\ntry {\n  x = 20\n} catch(e) {\n  // TODO\n}\n",
+  "solution": "const x = 10\ntry {\n  x = 20\n} catch(e) {\n  return \"Cannot reassign\"\n}",
   "tests": [
     {
       "input": [],
-      "expected": "10 30"
+      "expected": "Cannot reassign"
     }
   ],
   "hints": [
-    "Destructure by position"
+    "const variables reassign nahi ho sakti",
+    "catch block mein return karo error message"
   ]
 }

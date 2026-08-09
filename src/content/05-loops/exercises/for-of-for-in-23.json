@@ -1,16 +1,26 @@
 {
-  "id": "05-loops-for-of-for-in-23",
-  "title": "Map Iteration",
-  "starterCode": "const map = new Map();\nmap.set('name', 'Alice');\nmap.set('age', 25);\nfor (const [key, val] of map) {\n  console.log(key + ' is ' + val);\n}",
-  "solution": "const map = new Map();\nmap.set('name', 'Alice');\nmap.set('age', 25);\nfor (const [key, val] of map) {\n  console.log(key + ' is ' + val);\n}",
+  "id": "05-02-for-of-for-in-23",
+  "title": "For-of se array ke matrix banao from flat array",
+  "starterCode": "function toMatrix(arr, rowSize) {\n  // TODO: flat array ko matrix me convert karo\n  // [1,2,3,4,5,6], 2 -> [[1,2],[3,4],[5,6]]\n}",
+  "solution": "function toMatrix(arr, rowSize) {\n  const result = [];\n  for (let i = 0; i < arr.length; i += rowSize) {\n    result.push(arr.slice(i, i + rowSize));\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "name is Alice\nage is 25"
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        2
+      ],
+      "expected": "1,2,3,4,5,6"
     }
   ],
   "hints": [
-    "Destructure entries",
-    "Use template or concat"
+    "Loop me i ko rowSize se badhao",
+    "Slice se row nikalo"
   ]
 }

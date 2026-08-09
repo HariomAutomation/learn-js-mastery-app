@@ -1,16 +1,21 @@
 {
-  "id": "05-loops-for-of-for-in-16",
-  "title": "For...Of NodeList",
-  "starterCode": "const items = [10, 20, 30];\nfor (const item of items) {\n  console.log(item * 2);\n}",
-  "solution": "const items = [10, 20, 30];\nfor (const item of items) {\n  console.log(item * 2);\n}",
+  "id": "05-02-for-of-for-in-16",
+  "title": "For-in se object ko JSON-like string me convert karo",
+  "starterCode": "function customStringify(obj) {\n  // TODO: manually object ko string me convert karo without JSON.stringify\n}",
+  "solution": "function customStringify(obj) {\n  const parts = [];\n  for (const key in obj) {\n    if (!Object.prototype.hasOwnProperty.call(obj, key)) continue;\n    const value = typeof obj[key] === \"string\" ? `\"${obj[key]}\"` : obj[key];\n    parts.push(`\"${key}\":${value}`);\n  }\n  return `{${parts.join(\",\")}}`;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "20\n40\n60"
+      "input": [
+        {
+          "a": 1,
+          "b": "hi"
+        }
+      ],
+      "expected": "{\"a\":1,\"b\":\"hi\"}"
     }
   ],
   "hints": [
-    "NodeList is iterable",
-    "for...of works on it"
+    "String values ko quotes me wrap karo",
+    "Comma se parts join karo"
   ]
 }

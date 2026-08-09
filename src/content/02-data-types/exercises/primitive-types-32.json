@@ -1,16 +1,23 @@
 {
-  "id": "02-data-types-primitive-types-32",
-  "title": "Convert number to string with String()",
-  "starterCode": "const num = 42;\nconst str = ;\nconsole.log(str + 8);",
-  "solution": "const num = 42;\nconst str = String(num);\nconsole.log(str + 8);",
+  "id": "02-data-types-01-primitive-types-32",
+  "title": "Number.isNaN vs isNaN",
+  "starterCode": "return {\n  isNaNNaN: isNaN(NaN),\n  numberIsNaN: Number.isNaN(NaN),\n  isNaNString: isNaN(\"hello\"),\n  numberIsNaNString: Number.isNaN(\"hello\"),\n  isNaNUndefined: isNaN(undefined),\n  numberIsNaNUndefined: Number.isNaN(undefined)\n}\n",
+  "solution": "return {\n  isNaNNaN: isNaN(NaN),\n  numberIsNaN: Number.isNaN(NaN),\n  isNaNString: isNaN(\"hello\"),\n  numberIsNaNString: Number.isNaN(\"hello\"),\n  isNaNUndefined: isNaN(undefined),\n  numberIsNaNUndefined: Number.isNaN(undefined)\n}",
   "tests": [
     {
       "input": [],
-      "expected": "428"
+      "expected": {
+        "isNaNNaN": true,
+        "numberIsNaN": true,
+        "isNaNString": true,
+        "numberIsNaNString": false,
+        "isNaNUndefined": true,
+        "numberIsNaNUndefined": false
+      }
     }
   ],
   "hints": [
-    "String() converts to a string",
-    "String + number concatenates"
+    "isNaN pehle number mein convert karta hai",
+    "Number.isNaN sirf NaN ko detect karta hai"
   ]
 }

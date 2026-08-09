@@ -1,15 +1,19 @@
 {
   "id": "01-variables-declarations-var-let-const-23",
-  "title": "let block boundary for",
-  "starterCode": "for (let i = 0; i < 2; i++) {\n  let x = i * 10\n  console.log(x)\n}",
-  "solution": "for (let i = 0; i < 2; i++) {\n  let x = i * 10\n  console.log(x)\n}",
+  "title": "Multiple closures independent",
+  "starterCode": "function makeAdder(n) {\n  return function(x) { return x + n }\n}\nconst add5 = makeAdder(5)\nconst add10 = makeAdder(10)\nreturn [add5(3), add10(3)]\n",
+  "solution": "function makeAdder(n) {\n  return function(x) { return x + n }\n}\nconst add5 = makeAdder(5)\nconst add10 = makeAdder(10)\nreturn [add5(3), add10(3)]",
   "tests": [
     {
       "input": [],
-      "expected": "0\n10"
+      "expected": [
+        8,
+        13
+      ]
     }
   ],
   "hints": [
-    "let is scoped to loop block"
+    "Har closure ka apna n hota hai",
+    "add5(3) = 3+5=8, add10(3) = 3+10=13"
   ]
 }

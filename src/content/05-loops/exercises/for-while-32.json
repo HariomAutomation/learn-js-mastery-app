@@ -1,16 +1,25 @@
 {
-  "id": "05-loops-for-while-32",
-  "title": "Inverted Pyramid",
-  "starterCode": "for (let i = 5; i >= 1; i--) {\n  let row = '';\n  for (let j = 0; j < 5 - i; j++) row += ' ';\n  for (let k = 0; k < 2 * i - 1; k++) row += '* ';\n  console.log(row);\n}",
-  "solution": "for (let i = 5; i >= 1; i--) {\n  let row = '';\n  for (let j = 0; j < 5 - i; j++) row += ' ';\n  for (let k = 0; k < 2 * i - 1; k++) row += '* ';\n  console.log(row);\n}",
+  "id": "05-01-for-while-32",
+  "title": "Break use karke loop me early exit pattern implement karo",
+  "starterCode": "function findPair(arr, target) {\n  // TODO: do numbers ka sum target ke barabar ho — pair dhundho\n}",
+  "solution": "function findPair(arr, target) {\n  for (let i = 0; i < arr.length; i++) {\n    for (let j = i + 1; j < arr.length; j++) {\n      if (arr[i] + arr[j] === target) return [arr[i], arr[j]];\n    }\n  }\n  return null;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "* * * * * * * * * \n  * * * * * * * \n    * * * * * \n      * * * \n        * "
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        7
+      ],
+      "expected": "3,4"
     }
   ],
   "hints": [
-    "Decrease stars each row",
-    "Add spaces before stars"
+    "Nested loop se pairs banao",
+    "Sum target ke barabar hai toh return karo"
   ]
 }

@@ -1,15 +1,21 @@
 {
-  "id": "03-operators-arithmetic-comparison-30",
-  "title": "Math.floor",
-  "starterCode": "const result = Math.floor(4.9);\nconsole.log(result);",
-  "solution": "const result = Math.floor(4.9);\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-30",
+  "title": "Pre vs post increment",
+  "starterCode": "// Dono ka result alag hoga\nlet a = 5\nlet b = 5\nconst result1 = ++a\nconst result2 = b++\nreturn { a, b, result1, result2 }",
+  "solution": "let a = 5\nlet b = 5\nconst result1 = ++a\nconst result2 = b++\nreturn { a, b, result1, result2 }",
   "tests": [
     {
       "input": [],
-      "expected": "4"
+      "expected": {
+        "a": 6,
+        "b": 6,
+        "result1": 6,
+        "result2": 5
+      }
     }
   ],
   "hints": [
-    "Math.floor rounds down to nearest integer"
+    "++a pehle increment karta hai, phir value deta hai",
+    "b++ pehle value deta hai, phir increment hota hai"
   ]
 }

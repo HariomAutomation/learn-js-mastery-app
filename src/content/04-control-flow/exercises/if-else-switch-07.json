@@ -1,16 +1,36 @@
 {
-  "id": "04-control-flow-if-else-switch-07",
-  "title": "Switch with default",
-  "starterCode": "const day = 'Wednesday';\nswitch (day) {\n  case 'Monday':\n    console.log('Start');\n    break;\n  case 'Friday':\n    console.log('End');\n    break;\n  default:\n    console.log('Other');\n}",
-  "solution": "const day = 'Wednesday';\nswitch (day) {\n  case 'Monday':\n    console.log('Start');\n    break;\n  case 'Friday':\n    console.log('End');\n    break;\n  default:\n    console.log('Other');\n}",
+  "id": "04-control-flow-01-if-else-switch-07",
+  "title": "Switch se day of week name batao",
+  "starterCode": "// function dayName(day) mein number 0-6 do\n// 0: \"Sunday\", 1: \"Monday\", ..., 6: \"Saturday\"\n// Invalid ke liye \"Invalid day\"\n",
+  "solution": "function dayName(day) {\n  switch (day) {\n    case 0: return \"Sunday\"\n    case 1: return \"Monday\"\n    case 2: return \"Tuesday\"\n    case 3: return \"Wednesday\"\n    case 4: return \"Thursday\"\n    case 5: return \"Friday\"\n    case 6: return \"Saturday\"\n    default: return \"Invalid day\"\n  }\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "Other"
+      "input": [
+        0
+      ],
+      "expected": "Sunday"
+    },
+    {
+      "input": [
+        3
+      ],
+      "expected": "Wednesday"
+    },
+    {
+      "input": [
+        6
+      ],
+      "expected": "Saturday"
+    },
+    {
+      "input": [
+        7
+      ],
+      "expected": "Invalid day"
     }
   ],
   "hints": [
-    "Wednesday doesn't match any case",
-    "default executes"
+    "switch-case mein har day ke liye case likho",
+    "default se invalid handle karo"
   ]
 }

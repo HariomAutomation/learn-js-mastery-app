@@ -42,8 +42,13 @@ export function LessonViewer() {
 
   if (lesson === "loading") {
     return (
-      <div className="lesson-viewer">
-        <p>Loading lesson...</p>
+      <div className="lesson-viewer" aria-busy="true">
+        <div className="skeleton skeleton-badge" />
+        <div className="skeleton skeleton-title" />
+        <div className="skeleton skeleton-line" />
+        <div className="skeleton skeleton-line short" />
+        <div className="skeleton skeleton-line" />
+        <div className="skeleton skeleton-line half" />
       </div>
     )
   }

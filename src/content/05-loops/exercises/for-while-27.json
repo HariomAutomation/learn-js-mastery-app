@@ -1,16 +1,22 @@
 {
-  "id": "05-loops-for-while-27",
-  "title": "Sum Of Digits",
-  "starterCode": "let num = 123;\nlet sum = 0;\nwhile (num > 0) {\n  sum += num % 10;\n  num = Math.floor(num / 10);\n}\nconsole.log(sum);",
-  "solution": "let num = 123;\nlet sum = 0;\nwhile (num > 0) {\n  sum += num % 10;\n  num = Math.floor(num / 10);\n}\nconsole.log(sum);",
+  "id": "05-01-for-while-27",
+  "title": "Continue use karke array me negatives filter karo",
+  "starterCode": "function onlyPositives(arr) {\n  // TODO: sirf positive numbers return karo using continue\n}",
+  "solution": "function onlyPositives(arr) {\n  const result = [];\n  for (const num of arr) {\n    if (num <= 0) continue;\n    result.push(num);\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "6"
+      "input": [
+        -1,
+        2,
+        -3,
+        4,
+        5
+      ],
+      "expected": "2,4,5"
     }
   ],
   "hints": [
-    "Use % 10 for last digit",
-    "Divide by 10 to remove it"
+    "Negative ya zero hai toh continue se skip karo",
+    "Positive elements hi result me jayenge"
   ]
 }

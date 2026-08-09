@@ -1,16 +1,22 @@
 {
-  "id": "02-data-types-primitive-types-35",
-  "title": "Use toPrecision",
-  "starterCode": "const num = 3.14159;\nconsole.log();",
-  "solution": "const num = 3.14159;\nconsole.log(num.toPrecision(3));",
+  "id": "02-data-types-01-primitive-types-35",
+  "title": "Date object basics",
+  "starterCode": "const now = new Date()\nreturn {\n  year: now.getFullYear(),\n  month: now.getMonth() + 1,\n  day: now.getDate(),\n  hours: now.getHours(),\n  isDate: now instanceof Date\n}\n",
+  "solution": "const now = new Date()\nreturn {\n  year: now.getFullYear(),\n  month: now.getMonth() + 1,\n  day: now.getDate(),\n  hours: now.getHours(),\n  isDate: now instanceof Date\n}",
   "tests": [
     {
       "input": [],
-      "expected": "3.14"
+      "expected": {
+        "year": 2026,
+        "month": 8,
+        "day": 6,
+        "hours": 12,
+        "isDate": true
+      }
     }
   ],
   "hints": [
-    "toPrecision takes total significant digits",
-    "It rounds to that many digits"
+    "getFullYear() se year milta hai",
+    "getMonth() 0-indexed hai (0 = January)"
   ]
 }

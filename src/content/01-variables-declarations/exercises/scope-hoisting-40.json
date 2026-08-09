@@ -1,0 +1,20 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-40",
+  "title": "Generators and scope",
+  "starterCode": "function* counter() {\n  let i = 0\n  while (true) yield i++\n}\nconst gen = counter()\nreturn [gen.next().value, gen.next().value, gen.next().value]\n",
+  "solution": "function* counter() {\n  let i = 0\n  while (true) yield i++\n}\nconst gen = counter()\nreturn [gen.next().value, gen.next().value, gen.next().value]",
+  "tests": [
+    {
+      "input": [],
+      "expected": [
+        0,
+        1,
+        2
+      ]
+    }
+  ],
+  "hints": [
+    "Generator preserves state between yields",
+    "i persists across next() calls"
+  ]
+}

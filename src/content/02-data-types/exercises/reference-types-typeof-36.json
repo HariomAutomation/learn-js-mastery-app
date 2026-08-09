@@ -1,16 +1,23 @@
 {
-  "id": "02-data-types-reference-types-typeof-36",
-  "title": "Class typeof",
-  "starterCode": "class Dog {}\nconsole.log();",
-  "solution": "class Dog {}\nconsole.log(typeof Dog);",
+  "id": "02-data-types-02-reference-types-typeof-36",
+  "title": "MapToObject conversion",
+  "starterCode": "const map = new Map([[\"name\", \"Hariom\"], [\"age\", 25], [\"city\", \"Jaipur\"]])\nconst obj = Object.fromEntries(map)\nconst backToMap = new Map(Object.entries(obj))\nreturn {\n  obj: obj,\n  mapSize: backToMap.size\n}\n",
+  "solution": "const map = new Map([[\"name\", \"Hariom\"], [\"age\", 25], [\"city\", \"Jaipur\"]])\nconst obj = Object.fromEntries(map)\nconst backToMap = new Map(Object.entries(obj))\nreturn {\n  obj: obj,\n  mapSize: backToMap.size\n}",
   "tests": [
     {
       "input": [],
-      "expected": "function"
+      "expected": {
+        "obj": {
+          "name": "Hariom",
+          "age": 25,
+          "city": "Jaipur"
+        },
+        "mapSize": 3
+      }
     }
   ],
   "hints": [
-    "Classes are syntactic sugar for functions",
-    "typeof returns 'function'"
+    "Object.fromEntries() se Map->Object hota hai",
+    "new Map(Object.entries()) se Object->Map hota hai"
   ]
 }

@@ -1,16 +1,34 @@
 {
-  "id": "05-loops-for-while-31",
-  "title": "Right Triangle",
-  "starterCode": "for (let i = 1; i <= 5; i++) {\n  let row = '';\n  for (let j = 1; j <= i; j++) {\n    row += '* ';\n  }\n  console.log(row);\n}",
-  "solution": "for (let i = 1; i <= 5; i++) {\n  let row = '';\n  for (let j = 1; j <= i; j++) {\n    row += '* ';\n  }\n  console.log(row);\n}",
+  "id": "05-01-for-while-31",
+  "title": "Nested loop se spiral order printing karo",
+  "starterCode": "function spiralOrder(matrix) {\n  // TODO: matrix ko spiral order me print karo\n}",
+  "solution": "function spiralOrder(matrix) {\n  if (!matrix.length) return [];\n  const result = [];\n  let top = 0, bottom = matrix.length - 1, left = 0, right = matrix[0].length - 1;\n  while (top <= bottom && left <= right) {\n    for (let i = left; i <= right; i++) result.push(matrix[top][i]);\n    top++;\n    for (let i = top; i <= bottom; i++) result.push(matrix[i][right]);\n    right--;\n    if (top <= bottom) { for (let i = right; i >= left; i--) result.push(matrix[bottom][i]); bottom--; }\n    if (left <= right) { for (let i = bottom; i >= top; i--) result.push(matrix[i][left]); left++; }\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "* \n* * \n* * * \n* * * * \n* * * * * "
+      "input": [
+        [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            4,
+            5,
+            6
+          ],
+          [
+            7,
+            8,
+            9
+          ]
+        ]
+      ],
+      "expected": "1,2,3,6,9,8,7,4,5"
     }
   ],
   "hints": [
-    "Inner loop runs i times",
-    "Add star each iteration"
+    "4 pointers use karo: top, bottom, left, right",
+    "Har direction me traverse karo aur pointer update karo"
   ]
 }

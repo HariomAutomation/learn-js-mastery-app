@@ -1,16 +1,25 @@
 {
-  "id": "03-operators-logical-ternary-37",
-  "title": "Nullish coalescing chain",
-  "starterCode": "const a = null;\nconst b = undefined;\nconst c = 0;\nconst result = a ?? b ?? c ?? 'default';\nconsole.log(result);",
-  "solution": "const a = null;\nconst b = undefined;\nconst c = 0;\nconst result = a ?? b ?? c ?? 'default';\nconsole.log(result);",
+  "id": "03-operators-02-logical-ternary-37",
+  "title": "Default parameter with nullish",
+  "starterCode": "// Function mein nullish coalescing use karo\nfunction createUser(name, role = \"user\") {\n  // TODO: return user object\n}\nreturn {\n  admin: createUser(\"Hariom\", \"admin\"),\n  guest: createUser(null)\n}",
+  "solution": "function createUser(name, role = \"user\") {\n  return { name: name ?? \"Anonymous\", role }\n}\nreturn {\n  admin: createUser(\"Hariom\", \"admin\"),\n  guest: createUser(null)\n}",
   "tests": [
     {
       "input": [],
-      "expected": "0"
+      "expected": {
+        "admin": {
+          "name": "Hariom",
+          "role": "admin"
+        },
+        "guest": {
+          "name": "Anonymous",
+          "role": "user"
+        }
+      }
     }
   ],
   "hints": [
-    "?? chains until non-null/undefined",
-    "c is 0, which is not null/undefined"
+    "Default parameter se role set hota hai",
+    "?? se name default hota hai agar null ho"
   ]
 }

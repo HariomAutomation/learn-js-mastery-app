@@ -1,16 +1,36 @@
 {
-  "id": "04-control-flow-if-else-switch-24",
-  "title": "Refactor if/else to switch",
-  "starterCode": "function getDayType(day) {\n  if (day === 'Sat' || day === 'Sun') {\n    return 'weekend';\n  } else {\n    return 'weekday';\n  }\n}\nconsole.log(getDayType('Sat'));",
-  "solution": "function getDayType(day) {\n  if (day === 'Sat' || day === 'Sun') {\n    return 'weekend';\n  } else {\n    return 'weekday';\n  }\n}\nconsole.log(getDayType('Sat'));",
+  "id": "04-control-flow-01-if-else-switch-24",
+  "title": "Nested if se electricity bill",
+  "starterCode": "// function electricityBill(units) mein units do\n// <=100: free, 101-300: Rs.5/unit, 301-500: Rs.8/unit, >500: Rs.10/unit\n// Total bill return karo\n",
+  "solution": "function electricityBill(units) {\n  if (units <= 100) return 0\n  else if (units <= 300) return (units - 100) * 5\n  else if (units <= 500) return 200 * 5 + (units - 300) * 8\n  else return 200 * 5 + 200 * 8 + (units - 500) * 10\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "weekend"
+      "input": [
+        50
+      ],
+      "expected": 0
+    },
+    {
+      "input": [
+        200
+      ],
+      "expected": 500
+    },
+    {
+      "input": [
+        400
+      ],
+      "expected": 1800
+    },
+    {
+      "input": [
+        600
+      ],
+      "expected": 3800
     }
   ],
   "hints": [
-    "Sat matches the first condition",
-    "OR checks both conditions"
+    "Slab based billing hai — cumulative calculate karo",
+    "Har slab ka alag rate hai"
   ]
 }

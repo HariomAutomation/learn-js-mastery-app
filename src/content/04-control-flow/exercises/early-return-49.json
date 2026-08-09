@@ -1,17 +1,31 @@
 {
-  "id": "04-control-flow-early-return-49",
-  "title": "Early return with object destructuring",
-  "starterCode": "function getFullName({ first, last }) {\n  if (!first) return 'No first name';\n  if (!last) return 'No last name';\n  return `${first} ${last}`;\n}\nconsole.log(getFullName({ first: 'John', last: 'Doe' }));",
-  "solution": "function getFullName({ first, last }) {\n  if (!first) return 'No first name';\n  if (!last) return 'No last name';\n  return `${first} ${last}`;\n}\nconsole.log(getFullName({ first: 'John', last: 'Doe' }));",
+  "id": "04-control-flow-02-early-return-49",
+  "title": "Guard for string concatenation",
+  "starterCode": "// function joinWords(...words) mein words do\n// Agar koi word nahi: \"\"\n// Agar koi non-string hai: \"Invalid word\"\n// Warna space se join karo\n",
+  "solution": "function joinWords(...words) {\n  if (words.length === 0) return \"\"\n  if (words.some(w => typeof w !== \"string\")) return \"Invalid word\"\n  return words.join(\" \")\n}",
   "tests": [
     {
+      "input": [
+        "Hello",
+        "World"
+      ],
+      "expected": "Hello World"
+    },
+    {
       "input": [],
-      "expected": "John Doe"
+      "expected": ""
+    },
+    {
+      "input": [
+        "Hello",
+        123,
+        "World"
+      ],
+      "expected": "Invalid word"
     }
   ],
   "hints": [
-    "first is truthy",
-    "last is truthy",
-    "Returns full name"
+    "Length check pehle karo",
+    "Sab words ka type string check karo"
   ]
 }

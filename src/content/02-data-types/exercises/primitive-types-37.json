@@ -1,16 +1,30 @@
 {
-  "id": "02-data-types-primitive-types-37",
-  "title": "Convert string to integer with parseInt",
-  "starterCode": "const str = \"42px\";\nconst num = ;\nconsole.log(num);",
-  "solution": "const str = \"42px\";\nconst num = parseInt(str);\nconsole.log(num);",
+  "id": "02-data-types-01-primitive-types-37",
+  "title": "Spread operator practical",
+  "starterCode": "const arr1 = [1, 2, 3]\nconst arr2 = [4, 5, 6]\nconst obj1 = { a: 1, b: 2 }\nconst obj2 = { b: 3, c: 4 }\nreturn {\n  mergedArr: [...arr1, ...arr2],\n  mergedObj: { ...obj1, ...obj2 }\n}\n",
+  "solution": "const arr1 = [1, 2, 3]\nconst arr2 = [4, 5, 6]\nconst obj1 = { a: 1, b: 2 }\nconst obj2 = { b: 3, c: 4 }\nreturn {\n  mergedArr: [...arr1, ...arr2],\n  mergedObj: { ...obj1, ...obj2 }\n}",
   "tests": [
     {
       "input": [],
-      "expected": "42"
+      "expected": {
+        "mergedArr": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "mergedObj": {
+          "a": 1,
+          "b": 3,
+          "c": 4
+        }
+      }
     }
   ],
   "hints": [
-    "parseInt parses until it finds non-numeric",
-    "It stops at the 'px'"
+    "...arr se elements expand hote hain",
+    "Objects mein baaki ki value override hoti hai"
   ]
 }

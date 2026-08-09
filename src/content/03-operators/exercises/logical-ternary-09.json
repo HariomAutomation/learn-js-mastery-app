@@ -1,15 +1,20 @@
 {
-  "id": "03-operators-logical-ternary-09",
-  "title": "Ternary with numbers",
-  "starterCode": "const x = 10;\nconst result = x > 5 ? 1 : 0;\nconsole.log(result);",
-  "solution": "const x = 10;\nconst result = x > 5 ? 1 : 0;\nconsole.log(result);",
+  "id": "03-operators-02-logical-ternary-09",
+  "title": "Nullish coalescing basic",
+  "starterCode": "// Default values set karo (sirf null/undefined ke liye)\nconst name = null\nconst count = 0\nconst text = \"\"\n// TODO: ?? use karo\n",
+  "solution": "const name = null\nconst count = 0\nconst text = \"\"\nreturn {\n  displayName: name ?? \"Anonymous\",\n  displayCount: count ?? 10,\n  displayText: text ?? \"default\"\n}",
   "tests": [
     {
       "input": [],
-      "expected": "1"
+      "expected": {
+        "displayName": "Anonymous",
+        "displayCount": 0,
+        "displayText": ""
+      }
     }
   ],
   "hints": [
-    "10 > 5 is true, so returns 1"
+    "?? sirf null/undefined ke liye default deta hai",
+    "0 aur '' valid values hain, default nahi lega"
   ]
 }

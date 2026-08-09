@@ -1,16 +1,20 @@
 {
-  "id": "02-data-types-primitive-types-47",
-  "title": "Get char code of a character",
-  "starterCode": "const ch = \"A\";\nconsole.log();",
-  "solution": "const ch = \"A\";\nconsole.log(ch.charCodeAt(0));",
+  "id": "02-data-types-01-primitive-types-47",
+  "title": "WeakSet usage",
+  "starterCode": "const visited = new WeakSet()\nconst obj1 = { page: \"home\" }\nconst obj2 = { page: \"about\" }\nvisited.add(obj1)\nvisited.add(obj2)\nreturn {\n  hasObj1: visited.has(obj1),\n  hasObj2: visited.has(obj2),\n  hasObj3: visited.has({ page: \"home\" })\n}\n",
+  "solution": "const visited = new WeakSet()\nconst obj1 = { page: \"home\" }\nconst obj2 = { page: \"about\" }\nvisited.add(obj1)\nvisited.add(obj2)\nreturn {\n  hasObj1: visited.has(obj1),\n  hasObj2: visited.has(obj2),\n  hasObj3: visited.has({ page: \"home\" })\n}",
   "tests": [
     {
       "input": [],
-      "expected": "65"
+      "expected": {
+        "hasObj1": true,
+        "hasObj2": true,
+        "hasObj3": false
+      }
     }
   ],
   "hints": [
-    "charCodeAt returns Unicode code point",
-    "A is 65 in ASCII"
+    "WeakSet mein sirf objects ho sakte hain",
+    "Naya object alag reference hota hai"
   ]
 }

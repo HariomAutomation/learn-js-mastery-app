@@ -1,16 +1,16 @@
 {
-  "id": "02-data-types-primitive-types-11",
-  "title": "Create an integer variable",
-  "starterCode": "const count = ;\nconsole.log(count);",
-  "solution": "const count = 42;\nconsole.log(count);",
+  "id": "02-data-types-01-primitive-types-11",
+  "title": "Template literal se dynamic string",
+  "starterCode": "const user = { name: \"Rahul\", age: 25, city: \"Mumbai\" }\n// Template literal use karke return karo:\n// \"Rahul is 25 years old and lives in Mumbai\"\n",
+  "solution": "const user = { name: \"Rahul\", age: 25, city: \"Mumbai\" }\nreturn `${user.name} is ${user.age} years old and lives in ${user.city}`",
   "tests": [
     {
       "input": [],
-      "expected": "42"
+      "expected": "Rahul is 25 years old and lives in Mumbai"
     }
   ],
   "hints": [
-    "Integers are whole numbers",
-    "No quotes needed for numbers"
+    "Backtick ` use karo",
+    "${variable} se value inject hoti hai"
   ]
 }

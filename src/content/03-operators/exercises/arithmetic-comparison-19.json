@@ -1,16 +1,16 @@
 {
-  "id": "03-operators-arithmetic-comparison-19",
-  "title": "Strict equality (===)",
-  "starterCode": "const result = 5 === \"5\";\nconsole.log(result);",
-  "solution": "const result = 5 === \"5\";\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-19",
+  "title": "Greater than comparison",
+  "starterCode": "// Check karo: bank balance minimum se zyada hai ya nahi\nconst balance = 5000\nconst minimum = 1000\n// TODO: > operator use karo\n",
+  "solution": "const balance = 5000\nconst minimum = 1000\nreturn balance > minimum",
   "tests": [
     {
       "input": [],
-      "expected": "false"
+      "expected": true
     }
   ],
   "hints": [
-    "=== checks value AND type",
-    "5 is number, '5' is string"
+    "> operator greater than check karta hai",
+    "5000 > 1000 = true"
   ]
 }

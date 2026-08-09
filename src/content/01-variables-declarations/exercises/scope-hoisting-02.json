@@ -1,15 +1,20 @@
 {
   "id": "01-variables-declarations-scope-hoisting-02",
-  "title": "Function scope",
-  "starterCode": "function test() {\n  var x = 10\n}\ntest()\nconsole.log(typeof x)",
-  "solution": "function test() {\n  var x = 10\n}\ntest()\nconsole.log(typeof x)",
+  "title": "Closure remembers outer variable",
+  "starterCode": "function outer() {\n  let count = 0\n  return function inner() {\n    return ++count\n  }\n}\nconst fn = outer()\nreturn [fn(), fn(), fn()]\n",
+  "solution": "function outer() {\n  let count = 0\n  return function inner() {\n    return ++count\n  }\n}\nconst fn = outer()\nreturn [fn(), fn(), fn()]",
   "tests": [
     {
       "input": [],
-      "expected": "undefined"
+      "expected": [
+        1,
+        2,
+        3
+      ]
     }
   ],
   "hints": [
-    "var is function-scoped"
+    "Inner function closure se count yaad rakhta hai",
+    "Har call pe count badhta hai"
   ]
 }

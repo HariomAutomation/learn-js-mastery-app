@@ -1,17 +1,40 @@
 {
-  "id": "04-control-flow-early-return-34",
-  "title": "Nested guard - invalid method",
-  "starterCode": "function processRequest(request) {\n  if (!request) return 'no request';\n  if (!request.method) return 'no method';\n  if (request.method !== 'GET' && request.method !== 'POST') return 'invalid method';\n  return `processing ${request.method}`;\n}\nconsole.log(processRequest({ method: 'DELETE' }));",
-  "solution": "function processRequest(request) {\n  if (!request) return 'no request';\n  if (!request.method) return 'no method';\n  if (request.method !== 'GET' && request.method !== 'POST') return 'invalid method';\n  return `processing ${request.method}`;\n}\nconsole.log(processRequest({ method: 'DELETE' }));",
+  "id": "04-control-flow-02-early-return-34",
+  "title": "Guard for string search",
+  "starterCode": "// function findInString(str, search) mein dono strings do\n// Agar koi bhi string nahi: -1\n// Agar search empty: -1\n// Warna indexOf return karo\n",
+  "solution": "function findInString(str, search) {\n  if (typeof str !== \"string\" || typeof search !== \"string\") return -1\n  if (search.length === 0) return -1\n  return str.indexOf(search)\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "invalid method"
+      "input": [
+        "Hello World",
+        "World"
+      ],
+      "expected": 6
+    },
+    {
+      "input": [
+        "Hello World",
+        ""
+      ],
+      "expected": -1
+    },
+    {
+      "input": [
+        null,
+        "test"
+      ],
+      "expected": -1
+    },
+    {
+      "input": [
+        "Hello",
+        "xyz"
+      ],
+      "expected": -1
     }
   ],
   "hints": [
-    "request is truthy",
-    "method exists",
-    "DELETE is not GET or POST"
+    "Dono strings ka type check karo",
+    "Empty search ke liye -1 return karo"
   ]
 }

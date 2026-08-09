@@ -1,16 +1,18 @@
 {
-  "id": "05-loops-for-while-20",
-  "title": "Range Generation",
-  "starterCode": "let range = [];\nfor (let i = 1; i <= 5; i++) {\n  range.push(i);\n}\nconsole.log(range);",
-  "solution": "let range = [];\nfor (let i = 1; i <= 5; i++) {\n  range.push(i);\n}\nconsole.log(range);",
+  "id": "05-01-for-while-20",
+  "title": "Continue use karke vowels count karo",
+  "starterCode": "function countVowels(str) {\n  // TODO: string me vowels count karo using continue\n}",
+  "solution": "function countVowels(str) {\n  const vowels = \"aeiouAEIOU\";\n  let count = 0;\n  for (const char of str) {\n    if (!vowels.includes(char)) continue;\n    count++;\n  }\n  return count;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "[ 1, 2, 3, 4, 5 ]"
+      "input": [
+        "hello"
+      ],
+      "expected": 2
     }
   ],
   "hints": [
-    "Start array empty",
-    "Push each i to array"
+    "Vowel nahi hai toh continue se skip karo",
+    "Count me sirf vowels add honge"
   ]
 }

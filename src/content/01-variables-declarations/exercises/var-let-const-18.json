@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-var-let-const-18",
-  "title": "const freeze object",
-  "starterCode": "const obj = Object.freeze({ x: 1 })\ntry {\n  obj.x = 2\n} catch(e) {\n  console.log(\"error\")\n}\nconsole.log(obj.x)",
-  "solution": "const obj = Object.freeze({ x: 1 })\ntry {\n  obj.x = 2\n} catch(e) {\n  console.log(\"error\")\n}\nconsole.log(obj.x)",
+  "title": "Scope with try-catch",
+  "starterCode": "try {\n  let x = 10\n} catch(e) {}\nreturn typeof x\n",
+  "solution": "try {\n  let x = 10\n} catch(e) {}\nreturn typeof x",
   "tests": [
     {
       "input": [],
-      "expected": "error\n1"
+      "expected": "undefined"
     }
   ],
   "hints": [
-    "freeze prevents mutation"
+    "try-catch bhi block hai",
+    "let x sirf try block mein accessible hai"
   ]
 }

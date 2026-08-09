@@ -1,0 +1,20 @@
+{
+  "id": "01-variables-declarations-var-let-const-44",
+  "title": "const with forEach",
+  "starterCode": "const arr = [1, 2, 3]\nconst doubled = []\narr.forEach(x => doubled.push(x * 2))\nreturn doubled\n",
+  "solution": "const arr = [1, 2, 3]\nconst doubled = []\narr.forEach(x => doubled.push(x * 2))\nreturn doubled",
+  "tests": [
+    {
+      "input": [],
+      "expected": [
+        2,
+        4,
+        6
+      ]
+    }
+  ],
+  "hints": [
+    "const array mein push kar sakte ho",
+    "forEach callback har element ke liye chalta hai"
+  ]
+}

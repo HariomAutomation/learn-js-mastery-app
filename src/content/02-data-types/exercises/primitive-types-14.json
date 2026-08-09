@@ -1,16 +1,22 @@
 {
-  "id": "02-data-types-primitive-types-14",
-  "title": "Store Infinity",
-  "starterCode": "const big = ;\nconsole.log(big);",
-  "solution": "const big = Infinity;\nconsole.log(big);",
+  "id": "02-data-types-01-primitive-types-14",
+  "title": "Type coercion examples",
+  "starterCode": "return {\n  strPlusNum: \"5\" + 3,\n  strMinusNum: \"5\" - 3,\n  boolPlusNum: true + 1,\n  nullPlusNum: null + 1,\n  emptyStrBool: Boolean(\"\")\n}",
+  "solution": "return {\n  strPlusNum: \"5\" + 3,\n  strMinusNum: \"5\" - 3,\n  boolPlusNum: true + 1,\n  nullPlusNum: null + 1,\n  emptyStrBool: Boolean(\"\")\n}",
   "tests": [
     {
       "input": [],
-      "expected": "Infinity"
+      "expected": {
+        "strPlusNum": "53",
+        "strMinusNum": 2,
+        "boolPlusNum": 2,
+        "nullPlusNum": 1,
+        "emptyStrBool": false
+      }
     }
   ],
   "hints": [
-    "JavaScript has a special value for infinity",
-    "It's a global property, not a string"
+    "'+' operator string concat bhi karta hai",
+    "true = 1, null = 0 numeric context mein"
   ]
 }

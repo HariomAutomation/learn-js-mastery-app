@@ -1,16 +1,16 @@
 {
-  "id": "03-operators-logical-ternary-22",
-  "title": "Logical OR assignment (||=)",
-  "starterCode": "let x = \"\";\nx ||= \"default\";\nconsole.log(x);",
-  "solution": "let x = \"\";\nx ||= \"default\";\nconsole.log(x);",
+  "id": "03-operators-02-logical-ternary-22",
+  "title": "Coalescing chain",
+  "starterCode": "// Multiple fallback values try karo\nconst primary = null\nconst secondary = undefined\nconst tertiary = \"fallback\"\n// TODO: ?? chain use karo\n",
+  "solution": "const primary = null\nconst secondary = undefined\nconst tertiary = \"fallback\"\nconst value = primary ?? secondary ?? tertiary\nreturn value",
   "tests": [
     {
       "input": [],
-      "expected": "default"
+      "expected": "fallback"
     }
   ],
   "hints": [
-    "x ||= 'default' means x = x || 'default'",
-    "x is falsy, so assignment happens"
+    "?? chain mein pehla non-null/undefined value milta hai",
+    "primary aur secondary dono null/undefined hain"
   ]
 }

@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-variables-intro-10",
-  "title": "Exponentiation operator",
-  "starterCode": "console.log(2 ** 10)",
-  "solution": "console.log(2 ** 10)",
+  "title": "Increment counter",
+  "starterCode": "let count = 0\n// count ko 5 baar increment karo\n// Har increment ke baad augmented assignment use karo\n// Final count return karo\n",
+  "solution": "let count = 0\ncount += 1\ncount += 1\ncount += 1\ncount += 1\ncount += 1\nreturn count",
   "tests": [
     {
       "input": [],
-      "expected": "1024"
+      "expected": 5
     }
   ],
   "hints": [
-    "** is power operator"
+    "count++ ya count += 1 se badhata hai",
+    "5 baar karo"
   ]
 }

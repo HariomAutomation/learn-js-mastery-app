@@ -1,16 +1,44 @@
 {
-  "id": "04-control-flow-if-else-switch-28",
-  "title": "Guard clause with multiple conditions",
-  "starterCode": "function processUser(user) {\n  if (!user) return 'no user';\n  if (!user.name) return 'no name';\n  if (!user.email) return 'no email';\n  return `Processing ${user.name}`;\n}\nconsole.log(processUser({ name: 'Alice', email: 'alice@test.com' }));",
-  "solution": "function processUser(user) {\n  if (!user) return 'no user';\n  if (!user.name) return 'no name';\n  if (!user.email) return 'no email';\n  return `Processing ${user.name}`;\n}\nconsole.log(processUser({ name: 'Alice', email: 'alice@test.com' }));",
+  "id": "04-control-flow-01-if-else-switch-28",
+  "title": "Nested if se triangle type check",
+  "starterCode": "// function triangleType(a, b, c) mein teen sides do\n// Invalid triangle: \"Not a triangle\"\n// All equal: \"Equilateral\"\n// Two equal: \"Isosceles\"\n// All different: \"Scalene\"\n",
+  "solution": "function triangleType(a, b, c) {\n  if (a <= 0 || b <= 0 || c <= 0) return \"Not a triangle\"\n  if (a + b <= c || a + c <= b || b + c <= a) return \"Not a triangle\"\n  if (a === b && b === c) return \"Equilateral\"\n  else if (a === b || b === c || a === c) return \"Isosceles\"\n  else return \"Scalene\"\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "Processing Alice"
+      "input": [
+        3,
+        3,
+        3
+      ],
+      "expected": "Equilateral"
+    },
+    {
+      "input": [
+        3,
+        3,
+        5
+      ],
+      "expected": "Isosceles"
+    },
+    {
+      "input": [
+        3,
+        4,
+        5
+      ],
+      "expected": "Scalene"
+    },
+    {
+      "input": [
+        1,
+        2,
+        10
+      ],
+      "expected": "Not a triangle"
     }
   ],
   "hints": [
-    "All guards pass",
-    "Returns success message"
+    "Triangle inequality theorem check karo",
+    "Sum of two sides > third side hona chahiye"
   ]
 }

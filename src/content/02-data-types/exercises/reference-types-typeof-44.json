@@ -1,16 +1,29 @@
 {
-  "id": "02-data-types-reference-types-typeof-44",
-  "title": "Reference in destructuring",
-  "starterCode": "const obj = { a: 1, b: 2 };\nconst { a } = obj;\nconsole.log(a);",
-  "solution": "const obj = { a: 1, b: 2 };\nconst { a } = obj;\nconsole.log(a);",
+  "id": "02-data-types-02-reference-types-typeof-44",
+  "title": "Promise.allSettled",
+  "starterCode": "const promises = [\n  Promise.resolve(1),\n  Promise.reject(\"error\"),\n  Promise.resolve(3)\n]\nconst results = await Promise.allSettled(promises)\nreturn results.map(r => ({ status: r.status, value: r.value || r.reason }))\n",
+  "solution": "const promises = [\n  Promise.resolve(1),\n  Promise.reject(\"error\"),\n  Promise.resolve(3)\n]\nconst results = await Promise.allSettled(promises)\nreturn results.map(r => ({ status: r.status, value: r.value || r.reason }))",
   "tests": [
     {
       "input": [],
-      "expected": "1"
+      "expected": [
+        {
+          "status": "fulfilled",
+          "value": 1
+        },
+        {
+          "status": "rejected",
+          "value": "error"
+        },
+        {
+          "status": "fulfilled",
+          "value": 3
+        }
+      ]
     }
   ],
   "hints": [
-    "Destructuring extracts values",
-    "a gets the value of obj.a"
+    "Promise.allSettled kabhi reject nahi hota",
+    "Har promise ka status aur value/reason milta hai"
   ]
 }

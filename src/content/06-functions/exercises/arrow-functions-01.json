@@ -1,16 +1,1253 @@
-{
-  "id": "06-functions-arrow-functions-01",
-  "title": "Arrow Syntax",
-  "starterCode": "const add = (a, b) => a + b;\nconsole.log(add(2, 3));",
-  "solution": "const add = (a, b) => a + b;\nconsole.log(add(2, 3));",
-  "tests": [
-    {
-      "input": [],
-      "expected": "5"
-    }
-  ],
-  "hints": [
-    "Use => syntax",
-    "Implicit return"
-  ]
-}
+[
+  {
+    "id": "functions-arrow-functions-01",
+    "title": "arrow function se addition karo",
+    "starterCode": "const add = () => {\n  // TODO: return sum\n}",
+    "solution": "const add = (a, b) => a + b;",
+    "tests": [
+      {
+        "input": [
+          2,
+          3
+        ],
+        "expected": [
+          5
+        ]
+      }
+    ],
+    "hints": [
+      "single expression mein return mat likho",
+      "parameters parenthesis mein"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-02",
+    "title": "arrow function se square calculate karo",
+    "starterCode": "const square = (x) => {\n  // TODO: return x*x\n}",
+    "solution": "const square = x => x * x;",
+    "tests": [
+      {
+        "input": [
+          4
+        ],
+        "expected": [
+          16
+        ]
+      }
+    ],
+    "hints": [
+      "single parameter mein parenthesis optional hai"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-03",
+    "title": "arrow function se greeting message banao",
+    "starterCode": "const greet = (name) => {\n  // TODO: return hello + name\n}",
+    "solution": "const greet = name => `Hello, ${name}!`;",
+    "tests": [
+      {
+        "input": [
+          "Amit"
+        ],
+        "expected": [
+          "Hello, Amit!"
+        ]
+      }
+    ],
+    "hints": [
+      "template literal use karo"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-04",
+    "title": "arrow function se array filter kare jo even numbers ho",
+    "starterCode": "const filterEven = (arr) => {\n  // TODO: return filtered array\n}",
+    "solution": "const filterEven = arr => arr.filter(n => n % 2 === 0);",
+    "tests": [
+      {
+        "input": [
+          [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        ],
+        "expected": [
+          2,
+          4,
+          6
+        ]
+      }
+    ],
+    "hints": [
+      "filter method use karo",
+      "n % 2 === 0"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-05",
+    "title": "arrow function se array ke saare elements ko double kare",
+    "starterCode": "const doubleAll = (arr) => {\n  // TODO: return doubled array\n}",
+    "solution": "const doubleAll = arr => arr.map(n => n * 2);",
+    "tests": [
+      {
+        "input": [
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        "expected": [
+          2,
+          4,
+          6
+        ]
+      }
+    ],
+    "hints": [
+      "map method use karo"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-06",
+    "title": "arrow function se object banakar return karo",
+    "starterCode": "const makeUser = (name, age) => {\n  // TODO: return {name, age}\n}",
+    "solution": "const makeUser = (name, age) => ({ name, age });",
+    "tests": [
+      {
+        "input": [
+          "Rahul",
+          25
+        ],
+        "expected": [
+          {
+            "name": "Rahul",
+            "age": 25
+          }
+        ]
+      }
+    ],
+    "hints": [
+      "object literal ke liye parenthesis lagao"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-07",
+    "title": "arrow function se array reverse karo",
+    "starterCode": "const rev = (arr) => {\n  // TODO: return reversed array\n}",
+    "solution": "const rev = arr => [...arr].reverse();",
+    "tests": [
+      {
+        "input": [
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        "expected": [
+          3,
+          2,
+          1
+        ]
+      }
+    ],
+    "hints": [
+      "spread se copy karo",
+      "reverse karo"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-08",
+    "title": "arrow function se string length return karo",
+    "starterCode": "const len = (s) => {\n  // TODO: return length\n}",
+    "solution": "const len = s => s.length;",
+    "tests": [
+      {
+        "input": [
+          "hello"
+        ],
+        "expected": [
+          5
+        ]
+      }
+    ],
+    "hints": [
+      ".length use karo"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-09",
+    "title": "arrow function se first element of array return karo",
+    "starterCode": "const head = (arr) => {\n  // TODO: return first element\n}",
+    "solution": "const head = arr => arr[0];",
+    "tests": [
+      {
+        "input": [
+          [
+            10,
+            20,
+            30
+          ]
+        ],
+        "expected": [
+          10
+        ]
+      }
+    ],
+    "hints": [
+      "index 0 se lo"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-10",
+    "title": "arrow function se factorial calculate karo",
+    "starterCode": "const fact = (n) => {\n  // TODO: return factorial\n}",
+    "solution": "const fact = n => n <= 1 ? 1 : n * fact(n - 1);",
+    "tests": [
+      {
+        "input": [
+          5
+        ],
+        "expected": [
+          120
+        ]
+      }
+    ],
+    "hints": [
+      "ternary use karo base case ke liye"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-11",
+    "title": "arrow function se number ke digits ka sum kare",
+    "starterCode": "const digitSum = (n) => {\n  // TODO: return digit sum\n}",
+    "solution": "const digitSum = n => String(n).split('').reduce((s,d) => s + Number(d), 0);",
+    "tests": [
+      {
+        "input": [
+          123
+        ],
+        "expected": [
+          6
+        ]
+      }
+    ],
+    "hints": [
+      "string mein convert karo",
+      "reduce use karo"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-12",
+    "title": "arrow function se array mein sabse bada element lo",
+    "starterCode": "const maxEl = (arr) => {\n  // TODO: return max\n}",
+    "solution": "const maxEl = arr => Math.max(...arr);",
+    "tests": [
+      {
+        "input": [
+          [
+            3,
+            7,
+            2,
+            9
+          ]
+        ],
+        "expected": [
+          9
+        ]
+      }
+    ],
+    "hints": [
+      "Math.max spread use karo"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-13",
+    "title": "arrow function se array mein unique elements lo",
+    "starterCode": "const unique = (arr) => {\n  // TODO: return unique elements\n}",
+    "solution": "const unique = arr => [...new Set(arr)];",
+    "tests": [
+      {
+        "input": [
+          [
+            1,
+            2,
+            2,
+            3,
+            3
+          ]
+        ],
+        "expected": [
+          1,
+          2,
+          3
+        ]
+      }
+    ],
+    "hints": [
+      "Set use karo"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-14",
+    "title": "arrow function se two arrays ko merge karo",
+    "starterCode": "const merge = (a, b) => {\n  // TODO: return merged array\n}",
+    "solution": "const merge = (a, b) => [...a, ...b];",
+    "tests": [
+      {
+        "input": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "expected": [
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    ],
+    "hints": [
+      "spread operator use karo"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-15",
+    "title": "arrow function se object ke values ka sum karo",
+    "starterCode": "const sumVals = (obj) => {\n  // TODO: return sum of values\n}",
+    "solution": "const sumVals = obj => Object.values(obj).reduce((s,v) => s+v, 0);",
+    "tests": [
+      {
+        "input": [
+          {
+            "a": 10,
+            "b": 20
+          }
+        ],
+        "expected": [
+          30
+        ]
+      }
+    ],
+    "hints": [
+      "Object.values reduce use karo"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-16",
+    "title": "arrow function se number ka absolute value lo",
+    "starterCode": "const abs = (n) => {\n  // TODO: return absolute value\n}",
+    "solution": "const abs = n => Math.abs(n);",
+    "tests": [
+      {
+        "input": [
+          -5
+        ],
+        "expected": [
+          5
+        ]
+      },
+      {
+        "input": [
+          3
+        ],
+        "expected": [
+          3
+        ]
+      }
+    ],
+    "hints": [
+      "Math.abs use karo"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-17",
+    "title": "arrow function se array ke saare strings ko join karo",
+    "starterCode": "const joinWords = (arr) => {\n  // TODO: return joined string\n}",
+    "solution": "const joinWords = arr => arr.join(' ');",
+    "tests": [
+      {
+        "input": [
+          [
+            "hello",
+            "world"
+          ]
+        ],
+        "expected": [
+          "hello world"
+        ]
+      }
+    ],
+    "hints": [
+      "join method use karo"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-18",
+    "title": "arrow function se given number palindromic hai check karo",
+    "starterCode": "const isPalin = (n) => {\n  // TODO: check if palindrome\n}",
+    "solution": "const isPalin = n => String(n) === String(n).split('').reverse().join('');",
+    "tests": [
+      {
+        "input": [
+          121
+        ],
+        "expected": [
+          true
+        ]
+      },
+      {
+        "input": [
+          123
+        ],
+        "expected": [
+          false
+        ]
+      }
+    ],
+    "hints": [
+      "number ko string mein convert karo"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-19",
+    "title": "arrow function se temperature convert karo Celsius to Fahrenheit",
+    "starterCode": "const toF = (c) => {\n  // TODO: return Fahrenheit\n}",
+    "solution": "const toF = c => c * 9/5 + 32;",
+    "tests": [
+      {
+        "input": [
+          0
+        ],
+        "expected": [
+          32
+        ]
+      },
+      {
+        "input": [
+          100
+        ],
+        "expected": [
+          212
+        ]
+      }
+    ],
+    "hints": [
+      "formula c*9/5+32"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-20",
+    "title": "arrow function se array mein zeroes hata do",
+    "starterCode": "const removeZeros = (arr) => {\n  // TODO: return array without zeros\n}",
+    "solution": "const removeZeros = arr => arr.filter(n => n !== 0);",
+    "tests": [
+      {
+        "input": [
+          [
+            1,
+            0,
+            2,
+            0,
+            3
+          ]
+        ],
+        "expected": [
+          1,
+          2,
+          3
+        ]
+      }
+    ],
+    "hints": [
+      "filter n !== 0 use karo"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-21",
+    "title": "arrow function se string ke sabse frequent character ka count batao",
+    "starterCode": "const mostFrequent = (s) => {\n  // TODO: return most frequent char and count\n}",
+    "solution": "const mostFrequent = s => {\n  const freq = {};\n  for (const c of s) freq[c] = (freq[c]||0)+1;\n  return Object.entries(freq).sort((a,b)=>b[1]-a[1])[0];\n};",
+    "tests": [
+      {
+        "input": [
+          "aabbbcc"
+        ],
+        "expected": [
+          "b",
+          3
+        ]
+      }
+    ],
+    "hints": [
+      "frequency object banao",
+      "sort by value"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-22",
+    "title": "arrow function se array mein odd numbers filter karo",
+    "starterCode": "const filterOdd = (arr) => {\n  // TODO: return odd numbers\n}",
+    "solution": "const filterOdd = arr => arr.filter(n => n % 2 !== 0);",
+    "tests": [
+      {
+        "input": [
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        ],
+        "expected": [
+          1,
+          3,
+          5
+        ]
+      }
+    ],
+    "hints": [
+      "filter use karo",
+      "n % 2 !== 0"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-23",
+    "title": "arrow function se string ko camelCase mein convert karo",
+    "starterCode": "const camelCase = (s) => {\n  // TODO: return camelCase string\n}",
+    "solution": "const camelCase = s => s.replace(/[^a-zA-Z0-9]+(.)/g, (_, c) => c.toUpperCase());",
+    "tests": [
+      {
+        "input": [
+          "hello_world"
+        ],
+        "expected": [
+          "helloWorld"
+        ]
+      }
+    ],
+    "hints": [
+      "regex replace use karo"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-24",
+    "title": "arrow function se number ke all divisors return karo",
+    "starterCode": "const divisors = (n) => {\n  // TODO: return array of divisors\n}",
+    "solution": "const divisors = n => Array.from({length:n},(_,i)=>i+1).filter(i=>n%i===0);",
+    "tests": [
+      {
+        "input": [
+          12
+        ],
+        "expected": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          12
+        ]
+      }
+    ],
+    "hints": [
+      "Array.from filter use karo"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-25",
+    "title": "arrow function se array mein missing element dhundho 1 to n",
+    "starterCode": "const missEl = (arr) => {\n  // TODO: return missing element\n}",
+    "solution": "const missEl = arr => arr.length*(arr.length+1)/2 - arr.reduce((s,v)=>s+v,0);",
+    "tests": [
+      {
+        "input": [
+          [
+            1,
+            2,
+            4,
+            5
+          ]
+        ],
+        "expected": [
+          3
+        ]
+      }
+    ],
+    "hints": [
+      "formula use karo"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-26",
+    "title": "arrow function se object ke keys ko sorted array mein return karo",
+    "starterCode": "const sortedKeys = (obj) => {\n  // TODO: return sorted keys\n}",
+    "solution": "const sortedKeys = obj => Object.keys(obj).sort();",
+    "tests": [
+      {
+        "input": [
+          {
+            "c": 3,
+            "a": 1,
+            "b": 2
+          }
+        ],
+        "expected": [
+          "a",
+          "b",
+          "c"
+        ]
+      }
+    ],
+    "hints": [
+      "Object.keys sort use karo"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-27",
+    "title": "arrow function se array mein saare numbers ka product lo",
+    "starterCode": "const prod = (arr) => {\n  // TODO: return product\n}",
+    "solution": "const prod = arr => arr.reduce((p,v)=>p*v,1);",
+    "tests": [
+      {
+        "input": [
+          [
+            2,
+            3,
+            4
+          ]
+        ],
+        "expected": [
+          24
+        ]
+      }
+    ],
+    "hints": [
+      "reduce p*v"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-28",
+    "title": "arrow function se string mein se consonants hata do",
+    "starterCode": "const removeConsonants = (s) => {\n  // TODO: return string without consonants\n}",
+    "solution": "const removeConsonants = s => s.replace(/[^aeiou]/gi, '');",
+    "tests": [
+      {
+        "input": [
+          "hello"
+        ],
+        "expected": [
+          "eio"
+        ]
+      }
+    ],
+    "hints": [
+      "regex replace karo"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-29",
+    "title": "arrow function se number ka prime hai check karo",
+    "starterCode": "const isPrime = (n) => {\n  // TODO: return true if prime\n}",
+    "solution": "const isPrime = n => {\n  if (n < 2) return false;\n  for (let i = 2; i <= Math.sqrt(n); i++) if (n%i===0) return false;\n  return true;\n};",
+    "tests": [
+      {
+        "input": [
+          7
+        ],
+        "expected": [
+          true
+        ]
+      },
+      {
+        "input": [
+          4
+        ],
+        "expected": [
+          false
+        ]
+      }
+    ],
+    "hints": [
+      "sqrt tak check karo"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-30",
+    "title": "arrow function se array mein sabse chhota element lo",
+    "starterCode": "const minEl = (arr) => {\n  // TODO: return min element\n}",
+    "solution": "const minEl = arr => Math.min(...arr);",
+    "tests": [
+      {
+        "input": [
+          [
+            5,
+            3,
+            8,
+            1
+          ]
+        ],
+        "expected": [
+          1
+        ]
+      }
+    ],
+    "hints": [
+      "Math.min spread use karo"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-31",
+    "title": "arrow function se given array ko chunks mein divide karo",
+    "starterCode": "const chunkArr = (arr, n) => {\n  // TODO: return chunked array\n}",
+    "solution": "const chunkArr = (arr, n) => Array.from({length:Math.ceil(arr.length/n)},(_,i)=>arr.slice(i*n,i*n+n));",
+    "tests": [
+      {
+        "input": [
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          2
+        ],
+        "expected": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            5
+          ]
+        ]
+      }
+    ],
+    "hints": [
+      "Array.from slice use karo"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-32",
+    "title": "arrow function se string ko snake_case mein convert karo",
+    "starterCode": "const snakeCase = (s) => {\n  // TODO: return snake_case string\n}",
+    "solution": "const snakeCase = s => s.replace(/([A-Z])/g,'_$1').toLowerCase().replace(/^_/,'');",
+    "tests": [
+      {
+        "input": [
+          "helloWorld"
+        ],
+        "expected": [
+          "hello_world"
+        ]
+      }
+    ],
+    "hints": [
+      "regex replace uppercase"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-33",
+    "title": "arrow function se object ke andar ke nested values ko flatten karo",
+    "starterCode": "const flatObj = (obj) => {\n  // TODO: return flattened object\n}",
+    "solution": "const flatObj = obj => {\n  const res = {};\n  const flatten = (o, prefix='') => {\n    for (const [k,v] of Object.entries(o)) {\n      if (typeof v === 'object' && v !== null && !Array.isArray(v)) flatten(v, prefix+k+'.');\n      else res[prefix+k] = v;\n    }\n  };\n  flatten(obj);\n  return res;\n};",
+    "tests": [
+      {
+        "input": [
+          {
+            "a": {
+              "b": 1,
+              "c": {
+                "d": 2
+              }
+            }
+          }
+        ],
+        "expected": [
+          {
+            "a.b": 1,
+            "a.c.d": 2
+          }
+        ]
+      }
+    ],
+    "hints": [
+      "recursion use karo",
+      "prefix track karo"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-34",
+    "title": "arrow function se array mein duplicate elements ki frequency batao",
+    "starterCode": "const dupFreq = (arr) => {\n  // TODO: return object with frequencies\n}",
+    "solution": "const dupFreq = arr => arr.reduce((o,v)=>{o[v]=(o[v]||0)+1;return o;},{});",
+    "tests": [
+      {
+        "input": [
+          [
+            1,
+            2,
+            2,
+            3,
+            3,
+            3
+          ]
+        ],
+        "expected": [
+          {
+            "1": 1,
+            "2": 2,
+            "3": 3
+          }
+        ]
+      }
+    ],
+    "hints": [
+      "reduce use karo"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-35",
+    "title": "arrow function se number ke prime factors return karo",
+    "starterCode": "const primeFactors = (n) => {\n  // TODO: return array of prime factors\n}",
+    "solution": "const primeFactors = n => {\n  const factors = [];\n  for (let i = 2; i <= n; i++) {\n    while (n % i === 0) { factors.push(i); n /= i; }\n  }\n  return factors;\n};",
+    "tests": [
+      {
+        "input": [
+          12
+        ],
+        "expected": [
+          2,
+          2,
+          3
+        ]
+      }
+    ],
+    "hints": [
+      "divide karo while divisible"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-36",
+    "title": "arrow function se given string ka reverse palindrome hai check karo reverse ke baad",
+    "starterCode": "const reversePalindrome = (s) => {\n  // TODO: return true if reverse is palindrome\n}",
+    "solution": "const reversePalindrome = s => {\n  const rev = s.split('').reverse().join('');\n  return rev === rev.split('').reverse().join('');\n};",
+    "tests": [
+      {
+        "input": [
+          "hello"
+        ],
+        "expected": [
+          false
+        ]
+      },
+      {
+        "input": [
+          "abba"
+        ],
+        "expected": [
+          true
+        ]
+      }
+    ],
+    "hints": [
+      "reverse karo",
+      "palindrome check karo"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-37",
+    "title": "arrow function se array mein elements ko group by parity karo",
+    "starterCode": "const groupByParity = (arr) => {\n  // TODO: return {odd:[], even:[]}\n}",
+    "solution": "const groupByParity = arr => arr.reduce((o,v)=>{v%2===0?o.even.push(v):o.odd.push(v);return o;},{odd:[],even:[]});",
+    "tests": [
+      {
+        "input": [
+          [
+            1,
+            2,
+            3,
+            4
+          ]
+        ],
+        "expected": [
+          {
+            "odd": [
+              1,
+              3
+            ],
+            "even": [
+              2,
+              4
+            ]
+          }
+        ]
+      }
+    ],
+    "hints": [
+      "reduce use karo",
+      "odd even check karo"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-38",
+    "title": "arrow function se number ka sum of proper divisors return karo",
+    "starterCode": "const sumProper = (n) => {\n  // TODO: return sum of proper divisors\n}",
+    "solution": "const sumProper = n => Array.from({length:n},(_,i)=>i+1).filter(i=>n%i===0&&i!==n).reduce((s,v)=>s+v,0);",
+    "tests": [
+      {
+        "input": [
+          6
+        ],
+        "expected": [
+          6
+        ]
+      },
+      {
+        "input": [
+          12
+        ],
+        "expected": [
+          16
+        ]
+      }
+    ],
+    "hints": [
+      "proper divisors = except n itself"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-39",
+    "title": "arrow function se array mein sabse zyada baar aane wala element lo",
+    "starterCode": "const mode = (arr) => {\n  // TODO: return mode\n}",
+    "solution": "const mode = arr => {\n  const freq = arr.reduce((o,v)=>{o[v]=(o[v]||0)+1;return o;},{});\n  return Object.entries(freq).sort((a,b)=>b[1]-a[1])[0][0];\n};",
+    "tests": [
+      {
+        "input": [
+          [
+            1,
+            2,
+            2,
+            3,
+            3,
+            3
+          ]
+        ],
+        "expected": [
+          "3"
+        ]
+      }
+    ],
+    "hints": [
+      "frequency banao",
+      "sort karo mode lo"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-40",
+    "title": "arrow function se string mein words ki length ka array return karo",
+    "starterCode": "const wordLens = (s) => {\n  // TODO: return array of word lengths\n}",
+    "solution": "const wordLens = s => s.split(' ').map(w=>w.length);",
+    "tests": [
+      {
+        "input": [
+          "hello world"
+        ],
+        "expected": [
+          5,
+          5
+        ]
+      }
+    ],
+    "hints": [
+      "split map length"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-41",
+    "title": "arrow function se number ka ASCII value return karo",
+    "starterCode": "const ascii = (c) => {\n  // TODO: return ASCII code\n}",
+    "solution": "const ascii = c => c.charCodeAt(0);",
+    "tests": [
+      {
+        "input": [
+          "A"
+        ],
+        "expected": [
+          65
+        ]
+      }
+    ],
+    "hints": [
+      "charCodeAt(0) use karo"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-42",
+    "title": "arrow function se number ka character return karo ASCII se",
+    "starterCode": "const fromAscii = (n) => {\n  // TODO: return character\n}",
+    "solution": "const fromAscii = n => String.fromCharCode(n);",
+    "tests": [
+      {
+        "input": [
+          65
+        ],
+        "expected": [
+          "A"
+        ]
+      }
+    ],
+    "hints": [
+      "String.fromCharCode use karo"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-43",
+    "title": "arrow function se array mein non-numeric elements hata do",
+    "starterCode": "const onlyNums = (arr) => {\n  // TODO: return only numbers\n}",
+    "solution": "const onlyNums = arr => arr.filter(x => typeof x === 'number');",
+    "tests": [
+      {
+        "input": [
+          [
+            1,
+            "a",
+            2,
+            "b",
+            3
+          ]
+        ],
+        "expected": [
+          1,
+          2,
+          3
+        ]
+      }
+    ],
+    "hints": [
+      "typeof check karo"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-44",
+    "title": "arrow function se given array ke middle element lo",
+    "starterCode": "const middle = (arr) => {\n  // TODO: return middle element(s)\n}",
+    "solution": "const middle = arr => arr.slice(Math.floor(arr.length/2)-(arr.length%2===0?1:0), Math.floor(arr.length/2)+1);",
+    "tests": [
+      {
+        "input": [
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        ],
+        "expected": [
+          3
+        ]
+      },
+      {
+        "input": [
+          [
+            1,
+            2,
+            3,
+            4
+          ]
+        ],
+        "expected": [
+          2,
+          3
+        ]
+      }
+    ],
+    "hints": [
+      "length calculate karo",
+      "slice use karo"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-45",
+    "title": "arrow function se number ke digits ko reverse karo",
+    "starterCode": "const revDigits = (n) => {\n  // TODO: return reversed digits number\n}",
+    "solution": "const revDigits = n => Number(String(n).split('').reverse().join(''));",
+    "tests": [
+      {
+        "input": [
+          1234
+        ],
+        "expected": [
+          4321
+        ]
+      }
+    ],
+    "hints": [
+      "string mein convert karo reverse karo"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-46",
+    "title": "arrow function se array mein increasing subsequence dhundho",
+    "starterCode": "const incSubseq = (arr) => {\n  // TODO: return longest increasing subsequence\n}",
+    "solution": "const incSubseq = arr => {\n  const dp = arr.map(()=>[]);\n  dp[0] = [arr[0]];\n  for (let i=1;i<arr.length;i++) {\n    for (let j=0;j<i;j++) {\n      if (arr[j]<arr[i] && dp[j].length>=dp[i].length) dp[i]=[...dp[j]];\n    }\n    dp[i].push(arr[i]);\n  }\n  return dp.sort((a,b)=>b.length-a.length)[0];\n};",
+    "tests": [
+      {
+        "input": [
+          [
+            10,
+            9,
+            2,
+            5,
+            3,
+            7,
+            101,
+            18
+          ]
+        ],
+        "expected": [
+          2,
+          3,
+          7,
+          101
+        ]
+      }
+    ],
+    "hints": [
+      "DP approach use karo"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-47",
+    "title": "arrow function se array mein sabse lambi increasing subsequence ki length lo",
+    "starterCode": "const lisLen = (arr) => {\n  // TODO: return length of LIS\n}",
+    "solution": "const lisLen = arr => {\n  const tails = [];\n  for (const x of arr) {\n    let lo=0, hi=tails.length;\n    while(lo<hi) { const mid=(lo+hi)>>1; if(tails[mid]<x) lo=mid+1; else hi=mid; }\n    tails[lo]=x;\n  }\n  return tails.length;\n};",
+    "tests": [
+      {
+        "input": [
+          [
+            10,
+            9,
+            2,
+            5,
+            3,
+            7,
+            101,
+            18
+          ]
+        ],
+        "expected": [
+          4
+        ]
+      }
+    ],
+    "hints": [
+      "binary search approach use karo"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-48",
+    "title": "arrow function se given string mein se all permutations return karo",
+    "starterCode": "const perms = (s) => {\n  // TODO: return array of all permutations\n}",
+    "solution": "const perms = s => {\n  if (s.length<=1) return [s];\n  return s.split('').flatMap((ch,i)=>perms(s.slice(0,i)+s.slice(i+1)).map(p=>ch+p));\n};",
+    "tests": [
+      {
+        "input": [
+          "ab"
+        ],
+        "expected": [
+          "ab",
+          "ba"
+        ]
+      }
+    ],
+    "hints": [
+      "recursion use karo",
+      "flatMap use karo"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-49",
+    "title": "arrow function se array mein koi bhi two elements ka sum target barabar ho check karo",
+    "starterCode": "const hasPair = (arr, target) => {\n  // TODO: return true if any pair sums to target\n}",
+    "solution": "const hasPair = (arr, target) => {\n  const seen = new Set();\n  for (const n of arr) {\n    if (seen.has(target-n)) return true;\n    seen.add(n);\n  }\n  return false;\n};",
+    "tests": [
+      {
+        "input": [
+          [
+            1,
+            2,
+            3,
+            4
+          ],
+          5
+        ],
+        "expected": [
+          true
+        ]
+      },
+      {
+        "input": [
+          [
+            1,
+            2,
+            3
+          ],
+          7
+        ],
+        "expected": [
+          false
+        ]
+      }
+    ],
+    "hints": [
+      "Set use karo",
+      "complement check karo"
+    ]
+  },
+  {
+    "id": "functions-arrow-functions-50",
+    "title": "arrow function se given array mein longest consecutive sequence ki length lo",
+    "starterCode": "const longestSeq = (arr) => {\n  // TODO: return length of longest consecutive sequence\n}",
+    "solution": "const longestSeq = arr => {\n  const set = new Set(arr);\n  let max = 0;\n  for (const n of set) {\n    if (!set.has(n-1)) {\n      let len=1;\n      while(set.has(n+len)) len++;\n      max=Math.max(max,len);\n    }\n  }\n  return max;\n};",
+    "tests": [
+      {
+        "input": [
+          [
+            100,
+            4,
+            200,
+            1,
+            3,
+            2
+          ]
+        ],
+        "expected": [
+          4
+        ]
+      }
+    ],
+    "hints": [
+      "Set use karo",
+      "starting point dhundho"
+    ]
+  }
+]

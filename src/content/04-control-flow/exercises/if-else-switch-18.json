@@ -1,16 +1,36 @@
 {
-  "id": "04-control-flow-if-else-switch-18",
-  "title": "If short-circuit pattern",
-  "starterCode": "const x = 5;\nif (x > 0) console.log('positive');",
-  "solution": "const x = 5;\nif (x > 0) console.log('positive');",
+  "id": "04-control-flow-01-if-else-switch-18",
+  "title": "Switch se color code return karo",
+  "starterCode": "// function colorCode(color) mein color name do\n// \"red\": \"#FF0000\", \"green\": \"#00FF00\", \"blue\": \"#0000FF\"\n// Unknown: \"#000000\"\n",
+  "solution": "function colorCode(color) {\n  switch (color.toLowerCase()) {\n    case \"red\": return \"#FF0000\"\n    case \"green\": return \"#00FF00\"\n    case \"blue\": return \"#0000FF\"\n    default: return \"#000000\"\n  }\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "positive"
+      "input": [
+        "red"
+      ],
+      "expected": "#FF0000"
+    },
+    {
+      "input": [
+        "Green"
+      ],
+      "expected": "#00FF00"
+    },
+    {
+      "input": [
+        "BLUE"
+      ],
+      "expected": "#0000FF"
+    },
+    {
+      "input": [
+        "yellow"
+      ],
+      "expected": "#000000"
     }
   ],
   "hints": [
-    "Single statement if doesn't need braces",
-    "5 > 0 is true"
+    "toLowerCase() se case-insensitive comparison hota hai",
+    "Default case mein black return karo"
   ]
 }

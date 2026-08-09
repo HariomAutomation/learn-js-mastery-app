@@ -1,0 +1,24 @@
+{
+  "id": "01-variables-declarations-variables-intro-39",
+  "title": "Object invert karo",
+  "starterCode": "// Keys aur values swap karo\n// invert({a:1, b:2}) = {1:\"a\", 2:\"b\"}\nfunction invert(obj) {\n  // TODO\n}",
+  "solution": "function invert(obj) {\n  return Object.fromEntries(\n    Object.entries(obj).map(([k, v]) => [v, k])\n  )\n}",
+  "tests": [
+    {
+      "input": [
+        {
+          "a": 1,
+          "b": 2
+        }
+      ],
+      "expected": {
+        "1": "a",
+        "2": "b"
+      }
+    }
+  ],
+  "hints": [
+    "Object.entries se pairs nikalo",
+    "Har pair reverse karo"
+  ]
+}

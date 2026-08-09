@@ -1,16 +1,21 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-24",
-  "title": "Implicit string conversion in comparison",
-  "starterCode": "console.log(\"2\" > \"12\");",
-  "solution": "console.log(\"2\" > \"12\");",
+  "id": "02-data-types-03-coercion-truthy-falsy-24",
+  "title": "Map key coercion",
+  "starterCode": "const map = new Map()\nmap.set(1, \"one\")\nmap.set(\"1\", \"string one\")\nmap.set(true, \"boolean\")\nreturn {\n  numKey: map.get(1),\n  strKey: map.get(\"1\"),\n  boolKey: map.get(true),\n  size: map.size\n}\n",
+  "solution": "const map = new Map()\nmap.set(1, \"one\")\nmap.set(\"1\", \"string one\")\nmap.set(true, \"boolean\")\nreturn {\n  numKey: map.get(1),\n  strKey: map.get(\"1\"),\n  boolKey: map.get(true),\n  size: map.size\n}",
   "tests": [
     {
       "input": [],
-      "expected": "true"
+      "expected": {
+        "numKey": "one",
+        "strKey": "string one",
+        "boolKey": "boolean",
+        "size": 3
+      }
     }
   ],
   "hints": [
-    "String comparison is lexicographic",
-    "'2' comes after '1' alphabetically"
+    "Map === comparison use karta hai keys ke liye",
+    "1 aur '1' alag keys hain Map mein"
   ]
 }

@@ -1,16 +1,54 @@
 {
-  "id": "04-control-flow-if-else-switch-42",
-  "title": "Switch with mixed types",
-  "starterCode": "const x = \"1\";\nswitch (x) {\n  case 1:\n    console.log(\"number\");\n    break;\n  case \"1\":\n    console.log(\"string\");\n    break;\n  default:\n    console.log(\"other\");\n}",
-  "solution": "const x = \"1\";\nswitch (x) {\n  case 1:\n    console.log(\"number\");\n    break;\n  case \"1\":\n    console.log(\"string\");\n    break;\n  default:\n    console.log(\"other\");\n}",
+  "id": "04-control-flow-01-if-else-switch-42",
+  "title": "Switch se direction vector",
+  "starterCode": "// function directionVector(dir) mein string do\n// \"up\": [0,1], \"down\": [0,-1], \"left\": [-1,0], \"right\": [1,0]\n// Invalid: null\n",
+  "solution": "function directionVector(dir) {\n  switch (dir) {\n    case \"up\": return [0, 1]\n    case \"down\": return [0, -1]\n    case \"left\": return [-1, 0]\n    case \"right\": return [1, 0]\n    default: return null\n  }\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "string"
+      "input": [
+        "up"
+      ],
+      "expected": [
+        0,
+        1
+      ]
+    },
+    {
+      "input": [
+        "down"
+      ],
+      "expected": [
+        0,
+        -1
+      ]
+    },
+    {
+      "input": [
+        "left"
+      ],
+      "expected": [
+        -1,
+        0
+      ]
+    },
+    {
+      "input": [
+        "right"
+      ],
+      "expected": [
+        1,
+        0
+      ]
+    },
+    {
+      "input": [
+        "diagonal"
+      ],
+      "expected": null
     }
   ],
   "hints": [
-    "switch uses === (strict equality)",
-    "'1' === 1 is false"
+    "Har direction ka [x,y] pair hai",
+    "Default mein null return karo"
   ]
 }

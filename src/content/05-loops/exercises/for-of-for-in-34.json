@@ -1,16 +1,25 @@
 {
-  "id": "05-loops-for-of-for-in-34",
-  "title": "For...Of With Set Size",
-  "starterCode": "const nums = new Set([1, 2, 2, 3, 3, 3]);\nlet count = 0;\nfor (const n of nums) {\n  count++;\n}\nconsole.log(count);",
-  "solution": "const nums = new Set([1, 2, 2, 3, 3, 3]);\nlet count = 0;\nfor (const n of nums) {\n  count++;\n}\nconsole.log(count);",
+  "id": "05-02-for-of-for-in-34",
+  "title": "For-in se object ke nested properties access karo",
+  "starterCode": "function getNestedValue(obj, path) {\n  // TODO: \"a.b.c\" path se value nikalo using for-in\n}",
+  "solution": "function getNestedValue(obj, path) {\n  const keys = path.split(\".\");\n  let current = obj;\n  for (const key of keys) {\n    if (current === null || current === undefined) return undefined;\n    current = current[key];\n  }\n  return current;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "3"
+      "input": [
+        {
+          "a": {
+            "b": {
+              "c": 42
+            }
+          }
+        },
+        "a.b.c"
+      ],
+      "expected": 42
     }
   ],
   "hints": [
-    "Count unique elements",
-    "Set removes duplicates"
+    "Path ko dot se split karo",
+    "For-of se iterate karo aur value follow karo"
   ]
 }

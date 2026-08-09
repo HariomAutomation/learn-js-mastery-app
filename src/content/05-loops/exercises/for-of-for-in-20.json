@@ -1,16 +1,23 @@
 {
-  "id": "05-loops-for-of-for-in-20",
-  "title": "For...Of Reverse",
-  "starterCode": "const arr = [1, 2, 3, 4, 5];\nfor (const val of arr.reverse()) {\n  console.log(val);\n}",
-  "solution": "const arr = [1, 2, 3, 4, 5];\nfor (const val of arr.reverse()) {\n  console.log(val);\n}",
+  "id": "05-02-for-of-for-in-20",
+  "title": "For-in se object ke values filter karo",
+  "starterCode": "function filterObject(obj, predicate) {\n  // TODO: predicate ke hisaab se values filter karo\n}",
+  "solution": "function filterObject(obj, predicate) {\n  const result = {};\n  for (const key in obj) {\n    if (!Object.prototype.hasOwnProperty.call(obj, key)) continue;\n    if (predicate(obj[key], key)) result[key] = obj[key];\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "5\n4\n3\n2\n1"
+      "input": [
+        {
+          "a": 1,
+          "b": 2,
+          "c": 3
+        },
+        null
+      ],
+      "expected": "{\"b\":2,\"c\":3}"
     }
   ],
   "hints": [
-    "Use reverse() first",
-    "Then iterate"
+    "For-in se iterate karo",
+    "Predicate true ho toh result me add karo"
   ]
 }

@@ -1,16 +1,22 @@
 {
-  "id": "05-loops-for-of-for-in-01",
-  "title": "For...Of Arrays",
-  "starterCode": "const arr = [1, 2, 3];\nfor (const val of arr) {\n  console.log(val);\n}",
-  "solution": "const arr = [1, 2, 3];\nfor (const val of arr) {\n  console.log(val);\n}",
+  "id": "05-02-for-of-for-in-01",
+  "title": "For-of se array ke har element pe operation karo",
+  "starterCode": "function doubleAll(arr) {\n  // TODO: for-of use karke array ke sab elements double karo\n}",
+  "solution": "function doubleAll(arr) {\n  const result = [];\n  for (const num of arr) result.push(num * 2);\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "1\n2\n3"
+      "input": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": "2,4,6"
     }
   ],
   "hints": [
-    "Use 'of' for values",
-    "const declares loop variable"
+    "For-of se directly values milti hain",
+    "Index nahi milta — agar index chahiye toh entries use karo"
   ]
 }

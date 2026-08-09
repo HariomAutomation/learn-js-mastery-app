@@ -1,16 +1,21 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-17",
-  "title": "Number() conversion from string",
-  "starterCode": "console.log(Number(\"42\"));",
-  "solution": "console.log(Number(\"42\"));",
+  "id": "02-data-types-03-coercion-truthy-falsy-17",
+  "title": "Implicit toString coercion",
+  "starterCode": "return {\n  arrayStr: [1, 2, 3].toString(),\n  objStr: ({ a: 1 }).toString(),\n  numArr: [10] + [20],\n  arrConcat: [1, 2] + [3, 4]\n}\n",
+  "solution": "return {\n  arrayStr: [1, 2, 3].toString(),\n  objStr: ({ a: 1 }).toString(),\n  numArr: [10] + [20],\n  arrConcat: [1, 2] + [3, 4]\n}",
   "tests": [
     {
       "input": [],
-      "expected": "42"
+      "expected": {
+        "arrayStr": "1,2,3",
+        "objStr": "[object Object]",
+        "numArr": "1020",
+        "arrConcat": "1,23,4"
+      }
     }
   ],
   "hints": [
-    "Number() parses strings",
-    "Returns the numeric value"
+    "Array toString comma-separated string deta hai",
+    "+ operator dono taraf ke values toString karta hai"
   ]
 }

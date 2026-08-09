@@ -1,0 +1,16 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-49",
+  "title": "eval scope",
+  "starterCode": "const x = 10\nfunction test() {\n  const x = 20\n  return eval(\"x\")\n}\nreturn test()\n",
+  "solution": "const x = 10\nfunction test() {\n  const x = 20\n  return eval(\"x\")\n}\nreturn test()",
+  "tests": [
+    {
+      "input": [],
+      "expected": 20
+    }
+  ],
+  "hints": [
+    "eval runs in local scope",
+    "Sees function's x = 20, not global x = 10"
+  ]
+}

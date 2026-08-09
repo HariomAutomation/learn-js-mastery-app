@@ -1,16 +1,18 @@
 {
-  "id": "05-loops-for-while-06",
-  "title": "Continue Statement",
-  "starterCode": "for (let i = 0; i < 5; i++) {\n  if (i === 2) continue;\n  console.log(i);\n}",
-  "solution": "for (let i = 0; i < 5; i++) {\n  if (i === 2) continue;\n  console.log(i);\n}",
+  "id": "05-01-for-while-06",
+  "title": "Continue use karke odd numbers skip karo",
+  "starterCode": "function evenSum(n) {\n  // TODO: 1 se n tak sirf even numbers ka sum\n  // Continue use karo odd skip karne ke liye\n}",
+  "solution": "function evenSum(n) {\n  let sum = 0;\n  for (let i = 1; i <= n; i++) {\n    if (i % 2 !== 0) continue;\n    sum += i;\n  }\n  return sum;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "0\n1\n3\n4"
+      "input": [
+        10
+      ],
+      "expected": 30
     }
   ],
   "hints": [
-    "continue skips current iteration",
-    "Use with if statement"
+    "Odd hai toh continue se skip karo",
+    "Sum me sirf even add honge"
   ]
 }

@@ -1,15 +1,19 @@
 {
   "id": "01-variables-declarations-var-let-const-27",
-  "title": "const swap impossible",
-  "starterCode": "const a = 1, b = 2\ntry {\n  [a, b] = [b, a]\n} catch(e) {\n  console.log(\"error\")\n}",
-  "solution": "const a = 1, b = 2\ntry {\n  [a, b] = [b, a]\n} catch(e) {\n  console.log(\"error\")\n}",
+  "title": "const in loop body",
+  "starterCode": "const results = []\nfor (let i = 0; i < 3; i++) {\n  const val = i * 10\n  results.push(val)\n}\nreturn results\n",
+  "solution": "const results = []\nfor (let i = 0; i < 3; i++) {\n  const val = i * 10\n  results.push(val)\n}\nreturn results",
   "tests": [
     {
       "input": [],
-      "expected": "error"
+      "expected": [
+        0,
+        10,
+        20
+      ]
     }
   ],
   "hints": [
-    "const cannot be reassigned"
+    "const val = i * 10 — har iteration mein naya const"
   ]
 }

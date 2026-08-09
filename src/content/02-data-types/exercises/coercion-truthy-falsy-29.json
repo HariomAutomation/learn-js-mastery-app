@@ -1,16 +1,18 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-29",
-  "title": "undefined coerces to NaN",
-  "starterCode": "console.log(undefined + 5);",
-  "solution": "console.log(undefined + 5);",
+  "id": "02-data-types-03-coercion-truthy-falsy-29",
+  "title": "toJSON method",
+  "starterCode": "const obj = {\n  x: 1,\n  y: 2,\n  toJSON() {\n    return { sum: this.x + this.y }\n  }\n}\nconst result = JSON.stringify(obj)\nreturn JSON.parse(result)\n",
+  "solution": "const obj = {\n  x: 1,\n  y: 2,\n  toJSON() {\n    return { sum: this.x + this.y }\n  }\n}\nconst result = JSON.stringify(obj)\nreturn JSON.parse(result)",
   "tests": [
     {
       "input": [],
-      "expected": "NaN"
+      "expected": {
+        "sum": 3
+      }
     }
   ],
   "hints": [
-    "undefined converts to NaN",
-    "Any math with NaN is NaN"
+    "toJSON() method JSON.stringify ko control karta hai",
+    "Custom serialization possible hai"
   ]
 }

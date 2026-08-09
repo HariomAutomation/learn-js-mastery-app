@@ -1,16 +1,16 @@
 {
-  "id": "03-operators-arithmetic-comparison-47",
-  "title": "NaN check",
-  "starterCode": "const result = isNaN(\"hello\");\nconsole.log(result);",
-  "solution": "const result = isNaN(\"hello\");\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-47",
+  "title": "Percentage calculate karo",
+  "starterCode": "// Exam mein 350 marks aaye hain total 500 mein\n// Percentage aur grade nikalo\nconst obtained = 350\nconst total = 500\n// TODO: percentage nikalo\n",
+  "solution": "const obtained = 350\nconst total = 500\nconst percentage = (obtained / total) * 100\nreturn percentage",
   "tests": [
     {
       "input": [],
-      "expected": "true"
+      "expected": 70
     }
   ],
   "hints": [
-    "isNaN returns true if value is NaN",
-    "'hello' cannot be converted to a number"
+    "Percentage = (obtained / total) * 100",
+    "350/500 * 100 = 70"
   ]
 }

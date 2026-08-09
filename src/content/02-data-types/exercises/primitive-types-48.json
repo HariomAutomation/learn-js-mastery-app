@@ -1,16 +1,19 @@
 {
-  "id": "02-data-types-primitive-types-48",
-  "title": "Create character from code",
-  "starterCode": "console.log();",
-  "solution": "console.log(String.fromCharCode(65));",
+  "id": "02-data-types-01-primitive-types-48",
+  "title": "Symbol.toPrimitive custom",
+  "starterCode": "const money = {\n  amount: 100,\n  currency: \"INR\",\n  [Symbol.toPrimitive](hint) {\n    // TODO: hint ke according value return karo\n  }\n}\nreturn {\n  asNumber: +money,\n  asString: \"\" + money\n}\n",
+  "solution": "const money = {\n  amount: 100,\n  currency: \"INR\",\n  [Symbol.toPrimitive](hint) {\n    if (hint === \"number\") return this.amount\n    return `${this.amount} ${this.currency}`\n  }\n}\nreturn {\n  asNumber: +money,\n  asString: \"\" + money\n}",
   "tests": [
     {
       "input": [],
-      "expected": "A"
+      "expected": {
+        "asNumber": 100,
+        "asString": "100 INR"
+      }
     }
   ],
   "hints": [
-    "String.fromCharCode creates from code",
-    "65 is 'A' in ASCII"
+    "Symbol.toPrimitive se custom conversion hota hai",
+    "hint 'number', 'string', ya 'default' ho sakta hai"
   ]
 }

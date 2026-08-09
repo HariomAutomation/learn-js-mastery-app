@@ -1,16 +1,19 @@
 {
-  "id": "02-data-types-primitive-types-15",
-  "title": "Store negative Infinity",
-  "starterCode": "const small = ;\nconsole.log(small);",
-  "solution": "const small = -Infinity;\nconsole.log(small);",
+  "id": "02-data-types-01-primitive-types-15",
+  "title": "let vs const reassignment",
+  "starterCode": "let counter = 0\ncounter = counter + 1\ncounter += 1\nconst PI = 3.14\nreturn {\n  counter: counter,\n  pi: PI\n}\n",
+  "solution": "let counter = 0\ncounter = counter + 1\ncounter += 1\nconst PI = 3.14\nreturn {\n  counter: counter,\n  pi: PI\n}",
   "tests": [
     {
       "input": [],
-      "expected": "-Infinity"
+      "expected": {
+        "counter": 2,
+        "pi": 3.14
+      }
     }
   ],
   "hints": [
-    "Just add a minus before Infinity",
-    "It represents the smallest possible value"
+    "let se reassign ho sakta hai",
+    "const se reassign nahi ho sakta"
   ]
 }

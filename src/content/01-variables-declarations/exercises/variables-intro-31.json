@@ -1,15 +1,47 @@
 {
   "id": "01-variables-declarations-variables-intro-31",
-  "title": "Structured clone deep copy",
-  "starterCode": "const original = { a: { b: 1 } }\nconst copy = structuredClone(original)\ncopy.a.b = 99\nconsole.log(original.a.b)",
-  "solution": "const original = { a: { b: 1 } }\nconst copy = structuredClone(original)\ncopy.a.b = 99\nconsole.log(original.a.b)",
+  "title": "Array intersection",
+  "starterCode": "// Do arrays ka intersection nikalo (common elements)\nfunction intersect(a, b) {\n  // TODO\n}\n",
+  "solution": "function intersect(a, b) {\n  return a.filter(x => b.includes(x))\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "1"
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "expected": [
+        3,
+        4
+      ]
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b"
+        ],
+        [
+          "b",
+          "c"
+        ]
+      ],
+      "expected": [
+        "b"
+      ]
     }
   ],
   "hints": [
-    "structuredClone creates deep copy"
+    "filter + includes use karo",
+    "Jo elements dono mein ho wo rakhna hai"
   ]
 }

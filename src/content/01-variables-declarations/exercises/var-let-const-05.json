@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-var-let-const-05",
-  "title": "let TDZ",
-  "starterCode": "try {\n  console.log(x)\n  let x = 5\n} catch(e) {\n  console.log(\"TDZ\")\n}",
-  "solution": "try {\n  console.log(x)\n  let x = 5\n} catch(e) {\n  console.log(\"TDZ\")\n}",
+  "title": "Bug: function declaration vs expression",
+  "starterCode": "// Fix: both should work\nconsole.log(add(2,3))\nvar add = function(a,b) { return a+b }\n",
+  "solution": "console.log(add(2,3))\nvar add = function(a,b) { return a+b }",
   "tests": [
     {
       "input": [],
-      "expected": "TDZ"
+      "expected": "add is not a function"
     }
   ],
   "hints": [
-    "let has temporal dead zone"
+    "var expression hoisted nahi hota",
+    "Function declaration use karo pehle"
   ]
 }

@@ -1,16 +1,21 @@
 {
-  "id": "05-loops-for-of-for-in-24",
-  "title": "Set Iteration",
-  "starterCode": "const colors = new Set(['red', 'green', 'blue']);\nfor (const color of colors) {\n  console.log(color);\n}",
-  "solution": "const colors = new Set(['red', 'green', 'blue']);\nfor (const color of colors) {\n  console.log(color);\n}",
+  "id": "05-02-for-of-for-in-24",
+  "title": "For-in se object ke keys values pairs banao",
+  "starterCode": "function entries(obj) {\n  // TODO: [{key:\"a\", value:1}, {key:\"b\", value:2}]\n}",
+  "solution": "function entries(obj) {\n  const result = [];\n  for (const key in obj) {\n    if (Object.prototype.hasOwnProperty.call(obj, key)) {\n      result.push({ key, value: obj[key] });\n    }\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "red\ngreen\nblue"
+      "input": [
+        {
+          "a": 1,
+          "b": 2
+        }
+      ],
+      "expected": "[{\"key\":\"a\",\"value\":1},{\"key\":\"b\",\"value\":2}]"
     }
   ],
   "hints": [
-    "Set iterates values",
-    "Order preserved"
+    "For-in se key milti hai",
+    "Value obj[key] se nikalo"
   ]
 }

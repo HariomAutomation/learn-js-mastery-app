@@ -1,16 +1,23 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-30",
-  "title": "Empty string coerces to 0",
-  "starterCode": "console.log(\"\" - 5);",
-  "solution": "console.log(\"\" - 5);",
+  "id": "02-data-types-03-coercion-truthy-falsy-30",
+  "title": "Number.isFinite vs isFinite",
+  "starterCode": "return {\n  isFiniteInf: isFinite(Infinity),\n  numberIsFiniteInf: Number.isFinite(Infinity),\n  isFiniteNum: isFinite(42),\n  numberIsFiniteNum: Number.isFinite(42),\n  isFiniteStr: isFinite(\"42\"),\n  numberIsFiniteStr: Number.isFinite(\"42\")\n}\n",
+  "solution": "return {\n  isFiniteInf: isFinite(Infinity),\n  numberIsFiniteInf: Number.isFinite(Infinity),\n  isFiniteNum: isFinite(42),\n  numberIsFiniteNum: Number.isFinite(42),\n  isFiniteStr: isFinite(\"42\"),\n  numberIsFiniteStr: Number.isFinite(\"42\")\n}",
   "tests": [
     {
       "input": [],
-      "expected": "-5"
+      "expected": {
+        "isFiniteInf": false,
+        "numberIsFiniteInf": false,
+        "isFiniteNum": true,
+        "numberIsFiniteNum": true,
+        "isFiniteStr": true,
+        "numberIsFiniteStr": false
+      }
     }
   ],
   "hints": [
-    "Empty string converts to 0",
-    "0 - 5 = -5"
+    "isFinite pehle number mein convert karta hai",
+    "Number.isFinite sirf numbers ke liye check karta hai"
   ]
 }

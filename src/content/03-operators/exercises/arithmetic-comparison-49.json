@@ -1,16 +1,16 @@
 {
-  "id": "03-operators-arithmetic-comparison-49",
-  "title": "Integer check",
-  "starterCode": "const result = Number.isInteger(42);\nconsole.log(result);",
-  "solution": "const result = Number.isInteger(42);\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-49",
+  "title": "Number digit sum nikalo",
+  "starterCode": "// 1234 ke digits ka sum nikalo (1+2+3+4 = 10)\nconst num = 1234\n// TODO: sum of digits\n",
+  "solution": "const num = 1234\nconst sum = String(num).split(\"\").reduce((acc, d) => acc + Number(d), 0)\nreturn sum",
   "tests": [
     {
       "input": [],
-      "expected": "true"
+      "expected": 10
     }
   ],
   "hints": [
-    "Number.isInteger checks if value is an integer",
-    "42 is an integer"
+    "String mein convert karke split karo",
+    "Har digit ko Number mein convert karo"
   ]
 }

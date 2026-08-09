@@ -1,16 +1,27 @@
 {
-  "id": "05-loops-for-of-for-in-27",
-  "title": "For...In Own Keys Only",
-  "starterCode": "function Person(name) { this.name = name; }\nPerson.prototype.age = 25;\nconst p = new Person('John');\nfor (const key in p) {\n  if (p.hasOwnProperty(key)) {\n    console.log(key);\n  }\n}",
-  "solution": "function Person(name) { this.name = name; }\nPerson.prototype.age = 25;\nconst p = new Person('John');\nfor (const key in p) {\n  if (p.hasOwnProperty(key)) {\n    console.log(key);\n  }\n}",
+  "id": "05-02-for-of-for-in-27",
+  "title": "For-of se array ke zip karo",
+  "starterCode": "function zip(arr1, arr2) {\n  // TODO: [[1,\"a\"],[2,\"b\"],[3,\"c\"]] type me zip karo\n}",
+  "solution": "function zip(arr1, arr2) {\n  const result = [];\n  const len = Math.min(arr1.length, arr2.length);\n  for (let i = 0; i < len; i++) {\n    result.push([arr1[i], arr2[i]]);\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "name"
+      "input": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          "a",
+          "b",
+          "c"
+        ]
+      ],
+      "expected": "[[1,\"a\"],[2,\"b\"],[3,\"c\"]]"
     }
   ],
   "hints": [
-    "prototype properties are inherited",
-    "hasOwnProperty filters them"
+    "Min length tak loop chalao",
+    "Har index pe dono arrays ke elements pair karo"
   ]
 }

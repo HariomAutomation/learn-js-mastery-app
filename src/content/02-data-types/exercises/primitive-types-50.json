@@ -1,16 +1,23 @@
 {
-  "id": "02-data-types-primitive-types-50",
-  "title": "Convert boolean to number",
-  "starterCode": "console.log(Number(true));",
-  "solution": "console.log(Number(true));",
+  "id": "02-data-types-01-primitive-types-50",
+  "title": "Proxy basic usage",
+  "starterCode": "const logs = []\nconst user = new Proxy({ name: \"Hariom\", age: 25 }, {\n  get(target, prop) {\n    // TODO: log karo aur value return karo\n  }\n})\nconst name = user.name\nconst age = user.age\nreturn { name, age, logs }\n",
+  "solution": "const logs = []\nconst user = new Proxy({ name: \"Hariom\", age: 25 }, {\n  get(target, prop) {\n    logs.push(\"Accessed: \" + prop)\n    return target[prop]\n  }\n})\nconst name = user.name\nconst age = user.age\nreturn { name, age, logs }",
   "tests": [
     {
       "input": [],
-      "expected": "1"
+      "expected": {
+        "name": "Hariom",
+        "age": 25,
+        "logs": [
+          "Accessed: name",
+          "Accessed: age"
+        ]
+      }
     }
   ],
   "hints": [
-    "true becomes 1",
-    "false becomes 0"
+    "Proxy mein get trap property access intercept karta hai",
+    "target original object hai"
   ]
 }

@@ -1,16 +1,36 @@
 {
-  "id": "04-control-flow-if-else-switch-13",
-  "title": "Guard clause returns early",
-  "starterCode": "function greet(name) {\n  if (!name) return;\n  console.log(`Hello, ${name}!`);\n}\ngreet(null);",
-  "solution": "function greet(name) {\n  if (!name) return;\n  console.log(`Hello, ${name}!`);\n}\ngreet(null);",
+  "id": "04-control-flow-01-if-else-switch-13",
+  "title": "Character type detect karo",
+  "starterCode": "// function charType(char) mein single character do\n// Digit: \"digit\", Letter: \"letter\", Special: \"special\"\n",
+  "solution": "function charType(char) {\n  if (char >= \"0\" && char <= \"9\") return \"digit\"\n  else if ((char >= \"a\" && char <= \"z\") || (char >= \"A\" && char <= \"Z\")) return \"letter\"\n  else return \"special\"\n}",
   "tests": [
     {
-      "input": [],
-      "expected": ""
+      "input": [
+        "5"
+      ],
+      "expected": "digit"
+    },
+    {
+      "input": [
+        "a"
+      ],
+      "expected": "letter"
+    },
+    {
+      "input": [
+        "Z"
+      ],
+      "expected": "letter"
+    },
+    {
+      "input": [
+        "@"
+      ],
+      "expected": "special"
     }
   ],
   "hints": [
-    "null is falsy",
-    "Function returns before console.log"
+    "Char comparison se range check hota hai",
+    "'a' <= char && char <= 'z' se letter detect hota hai"
   ]
 }

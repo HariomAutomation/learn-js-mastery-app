@@ -1,16 +1,20 @@
 {
-  "id": "02-data-types-primitive-types-06",
-  "title": "Concatenate two strings",
-  "starterCode": "const first = \"John\";\nconst last = \"Doe\";\nconst full = ;\nconsole.log(full);",
-  "solution": "const first = \"John\";\nconst last = \"Doe\";\nconst full = first + \" \" + last;\nconsole.log(full);",
+  "id": "02-data-types-01-primitive-types-06",
+  "title": "Symbol unique identifier",
+  "starterCode": "// Do symbols banao — dono unique hone chahiye\nconst s1 = Symbol(\"id\")\nconst s2 = Symbol(\"id\")\nreturn {\n  areEqual: s1 === s2,\n  s1Description: s1.description,\n  s2Description: s2.description\n}\n",
+  "solution": "const s1 = Symbol(\"id\")\nconst s2 = Symbol(\"id\")\nreturn {\n  areEqual: s1 === s2,\n  s1Description: s1.description,\n  s2Description: s2.description\n}",
   "tests": [
     {
       "input": [],
-      "expected": "John Doe"
+      "expected": {
+        "areEqual": false,
+        "s1Description": "id",
+        "s2Description": "id"
+      }
     }
   ],
   "hints": [
-    "Use the + operator to join strings",
-    "Add a space between the names"
+    "Symbol hamesha unique hota hai",
+    "description property se description milta hai"
   ]
 }

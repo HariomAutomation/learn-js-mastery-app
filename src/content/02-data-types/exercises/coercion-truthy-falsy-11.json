@@ -1,16 +1,24 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-11",
-  "title": "String to number coercion with +",
-  "starterCode": "console.log(\"5\" + 3);",
-  "solution": "console.log(\"5\" + 3);",
+  "id": "02-data-types-03-coercion-truthy-falsy-11",
+  "title": "== type coercion deep dive",
+  "starterCode": "return {\n  emptyArrNull: [] == null,\n  emptyArrFalse: [] == false,\n  emptyArrZero: [] == 0,\n  emptyStrNull: \"\" == null,\n  falseNull: false == null,\n  trueOne: true == 1,\n  trueTwo: true == 2\n}\n",
+  "solution": "return {\n  emptyArrNull: [] == null,\n  emptyArrFalse: [] == false,\n  emptyArrZero: [] == 0,\n  emptyStrNull: \"\" == null,\n  falseNull: false == null,\n  trueOne: true == 1,\n  trueTwo: true == 2\n}",
   "tests": [
     {
       "input": [],
-      "expected": "53"
+      "expected": {
+        "emptyArrNull": false,
+        "emptyArrFalse": true,
+        "emptyArrZero": true,
+        "emptyStrNull": false,
+        "falseNull": false,
+        "trueOne": true,
+        "trueTwo": false
+      }
     }
   ],
   "hints": [
-    "+ with a string does concatenation",
-    "The number becomes a string"
+    "[] == false hota hai kyunki [] -> '' -> 0, false -> 0",
+    "null sirf undefined ke barabar hota hai =="
   ]
 }

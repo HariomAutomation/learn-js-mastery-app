@@ -1,16 +1,22 @@
 {
-  "id": "05-loops-patterns-practice-42",
-  "title": "LCM Loop",
-  "starterCode": "function lcm(a, b) {\n  return (a * b) / gcd(a, b);\n}\nfunction gcd(a, b) {\n  while (b !== 0) {\n    let temp = b;\n    b = a % b;\n    a = temp;\n  }\n  return a;\n}\nconsole.log(lcm(4, 6));",
-  "solution": "function lcm(a, b) {\n  return (a * b) / gcd(a, b);\n}\nfunction gcd(a, b) {\n  while (b !== 0) {\n    let temp = b;\n    b = a % b;\n    a = temp;\n  }\n  return a;\n}\nconsole.log(lcm(4, 6));",
+  "id": "05-03-patterns-practice-42",
+  "title": "Array ko merge sort se sort karo",
+  "starterCode": "function mergeSort(arr) {\n  // TODO: merge sort algorithm implement karo\n}",
+  "solution": "function mergeSort(arr) {\n  if (arr.length <= 1) return arr;\n  const mid = Math.floor(arr.length / 2);\n  const left = mergeSort(arr.slice(0, mid));\n  const right = mergeSort(arr.slice(mid));\n  return merge(left, right);\n}\nfunction merge(left, right) {\n  const result = [];\n  let i = 0, j = 0;\n  while (i < left.length && j < right.length) {\n    result.push(left[i] <= right[j] ? left[i++] : right[j++]);\n  }\n  return [...result, ...left.slice(i), ...right.slice(j)];\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "12"
+      "input": [
+        5,
+        3,
+        1,
+        4,
+        2
+      ],
+      "expected": "1,2,3,4,5"
     }
   ],
   "hints": [
-    "LCM = a*b/GCD",
-    "Use GCD function"
+    "Divide and conquer use karo",
+    "Recursion se sort karo aur merge karo"
   ]
 }

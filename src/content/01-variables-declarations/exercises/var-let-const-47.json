@@ -1,0 +1,19 @@
+{
+  "id": "01-variables-declarations-var-let-const-47",
+  "title": "Destructuring with scope",
+  "starterCode": "const arr = [1, 2, 3]\nconst [a, , c] = arr\nreturn { a, c }\n",
+  "solution": "const arr = [1, 2, 3]\nconst [a, , c] = arr\nreturn { a, c }",
+  "tests": [
+    {
+      "input": [],
+      "expected": {
+        "a": 1,
+        "c": 3
+      }
+    }
+  ],
+  "hints": [
+    "Destructuring skips the second element",
+    "a gets 1, c gets 3"
+  ]
+}

@@ -1,16 +1,23 @@
 {
-  "id": "02-data-types-primitive-types-39",
-  "title": "Repeat a string",
-  "starterCode": "const str = \"ha\";\nconsole.log();",
-  "solution": "const str = \"ha\";\nconsole.log(str.repeat(3));",
+  "id": "02-data-types-01-primitive-types-39",
+  "title": "Default parameters",
+  "starterCode": "function greet(name = \"Guest\", time = \"Day\") {\n  // TODO\n}\n",
+  "solution": "function greet(name = \"Guest\", time = \"Day\") {\n  return `Good ${time}, ${name}!`\n}",
   "tests": [
     {
+      "input": [
+        "Hariom",
+        "Morning"
+      ],
+      "expected": "Good Morning, Hariom!"
+    },
+    {
       "input": [],
-      "expected": "hahaha"
+      "expected": "Good Day, Guest!"
     }
   ],
   "hints": [
-    "Strings have a repeat method",
-    "Pass the number of times to repeat"
+    "Parameter = defaultValue se default set hota hai",
+    "Agar argument na mile to default use hota hai"
   ]
 }

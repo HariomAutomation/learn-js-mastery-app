@@ -1,15 +1,30 @@
 {
   "id": "01-variables-declarations-variables-intro-22",
-  "title": "void operator",
-  "starterCode": "console.log(void 0)",
-  "solution": "console.log(void 0)",
+  "title": "Age validator function",
+  "starterCode": "// Function banao jo age check kare\n// 18 se kam = \"Minor\"\n// 18-60 = \"Adult\"\n// 60+ = \"Senior\"\nfunction getAgeCategory(age) {\n  // TODO\n}\n",
+  "solution": "function getAgeCategory(age) {\n  if (age < 18) return \"Minor\"\n  if (age <= 60) return \"Adult\"\n  return \"Senior\"\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "undefined"
+      "input": [
+        15
+      ],
+      "expected": "Minor"
+    },
+    {
+      "input": [
+        25
+      ],
+      "expected": "Adult"
+    },
+    {
+      "input": [
+        65
+      ],
+      "expected": "Senior"
     }
   ],
   "hints": [
-    "void evaluates and returns undefined"
+    "if-else if chain use karo",
+    "Pehle kam se zyada check karo"
   ]
 }

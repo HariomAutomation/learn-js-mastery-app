@@ -1,15 +1,28 @@
 {
   "id": "01-variables-declarations-variables-intro-26",
-  "title": "Destructuring with default",
-  "starterCode": "const { x = 10, y = 20 } = { x: 5 }\nconsole.log(x, y)",
-  "solution": "const { x = 10, y = 20 } = { x: 5 }\nconsole.log(x, y)",
+  "title": "Deep clone object",
+  "starterCode": "// Function banao jo deeply clone kare object\n// structuredClone ya manual method use karo\nfunction deepClone(obj) {\n  // TODO\n}\n",
+  "solution": "function deepClone(obj) {\n  return structuredClone(obj)\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "5 20"
+      "input": [
+        {
+          "a": 1,
+          "b": {
+            "c": 2
+          }
+        }
+      ],
+      "expected": {
+        "a": 1,
+        "b": {
+          "c": 2
+        }
+      }
     }
   ],
   "hints": [
-    "Defaults used when property missing"
+    "structuredClone() modern method hai deep copy ke liye",
+    "JSON.parse(JSON.stringify()) bhi kaam karega"
   ]
 }

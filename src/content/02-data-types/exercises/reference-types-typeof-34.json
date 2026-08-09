@@ -1,16 +1,21 @@
 {
-  "id": "02-data-types-reference-types-typeof-34",
-  "title": "Function is callable object",
-  "starterCode": "const fn = function() {};\nconsole.log();",
-  "solution": "const fn = function() {};\nconsole.log(typeof fn);",
+  "id": "02-data-types-02-reference-types-typeof-34",
+  "title": "JSON replacer function",
+  "starterCode": "const data = { name: \"Hariom\", age: 25, password: \"secret123\", city: \"Jaipur\" }\nconst safe = JSON.stringify(data, (key, value) => {\n  if (key === \"password\") return \"[HIDDEN]\"\n  return value\n}, 2)\nreturn JSON.parse(safe)\n",
+  "solution": "const data = { name: \"Hariom\", age: 25, password: \"secret123\", city: \"Jaipur\" }\nconst safe = JSON.stringify(data, (key, value) => {\n  if (key === \"password\") return \"[HIDDEN]\"\n  return value\n}, 2)\nreturn JSON.parse(safe)",
   "tests": [
     {
       "input": [],
-      "expected": "function"
+      "expected": {
+        "name": "Hariom",
+        "age": 25,
+        "password": "[HIDDEN]",
+        "city": "Jaipur"
+      }
     }
   ],
   "hints": [
-    "Functions are special objects",
-    "typeof returns 'function'"
+    "Replacer function har key-value pair pe call hota hai",
+    "Modify value ya undefined return kar sakte ho"
   ]
 }

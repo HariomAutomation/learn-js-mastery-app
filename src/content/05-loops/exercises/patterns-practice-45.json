@@ -1,16 +1,26 @@
 {
-  "id": "05-loops-patterns-practice-45",
-  "title": "String Compression",
-  "starterCode": "function compress(str) {\n  let result = \"\";\n  let count = 1;\n  for (let i = 1; i <= str.length; i++) {\n    if (i === str.length || str[i] !== str[i-1]) {\n      result += str[i-1] + count;\n      count = 1;\n    } else {\n      count++;\n    }\n  }\n  return result;\n}\nconsole.log(compress(\"aaabbcc\"));",
-  "solution": "function compress(str) {\n  let result = \"\";\n  let count = 1;\n  for (let i = 1; i <= str.length; i++) {\n    if (i === str.length || str[i] !== str[i-1]) {\n      result += str[i-1] + count;\n      count = 1;\n    } else {\n      count++;\n    }\n  }\n  return result;\n}\nconsole.log(compress(\"aaabbcc\"));",
+  "id": "05-03-patterns-practice-45",
+  "title": "Array ke elements ko circular fashion me print karo",
+  "starterCode": "function circularPrint(arr, startIndex, count) {\n  // TODO: startIndex se shuru karke count elements circular print karo\n}",
+  "solution": "function circularPrint(arr, startIndex, count) {\n  const result = [];\n  for (let i = 0; i < count; i++) {\n    result.push(arr[(startIndex + i) % arr.length]);\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "a3b2c2"
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        3,
+        7
+      ],
+      "expected": "4,5,1,2,3,4,5"
     }
   ],
   "hints": [
-    "Count consecutive chars",
-    "Build result string"
+    "Modulo se circular index nikalo",
+    "Count tak loop chalao"
   ]
 }

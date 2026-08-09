@@ -1,15 +1,19 @@
 {
-  "id": "03-operators-arithmetic-comparison-36",
-  "title": "Math.abs",
-  "starterCode": "const result = Math.abs(-7);\nconsole.log(result);",
-  "solution": "const result = Math.abs(-7);\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-36",
+  "title": "parseInt use karo",
+  "starterCode": "// String se number nikalo\nconst price = \"₹199.99\"\nconst phone = \"9876543210\"\nreturn {\n  priceNum: parseInt(price.replace(\"₹\", \"\")),\n  phoneNum: parseInt(phone)\n}",
+  "solution": "const price = \"₹199.99\"\nconst phone = \"9876543210\"\nreturn {\n  priceNum: parseInt(price.replace(\"₹\", \"\")),\n  phoneNum: parseInt(phone)\n}",
   "tests": [
     {
       "input": [],
-      "expected": "7"
+      "expected": {
+        "priceNum": 199,
+        "phoneNum": 9876543210
+      }
     }
   ],
   "hints": [
-    "Math.abs returns the absolute value"
+    "parseInt sirf integer part nikalta hai",
+    "NaN return hota hai agar valid number na ho"
   ]
 }

@@ -1,16 +1,44 @@
 {
-  "id": "04-control-flow-early-return-27",
-  "title": "Early return with object - error",
-  "starterCode": "function createUser(name, age) {\n  if (!name) return { error: 'name required' };\n  if (age < 0) return { error: 'invalid age' };\n  return { name, age, status: 'active' };\n}\nconsole.log(createUser('', 25));",
-  "solution": "function createUser(name, age) {\n  if (!name) return { error: 'name required' };\n  if (age < 0) return { error: 'invalid age' };\n  return { name, age, status: 'active' };\n}\nconsole.log(createUser('', 25));",
+  "id": "04-control-flow-02-early-return-27",
+  "title": "Guard for function arguments",
+  "starterCode": "// function mapArray(arr, fn) mein array aur function do\n// Agar array nahi: \"Invalid array\"\n// Agar function nahi: \"Invalid function\"\n// Warna map karo\n",
+  "solution": "function mapArray(arr, fn) {\n  if (!Array.isArray(arr)) return \"Invalid array\"\n  if (typeof fn !== \"function\") return \"Invalid function\"\n  return arr.map(fn)\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "[object Object]"
+      "input": [
+        [
+          1,
+          2,
+          3
+        ],
+        null
+      ],
+      "expected": [
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "input": [
+        "not array",
+        null
+      ],
+      "expected": "Invalid array"
+    },
+    {
+      "input": [
+        [
+          1,
+          2
+        ],
+        "not function"
+      ],
+      "expected": "Invalid function"
     }
   ],
   "hints": [
-    "'' is falsy",
-    "Returns error object"
+    "Array.isArray() se array check hota hai",
+    "typeof function se function check hota hai"
   ]
 }

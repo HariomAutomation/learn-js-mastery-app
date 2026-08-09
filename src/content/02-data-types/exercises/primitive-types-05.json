@@ -1,16 +1,17 @@
 {
-  "id": "02-data-types-primitive-types-05",
-  "title": "Store your age as a string",
-  "starterCode": "const age = ;\nconsole.log(age);",
-  "solution": "const age = \"25\";\nconsole.log(age);",
+  "id": "02-data-types-01-primitive-types-05",
+  "title": "BigInt declare karo",
+  "starterCode": "// Do bade numbers declare karo BigInt se\n// 9007199254740993n aur 12345678901234567890n\n// Return sum as string\n",
+  "solution": "const big1 = 9007199254740993n\nconst big2 = 12345678901234567890n\nreturn (big1 + big2).toString()",
   "tests": [
     {
       "input": [],
-      "expected": "25"
+      "expected": "21342878155955452883"
     }
   ],
   "hints": [
-    "Wrap the number in quotes to make it a string",
-    "Use typeof to verify if unsure"
+    "n suffix se BigInt banta hai",
+    "BigInt sirf BigInt se add hota hai",
+    "toString se string mein convert karo for comparison"
   ]
 }

@@ -1,16 +1,18 @@
 {
-  "id": "05-loops-for-while-08",
-  "title": "Counter Pattern",
-  "starterCode": "let count = 0;\nfor (let i = 1; i <= 5; i++) {\n  count += i;\n}\nconsole.log(count);",
-  "solution": "let count = 0;\nfor (let i = 1; i <= 5; i++) {\n  count += i;\n}\nconsole.log(count);",
+  "id": "05-01-for-while-08",
+  "title": "Nested loop se multiplication table banao",
+  "starterCode": "function multiplicationTable(n) {\n  // TODO: 1 se n tak multiplication table array banao\n  // Har row: [i, i*1, i*2, ..., i*10]\n}",
+  "solution": "function multiplicationTable(n) {\n  const table = [];\n  for (let i = 1; i <= n; i++) {\n    const row = [];\n    for (let j = 1; j <= 10; j++) row.push(i * j);\n    table.push(row);\n  }\n  return table;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "15"
+      "input": [
+        2
+      ],
+      "expected": "2,4,6,8,10,12,14,16,18,20"
     }
   ],
   "hints": [
-    "Initialize count to 0",
-    "Add each i to count"
+    "Outer loop rows ke liye, inner loop columns ke liye",
+    "Har row me i*j value push karo"
   ]
 }

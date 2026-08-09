@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-scope-hoisting-19",
-  "title": "Arrow function scope",
-  "starterCode": "const x = 10\nconst fn = () => console.log(x)\nfn()",
-  "solution": "const x = 10\nconst fn = () => console.log(x)\nfn()",
+  "title": "var function hoisting vs expression",
+  "starterCode": "console.log(typeof hello)\nvar hello = function() { return \"world\" }\nconsole.log(typeof hello)\nreturn typeof hello\n",
+  "solution": "console.log(typeof hello)\nvar hello = function() { return \"world\" }\nconsole.log(typeof hello)\nreturn typeof hello",
   "tests": [
     {
       "input": [],
-      "expected": "10"
+      "expected": "function"
     }
   ],
   "hints": [
-    "Arrow functions inherit scope"
+    "var hello is hoisted as undefined initially",
+    "After assignment, typeof becomes \"function\""
   ]
 }

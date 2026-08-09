@@ -1,16 +1,21 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-40",
-  "title": "Comparison coercion chain",
-  "starterCode": "console.log(1 < 2 > \"1\");",
-  "solution": "console.log(1 < 2 > \"1\");",
+  "id": "02-data-types-03-coercion-truthy-falsy-40",
+  "title": "Template literal expression coercion",
+  "starterCode": "const num = 42\nconst bool = true\nconst arr = [1, 2, 3]\nconst obj = { x: 1 }\nreturn {\n  numStr: `Number: ${num}`,\n  boolStr: `Bool: ${bool}`,\n  arrStr: `Array: ${arr}`,\n  objStr: `Obj: ${obj}`\n}\n",
+  "solution": "const num = 42\nconst bool = true\nconst arr = [1, 2, 3]\nconst obj = { x: 1 }\nreturn {\n  numStr: `Number: ${num}`,\n  boolStr: `Bool: ${bool}`,\n  arrStr: `Array: ${arr}`,\n  objStr: `Obj: ${obj}`\n}",
   "tests": [
     {
       "input": [],
-      "expected": "false"
+      "expected": {
+        "numStr": "Number: 42",
+        "boolStr": "Bool: true",
+        "arrStr": "Array: 1,2,3",
+        "objStr": "Obj: [object Object]"
+      }
     }
   ],
   "hints": [
-    "1 < 2 is true",
-    "true > '1' converts true to 1, so 1 > 1 is false"
+    "Template literals automatically toString call karte hain",
+    "Objects ke liye [object Object] aata hai"
   ]
 }

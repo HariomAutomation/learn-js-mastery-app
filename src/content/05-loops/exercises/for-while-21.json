@@ -1,16 +1,21 @@
 {
-  "id": "05-loops-for-while-21",
-  "title": "Do...While Menu Pattern",
-  "starterCode": "let choice = 0;\ndo {\n  choice++;\n  console.log('Option ' + choice);\n} while (choice < 3);",
-  "solution": "let choice = 0;\ndo {\n  choice++;\n  console.log('Option ' + choice);\n} while (choice < 3);",
+  "id": "05-01-for-while-21",
+  "title": "For loop se array me missing number dhundho",
+  "starterCode": "function findMissing(arr) {\n  // TODO: 1 se n tak numbers me ek missing hai — wo dhundho\n}",
+  "solution": "function findMissing(arr) {\n  const n = arr.length + 1;\n  const expected = (n * (n + 1)) / 2;\n  const actual = arr.reduce((s, n) => s + n, 0);\n  return expected - actual;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "Option 1\nOption 2\nOption 3"
+      "input": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "expected": 3
     }
   ],
   "hints": [
-    "Increment before using",
-    "Body runs at least once"
+    "Sum formula: n*(n+1)/2",
+    "Expected - actual = missing number"
   ]
 }

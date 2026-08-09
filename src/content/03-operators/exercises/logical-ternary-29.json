@@ -1,16 +1,23 @@
 {
-  "id": "03-operators-logical-ternary-29",
-  "title": "AND returns first falsy",
-  "starterCode": "const result = 1 && 0 && 3;\nconsole.log(result);",
-  "solution": "const result = 1 && 0 && 3;\nconsole.log(result);",
+  "id": "03-operators-02-logical-ternary-29",
+  "title": "Boolean algebra practical",
+  "starterCode": "// XOR operation implement karo (sirf ek true ho)\nconst a = true\nconst b = false\n// TODO: XOR logic\n",
+  "solution": "const a = true\nconst b = false\nconst xor = (a || b) && !(a && b)\nreturn xor",
   "tests": [
     {
       "input": [],
-      "expected": "0"
+      "expected": true
+    },
+    {
+      "input": [
+        true,
+        true
+      ],
+      "expected": false
     }
   ],
   "hints": [
-    "&& returns first falsy value",
-    "0 is the first falsy"
+    "XOR = (a || b) && !(a && b)",
+    "Ek true aur ek false ho to true"
   ]
 }

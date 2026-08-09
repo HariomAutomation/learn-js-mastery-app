@@ -1,16 +1,20 @@
 {
-  "id": "02-data-types-primitive-types-12",
-  "title": "Create a floating point number",
-  "starterCode": "const pi = ;\nconsole.log(pi);",
-  "solution": "const pi = 3.14159;\nconsole.log(pi);",
+  "id": "02-data-types-01-primitive-types-12",
+  "title": "String length aur access",
+  "starterCode": "const str = \"JavaScript\"\nreturn {\n  first: str[0],\n  last: str[str.length - 1],\n  length: str.length\n}\n",
+  "solution": "const str = \"JavaScript\"\nreturn {\n  first: str[0],\n  last: str[str.length - 1],\n  length: str.length\n}",
   "tests": [
     {
       "input": [],
-      "expected": "3.14159"
+      "expected": {
+        "first": "J",
+        "last": "t",
+        "length": 10
+      }
     }
   ],
   "hints": [
-    "Use a decimal point",
-    "Pi is approximately 3.14"
+    "str[0] se pehla character milta hai",
+    "str.length se length milta hai"
   ]
 }

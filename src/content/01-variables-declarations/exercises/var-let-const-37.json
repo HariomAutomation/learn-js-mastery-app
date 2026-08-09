@@ -1,15 +1,15 @@
 {
   "id": "01-variables-declarations-var-let-const-37",
-  "title": "var initialization",
-  "starterCode": "var x\nconsole.log(x)",
-  "solution": "var x\nconsole.log(x)",
+  "title": "Lazy evaluation",
+  "starterCode": "// Function banao jo sirf tab compute kare jab zarurat ho\nfunction lazyComputation(fn) {\n  // TODO\n}\n",
+  "solution": "function lazyComputation(fn) {\n  let computed = false\n  let result\n  return function() {\n    if (!computed) {\n      result = fn()\n      computed = true\n    }\n    return result\n  }\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "undefined"
+      "input": []
     }
   ],
   "hints": [
-    "var defaults to undefined"
+    "Computation ko cache karo",
+    "Sirf pehli call pe compute karo"
   ]
 }

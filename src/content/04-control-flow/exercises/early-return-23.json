@@ -1,16 +1,36 @@
 {
-  "id": "04-control-flow-early-return-23",
-  "title": "Multiple guards - no method",
-  "starterCode": "function processPayment(amount, method) {\n  if (amount <= 0) return 'invalid amount';\n  if (!method) return 'no payment method';\n  if (amount > 10000) return 'amount too large';\n  return `paid ${amount} via ${method}`;\n}\nconsole.log(processPayment(500, null));",
-  "solution": "function processPayment(amount, method) {\n  if (amount <= 0) return 'invalid amount';\n  if (!method) return 'no payment method';\n  if (amount > 10000) return 'amount too large';\n  return `paid ${amount} via ${method}`;\n}\nconsole.log(processPayment(500, null));",
+  "id": "04-control-flow-02-early-return-23",
+  "title": "Guard for string operations",
+  "starterCode": "// function countVowels(str) mein string do\n// Agar string nahi: -1\n// Warna vowels count karo\n",
+  "solution": "function countVowels(str) {\n  if (typeof str !== \"string\") return -1\n  return str.toLowerCase().split(\"\").filter(c => \"aeiou\".includes(c)).length\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "no payment method"
+      "input": [
+        "Hello World"
+      ],
+      "expected": 3
+    },
+    {
+      "input": [
+        "AEIOU"
+      ],
+      "expected": 5
+    },
+    {
+      "input": [
+        "bcdfg"
+      ],
+      "expected": 0
+    },
+    {
+      "input": [
+        123
+      ],
+      "expected": -1
     }
   ],
   "hints": [
-    "500 > 0, first guard passes",
-    "null is falsy, second guard triggers"
+    "toLowerCase se case-insensitive counting hoti hai",
+    "filter se sirf vowels alag hoti hain"
   ]
 }

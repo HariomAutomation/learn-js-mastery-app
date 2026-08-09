@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-variables-intro-20",
-  "title": "Symbol uniqueness",
-  "starterCode": "const s1 = Symbol(\"id\")\nconst s2 = Symbol(\"id\")\nconsole.log(s1 === s2)",
-  "solution": "const s1 = Symbol(\"id\")\nconst s2 = Symbol(\"id\")\nconsole.log(s1 === s2)",
+  "title": "Hoisting predict karo",
+  "starterCode": "// Pehle code socho, phir predict karo:\nconsole.log(a)\nvar a = 5\nconsole.log(a)\nreturn a\n",
+  "solution": "console.log(a)\nvar a = 5\nconsole.log(a)\nreturn a",
   "tests": [
     {
       "input": [],
-      "expected": "false"
+      "expected": 5
     }
   ],
   "hints": [
-    "Every Symbol is unique"
+    "var declaration hoisted hota hai, assignment nahi",
+    "Pehle undefined, phir 5"
   ]
 }

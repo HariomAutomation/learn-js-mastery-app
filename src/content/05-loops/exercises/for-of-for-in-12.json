@@ -1,16 +1,23 @@
 {
-  "id": "05-loops-for-of-for-in-12",
-  "title": "For...In HasOwnProperty",
-  "starterCode": "const obj = {a: 1};\nobj.b = 2;\nfor (const key in obj) {\n  if (obj.hasOwnProperty(key)) {\n    console.log(key);\n  }\n}",
-  "solution": "const obj = {a: 1};\nobj.b = 2;\nfor (const key in obj) {\n  if (obj.hasOwnProperty(key)) {\n    console.log(key);\n  }\n}",
+  "id": "05-02-for-of-for-in-12",
+  "title": "For-in se object ke nested values flatten karo",
+  "starterCode": "function flattenValues(obj) {\n  // TODO: nested object ke sab primitive values ka array do\n  // {a:1,b:{c:2,d:3}} -> [1,2,3]\n}",
+  "solution": "function flattenValues(obj) {\n  const result = [];\n  for (const key in obj) {\n    if (!Object.prototype.hasOwnProperty.call(obj, key)) continue;\n    if (typeof obj[key] === \"object\" && obj[key] !== null && !Array.isArray(obj[key])) {\n      result.push(...flattenValues(obj[key]));\n    } else {\n      result.push(obj[key]);\n    }\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "a\nb"
+      "input": [
+        {
+          "a": 1,
+          "b": {
+            "c": 2
+          }
+        }
+      ],
+      "expected": "1,2"
     }
   ],
   "hints": [
-    "hasOwnProperty checks own keys",
-    "Filters out inherited"
+    "Recursion se nested objects explore karo",
+    "Primitive value mila toh result me add karo"
   ]
 }

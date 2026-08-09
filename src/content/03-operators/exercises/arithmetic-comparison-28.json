@@ -1,16 +1,16 @@
 {
-  "id": "03-operators-arithmetic-comparison-28",
-  "title": "Number.EPSILON for float comparison",
-  "starterCode": "const result = 0.1 + 0.2 === 0.3;\nconsole.log(result);",
-  "solution": "const result = 0.1 + 0.2 === 0.3;\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-28",
+  "title": "Increment operator ++",
+  "starterCode": "// Counter hai, use 5 baar increment karo\nlet counter = 0\n// TODO: ++ use karo\n",
+  "solution": "let counter = 0\ncounter++\ncounter++\ncounter++\ncounter++\ncounter++\nreturn counter",
   "tests": [
     {
       "input": [],
-      "expected": "false"
+      "expected": 5
     }
   ],
   "hints": [
-    "Floating point math is imprecise",
-    "0.1+0.2 is not exactly 0.3"
+    "counter++ ek baar increment karta hai",
+    "5 baar post-increment = 5"
   ]
 }

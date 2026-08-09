@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-scope-hoisting-27",
-  "title": "hoisting preview",
-  "starterCode": "console.log(a)\nvar a = 1\nfunction a() { return 2 }\nconsole.log(a)",
-  "solution": "console.log(a)\nvar a = 1\nfunction a() { return 2 }\nconsole.log(a)",
+  "title": "Strict mode scope",
+  "starterCode": "\"use strict\"\ntry {\n  x = 10\n  return x\n} catch(e) {\n  return \"ReferenceError\"\n}\n",
+  "solution": "\"use strict\"\ntry {\n  x = 10\n  return x\n} catch(e) {\n  return \"ReferenceError\"\n}",
   "tests": [
     {
       "input": [],
-      "expected": "function a() { return 2 }\n1"
+      "expected": "ReferenceError"
     }
   ],
   "hints": [
-    "Function hoisted first"
+    "Strict mode prevents implicit globals",
+    "Must declare x with let/const/var first"
   ]
 }

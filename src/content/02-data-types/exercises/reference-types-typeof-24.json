@@ -1,16 +1,34 @@
 {
-  "id": "02-data-types-reference-types-typeof-24",
-  "title": "typeof of array is object",
-  "starterCode": "const arr = [];\nconsole.log();",
-  "solution": "const arr = [];\nconsole.log(typeof arr);",
+  "id": "02-data-types-02-reference-types-typeof-24",
+  "title": "Set operations",
+  "starterCode": "const setA = new Set([1, 2, 3, 4])\nconst setB = new Set([3, 4, 5, 6])\nconst union = new Set([...setA, ...setB])\nconst intersection = new Set([...setA].filter(x => setB.has(x)))\nconst difference = new Set([...setA].filter(x => !setB.has(x)))\nreturn {\n  union: [...union],\n  intersection: [...intersection],\n  difference: [...difference]\n}\n",
+  "solution": "const setA = new Set([1, 2, 3, 4])\nconst setB = new Set([3, 4, 5, 6])\nconst union = new Set([...setA, ...setB])\nconst intersection = new Set([...setA].filter(x => setB.has(x)))\nconst difference = new Set([...setA].filter(x => !setB.has(x)))\nreturn {\n  union: [...union],\n  intersection: [...intersection],\n  difference: [...difference]\n}",
   "tests": [
     {
       "input": [],
-      "expected": "object"
+      "expected": {
+        "union": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "intersection": [
+          3,
+          4
+        ],
+        "difference": [
+          1,
+          2
+        ]
+      }
     }
   ],
   "hints": [
-    "Arrays are objects in JS",
-    "Use Array.isArray for proper check"
+    "Union: dono sets ke sab elements",
+    "Intersection: sirf common elements",
+    "Difference: pehle set mein jo doosre mein nahi"
   ]
 }

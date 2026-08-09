@@ -1,16 +1,18 @@
 {
-  "id": "05-loops-for-while-07",
-  "title": "Nested For Loops",
-  "starterCode": "for (let i = 0; i < 3; i++) {\n  for (let j = 0; j < 3; j++) {\n    console.log(i + j);\n  }\n}",
-  "solution": "for (let i = 0; i < 3; i++) {\n  for (let j = 0; j < 3; j++) {\n    console.log(i + j);\n  }\n}",
+  "id": "05-01-for-while-07",
+  "title": "Reverse counting loop likho",
+  "starterCode": "function countdown(n) {\n  // TODO: n se 1 tak countdown array banao\n}",
+  "solution": "function countdown(n) {\n  const result = [];\n  for (let i = n; i >= 1; i--) result.push(i);\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "0\n1\n2\n1\n2\n3\n2\n3\n4"
+      "input": [
+        5
+      ],
+      "expected": "5,4,3,2,1"
     }
   ],
   "hints": [
-    "Inner loop runs fully each outer iteration",
-    "Sum i and j"
+    "Loop shuru karo n se, 1 tak jao, i-- karo",
+    "Array me push karte jao"
   ]
 }

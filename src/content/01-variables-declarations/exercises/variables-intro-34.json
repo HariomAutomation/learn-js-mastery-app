@@ -1,15 +1,28 @@
 {
   "id": "01-variables-declarations-variables-intro-34",
-  "title": "Logical assignment",
-  "starterCode": "let a = 0\na ||= \"default\"\nconsole.log(a)",
-  "solution": "let a = 0\na ||= \"default\"\nconsole.log(a)",
+  "title": "Omit keys from object",
+  "starterCode": "// Function banao jo object se given keys hata de\n// omit({a:1, b:2, c:3}, [\"b\"]) = {a:1, c:3}\nfunction omit(obj, keys) {\n  // TODO\n}",
+  "solution": "function omit(obj, keys) {\n  return Object.fromEntries(\n    Object.entries(obj).filter(([k]) => !keys.includes(k))\n  )\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "default"
+      "input": [
+        {
+          "a": 1,
+          "b": 2,
+          "c": 3
+        },
+        [
+          "b"
+        ]
+      ],
+      "expected": {
+        "a": 1,
+        "c": 3
+      }
     }
   ],
   "hints": [
-    "||= assigns if falsy"
+    "Object.entries() se entries nikalo",
+    "filter se unwanted keys hatao"
   ]
 }

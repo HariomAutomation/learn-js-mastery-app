@@ -1,16 +1,20 @@
 {
-  "id": "02-data-types-primitive-types-03",
-  "title": "Create a string using backticks",
-  "starterCode": "const msg = ``;\nconsole.log(msg);",
-  "solution": "const msg = `Hello world`;\nconsole.log(msg);",
+  "id": "02-data-types-01-primitive-types-03",
+  "title": "Boolean values banao",
+  "starterCode": "// isActive = true, isDeleted = false, hasPermission = true\n// Return object with all three\n",
+  "solution": "const isActive = true\nconst isDeleted = false\nconst hasPermission = true\nreturn { isActive, isDeleted, hasPermission }",
   "tests": [
     {
       "input": [],
-      "expected": "Hello world"
+      "expected": {
+        "isActive": true,
+        "isDeleted": false,
+        "hasPermission": true
+      }
     }
   ],
   "hints": [
-    "Backticks create template literals",
-    "Type the message inside backticks"
+    "true aur false sirf do boolean values hain",
+    "Comparison operators boolean return karte hain"
   ]
 }

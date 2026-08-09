@@ -1,16 +1,23 @@
 {
-  "id": "05-loops-for-while-35",
-  "title": "Factorial Loop",
-  "starterCode": "let n = 5;\nlet factorial = 1;\nfor (let i = 1; i <= n; i++) {\n  factorial *= i;\n}\nconsole.log(factorial);",
-  "solution": "let n = 5;\nlet factorial = 1;\nfor (let i = 1; i <= n; i++) {\n  factorial *= i;\n}\nconsole.log(factorial);",
+  "id": "05-01-for-while-35",
+  "title": "Continue use karke non-numeric values filter karo",
+  "starterCode": "function extractNumbers(arr) {\n  // TODO: array se sirf numbers nikalo using continue\n}",
+  "solution": "function extractNumbers(arr) {\n  const result = [];\n  for (const item of arr) {\n    if (typeof item !== \"number\") continue;\n    if (isNaN(item)) continue;\n    result.push(item);\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "120"
+      "input": [
+        1,
+        "a",
+        2,
+        null,
+        null,
+        3
+      ],
+      "expected": "1,2,3"
     }
   ],
   "hints": [
-    "Start at 1",
-    "Multiply by each i"
+    "typeof se type check karo",
+    "NaN check bhi karo"
   ]
 }

@@ -1,16 +1,23 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-02",
-  "title": "Check if 1 is truthy",
-  "starterCode": "if (1) {\n  console.log('truthy');\n} else {\n  console.log('falsy');\n}",
-  "solution": "if (1) {\n  console.log('truthy');\n} else {\n  console.log('falsy');\n}",
+  "id": "02-data-types-03-coercion-truthy-falsy-02",
+  "title": "Implicit number coercion",
+  "starterCode": "return {\n  strMinus: \"10\" - 3,\n  strMul: \"5\" * 2,\n  strDiv: \"20\" / 4,\n  strMod: \"10\" % 3,\n  boolMinus: true - 1,\n  nullMul: null * 5\n}\n",
+  "solution": "return {\n  strMinus: \"10\" - 3,\n  strMul: \"5\" * 2,\n  strDiv: \"20\" / 4,\n  strMod: \"10\" % 3,\n  boolMinus: true - 1,\n  nullMul: null * 5\n}",
   "tests": [
     {
       "input": [],
-      "expected": "truthy"
+      "expected": {
+        "strMinus": 7,
+        "strMul": 10,
+        "strDiv": 5,
+        "strMod": 1,
+        "boolMinus": 0,
+        "nullMul": 0
+      }
     }
   ],
   "hints": [
-    "Non-zero numbers are truthy",
-    "Even negative numbers"
+    "Arithmetic operators hamesha number coercion karte hain",
+    "-, *, /, % sab number mein convert karte hain"
   ]
 }

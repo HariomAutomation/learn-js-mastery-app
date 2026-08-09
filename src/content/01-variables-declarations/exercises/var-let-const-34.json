@@ -1,15 +1,31 @@
 {
   "id": "01-variables-declarations-var-let-const-34",
-  "title": "var scope chain",
-  "starterCode": "var x = 1\nfunction outer() {\n  var x = 2\n  function inner() {\n    console.log(x)\n  }\n  inner()\n}\nouter()",
-  "solution": "var x = 1\nfunction outer() {\n  var x = 2\n  function inner() {\n    console.log(x)\n  }\n  inner()\n}\nouter()",
+  "title": "Array rotation",
+  "starterCode": "// Array ko k steps right se rotate karo\n// rotate([1,2,3,4,5], 2) = [4,5,1,2,3]\nfunction rotate(arr, steps) {\n  // TODO\n}\n",
+  "solution": "function rotate(arr, steps) {\n  const n = steps % arr.length\n  return [...arr.slice(-n), ...arr.slice(0, -n)]\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "2"
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        2
+      ],
+      "expected": [
+        4,
+        5,
+        1,
+        2,
+        3
+      ]
     }
   ],
   "hints": [
-    "inner looks at outer's x first"
+    "steps % length se extra rotation handle hota hai",
+    "slice(-n) se last n elements milte hain"
   ]
 }

@@ -1,15 +1,20 @@
 {
   "id": "01-variables-declarations-var-let-const-40",
-  "title": "var in for let in for",
-  "starterCode": "for (var i = 0; i < 2; i++) {}\nfor (let i = 0; i < 2; i++) {}\nconsole.log(typeof i)",
-  "solution": "for (var i = 0; i < 2; i++) {}\nfor (let i = 0; i < 2; i++) {}\nconsole.log(typeof i)",
+  "title": "Module pattern",
+  "starterCode": "// Module pattern banao\nconst module = (function() {\n  let private = 0\n  return {\n    increment: () => { /* TODO */ },\n    getValue: () => /* TODO */\n  }\n})()\nreturn [module.increment(), module.increment(), module.getValue()]\n",
+  "solution": "const module = (function() {\n  let private = 0\n  return {\n    increment: () => { private++ },\n    getValue: () => private\n  }\n})()\nreturn [module.increment(), module.increment(), module.getValue()]",
   "tests": [
     {
       "input": [],
-      "expected": "number"
+      "expected": [
+        null,
+        null,
+        2
+      ]
     }
   ],
   "hints": [
-    "var i leaks out"
+    "IIFE se private scope banta hai",
+    "Methods closure se private variable access karte hain"
   ]
 }

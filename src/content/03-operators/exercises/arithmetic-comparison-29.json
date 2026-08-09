@@ -1,16 +1,16 @@
 {
-  "id": "03-operators-arithmetic-comparison-29",
-  "title": "Using Math.abs for float comparison",
-  "starterCode": "const result = Math.abs(0.1 + 0.2 - 0.3) < Number.EPSILON;\nconsole.log(result);",
-  "solution": "const result = Math.abs(0.1 + 0.2 - 0.3) < Number.EPSILON;\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-29",
+  "title": "Decrement operator --",
+  "starterCode": "// Stock 10 items hai, 3 baar becha\nlet stock = 10\n// TODO: -- use karo\n",
+  "solution": "let stock = 10\nstock--\nstock--\nstock--\nreturn stock",
   "tests": [
     {
       "input": [],
-      "expected": "true"
+      "expected": 7
     }
   ],
   "hints": [
-    "Use Math.abs for absolute difference",
-    "Compare difference to Number.EPSILON"
+    "stock-- ek baar decrement karta hai",
+    "10 - 3 = 7"
   ]
 }

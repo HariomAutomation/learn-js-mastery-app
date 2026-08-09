@@ -1,16 +1,21 @@
 {
-  "id": "02-data-types-reference-types-typeof-08",
-  "title": "Object comparison by reference",
-  "starterCode": "const a = { x: 1 };\nconst b = { x: 1 };\nconsole.log();",
-  "solution": "const a = { x: 1 };\nconst b = { x: 1 };\nconsole.log(a === b);",
+  "id": "02-data-types-02-reference-types-typeof-08",
+  "title": "instanceof check",
+  "starterCode": "const arr = [1, 2, 3]\nconst date = new Date()\nconst regex = /test/\nconst promise = Promise.resolve(1)\nreturn {\n  arrIsArray: arr instanceof Array,\n  dateIsDate: date instanceof Date,\n  dateIsObject: date instanceof Object,\n  promiseIsPromise: promise instanceof Promise\n}\n",
+  "solution": "const arr = [1, 2, 3]\nconst date = new Date()\nconst regex = /test/\nconst promise = Promise.resolve(1)\nreturn {\n  arrIsArray: arr instanceof Array,\n  dateIsDate: date instanceof Date,\n  dateIsObject: date instanceof Object,\n  promiseIsPromise: promise instanceof Promise\n}",
   "tests": [
     {
       "input": [],
-      "expected": "false"
+      "expected": {
+        "arrIsArray": true,
+        "dateIsDate": true,
+        "dateIsObject": true,
+        "promiseIsPromise": true
+      }
     }
   ],
   "hints": [
-    "Different objects are never ===",
-    "Even with same content"
+    "instanceof prototype chain check karta hai",
+    "Date instanceof Object bhi true hota hai"
   ]
 }

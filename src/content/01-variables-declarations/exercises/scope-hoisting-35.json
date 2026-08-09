@@ -1,0 +1,16 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-35",
+  "title": "Rest parameters",
+  "starterCode": "function sum(...nums) {\n  return nums.reduce((a, b) => a + b, 0)\n}\nreturn sum(1, 2, 3, 4, 5)\n",
+  "solution": "function sum(...nums) {\n  return nums.reduce((a, b) => a + b, 0)\n}\nreturn sum(1, 2, 3, 4, 5)",
+  "tests": [
+    {
+      "input": [],
+      "expected": 15
+    }
+  ],
+  "hints": [
+    "...rest collects all arguments into array",
+    "reduce sums them up"
+  ]
+}

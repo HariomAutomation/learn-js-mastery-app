@@ -1,16 +1,20 @@
 {
-  "id": "03-operators-logical-ternary-12",
-  "title": "Nullish coalescing with undefined",
-  "starterCode": "const result = undefined ?? 'fallback';\nconsole.log(result);",
-  "solution": "const result = undefined ?? 'fallback';\nconsole.log(result);",
+  "id": "03-operators-02-logical-ternary-12",
+  "title": "Logical assignment &&=",
+  "starterCode": "// Agar value hai to multiply karo\nlet score = 10\nlet multiplier = 0\nlet bonus = 2\n// TODO: &&= use karo\n",
+  "solution": "let score = 10\nlet multiplier = 0\nlet bonus = 2\nscore &&= 5\nmultiplier &&= 3\nbonus &&= 0\nreturn { score, multiplier, bonus }",
   "tests": [
     {
       "input": [],
-      "expected": "fallback"
+      "expected": {
+        "score": 5,
+        "multiplier": 0,
+        "bonus": 0
+      }
     }
   ],
   "hints": [
-    "undefined triggers the right side of ??",
-    "Unlike ||, 0 and '' don't trigger"
+    "x &&= y same as x = x && y",
+    "Sirf truthy values update hoti hain"
   ]
 }

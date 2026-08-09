@@ -1,16 +1,20 @@
 {
-  "id": "02-data-types-reference-types-typeof-49",
-  "title": "typeof for all primitives",
-  "starterCode": "console.log(typeof 42, typeof 'hi', typeof true, typeof undefined, typeof null, typeof Symbol('s'));",
-  "solution": "console.log(typeof 42, typeof 'hi', typeof true, typeof undefined, typeof null, typeof Symbol('s'));",
+  "id": "02-data-types-02-reference-types-typeof-49",
+  "title": "WeakMap for private data",
+  "starterCode": "const privateData = new WeakMap()\nclass User {\n  constructor(name, password) {\n    this.name = name\n    privateData.set(this, { password })\n  }\n  checkPassword(pwd) {\n    return privateData.get(this).password === pwd\n  }\n}\nconst user = new User(\"Hariom\", \"secret123\")\nreturn {\n  name: user.name,\n  correct: user.checkPassword(\"secret123\"),\n  wrong: user.checkPassword(\"wrong\")\n}\n",
+  "solution": "const privateData = new WeakMap()\nclass User {\n  constructor(name, password) {\n    this.name = name\n    privateData.set(this, { password })\n  }\n  checkPassword(pwd) {\n    return privateData.get(this).password === pwd\n  }\n}\nconst user = new User(\"Hariom\", \"secret123\")\nreturn {\n  name: user.name,\n  correct: user.checkPassword(\"secret123\"),\n  wrong: user.checkPassword(\"wrong\")\n}",
   "tests": [
     {
       "input": [],
-      "expected": "number string boolean undefined object symbol"
+      "expected": {
+        "name": "Hariom",
+        "correct": true,
+        "wrong": false
+      }
     }
   ],
   "hints": [
-    "typeof returns the type as a string",
-    "null is the exception - returns 'object'"
+    "WeakMap mein objects keys hoti hain — private data ke liye perfect",
+    "Instance delete ho jaye to data bhi garbage collect hota hai"
   ]
 }

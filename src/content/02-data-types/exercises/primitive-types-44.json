@@ -1,16 +1,20 @@
 {
-  "id": "02-data-types-primitive-types-44",
-  "title": "Check if value is finite",
-  "starterCode": "console.log(Number.isFinite(42));",
-  "solution": "console.log(Number.isFinite(42));",
+  "id": "02-data-types-01-primitive-types-44",
+  "title": "String replace methods",
+  "starterCode": "const text = \"Hello World, Hello JavaScript\"\nreturn {\n  firstReplace: text.replace(\"Hello\", \"Hi\"),\n  allReplace: text.replaceAll(\"Hello\", \"Hi\"),\n  regexReplace: text.replace(/Hello/g, \"Hey\")\n}\n",
+  "solution": "const text = \"Hello World, Hello JavaScript\"\nreturn {\n  firstReplace: text.replace(\"Hello\", \"Hi\"),\n  allReplace: text.replaceAll(\"Hello\", \"Hi\"),\n  regexReplace: text.replace(/Hello/g, \"Hey\")\n}",
   "tests": [
     {
       "input": [],
-      "expected": "true"
+      "expected": {
+        "firstReplace": "Hi World, Hello JavaScript",
+        "allReplace": "Hi World, Hi JavaScript",
+        "regexReplace": "Hey World, Hey JavaScript"
+      }
     }
   ],
   "hints": [
-    "Number.isFinite checks for finite numbers",
-    "Infinity returns false"
+    "replace() sirf pehla match replace karta hai",
+    "replaceAll() ya regex with /g se sab replace hote hain"
   ]
 }

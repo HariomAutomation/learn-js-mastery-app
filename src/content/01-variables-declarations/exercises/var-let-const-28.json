@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-var-let-const-28",
-  "title": "var vs let scope",
-  "starterCode": "if (true) {\n  var a = 1\n  let b = 2\n}\nconsole.log(a, typeof b)",
-  "solution": "if (true) {\n  var a = 1\n  let b = 2\n}\nconsole.log(a, typeof b)",
+  "title": "Scope of catch variable",
+  "starterCode": "try {\n  throw \"error\"\n} catch(e) {\n  var msg = e\n}\nreturn msg\n",
+  "solution": "try {\n  throw \"error\"\n} catch(e) {\n  var msg = e\n}\nreturn msg",
   "tests": [
     {
       "input": [],
-      "expected": "1 undefined"
+      "expected": "error"
     }
   ],
   "hints": [
-    "var leaks, let stays in block"
+    "var msg catch block ke bahar accessible hai",
+    "catch(e) ka e sirf catch block mein hai"
   ]
 }

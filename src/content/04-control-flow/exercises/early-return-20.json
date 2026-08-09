@@ -1,17 +1,39 @@
 {
-  "id": "04-control-flow-early-return-20",
-  "title": "Null check early return",
-  "starterCode": "function getLength(str) {\n  if (str === null) return 0;\n  if (str === undefined) return 0;\n  return str.length;\n}\nconsole.log(getLength('hello'));",
-  "solution": "function getLength(str) {\n  if (str === null) return 0;\n  if (str === undefined) return 0;\n  return str.length;\n}\nconsole.log(getLength('hello'));",
+  "id": "04-control-flow-02-early-return-20",
+  "title": "Early return for async-like pattern",
+  "starterCode": "// function fetchData(config)\n// Agar config nahi: \"No config\"\n// Agar config.url nahi: \"No URL\"\n// Agar config.method nahi: \"No method\"\n// Warna { url, method, headers } return karo\n",
+  "solution": "function fetchData(config) {\n  if (!config) return \"No config\"\n  if (!config.url) return \"No URL\"\n  if (!config.method) return \"No method\"\n  return {\n    url: config.url,\n    method: config.method,\n    headers: config.headers || {}\n  }\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "5"
+      "input": [
+        {
+          "url": "/api",
+          "method": "GET"
+        }
+      ],
+      "expected": {
+        "url": "/api",
+        "method": "GET",
+        "headers": {}
+      }
+    },
+    {
+      "input": [
+        {
+          "method": "GET"
+        }
+      ],
+      "expected": "No URL"
+    },
+    {
+      "input": [
+        null
+      ],
+      "expected": "No config"
     }
   ],
   "hints": [
-    "str is not null",
-    "str is not undefined",
-    "str.length is 5"
+    "Config object ke har required property check karo",
+    "Default values se fallback handle karo"
   ]
 }

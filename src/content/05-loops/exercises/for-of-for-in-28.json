@@ -1,16 +1,23 @@
 {
-  "id": "05-loops-for-of-for-in-28",
-  "title": "String Reverse For...Of",
-  "starterCode": "const str = \"hello\";\nlet rev = \"\";\nfor (const ch of str) {\n  rev = ch + rev;\n}\nconsole.log(rev);",
-  "solution": "const str = \"hello\";\nlet rev = \"\";\nfor (const ch of str) {\n  rev = ch + rev;\n}\nconsole.log(rev);",
+  "id": "05-02-for-of-for-in-28",
+  "title": "For-in se object ke values ko string me join karo",
+  "starterCode": "function joinValues(obj, separator) {\n  // TODO: object ke sab values ko separator se join karo\n}",
+  "solution": "function joinValues(obj, separator) {\n  const values = [];\n  for (const key in obj) {\n    if (Object.prototype.hasOwnProperty.call(obj, key)) values.push(obj[key]);\n  }\n  return values.join(separator);\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "olleh"
+      "input": [
+        {
+          "a": 1,
+          "b": 2,
+          "c": 3
+        },
+        "-"
+      ],
+      "expected": "1-2-3"
     }
   ],
   "hints": [
-    "Prepend each character",
-    "Build reversed string"
+    "Values ka array banao",
+    "Join se string banao"
   ]
 }

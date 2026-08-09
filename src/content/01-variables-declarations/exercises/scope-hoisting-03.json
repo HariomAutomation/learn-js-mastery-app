@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-scope-hoisting-03",
-  "title": "Block scope",
-  "starterCode": "if (true) {\n  let x = 10\n}\nconsole.log(typeof x)",
-  "solution": "if (true) {\n  let x = 10\n}\nconsole.log(typeof x)",
+  "title": "Lexical scope lookup",
+  "starterCode": "const a = 1\nfunction one() {\n  const b = 2\n  function two() {\n    const c = 3\n    return a + b + c\n  }\n  return two()\n}\nreturn one()\n",
+  "solution": "const a = 1\nfunction one() {\n  const b = 2\n  function two() {\n    const c = 3\n    return a + b + c\n  }\n  return two()\n}\nreturn one()",
   "tests": [
     {
       "input": [],
-      "expected": "undefined"
+      "expected": 6
     }
   ],
   "hints": [
-    "let is block-scoped"
+    "Lexical scope mein function apne parent scopes se variables dhundhta hai",
+    "a=1, b=2, c=3 sab milke 6"
   ]
 }

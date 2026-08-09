@@ -1,16 +1,36 @@
 {
-  "id": "04-control-flow-if-else-switch-21",
-  "title": "Switch with type coercion trap",
-  "starterCode": "const x = \"1\";\nswitch (x) {\n  case 1:\n    console.log(\"number one\");\n    break;\n  case \"1\":\n    console.log(\"string one\");\n    break;\n}",
-  "solution": "const x = \"1\";\nswitch (x) {\n  case 1:\n    console.log(\"number one\");\n    break;\n  case \"1\":\n    console.log(\"string one\");\n    break;\n}",
+  "id": "04-control-flow-01-if-else-switch-21",
+  "title": "Number type check karo",
+  "starterCode": "// function numberType(num) mein value do\n// Integer: \"integer\", Float: \"float\", NaN: \"not a number\"\n",
+  "solution": "function numberType(num) {\n  if (Number.isNaN(num)) return \"not a number\"\n  if (Number.isInteger(num)) return \"integer\"\n  return \"float\"\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "string one"
+      "input": [
+        42
+      ],
+      "expected": "integer"
+    },
+    {
+      "input": [
+        3.14
+      ],
+      "expected": "float"
+    },
+    {
+      "input": [
+        null
+      ],
+      "expected": "not a number"
+    },
+    {
+      "input": [
+        42
+      ],
+      "expected": "integer"
     }
   ],
   "hints": [
-    "switch uses === comparison",
-    "'1' === 1 is false"
+    "Number.isNaN() se NaN check hota hai",
+    "Number.isInteger() se integer check hota hai"
   ]
 }

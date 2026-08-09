@@ -1,16 +1,46 @@
 {
-  "id": "02-data-types-primitive-types-17",
-  "title": "Create a number using exponential notation",
-  "starterCode": "const bigNum = ;\nconsole.log(bigNum);",
-  "solution": "const bigNum = 5e3;\nconsole.log(bigNum);",
+  "id": "02-data-types-01-primitive-types-17",
+  "title": "Nullish vs falsy values",
+  "starterCode": "const falsyValues = [false, 0, \"\", null, undefined, NaN]\nreturn falsyValues.map(v => ({\n  value: v,\n  isFalsy: !Boolean(v),\n  type: typeof v\n}))\n",
+  "solution": "const falsyValues = [false, 0, \"\", null, undefined, NaN]\nreturn falsyValues.map(v => ({\n  value: v,\n  isFalsy: !Boolean(v),\n  type: typeof v\n}))",
   "tests": [
     {
       "input": [],
-      "expected": "5000"
+      "expected": [
+        {
+          "value": false,
+          "isFalsy": true,
+          "type": "boolean"
+        },
+        {
+          "value": 0,
+          "isFalsy": true,
+          "type": "number"
+        },
+        {
+          "value": "",
+          "isFalsy": true,
+          "type": "string"
+        },
+        {
+          "value": null,
+          "isFalsy": true,
+          "type": "object"
+        },
+        {
+          "isFalsy": true,
+          "type": "undefined"
+        },
+        {
+          "value": null,
+          "isFalsy": true,
+          "type": "number"
+        }
+      ]
     }
   ],
   "hints": [
-    "e notation means times 10 to the power",
-    "5e3 = 5 × 10^3"
+    "false, 0, '', null, undefined, NaN sab falsy hain",
+    "Sirf truthy values hain: true, non-zero numbers, non-empty strings, objects"
   ]
 }

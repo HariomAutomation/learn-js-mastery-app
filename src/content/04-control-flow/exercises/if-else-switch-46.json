@@ -1,16 +1,43 @@
 {
-  "id": "04-control-flow-if-else-switch-46",
-  "title": "Switch with multiple breaks",
-  "starterCode": "const x = 3;\nswitch (x) {\n  case 1:\n    console.log('one');\n    break;\n  case 2:\n    console.log('two');\n    break;\n  case 3:\n    console.log('three');\n    break;\n  case 4:\n    console.log('four');\n    break;\n  default:\n    console.log('other');\n}",
-  "solution": "const x = 3;\nswitch (x) {\n  case 1:\n    console.log('one');\n    break;\n  case 2:\n    console.log('two');\n    break;\n  case 3:\n    console.log('three');\n    break;\n  case 4:\n    console.log('four');\n    break;\n  default:\n    console.log('other');\n}",
+  "id": "04-control-flow-01-if-else-switch-46",
+  "title": "Guard clause se user profile",
+  "starterCode": "// function getFullName(user) mein object do\n// Agar user nahi: \"Unknown user\"\n// Agar first name nahi: \"Unknown first name\"\n// Agar last name nahi: \"Unknown last name\"\n// Warna \"First Last\" return karo\n",
+  "solution": "function getFullName(user) {\n  if (!user) return \"Unknown user\"\n  if (!user.firstName) return \"Unknown first name\"\n  if (!user.lastName) return \"Unknown last name\"\n  return `${user.firstName} ${user.lastName}`\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "three"
+      "input": [
+        {
+          "firstName": "Hariom",
+          "lastName": "Verma"
+        }
+      ],
+      "expected": "Hariom Verma"
+    },
+    {
+      "input": [
+        null
+      ],
+      "expected": "Unknown user"
+    },
+    {
+      "input": [
+        {
+          "lastName": "Verma"
+        }
+      ],
+      "expected": "Unknown first name"
+    },
+    {
+      "input": [
+        {
+          "firstName": "Hariom"
+        }
+      ],
+      "expected": "Unknown last name"
     }
   ],
   "hints": [
-    "Each case has a break",
-    "3 matches case 3"
+    "Har missing property ke liye alag error message do",
+    "Guard clause se pehle pehle check karo"
   ]
 }

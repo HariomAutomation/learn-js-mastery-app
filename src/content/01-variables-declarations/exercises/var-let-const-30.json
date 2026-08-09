@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-var-let-const-30",
-  "title": "const nested array",
-  "starterCode": "const arr = [[1, 2], [3, 4]]\narr[0].push(5)\nconsole.log(arr[0].length)",
-  "solution": "const arr = [[1, 2], [3, 4]]\narr[0].push(5)\nconsole.log(arr[0].length)",
+  "title": "var function hoisting",
+  "starterCode": "return add(2, 3)\nfunction add(a, b) { return a + b }\n",
+  "solution": "return add(2, 3)\nfunction add(a, b) { return a + b }",
   "tests": [
     {
       "input": [],
-      "expected": "3"
+      "expected": 5
     }
   ],
   "hints": [
-    "Nested arrays are mutable"
+    "Function declarations fully hoisted hoti hain",
+    "Declare se pehle call kar sakte ho"
   ]
 }

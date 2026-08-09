@@ -1,16 +1,22 @@
 {
-  "id": "05-loops-patterns-practice-27",
-  "title": "Fibonacci Iterative",
-  "starterCode": "function fib(n) {\n  let a = 0, b = 1;\n  for (let i = 0; i < n; i++) {\n    [a, b] = [b, a + b];\n  }\n  return a;\n}\nconsole.log(fib(7));",
-  "solution": "function fib(n) {\n  let a = 0, b = 1;\n  for (let i = 0; i < n; i++) {\n    [a, b] = [b, a + b];\n  }\n  return a;\n}\nconsole.log(fib(7));",
+  "id": "05-03-patterns-practice-27",
+  "title": "Array ke sorted subarrays dhundho",
+  "starterCode": "function sortedSubarrays(arr) {\n  // TODO: longest sorted (ascending) subarrays dhundho\n}",
+  "solution": "function sortedSubarrays(arr) {\n  const result = [];\n  let start = 0;\n  for (let i = 1; i <= arr.length; i++) {\n    if (i === arr.length || arr[i] < arr[i-1]) {\n      result.push(arr.slice(start, i));\n      start = i;\n    }\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "13"
+      "input": [
+        1,
+        2,
+        3,
+        1,
+        2
+      ],
+      "expected": "1,2,3,1,2"
     }
   ],
   "hints": [
-    "Swap values",
-    "Return a"
+    "Sorted order break hone pe current subarray close karo",
+    "Naya subarray start karo"
   ]
 }

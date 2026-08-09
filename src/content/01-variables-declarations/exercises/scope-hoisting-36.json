@@ -1,0 +1,17 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-36",
+  "title": "Map filter reduce chain",
+  "starterCode": "const nums = [1, 2, 3, 4, 5, 6]\nconst result = nums\n  .filter(n => n % 2 === 0)\n  .map(n => n * 10)\n  .reduce((a, b) => a + b, 0)\nreturn result\n",
+  "solution": "const nums = [1, 2, 3, 4, 5, 6]\nconst result = nums\n  .filter(n => n % 2 === 0)\n  .map(n => n * 10)\n  .reduce((a, b) => a + b, 0)\nreturn result",
+  "tests": [
+    {
+      "input": [],
+      "expected": 120
+    }
+  ],
+  "hints": [
+    "Filter evens: [2,4,6]",
+    "Map to tens: [20,40,60]",
+    "Reduce sum: 120"
+  ]
+}

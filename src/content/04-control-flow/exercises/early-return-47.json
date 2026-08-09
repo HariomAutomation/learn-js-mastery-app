@@ -1,17 +1,44 @@
 {
-  "id": "04-control-flow-early-return-47",
-  "title": "Nested guard refactor - flat",
-  "starterCode": "function getDiscount(tier, amount) {\n  if (!tier) return 0;\n  if (tier === 'gold') return amount * 0.3;\n  if (tier === 'silver') return amount * 0.2;\n  if (tier === 'bronze') return amount * 0.1;\n  return 0;\n}\nconsole.log(getDiscount('silver', 100));",
-  "solution": "function getDiscount(tier, amount) {\n  if (!tier) return 0;\n  if (tier === 'gold') return amount * 0.3;\n  if (tier === 'silver') return amount * 0.2;\n  if (tier === 'bronze') return amount * 0.1;\n  return 0;\n}\nconsole.log(getDiscount('silver', 100));",
+  "id": "04-control-flow-02-early-return-47",
+  "title": "Guard for number range validation",
+  "starterCode": "// function inRange(val, min, max) mein teen numbers do\n// Agar koi bhi non-number: false\n// Val range mein hai ya nahi\n",
+  "solution": "function inRange(val, min, max) {\n  if (typeof val !== \"number\" || typeof min !== \"number\" || typeof max !== \"number\") return false\n  return val >= min && val <= max\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "20"
+      "input": [
+        5,
+        1,
+        10
+      ],
+      "expected": true
+    },
+    {
+      "input": [
+        15,
+        1,
+        10
+      ],
+      "expected": false
+    },
+    {
+      "input": [
+        0,
+        1,
+        10
+      ],
+      "expected": false
+    },
+    {
+      "input": [
+        "a",
+        1,
+        10
+      ],
+      "expected": false
     }
   ],
   "hints": [
-    "tier is truthy",
-    "tier is 'silver'",
-    "Returns 20% of 100"
+    "Teeno parameters ka type check karo",
+    "Range check karo: val >= min && val <= max"
   ]
 }

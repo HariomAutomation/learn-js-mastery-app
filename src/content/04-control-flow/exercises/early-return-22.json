@@ -1,17 +1,48 @@
 {
-  "id": "04-control-flow-early-return-22",
-  "title": "Multiple guards pattern",
-  "starterCode": "function processPayment(amount, method) {\n  if (amount <= 0) return 'invalid amount';\n  if (!method) return 'no payment method';\n  if (amount > 10000) return 'amount too large';\n  return `paid ${amount} via ${method}`;\n}\nconsole.log(processPayment(500, 'card'));",
-  "solution": "function processPayment(amount, method) {\n  if (amount <= 0) return 'invalid amount';\n  if (!method) return 'no payment method';\n  if (amount > 10000) return 'amount too large';\n  return `paid ${amount} via ${method}`;\n}\nconsole.log(processPayment(500, 'card'));",
+  "id": "04-control-flow-02-early-return-22",
+  "title": "Chained guards for object creation",
+  "starterCode": "// function createProduct(name, price, category)\n// Name empty: \"Name required\"\n// Price <= 0: \"Invalid price\"\n// Category empty: \"Category required\"\n// Warna product object return karo\n",
+  "solution": "function createProduct(name, price, category) {\n  if (!name || name.trim().length === 0) return \"Name required\"\n  if (typeof price !== \"number\" || price <= 0) return \"Invalid price\"\n  if (!category || category.trim().length === 0) return \"Category required\"\n  return { name: name.trim(), price, category: category.trim() }\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "paid 500 via card"
+      "input": [
+        "Laptop",
+        50000,
+        "Electronics"
+      ],
+      "expected": {
+        "name": "Laptop",
+        "price": 50000,
+        "category": "Electronics"
+      }
+    },
+    {
+      "input": [
+        "",
+        50000,
+        "Electronics"
+      ],
+      "expected": "Name required"
+    },
+    {
+      "input": [
+        "Laptop",
+        -100,
+        "Electronics"
+      ],
+      "expected": "Invalid price"
+    },
+    {
+      "input": [
+        "Laptop",
+        50000,
+        ""
+      ],
+      "expected": "Category required"
     }
   ],
   "hints": [
-    "500 > 0, first guard passes",
-    "method is truthy, second passes",
-    "500 <= 10000, third passes"
+    "Har field ke liye alag guard clause",
+    "Trim se whitespace validate hota hai"
   ]
 }

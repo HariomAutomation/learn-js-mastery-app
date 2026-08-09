@@ -1,0 +1,24 @@
+{
+  "id": "01-variables-declarations-variables-intro-48",
+  "title": "Promise all polyfill",
+  "starterCode": "// Promise.all ka basic polyfill banao\nfunction promiseAll(promises) {\n  // TODO\n}",
+  "solution": "function promiseAll(promises) {\n  return new Promise((resolve, reject) => {\n    const results = []\n    let completed = 0\n    if (promises.length === 0) return resolve([])\n    promises.forEach((p, i) => {\n      Promise.resolve(p).then(val => {\n        results[i] = val\n        completed++\n        if (completed === promises.length) resolve(results)\n      }).catch(reject)\n    })\n  })\n}",
+  "tests": [
+    {
+      "input": [
+        [
+          {},
+          {}
+        ]
+      ],
+      "expected": [
+        1,
+        2
+      ]
+    }
+  ],
+  "hints": [
+    "Counter se track karo kitne resolve ho gaye",
+    "Promise.resolve() se non-promise values handle karo"
+  ]
+}

@@ -1,15 +1,22 @@
 {
-  "id": "03-operators-arithmetic-comparison-03",
-  "title": "Multiply two numbers",
-  "starterCode": "const result = 7 * 6;\nconsole.log(result);",
-  "solution": "const result = 7 * 6;\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-03",
+  "title": "Remainder se even/odd check",
+  "starterCode": "// Number diya hai, even hai ya odd ye check karo\n// true = even, false = odd\nconst num = 37\n// TODO: % operator use karo\n",
+  "solution": "const num = 37\nreturn num % 2 === 0",
   "tests": [
     {
       "input": [],
-      "expected": "42"
+      "expected": false
+    },
+    {
+      "input": [
+        42
+      ],
+      "expected": true
     }
   ],
   "hints": [
-    "Use the * operator"
+    "num % 2 === 0 means even",
+    "Remainder 0 ho to even hai"
   ]
 }

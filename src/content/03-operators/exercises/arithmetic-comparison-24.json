@@ -1,15 +1,16 @@
 {
-  "id": "03-operators-arithmetic-comparison-24",
-  "title": "Less than comparison",
-  "starterCode": "const result = 3 < 7;\nconsole.log(result);",
-  "solution": "const result = 3 < 7;\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-24",
+  "title": "Compound assignment -= ",
+  "starterCode": "// Fuel tank mein 50L hai, 12L use hua\nlet fuel = 50\n// TODO: -= use karo\n",
+  "solution": "let fuel = 50\nfuel -= 12\nreturn fuel",
   "tests": [
     {
       "input": [],
-      "expected": "true"
+      "expected": 38
     }
   ],
   "hints": [
-    "< checks if left is less than right"
+    "fuel -= 12 same as fuel = fuel - 12",
+    "50 - 12 = 38"
   ]
 }

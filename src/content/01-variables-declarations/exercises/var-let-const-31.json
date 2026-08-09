@@ -1,15 +1,15 @@
 {
   "id": "01-variables-declarations-var-let-const-31",
-  "title": "var inside function",
-  "starterCode": "function test() {\n  var x = 1\n}\ntest()\nconsole.log(typeof x)",
-  "solution": "function test() {\n  var x = 1\n}\ntest()\nconsole.log(typeof x)",
+  "title": "Score tracker with closure",
+  "starterCode": "// Function banao jo score track kare\nfunction createScoreTracker(initialScore) {\n  let score = initialScore\n  return {\n    add: (points) => { /* TODO */ },\n    deduct: (points) => { /* TODO */ },\n    getScore: () => /* TODO */\n  }\n}",
+  "solution": "function createScoreTracker(initialScore) {\n  let score = initialScore\n  return {\n    add: (points) => { score += points },\n    deduct: (points) => { score -= points },\n    getScore: () => score\n  }\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "undefined"
+      "input": []
     }
   ],
   "hints": [
-    "var is function-scoped"
+    "Score variable closure se track hota hai",
+    "Methods score modify karte hain"
   ]
 }

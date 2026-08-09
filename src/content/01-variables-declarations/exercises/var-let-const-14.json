@@ -1,15 +1,15 @@
 {
   "id": "01-variables-declarations-var-let-const-14",
-  "title": "let not hoisted value",
-  "starterCode": "try {\n  console.log(x)\n  let x = 5\n} catch(e) {\n  console.log(\"error\")\n}",
-  "solution": "try {\n  console.log(x)\n  let x = 5\n} catch(e) {\n  console.log(\"error\")\n}",
+  "title": "Bug: freeze not deep",
+  "starterCode": "const obj = Object.freeze({ a: { b: 1 } })\ntry {\n  obj.a.b = 99\n  return obj.a.b\n} catch(e) {\n  return \"frozen\"\n}\n",
+  "solution": "const obj = Object.freeze({ a: { b: 1 } })\ntry {\n  obj.a.b = 99\n  return obj.a.b\n} catch(e) {\n  return \"frozen\"\n}",
   "tests": [
     {
       "input": [],
-      "expected": "error"
+      "expected": 99
     }
   ],
   "hints": [
-    "let is not initialized before declaration"
+    "Freeze shallow hota hai — nested objects change ho sakte hain"
   ]
 }

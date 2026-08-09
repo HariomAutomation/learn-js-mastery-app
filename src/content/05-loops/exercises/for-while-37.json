@@ -1,16 +1,18 @@
 {
-  "id": "05-loops-for-while-37",
-  "title": "Digit Counting",
-  "starterCode": "let num = 987654321;\nlet count = 0;\nwhile (num > 0) {\n  count++;\n  num = Math.floor(num / 10);\n}\nconsole.log(count);",
-  "solution": "let num = 987654321;\nlet count = 0;\nwhile (num > 0) {\n  count++;\n  num = Math.floor(num / 10);\n}\nconsole.log(count);",
+  "id": "05-01-for-while-37",
+  "title": "While loop se tower of Hanoi solve karo",
+  "starterCode": "function hanoi(n) {\n  // TODO: n disks ke liye minimum steps return karo\n  // Formula: 2^n - 1\n}",
+  "solution": "function hanoi(n) {\n  return Math.pow(2, n) - 1;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "9"
+      "input": [
+        3
+      ],
+      "expected": 7
     }
   ],
   "hints": [
-    "Divide by 10 each iteration",
-    "Count until num is 0"
+    "Minimum steps = 2^n - 1",
+    "Math.pow use karo"
   ]
 }

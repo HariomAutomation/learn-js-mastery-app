@@ -1,0 +1,19 @@
+{
+  "id": "01-variables-declarations-var-let-const-43",
+  "title": "Arrow vs regular function this",
+  "starterCode": "const obj = {\n  name: \"test\",\n  regular: function() { return this.name },\n  arrow: () => this.name\n}\nreturn [obj.regular(), obj.arrow()]\n",
+  "solution": "const obj = {\n  name: \"test\",\n  regular: function() { return this.name },\n  arrow: () => this.name\n}\nreturn [obj.regular(), obj.arrow()]",
+  "tests": [
+    {
+      "input": [],
+      "expected": [
+        "test",
+        null
+      ]
+    }
+  ],
+  "hints": [
+    "Regular function mein this calling context hota hai",
+    "Arrow function global this use karta hai"
+  ]
+}

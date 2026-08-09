@@ -1,16 +1,27 @@
 {
-  "id": "02-data-types-reference-types-typeof-27",
-  "title": "Object identity check",
-  "starterCode": "const a = {};\nconst b = a;\nconst c = {};\nconsole.log(a === b, a === c);",
-  "solution": "const a = {};\nconst b = a;\nconst c = {};\nconsole.log(a === b, a === c);",
+  "id": "02-data-types-02-reference-types-typeof-27",
+  "title": "for...in vs for...of",
+  "starterCode": "const arr = [\"a\", \"b\", \"c\"]\nconst obj = { x: 1, y: 2, z: 3 }\nconst keys = []\nfor (const key in obj) keys.push(key)\nconst values = []\nfor (const val of arr) values.push(val)\nreturn { keys, values }\n",
+  "solution": "const arr = [\"a\", \"b\", \"c\"]\nconst obj = { x: 1, y: 2, z: 3 }\nconst keys = []\nfor (const key in obj) keys.push(key)\nconst values = []\nfor (const val of arr) values.push(val)\nreturn { keys, values }",
   "tests": [
     {
       "input": [],
-      "expected": "true false"
+      "expected": {
+        "keys": [
+          "x",
+          "y",
+          "z"
+        ],
+        "values": [
+          "a",
+          "b",
+          "c"
+        ]
+      }
     }
   ],
   "hints": [
-    "=== checks reference equality",
-    "Same reference = true, different = false"
+    "for...in objects ke liye (keys iterate karta hai)",
+    "for...of arrays ke liye (values iterate karta hai)"
   ]
 }

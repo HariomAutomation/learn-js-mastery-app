@@ -1,16 +1,39 @@
 {
-  "id": "04-control-flow-early-return-31",
-  "title": "Early return arrays - not array",
-  "starterCode": "function getFirstThree(arr) {\n  if (!Array.isArray(arr)) return [];\n  return arr.slice(0, 3);\n}\nconsole.log(getFirstThree('hello'));",
-  "solution": "function getFirstThree(arr) {\n  if (!Array.isArray(arr)) return [];\n  return arr.slice(0, 3);\n}\nconsole.log(getFirstThree('hello'));",
+  "id": "04-control-flow-02-early-return-31",
+  "title": "Guard for array index access",
+  "starterCode": "// function safeGet(arr, index) mein array aur index do\n// Agar array nahi: undefined\n// Agar index out of bounds: undefined\n// Warna element return karo\n",
+  "solution": "function safeGet(arr, index) {\n  if (!Array.isArray(arr)) return undefined\n  if (index < 0 || index >= arr.length) return undefined\n  return arr[index]\n}",
   "tests": [
     {
-      "input": [],
-      "expected": ""
+      "input": [
+        [
+          10,
+          20,
+          30
+        ],
+        1
+      ],
+      "expected": 20
+    },
+    {
+      "input": [
+        [
+          10,
+          20,
+          30
+        ],
+        5
+      ]
+    },
+    {
+      "input": [
+        null,
+        0
+      ]
     }
   ],
   "hints": [
-    "'hello' is not an array",
-    "Returns empty array"
+    "Array.isArray() pehle check karo",
+    "Index boundary check karo dono taraf se"
   ]
 }

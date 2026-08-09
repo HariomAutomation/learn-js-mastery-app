@@ -1,16 +1,47 @@
 {
-  "id": "04-control-flow-if-else-switch-45",
-  "title": "If with NaN check",
-  "starterCode": "const value = NaN;\nif (Number.isNaN(value)) {\n  console.log('is NaN');\n} else {\n  console.log('not NaN');\n}",
-  "solution": "const value = NaN;\nif (Number.isNaN(value)) {\n  console.log('is NaN');\n} else {\n  console.log('not NaN');\n}",
+  "id": "04-control-flow-01-if-else-switch-45",
+  "title": "Nested if se priority check",
+  "starterCode": "// function priority(score, isUrgent)\n// Score >= 90: \"Critical\"\n// Score >= 70 aur urgent: \"High\"\n// Score >= 70: \"Medium\"\n// Score < 70 aur urgent: \"Low-Urgent\"\n// Baaki: \"Low\"\n",
+  "solution": "function priority(score, isUrgent) {\n  if (score >= 90) return \"Critical\"\n  if (score >= 70 && isUrgent) return \"High\"\n  if (score >= 70) return \"Medium\"\n  if (isUrgent) return \"Low-Urgent\"\n  return \"Low\"\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "is NaN"
+      "input": [
+        95,
+        false
+      ],
+      "expected": "Critical"
+    },
+    {
+      "input": [
+        75,
+        true
+      ],
+      "expected": "High"
+    },
+    {
+      "input": [
+        75,
+        false
+      ],
+      "expected": "Medium"
+    },
+    {
+      "input": [
+        50,
+        true
+      ],
+      "expected": "Low-Urgent"
+    },
+    {
+      "input": [
+        50,
+        false
+      ],
+      "expected": "Low"
     }
   ],
   "hints": [
-    "Number.isNaN checks for NaN",
-    "value is NaN"
+    "Score aur urgency dono alag check hote hain",
+    "Order mein priority set karo"
   ]
 }

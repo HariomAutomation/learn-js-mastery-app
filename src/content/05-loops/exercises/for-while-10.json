@@ -1,16 +1,21 @@
 {
-  "id": "05-loops-for-while-10",
-  "title": "While True With Break",
-  "starterCode": "let i = 0;\nwhile (true) {\n  if (i >= 5) break;\n  console.log(i);\n  i++;\n}",
-  "solution": "let i = 0;\nwhile (true) {\n  if (i >= 5) break;\n  console.log(i);\n  i++;\n}",
+  "id": "05-01-for-while-10",
+  "title": "Break use karke first negative dhundho",
+  "starterCode": "function firstNegative(arr) {\n  // TODO: array me pehla negative number dhundho\n  // Break se loop jaldi band karo\n}",
+  "solution": "function firstNegative(arr) {\n  for (const num of arr) {\n    if (num < 0) return num;\n  }\n  return null;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "0\n1\n2\n3\n4"
+      "input": [
+        1,
+        2,
+        -3,
+        4
+      ],
+      "expected": -3
     }
   ],
   "hints": [
-    "Use while(true) for infinite loop",
-    "Break when condition met"
+    "Milte hi return karo",
+    "Nahi mila toh null return karo"
   ]
 }

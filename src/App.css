@@ -3182,3 +3182,354 @@ button {
 [data-theme="light"] .code-editor-wrapper {
   border-color: #c0c4ce;
 }
+
+/* ===== APP IMPROVEMENTS (sandbox, onboarding, confirm, skeletons, responsive) ===== */
+
+/* Sidebar mobile toggle + backdrop */
+.sidebar-toggle {
+  display: none;
+}
+
+.sidebar-backdrop {
+  display: none;
+}
+
+/* Onboarding card */
+.onboarding-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: linear-gradient(135deg, #1e1e2e, #262639);
+  border: 1px solid #45475a;
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.onboarding-content {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  flex: 1;
+  min-width: 220px;
+}
+
+.onboarding-emoji {
+  font-size: 1.75rem;
+}
+
+.onboarding-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #cdd6f4;
+  margin-bottom: 0.2rem;
+}
+
+.onboarding-text {
+  font-size: 0.8rem;
+  color: #a6adc8;
+  line-height: 1.5;
+}
+
+.onboarding-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+[data-theme="light"] .onboarding-card {
+  background: linear-gradient(135deg, #eef0f6, #e2e6ee);
+  border-color: #c0c4ce;
+}
+
+[data-theme="light"] .onboarding-title {
+  color: #1e1e2e;
+}
+
+[data-theme="light"] .onboarding-text {
+  color: #5c5f77;
+}
+
+/* Loading skeleton shimmer */
+@keyframes shimmer {
+  0% { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+.skeleton {
+  border-radius: 8px;
+  background: linear-gradient(90deg, #1e1e2e 25%, #313244 50%, #1e1e2e 75%);
+  background-size: 800px 100%;
+  animation: shimmer 1.4s infinite linear;
+  margin-bottom: 1rem;
+}
+
+.skeleton-badge {
+  width: 90px;
+  height: 1.4rem;
+}
+
+.skeleton-title {
+  width: 60%;
+  height: 2rem;
+}
+
+.skeleton-line {
+  width: 100%;
+  height: 1rem;
+}
+
+.skeleton-line.short {
+  width: 75%;
+}
+
+.skeleton-line.half {
+  width: 50%;
+}
+
+[data-theme="light"] .skeleton {
+  background: linear-gradient(90deg, #dce0e8 25%, #e6e9ef 50%, #dce0e8 75%);
+  background-size: 800px 100%;
+}
+
+/* Certificate name input */
+.certificate-name-wrap {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.certificate-name-input {
+  padding: 0.55rem 0.85rem;
+  border-radius: 8px;
+  border: 1px solid #45475a;
+  background: #11111b;
+  color: #cdd6f4;
+  font-size: 0.875rem;
+  min-width: 220px;
+}
+
+.certificate-name-input:focus {
+  outline: none;
+  border-color: #cba6f7;
+}
+
+[data-theme="light"] .certificate-name-input {
+  background: #ffffff;
+  border-color: #c0c4ce;
+  color: #1e1e2e;
+}
+
+/* Exam submit confirmation dialog */
+.exam-confirm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 17, 27, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 1rem;
+}
+
+.exam-confirm {
+  background: #1e1e2e;
+  border: 1px solid #45475a;
+  border-radius: 14px;
+  padding: 1.5rem;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.exam-confirm-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #f9e2af;
+  margin-bottom: 0.6rem;
+}
+
+.exam-confirm-text {
+  font-size: 0.875rem;
+  color: #a6adc8;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.exam-confirm-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+[data-theme="light"] .exam-confirm {
+  background: #ffffff;
+  border-color: #c0c4ce;
+}
+
+[data-theme="light"] .exam-confirm-title {
+  color: #b26a00;
+}
+
+[data-theme="light"] .exam-confirm-text {
+  color: #5c5f77;
+}
+
+/* Error boundary fallback */
+.app-error {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.app-error-card {
+  text-align: center;
+  background: #1e1e2e;
+  border: 1px solid #45475a;
+  border-radius: 14px;
+  padding: 2rem;
+  max-width: 420px;
+}
+
+.app-error-emoji {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.app-error-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #cdd6f4;
+  margin-bottom: 0.5rem;
+}
+
+.app-error-text {
+  font-size: 0.875rem;
+  color: #a6adc8;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+[data-theme="light"] .app-error-card {
+  background: #ffffff;
+  border-color: #c0c4ce;
+}
+
+[data-theme="light"] .app-error-title {
+  color: #1e1e2e;
+}
+
+[data-theme="light"] .app-error-text {
+  color: #5c5f77;
+}
+
+/* Sidebar scroll fade indicator */
+.sidebar {
+  position: relative;
+}
+
+.sidebar::after {
+  content: "";
+  position: sticky;
+  bottom: -1rem;
+  display: block;
+  height: 2.5rem;
+  margin: 0 -1rem;
+  background: linear-gradient(180deg, transparent, rgba(24, 24, 37, 0.9));
+  pointer-events: none;
+}
+
+[data-theme="light"] .sidebar::after {
+  background: linear-gradient(180deg, transparent, rgba(212, 216, 224, 0.95));
+}
+
+/* Responsive: off-canvas sidebar under 900px */
+@media (max-width: 900px) {
+  .sidebar-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0.85rem;
+    left: 0.85rem;
+    z-index: 70;
+    width: 2.3rem;
+    height: 2.3rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: 1px solid #45475a;
+    background: #1e1e2e;
+    color: #cdd6f4;
+    cursor: pointer;
+  }
+
+  [data-theme="light"] .sidebar-toggle {
+    background: #ffffff;
+    border-color: #c0c4ce;
+    color: #1e1e2e;
+  }
+
+  .sidebar-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(17, 17, 27, 0.6);
+    z-index: 50;
+    border: none;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 60;
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.4);
+  }
+
+  .app-layout.sidebar-open .sidebar {
+    transform: translateX(0);
+  }
+
+  .content-area {
+    padding: 4.5rem 1rem 1rem;
+  }
+
+  .dashboard-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .onboarding-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 560px) {
+  .dashboard-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .quiz-completed-actions,
+  .exam-confirm-actions,
+  .result-actions {
+    flex-direction: column;
+  }
+
+  .result-actions .btn,
+  .quiz-completed-actions .btn {
+    width: 100%;
+  }
+}

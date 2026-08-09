@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-var-let-const-11",
-  "title": "Loop let scope",
-  "starterCode": "for (let i = 0; i < 3; i++) {\n  setTimeout(() => console.log(i), 0)\n}",
-  "solution": "for (let i = 0; i < 3; i++) {\n  setTimeout(() => console.log(i), 0)\n}",
+  "title": "Bug: while loop var scope",
+  "starterCode": "var i = 0\nwhile (i < 3) {\n  var result = i\n  i++\n}\nreturn result\n",
+  "solution": "var i = 0\nwhile (i < 3) {\n  var result = i\n  i++\n}\nreturn result",
   "tests": [
     {
       "input": [],
-      "expected": "0\n1\n2"
+      "expected": 2
     }
   ],
   "hints": [
-    "let is block-scoped per iteration"
+    "var result block ke bahar leak hota hai",
+    "Last value 2 hogi"
   ]
 }

@@ -1,16 +1,19 @@
 {
-  "id": "03-operators-arithmetic-comparison-15",
-  "title": "Modulo with negative divisor",
-  "starterCode": "const result = 7 % -3;\nconsole.log(result);",
-  "solution": "const result = 7 % -3;\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-15",
+  "title": "Random number range mein",
+  "starterCode": "// 1 se 10 ke beech random number nikalo (inclusive)\n// TODO: Math.random use karo\nconst randomNum = Math.floor(Math.random() * 10) + 1\nreturn { randomNum, isInRange: randomNum >= 1 && randomNum <= 10 }",
+  "solution": "const randomNum = Math.floor(Math.random() * 10) + 1\nreturn { randomNum, isInRange: randomNum >= 1 && randomNum <= 10 }",
   "tests": [
     {
       "input": [],
-      "expected": "1"
+      "expected": {
+        "randomNum": 1,
+        "isInRange": true
+      }
     }
   ],
   "hints": [
-    "Sign follows the dividend",
-    "7 = -3*(-3) + (-2), but JS gives 1"
+    "Math.random() 0 se 1 ke beech deta hai",
+    "floor + 1 se 1-10 range milegi"
   ]
 }

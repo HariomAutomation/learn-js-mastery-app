@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-var-let-const-01",
-  "title": "var function scope",
-  "starterCode": "function test() {\n  var x = 1\n}\ntest()\nconsole.log(typeof x)",
-  "solution": "function test() {\n  var x = 1\n}\ntest()\nconsole.log(typeof x)",
+  "title": "Bug: var leaking from block",
+  "starterCode": "// Fix this code — should print \"defined\" not 10\nif (true) {\n  var x = 10\n}\nreturn typeof x === \"undefined\" ? \"fixed\" : \"not fixed\"\n",
+  "solution": "if (true) {\n  let x = 10\n}\nreturn typeof x === \"undefined\" ? \"fixed\" : \"not fixed\"",
   "tests": [
     {
       "input": [],
-      "expected": "undefined"
+      "expected": "fixed"
     }
   ],
   "hints": [
-    "var is function-scoped"
+    "var se block scope nahi milta",
+    "let use karo var ki jagah"
   ]
 }

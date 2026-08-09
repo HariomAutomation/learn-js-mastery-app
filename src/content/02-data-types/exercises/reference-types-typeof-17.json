@@ -1,16 +1,16 @@
 {
-  "id": "02-data-types-reference-types-typeof-17",
-  "title": "typeof function",
-  "starterCode": "function greet() {}\nconsole.log();",
-  "solution": "function greet() {}\nconsole.log(typeof greet);",
+  "id": "02-data-types-02-reference-types-typeof-17",
+  "title": "Arguments object",
+  "starterCode": "function sumAll() {\n  // TODO: arguments se sum nikalo\n}\nreturn sumAll(1, 2, 3, 4, 5)\n",
+  "solution": "function sumAll() {\n  return Array.from(arguments).reduce((acc, n) => acc + n, 0)\n}\nreturn sumAll(1, 2, 3, 4, 5)",
   "tests": [
     {
       "input": [],
-      "expected": "function"
+      "expected": 15
     }
   ],
   "hints": [
-    "Functions have special typeof",
-    "Returns 'function' not 'object'"
+    "arguments sirf regular functions mein hota hai",
+    "Array.from() se array mein convert karo"
   ]
 }

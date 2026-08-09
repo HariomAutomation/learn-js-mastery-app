@@ -1,16 +1,19 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-14",
-  "title": "Strict equality no coercion",
-  "starterCode": "console.log(5 === \"5\");",
-  "solution": "console.log(5 === \"5\");",
+  "id": "02-data-types-03-coercion-truthy-falsy-14",
+  "title": "Short circuit evaluation",
+  "starterCode": "const user = { name: \"Hariom\" }\nconst name = user && user.name\nconst city = user && user.address && user.address.city\nconst defaultVal = null || undefined || \"fallback\"\nreturn { name, city, defaultVal }\n",
+  "solution": "const user = { name: \"Hariom\" }\nconst name = user && user.name\nconst city = user && user.address && user.address.city\nconst defaultVal = null || undefined || \"fallback\"\nreturn { name, city, defaultVal }",
   "tests": [
     {
       "input": [],
-      "expected": "false"
+      "expected": {
+        "name": "Hariom",
+        "defaultVal": "fallback"
+      }
     }
   ],
   "hints": [
-    "=== checks type and value",
-    "No conversion happens"
+    "&& pehla falsy value ya last value return karta hai",
+    "|| pehla truthy value return karta hai"
   ]
 }

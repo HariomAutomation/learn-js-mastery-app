@@ -1,16 +1,40 @@
 {
-  "id": "04-control-flow-early-return-13",
-  "title": "Default fallback on missing key",
-  "starterCode": "function getConfig(key) {\n  const config = { theme: 'dark', lang: 'en' };\n  return config[key] ?? 'default';\n}\nconsole.log(getConfig('missing'));",
-  "solution": "function getConfig(key) {\n  const config = { theme: 'dark', lang: 'en' };\n  return config[key] ?? 'default';\n}\nconsole.log(getConfig('missing'));",
+  "id": "04-control-flow-02-early-return-13",
+  "title": "Array processing with guard",
+  "starterCode": "// function sumPositive(arr) mein array do\n// Agar array nahi ya empty: 0\n// Agar koi non-number hai: \"Invalid element\"\n// Warna sirf positive numbers ka sum do\n",
+  "solution": "function sumPositive(arr) {\n  if (!Array.isArray(arr) || arr.length === 0) return 0\n  if (arr.some(item => typeof item !== \"number\")) return \"Invalid element\"\n  return arr.filter(n => n > 0).reduce((acc, n) => acc + n, 0)\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "default"
+      "input": [
+        [
+          1,
+          -2,
+          3,
+          -4,
+          5
+        ]
+      ],
+      "expected": 9
+    },
+    {
+      "input": [
+        []
+      ],
+      "expected": 0
+    },
+    {
+      "input": [
+        [
+          1,
+          "two",
+          3
+        ]
+      ],
+      "expected": "Invalid element"
     }
   ],
   "hints": [
-    "config.missing is undefined",
-    "?? returns 'default'"
+    "filter se positive numbers alag karo",
+    "reduce se sum nikalo"
   ]
 }

@@ -1,17 +1,48 @@
 {
-  "id": "04-control-flow-early-return-48",
-  "title": "Early return boolean - type check",
-  "starterCode": "function isString(value) {\n  if (value === null) return false;\n  if (value === undefined) return false;\n  return typeof value === 'string';\n}\nconsole.log(isString('hello'));",
-  "solution": "function isString(value) {\n  if (value === null) return false;\n  if (value === undefined) return false;\n  return typeof value === 'string';\n}\nconsole.log(isString('hello'));",
+  "id": "04-control-flow-02-early-return-48",
+  "title": "Guard for array filtering",
+  "starterCode": "// function filterBy(arr, predicate) mein array aur function do\n// Agar array nahi: []\n// Agar function nahi: []\n// Warna filter karo\n",
+  "solution": "function filterBy(arr, predicate) {\n  if (!Array.isArray(arr)) return []\n  if (typeof predicate !== \"function\") return []\n  return arr.filter(predicate)\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "true"
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4
+        ],
+        null
+      ],
+      "expected": [
+        3,
+        4
+      ]
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "c"
+        ],
+        null
+      ],
+      "expected": [
+        "a",
+        "c"
+      ]
+    },
+    {
+      "input": [
+        null,
+        null
+      ],
+      "expected": []
     }
   ],
   "hints": [
-    "value is not null",
-    "value is not undefined",
-    "typeof is 'string'"
+    "Array type check karo",
+    "Predicate function check karo"
   ]
 }

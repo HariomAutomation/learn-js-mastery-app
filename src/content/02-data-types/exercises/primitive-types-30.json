@@ -1,16 +1,20 @@
 {
-  "id": "02-data-types-primitive-types-30",
-  "title": "Check typeof a function",
-  "starterCode": "function greet() {}\nconsole.log();",
-  "solution": "function greet() {}\nconsole.log(typeof greet);",
+  "id": "02-data-types-01-primitive-types-30",
+  "title": "Primitive vs Reference comparison",
+  "starterCode": "const a = 5\nconst b = 5\nconst obj1 = { x: 1 }\nconst obj2 = { x: 1 }\nconst obj3 = obj1\nreturn {\n  primitivesEqual: a === b,\n  objectsEqual: obj1 === obj2,\n  referenceEqual: obj1 === obj3\n}\n",
+  "solution": "const a = 5\nconst b = 5\nconst obj1 = { x: 1 }\nconst obj2 = { x: 1 }\nconst obj3 = obj1\nreturn {\n  primitivesEqual: a === b,\n  objectsEqual: obj1 === obj2,\n  referenceEqual: obj1 === obj3\n}",
   "tests": [
     {
       "input": [],
-      "expected": "function"
+      "expected": {
+        "primitivesEqual": true,
+        "objectsEqual": false,
+        "referenceEqual": true
+      }
     }
   ],
   "hints": [
-    "Functions have their own typeof",
-    "It returns 'function' not 'object'"
+    "Primitives value se compare hote hain",
+    "Objects reference se compare hote hain"
   ]
 }

@@ -1,16 +1,21 @@
 {
-  "id": "05-loops-patterns-practice-33",
-  "title": "Count Vowels",
-  "starterCode": "const str = \"hello world\";\nlet count = 0;\nconst vowels = \"aeiou\";\nfor (const ch of str) {\n  if (vowels.includes(ch)) count++;\n}\nconsole.log(count);",
-  "solution": "const str = \"hello world\";\nlet count = 0;\nconst vowels = \"aeiou\";\nfor (const ch of str) {\n  if (vowels.includes(ch)) count++;\n}\nconsole.log(count);",
+  "id": "05-03-patterns-practice-33",
+  "title": "Array ke elements ko next greater element dhundho",
+  "starterCode": "function nextGreater(arr) {\n  // TODO: har element ke liye next greater element do\n  // [4,5,2,25] -> [5,25,25,-1]\n}",
+  "solution": "function nextGreater(arr) {\n  const result = Array(arr.length).fill(-1);\n  const stack = [];\n  for (let i = 0; i < arr.length; i++) {\n    while (stack.length && arr[stack[stack.length-1]] < arr[i]) {\n      result[stack.pop()] = arr[i];\n    }\n    stack.push(i);\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "3"
+      "input": [
+        4,
+        5,
+        2,
+        25
+      ],
+      "expected": "5,25,25,-1"
     }
   ],
   "hints": [
-    "Check each character",
-    "Use includes()"
+    "Stack use karo",
+    "Chhota element mila toh stack me dalo, bada mila toh pop karo"
   ]
 }

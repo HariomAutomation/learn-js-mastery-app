@@ -1,16 +1,26 @@
 {
-  "id": "05-loops-for-of-for-in-36",
-  "title": "For...Of String Length",
-  "starterCode": "const str = \"JavaScript\";\nlet length = 0;\nfor (const char of str) {\n  length++;\n}\nconsole.log(length);",
-  "solution": "const str = \"JavaScript\";\nlet length = 0;\nfor (const char of str) {\n  length++;\n}\nconsole.log(length);",
+  "id": "05-02-for-of-for-in-36",
+  "title": "For-in se object ka subset banao given keys se",
+  "starterCode": "function pick(obj, keys) {\n  // TODO: sirf specified keys ka naya object banao\n}",
+  "solution": "function pick(obj, keys) {\n  const result = {};\n  for (const key of keys) {\n    if (key in obj) result[key] = obj[key];\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "10"
+      "input": [
+        {
+          "a": 1,
+          "b": 2,
+          "c": 3
+        },
+        [
+          "a",
+          "c"
+        ]
+      ],
+      "expected": "{\"a\":1,\"c\":3}"
     }
   ],
   "hints": [
-    "Count characters",
-    "Increment counter"
+    "For-of se keys iterate karo",
+    "Key exist karti hai toh result me dalo"
   ]
 }

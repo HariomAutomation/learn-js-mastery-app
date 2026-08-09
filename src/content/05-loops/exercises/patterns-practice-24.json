@@ -1,16 +1,20 @@
 {
-  "id": "05-loops-patterns-practice-24",
-  "title": "Palindrome Loop Index",
-  "starterCode": "const str = \"racecar\";\nlet pal = true;\nfor (let i = 0; i < Math.floor(str.length / 2); i++) {\n  if (str[i] !== str[str.length - 1 - i]) {\n    pal = false;\n    break;\n  }\n}\nconsole.log(pal);",
-  "solution": "const str = \"racecar\";\nlet pal = true;\nfor (let i = 0; i < Math.floor(str.length / 2); i++) {\n  if (str[i] !== str[str.length - 1 - i]) {\n    pal = false;\n    break;\n  }\n}\nconsole.log(pal);",
+  "id": "05-03-patterns-practice-24",
+  "title": "Nested loop se array ke all pairs ka product nikalo",
+  "starterCode": "function pairProducts(arr) {\n  // TODO: sab pairs ka product do\n}",
+  "solution": "function pairProducts(arr) {\n  const result = [];\n  for (let i = 0; i < arr.length; i++) {\n    for (let j = i + 1; j < arr.length; j++) {\n      result.push(arr[i] * arr[j]);\n    }\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "true"
+      "input": [
+        1,
+        2,
+        3
+      ],
+      "expected": "2,3,6"
     }
   ],
   "hints": [
-    "Only check half",
-    "Compare symmetric positions"
+    "Nested loop se pairs banao",
+    "Product push karo result me"
   ]
 }

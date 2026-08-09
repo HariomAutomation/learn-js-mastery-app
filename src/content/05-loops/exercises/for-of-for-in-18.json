@@ -1,16 +1,25 @@
 {
-  "id": "05-loops-for-of-for-in-18",
-  "title": "For...Of With Continue",
-  "starterCode": "const arr = [1, 2, 3, 4, 5];\nfor (const val of arr) {\n  if (val % 2 === 0) continue;\n  console.log(val);\n}",
-  "solution": "const arr = [1, 2, 3, 4, 5];\nfor (const val of arr) {\n  if (val % 2 === 0) continue;\n  console.log(val);\n}",
+  "id": "05-02-for-of-for-in-18",
+  "title": "For-in se object me property existence check karo",
+  "starterCode": "function hasAllKeys(obj, keys) {\n  // TODO: obj me sab keys hain ya nahi check karo\n}",
+  "solution": "function hasAllKeys(obj, keys) {\n  for (const key of keys) {\n    if (!(key in obj)) return false;\n  }\n  return true;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "1\n3\n5"
+      "input": [
+        {
+          "a": 1,
+          "b": 2
+        },
+        [
+          "a",
+          "b"
+        ]
+      ],
+      "expected": "true"
     }
   ],
   "hints": [
-    "continue skips iteration",
-    "Check for even to skip"
+    "For-of se keys iterate karo",
+    "In operator se existence check karo"
   ]
 }

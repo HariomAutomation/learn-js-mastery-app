@@ -1,16 +1,26 @@
 {
-  "id": "05-loops-for-of-for-in-33",
-  "title": "For...Of With Map Entries",
-  "starterCode": "const map = new Map([['x', 10], ['y', 20]]);\nfor (const [key, val] of map.entries()) {\n  console.log(key + '=' + val);\n}",
-  "solution": "const map = new Map([['x', 10], ['y', 20]]);\nfor (const [key, val] of map.entries()) {\n  console.log(key + '=' + val);\n}",
+  "id": "05-02-for-of-for-in-33",
+  "title": "For-of se array ke chunks ka average nikalo",
+  "starterCode": "function chunkAverage(arr, size) {\n  // TODO: array ke chunks ka average nikalo\n}",
+  "solution": "function chunkAverage(arr, size) {\n  const result = [];\n  for (let i = 0; i < arr.length; i += size) {\n    const chunk = arr.slice(i, i + size);\n    result.push(chunk.reduce((a, b) => a + b, 0) / chunk.length);\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "x=10\ny=20"
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        2
+      ],
+      "expected": "1.5,3.5,5.5"
     }
   ],
   "hints": [
-    "Use entries() method",
-    "Destructure pairs"
+    "Chunk nikalo aur uska sum/length nikalo",
+    "Reduce se sum karo"
   ]
 }

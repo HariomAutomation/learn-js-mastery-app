@@ -1,16 +1,24 @@
 {
-  "id": "02-data-types-primitive-types-07",
-  "title": "Get the length of a string",
-  "starterCode": "const word = \"JavaScript\";\nconst len = ;\nconsole.log(len);",
-  "solution": "const word = \"JavaScript\";\nconst len = word.length;\nconsole.log(len);",
+  "id": "02-data-types-01-primitive-types-07",
+  "title": "typeof operator use karo",
+  "starterCode": "const values = [42, \"hello\", true, null, undefined, Symbol(\"x\"), 42n]\nreturn values.map(v => typeof v)\n",
+  "solution": "const values = [42, \"hello\", true, null, undefined, Symbol(\"x\"), 42n]\nreturn values.map(v => typeof v)",
   "tests": [
     {
       "input": [],
-      "expected": "10"
+      "expected": [
+        "number",
+        "string",
+        "boolean",
+        "object",
+        "undefined",
+        "symbol",
+        "bigint"
+      ]
     }
   ],
   "hints": [
-    "Strings have a .length property",
-    "Access it with dot notation"
+    "typeof null 'object' return karta hai",
+    "typeof Symbol 'symbol' return karta hai"
   ]
 }

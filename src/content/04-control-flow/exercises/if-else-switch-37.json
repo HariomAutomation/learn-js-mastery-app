@@ -1,16 +1,36 @@
 {
-  "id": "04-control-flow-if-else-switch-37",
-  "title": "Switch with undefined",
-  "starterCode": "const value = undefined;\nswitch (value) {\n  case null:\n    console.log('null');\n    break;\n  case undefined:\n    console.log('undefined');\n    break;\n  default:\n    console.log('other');\n}",
-  "solution": "const value = undefined;\nswitch (value) {\n  case null:\n    console.log('null');\n    break;\n  case undefined:\n    console.log('undefined');\n    break;\n  default:\n    console.log('other');\n}",
+  "id": "04-control-flow-01-if-else-switch-37",
+  "title": "Switch se grade points mapping",
+  "starterCode": "// function gradePoints(grade) mein grade string do\n// \"A+\": 4.0, \"A\": 3.7, \"B+\": 3.3, \"B\": 3.0, \"C\": 2.0, \"F\": 0.0\n// Invalid grade: -1\n",
+  "solution": "function gradePoints(grade) {\n  switch (grade) {\n    case \"A+\": return 4.0\n    case \"A\": return 3.7\n    case \"B+\": return 3.3\n    case \"B\": return 3.0\n    case \"C\": return 2.0\n    case \"F\": return 0.0\n    default: return -1\n  }\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "undefined"
+      "input": [
+        "A+"
+      ],
+      "expected": 4
+    },
+    {
+      "input": [
+        "B"
+      ],
+      "expected": 3
+    },
+    {
+      "input": [
+        "F"
+      ],
+      "expected": 0
+    },
+    {
+      "input": [
+        "D"
+      ],
+      "expected": -1
     }
   ],
   "hints": [
-    "undefined matches case undefined",
-    "switch uses === comparison"
+    "Har grade ka specific GPA value hai",
+    "Default mein -1 return karo"
   ]
 }

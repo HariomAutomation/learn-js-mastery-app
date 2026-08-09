@@ -1,16 +1,19 @@
 {
-  "id": "05-loops-for-while-45",
-  "title": "Reverse String With Index",
-  "starterCode": "const str = \"abcde\";\nlet result = \"\";\nfor (let i = str.length - 1; i >= 0; i--) {\n  result += str[i];\n}\nconsole.log(result);",
-  "solution": "const str = \"abcde\";\nlet result = \"\";\nfor (let i = str.length - 1; i >= 0; i--) {\n  result += str[i];\n}\nconsole.log(result);",
+  "id": "05-01-for-while-45",
+  "title": "Break use karke infinite loop simulate karo with exit",
+  "starterCode": "function findDivisible(start, divisor) {\n  // TODO: start se shuru karke pehla divisible number dhundho\n}",
+  "solution": "function findDivisible(start, divisor) {\n  let num = start;\n  while (true) {\n    if (num % divisor === 0) return num;\n    num++;\n  }\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "edcba"
+      "input": [
+        7,
+        3
+      ],
+      "expected": 9
     }
   ],
   "hints": [
-    "Start at str.length - 1",
-    "Decrement to 0"
+    "Infinite loop use karo with break condition",
+    "Divisible milte hi return karo"
   ]
 }

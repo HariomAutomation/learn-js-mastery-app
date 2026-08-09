@@ -1,16 +1,18 @@
 {
-  "id": "05-loops-for-while-14",
-  "title": "While Null Check",
-  "starterCode": "let arr = [1, 2, 3, null, 5];\nlet i = 0;\nwhile (arr[i] !== null) {\n  console.log(arr[i]);\n  i++;\n}",
-  "solution": "let arr = [1, 2, 3, null, 5];\nlet i = 0;\nwhile (arr[i] !== null) {\n  console.log(arr[i]);\n  i++;\n}",
+  "id": "05-01-for-while-14",
+  "title": "Nested loop se star pattern banao",
+  "starterCode": "function starPattern(n) {\n  // TODO: n lines ka star pattern\n  // Line 1: *, Line 2: **, ...\n}",
+  "solution": "function starPattern(n) {\n  const result = [];\n  for (let i = 1; i <= n; i++) {\n    result.push(\"*\".repeat(i));\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "1\n2\n3"
+      "input": [
+        4
+      ],
+      "expected": "*,**,***,****"
     }
   ],
   "hints": [
-    "Check for null to stop",
-    "Increment index each iteration"
+    "Outer loop lines ke liye",
+    "Har line me i stars honge"
   ]
 }

@@ -1,16 +1,57 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-05",
-  "title": "Check if null is falsy",
-  "starterCode": "if (null) {\n  console.log('truthy');\n} else {\n  console.log('falsy');\n}",
-  "solution": "if (null) {\n  console.log('truthy');\n} else {\n  console.log('falsy');\n}",
+  "id": "02-data-types-03-coercion-truthy-falsy-05",
+  "title": "Falsy values identify karo",
+  "starterCode": "const testValues = [false, 0, -0, 0n, \"\", null, undefined, NaN]\nreturn testValues.map(v => ({\n  value: String(v),\n  type: typeof v,\n  isFalsy: !v\n}))\n",
+  "solution": "const testValues = [false, 0, -0, 0n, \"\", null, undefined, NaN]\nreturn testValues.map(v => ({\n  value: String(v),\n  type: typeof v,\n  isFalsy: !v\n}))",
   "tests": [
     {
       "input": [],
-      "expected": "falsy"
+      "expected": [
+        {
+          "value": "false",
+          "type": "boolean",
+          "isFalsy": true
+        },
+        {
+          "value": "0",
+          "type": "number",
+          "isFalsy": true
+        },
+        {
+          "value": "0",
+          "type": "number",
+          "isFalsy": true
+        },
+        {
+          "value": "0",
+          "type": "bigint",
+          "isFalsy": true
+        },
+        {
+          "value": "",
+          "type": "string",
+          "isFalsy": true
+        },
+        {
+          "value": "null",
+          "type": "object",
+          "isFalsy": true
+        },
+        {
+          "value": "undefined",
+          "type": "undefined",
+          "isFalsy": true
+        },
+        {
+          "value": "NaN",
+          "type": "number",
+          "isFalsy": true
+        }
+      ]
     }
   ],
   "hints": [
-    "null is always falsy",
-    "It represents absence of value"
+    "Sirf 6 falsy values hain: false, 0, '', null, undefined, NaN",
+    "0n (BigInt zero) bhi falsy hai"
   ]
 }

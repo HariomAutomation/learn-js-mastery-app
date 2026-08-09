@@ -1,16 +1,21 @@
 {
-  "id": "05-loops-for-of-for-in-22",
-  "title": "For...Of Practice",
-  "starterCode": "const arr = [5, 10, 15];\nlet sum = 0;\nfor (const num of arr) {\n  sum += num;\n}\nconsole.log(sum);",
-  "solution": "const arr = [5, 10, 15];\nlet sum = 0;\nfor (const num of arr) {\n  sum += num;\n}\nconsole.log(sum);",
+  "id": "05-02-for-of-for-in-22",
+  "title": "For-in se object ko query string me convert karo",
+  "starterCode": "function toQueryString(obj) {\n  // TODO: {a:1,b:2} -> \"a=1&b=2\"\n}",
+  "solution": "function toQueryString(obj) {\n  const parts = [];\n  for (const key in obj) {\n    if (Object.prototype.hasOwnProperty.call(obj, key)) {\n      parts.push(`${key}=${obj[key]}`);\n    }\n  }\n  return parts.join(\"&\");\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "30"
+      "input": [
+        {
+          "a": 1,
+          "b": 2
+        }
+      ],
+      "expected": "a=1&b=2"
     }
   ],
   "hints": [
-    "Accumulate sum",
-    "Use for...of for values"
+    "Key=value format me parts banao",
+    "Ampersand se join karo"
   ]
 }

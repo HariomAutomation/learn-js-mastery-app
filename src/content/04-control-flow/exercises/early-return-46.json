@@ -1,16 +1,46 @@
 {
-  "id": "04-control-flow-early-return-46",
-  "title": "Guard benefit - no deep nesting",
-  "starterCode": "function calculate(a, b, op) {\n  if (typeof a !== 'number') return 'invalid a';\n  if (typeof b !== 'number') return 'invalid b';\n  if (op === '+') return a + b;\n  if (op === '-') return a - b;\n  if (op === '*') return a * b;\n  return 'unknown operator';\n}\nconsole.log(calculate(10, 5, '*'));",
-  "solution": "function calculate(a, b, op) {\n  if (typeof a !== 'number') return 'invalid a';\n  if (typeof b !== 'number') return 'invalid b';\n  if (op === '+') return a + b;\n  if (op === '-') return a - b;\n  if (op === '*') return a * b;\n  return 'unknown operator';\n}\nconsole.log(calculate(10, 5, '*'));",
+  "id": "04-control-flow-02-early-return-46",
+  "title": "Guard for object keys",
+  "starterCode": "// function getKeys(obj) mein object do\n// Agar object nahi: []\n// Agar array hai: []\n// Warna Object.keys return karo\n",
+  "solution": "function getKeys(obj) {\n  if (typeof obj !== \"object\" || obj === null || Array.isArray(obj)) return []\n  return Object.keys(obj)\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "50"
+      "input": [
+        {
+          "a": 1,
+          "b": 2
+        }
+      ],
+      "expected": [
+        "a",
+        "b"
+      ]
+    },
+    {
+      "input": [
+        null
+      ],
+      "expected": []
+    },
+    {
+      "input": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": []
+    },
+    {
+      "input": [
+        null
+      ],
+      "expected": []
     }
   ],
   "hints": [
-    "Both are numbers",
-    "op is '*', returns product"
+    "typeof object aur null dono check karo",
+    "Array bhi object hota hai — usse alag karo"
   ]
 }

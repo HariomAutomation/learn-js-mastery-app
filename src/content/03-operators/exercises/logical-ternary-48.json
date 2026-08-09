@@ -1,16 +1,24 @@
 {
-  "id": "03-operators-logical-ternary-48",
-  "title": "Complex ternary expression",
-  "starterCode": "const age = 15;\nconst result = age >= 18 ? 'adult' : age >= 13 ? 'teen' : 'child';\nconsole.log(result);",
-  "solution": "const age = 15;\nconst result = age >= 18 ? 'adult' : age >= 13 ? 'teen' : 'child';\nconsole.log(result);",
+  "id": "03-operators-02-logical-ternary-48",
+  "title": "Ternary for computed properties",
+  "starterCode": "// Dynamic key-value pairs banao\nconst type = \"admin\"\nconst obj = {\n  name: \"Hariom\",\n  // TODO: type ke hisaab se permissions\n}\nreturn obj",
+  "solution": "const type = \"admin\"\nconst obj = {\n  name: \"Hariom\",\n  ...(type === \"admin\" ? { permissions: [\"read\", \"write\", \"delete\"] } : { permissions: [\"read\"] }),\n  level: type === \"admin\" ? 3 : type === \"moderator\" ? 2 : 1\n}\nreturn obj",
   "tests": [
     {
       "input": [],
-      "expected": "teen"
+      "expected": {
+        "name": "Hariom",
+        "permissions": [
+          "read",
+          "write",
+          "delete"
+        ],
+        "level": 3
+      }
     }
   ],
   "hints": [
-    "15 < 18, check second ternary",
-    "15 >= 13 is true"
+    "Spread se conditional properties add karo",
+    "Ternary se level compute karo"
   ]
 }

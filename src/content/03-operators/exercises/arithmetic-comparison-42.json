@@ -1,16 +1,28 @@
 {
-  "id": "03-operators-arithmetic-comparison-42",
-  "title": "Type coercion in addition",
-  "starterCode": "const result = true + 1;\nconsole.log(result);",
-  "solution": "const result = true + 1;\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-42",
+  "title": "Leap year check",
+  "starterCode": "// Year diya hai, check karo leap year hai ya nahi\nconst year = 2024\n// TODO: divisible by 4, but not 100 unless also 400\n",
+  "solution": "const year = 2024\nconst isLeap = (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)\nreturn isLeap",
   "tests": [
     {
       "input": [],
-      "expected": "2"
+      "expected": true
+    },
+    {
+      "input": [
+        1900
+      ],
+      "expected": false
+    },
+    {
+      "input": [
+        2000
+      ],
+      "expected": true
     }
   ],
   "hints": [
-    "true coerces to 1 in numeric context",
-    "1 + 1 = 2"
+    "Divisible by 4 = possible leap",
+    "100 se divisible nahi hona chahiye, 400 se ho to chalega"
   ]
 }

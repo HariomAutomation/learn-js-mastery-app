@@ -1,16 +1,40 @@
 {
-  "id": "04-control-flow-early-return-05",
-  "title": "Nested to flat with early return",
-  "starterCode": "function process(value) {\n  if (value === null) return 'null input';\n  if (value === undefined) return 'undefined input';\n  return `processed: ${value}`;\n}\nconsole.log(process(null));",
-  "solution": "function process(value) {\n  if (value === null) return 'null input';\n  if (value === undefined) return 'undefined input';\n  return `processed: ${value}`;\n}\nconsole.log(process(null));",
+  "id": "04-control-flow-02-early-return-05",
+  "title": "Multiple guard clauses",
+  "starterCode": "// function divide(a, b) mein do numbers do\n// Agar a number nahi: \"Invalid numerator\"\n// Agar b number nahi: \"Invalid denominator\"\n// Agar b === 0: \"Cannot divide by zero\"\n// Warna result return karo\n",
+  "solution": "function divide(a, b) {\n  if (typeof a !== \"number\") return \"Invalid numerator\"\n  if (typeof b !== \"number\") return \"Invalid denominator\"\n  if (b === 0) return \"Cannot divide by zero\"\n  return a / b\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "null input"
+      "input": [
+        10,
+        2
+      ],
+      "expected": 5
+    },
+    {
+      "input": [
+        "ten",
+        2
+      ],
+      "expected": "Invalid numerator"
+    },
+    {
+      "input": [
+        10,
+        "two"
+      ],
+      "expected": "Invalid denominator"
+    },
+    {
+      "input": [
+        10,
+        0
+      ],
+      "expected": "Cannot divide by zero"
     }
   ],
   "hints": [
-    "First guard catches null",
-    "Returns before second check"
+    "Har input ke liye alag guard clause likho",
+    "Pehle types validate karo phir operation karo"
   ]
 }

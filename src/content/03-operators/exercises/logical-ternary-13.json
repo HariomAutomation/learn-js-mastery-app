@@ -1,16 +1,20 @@
 {
-  "id": "03-operators-logical-ternary-13",
-  "title": "Nullish vs OR with zero",
-  "starterCode": "const result = 0 ?? 'default';\nconsole.log(result);",
-  "solution": "const result = 0 ?? 'default';\nconsole.log(result);",
+  "id": "03-operators-02-logical-ternary-13",
+  "title": "Logical assignment ??=",
+  "starterCode": "// Null/undefined ho to default assign karo\nlet username = null\nlet age = 0\nlet city = undefined\n// TODO: ??= use karo\n",
+  "solution": "let username = null\nlet age = 0\nlet city = undefined\nusername ??= \"Guest\"\nage ??= 18\ncity ??= \"Mumbai\"\nreturn { username, age, city }",
   "tests": [
     {
       "input": [],
-      "expected": "0"
+      "expected": {
+        "username": "Guest",
+        "age": 0,
+        "city": "Mumbai"
+      }
     }
   ],
   "hints": [
-    "?? only triggers on null/undefined",
-    "0 is not null or undefined"
+    "x ??= y same as x = x ?? y",
+    "Sirf null/undefined update hota hai"
   ]
 }

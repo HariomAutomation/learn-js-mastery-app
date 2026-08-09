@@ -1,15 +1,16 @@
 {
-  "id": "03-operators-arithmetic-comparison-23",
-  "title": "Greater than comparison",
-  "starterCode": "const result = 10 > 5;\nconsole.log(result);",
-  "solution": "const result = 10 > 5;\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-23",
+  "title": "Compound assignment += ",
+  "starterCode": "// Wallet mein 500 hai, 200 add karo\nlet wallet = 500\n// TODO: += use karo\n",
+  "solution": "let wallet = 500\nwallet += 200\nreturn wallet",
   "tests": [
     {
       "input": [],
-      "expected": "true"
+      "expected": 700
     }
   ],
   "hints": [
-    "> checks if left is greater than right"
+    "wallet += 200 same as wallet = wallet + 200",
+    "500 + 200 = 700"
   ]
 }

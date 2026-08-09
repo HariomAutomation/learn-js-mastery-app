@@ -1,16 +1,20 @@
 {
-  "id": "05-loops-for-of-for-in-05",
-  "title": "For...In Objects",
-  "starterCode": "const obj = {a: 1, b: 2};\nfor (const key in obj) {\n  console.log(key + ': ' + obj[key]);\n}",
-  "solution": "const obj = {a: 1, b: 2};\nfor (const key in obj) {\n  console.log(key + ': ' + obj[key]);\n}",
+  "id": "05-02-for-of-for-in-05",
+  "title": "For-of se array me transformation karo",
+  "starterCode": "function transform(arr) {\n  // TODO: numbers ko string me, strings ko uppercase me convert karo\n}",
+  "solution": "function transform(arr) {\n  const result = [];\n  for (const item of arr) {\n    if (typeof item === \"number\") result.push(String(item));\n    else if (typeof item === \"string\") result.push(item.toUpperCase());\n    else result.push(item);\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "a: 1\nb: 2"
+      "input": [
+        1,
+        "hello",
+        true
+      ],
+      "expected": "1,HELLO,true"
     }
   ],
   "hints": [
-    "for...in gives keys",
-    "Access value with obj[key]"
+    "typeof se type check karo",
+    "Har type ke liye alag transformation karo"
   ]
 }

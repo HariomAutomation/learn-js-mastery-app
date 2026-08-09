@@ -1,16 +1,36 @@
 {
-  "id": "04-control-flow-if-else-switch-41",
-  "title": "If with comparison operators",
-  "starterCode": "const a = 10;\nconst b = 20;\nif (a < b) {\n  console.log('a is smaller');\n} else if (a > b) {\n  console.log('a is larger');\n} else {\n  console.log('equal');\n}",
-  "solution": "const a = 10;\nconst b = 20;\nif (a < b) {\n  console.log('a is smaller');\n} else if (a > b) {\n  console.log('a is larger');\n} else {\n  console.log('equal');\n}",
+  "id": "04-control-flow-01-if-else-switch-41",
+  "title": "Nested if se discount tiers",
+  "starterCode": "// function tierDiscount(amount)\n// < 1000: 5%, 1000-4999: 10%, 5000-9999: 15%, >=10000: 20%\n// Discounted amount return karo\n",
+  "solution": "function tierDiscount(amount) {\n  let discount\n  if (amount < 1000) discount = 0.05\n  else if (amount < 5000) discount = 0.10\n  else if (amount < 10000) discount = 0.15\n  else discount = 0.20\n  return amount - (amount * discount)\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "a is smaller"
+      "input": [
+        500
+      ],
+      "expected": 475
+    },
+    {
+      "input": [
+        2000
+      ],
+      "expected": 1800
+    },
+    {
+      "input": [
+        7000
+      ],
+      "expected": 5950
+    },
+    {
+      "input": [
+        15000
+      ],
+      "expected": 12000
     }
   ],
   "hints": [
-    "10 < 20 is true",
-    "First condition matches"
+    "Har range ka alag discount percentage hai",
+    "Final amount = amount - (amount * discount/100)"
   ]
 }

@@ -1,16 +1,21 @@
 {
-  "id": "02-data-types-reference-types-typeof-07",
-  "title": "Modify through reference",
-  "starterCode": "const a = { x: 1 };\nconst b = a;\n;\nconsole.log(a.x);",
-  "solution": "const a = { x: 1 };\nconst b = a;\nb.x = 99;\nconsole.log(a.x);",
+  "id": "02-data-types-02-reference-types-typeof-07",
+  "title": "Constructor identity check",
+  "starterCode": "const arr = [1, 2, 3]\nconst obj = { a: 1 }\nconst date = new Date()\nconst regex = /hello/\nreturn {\n  arrConstructor: arr.constructor.name,\n  objConstructor: obj.constructor.name,\n  dateConstructor: date.constructor.name,\n  regexConstructor: regex.constructor.name\n}\n",
+  "solution": "const arr = [1, 2, 3]\nconst obj = { a: 1 }\nconst date = new Date()\nconst regex = /hello/\nreturn {\n  arrConstructor: arr.constructor.name,\n  objConstructor: obj.constructor.name,\n  dateConstructor: date.constructor.name,\n  regexConstructor: regex.constructor.name\n}",
   "tests": [
     {
       "input": [],
-      "expected": "99"
+      "expected": {
+        "arrConstructor": "Array",
+        "objConstructor": "Object",
+        "dateConstructor": "Date",
+        "regexConstructor": "RegExp"
+      }
     }
   ],
   "hints": [
-    "Changing b changes a too",
-    "They reference the same object"
+    "constructor.name se type milta hai",
+    "Har object ka constructor hota hai"
   ]
 }

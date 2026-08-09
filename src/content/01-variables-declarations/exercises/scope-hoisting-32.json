@@ -1,0 +1,16 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-32",
+  "title": "Promise scope",
+  "starterCode": "let x = \"before\"\nPromise.resolve(\"done\").then(v => { x = v })\nreturn x\n",
+  "solution": "let x = \"before\"\nPromise.resolve(\"done\").then(v => { x = v })\nreturn x",
+  "tests": [
+    {
+      "input": [],
+      "expected": "before"
+    }
+  ],
+  "hints": [
+    "Promise.then runs asynchronously",
+    "return x happens before the callback"
+  ]
+}

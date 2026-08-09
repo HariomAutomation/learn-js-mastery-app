@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-scope-hoisting-01",
-  "title": "Global scope variable",
-  "starterCode": "var x = 10\nfunction test() {\n  console.log(x)\n}\ntest()",
-  "solution": "var x = 10\nfunction test() {\n  console.log(x)\n}\ntest()",
+  "title": "Global vs local scope",
+  "starterCode": "var x = \"global\"\nfunction test() {\n  var x = \"local\"\n  return x\n}\nreturn test()\n",
+  "solution": "var x = \"global\"\nfunction test() {\n  var x = \"local\"\n  return x\n}\nreturn test()",
   "tests": [
     {
       "input": [],
-      "expected": "10"
+      "expected": "local"
     }
   ],
   "hints": [
-    "Global variables are accessible everywhere"
+    "Local scope wala x override karta hai",
+    "Function ke andar ka x return hoga"
   ]
 }

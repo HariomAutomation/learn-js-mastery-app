@@ -1,16 +1,21 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-49",
-  "title": "Object to string conversion",
-  "starterCode": "console.log({} + '');",
-  "solution": "console.log({} + '');",
+  "id": "02-data-types-03-coercion-truthy-falsy-49",
+  "title": "Object.is vs ===",
+  "starterCode": "return {\n  isMinusZero: Object.is(-0, 0),\n  strictMinusZero: -0 === 0,\n  isNaN: Object.is(NaN, NaN),\n  strictNaN: NaN === NaN\n}\n",
+  "solution": "return {\n  isMinusZero: Object.is(-0, 0),\n  strictMinusZero: -0 === 0,\n  isNaN: Object.is(NaN, NaN),\n  strictNaN: NaN === NaN\n}",
   "tests": [
     {
       "input": [],
-      "expected": "[object Object]"
+      "expected": {
+        "isMinusZero": false,
+        "strictMinusZero": true,
+        "isNaN": true,
+        "strictNaN": false
+      }
     }
   ],
   "hints": [
-    "Objects use toString()",
-    "Default is '[object Object]'"
+    "Object.is -0 aur 0 ko alag maanta hai",
+    "Object.is NaN === NaN true deta hai"
   ]
 }

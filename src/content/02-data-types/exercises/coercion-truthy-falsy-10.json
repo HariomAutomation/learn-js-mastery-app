@@ -1,16 +1,23 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-10",
-  "title": "Check if array is truthy",
-  "starterCode": "if ([]) {\n  console.log('truthy');\n} else {\n  console.log('falsy');\n}",
-  "solution": "if ([]) {\n  console.log('truthy');\n} else {\n  console.log('falsy');\n}",
+  "id": "02-data-types-03-coercion-truthy-falsy-10",
+  "title": "Boolean coercion rules",
+  "starterCode": "return {\n  numberToBool: Boolean(1),\n  zeroToBool: Boolean(0),\n  emptyArrToBool: Boolean([]),\n  emptyObjToBool: Boolean({}),\n  stringToBool: Boolean(\"0\"),\n  zeroStringToBool: Boolean(\"false\")\n}\n",
+  "solution": "return {\n  numberToBool: Boolean(1),\n  zeroToBool: Boolean(0),\n  emptyArrToBool: Boolean([]),\n  emptyObjToBool: Boolean({}),\n  stringToBool: Boolean(\"0\"),\n  zeroStringToBool: Boolean(\"false\")\n}",
   "tests": [
     {
       "input": [],
-      "expected": "truthy"
+      "expected": {
+        "numberToBool": true,
+        "zeroToBool": false,
+        "emptyArrToBool": true,
+        "emptyObjToBool": true,
+        "stringToBool": true,
+        "zeroStringToBool": true
+      }
     }
   ],
   "hints": [
-    "Arrays are always truthy",
-    "Even empty arrays"
+    "Empty arrays aur objects truthy hain",
+    "Non-empty strings truthy hain — '0' aur 'false' bhi"
   ]
 }

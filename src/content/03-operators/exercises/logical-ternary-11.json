@@ -1,16 +1,20 @@
 {
-  "id": "03-operators-logical-ternary-11",
-  "title": "Nullish coalescing (??)",
-  "starterCode": "const result = null ?? 'default';\nconsole.log(result);",
-  "solution": "const result = null ?? 'default';\nconsole.log(result);",
+  "id": "03-operators-02-logical-ternary-11",
+  "title": "Logical assignment ||=",
+  "starterCode": "// Default value assign karo agar falsy ho\nlet config = null\nlet theme = \"\"\nlet retries = 3\n// TODO: ||= use karo\n",
+  "solution": "let config = null\nlet theme = \"\"\nlet retries = 3\nconfig ||= \"dark\"\ntheme ||= \"light\"\nretries ||= 5\nreturn { config, theme, retries }",
   "tests": [
     {
       "input": [],
-      "expected": "default"
+      "expected": {
+        "config": "dark",
+        "theme": "light",
+        "retries": 3
+      }
     }
   ],
   "hints": [
-    "?? only checks null and undefined",
-    "null triggers the right side"
+    "x ||= y same as x = x || y",
+    "Sirf falsy values update hoti hain"
   ]
 }

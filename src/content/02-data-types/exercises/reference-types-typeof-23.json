@@ -1,16 +1,41 @@
 {
-  "id": "02-data-types-reference-types-typeof-23",
-  "title": "Nested deep copy check",
-  "starterCode": "const a = { nested: { val: 1 } };\nconst b = structuredClone(a);\nb.nested.val = 99;\nconsole.log();",
-  "solution": "const a = { nested: { val: 1 } };\nconst b = structuredClone(a);\nb.nested.val = 99;\nconsole.log(a.nested.val);",
+  "id": "02-data-types-02-reference-types-typeof-23",
+  "title": "Map iteration methods",
+  "starterCode": "const map = new Map()\nmap.set(\"a\", 1)\nmap.set(\"b\", 2)\nmap.set(\"c\", 3)\nconst keys = [...map.keys()]\nconst values = [...map.values()]\nconst entries = [...map.entries()]\nreturn { keys, values, entries }\n",
+  "solution": "const map = new Map()\nmap.set(\"a\", 1)\nmap.set(\"b\", 2)\nmap.set(\"c\", 3)\nconst keys = [...map.keys()]\nconst values = [...map.values()]\nconst entries = [...map.entries()]\nreturn { keys, values, entries }",
   "tests": [
     {
       "input": [],
-      "expected": "1"
+      "expected": {
+        "keys": [
+          "a",
+          "b",
+          "c"
+        ],
+        "values": [
+          1,
+          2,
+          3
+        ],
+        "entries": [
+          [
+            "a",
+            1
+          ],
+          [
+            "b",
+            2
+          ],
+          [
+            "c",
+            3
+          ]
+        ]
+      }
     }
   ],
   "hints": [
-    "Deep copy breaks all references",
-    "Original is unaffected"
+    "keys(), values(), entries() iterators return karte hain",
+    "Spread se array mein convert karo"
   ]
 }

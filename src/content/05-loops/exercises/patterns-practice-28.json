@@ -1,16 +1,24 @@
 {
-  "id": "05-loops-patterns-practice-28",
-  "title": "Matrix Column Sum",
-  "starterCode": "const m = [[1,2,3],[4,5,6],[7,8,9]];\nfor (let j = 0; j < 3; j++) {\n  let sum = 0;\n  for (let i = 0; i < 3; i++) {\n    sum += m[i][j];\n  }\n  console.log('Col ' + j + ': ' + sum);\n}",
-  "solution": "const m = [[1,2,3],[4,5,6],[7,8,9]];\nfor (let j = 0; j < 3; j++) {\n  let sum = 0;\n  for (let i = 0; i < 3; i++) {\n    sum += m[i][j];\n  }\n  console.log('Col ' + j + ': ' + sum);\n}",
+  "id": "05-03-patterns-practice-28",
+  "title": "Nested loop se array ke majority element dhundho",
+  "starterCode": "function majorityElement(arr) {\n  // TODO: wo element jo n/2 se zyada baar aaye\n}",
+  "solution": "function majorityElement(arr) {\n  const freq = {};\n  for (const num of arr) {\n    freq[num] = (freq[num] || 0) + 1;\n    if (freq[num] > arr.length / 2) return num;\n  }\n  return null;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "Col 0: 12\nCol 1: 15\nCol 2: 18"
+      "input": [
+        3,
+        3,
+        4,
+        2,
+        3,
+        3,
+        3
+      ],
+      "expected": 3
     }
   ],
   "hints": [
-    "Outer loop for columns",
-    "Inner for rows"
+    "Frequency count karo",
+    "N/2 se zyada milte hi return karo"
   ]
 }

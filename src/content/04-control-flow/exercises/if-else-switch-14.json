@@ -1,16 +1,40 @@
 {
-  "id": "04-control-flow-if-else-switch-14",
-  "title": "Switch on numbers",
-  "starterCode": "const code = 2;\nswitch (code) {\n  case 1:\n    console.log('one');\n    break;\n  case 2:\n    console.log('two');\n    break;\n  case 3:\n    console.log('three');\n    break;\n  default:\n    console.log('other');\n}",
-  "solution": "const code = 2;\nswitch (code) {\n  case 1:\n    console.log('one');\n    break;\n  case 2:\n    console.log('two');\n    break;\n  case 3:\n    console.log('three');\n    break;\n  default:\n    console.log('other');\n}",
+  "id": "04-control-flow-01-if-else-switch-14",
+  "title": "Rock paper scissors result",
+  "starterCode": "// function rps(player, computer) mein dono strings do (\"rock\",\"paper\",\"scissors\")\n// \"win\", \"lose\", ya \"draw\" return karo\n",
+  "solution": "function rps(player, computer) {\n  if (player === computer) return \"draw\"\n  if (\n    (player === \"rock\" && computer === \"scissors\") ||\n    (player === \"paper\" && computer === \"rock\") ||\n    (player === \"scissors\" && computer === \"paper\")\n  ) return \"win\"\n  return \"lose\"\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "two"
+      "input": [
+        "rock",
+        "rock"
+      ],
+      "expected": "draw"
+    },
+    {
+      "input": [
+        "rock",
+        "scissors"
+      ],
+      "expected": "win"
+    },
+    {
+      "input": [
+        "rock",
+        "paper"
+      ],
+      "expected": "lose"
+    },
+    {
+      "input": [
+        "paper",
+        "rock"
+      ],
+      "expected": "win"
     }
   ],
   "hints": [
-    "2 matches case 2",
-    "break prevents fallthrough"
+    "Pehle draw check karo same values se",
+    "Win conditions: rock>scissors, paper>rock, scissors>paper"
   ]
 }

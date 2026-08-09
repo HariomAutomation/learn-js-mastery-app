@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-variables-intro-47",
+  "title": "Event emitter basics",
+  "starterCode": "// Simple event emitter banao\nfunction createEmitter() {\n  const listeners = {}\n  return {\n    on: (event, fn) => { /* TODO */ },\n    emit: (event, ...args) => { /* TODO */ },\n    off: (event, fn) => { /* TODO */ }\n  }\n}",
+  "solution": "function createEmitter() {\n  const listeners = {}\n  return {\n    on: (event, fn) => {\n      listeners[event] = listeners[event] || []\n      listeners[event].push(fn)\n    },\n    emit: (event, ...args) => {\n      (listeners[event] || []).forEach(fn => fn(...args))\n    },\n    off: (event, fn) => {\n      listeners[event] = (listeners[event] || []).filter(f => f !== fn)\n    }\n  }\n}",
+  "tests": [
+    {
+      "input": []
+    }
+  ],
+  "hints": [
+    "Listeners object mein event names key hain",
+    "On se add, off se remove, emit se call karo"
+  ]
+}

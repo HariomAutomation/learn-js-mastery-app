@@ -1,16 +1,22 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-34",
-  "title": "String '0' is truthy",
-  "starterCode": "console.log(Boolean(\"0\"));",
-  "solution": "console.log(Boolean(\"0\"));",
+  "id": "02-data-types-03-coercion-truthy-falsy-34",
+  "title": "Proxy ownKeys trap",
+  "starterCode": "const obj = new Proxy({ _secret: \"hidden\", name: \"Hariom\", age: 25 }, {\n  ownKeys(target) {\n    return Object.keys(target).filter(k => !k.startsWith(\"_\"))\n  }\n})\nreturn {\n  keys: Object.keys(obj),\n  hasSecret: \"_secret\" in Object.getOwnPropertyNames(obj)\n}\n",
+  "solution": "const obj = new Proxy({ _secret: \"hidden\", name: \"Hariom\", age: 25 }, {\n  ownKeys(target) {\n    return Object.keys(target).filter(k => !k.startsWith(\"_\"))\n  }\n})\nreturn {\n  keys: Object.keys(obj),\n  hasSecret: \"_secret\" in Object.getOwnPropertyNames(obj)\n}",
   "tests": [
     {
       "input": [],
-      "expected": "true"
+      "expected": {
+        "keys": [
+          "name",
+          "age"
+        ],
+        "hasSecret": false
+      }
     }
   ],
   "hints": [
-    "String '0' is not the same as number 0",
-    "Non-empty strings are truthy"
+    "Proxy ownKeys trap Object.keys() intercept karta hai",
+    "Private properties hide kar sakte ho"
   ]
 }

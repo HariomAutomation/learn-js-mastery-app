@@ -1,5 +1,6 @@
 import { useEffect, useState, useCallback } from "react"
 import { Sidebar } from "@/components/Sidebar/Sidebar"
+import { ErrorBoundary } from "@/components/ErrorBoundary/ErrorBoundary"
 import { LessonViewer } from "@/components/LessonViewer/LessonViewer"
 import { CodePlayground } from "@/components/CodePlayground/CodePlayground"
 import { QuizEngine } from "@/components/QuizEngine/QuizEngine"
@@ -26,6 +27,7 @@ export default function App() {
   const [quiz, setQuiz] = useState<QuizQuestion[]>([])
   const [moduleQuiz, setModuleQuiz] = useState<QuizQuestion[]>([])
   const [searchOpen, setSearchOpen] = useState(false)
+  const [sidebarOpen, setSidebarOpen] = useState(false)
   const [theme, setTheme] = useState<"dark" | "light">(() => {
     return (localStorage.getItem("js-mastery-theme") as "dark" | "light") ?? "dark"
   })
@@ -64,7 +66,13 @@ export default function App() {
       setExercises([])
       return
     }
-    setExercises(loadExercisesForLesson(currentLesson))
+    let cancelled = false
+    loadExercisesForLesson(currentLesson).then((result) => {
+      if (!cancelled) setExercises(result)
+    })
+    return () => {
+      cancelled = true
+    }
   }, [currentLesson])
 
   useEffect(() => {
@@ -84,10 +92,19 @@ export default function App() {
   }, [currentModuleQuizId])
 
   return (
-    <div className="app-layout">
-      <Sidebar theme={theme} onToggleTheme={toggleTheme} onOpenSearch={() => setSearchOpen(true)} />
+    <div className={`app-layout ${sidebarOpen ? "sidebar-open" : ""}`}>
+      <button
+        className="sidebar-toggle"
+        onClick={() => setSidebarOpen((o) => !o)}
+        aria-label="Toggle sidebar"
+      >
+        ☰
+      </button>
+      {sidebarOpen && <div className="sidebar-backdrop" onClick={() => setSidebarOpen(false)} />}
+      <Sidebar theme={theme} onToggleTheme={toggleTheme} onOpenSearch={() => setSearchOpen(true)} onCloseSidebar={() => setSidebarOpen(false)} />
       <main className="content-area">
-        {view === "home" && <Dashboard />}
+        <ErrorBoundary>
+          {view === "home" && <Dashboard />}
 
         {view === "exam" && <ExamCenter />}
 
@@ -113,7 +130,7 @@ export default function App() {
                     starterCode={ex.starterCode}
                     solution={ex.solution}
                     hints={ex.hints}
-                    tests={ex.tests}
+                    theme={theme}
                   />
                 ))}
               </div>
@@ -129,6 +146,7 @@ export default function App() {
             <ProgressTracker />
           </>
         )}
+        </ErrorBoundary>
       </main>
       {searchOpen && <SearchModal onClose={() => setSearchOpen(false)} />}
     </div>

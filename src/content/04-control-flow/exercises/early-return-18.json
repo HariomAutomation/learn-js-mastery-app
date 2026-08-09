@@ -1,17 +1,44 @@
 {
-  "id": "04-control-flow-early-return-18",
-  "title": "Guard function pattern",
-  "starterCode": "function isValidEmail(email) {\n  if (!email) return false;\n  if (typeof email !== 'string') return false;\n  return email.includes('@');\n}\nconsole.log(isValidEmail('test@example.com'));",
-  "solution": "function isValidEmail(email) {\n  if (!email) return false;\n  if (typeof email !== 'string') return false;\n  return email.includes('@');\n}\nconsole.log(isValidEmail('test@example.com'));",
+  "id": "04-control-flow-02-early-return-18",
+  "title": "Complex condition simplification",
+  "starterCode": "// function canPurchase(age, income, hasCriminalRecord)\n// Criminal record: false\n// Age < 18: false\n// Income < 0: false\n// Baaki: true\n",
+  "solution": "function canPurchase(age, income, hasCriminalRecord) {\n  if (hasCriminalRecord) return false\n  if (age < 18) return false\n  if (income < 0) return false\n  return true\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "true"
+      "input": [
+        25,
+        50000,
+        false
+      ],
+      "expected": true
+    },
+    {
+      "input": [
+        15,
+        50000,
+        false
+      ],
+      "expected": false
+    },
+    {
+      "input": [
+        25,
+        -100,
+        false
+      ],
+      "expected": false
+    },
+    {
+      "input": [
+        25,
+        50000,
+        true
+      ],
+      "expected": false
     }
   ],
   "hints": [
-    "email is truthy",
-    "email is a string",
-    "email includes '@'"
+    "Har rejection condition ke liye early return false karo",
+    "Last mein true return karo"
   ]
 }

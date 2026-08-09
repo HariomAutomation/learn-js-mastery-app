@@ -1,16 +1,18 @@
 {
-  "id": "05-loops-for-while-16",
-  "title": "Loop Accumulation",
-  "starterCode": "let product = 1;\nfor (let i = 1; i <= 5; i++) {\n  product *= i;\n}\nconsole.log(product);",
-  "solution": "let product = 1;\nfor (let i = 1; i <= 5; i++) {\n  product *= i;\n}\nconsole.log(product);",
+  "id": "05-01-for-while-16",
+  "title": "While loop se Armstrong number check karo",
+  "starterCode": "function isArmstrong(n) {\n  // TODO: 153 = 1^3 + 5^3 + 3^3 = 153\n  // Har digit ka power of digits count equal hai toh Armstrong\n}",
+  "solution": "function isArmstrong(n) {\n  const str = n.toString();\n  const power = str.length;\n  let sum = 0;\n  let temp = n;\n  while (temp > 0) {\n    sum += (temp % 10) ** power;\n    temp = Math.floor(temp / 10);\n  }\n  return sum === n;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "120"
+      "input": [
+        153
+      ],
+      "expected": "true"
     }
   ],
   "hints": [
-    "Initialize product to 1",
-    "Multiply each i"
+    "Digits count nikalo power ke liye",
+    "%10 se last digit, /10 se remove karo"
   ]
 }

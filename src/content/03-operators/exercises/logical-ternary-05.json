@@ -1,16 +1,19 @@
 {
-  "id": "03-operators-logical-ternary-05",
-  "title": "NOT operator",
-  "starterCode": "const result = !true;\nconsole.log(result);",
-  "solution": "const result = !true;\nconsole.log(result);",
+  "id": "03-operators-02-logical-ternary-05",
+  "title": "Short circuit AND",
+  "starterCode": "// Agar user hai to name return karo, nahi to null\nconst user1 = { name: \"Hariom\" }\nconst user2 = null\n// TODO: short circuit use karo\n",
+  "solution": "const user1 = { name: \"Hariom\" }\nconst user2 = null\nreturn {\n  name1: user1 && user1.name,\n  name2: user2 && user2.name\n}",
   "tests": [
     {
       "input": [],
-      "expected": "false"
+      "expected": {
+        "name1": "Hariom",
+        "name2": null
+      }
     }
   ],
   "hints": [
-    "! inverts boolean value",
-    "!true is false"
+    "&& pehle falsy value return karta hai",
+    "user2 null hai to null return hota hai"
   ]
 }

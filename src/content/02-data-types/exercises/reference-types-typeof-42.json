@@ -1,16 +1,19 @@
 {
-  "id": "02-data-types-reference-types-typeof-42",
-  "title": "Map preserves insertion order",
-  "starterCode": "const m = new Map();\nm.set('b', 2);\nm.set('a', 1);\nconsole.log();",
-  "solution": "const m = new Map();\nm.set('b', 2);\nm.set('a', 1);\nconsole.log([...m.keys()]);",
+  "id": "02-data-types-02-reference-types-typeof-42",
+  "title": "Proxy deleteProperty trap",
+  "starterCode": "const protected = new Proxy({ name: \"Hariom\", secret: \"xyz\" }, {\n  deleteProperty(target, prop) {\n    if (prop === \"secret\") return false\n    delete target[prop]\n    return true\n  }\n})\ndelete protected.name\ntry { delete protected.secret } catch(e) {}\nreturn { hasName: \"name\" in protected, hasSecret: \"secret\" in protected }\n",
+  "solution": "const protected = new Proxy({ name: \"Hariom\", secret: \"xyz\" }, {\n  deleteProperty(target, prop) {\n    if (prop === \"secret\") return false\n    delete target[prop]\n    return true\n  }\n})\ndelete protected.name\ntry { delete protected.secret } catch(e) {}\nreturn { hasName: \"name\" in protected, hasSecret: \"secret\" in protected }",
   "tests": [
     {
       "input": [],
-      "expected": "b,a"
+      "expected": {
+        "hasName": false,
+        "hasSecret": true
+      }
     }
   ],
   "hints": [
-    "Maps preserve key order",
-    "Use spread to get keys as array"
+    "deleteProperty trap deletion intercept karta hai",
+    "False return karne se deletion prevent hota hai"
   ]
 }

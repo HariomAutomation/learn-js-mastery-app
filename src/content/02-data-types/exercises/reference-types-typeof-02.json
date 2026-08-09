@@ -1,16 +1,45 @@
 {
-  "id": "02-data-types-reference-types-typeof-02",
-  "title": "Create an array",
-  "starterCode": "const nums = ;\nconsole.log(nums[0]);",
-  "solution": "const nums = [1, 2, 3];\nconsole.log(nums[0]);",
+  "id": "02-data-types-02-reference-types-typeof-02",
+  "title": "Object type identification",
+  "starterCode": "function identifyType(val) {\n  // TODO: array, null, object, function, date return karo\n}\n",
+  "solution": "function identifyType(val) {\n  if (val === null) return \"null\"\n  if (Array.isArray(val)) return \"array\"\n  if (val instanceof Date) return \"date\"\n  if (typeof val === \"function\") return \"function\"\n  return typeof val\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "1"
+      "input": [
+        42
+      ],
+      "expected": "number"
+    },
+    {
+      "input": [
+        null
+      ],
+      "expected": "null"
+    },
+    {
+      "input": [
+        [
+          1,
+          2
+        ]
+      ],
+      "expected": "array"
+    },
+    {
+      "input": [
+        "2026-08-06T16:24:50.524Z"
+      ],
+      "expected": "date"
+    },
+    {
+      "input": [
+        null
+      ],
+      "expected": "function"
     }
   ],
   "hints": [
-    "Arrays use square brackets",
-    "Index 0 is the first element"
+    "typeof null 'object' return karta hai",
+    "Array.isArray() aur instanceof use karo"
   ]
 }

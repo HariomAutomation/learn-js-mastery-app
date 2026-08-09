@@ -1,15 +1,20 @@
 {
-  "id": "03-operators-arithmetic-comparison-33",
-  "title": "Math.max",
-  "starterCode": "const result = Math.max(10, 20, 5);\nconsole.log(result);",
-  "solution": "const result = Math.max(10, 20, 5);\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-33",
+  "title": "Infinity check",
+  "starterCode": "// Check karo 1/0 kitna hota hai\nconst result = 1 / 0\nreturn {\n  value: result,\n  isInfinite: result === Infinity,\n  isFiniteCheck: isFinite(result)\n}",
+  "solution": "const result = 1 / 0\nreturn {\n  value: result,\n  isInfinite: result === Infinity,\n  isFiniteCheck: isFinite(result)\n}",
   "tests": [
     {
       "input": [],
-      "expected": "20"
+      "expected": {
+        "value": null,
+        "isInfinite": true,
+        "isFiniteCheck": false
+      }
     }
   ],
   "hints": [
-    "Math.max returns the largest value"
+    "1/0 = Infinity hota hai",
+    "isFinite() false deta hai Infinity ke liye"
   ]
 }

@@ -1,16 +1,20 @@
 {
-  "id": "02-data-types-reference-types-typeof-29",
-  "title": "typeof doesn't throw for undeclared",
-  "starterCode": "console.log();",
-  "solution": "console.log(typeof undeclaredVar);",
+  "id": "02-data-types-02-reference-types-typeof-29",
+  "title": "Nested destructuring",
+  "starterCode": "const data = {\n  user: { name: \"Hariom\", address: { city: \"Jaipur\", state: \"Rajasthan\" } },\n  score: 95\n}\nconst { user: { name, address: { city } }, score } = data\nreturn { name, city, score }\n",
+  "solution": "const data = {\n  user: { name: \"Hariom\", address: { city: \"Jaipur\", state: \"Rajasthan\" } },\n  score: 95\n}\nconst { user: { name, address: { city } }, score } = data\nreturn { name, city, score }",
   "tests": [
     {
       "input": [],
-      "expected": "undefined"
+      "expected": {
+        "name": "Hariom",
+        "city": "Jaipur",
+        "score": 95
+      }
     }
   ],
   "hints": [
-    "typeof is safe for undeclared variables",
-    "Other operations would throw ReferenceError"
+    "Nested destructuring pattern match karta hai",
+    "Depth tak jaake values extract hoti hain"
   ]
 }

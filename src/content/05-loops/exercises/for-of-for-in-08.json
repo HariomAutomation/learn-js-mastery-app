@@ -1,16 +1,22 @@
 {
-  "id": "05-loops-for-of-for-in-08",
-  "title": "Object.entries()",
-  "starterCode": "const obj = {x: 1, y: 2};\nfor (const [key, val] of Object.entries(obj)) {\n  console.log(key + '=' + val);\n}",
-  "solution": "const obj = {x: 1, y: 2};\nfor (const [key, val] of Object.entries(obj)) {\n  console.log(key + '=' + val);\n}",
+  "id": "05-02-for-of-for-in-08",
+  "title": "For-in se object me property count karo by type",
+  "starterCode": "function countByType(obj) {\n  // TODO: har type ki kitni properties hain\n  // {a:1, b:\"hi\", c:true} -> {number:1, string:1, boolean:1}\n}",
+  "solution": "function countByType(obj) {\n  const counts = {};\n  for (const key in obj) {\n    if (!Object.prototype.hasOwnProperty.call(obj, key)) continue;\n    const type = typeof obj[key];\n    counts[type] = (counts[type] || 0) + 1;\n  }\n  return counts;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "x=1\ny=2"
+      "input": [
+        {
+          "a": 1,
+          "b": "hi",
+          "c": true
+        }
+      ],
+      "expected": "{\"number\":1,\"string\":1,\"boolean\":1}"
     }
   ],
   "hints": [
-    "Object.entries() returns [key, value] pairs",
-    "Use with for...of"
+    "typeof se type nikalo",
+    "Counts object me track karo"
   ]
 }

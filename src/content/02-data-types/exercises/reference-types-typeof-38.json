@@ -1,16 +1,20 @@
 {
-  "id": "02-data-types-reference-types-typeof-38",
-  "title": "Spread creates new object",
-  "starterCode": "const a = { x: 1 };\nconst b = { ...a, y: 2 };\nconsole.log(b);",
-  "solution": "const a = { x: 1 };\nconst b = { ...a, y: 2 };\nconsole.log(b);",
+  "id": "02-data-types-02-reference-types-typeof-38",
+  "title": "Symbol species pattern",
+  "starterCode": "class MyArray extends Array {\n  static get [Symbol.species]() {\n    return Array\n  }\n}\nconst myArr = new MyArray(1, 2, 3)\nconst mapped = myArr.map(x => x * 2)\nreturn {\n  isMyArray: myArr instanceof MyArray,\n  isArray: mapped instanceof Array,\n  isMyArrayType: mapped instanceof MyArray\n}\n",
+  "solution": "class MyArray extends Array {\n  static get [Symbol.species]() {\n    return Array\n  }\n}\nconst myArr = new MyArray(1, 2, 3)\nconst mapped = myArr.map(x => x * 2)\nreturn {\n  isMyArray: myArr instanceof MyArray,\n  isArray: mapped instanceof Array,\n  isMyArrayType: mapped instanceof MyArray\n}",
   "tests": [
     {
       "input": [],
-      "expected": "{ x: 1, y: 2 }"
+      "expected": {
+        "isMyArray": true,
+        "isArray": true,
+        "isMyArrayType": false
+      }
     }
   ],
   "hints": [
-    "Spread can add new properties",
-    "Creates a new object"
+    "Symbol.species se derived methods ka return type control hota hai",
+    "map(), filter() jaise methods species use karte hain"
   ]
 }

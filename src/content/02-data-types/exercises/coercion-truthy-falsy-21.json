@@ -1,16 +1,61 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-21",
-  "title": "null == undefined",
-  "starterCode": "console.log(null == undefined);",
-  "solution": "console.log(null == undefined);",
+  "id": "02-data-types-03-coercion-truthy-falsy-21",
+  "title": "Coercion in if conditions",
+  "starterCode": "const values = [0, 1, \"\", \"0\", \"1\", null, undefined, NaN, [], {}, [0]]\nreturn values.map(v => ({\n  value: String(v),\n  entersIf: !!v\n}))\n",
+  "solution": "const values = [0, 1, \"\", \"0\", \"1\", null, undefined, NaN, [], {}, [0]]\nreturn values.map(v => ({\n  value: String(v),\n  entersIf: !!v\n}))",
   "tests": [
     {
       "input": [],
-      "expected": "true"
+      "expected": [
+        {
+          "value": "0",
+          "entersIf": false
+        },
+        {
+          "value": "1",
+          "entersIf": true
+        },
+        {
+          "value": "",
+          "entersIf": false
+        },
+        {
+          "value": "0",
+          "entersIf": true
+        },
+        {
+          "value": "1",
+          "entersIf": true
+        },
+        {
+          "value": "null",
+          "entersIf": false
+        },
+        {
+          "value": "undefined",
+          "entersIf": false
+        },
+        {
+          "value": "NaN",
+          "entersIf": false
+        },
+        {
+          "value": "",
+          "entersIf": true
+        },
+        {
+          "value": "[object Object]",
+          "entersIf": true
+        },
+        {
+          "value": "0",
+          "entersIf": true
+        }
+      ]
     }
   ],
   "hints": [
-    "null and undefined are loosely equal",
-    "They're both 'empty' values"
+    "if condition mein value coerced hoti hai boolean mein",
+    "[0] truthy hai, [] bhi truthy hai"
   ]
 }

@@ -1,16 +1,22 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-22",
-  "title": "null === undefined",
-  "starterCode": "console.log(null === undefined);",
-  "solution": "console.log(null === undefined);",
+  "id": "02-data-types-03-coercion-truthy-falsy-22",
+  "title": "JSON.stringify edge cases",
+  "starterCode": "const data = {\n  undef: undefined,\n  func: function() {},\n  nan: NaN,\n  inf: Infinity,\n  sym: Symbol(\"x\"),\n  date: new Date(),\n  regex: /test/\n}\nreturn JSON.parse(JSON.stringify(data))\n",
+  "solution": "const data = {\n  undef: undefined,\n  func: function() {},\n  nan: NaN,\n  inf: Infinity,\n  sym: Symbol(\"x\"),\n  date: new Date(),\n  regex: /test/\n}\nreturn JSON.parse(JSON.stringify(data))",
   "tests": [
     {
       "input": [],
-      "expected": "false"
+      "expected": {
+        "nan": null,
+        "inf": null,
+        "date": "2026-08-06T00:00:00.000Z",
+        "regex": {}
+      }
     }
   ],
   "hints": [
-    "=== checks type",
-    "null and undefined are different types"
+    "undefined, function, symbol keys dropped ho jate hain",
+    "NaN, Infinity null ban jate hain",
+    "Date string ban jati hai"
   ]
 }

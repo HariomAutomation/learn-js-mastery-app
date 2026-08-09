@@ -1,16 +1,22 @@
 {
-  "id": "05-loops-patterns-practice-19",
-  "title": "Pattern X Shape",
-  "starterCode": "const n = 5;\nfor (let i = 0; i < n; i++) {\n  let row = '';\n  for (let j = 0; j < n; j++) {\n    if (i === j || i + j === n - 1) {\n      row += '*';\n    } else {\n      row += ' ';\n    }\n  }\n  console.log(row);\n}",
-  "solution": "const n = 5;\nfor (let i = 0; i < n; i++) {\n  let row = '';\n  for (let j = 0; j < n; j++) {\n    if (i === j || i + j === n - 1) {\n      row += '*';\n    } else {\n      row += ' ';\n    }\n  }\n  console.log(row);\n}",
+  "id": "05-03-patterns-practice-19",
+  "title": "Array me missing ranges nikalo 1 se n tak",
+  "starterCode": "function missingRanges(arr, n) {\n  // TODO: 1 se n tak jo numbers array me nahi hain wo ranges me do\n}",
+  "solution": "function missingRanges(arr, n) {\n  const set = new Set(arr);\n  const ranges = [];\n  let start = 1;\n  for (let i = 1; i <= n; i++) {\n    if (!set.has(i)) {\n      if (start === i) {\n        let end = i;\n        while (end <= n && !set.has(end + 1)) end++;\n        ranges.push([start, end]);\n        start = end + 1;\n        i = end;\n      }\n    } else {\n      start = i + 1;\n    }\n  }\n  return ranges;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "*   *\n * * \n  *  \n * * \n*   *"
+      "input": [
+        [
+          1,
+          3
+        ],
+        5
+      ],
+      "expected": "[[2,2],[4,5]]"
     }
   ],
   "hints": [
-    "Main diagonal: i===j",
-    "Anti-diagonal: i+j===n-1"
+    "Set se O(1) lookup karo",
+    "Missing range dhundho aur group karo"
   ]
 }

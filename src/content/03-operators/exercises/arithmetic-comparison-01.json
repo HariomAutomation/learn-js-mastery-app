@@ -1,16 +1,16 @@
 {
-  "id": "03-operators-arithmetic-comparison-01",
-  "title": "Add two numbers",
-  "starterCode": "const result = 5 + 3;\nconsole.log(result);",
-  "solution": "const result = 5 + 3;\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-01",
+  "title": "Shopping bill calculate karo",
+  "starterCode": "// Ek shop mein 3 items hain: 250, 180, 320\n// Tax 18% lagao aur total return karo\nconst items = [250, 180, 320]\n// TODO: total nikalo with tax\n",
+  "solution": "const items = [250, 180, 320]\nconst subtotal = items[0] + items[1] + items[2]\nconst tax = subtotal * 0.18\nconst total = subtotal + tax\nreturn total",
   "tests": [
     {
       "input": [],
-      "expected": "8"
+      "expected": 883.2
     }
   ],
   "hints": [
-    "Use the + operator",
-    "Both operands are numbers"
+    "Pehle items ka sum nikalo",
+    "Tax = subtotal * 0.18"
   ]
 }

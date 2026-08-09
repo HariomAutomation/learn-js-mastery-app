@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-variables-intro-21",
-  "title": "BigInt operations",
-  "starterCode": "console.log(BigInt(9007199254740991) + 1n)",
-  "solution": "console.log(BigInt(9007199254740991) + 1n)",
+  "title": "Cart total calculate karo",
+  "starterCode": "const items = [\n  { name: \"Phone\", price: 29999, qty: 1 },\n  { name: \"Case\", price: 499, qty: 2 }\n]\n// Total price calculate karo (price * qty) ka sum\n// Return total\n",
+  "solution": "const items = [\n  { name: \"Phone\", price: 29999, qty: 1 },\n  { name: \"Case\", price: 499, qty: 2 }\n]\nconst total = items.reduce((sum, item) => sum + item.price * item.qty, 0)\nreturn total",
   "tests": [
     {
       "input": [],
-      "expected": "9007199254740992"
+      "expected": 30997
     }
   ],
   "hints": [
-    "Use n suffix for BigInt literals"
+    "reduce() se sum nikalte hain",
+    "Har item ka price * qty jodna hai"
   ]
 }

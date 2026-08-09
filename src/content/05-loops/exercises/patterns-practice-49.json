@@ -1,16 +1,22 @@
 {
-  "id": "05-loops-patterns-practice-49",
-  "title": "Number Spiral",
-  "starterCode": "let num = 1;\nfor (let i = 0; i < 3; i++) {\n  let row = '';\n  for (let j = 0; j < 3; j++) {\n    row += num++ + ' ';\n  }\n  console.log(row);\n}",
-  "solution": "let num = 1;\nfor (let i = 0; i < 3; i++) {\n  let row = '';\n  for (let j = 0; j < 3; j++) {\n    row += num++ + ' ';\n  }\n  console.log(row);\n}",
+  "id": "05-03-patterns-practice-49",
+  "title": "Array ke elements ko bit manipulation se check karo",
+  "starterCode": "function findUnique(arr) {\n  // TODO: sab elements do-do baar hain, sirf ek baar\n  // XOR use karo\n}",
+  "solution": "function findUnique(arr) {\n  let result = 0;\n  for (const num of arr) result ^= num;\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "1 2 3 \n4 5 6 \n7 8 9 "
+      "input": [
+        2,
+        3,
+        2,
+        4,
+        3
+      ],
+      "expected": 4
     }
   ],
   "hints": [
-    "Use post-increment",
-    "Build row string"
+    "XOR property: a ^ a = 0, a ^ 0 = a",
+    "Sab XOR karne pe unique bach jayega"
   ]
 }

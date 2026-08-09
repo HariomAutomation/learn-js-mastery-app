@@ -1,16 +1,19 @@
 {
-  "id": "03-operators-arithmetic-comparison-48",
-  "title": "Negative NaN check",
-  "starterCode": "const result = isNaN(NaN);\nconsole.log(result);",
-  "solution": "const result = isNaN(NaN);\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-48",
+  "title": "Swap without temp variable",
+  "starterCode": "// Do numbers swap karo bina temp ke\nlet a = 10\nlet b = 25\n// TODO: aur b ki values swap karo\n",
+  "solution": "let a = 10\nlet b = 25\na = a + b\nb = a - b\na = a - b\nreturn { a, b }",
   "tests": [
     {
       "input": [],
-      "expected": "true"
+      "expected": {
+        "a": 25,
+        "b": 10
+      }
     }
   ],
   "hints": [
-    "NaN is the only value not equal to itself",
-    "isNaN returns true for NaN"
+    "a = a + b se sum store hota hai",
+    "b = a - b se original a milta hai"
   ]
 }

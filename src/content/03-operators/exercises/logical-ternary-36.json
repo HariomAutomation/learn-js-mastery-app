@@ -1,16 +1,16 @@
 {
-  "id": "03-operators-logical-ternary-36",
-  "title": "Ternary with falsy condition",
-  "starterCode": "const result = 0 ? 'yes' : 'no';\nconsole.log(result);",
-  "solution": "const result = 0 ? 'yes' : 'no';\nconsole.log(result);",
+  "id": "03-operators-02-logical-ternary-36",
+  "title": "Logical with comparison",
+  "starterCode": "// Grade classification with multiple conditions\nconst score = 85\nconst attendance = 90\n// TODO: grade nikalo based on both\n",
+  "solution": "const score = 85\nconst attendance = 90\nconst grade = score >= 90 && attendance >= 80 ? \"A+\" :\n  score >= 80 && attendance >= 75 ? \"A\" :\n  score >= 70 ? \"B\" : \"C\"\nreturn grade",
   "tests": [
     {
       "input": [],
-      "expected": "no"
+      "expected": "A"
     }
   ],
   "hints": [
-    "0 is falsy",
-    "Ternary returns second value"
+    "&& se dono conditions true honi chahiye",
+    "Chained ternary se multiple cases"
   ]
 }

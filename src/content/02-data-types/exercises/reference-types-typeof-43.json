@@ -1,16 +1,21 @@
 {
-  "id": "02-data-types-reference-types-typeof-43",
-  "title": "Set removes duplicates",
-  "starterCode": "const s = new Set([1, 2, 2, 3]);\nconsole.log();",
-  "solution": "const s = new Set([1, 2, 2, 3]);\nconsole.log(s.size);",
+  "id": "02-data-types-02-reference-types-typeof-43",
+  "title": "TypedArray buffer view",
+  "starterCode": "const buffer = new ArrayBuffer(16)\nconst int32 = new Int32Array(buffer)\nconst uint8 = new Uint8Array(buffer)\nint32[0] = 42\nreturn {\n  int32First: int32[0],\n  uint8First: uint8[0],\n  uint8Second: uint8[1],\n  bufferSize: buffer.byteLength\n}\n",
+  "solution": "const buffer = new ArrayBuffer(16)\nconst int32 = new Int32Array(buffer)\nconst uint8 = new Uint8Array(buffer)\nint32[0] = 42\nreturn {\n  int32First: int32[0],\n  uint8First: uint8[0],\n  uint8Second: uint8[1],\n  bufferSize: buffer.byteLength\n}",
   "tests": [
     {
       "input": [],
-      "expected": "3"
+      "expected": {
+        "int32First": 42,
+        "uint8First": 42,
+        "uint8Second": 0,
+        "bufferSize": 16
+      }
     }
   ],
   "hints": [
-    "Sets only store unique values",
-    "size gives the count"
+    "ArrayBuffer raw memory hai",
+    "Different TypedArrays same buffer ko alag view se access kar sakte hain"
   ]
 }

@@ -1,16 +1,19 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-50",
-  "title": "Date to string conversion",
-  "starterCode": "console.log(new Date() + '');",
-  "solution": "console.log(new Date() + '');",
+  "id": "02-data-types-03-coercion-truthy-falsy-50",
+  "title": "Proxy revoke pattern",
+  "starterCode": "let data = { name: \"Hariom\" }\nconst { proxy, revoke } = Proxy.revocable(data, {\n  get(target, prop) {\n    return target[prop]\n  }\n})\nconst name1 = proxy.name\nrevoke()\ntry {\n  const name2 = proxy.name\n} catch(e) {\n  return { name1, error: e.message }\n}\n",
+  "solution": "let data = { name: \"Hariom\" }\nconst { proxy, revoke } = Proxy.revocable(data, {\n  get(target, prop) {\n    return target[prop]\n  }\n})\nconst name1 = proxy.name\nrevoke()\ntry {\n  const name2 = proxy.name\n} catch(e) {\n  return { name1, error: e.message }\n}",
   "tests": [
     {
       "input": [],
-      "expected": "dynamic"
+      "expected": {
+        "name1": "Hariom",
+        "error": "Cannot perform 'get' on a proxy that has been revoked"
+      }
     }
   ],
   "hints": [
-    "Date has a toString method",
-    "Returns human-readable date string"
+    "Proxy.revocable se proxy revoke kar sakte ho",
+    "Revoke ke baad proxy use nahi kar sakte"
   ]
 }

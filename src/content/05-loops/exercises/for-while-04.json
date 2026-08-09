@@ -1,16 +1,19 @@
 {
-  "id": "05-loops-for-while-04",
-  "title": "Do...While Loop",
-  "starterCode": "let i = 0;\ndo {\n  console.log(i);\n  i++;\n} while (i < 5);",
-  "solution": "let i = 0;\ndo {\n  console.log(i);\n  i++;\n} while (i < 5);",
+  "id": "05-01-for-while-04",
+  "title": "Do-while use karke user input simulation karo",
+  "starterCode": "function findFirstMultiple(start, divisor) {\n  // TODO: start se shuru karke pehla divisor find karo using do-while\n}",
+  "solution": "function findFirstMultiple(start, divisor) {\n  let num = start;\n  do {\n    if (num % divisor === 0) return num;\n    num++;\n  } while (true);\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "0\n1\n2\n3\n4"
+      "input": [
+        7,
+        3
+      ],
+      "expected": 9
     }
   ],
   "hints": [
-    "Body executes first",
-    "Check condition after"
+    "Do-while me pehle check karo, fir increment karo",
+    "Kam se kam ek baar loop chalega"
   ]
 }

@@ -1,16 +1,20 @@
 {
-  "id": "02-data-types-primitive-types-10",
-  "title": "Create a multi-line string with backticks",
-  "starterCode": "const poem = ;\nconsole.log(poem);",
-  "solution": "const poem = `Roses are red\nViolets are blue`;\nconsole.log(poem);",
+  "id": "02-data-types-01-primitive-types-10",
+  "title": "Primitive immutability verify karo",
+  "starterCode": "const name = \"hariom\"\nconst upper = name.toUpperCase()\nreturn {\n  original: name,\n  uppercased: upper,\n  isChanged: name !== upper\n}\n",
+  "solution": "const name = \"hariom\"\nconst upper = name.toUpperCase()\nreturn {\n  original: name,\n  uppercased: upper,\n  isChanged: name !== upper\n}",
   "tests": [
     {
       "input": [],
-      "expected": "Roses are red\nViolets are blue"
+      "expected": {
+        "original": "hariom",
+        "uppercased": "HARIOM",
+        "isChanged": true
+      }
     }
   ],
   "hints": [
-    "Backticks allow multi-line strings",
-    "Just press Enter inside backticks"
+    "Primitive values mutate nahi hote",
+    "toUpperCase naya string return karta hai"
   ]
 }

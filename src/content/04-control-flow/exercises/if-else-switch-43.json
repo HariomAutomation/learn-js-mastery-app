@@ -1,16 +1,44 @@
 {
-  "id": "04-control-flow-if-else-switch-43",
-  "title": "If with bitwise AND",
-  "starterCode": "const num = 5;\nif (num & 1) {\n  console.log('odd');\n} else {\n  console.log('even');\n}",
-  "solution": "const num = 5;\nif (num & 1) {\n  console.log('odd');\n} else {\n  console.log('even');\n}",
+  "id": "04-control-flow-01-if-else-switch-43",
+  "title": "Nested if se eligibility check",
+  "starterCode": "// function canApply(age, income, isStudent)\n// Student aur <30: \"Student discount\"\n// Income < 300000: \"Low income benefit\"\n// Age > 60: \"Senior citizen benefit\"\n// Baaki: \"No special benefit\"\n",
+  "solution": "function canApply(age, income, isStudent) {\n  if (isStudent && age < 30) return \"Student discount\"\n  if (income < 300000) return \"Low income benefit\"\n  if (age > 60) return \"Senior citizen benefit\"\n  return \"No special benefit\"\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "odd"
+      "input": [
+        22,
+        100000,
+        true
+      ],
+      "expected": "Student discount"
+    },
+    {
+      "input": [
+        25,
+        200000,
+        false
+      ],
+      "expected": "Low income benefit"
+    },
+    {
+      "input": [
+        65,
+        500000,
+        false
+      ],
+      "expected": "Senior citizen benefit"
+    },
+    {
+      "input": [
+        35,
+        500000,
+        false
+      ],
+      "expected": "No special benefit"
     }
   ],
   "hints": [
-    "& is bitwise AND",
-    "5 & 1 = 1, which is truthy"
+    "Pehle combined condition check karo",
+    "Guard clause pattern use karo"
   ]
 }

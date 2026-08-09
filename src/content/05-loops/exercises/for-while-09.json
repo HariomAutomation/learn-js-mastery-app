@@ -1,16 +1,18 @@
 {
-  "id": "05-loops-for-while-09",
-  "title": "For Loop Step",
-  "starterCode": "for (let i = 0; i < 10; i += 2) {\n  console.log(i);\n}",
-  "solution": "for (let i = 0; i < 10; i += 2) {\n  console.log(i);\n}",
+  "id": "05-01-for-while-09",
+  "title": "While loop se string reverse karo",
+  "starterCode": "function reverseString(str) {\n  // TODO: while loop se string reverse karo bina .reverse() ke\n}",
+  "solution": "function reverseString(str) {\n  let result = \"\";\n  let i = str.length - 1;\n  while (i >= 0) {\n    result += str[i];\n    i--;\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "0\n2\n4\n6\n8"
+      "input": [
+        "hello"
+      ],
+      "expected": "olleh"
     }
   ],
   "hints": [
-    "Increment by 2",
-    "Use i += 2"
+    "Last character se shuru karo",
+    "While me i >= 0 tak chalao"
   ]
 }

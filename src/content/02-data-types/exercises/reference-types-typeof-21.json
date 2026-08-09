@@ -1,16 +1,25 @@
 {
-  "id": "02-data-types-reference-types-typeof-21",
-  "title": "Nested object reference",
-  "starterCode": "const a = { nested: { val: 1 } };\nconst b = a;\nconsole.log(a === b);",
-  "solution": "const a = { nested: { val: 1 } };\nconst b = a;\nconsole.log(a === b);",
+  "id": "02-data-types-02-reference-types-typeof-21",
+  "title": "Property descriptor",
+  "starterCode": "const obj = { name: \"Hariom\" }\nObject.defineProperty(obj, \"age\", {\n  value: 25,\n  writable: false,\n  enumerable: true,\n  configurable: false\n})\ntry { obj.age = 26 } catch(e) {}\nreturn {\n  name: Object.getOwnPropertyDescriptor(obj, \"name\"),\n  age: obj.age,\n  enumerable: Object.getOwnPropertyDescriptor(obj, \"age\").enumerable\n}\n",
+  "solution": "const obj = { name: \"Hariom\" }\nObject.defineProperty(obj, \"age\", {\n  value: 25,\n  writable: false,\n  enumerable: true,\n  configurable: false\n})\ntry { obj.age = 26 } catch(e) {}\nreturn {\n  name: Object.getOwnPropertyDescriptor(obj, \"name\"),\n  age: obj.age,\n  enumerable: Object.getOwnPropertyDescriptor(obj, \"age\").enumerable\n}",
   "tests": [
     {
       "input": [],
-      "expected": "true"
+      "expected": {
+        "name": {
+          "value": "Hariom",
+          "writable": true,
+          "enumerable": true,
+          "configurable": true
+        },
+        "age": 25,
+        "enumerable": true
+      }
     }
   ],
   "hints": [
-    "Assignment copies the reference",
-    "Same reference, same object"
+    "defineProperty se property customize hoti hai",
+    "writable: false se modify nahi ho sakta"
   ]
 }

@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-scope-hoisting-05",
-  "title": "Hoisting var",
-  "starterCode": "console.log(x)\nvar x = 5",
-  "solution": "console.log(x)\nvar x = 5",
+  "title": "TDZ error with let",
+  "starterCode": "try {\n  console.log(y)\n  let y = 10\n} catch(e) {\n  return \"TDZ error\"\n}\n",
+  "solution": "try {\n  console.log(y)\n  let y = 10\n} catch(e) {\n  return \"TDZ error\"\n}",
   "tests": [
     {
       "input": [],
-      "expected": "undefined"
+      "expected": "TDZ error"
     }
   ],
   "hints": [
-    "var is hoisted but not initialized"
+    "let/const are hoisted but in TDZ",
+    "Accessing before declaration throws ReferenceError"
   ]
 }

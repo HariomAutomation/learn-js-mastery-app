@@ -1,16 +1,21 @@
 {
-  "id": "02-data-types-primitive-types-02",
-  "title": "Create a string using single quotes",
-  "starterCode": "const name = '';\nconsole.log(name);",
-  "solution": "const name = 'Alice';\nconsole.log(name);",
+  "id": "02-data-types-01-primitive-types-02",
+  "title": "Number types explore karo",
+  "starterCode": "// Integer, float, negative aur zero declare karo\n// Return as array: [integer, float, negative, zero]\n",
+  "solution": "const integer = 42\nconst float = 3.14\nconst negative = -10\nconst zero = 0\nreturn [integer, float, negative, zero]",
   "tests": [
     {
       "input": [],
-      "expected": "Alice"
+      "expected": [
+        42,
+        3.14,
+        -10,
+        0
+      ]
     }
   ],
   "hints": [
-    "Use single quotes this time",
-    "Type a name inside the quotes"
+    "Integer bina decimal ke, float decimal ke saath",
+    "Negative number minus sign se"
   ]
 }

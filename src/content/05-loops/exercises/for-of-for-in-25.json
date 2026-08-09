@@ -1,16 +1,18 @@
 {
-  "id": "05-loops-for-of-for-in-25",
-  "title": "Object Entries Sum",
-  "starterCode": "const prices = {apple: 2, banana: 3, orange: 4};\nlet total = 0;\nfor (const [fruit, price] of Object.entries(prices)) {\n  total += price;\n}\nconsole.log(total);",
-  "solution": "const prices = {apple: 2, banana: 3, orange: 4};\nlet total = 0;\nfor (const [fruit, price] of Object.entries(prices)) {\n  total += price;\n}\nconsole.log(total);",
+  "id": "05-02-for-of-for-in-25",
+  "title": "For-of se string ke capital letters count karo",
+  "starterCode": "function countCapitals(str) {\n  // TODO: string me kitne capital letters hain\n}",
+  "solution": "function countCapitals(str) {\n  let count = 0;\n  for (const char of str) {\n    if (char >= \"A\" && char <= \"Z\") count++;\n  }\n  return count;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "9"
+      "input": [
+        "Hello World"
+      ],
+      "expected": 2
     }
   ],
   "hints": [
-    "Use Object.entries()",
-    "Sum the prices"
+    "Char comparison se capital check karo: >= 'A' && <= 'Z'",
+    "Count badhao milne pe"
   ]
 }

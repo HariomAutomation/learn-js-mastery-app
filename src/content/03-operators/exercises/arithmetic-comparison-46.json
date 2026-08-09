@@ -1,16 +1,19 @@
 {
-  "id": "03-operators-arithmetic-comparison-46",
-  "title": "parseFloat",
-  "starterCode": "const result = parseFloat(\"3.14em\");\nconsole.log(result);",
-  "solution": "const result = parseFloat(\"3.14em\");\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-46",
+  "title": "Quotient and remainder",
+  "starterCode": "// 567 ko 7 se divide karo — quotient aur remainder nikalo\nconst dividend = 567\nconst divisor = 7\n// TODO: dono nikalo\n",
+  "solution": "const dividend = 567\nconst divisor = 7\nreturn {\n  quotient: Math.floor(dividend / divisor),\n  remainder: dividend % divisor\n}",
   "tests": [
     {
       "input": [],
-      "expected": "3.14"
+      "expected": {
+        "quotient": 81,
+        "remainder": 0
+      }
     }
   ],
   "hints": [
-    "parseFloat parses decimal numbers",
-    "Stops at 'e'"
+    "floor se quotient milta hai",
+    "% se remainder milta hai"
   ]
 }

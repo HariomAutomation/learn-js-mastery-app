@@ -1,16 +1,16 @@
 {
-  "id": "03-operators-arithmetic-comparison-22",
-  "title": "Strict not equal (!==)",
-  "starterCode": "const result = 5 !== \"5\";\nconsole.log(result);",
-  "solution": "const result = 5 !== \"5\";\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-22",
+  "title": "Less or equal comparison",
+  "starterCode": "// Check karo: temperature freezing point se kam ya barabar hai\nconst temp = -5\nconst freezing = 0\n// TODO: <= operator use karo\n",
+  "solution": "const temp = -5\nconst freezing = 0\nreturn temp <= freezing",
   "tests": [
     {
       "input": [],
-      "expected": "true"
+      "expected": true
     }
   ],
   "hints": [
-    "!== checks value AND type inequality",
-    "Different types, so not equal"
+    "<= less than or equal check karta hai",
+    "-5 <= 0 = true"
   ]
 }

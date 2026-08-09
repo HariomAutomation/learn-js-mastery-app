@@ -1,16 +1,25 @@
 {
-  "id": "05-loops-for-while-30",
-  "title": "Hollow Rectangle",
-  "starterCode": "for (let i = 0; i < 4; i++) {\n  let row = '';\n  for (let j = 0; j < 5; j++) {\n    if (i === 0 || i === 3 || j === 0 || j === 4) {\n      row += '* ';\n    } else {\n      row += '  ';\n    }\n  }\n  console.log(row);\n}",
-  "solution": "for (let i = 0; i < 4; i++) {\n  let row = '';\n  for (let j = 0; j < 5; j++) {\n    if (i === 0 || i === 3 || j === 0 || j === 4) {\n      row += '* ';\n    } else {\n      row += '  ';\n    }\n  }\n  console.log(row);\n}",
+  "id": "05-01-for-while-30",
+  "title": "For loop se array chunking karo",
+  "starterCode": "function chunk(arr, size) {\n  // TODO: array ko equal size ke chunks me todo\n}",
+  "solution": "function chunk(arr, size) {\n  const result = [];\n  for (let i = 0; i < arr.length; i += size) {\n    result.push(arr.slice(i, i + size));\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "* * * * * \n*       * \n*       * \n* * * * * "
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        2
+      ],
+      "expected": "1,2,3,4,5"
     }
   ],
   "hints": [
-    "Check edges for stars",
-    "Use spaces for interior"
+    "Loop me i ko size se badhao",
+    "slice se chunk nikalo"
   ]
 }

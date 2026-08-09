@@ -1,15 +1,50 @@
 {
   "id": "01-variables-declarations-variables-intro-28",
-  "title": "Nullish coalescing",
-  "starterCode": "const val = null ?? \"default\"\nconsole.log(val)",
-  "solution": "const val = null ?? \"default\"\nconsole.log(val)",
+  "title": "Flatten nested array",
+  "starterCode": "// Function banao jo 1 level deep array flatten kare\n// flatten([1, [2, 3], [4, 5]]) = [1, 2, 3, 4, 5]\nfunction flatten(arr) {\n  // TODO\n}\n",
+  "solution": "function flatten(arr) {\n  return arr.flat()\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "default"
+      "input": [
+        [
+          1,
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ]
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "input": [
+        [
+          "a",
+          [
+            "b",
+            "c"
+          ]
+        ]
+      ],
+      "expected": [
+        "a",
+        "b",
+        "c"
+      ]
     }
   ],
   "hints": [
-    "?? only treats null/undefined as falsy"
+    "flat() method 1 level deep flatten karta hai",
+    "flat(Infinity) se deeply flatten hota hai"
   ]
 }

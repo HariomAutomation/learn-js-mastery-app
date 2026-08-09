@@ -1,15 +1,29 @@
 {
   "id": "01-variables-declarations-variables-intro-33",
-  "title": "Object.groupBy",
-  "starterCode": "const people = [{name:\"A\",age:25},{name:\"B\",age:30}]\nconst g = Object.groupBy(people, p => p.age >= 30 ? \"senior\" : \"junior\")\nconsole.log(g.senior.length)",
-  "solution": "const people = [{name:\"A\",age:25},{name:\"B\",age:30}]\nconst g = Object.groupBy(people, p => p.age >= 30 ? \"senior\" : \"junior\")\nconsole.log(g.senior.length)",
+  "title": "Pick specific keys from object",
+  "starterCode": "// Function banao jo object se sirf given keys pick kare\n// pick({a:1, b:2, c:3}, [\"a\",\"c\"]) = {a:1, c:3}\nfunction pick(obj, keys) {\n  // TODO\n}",
+  "solution": "function pick(obj, keys) {\n  const result = {}\n  for (const key of keys) {\n    if (key in obj) result[key] = obj[key]\n  }\n  return result\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "1"
+      "input": [
+        {
+          "a": 1,
+          "b": 2,
+          "c": 3
+        },
+        [
+          "a",
+          "c"
+        ]
+      ],
+      "expected": {
+        "a": 1,
+        "c": 3
+      }
     }
   ],
   "hints": [
-    "groupBy groups array by callback"
+    "for...of loop se keys iterate karo",
+    "Har key check karo ki object mein hai"
   ]
 }

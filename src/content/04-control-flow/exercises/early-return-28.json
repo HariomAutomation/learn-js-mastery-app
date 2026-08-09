@@ -1,17 +1,36 @@
 {
-  "id": "04-control-flow-early-return-28",
-  "title": "Validation chain",
-  "starterCode": "function validate(data) {\n  if (!data) return 'no data';\n  if (!data.username) return 'no username';\n  if (data.username.length < 3) return 'username too short';\n  return 'valid';\n}\nconsole.log(validate({ username: 'ab' }));",
-  "solution": "function validate(data) {\n  if (!data) return 'no data';\n  if (!data.username) return 'no username';\n  if (data.username.length < 3) return 'username too short';\n  return 'valid';\n}\nconsole.log(validate({ username: 'ab' }));",
+  "id": "04-control-flow-02-early-return-28",
+  "title": "Guard for boolean flag",
+  "starterCode": "// function toggleFeature(feature, enabled)\n// Agar feature nahi: \"No feature specified\"\n// Agar enabled boolean nahi: \"Invalid flag\"\n// Warna { feature, enabled } return karo\n",
+  "solution": "function toggleFeature(feature, enabled) {\n  if (!feature) return \"No feature specified\"\n  if (typeof enabled !== \"boolean\") return \"Invalid flag\"\n  return { feature, enabled }\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "username too short"
+      "input": [
+        "darkMode",
+        true
+      ],
+      "expected": {
+        "feature": "darkMode",
+        "enabled": true
+      }
+    },
+    {
+      "input": [
+        "",
+        true
+      ],
+      "expected": "No feature specified"
+    },
+    {
+      "input": [
+        "darkMode",
+        "yes"
+      ],
+      "expected": "Invalid flag"
     }
   ],
   "hints": [
-    "data is truthy",
-    "username exists",
-    "length is 2, < 3"
+    "Feature ki existence check karo",
+    "Enabled ka type boolean hona chahiye"
   ]
 }

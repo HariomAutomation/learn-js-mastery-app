@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-variables-intro-42",
+  "title": "Throttle function",
+  "starterCode": "// Throttle banao — function har delay ms mein max ek baar chale\nfunction throttle(fn, delay) {\n  // TODO\n}",
+  "solution": "function throttle(fn, delay) {\n  let lastCall = 0\n  return function(...args) {\n    const now = Date.now()\n    if (now - lastCall >= delay) {\n      lastCall = now\n      return fn(...args)\n    }\n  }\n}",
+  "tests": [
+    {
+      "input": []
+    }
+  ],
+  "hints": [
+    "Date.now() se time track karo",
+    "Sirf tab call karo jab delay ho jaye"
+  ]
+}

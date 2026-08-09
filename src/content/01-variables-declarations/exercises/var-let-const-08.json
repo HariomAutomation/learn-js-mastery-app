@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-var-let-const-08",
-  "title": "var redeclaration",
-  "starterCode": "var x = 1\nvar x = 2\nconsole.log(x)",
-  "solution": "var x = 1\nvar x = 2\nconsole.log(x)",
+  "title": "Bug: const without initialization",
+  "starterCode": "try {\n  const x\n  return x\n} catch(e) {\n  return \"error: must initialize\"\n}\n",
+  "solution": "try {\n  const x\n  return x\n} catch(e) {\n  return \"error: must initialize\"\n}",
   "tests": [
     {
       "input": [],
-      "expected": "2"
+      "expected": "error: must initialize"
     }
   ],
   "hints": [
-    "var allows redeclaration"
+    "const hamesha initialize hona chahiye",
+    "const x; SyntaxError deta hai"
   ]
 }

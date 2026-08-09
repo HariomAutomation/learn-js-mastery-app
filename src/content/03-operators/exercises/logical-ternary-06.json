@@ -1,17 +1,19 @@
 {
-  "id": "03-operators-logical-ternary-06",
-  "title": "Double NOT for boolean coercion",
-  "starterCode": "const result = !!\"\";\nconsole.log(result);",
-  "solution": "const result = !!\"\";\nconsole.log(result);",
+  "id": "03-operators-02-logical-ternary-06",
+  "title": "Short circuit OR",
+  "starterCode": "// Default value set karo agar null ho\nconst username = null\nconst age = 0\n// TODO: || se default do\n",
+  "solution": "const username = null\nconst age = 0\nreturn {\n  name: username || \"Guest\",\n  userAge: age || 18\n}",
   "tests": [
     {
       "input": [],
-      "expected": "false"
+      "expected": {
+        "name": "Guest",
+        "userAge": 18
+      }
     }
   ],
   "hints": [
-    "First ! converts to boolean and inverts",
-    "Second ! inverts back",
-    "!! converts any value to boolean"
+    "|| pehla truthy value return karta hai",
+    "null aur 0 dono falsy hain"
   ]
 }

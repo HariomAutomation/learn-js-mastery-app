@@ -1,16 +1,18 @@
 {
-  "id": "05-loops-for-while-47",
-  "title": "While With Flag",
-  "starterCode": "let found = false;\nlet arr = [1, 3, 5, 7, 8, 9];\nlet i = 0;\nwhile (!found && i < arr.length) {\n  if (arr[i] % 2 === 0) {\n    console.log(arr[i]);\n    found = true;\n  }\n  i++;\n}",
-  "solution": "let found = false;\nlet arr = [1, 3, 5, 7, 8, 9];\nlet i = 0;\nwhile (!found && i < arr.length) {\n  if (arr[i] % 2 === 0) {\n    console.log(arr[i]);\n    found = true;\n  }\n  i++;\n}",
+  "id": "05-01-for-while-47",
+  "title": "While loop se string me vowels remove karo",
+  "starterCode": "function removeVowels(str) {\n  // TODO: string se vowels hatao\n}",
+  "solution": "function removeVowels(str) {\n  const vowels = \"aeiouAEIOU\";\n  let result = \"\";\n  for (const char of str) {\n    if (vowels.includes(char)) continue;\n    result += char;\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "8"
+      "input": [
+        "hello world"
+      ],
+      "expected": "hll wrld"
     }
   ],
   "hints": [
-    "Use flag to stop early",
-    "Check for even number"
+    "Vowel check karo aur skip karo",
+    "Non-vowel characters result me add karo"
   ]
 }

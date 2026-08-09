@@ -1,16 +1,21 @@
 {
-  "id": "03-operators-logical-ternary-20",
-  "title": "Short circuit OR assignment",
-  "starterCode": "let x = 0;\nconst result = x || (x = 5);\nconsole.log(x);",
-  "solution": "let x = 0;\nconst result = x || (x = 5);\nconsole.log(x);",
+  "id": "03-operators-02-logical-ternary-20",
+  "title": "Truthy falsy in expression",
+  "starterCode": "// Variable initialize karo default se agar empty ho\nconst input1 = \"hello\"\nconst input2 = \"\"\nconst input3 = 42\nconst input4 = 0\nreturn {\n  v1: input1 || \"default\",\n  v2: input2 || \"default\",\n  v3: input3 || \"default\",\n  v4: input4 || \"default\"\n}",
+  "solution": "const input1 = \"hello\"\nconst input2 = \"\"\nconst input3 = 42\nconst input4 = 0\nreturn {\n  v1: input1 || \"default\",\n  v2: input2 || \"default\",\n  v3: input3 || \"default\",\n  v4: input4 || \"default\"\n}",
   "tests": [
     {
       "input": [],
-      "expected": "5"
+      "expected": {
+        "v1": "hello",
+        "v2": "default",
+        "v3": 42,
+        "v4": "default"
+      }
     }
   ],
   "hints": [
-    "|| short-circuits on first truthy",
-    "x is 0 (falsy), so assignment happens"
+    "|| pehla truthy value return karta hai",
+    "Empty string aur 0 falsy hain"
   ]
 }

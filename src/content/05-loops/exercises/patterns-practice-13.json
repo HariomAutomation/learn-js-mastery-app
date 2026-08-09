@@ -1,16 +1,22 @@
 {
-  "id": "05-loops-patterns-practice-13",
-  "title": "Diamond Pattern",
-  "starterCode": "for (let i = 1; i <= 5; i += 2) {\n  console.log(' '.repeat((5-i)/2) + '*'.repeat(i));\n}\nfor (let i = 3; i >= 1; i -= 2) {\n  console.log(' '.repeat((5-i)/2) + '*'.repeat(i));\n}",
-  "solution": "for (let i = 1; i <= 5; i += 2) {\n  console.log(' '.repeat((5-i)/2) + '*'.repeat(i));\n}\nfor (let i = 3; i >= 1; i -= 2) {\n  console.log(' '.repeat((5-i)/2) + '*'.repeat(i));\n}",
+  "id": "05-03-patterns-practice-13",
+  "title": "Array ke subarrays ka sum nikalo",
+  "starterCode": "function subarraySums(arr) {\n  // TODO: sab possible subarrays ka sum do\n  // [1,2,3] -> [1,3,6,2,5,3]\n}",
+  "solution": "function subarraySums(arr) {\n  const result = [];\n  for (let i = 0; i < arr.length; i++) {\n    let sum = 0;\n    for (let j = i; j < arr.length; j++) {\n      sum += arr[j];\n      result.push(sum);\n    }\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "  *\n ***\n*****\n ***\n  *"
+      "input": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": "1,3,6,2,5,3"
     }
   ],
   "hints": [
-    "Build top half",
-    "Then bottom half"
+    "Outer loop start ke liye",
+    "Inner loop extend karte jao aur sum maintain karo"
   ]
 }

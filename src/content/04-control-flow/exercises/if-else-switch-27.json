@@ -1,16 +1,36 @@
 {
-  "id": "04-control-flow-if-else-switch-27",
-  "title": "Switch with no matching case",
-  "starterCode": "const status = 'pending';\nswitch (status) {\n  case 'active':\n    console.log('active');\n    break;\n  case 'inactive':\n    console.log('inactive');\n    break;\n  default:\n    console.log('unknown');\n}",
-  "solution": "const status = 'pending';\nswitch (status) {\n  case 'active':\n    console.log('active');\n    break;\n  case 'inactive':\n    console.log('inactive');\n    break;\n  default:\n    console.log('unknown');\n}",
+  "id": "04-control-flow-01-if-else-switch-27",
+  "title": "Switch se roman numeral banao",
+  "starterCode": "// function toRoman(num) mein number 1-10 do\n// 1: \"I\", 2: \"II\", ..., 10: \"X\"\n",
+  "solution": "function toRoman(num) {\n  switch (num) {\n    case 1: return \"I\"\n    case 2: return \"II\"\n    case 3: return \"III\"\n    case 4: return \"IV\"\n    case 5: return \"V\"\n    case 6: return \"VI\"\n    case 7: return \"VII\"\n    case 8: return \"VIII\"\n    case 9: return \"IX\"\n    case 10: return \"X\"\n    default: return \"Invalid\"\n  }\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "unknown"
+      "input": [
+        1
+      ],
+      "expected": "I"
+    },
+    {
+      "input": [
+        4
+      ],
+      "expected": "IV"
+    },
+    {
+      "input": [
+        9
+      ],
+      "expected": "IX"
+    },
+    {
+      "input": [
+        10
+      ],
+      "expected": "X"
     }
   ],
   "hints": [
-    "'pending' doesn't match any case",
-    "default executes"
+    "Har number ka specific roman representation hai",
+    "Switch default mein invalid return karo"
   ]
 }

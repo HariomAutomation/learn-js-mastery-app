@@ -1,15 +1,19 @@
 {
   "id": "01-variables-declarations-var-let-const-17",
-  "title": "let in for of",
-  "starterCode": "const arr = [\"a\", \"b\", \"c\"]\nfor (let x of arr) {\n  console.log(x)\n}",
-  "solution": "const arr = [\"a\", \"b\", \"c\"]\nfor (let x of arr) {\n  console.log(x)\n}",
+  "title": "Block scope with let/const",
+  "starterCode": "{\n  let a = 1\n  const b = 2\n  var c = 3\n}\nreturn { a: typeof a, b: typeof b, c: typeof c }\n",
+  "solution": "{\n  let a = 1\n  const b = 2\n  var c = 3\n}\nreturn { a: typeof a, b: typeof b, c: typeof c }",
   "tests": [
     {
       "input": [],
-      "expected": "a\nb\nc"
+      "expected": {
+        "a": "undefined",
+        "b": "undefined",
+        "c": "number"
+      }
     }
   ],
   "hints": [
-    "let creates new scope per iteration"
+    "let/const block scope, var function/global scope"
   ]
 }

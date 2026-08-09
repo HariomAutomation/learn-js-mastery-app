@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-variables-intro-19",
-  "title": "Number parseFloat",
-  "starterCode": "console.log(parseFloat(\"3.14abc\"))\nconsole.log(parseInt(\"42rest\"))",
-  "solution": "console.log(parseFloat(\"3.14abc\"))\nconsole.log(parseInt(\"42rest\"))",
+  "title": "Shadowing — kaunsa x access hoga?",
+  "starterCode": "const x = 1\nfunction test() {\n  const x = 2\n  return x\n}\n// Function ke andar ka x return karo\nreturn test()\n",
+  "solution": "const x = 1\nfunction test() {\n  const x = 2\n  return x\n}\nreturn test()",
   "tests": [
     {
       "input": [],
-      "expected": "3.14\n42"
+      "expected": 2
     }
   ],
   "hints": [
-    "parseFloat reads until non-number"
+    "Inner scope wala x dikhta hai (shadowing)",
+    "Function ke andar ka x 2 hai"
   ]
 }

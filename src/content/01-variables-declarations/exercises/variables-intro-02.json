@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-variables-intro-02",
-  "title": "Template literal interpolation",
-  "starterCode": "const name = \"JS\"\nconsole.log(`Language: ${name}`)",
-  "solution": "const name = \"JS\"\nconsole.log(`Language: ${name}`)",
+  "title": "Temperature converter",
+  "starterCode": "// Celsius variable banao = 37\n// Usko Fahrenheit mein convert karo (C * 9/5 + 32)\n// Return karo Fahrenheit value\nconst celsius = 37\n",
+  "solution": "const celsius = 37\nconst fahrenheit = celsius * 9/5 + 32\nreturn fahrenheit",
   "tests": [
     {
       "input": [],
-      "expected": "Language: JS"
+      "expected": 98.6
     }
   ],
   "hints": [
-    "Use backticks and ${}"
+    "Formula: C * 9/5 + 32",
+    "Ek aur variable banao result store karne ke liye"
   ]
 }

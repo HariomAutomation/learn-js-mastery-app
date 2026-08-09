@@ -1,15 +1,19 @@
 {
-  "id": "03-operators-arithmetic-comparison-39",
-  "title": "Compound multiplication (*=)",
-  "starterCode": "let x = 5;\nx *= 4;\nconsole.log(x);",
-  "solution": "let x = 5;\nx *= 4;\nconsole.log(x);",
+  "id": "03-operators-01-arithmetic-comparison-39",
+  "title": "toPrecision se format",
+  "starterCode": "// Number ko 3 significant digits mein format karo\nconst num = 3.14159\nconst big = 12345\n// TODO: toPrecision use karo\n",
+  "solution": "const num = 3.14159\nconst big = 12345\nreturn {\n  precise: num.toPrecision(3),\n  bigPrecise: big.toPrecision(3)\n}",
   "tests": [
     {
       "input": [],
-      "expected": "20"
+      "expected": {
+        "precise": "3.14",
+        "bigPrecise": "1.23e+4"
+      }
     }
   ],
   "hints": [
-    "x *= 4 is the same as x = x * 4"
+    "toPrecision(n) n significant digits deta hai",
+    "Scientific notation mein aa sakta hai"
   ]
 }

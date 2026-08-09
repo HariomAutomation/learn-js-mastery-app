@@ -1,16 +1,22 @@
 {
-  "id": "05-loops-patterns-practice-37",
-  "title": "Factorial Recursive",
-  "starterCode": "function factorial(n) {\n  if (n <= 1) return 1;\n  return n * factorial(n - 1);\n}\nconsole.log(factorial(6));",
-  "solution": "function factorial(n) {\n  if (n <= 1) return 1;\n  return n * factorial(n - 1);\n}\nconsole.log(factorial(6));",
+  "id": "05-03-patterns-practice-37",
+  "title": "Nested loop se array ke all subsets generate karo",
+  "starterCode": "function subsets(arr) {\n  // TODO: array ke sab subsets (power set) do\n}",
+  "solution": "function subsets(arr) {\n  const result = [[]];\n  for (const num of arr) {\n    const newSubsets = result.map(sub => [...sub, num]);\n    result.push(...newSubsets);\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "720"
+      "input": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": "[[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]"
     }
   ],
   "hints": [
-    "Base case: n <= 1",
-    "Recursive call"
+    "Har element ke liye existing subsets me add karo",
+    "New subsets banao aur result me push karo"
   ]
 }

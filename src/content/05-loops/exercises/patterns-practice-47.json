@@ -1,16 +1,25 @@
 {
-  "id": "05-loops-patterns-practice-47",
-  "title": "Matrix Rotate 90",
-  "starterCode": "const m = [[1,2,3],[4,5,6],[7,8,9]];\nconst rotated = [];\nfor (let j = 0; j < 3; j++) {\n  rotated[j] = [];\n  for (let i = 2; i >= 0; i--) {\n    rotated[j].push(m[i][j]);\n  }\n}\nconsole.log(rotated);",
-  "solution": "const m = [[1,2,3],[4,5,6],[7,8,9]];\nconst rotated = [];\nfor (let j = 0; j < 3; j++) {\n  rotated[j] = [];\n  for (let i = 2; i >= 0; i--) {\n    rotated[j].push(m[i][j]);\n  }\n}\nconsole.log(rotated);",
+  "id": "05-03-patterns-practice-47",
+  "title": "Nested loop se array ke elements ko interleave karo",
+  "starterCode": "function interleave(arr) {\n  // TODO: [1,2,3,4,5,6] -> [1,4,2,5,3,6]\n}",
+  "solution": "function interleave(arr) {\n  const mid = Math.ceil(arr.length / 2);\n  const first = arr.slice(0, mid);\n  const second = arr.slice(mid);\n  const result = [];\n  for (let i = 0; i < mid; i++) {\n    result.push(first[i]);\n    if (i < second.length) result.push(second[i]);\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "[ [ 7, 4, 1 ], [ 8, 5, 2 ], [ 9, 6, 3 ] ]"
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "expected": "1,4,2,5,3,6"
     }
   ],
   "hints": [
-    "Read columns top to bottom",
-    "Build new rows"
+    "Array ko do halves me todo",
+    "Ek ek element dono halves se lo"
   ]
 }

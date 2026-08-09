@@ -1,15 +1,22 @@
 {
-  "id": "03-operators-arithmetic-comparison-34",
-  "title": "Math.min",
-  "starterCode": "const result = Math.min(10, 20, 5);\nconsole.log(result);",
-  "solution": "const result = Math.min(10, 20, 5);\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-34",
+  "title": "Number.isFinite use karo",
+  "starterCode": "// Check karo values finite hain ya nahi\nconst values = [42, Infinity, -Infinity, NaN, 0]\n// TODO: map karo isFinite se\n",
+  "solution": "const values = [42, Infinity, -Infinity, NaN, 0]\nreturn values.map(v => Number.isFinite(v))",
   "tests": [
     {
       "input": [],
-      "expected": "5"
+      "expected": [
+        true,
+        false,
+        false,
+        false,
+        true
+      ]
     }
   ],
   "hints": [
-    "Math.min returns the smallest value"
+    "Number.isFinite() sirf finite numbers ke liye true deta hai",
+    "NaN, Infinity, -Infinity ke liye false"
   ]
 }

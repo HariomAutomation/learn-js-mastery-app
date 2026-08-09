@@ -1,15 +1,42 @@
 {
   "id": "01-variables-declarations-variables-intro-27",
-  "title": "Optional chaining",
-  "starterCode": "const user = { addr: { city: \"NY\" } }\nconsole.log(user?.addr?.city)\nconsole.log(user?.addr?.zip)",
-  "solution": "const user = { addr: { city: \"NY\" } }\nconsole.log(user?.addr?.city)\nconsole.log(user?.addr?.zip)",
+  "title": "Unique array elements",
+  "starterCode": "// Function banao jo array ke unique elements return kare\nfunction unique(arr) {\n  // TODO\n}\n",
+  "solution": "function unique(arr) {\n  return [...new Set(arr)]\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "NY\nundefined"
+      "input": [
+        [
+          1,
+          2,
+          2,
+          3,
+          3,
+          3
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "input": [
+        [
+          "a",
+          "b",
+          "a"
+        ]
+      ],
+      "expected": [
+        "a",
+        "b"
+      ]
     }
   ],
   "hints": [
-    "?. returns undefined if null/undefined"
+    "Set data structure unique values rakhta hai",
+    "Spread operator se array mein convert karo"
   ]
 }

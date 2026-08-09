@@ -1,16 +1,28 @@
 {
-  "id": "02-data-types-reference-types-typeof-06",
-  "title": "Create two references to same object",
-  "starterCode": "const a = { x: 1 };\nconst b = ;\nconsole.log(a === b);",
-  "solution": "const a = { x: 1 };\nconst b = a;\nconsole.log(a === b);",
+  "id": "02-data-types-02-reference-types-typeof-06",
+  "title": "Array-like objects",
+  "starterCode": "const arrayLike = { 0: \"a\", 1: \"b\", 2: \"c\", length: 3 }\nconst arr = Array.from(arrayLike)\nreturn {\n  type: typeof arrayLike,\n  converted: arr,\n  mapResult: arr.map(x => x.toUpperCase())\n}\n",
+  "solution": "const arrayLike = { 0: \"a\", 1: \"b\", 2: \"c\", length: 3 }\nconst arr = Array.from(arrayLike)\nreturn {\n  type: typeof arrayLike,\n  converted: arr,\n  mapResult: arr.map(x => x.toUpperCase())\n}",
   "tests": [
     {
       "input": [],
-      "expected": "true"
+      "expected": {
+        "type": "object",
+        "converted": [
+          "a",
+          "b",
+          "c"
+        ],
+        "mapResult": [
+          "A",
+          "B",
+          "C"
+        ]
+      }
     }
   ],
   "hints": [
-    "Assignment copies the reference",
-    "Both variables point to the same object"
+    "Array-like objects numeric indices aur length property rakhte hain",
+    "Array.from() se real array banta hai"
   ]
 }

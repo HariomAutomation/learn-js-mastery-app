@@ -1,16 +1,23 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-08",
-  "title": "Check if false is falsy",
-  "starterCode": "if (false) {\n  console.log('truthy');\n} else {\n  console.log('falsy');\n}",
-  "solution": "if (false) {\n  console.log('truthy');\n} else {\n  console.log('falsy');\n}",
+  "id": "02-data-types-03-coercion-truthy-falsy-08",
+  "title": "Nullish coalescing vs OR",
+  "starterCode": "const zero = 0\nconst emptyStr = \"\"\nconst falseVal = false\nreturn {\n  orZero: zero || \"default\",\n  nullishZero: zero ?? \"default\",\n  orEmpty: emptyStr || \"default\",\n  nullishEmpty: emptyStr ?? \"default\",\n  orFalse: falseVal || \"default\",\n  nullishFalse: falseVal ?? \"default\"\n}\n",
+  "solution": "const zero = 0\nconst emptyStr = \"\"\nconst falseVal = false\nreturn {\n  orZero: zero || \"default\",\n  nullishZero: zero ?? \"default\",\n  orEmpty: emptyStr || \"default\",\n  nullishEmpty: emptyStr ?? \"default\",\n  orFalse: falseVal || \"default\",\n  nullishFalse: falseVal ?? \"default\"\n}",
   "tests": [
     {
       "input": [],
-      "expected": "falsy"
+      "expected": {
+        "orZero": "default",
+        "nullishZero": 0,
+        "orEmpty": "default",
+        "nullishEmpty": "",
+        "orFalse": "default",
+        "nullishFalse": false
+      }
     }
   ],
   "hints": [
-    "false is obviously falsy",
-    "It's the boolean false"
+    "|| falsy values ke liye bhi default deta hai",
+    "?? sirf null/undefined ke liye default deta hai"
   ]
 }

@@ -1,16 +1,36 @@
 {
-  "id": "04-control-flow-if-else-switch-22",
-  "title": "If with logical AND",
-  "starterCode": "const age = 25;\nconst hasTicket = true;\nif (age >= 18 && hasTicket) {\n  console.log('admitted');\n} else {\n  console.log('denied');\n}",
-  "solution": "const age = 25;\nconst hasTicket = true;\nif (age >= 18 && hasTicket) {\n  console.log('admitted');\n} else {\n  console.log('denied');\n}",
+  "id": "04-control-flow-01-if-else-switch-22",
+  "title": "Nested if se password strength",
+  "starterCode": "// function passwordStrength(password) mein string do\n// <6 chars: \"Weak\", 6-10: \"Medium\", >10 with special char: \"Strong\"\n// >10 bina special char: \"Medium\"\n",
+  "solution": "function passwordStrength(password) {\n  if (password.length < 6) return \"Weak\"\n  if (password.length > 10) {\n    if (/[^a-zA-Z0-9]/.test(password)) return \"Strong\"\n    else return \"Medium\"\n  }\n  return \"Medium\"\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "admitted"
+      "input": [
+        "abc"
+      ],
+      "expected": "Weak"
+    },
+    {
+      "input": [
+        "abcdef"
+      ],
+      "expected": "Medium"
+    },
+    {
+      "input": [
+        "abcdefghij"
+      ],
+      "expected": "Medium"
+    },
+    {
+      "input": [
+        "abcdefghij!"
+      ],
+      "expected": "Strong"
     }
   ],
   "hints": [
-    "Both conditions must be true for &&",
-    "25>=18 is true AND hasTicket is true"
+    "Length pehle check karo",
+    "Special char ke liye regex use karo"
   ]
 }

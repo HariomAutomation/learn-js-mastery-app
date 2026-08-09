@@ -1,16 +1,42 @@
 {
-  "id": "04-control-flow-if-else-switch-25",
-  "title": "Switch as expression",
-  "starterCode": "const code = 404;\nconst message = (() => {\n  switch (code) {\n    case 200: return 'OK';\n    case 404: return 'Not Found';\n    case 500: return 'Server Error';\n    default: return 'Unknown';\n  }\n})();\nconsole.log(message);",
-  "solution": "const code = 404;\nconst message = (() => {\n  switch (code) {\n    case 200: return 'OK';\n    case 404: return 'Not Found';\n    case 500: return 'Server Error';\n    default: return 'Unknown';\n  }\n})();\nconsole.log(message);",
+  "id": "04-control-flow-01-if-else-switch-25",
+  "title": "Guard clause se array validate karo",
+  "starterCode": "// function sumArray(arr) mein array do\n// Agar array nahi hai ya empty hai: \"Invalid array\"\n// Agar koi non-number element hai: \"Array must contain only numbers\"\n// Warna sum return karo\n",
+  "solution": "function sumArray(arr) {\n  if (!Array.isArray(arr) || arr.length === 0) return \"Invalid array\"\n  if (arr.some(item => typeof item !== \"number\" || Number.isNaN(item))) return \"Array must contain only numbers\"\n  return arr.reduce((acc, n) => acc + n, 0)\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "Not Found"
+      "input": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": 6
+    },
+    {
+      "input": [
+        []
+      ],
+      "expected": "Invalid array"
+    },
+    {
+      "input": [
+        "not array"
+      ],
+      "expected": "Invalid array"
+    },
+    {
+      "input": [
+        1,
+        "two",
+        3
+      ],
+      "expected": "Array must contain only numbers"
     }
   ],
   "hints": [
-    "Switch can return values",
-    "404 matches case 404"
+    "Pehle array type check karo",
+    "Phir elements ka type check karo"
   ]
 }

@@ -1,16 +1,19 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-37",
-  "title": "Implicit conversion in if condition",
-  "starterCode": "const val = \"hello\";\nif (val) {\n  console.log(\"truthy\");\n} else {\n  console.log(\"falsy\");\n}",
-  "solution": "const val = \"hello\";\nif (val) {\n  console.log(\"truthy\");\n} else {\n  console.log(\"falsy\");\n}",
+  "id": "02-data-types-03-coercion-truthy-falsy-37",
+  "title": "Proxy getPrototypeOf with toString",
+  "starterCode": "const obj = new Proxy({ x: 1 }, {\n  get(target, prop) {\n    if (prop === \"toString\") return () => \"Proxy object\"\n    return target[prop]\n  }\n})\nreturn {\n  x: obj.x,\n  str: \"\" + obj\n}\n",
+  "solution": "const obj = new Proxy({ x: 1 }, {\n  get(target, prop) {\n    if (prop === \"toString\") return () => \"Proxy object\"\n    return target[prop]\n  }\n})\nreturn {\n  x: obj.x,\n  str: \"\" + obj\n}",
   "tests": [
     {
       "input": [],
-      "expected": "truthy"
+      "expected": {
+        "x": 1,
+        "str": "Proxy object"
+      }
     }
   ],
   "hints": [
-    "Non-empty strings are truthy",
-    "if converts to boolean"
+    "Proxy get trap mein toString override kar sakte ho",
+    "String context mein custom toString call hota hai"
   ]
 }

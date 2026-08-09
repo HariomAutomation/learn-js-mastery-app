@@ -1,16 +1,16 @@
 {
-  "id": "03-operators-arithmetic-comparison-10",
-  "title": "Pre decrement",
-  "starterCode": "let x = 10;\nconst result = --x;\nconsole.log(result);",
-  "solution": "let x = 10;\nconst result = --x;\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-10",
+  "title": "Power calculate karo",
+  "starterCode": "// 2 ki power 10 nikalo (1024)\nconst base = 2\nconst exponent = 10\n// TODO: Math.pow use karo\n",
+  "solution": "const base = 2\nconst exponent = 10\nreturn Math.pow(base, exponent)",
   "tests": [
     {
       "input": [],
-      "expected": "9"
+      "expected": 1024
     }
   ],
   "hints": [
-    "Pre decrement decrements THEN returns value",
-    "x is 9, and result is 9"
+    "Math.pow(base, exp) se power milta hai",
+    "2^10 = 1024"
   ]
 }

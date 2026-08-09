@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useAppStore } from "@/state/store"
 
 interface NoteEditorProps {
@@ -10,6 +10,10 @@ export function NoteEditor({ lessonId }: NoteEditorProps) {
   const saveNote = useAppStore((s) => s.saveNote)
   const [isOpen, setIsOpen] = useState(false)
   const [draft, setDraft] = useState(notes[lessonId] ?? "")
+
+  useEffect(() => {
+    setDraft(notes[lessonId] ?? "")
+  }, [lessonId, notes[lessonId]])
 
   function handleSave() {
     saveNote(lessonId, draft)

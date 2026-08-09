@@ -1,16 +1,27 @@
 {
-  "id": "05-loops-patterns-practice-26",
-  "title": "Star Diamond",
-  "starterCode": "for (let i = 0; i < 5; i++) {\n  let stars = i < 3 ? 2*i+1 : 2*(4-i)+1;\n  let spaces = ' '.repeat(2-Math.abs(i-2));\n  console.log(spaces + '*'.repeat(stars));\n}",
-  "solution": "for (let i = 0; i < 5; i++) {\n  let stars = i < 3 ? 2*i+1 : 2*(4-i)+1;\n  let spaces = ' '.repeat(2-Math.abs(i-2));\n  console.log(spaces + '*'.repeat(stars));\n}",
+  "id": "05-03-patterns-practice-26",
+  "title": "2D array ko rotate 90 degree clockwise karo",
+  "starterCode": "function rotate90(matrix) {\n  // TODO: matrix ko 90 degree clockwise rotate karo\n}",
+  "solution": "function rotate90(matrix) {\n  const n = matrix.length;\n  const result = Array.from({ length: n }, () => Array(n));\n  for (let i = 0; i < n; i++) {\n    for (let j = 0; j < n; j++) {\n      result[j][n - 1 - i] = matrix[i][j];\n    }\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "  *\n ***\n*****\n ***\n  *"
+      "input": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      ],
+      "expected": "3,1,4,2"
     }
   ],
   "hints": [
-    "Calculate stars per row",
-    "Add leading spaces"
+    "Formula: result[j][n-1-i] = matrix[i][j]",
+    "Transpose fir reverse bhi kar sakte ho"
   ]
 }

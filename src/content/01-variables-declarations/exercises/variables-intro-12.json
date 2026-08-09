@@ -1,15 +1,20 @@
 {
   "id": "01-variables-declarations-variables-intro-12",
-  "title": "Object shorthand property",
-  "starterCode": "const name = \"Alice\"\nconst obj = { name }\nconsole.log(obj.name)",
-  "solution": "const name = \"Alice\"\nconst obj = { name }\nconsole.log(obj.name)",
+  "title": "const array push karo",
+  "starterCode": "const fruits = [\"apple\", \"banana\"]\n// \"mango\" push karo aur array return karo\n",
+  "solution": "const fruits = [\"apple\", \"banana\"]\nfruits.push(\"mango\")\nreturn fruits",
   "tests": [
     {
       "input": [],
-      "expected": "Alice"
+      "expected": [
+        "apple",
+        "banana",
+        "mango"
+      ]
     }
   ],
   "hints": [
-    "{ name } is shorthand for { name: name }"
+    "push() se end mein add hota hai",
+    "const array mein push kar sakte ho, reassign nahi"
   ]
 }

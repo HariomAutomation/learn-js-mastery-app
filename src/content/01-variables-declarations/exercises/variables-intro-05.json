@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-variables-intro-05",
-  "title": "Multiple declaration",
-  "starterCode": "let x = 1, y = 2, z = 3\nconsole.log(x + y + z)",
-  "solution": "let x = 1, y = 2, z = 3\nconsole.log(x + y + z)",
+  "title": "String to number conversion",
+  "starterCode": "const price = \"199\"\nconst quantity = \"3\"\n// Dono ko number mein convert karo aur total calculate karo\n",
+  "solution": "const price = \"199\"\nconst quantity = \"3\"\nreturn Number(price) * Number(quantity)",
   "tests": [
     {
       "input": [],
-      "expected": "6"
+      "expected": 597
     }
   ],
   "hints": [
-    "Use comma-separated declarations"
+    "Number() se string convert hoti hai",
+    "parseInt() bhi use kar sakte ho"
   ]
 }

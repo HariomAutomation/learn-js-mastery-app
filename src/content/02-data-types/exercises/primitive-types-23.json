@@ -1,16 +1,25 @@
 {
-  "id": "02-data-types-primitive-types-23",
-  "title": "Declare a variable without assigning a value",
-  "starterCode": "let x;\nconsole.log(x);",
-  "solution": "let x;\nconsole.log(x);",
+  "id": "02-data-types-01-primitive-types-23",
+  "title": "String reverse without methods",
+  "starterCode": "function reverseString(str) {\n  // TODO: use split, reverse, join\n}\n",
+  "solution": "function reverseString(str) {\n  return str.split(\"\").reverse().join(\"\")\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "undefined"
+      "input": [
+        "hello"
+      ],
+      "expected": "olleh"
+    },
+    {
+      "input": [
+        "JavaScript"
+      ],
+      "expected": "tpircSavaJ"
     }
   ],
   "hints": [
-    "Uninitialized variables are undefined",
-    "Just declare with let and no assignment"
+    "split('') se array banta hai",
+    "reverse() array reverse karta hai",
+    "join('') se string banti hai"
   ]
 }

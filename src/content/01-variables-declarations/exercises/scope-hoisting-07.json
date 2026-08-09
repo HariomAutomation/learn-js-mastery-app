@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-scope-hoisting-07",
-  "title": "Function hoisting",
-  "starterCode": "console.log(add(2, 3))\nfunction add(a, b) { return a + b }",
-  "solution": "console.log(add(2, 3))\nfunction add(a, b) { return a + b }",
+  "title": "var re-declaration allowed",
+  "starterCode": "var x = 1\nvar x = 2\nvar x = 3\nreturn x\n",
+  "solution": "var x = 1\nvar x = 2\nvar x = 3\nreturn x",
   "tests": [
     {
       "input": [],
-      "expected": "5"
+      "expected": 3
     }
   ],
   "hints": [
-    "Function declarations are hoisted"
+    "var allows re-declaration",
+    "Last assignment wins"
   ]
 }

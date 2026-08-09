@@ -1,16 +1,20 @@
 {
-  "id": "05-loops-for-of-for-in-07",
-  "title": "For...Of Vs For...In",
-  "starterCode": "const arr = [10, 20, 30];\nfor (const val of arr) console.log('of: ' + val);\nfor (const key in arr) console.log('in: ' + key);",
-  "solution": "const arr = [10, 20, 30];\nfor (const val of arr) console.log('of: ' + val);\nfor (const key in arr) console.log('in: ' + key);",
+  "id": "05-02-for-of-for-in-07",
+  "title": "For-of se entries() use karke index aur value dono lo",
+  "starterCode": "function withIndex(arr) {\n  // TODO: [{index:0, value:1}, {index:1, value:2}] type ka array banao\n}",
+  "solution": "function withIndex(arr) {\n  const result = [];\n  for (const [index, value] of arr.entries()) {\n    result.push({ index, value });\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "of: 10\nof: 20\nof: 30\nin: 0\nin: 1\nin: 2"
+      "input": [
+        "a",
+        "b",
+        "c"
+      ],
+      "expected": "[{\"index\":0,\"value\":\"a\"},{\"index\":1,\"value\":\"b\"},{\"index\":2,\"value\":\"c\"}]"
     }
   ],
   "hints": [
-    "of gives values",
-    "in gives keys/indices"
+    "arr.entries() se [index, value] pairs milte hain",
+    "Destructuring se directly lo"
   ]
 }

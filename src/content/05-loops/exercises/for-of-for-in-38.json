@@ -1,16 +1,22 @@
 {
-  "id": "05-loops-for-of-for-in-38",
-  "title": "For...Of Array Reverse",
-  "starterCode": "const arr = [10, 20, 30, 40];\nfor (const val of [...arr].reverse()) {\n  console.log(val);\n}",
-  "solution": "const arr = [10, 20, 30, 40];\nfor (const val of [...arr].reverse()) {\n  console.log(val);\n}",
+  "id": "05-02-for-of-for-in-38",
+  "title": "For-in se object ke types count karo",
+  "starterCode": "function typeCounts(obj) {\n  // TODO: har type ki kitni properties hain\n  // {a:1,b:\"hi\",c:null} -> {number:1, string:1, object:1}\n}",
+  "solution": "function typeCounts(obj) {\n  const counts = {};\n  for (const key in obj) {\n    if (!Object.prototype.hasOwnProperty.call(obj, key)) continue;\n    const type = obj[key] === null ? \"null\" : typeof obj[key];\n    counts[type] = (counts[type] || 0) + 1;\n  }\n  return counts;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "40\n30\n20\n10"
+      "input": [
+        {
+          "a": 1,
+          "b": "hi",
+          "c": null
+        }
+      ],
+      "expected": "{\"number\":1,\"string\":1,\"null\":1}"
     }
   ],
   "hints": [
-    "Spread to copy array",
-    "Reverse before iterating"
+    "typeof null === 'object' hota hai — special case handle karo",
+    "Counts object me track karo"
   ]
 }

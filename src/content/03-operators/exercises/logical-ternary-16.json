@@ -1,16 +1,22 @@
 {
-  "id": "03-operators-logical-ternary-16",
-  "title": "Optional chaining",
-  "starterCode": "const user = { name: 'Alice' };\nconst result = user?.address?.street;\nconsole.log(result);",
-  "solution": "const user = { name: 'Alice' };\nconst result = user?.address?.street;\nconsole.log(result);",
+  "id": "03-operators-02-logical-ternary-16",
+  "title": "Conditional rendering pattern",
+  "starterCode": "// User role ke hisaab se message banao\nconst role = \"admin\"\n// TODO: ternary + template literal use karo\n",
+  "solution": "const role = \"admin\"\nconst message = `Welcome ${role === \"admin\" ? \"Admin\" : role === \"moderator\" ? \"Moderator\" : \"User\"}!`\nreturn message",
   "tests": [
     {
       "input": [],
-      "expected": "undefined"
+      "expected": "Welcome Admin!"
+    },
+    {
+      "input": [
+        "user"
+      ],
+      "expected": "Welcome User!"
     }
   ],
   "hints": [
-    "?. returns undefined if property doesn't exist",
-    "user has no address property"
+    "Template literal mein ternary use kar sakte ho",
+    "Nested ternary se multiple conditions"
   ]
 }

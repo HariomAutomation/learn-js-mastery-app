@@ -1,16 +1,23 @@
 {
-  "id": "05-loops-patterns-practice-43",
-  "title": "Prime Check Loop",
-  "starterCode": "function isPrime(n) {\n  if (n < 2) return false;\n  for (let i = 2; i <= Math.sqrt(n); i++) {\n    if (n % i === 0) return false;\n  }\n  return true;\n}\nconsole.log(isPrime(17));\nconsole.log(isPrime(15));",
-  "solution": "function isPrime(n) {\n  if (n < 2) return false;\n  for (let i = 2; i <= Math.sqrt(n); i++) {\n    if (n % i === 0) return false;\n  }\n  return true;\n}\nconsole.log(isPrime(17));\nconsole.log(isPrime(15));",
+  "id": "05-03-patterns-practice-43",
+  "title": "Array ke elements ko frequency ke decreasing order me sort karo",
+  "starterCode": "function sortByFrequency(arr) {\n  // TODO: kam frequency wale pehle aaye\n}",
+  "solution": "function sortByFrequency(arr) {\n  const freq = {};\n  for (const num of arr) freq[num] = (freq[num] || 0) + 1;\n  return [...arr].sort((a, b) => freq[a] - freq[b] || a - b);\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "true\nfalse"
+      "input": [
+        2,
+        3,
+        2,
+        4,
+        1,
+        3
+      ],
+      "expected": "1,4,2,2,3,3"
     }
   ],
   "hints": [
-    "Check divisibility",
-    "Only up to sqrt(n)"
+    "Frequency map banao",
+    "Comparator me frequency compare karo, tie pe value"
   ]
 }

@@ -1,0 +1,18 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-42",
+  "title": "WeakRef and scope",
+  "starterCode": "let target = { val: 42 }\nconst ref = new WeakRef(target)\ntarget = null\nreturn ref.deref()\n",
+  "solution": "let target = { val: 42 }\nconst ref = new WeakRef(target)\ntarget = null\nreturn ref.deref()",
+  "tests": [
+    {
+      "input": [],
+      "expected": {
+        "val": 42
+      }
+    }
+  ],
+  "hints": [
+    "WeakRef holds weak reference to target",
+    "deref() returns the target or undefined"
+  ]
+}

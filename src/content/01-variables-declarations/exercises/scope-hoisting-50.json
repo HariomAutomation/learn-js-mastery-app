@@ -1,0 +1,16 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-50",
+  "title": "debugger statement scope",
+  "starterCode": "// debugger statement pauses execution\n// This exercise demonstrates scope inspection\nconst x = 1\nfunction inner() {\n  const y = 2\n  return x + y\n}\nreturn inner()\n",
+  "solution": "const x = 1\nfunction inner() {\n  const y = 2\n  return x + y\n}\nreturn inner()",
+  "tests": [
+    {
+      "input": [],
+      "expected": 3
+    }
+  ],
+  "hints": [
+    "debugger pauses in DevTools",
+    "You can inspect scope variables there"
+  ]
+}

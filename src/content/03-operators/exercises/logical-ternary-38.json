@@ -1,16 +1,19 @@
 {
-  "id": "03-operators-logical-ternary-38",
-  "title": "Optional chaining with array",
-  "starterCode": "const users = [{ name: 'Alice' }];\nconst result = users?.[0]?.name;\nconsole.log(result);",
-  "solution": "const users = [{ name: 'Alice' }];\nconst result = users?.[0]?.name;\nconsole.log(result);",
+  "id": "03-operators-02-logical-ternary-38",
+  "title": "Conditional object spread",
+  "starterCode": "// Dynamic object properties with conditions\nconst isLoggedIn = true\nconst isAdmin = false\nconst user = {\n  name: \"Hariom\",\n  // TODO: conditionally spread karo\n}\nreturn user",
+  "solution": "const isLoggedIn = true\nconst isAdmin = false\nconst user = {\n  name: \"Hariom\",\n  ...(isLoggedIn && { status: \"active\" }),\n  ...(isAdmin && { role: \"admin\" }),\n  ...(!isLoggedIn && { status: \"inactive\" })\n}\nreturn user",
   "tests": [
     {
       "input": [],
-      "expected": "Alice"
+      "expected": {
+        "name": "Hariom",
+        "status": "active"
+      }
     }
   ],
   "hints": [
-    "?.[] for optional property access",
-    "users[0] exists and has name"
+    "Spread se conditional properties add hoti hain",
+    "false && {} empty object spread hota hai"
   ]
 }

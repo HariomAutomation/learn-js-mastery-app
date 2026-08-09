@@ -1,16 +1,21 @@
 {
-  "id": "03-operators-logical-ternary-42",
-  "title": "Ternary with function call",
-  "starterCode": "const isEven = (n) => n % 2 === 0;\nconst result = isEven(4) ? 'even' : 'odd';\nconsole.log(result);",
-  "solution": "const isEven = (n) => n % 2 === 0;\nconst result = isEven(4) ? 'even' : 'odd';\nconsole.log(result);",
+  "id": "03-operators-02-logical-ternary-42",
+  "title": "Logical assignment in loop",
+  "starterCode": "// Array mein unique values track karo\nconst fruits = [\"apple\", \"banana\", \"apple\", \"orange\", \"banana\", \"grape\"]\n// TODO: count with ||= \n",
+  "solution": "const fruits = [\"apple\", \"banana\", \"apple\", \"orange\", \"banana\", \"grape\"]\nconst counts = {}\nfor (const f of fruits) {\n  counts[f] = (counts[f] ?? 0) + 1\n}\nreturn counts",
   "tests": [
     {
       "input": [],
-      "expected": "even"
+      "expected": {
+        "apple": 2,
+        "banana": 2,
+        "orange": 1,
+        "grape": 1
+      }
     }
   ],
   "hints": [
-    "isEven(4) returns true",
-    "Ternary returns first value"
+    "?? 0 se default set hota hai",
+    "Phir increment karo"
   ]
 }

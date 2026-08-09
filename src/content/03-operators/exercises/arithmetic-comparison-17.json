@@ -1,16 +1,16 @@
 {
-  "id": "03-operators-arithmetic-comparison-17",
-  "title": "Zero divided by zero",
-  "starterCode": "const result = 0 / 0;\nconsole.log(result);",
-  "solution": "const result = 0 / 0;\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-17",
+  "title": "Strict equality check",
+  "starterCode": "// Check karo: \"5\" aur 5 strictly barabar hain ya nahi\nconst str = \"5\"\nconst num = 5\n// TODO: === use karo\n",
+  "solution": "const str = \"5\"\nconst num = 5\nreturn str === num",
   "tests": [
     {
       "input": [],
-      "expected": "NaN"
+      "expected": false
     }
   ],
   "hints": [
-    "0/0 is mathematically undefined",
-    "JavaScript returns NaN"
+    "=== bina type coercion ke compare karta hai",
+    "String aur number same nahi hain strictly"
   ]
 }

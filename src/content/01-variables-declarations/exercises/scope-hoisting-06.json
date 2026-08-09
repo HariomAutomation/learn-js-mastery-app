@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-scope-hoisting-06",
-  "title": "Hoisting let const",
-  "starterCode": "try {\n  console.log(x)\n  let x = 5\n} catch(e) {\n  console.log(\"TDZ\")\n}",
-  "solution": "try {\n  console.log(x)\n  let x = 5\n} catch(e) {\n  console.log(\"TDZ\")\n}",
+  "title": "Function hoisting works",
+  "starterCode": "return add(3, 4)\nfunction add(a, b) { return a + b }\n",
+  "solution": "return add(3, 4)\nfunction add(a, b) { return a + b }",
   "tests": [
     {
       "input": [],
-      "expected": "TDZ"
+      "expected": 7
     }
   ],
   "hints": [
-    "let/const have temporal dead zone"
+    "Function declarations are fully hoisted",
+    "Can call before declaration"
   ]
 }

@@ -1,17 +1,47 @@
 {
-  "id": "04-control-flow-early-return-25",
-  "title": "Nested refactor - no access",
-  "starterCode": "function canAccess(user) {\n  if (!user) return false;\n  if (!user.isLoggedIn) return false;\n  if (!user.hasPermission) return false;\n  return true;\n}\nconsole.log(canAccess({ isLoggedIn: true, hasPermission: false }));",
-  "solution": "function canAccess(user) {\n  if (!user) return false;\n  if (!user.isLoggedIn) return false;\n  if (!user.hasPermission) return false;\n  return true;\n}\nconsole.log(canAccess({ isLoggedIn: true, hasPermission: false }));",
+  "id": "04-control-flow-02-early-return-25",
+  "title": "Guard clause for data transformation",
+  "starterCode": "// function transformUser(user)\n// Agar user nahi: null\n// Agar user.name nahi: null\n// Warna { fullName, age } return karo\n",
+  "solution": "function transformUser(user) {\n  if (!user) return null\n  if (!user.name) return null\n  return {\n    fullName: user.name.toUpperCase(),\n    age: user.age || 0\n  }\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "false"
+      "input": [
+        {
+          "name": "hariom",
+          "age": 25
+        }
+      ],
+      "expected": {
+        "fullName": "HARIOM",
+        "age": 25
+      }
+    },
+    {
+      "input": [
+        {
+          "name": "hariom"
+        }
+      ],
+      "expected": {
+        "fullName": "HARIOM",
+        "age": 0
+      }
+    },
+    {
+      "input": [
+        null
+      ],
+      "expected": null
+    },
+    {
+      "input": [
+        {}
+      ],
+      "expected": null
     }
   ],
   "hints": [
-    "user is truthy",
-    "isLoggedIn is true",
-    "hasPermission is false, returns false"
+    "Pehle existence check karo",
+    "Default values se fallback do"
   ]
 }

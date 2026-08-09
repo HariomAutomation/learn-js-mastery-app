@@ -1,16 +1,23 @@
 {
-  "id": "05-loops-for-of-for-in-04",
-  "title": "For...Of Sets",
-  "starterCode": "const set = new Set([1, 2, 3]);\nfor (const val of set) {\n  console.log(val);\n}",
-  "solution": "const set = new Set([1, 2, 3]);\nfor (const val of set) {\n  console.log(val);\n}",
+  "id": "05-02-for-of-for-in-04",
+  "title": "For-in se nested object ke keys flatten karo",
+  "starterCode": "function flattenKeys(obj, prefix = \"\") {\n  // TODO: nested object ke sab keys flat array me do\n  // {a:{b:1}} -> [\"a\", \"a.b\"]\n}",
+  "solution": "function flattenKeys(obj, prefix = \"\") {\n  const keys = [];\n  for (const key in obj) {\n    const fullKey = prefix ? prefix + \".\" + key : key;\n    keys.push(fullKey);\n    if (typeof obj[key] === \"object\" && obj[key] !== null && !Array.isArray(obj[key])) {\n      keys.push(...flattenKeys(obj[key], fullKey));\n    }\n  }\n  return keys;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "1\n2\n3"
+      "input": [
+        {
+          "a": {
+            "b": 1,
+            "c": 2
+          }
+        }
+      ],
+      "expected": "a,a.b,a.c"
     }
   ],
   "hints": [
-    "Set has unique values",
-    "Iterates in insertion order"
+    "Prefix use karo nested keys ke liye",
+    "Recursion se nested objects explore karo"
   ]
 }

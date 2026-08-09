@@ -1,16 +1,32 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-38",
-  "title": "Logical NOT converts to boolean",
-  "starterCode": "console.log(!0);",
-  "solution": "console.log(!0);",
+  "id": "02-data-types-03-coercion-truthy-falsy-38",
+  "title": "Number parseFloat vs parseInt",
+  "starterCode": "return {\n  parseFloat: [parseFloat(\"3.14\"), parseFloat(\"3.14abc\"), parseFloat(\"abc\")],\n  parseInt: [parseInt(\"3.14\"), parseInt(\"3.14abc\"), parseInt(\"abc\")],\n  parseIntRadix: [parseInt(\"10\", 2), parseInt(\"ff\", 16), parseInt(\"77\", 8)]\n}\n",
+  "solution": "return {\n  parseFloat: [parseFloat(\"3.14\"), parseFloat(\"3.14abc\"), parseFloat(\"abc\")],\n  parseInt: [parseInt(\"3.14\"), parseInt(\"3.14abc\"), parseInt(\"abc\")],\n  parseIntRadix: [parseInt(\"10\", 2), parseInt(\"ff\", 16), parseInt(\"77\", 8)]\n}",
   "tests": [
     {
       "input": [],
-      "expected": "true"
+      "expected": {
+        "parseFloat": [
+          3.14,
+          3.14,
+          null
+        ],
+        "parseInt": [
+          3,
+          3,
+          null
+        ],
+        "parseIntRadix": [
+          2,
+          255,
+          63
+        ]
+      }
     }
   ],
   "hints": [
-    "! converts to boolean",
-    "0 is falsy, so !0 is true"
+    "parseFloat decimal point tak parse karta hai",
+    "parseInt radix parameter se base set karta hai"
   ]
 }

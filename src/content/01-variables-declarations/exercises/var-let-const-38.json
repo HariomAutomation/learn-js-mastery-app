@@ -1,15 +1,15 @@
 {
   "id": "01-variables-declarations-var-let-const-38",
-  "title": "let initialization error",
-  "starterCode": "try {\n  let x\n  console.log(x)\n} catch(e) {\n  console.log(\"error\")\n}",
-  "solution": "try {\n  let x\n  console.log(x)\n} catch(e) {\n  console.log(\"error\")\n}",
+  "title": "Scoped variable initializer",
+  "starterCode": "// Variable jo sirf ek baar initialize ho\nfunction createLazyInit(initializer) {\n  // TODO\n}\n",
+  "solution": "function createLazyInit(initializer) {\n  let value\n  let initialized = false\n  return () => {\n    if (!initialized) {\n      value = initializer()\n      initialized = true\n    }\n    return value\n  }\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "undefined"
+      "input": []
     }
   ],
   "hints": [
-    "let can be declared without value"
+    "Lazy initialization pattern hai ye",
+    "Initialized flag se track karo"
   ]
 }

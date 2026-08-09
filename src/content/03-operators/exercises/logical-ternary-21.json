@@ -1,16 +1,19 @@
 {
-  "id": "03-operators-logical-ternary-21",
-  "title": "Logical AND assignment (&&=)",
-  "starterCode": "let x = 10;\nx &&= 5;\nconsole.log(x);",
-  "solution": "let x = 10;\nx &&= 5;\nconsole.log(x);",
+  "id": "03-operators-02-logical-ternary-21",
+  "title": "Guard clause pattern",
+  "starterCode": "// Function mein guard clause use karo\nfunction divide(a, b) {\n  // TODO: agar b 0 ho to error message, nahi to result\n}\nreturn { result: divide(10, 2), error: divide(10, 0) }",
+  "solution": "function divide(a, b) {\n  if (b === 0) return \"Cannot divide by zero\"\n  return a / b\n}\nreturn { result: divide(10, 2), error: divide(10, 0) }",
   "tests": [
     {
       "input": [],
-      "expected": "5"
+      "expected": {
+        "result": 5,
+        "error": "Cannot divide by zero"
+      }
     }
   ],
   "hints": [
-    "x &&= 5 means x = x && 5",
-    "x is truthy, so x becomes 5"
+    "Pehle error condition check karo",
+    "Early return se nested if bachte hain"
   ]
 }

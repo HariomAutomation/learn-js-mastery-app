@@ -1,15 +1,26 @@
 {
   "id": "01-variables-declarations-var-let-const-35",
-  "title": "let scope example",
-  "starterCode": "let x = 1\nfunction test() {\n  console.log(x)\n}\ntest()",
-  "solution": "let x = 1\nfunction test() {\n  console.log(x)\n}\ntest()",
+  "title": "Object deep freeze",
+  "starterCode": "// Recursive deep freeze banao\nfunction deepFreeze(obj) {\n  // TODO\n}\n",
+  "solution": "function deepFreeze(obj) {\n  Object.freeze(obj)\n  Object.keys(obj).forEach(key => {\n    if (typeof obj[key] === \"object\" && obj[key] !== null) {\n      deepFreeze(obj[key])\n    }\n  })\n  return obj\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "1"
+      "input": [
+        {
+          "a": {
+            "b": 1
+          }
+        }
+      ],
+      "expected": {
+        "a": {
+          "b": 1
+        }
+      }
     }
   ],
   "hints": [
-    "let in global scope is accessible"
+    "Pehle khud ko freeze karo",
+    "Phir har nested object ko recursively freeze karo"
   ]
 }

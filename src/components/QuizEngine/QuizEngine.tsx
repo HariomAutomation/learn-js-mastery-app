@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 import type { QuizQuestion } from "@/types/content"
 import { useAppStore } from "@/state/store"
+import { XP_PER_QUIZ_NEW, XP_PER_QUIZ_RETRY } from "@/constants"
 import { ProgressRing } from "@/components/ProgressRing/ProgressRing"
 import { Confetti } from "@/components/Confetti/Confetti"
 
@@ -17,6 +18,7 @@ export function QuizEngine({ questions, lessonId, lessonTitle, onComplete }: Qui
   const [showExplanation, setShowExplanation] = useState(false)
   const [score, setScore] = useState(0)
   const [completed, setCompleted] = useState(false)
+  const [reviewMode, setReviewMode] = useState(false)
   const [answers, setAnswers] = useState<(number | null)[]>(new Array(questions.length).fill(null))
   const recordedRef = useRef(false)
   const onCompleteFired = useRef(false)
@@ -28,6 +30,64 @@ export function QuizEngine({ questions, lessonId, lessonTitle, onComplete }: Qui
     onCompleteFired.current = false
   }, [questions])
 
+  const percentage = questions.length > 0 ? Math.round((score / questions.length) * 100) : 0
+  const currentQuestion = questions[currentIndex]
+
+  useEffect(() => {
+    if (!completed || recordedRef.current) return
+    recordedRef.current = true
+    if (lessonId) {
+      const best = useAppStore.getState().quizScores[lessonId]
+      if (best === undefined || percentage > best) {
+        recordQuizScore(lessonId, percentage)
+        addXP(best === undefined || percentage >= best ? XP_PER_QUIZ_NEW : XP_PER_QUIZ_RETRY)
+      }
+    } else {
+      addXP(XP_PER_QUIZ_RETRY)
+    }
+  }, [completed, percentage, lessonId, recordQuizScore, addXP])
+
+  useEffect(() => {
+    if (!completed || !onComplete || onCompleteFired.current) return
+    onCompleteFired.current = true
+    onComplete()
+  }, [completed, onComplete])
+
+  useEffect(() => {
+    if (completed || reviewMode || questions.length === 0) return
+    function handleKey(e: KeyboardEvent) {
+      if (e.ctrlKey || e.metaKey || e.altKey) return
+      const target = e.target as HTMLElement | null
+      if (target && target.closest(".cm-content, input, textarea, [contenteditable='true']")) return
+      const k = e.key
+      let optionIdx = -1
+      if (k.length === 1 && k >= "A" && k <= "Z") optionIdx = k.charCodeAt(0) - 65
+      else if (k.length === 1 && k >= "a" && k <= "z") optionIdx = k.charCodeAt(0) - 97
+      else if (k.length === 1 && k >= "1" && k <= "9") optionIdx = parseInt(k, 10) - 1
+
+      if (optionIdx >= 0 && optionIdx < currentQuestion.options.length) {
+        e.preventDefault()
+        if (showExplanation) {
+          handleNext()
+        } else {
+          setSelectedOption(optionIdx)
+        }
+        return
+      }
+
+      if (k === "Enter") {
+        e.preventDefault()
+        if (showExplanation) {
+          handleNext()
+        } else if (selectedOption !== null) {
+          handleSubmit()
+        }
+      }
+    }
+    window.addEventListener("keydown", handleKey)
+    return () => window.removeEventListener("keydown", handleKey)
+  }, [completed, reviewMode, currentIndex, currentQuestion, selectedOption, showExplanation, questions.length])
+
   if (questions.length === 0) {
     return (
       <div className="quiz-engine">
@@ -36,17 +96,16 @@ export function QuizEngine({ questions, lessonId, lessonTitle, onComplete }: Qui
     )
   }
 
-  const currentQuestion = questions[currentIndex]
   const answeredCount = answers.filter((a) => a !== null).length
   const progressPercent = Math.round((answeredCount / questions.length) * 100)
 
   function handleSelect(optionIndex: number) {
-    if (showExplanation) return
+    if (showExplanation || completed) return
     setSelectedOption(optionIndex)
   }
 
   function handleSubmit() {
-    if (selectedOption === null) return
+    if (selectedOption === null || showExplanation) return
 
     const newAnswers = [...answers]
     newAnswers[currentIndex] = selectedOption
@@ -74,33 +133,80 @@ export function QuizEngine({ questions, lessonId, lessonTitle, onComplete }: Qui
     setShowExplanation(false)
     setScore(0)
     setCompleted(false)
+    setReviewMode(false)
     setAnswers(new Array(questions.length).fill(null))
     recordedRef.current = false
     onCompleteFired.current = false
   }
 
+  function handleReview() {
+    setReviewMode(true)
+    setCurrentIndex(0)
+    setSelectedOption(null)
+    setShowExplanation(false)
+  }
+
+  function optionClass(i: number, answeredOption: number | null): string {
+    let cls = "option-item"
+    if (i === currentQuestion.correctIndex) {
+      cls += " correct"
+    } else if (i === answeredOption && i !== currentQuestion.correctIndex) {
+      cls += " incorrect"
+    }
+    return cls
+  }
+
   if (completed) {
-    const percentage = Math.round((score / questions.length) * 100)
     const bestScore = lessonId ? useAppStore.getState().quizScores[lessonId] : undefined
     const isImprovement = bestScore !== undefined && percentage >= bestScore
     const wasFirstAttempt = bestScore === undefined
 
-    if (!recordedRef.current) {
-      recordedRef.current = true
-      if (lessonId) {
-        const current = useAppStore.getState().quizScores[lessonId]
-        if (current === undefined || percentage > current) {
-          recordQuizScore(lessonId, percentage)
-          addXP(isImprovement || wasFirstAttempt ? 30 : 10)
-        }
-      } else {
-        addXP(10)
-      }
-    }
+    if (reviewMode) {
+      const reviewAnswer = answers[currentIndex]
+      return (
+        <div className="quiz-engine">
+          <div className="quiz-header">
+            <h3 className="quiz-title">Review — Question {currentIndex + 1} / {questions.length}</h3>
+            <span className="quiz-progress">Reviewing</span>
+          </div>
 
-    if (!onCompleteFired.current && onComplete) {
-      onCompleteFired.current = true
-      onComplete()
+          <div className="quiz-question" key={`review-${currentIndex}`}>
+            <p className="question-text">{currentQuestion.question}</p>
+            <div className="options-list">
+              {currentQuestion.options.map((option, i) => (
+                <div key={i} className={optionClass(i, reviewAnswer)}>
+                  <span className="option-letter">{String.fromCharCode(65 + i)}</span>
+                  <span className="option-text">{option}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="quiz-explanation animate-in">
+            <p>
+              <strong>{reviewAnswer === currentQuestion.correctIndex ? "✅ Sahi! " : "❌ Galat. "}</strong>
+              {currentQuestion.explanation}
+            </p>
+          </div>
+
+          <div className="quiz-actions">
+            {currentIndex > 0 && (
+              <button className="btn btn-secondary" onClick={() => setCurrentIndex((i) => Math.max(0, i - 1))}>
+                ← Prev
+              </button>
+            )}
+            {currentIndex < questions.length - 1 ? (
+              <button className="btn btn-primary" onClick={() => setCurrentIndex((i) => i + 1)}>
+                Next →
+              </button>
+            ) : (
+              <button className="btn btn-primary" onClick={() => setReviewMode(false)}>
+                Back to Results
+              </button>
+            )}
+          </div>
+        </div>
+      )
     }
 
     return (
@@ -122,7 +228,7 @@ export function QuizEngine({ questions, lessonId, lessonTitle, onComplete }: Qui
                 <span className="quiz-result-label">Correct</span>
               </div>
               <div className="quiz-result-stat">
-                <span className="quiz-result-value">{(isImprovement || wasFirstAttempt) ? "+30" : "+10"} XP</span>
+                <span className="quiz-result-value">{(isImprovement || wasFirstAttempt) ? `+${XP_PER_QUIZ_NEW}` : `+${XP_PER_QUIZ_RETRY}`} XP</span>
                 <span className="quiz-result-label">Earned</span>
               </div>
               {!wasFirstAttempt && (
@@ -144,7 +250,7 @@ export function QuizEngine({ questions, lessonId, lessonTitle, onComplete }: Qui
             <button className="btn btn-primary" onClick={handleRestart}>
               Retry Quiz
             </button>
-            <button className="btn btn-secondary" onClick={handleRestart}>
+            <button className="btn btn-secondary" onClick={handleReview}>
               Review Questions
             </button>
           </div>
@@ -174,21 +280,21 @@ export function QuizEngine({ questions, lessonId, lessonTitle, onComplete }: Qui
         <p className="question-text">{currentQuestion.question}</p>
         <div className="options-list">
           {currentQuestion.options.map((option, i) => {
-            let optionClass = "option-item"
+            let optionClassStr = "option-item"
             if (showExplanation) {
               if (i === currentQuestion.correctIndex) {
-                optionClass += " correct"
+                optionClassStr += " correct"
               } else if (i === selectedOption && i !== currentQuestion.correctIndex) {
-                optionClass += " incorrect"
+                optionClassStr += " incorrect"
               }
             } else if (i === selectedOption) {
-              optionClass += " selected"
+              optionClassStr += " selected"
             }
 
             return (
               <button
                 key={i}
-                className={optionClass}
+                className={optionClassStr}
                 onClick={() => handleSelect(i)}
                 disabled={showExplanation}
               >

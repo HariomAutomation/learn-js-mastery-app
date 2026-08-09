@@ -1,16 +1,20 @@
 {
-  "id": "02-data-types-primitive-types-09",
-  "title": "Access last character of a string",
-  "starterCode": "const str = \"Hello\";\nconst last = ;\nconsole.log(last);",
-  "solution": "const str = \"Hello\";\nconst last = str[str.length - 1];\nconsole.log(last);",
+  "id": "02-data-types-01-primitive-types-09",
+  "title": "Infinity aur -Infinity",
+  "starterCode": "const inf = Infinity\nconst negInf = -Infinity\nreturn {\n  infGreaterThanMillion: inf > 1000000,\n  negInfLessThan: negInf < -999999,\n  isFinite: isFinite(inf)\n}\n",
+  "solution": "const inf = Infinity\nconst negInf = -Infinity\nreturn {\n  infGreaterThanMillion: inf > 1000000,\n  negInfLessThan: negInf < -999999,\n  isFinite: isFinite(inf)\n}",
   "tests": [
     {
       "input": [],
-      "expected": "o"
+      "expected": {
+        "infGreaterThanMillion": true,
+        "negInfLessThan": true,
+        "isFinite": false
+      }
     }
   ],
   "hints": [
-    "The last index is length minus 1",
-    "Use str.length - 1 as the index"
+    "Infinity koi bhi number se bada hota hai",
+    "isFinite() check karta hai finite hai ya nahi"
   ]
 }

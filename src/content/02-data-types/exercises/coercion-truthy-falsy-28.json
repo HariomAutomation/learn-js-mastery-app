@@ -1,16 +1,22 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-28",
-  "title": "null coerces to 0 in arithmetic",
-  "starterCode": "console.log(null + 5);",
-  "solution": "console.log(null + 5);",
+  "id": "02-data-types-03-coercion-truthy-falsy-28",
+  "title": "JSON.parse coercion",
+  "starterCode": "const json = '{\"num\": 42, \"str\": \"hello\", \"bool\": true, \"nullVal\": null, \"arr\": [1,2,3]}'\nconst parsed = JSON.parse(json)\nreturn {\n  numType: typeof parsed.num,\n  strType: typeof parsed.str,\n  boolType: typeof parsed.bool,\n  nullType: typeof parsed.nullVal,\n  arrType: Array.isArray(parsed.arr)\n}\n",
+  "solution": "const json = '{\"num\": 42, \"str\": \"hello\", \"bool\": true, \"nullVal\": null, \"arr\": [1,2,3]}'\nconst parsed = JSON.parse(json)\nreturn {\n  numType: typeof parsed.num,\n  strType: typeof parsed.str,\n  boolType: typeof parsed.bool,\n  nullType: typeof parsed.nullVal,\n  arrType: Array.isArray(parsed.arr)\n}",
   "tests": [
     {
       "input": [],
-      "expected": "5"
+      "expected": {
+        "numType": "number",
+        "strType": "string",
+        "boolType": "boolean",
+        "nullType": "object",
+        "arrType": true
+      }
     }
   ],
   "hints": [
-    "null converts to 0",
-    "0 + 5 = 5"
+    "JSON.parse correct types preserve karta hai",
+    "null typeof 'object' return karta hai"
   ]
 }

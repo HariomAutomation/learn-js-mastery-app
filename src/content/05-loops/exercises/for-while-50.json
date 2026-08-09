@@ -1,16 +1,24 @@
 {
-  "id": "05-loops-for-while-50",
-  "title": "For Loop Even Numbers",
-  "starterCode": "for (let i = 2; i <= 10; i += 2) {\n  console.log(i);\n}",
-  "solution": "for (let i = 2; i <= 10; i += 2) {\n  console.log(i);\n}",
+  "id": "05-01-for-while-50",
+  "title": "For loop se simple sorting — bubble sort implement karo",
+  "starterCode": "function bubbleSort(arr) {\n  // TODO: bubble sort algorithm implement karo\n}",
+  "solution": "function bubbleSort(arr) {\n  const result = [...arr];\n  for (let i = 0; i < result.length; i++) {\n    for (let j = 0; j < result.length - i - 1; j++) {\n      if (result[j] > result[j + 1]) {\n        [result[j], result[j + 1]] = [result[j + 1], result[j]];\n      }\n    }\n  }\n  return result;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "2\n4\n6\n8\n10"
+      "input": [
+        [
+          5,
+          3,
+          1,
+          4,
+          2
+        ]
+      ],
+      "expected": "1,2,3,4,5"
     }
   ],
   "hints": [
-    "Start at 2",
-    "Increment by 2"
+    "Outer loop iterations ke liye",
+    "Inner loop adjacent elements compare aur swap karo"
   ]
 }

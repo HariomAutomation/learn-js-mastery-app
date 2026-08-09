@@ -1,0 +1,16 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-38",
+  "title": "Symbol as object key",
+  "starterCode": "const id = Symbol(\"id\")\nconst obj = { [id]: 123, name: \"test\" }\nreturn obj[id]\n",
+  "solution": "const id = Symbol(\"id\")\nconst obj = { [id]: 123, name: \"test\" }\nreturn obj[id]",
+  "tests": [
+    {
+      "input": [],
+      "expected": 123
+    }
+  ],
+  "hints": [
+    "Symbols can be object keys",
+    "Access with obj[symbolVariable]"
+  ]
+}

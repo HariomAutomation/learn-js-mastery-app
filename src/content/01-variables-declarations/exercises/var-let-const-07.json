@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-var-let-const-07",
-  "title": "const array mutation",
-  "starterCode": "const arr = [1, 2]\narr.push(3)\nconsole.log(arr.length)",
-  "solution": "const arr = [1, 2]\narr.push(3)\nconsole.log(arr.length)",
+  "title": "Bug: TDZ with let",
+  "starterCode": "// Fix this Temporal Dead Zone error\ntry {\n  let y = y + 1\n  return y\n} catch(e) {\n  return \"TDZ error caught\"\n}\n",
+  "solution": "try {\n  let y = y + 1\n  return y\n} catch(e) {\n  return \"TDZ error caught\"\n}",
   "tests": [
     {
       "input": [],
-      "expected": "3"
+      "expected": "TDZ error caught"
     }
   ],
   "hints": [
-    "const allows array mutation"
+    "let y = y + 1 — right side pe y abhi defined nahi hai",
+    "TDZ mein access karne se ReferenceError aata hai"
   ]
 }

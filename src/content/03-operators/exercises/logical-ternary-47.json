@@ -1,16 +1,20 @@
 {
-  "id": "03-operators-logical-ternary-47",
-  "title": "Logical AND short circuit",
-  "starterCode": "const showGreeting = false;\nconst result = showGreeting && 'Welcome!';\nconsole.log(result);",
-  "solution": "const showGreeting = false;\nconst result = showGreeting && 'Welcome!';\nconsole.log(result);",
+  "id": "03-operators-02-logical-ternary-47",
+  "title": "Combined logical patterns",
+  "starterCode": "// Form submission validation\nconst form = { email: \"test@test.com\", password: \"12345\", confirm: \"12345\" }\n// TODO: validate email, password length, match\n",
+  "solution": "const form = { email: \"test@test.com\", password: \"12345\", confirm: \"12345\" }\nconst errors = {\n  email: !form.email || !form.email.includes(\"@\") ? \"Invalid email\" : null,\n  password: form.password.length < 6 ? \"Too short\" : null,\n  confirm: form.password !== form.confirm ? \"Mismatch\" : null\n}\nreturn errors",
   "tests": [
     {
       "input": [],
-      "expected": "false"
+      "expected": {
+        "email": null,
+        "password": null,
+        "confirm": null
+      }
     }
   ],
   "hints": [
-    "&& short-circuits on first falsy",
-    "showGreeting is false"
+    "!form.email se falsy check hota hai",
+    "|| se koi bhi condition true ho to error"
   ]
 }

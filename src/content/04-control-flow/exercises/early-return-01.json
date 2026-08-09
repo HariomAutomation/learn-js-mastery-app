@@ -1,16 +1,36 @@
 {
-  "id": "04-control-flow-early-return-01",
-  "title": "Simple validation return",
-  "starterCode": "function divide(a, b) {\n  if (b === 0) return 'Cannot divide by zero';\n  return a / b;\n}\nconsole.log(divide(10, 2));",
-  "solution": "function divide(a, b) {\n  if (b === 0) return 'Cannot divide by zero';\n  return a / b;\n}\nconsole.log(divide(10, 2));",
+  "id": "04-control-flow-02-early-return-01",
+  "title": "Null check with early return",
+  "starterCode": "// function greet(name) mein name do\n// Agar name null/undefined/empty hai: \"Hello, Guest!\"\n// Warna: \"Hello, {name}!\"\n",
+  "solution": "function greet(name) {\n  if (!name) return \"Hello, Guest!\"\n  return `Hello, ${name}!`\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "5"
+      "input": [
+        "Hariom"
+      ],
+      "expected": "Hello, Hariom!"
+    },
+    {
+      "input": [
+        null
+      ],
+      "expected": "Hello, Guest!"
+    },
+    {
+      "input": [
+        null
+      ],
+      "expected": "Hello, Guest!"
+    },
+    {
+      "input": [
+        ""
+      ],
+      "expected": "Hello, Guest!"
     }
   ],
   "hints": [
-    "Guard clause returns early on error",
-    "b is not 0, so normal return executes"
+    "!name se null, undefined, empty string sab check hote hain",
+    "Early return se nesting kam hoti hai"
   ]
 }

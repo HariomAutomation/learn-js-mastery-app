@@ -1,16 +1,20 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-46",
-  "title": "Exponentiation with string",
-  "starterCode": "console.log(\"2\" ** 3);",
-  "solution": "console.log(\"2\" ** 3);",
+  "id": "02-data-types-03-coercion-truthy-falsy-46",
+  "title": "Number.EPSILON comparison",
+  "starterCode": "const a = 0.1 + 0.2\nconst b = 0.3\nreturn {\n  directEqual: a === b,\n  epsilonEqual: Math.abs(a - b) < Number.EPSILON,\n  epsilon: Number.EPSILON\n}\n",
+  "solution": "const a = 0.1 + 0.2\nconst b = 0.3\nreturn {\n  directEqual: a === b,\n  epsilonEqual: Math.abs(a - b) < Number.EPSILON,\n  epsilon: Number.EPSILON\n}",
   "tests": [
     {
       "input": [],
-      "expected": "8"
+      "expected": {
+        "directEqual": false,
+        "epsilonEqual": true,
+        "epsilon": 2.220446049250313e-16
+      }
     }
   ],
   "hints": [
-    "** does math",
-    "2^3 = 8"
+    "Number.EPSILON se floating point comparison hota hai",
+    "Math.abs(a - b) < Number.EPSILON se safe comparison hota hai"
   ]
 }

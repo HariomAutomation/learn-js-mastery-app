@@ -1,16 +1,57 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-04",
-  "title": "Check if non-empty string is truthy",
-  "starterCode": "if (\"hello\") {\n  console.log(\"truthy\");\n} else {\n  console.log(\"falsy\");\n}",
-  "solution": "if (\"hello\") {\n  console.log(\"truthy\");\n} else {\n  console.log(\"falsy\");\n}",
+  "id": "02-data-types-03-coercion-truthy-falsy-04",
+  "title": "Truthy values identify karo",
+  "starterCode": "const testValues = [1, -1, \"0\", \"false\", [], {}, function() {}, Infinity, -Infinity, Symbol(\"x\"), 42n]\nreturn testValues.map(v => ({\n  value: String(v),\n  isTruthy: Boolean(v)\n}))\n",
+  "solution": "const testValues = [1, -1, \"0\", \"false\", [], {}, function() {}, Infinity, -Infinity, Symbol(\"x\"), 42n]\nreturn testValues.map(v => ({\n  value: String(v),\n  isTruthy: Boolean(v)\n}))",
   "tests": [
     {
       "input": [],
-      "expected": "truthy"
+      "expected": [
+        {
+          "value": "1",
+          "isTruthy": true
+        },
+        {
+          "value": "-1",
+          "isTruthy": true
+        },
+        {
+          "value": "0",
+          "isTruthy": true
+        },
+        {
+          "value": "false",
+          "isTruthy": true
+        },
+        {
+          "value": "[object Object]",
+          "isTruthy": true
+        },
+        {
+          "value": "function() {}",
+          "isTruthy": true
+        },
+        {
+          "value": "Infinity",
+          "isTruthy": true
+        },
+        {
+          "value": "-Infinity",
+          "isTruthy": true
+        },
+        {
+          "value": "Symbol(x)",
+          "isTruthy": true
+        },
+        {
+          "value": "42",
+          "isTruthy": true
+        }
+      ]
     }
   ],
   "hints": [
-    "Any non-empty string is truthy",
-    "Even whitespace-only strings"
+    "Non-empty strings, non-zero numbers, objects, arrays — sab truthy hain",
+    "0, '', null, undefined, NaN, false — sab falsy hain"
   ]
 }

@@ -1,0 +1,29 @@
+{
+  "id": "01-variables-declarations-variables-intro-40",
+  "title": "Compact array — remove falsy",
+  "starterCode": "// Array se saare falsy values hatao\n// compact([0, 1, false, 2, \"\", 3]) = [1, 2, 3]\nfunction compact(arr) {\n  // TODO\n}",
+  "solution": "function compact(arr) {\n  return arr.filter(Boolean)\n}",
+  "tests": [
+    {
+      "input": [
+        [
+          0,
+          1,
+          false,
+          2,
+          "",
+          3
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        3
+      ]
+    }
+  ],
+  "hints": [
+    "filter(Boolean) se falsy values hat jati hain",
+    "0, false, null, undefined, \"\" sab falsy hain"
+  ]
+}

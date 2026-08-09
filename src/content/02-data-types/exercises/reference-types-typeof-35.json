@@ -1,16 +1,25 @@
 {
-  "id": "02-data-types-reference-types-typeof-35",
-  "title": "Arrow function typeof",
-  "starterCode": "const fn = () => {};\nconsole.log();",
-  "solution": "const fn = () => {};\nconsole.log(typeof fn);",
+  "id": "02-data-types-02-reference-types-typeof-35",
+  "title": "Object groupBy",
+  "starterCode": "const people = [\n  { name: \"Hariom\", dept: \"IT\" },\n  { name: \"Rahul\", dept: \"HR\" },\n  { name: \"Amit\", dept: \"IT\" },\n  { name: \"Priya\", dept: \"HR\" }\n]\nconst grouped = people.reduce((acc, p) => {\n  acc[p.dept] = acc[p.dept] || []\n  acc[p.dept].push(p.name)\n  return acc\n}, {})\nreturn grouped\n",
+  "solution": "const people = [\n  { name: \"Hariom\", dept: \"IT\" },\n  { name: \"Rahul\", dept: \"HR\" },\n  { name: \"Amit\", dept: \"IT\" },\n  { name: \"Priya\", dept: \"HR\" }\n]\nconst grouped = people.reduce((acc, p) => {\n  acc[p.dept] = acc[p.dept] || []\n  acc[p.dept].push(p.name)\n  return acc\n}, {})\nreturn grouped",
   "tests": [
     {
       "input": [],
-      "expected": "function"
+      "expected": {
+        "IT": [
+          "Hariom",
+          "Amit"
+        ],
+        "HR": [
+          "Rahul",
+          "Priya"
+        ]
+      }
     }
   ],
   "hints": [
-    "Arrow functions are also functions",
-    "typeof works the same"
+    "Reduce se object build karo",
+    "Har group ko initialize karo array se"
   ]
 }

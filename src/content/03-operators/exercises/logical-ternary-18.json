@@ -1,16 +1,16 @@
 {
-  "id": "03-operators-logical-ternary-18",
-  "title": "Optional chaining method",
-  "starterCode": "const obj = { greet: () => 'hi' };\nconst result = obj?.greet();\nconsole.log(result);",
-  "solution": "const obj = { greet: () => 'hi' };\nconst result = obj?.greet();\nconsole.log(result);",
+  "id": "03-operators-02-logical-ternary-18",
+  "title": "Multiple conditions OR",
+  "starterCode": "// Discount milta hai: student ya senior citizen ya military\nconst isStudent = false\nconst isSenior = true\nconst isMilitary = false\n// TODO: koi ek bhi true ho to discount\n",
+  "solution": "const isStudent = false\nconst isSenior = true\nconst isMilitary = false\nconst getsDiscount = isStudent || isSenior || isMilitary\nreturn getsDiscount",
   "tests": [
     {
       "input": [],
-      "expected": "hi"
+      "expected": true
     }
   ],
   "hints": [
-    "?. can be used for method calls",
-    "obj exists and has greet method"
+    "|| se koi ek bhi true ho to true",
+    "Ek bhi condition满足 to discount milega"
   ]
 }

@@ -1,17 +1,46 @@
 {
-  "id": "04-control-flow-early-return-24",
-  "title": "Nested refactor to flat",
-  "starterCode": "function canAccess(user) {\n  if (!user) return false;\n  if (!user.isLoggedIn) return false;\n  if (!user.hasPermission) return false;\n  return true;\n}\nconsole.log(canAccess({ isLoggedIn: true, hasPermission: true }));",
-  "solution": "function canAccess(user) {\n  if (!user) return false;\n  if (!user.isLoggedIn) return false;\n  if (!user.hasPermission) return false;\n  return true;\n}\nconsole.log(canAccess({ isLoggedIn: true, hasPermission: true }));",
+  "id": "04-control-flow-02-early-return-24",
+  "title": "Guard for nested array",
+  "starterCode": "// function flatten(arr) mein nested array do\n// Agar array nahi: []\n// Agar koi element array nahi hai: \"Invalid nested array\"\n// Warna flat array do\n",
+  "solution": "function flatten(arr) {\n  if (!Array.isArray(arr)) return []\n  if (arr.some(item => !Array.isArray(item))) return \"Invalid nested array\"\n  return arr.flat()\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "true"
+      "input": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "input": [
+        "not array"
+      ],
+      "expected": []
+    },
+    {
+      "input": [
+        [
+          1,
+          2
+        ],
+        "invalid"
+      ],
+      "expected": "Invalid nested array"
     }
   ],
   "hints": [
-    "user is truthy",
-    "isLoggedIn is true",
-    "hasPermission is true"
+    "Array.isArray() se type check hota hai",
+    ".flat() se nested arrays flatten hoti hain"
   ]
 }

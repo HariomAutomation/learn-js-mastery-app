@@ -1,16 +1,23 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-18",
-  "title": "String() conversion from number",
-  "starterCode": "console.log(String(42));",
-  "solution": "console.log(String(42));",
+  "id": "02-data-types-03-coercion-truthy-falsy-18",
+  "title": "Relational operator coercion",
+  "starterCode": "return {\n  numStr: 5 > \"3\",\n  strStr: \"10\" > \"9\",\n  boolNum: true < 2,\n  nullNum: null >= 0,\n  nanCompare: NaN > NaN,\n  nanEqual: NaN === NaN\n}\n",
+  "solution": "return {\n  numStr: 5 > \"3\",\n  strStr: \"10\" > \"9\",\n  boolNum: true < 2,\n  nullNum: null >= 0,\n  nanCompare: NaN > NaN,\n  nanEqual: NaN === NaN\n}",
   "tests": [
     {
       "input": [],
-      "expected": "42"
+      "expected": {
+        "numStr": true,
+        "strStr": false,
+        "boolNum": true,
+        "nullNum": true,
+        "nanCompare": false,
+        "nanEqual": false
+      }
     }
   ],
   "hints": [
-    "String() converts to string",
-    "Returns '42' not 42"
+    "String comparison alphabetical hota hai",
+    "NaN kisi se bhi compare nahi hota"
   ]
 }

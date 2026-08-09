@@ -1,16 +1,18 @@
 {
-  "id": "05-loops-for-of-for-in-09",
-  "title": "Object.keys()",
-  "starterCode": "const obj = {a: 1, b: 2, c: 3};\nconst keys = Object.keys(obj);\nconsole.log(keys);",
-  "solution": "const obj = {a: 1, b: 2, c: 3};\nconst keys = Object.keys(obj);\nconsole.log(keys);",
+  "id": "05-02-for-of-for-in-09",
+  "title": "For-of se string ke characters count karo",
+  "starterCode": "function countChars(str) {\n  // TODO: string me har character ki frequency nikalo\n}",
+  "solution": "function countChars(str) {\n  const freq = {};\n  for (const char of str) {\n    freq[char] = (freq[char] || 0) + 1;\n  }\n  return freq;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "[ 'a', 'b', 'c' ]"
+      "input": [
+        "hello"
+      ],
+      "expected": "{\"h\":1,\"e\":1,\"l\":2,\"o\":1}"
     }
   ],
   "hints": [
-    "Object.keys() returns array",
-    "Keys are strings"
+    "For-of se har character iterate karo",
+    "Object me count track karo"
   ]
 }

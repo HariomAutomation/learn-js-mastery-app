@@ -1,16 +1,19 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-31",
-  "title": "Boolean of empty array",
-  "starterCode": "console.log(Boolean([]));",
-  "solution": "console.log(Boolean([]));",
+  "id": "02-data-types-03-coercion-truthy-falsy-31",
+  "title": "Proxy in trap",
+  "starterCode": "const data = new Proxy({ name: \"Hariom\", age: 25 }, {\n  has(target, prop) {\n    return prop in target && target[prop] !== undefined\n  }\n})\nreturn {\n  hasName: \"name\" in data,\n  hasCity: \"city\" in data\n}\n",
+  "solution": "const data = new Proxy({ name: \"Hariom\", age: 25 }, {\n  has(target, prop) {\n    return prop in target && target[prop] !== undefined\n  }\n})\nreturn {\n  hasName: \"name\" in data,\n  hasCity: \"city\" in data\n}",
   "tests": [
     {
       "input": [],
-      "expected": "true"
+      "expected": {
+        "hasName": true,
+        "hasCity": false
+      }
     }
   ],
   "hints": [
-    "Arrays are objects",
-    "All objects are truthy"
+    "Proxy has trap 'in' operator intercept karta hai",
+    "Custom logic se property existence check kar sakte ho"
   ]
 }

@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-var-let-const-03",
-  "title": "const reassignment error",
-  "starterCode": "const x = 1\ntry {\n  x = 2\n} catch(e) {\n  console.log(\"error\")\n}",
-  "solution": "const x = 1\ntry {\n  x = 2\n} catch(e) {\n  console.log(\"error\")\n}",
+  "title": "Bug: const reassignment",
+  "starterCode": "// Fix: this should not throw error\nconst PI = 3.14\ntry {\n  PI = 3.14159\n  return \"changed\"\n} catch(e) {\n  return \"error: \" + e.message\n}\n",
+  "solution": "const PI = 3.14\ntry {\n  PI = 3.14159\n  return \"changed\"\n} catch(e) {\n  return \"error: \" + e.message\n}",
   "tests": [
     {
       "input": [],
-      "expected": "error"
+      "expected": "error: Assignment to constant variable."
     }
   ],
   "hints": [
-    "const cannot be reassigned"
+    "const reassign nahi ho sakta",
+    "Ye error expected hai — catch mein handle karo"
   ]
 }

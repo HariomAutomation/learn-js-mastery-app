@@ -1,16 +1,21 @@
 {
-  "id": "02-data-types-coercion-truthy-falsy-36",
-  "title": "Number 0 is falsy but '0' is truthy",
-  "starterCode": "console.log(0 == \"0\", 0 === \"0\");",
-  "solution": "console.log(0 == \"0\", 0 === \"0\");",
+  "id": "02-data-types-03-coercion-truthy-falsy-36",
+  "title": "Nullish assignment",
+  "starterCode": "let a = 0\nlet b = \"\"\nlet c = null\nlet d = undefined\na ??= 10\nb ??= \"default\"\nc ??= \"assigned\"\nd ??= \"assigned\"\nreturn { a, b, c, d }\n",
+  "solution": "let a = 0\nlet b = \"\"\nlet c = null\nlet d = undefined\na ??= 10\nb ??= \"default\"\nc ??= \"assigned\"\nd ??= \"assigned\"\nreturn { a, b, c, d }",
   "tests": [
     {
       "input": [],
-      "expected": "true false"
+      "expected": {
+        "a": 0,
+        "b": "",
+        "c": "assigned",
+        "d": "assigned"
+      }
     }
   ],
   "hints": [
-    "== does type coercion",
-    "=== does not"
+    "??= sirf null/undefined pe assign karta hai",
+    "0 aur '' ko valid value maanta hai"
   ]
 }

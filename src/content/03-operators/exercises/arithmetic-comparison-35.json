@@ -1,15 +1,23 @@
 {
-  "id": "03-operators-arithmetic-comparison-35",
-  "title": "Math.sqrt",
-  "starterCode": "const result = Math.sqrt(9);\nconsole.log(result);",
-  "solution": "const result = Math.sqrt(9);\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-35",
+  "title": "Number.isInteger use karo",
+  "starterCode": "// Check karo kaunse integers hain\nconst values = [42, 3.14, -7, 0, \"10\", NaN]\n// TODO: map karo isInteger se\n",
+  "solution": "const values = [42, 3.14, -7, 0, \"10\", NaN]\nreturn values.map(v => Number.isInteger(v))",
   "tests": [
     {
       "input": [],
-      "expected": "3"
+      "expected": [
+        true,
+        false,
+        true,
+        true,
+        false,
+        false
+      ]
     }
   ],
   "hints": [
-    "Math.sqrt returns the square root"
+    "Number.isInteger() sirf pure integers ke liye true",
+    "String '10' integer nahi hai"
   ]
 }

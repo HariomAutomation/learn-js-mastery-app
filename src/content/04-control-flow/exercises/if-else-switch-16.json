@@ -1,16 +1,44 @@
 {
-  "id": "04-control-flow-if-else-switch-16",
-  "title": "Switch with string comparison",
-  "starterCode": "const color = 'red';\nswitch (color) {\n  case 'red':\n    console.log('warm');\n    break;\n  case 'blue':\n    console.log('cool');\n    break;\n  default:\n    console.log('neutral');\n}",
-  "solution": "const color = 'red';\nswitch (color) {\n  case 'red':\n    console.log('warm');\n    break;\n  case 'blue':\n    console.log('cool');\n    break;\n  default:\n    console.log('neutral');\n}",
+  "id": "04-control-flow-01-if-else-switch-16",
+  "title": "Nested if se permission check",
+  "starterCode": "// function checkAccess(role, isOnline, hasSubscription)\n// Admin: \"Full access\"\n// Online + Subscriber: \"Premium access\"\n// Online: \"Basic access\"\n// Offline: \"No access\"\n",
+  "solution": "function checkAccess(role, isOnline, hasSubscription) {\n  if (role === \"admin\") return \"Full access\"\n  if (!isOnline) return \"No access\"\n  if (hasSubscription) return \"Premium access\"\n  return \"Basic access\"\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "warm"
+      "input": [
+        "admin",
+        false,
+        false
+      ],
+      "expected": "Full access"
+    },
+    {
+      "input": [
+        "user",
+        true,
+        true
+      ],
+      "expected": "Premium access"
+    },
+    {
+      "input": [
+        "user",
+        true,
+        false
+      ],
+      "expected": "Basic access"
+    },
+    {
+      "input": [
+        "user",
+        false,
+        true
+      ],
+      "expected": "No access"
     }
   ],
   "hints": [
-    "switch does strict comparison",
-    "'red' === 'red' is true"
+    "Admin ko hamesha full access do",
+    "Offline hai to kuch nahi milega"
   ]
 }

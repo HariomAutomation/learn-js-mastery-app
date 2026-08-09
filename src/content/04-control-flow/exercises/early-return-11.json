@@ -1,16 +1,49 @@
 {
-  "id": "04-control-flow-early-return-11",
-  "title": "Error handling on invalid input",
-  "starterCode": "function parseJSON(str) {\n  if (typeof str !== 'string') return null;\n  try {\n    return JSON.parse(str);\n  } catch {\n    return null;\n  }\n}\nconsole.log(parseJSON(123));",
-  "solution": "function parseJSON(str) {\n  if (typeof str !== 'string') return null;\n  try {\n    return JSON.parse(str);\n  } catch {\n    return null;\n  }\n}\nconsole.log(parseJSON(123));",
+  "id": "04-control-flow-02-early-return-11",
+  "title": "Permission guard pattern",
+  "starterCode": "// function deleteUser(user, targetId)\n// Agar user nahi: \"No user\"\n// Agar user.admin nahi: \"Not authorized\"\n// Agar targetId same hai user.id: \"Cannot delete self\"\n// Warna \"Deleted {targetId}\"\n",
+  "solution": "function deleteUser(user, targetId) {\n  if (!user) return \"No user\"\n  if (!user.admin) return \"Not authorized\"\n  if (targetId === user.id) return \"Cannot delete self\"\n  return `Deleted ${targetId}`\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "null"
+      "input": [
+        {
+          "id": 1,
+          "admin": true
+        },
+        2
+      ],
+      "expected": "Deleted 2"
+    },
+    {
+      "input": [
+        null,
+        2
+      ],
+      "expected": "No user"
+    },
+    {
+      "input": [
+        {
+          "id": 1,
+          "admin": false
+        },
+        2
+      ],
+      "expected": "Not authorized"
+    },
+    {
+      "input": [
+        {
+          "id": 1,
+          "admin": true
+        },
+        1
+      ],
+      "expected": "Cannot delete self"
     }
   ],
   "hints": [
-    "123 is not a string",
-    "Guard clause returns null"
+    "Har permission check ke liye early return karo",
+    "Authorization pehle, operation baad mein"
   ]
 }

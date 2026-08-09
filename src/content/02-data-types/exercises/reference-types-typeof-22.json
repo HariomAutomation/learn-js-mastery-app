@@ -1,16 +1,19 @@
 {
-  "id": "02-data-types-reference-types-typeof-22",
-  "title": "Nested spread shallow copy",
-  "starterCode": "const a = { nested: { val: 1 } };\nconst b = { ...a };\nconsole.log(a === b);",
-  "solution": "const a = { nested: { val: 1 } };\nconst b = { ...a };\nconsole.log(a === b);",
+  "id": "02-data-types-02-reference-types-typeof-22",
+  "title": "Proxy set trap",
+  "starterCode": "const validator = {\n  set(target, prop, value) {\n    // TODO: age positive number hona chahiye\n  }\n}\nconst person = new Proxy({ name: \"Hariom\" }, validator)\nperson.age = 25\nperson.age = -5\nreturn { name: person.name, age: person.age }\n",
+  "solution": "const validator = {\n  set(target, prop, value) {\n    if (prop === \"age\") {\n      if (typeof value !== \"number\" || value < 0) {\n        return false\n      }\n    }\n    target[prop] = value\n    return true\n  }\n}\nconst person = new Proxy({ name: \"Hariom\" }, validator)\nperson.age = 25\nperson.age = -5\nreturn { name: person.name, age: person.age }",
   "tests": [
     {
       "input": [],
-      "expected": "false"
+      "expected": {
+        "name": "Hariom",
+        "age": 25
+      }
     }
   ],
   "hints": [
-    "Spread creates a new object",
-    "But nested objects still reference"
+    "Proxy set trap property assignment intercept karta hai",
+    "False return karne se assignment reject hota hai"
   ]
 }

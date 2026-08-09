@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-scope-hoisting-08",
-  "title": "Scope chain lookup",
-  "starterCode": "var x = 1\nfunction a() {\n  var x = 2\n  function b() {\n    console.log(x)\n  }\n  b()\n}\na()",
-  "solution": "var x = 1\nfunction a() {\n  var x = 2\n  function b() {\n    console.log(x)\n  }\n  b()\n}\na()",
+  "title": "let re-declaration not allowed",
+  "starterCode": "try {\n  let x = 1\n  let x = 2\n  return x\n} catch(e) {\n  return \"SyntaxError\"\n}\n",
+  "solution": "try {\n  let x = 1\n  let x = 2\n  return x\n} catch(e) {\n  return \"SyntaxError\"\n}",
   "tests": [
     {
       "input": [],
-      "expected": "2"
+      "expected": "SyntaxError"
     }
   ],
   "hints": [
-    "b looks at a's x first"
+    "let doesn't allow re-declaration in same scope",
+    "This is a SyntaxError caught at parse time"
   ]
 }

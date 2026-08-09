@@ -1,16 +1,20 @@
 {
-  "id": "03-operators-logical-ternary-30",
-  "title": "OR returns first truthy",
-  "starterCode": "const result = 0 || \"\" || 42;\nconsole.log(result);",
-  "solution": "const result = 0 || \"\" || 42;\nconsole.log(result);",
+  "id": "03-operators-02-logical-ternary-30",
+  "title": "Conditional default values",
+  "starterCode": "// User object se safe values nikalo\nconst user = { name: \"Hariom\", email: null, phone: undefined }\n// TODO: safe defaults set karo\n",
+  "solution": "const user = { name: \"Hariom\", email: null, phone: undefined }\nreturn {\n  name: user.name ?? \"No name\",\n  email: user.email ?? \"No email\",\n  phone: user.phone ?? \"No phone\"\n}",
   "tests": [
     {
       "input": [],
-      "expected": "42"
+      "expected": {
+        "name": "Hariom",
+        "email": "No email",
+        "phone": "No phone"
+      }
     }
   ],
   "hints": [
-    "|| returns first truthy value",
-    "0 and '' are falsy, 42 is truthy"
+    "?? sirf null/undefined ke liye default deta hai",
+    "Name hai to wahi rahega"
   ]
 }

@@ -1,16 +1,24 @@
 {
-  "id": "05-loops-patterns-practice-12",
-  "title": "Inverted Pyramid",
-  "starterCode": "for (let i = 5; i >= 1; i--) {\n  let spaces = ' '.repeat(5-i);\n  let stars = '* '.repeat(i);\n  console.log(spaces + stars);\n}",
-  "solution": "for (let i = 5; i >= 1; i--) {\n  let spaces = ' '.repeat(5-i);\n  let stars = '* '.repeat(i);\n  console.log(spaces + stars);\n}",
+  "id": "05-03-patterns-practice-12",
+  "title": "Array ke indices dhundho jinka sum target ho",
+  "starterCode": "function twoSum(arr, target) {\n  // TODO: do indices dhundho jinka sum target ho\n}",
+  "solution": "function twoSum(arr, target) {\n  const map = new Map();\n  for (let i = 0; i < arr.length; i++) {\n    const complement = target - arr[i];\n    if (map.has(complement)) return [map.get(complement), i];\n    map.set(arr[i], i);\n  }\n  return null;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "* * * * * \n  * * * * \n    * * * \n      * * \n        * "
+      "input": [
+        [
+          2,
+          7,
+          11,
+          15
+        ],
+        9
+      ],
+      "expected": "0,1"
     }
   ],
   "hints": [
-    "Decrease stars",
-    "Increase spaces"
+    "Map use karo complements track karne ke liye",
+    "Complement milta hai toh dono indices return karo"
   ]
 }

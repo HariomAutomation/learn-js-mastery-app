@@ -1,0 +1,15 @@
+{
+  "id": "01-variables-declarations-variables-intro-41",
+  "title": "Memoize function banao",
+  "starterCode": "// Function ko memoize karo — same arguments pe cached result do\nfunction memoize(fn) {\n  // TODO\n}",
+  "solution": "function memoize(fn) {\n  const cache = {}\n  return function(...args) {\n    const key = JSON.stringify(args)\n    if (key in cache) return cache[key]\n    cache[key] = fn(...args)\n    return cache[key]\n  }\n}",
+  "tests": [
+    {
+      "input": []
+    }
+  ],
+  "hints": [
+    "Object mein cache store karo",
+    "JSON.stringify(args) se unique key banti hai"
+  ]
+}

@@ -1,16 +1,44 @@
 {
-  "id": "04-control-flow-if-else-switch-19",
-  "title": "Null check with if",
-  "starterCode": "const user = null;\nif (user !== null) {\n  console.log(user.name);\n} else {\n  console.log('no user');\n}",
-  "solution": "const user = null;\nif (user !== null) {\n  console.log(user.name);\n} else {\n  console.log('no user');\n}",
+  "id": "04-control-flow-01-if-else-switch-19",
+  "title": "Nested if se login status",
+  "starterCode": "// function loginStatus(username, password, isBlocked)\n// Blocked: \"Account blocked\"\n// Wrong credentials: \"Invalid credentials\"\n// Sab sahi: \"Welcome back\"\n",
+  "solution": "function loginStatus(username, password, isBlocked) {\n  if (isBlocked) return \"Account blocked\"\n  if (username !== \"admin\" || password !== \"1234\") return \"Invalid credentials\"\n  return \"Welcome back\"\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "no user"
+      "input": [
+        "admin",
+        "1234",
+        true
+      ],
+      "expected": "Account blocked"
+    },
+    {
+      "input": [
+        "wrong",
+        "1234",
+        false
+      ],
+      "expected": "Invalid credentials"
+    },
+    {
+      "input": [
+        "admin",
+        "wrong",
+        false
+      ],
+      "expected": "Invalid credentials"
+    },
+    {
+      "input": [
+        "admin",
+        "1234",
+        false
+      ],
+      "expected": "Welcome back"
     }
   ],
   "hints": [
-    "null !== null is false",
-    "else block executes"
+    "Pehle blocked status check karo",
+    "Phir credentials verify karo"
   ]
 }

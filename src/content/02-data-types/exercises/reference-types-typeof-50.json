@@ -1,16 +1,19 @@
 {
-  "id": "02-data-types-reference-types-typeof-50",
-  "title": "Reference equality in arrays",
-  "starterCode": "const a = [1, 2];\nconst b = [1, 2];\nconsole.log(a === b);",
-  "solution": "const a = [1, 2];\nconst b = [1, 2];\nconsole.log(a === b);",
+  "id": "02-data-types-02-reference-types-typeof-50",
+  "title": "Proxy construct trap",
+  "starterCode": "function Person(name) { this.name = name }\nconst ProxiedPerson = new Proxy(Person, {\n  construct(target, args) {\n    const instance = new target(...args)\n    instance.createdAt = new Date().toISOString()\n    return instance\n  }\n})\nconst p = new ProxiedPerson(\"Hariom\")\nreturn {\n  name: p.name,\n  hasCreatedAt: typeof p.createdAt === \"string\"\n}\n",
+  "solution": "function Person(name) { this.name = name }\nconst ProxiedPerson = new Proxy(Person, {\n  construct(target, args) {\n    const instance = new target(...args)\n    instance.createdAt = new Date().toISOString()\n    return instance\n  }\n})\nconst p = new ProxiedPerson(\"Hariom\")\nreturn {\n  name: p.name,\n  hasCreatedAt: typeof p.createdAt === \"string\"\n}",
   "tests": [
     {
       "input": [],
-      "expected": "false"
+      "expected": {
+        "name": "Hariom",
+        "hasCreatedAt": true
+      }
     }
   ],
   "hints": [
-    "Different array objects are not ===",
-    "Even with same contents"
+    "Proxy construct trap new operator intercept karta hai",
+    "Instance modify karke return kar sakte ho"
   ]
 }

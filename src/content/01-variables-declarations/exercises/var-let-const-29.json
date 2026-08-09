@@ -1,15 +1,15 @@
 {
   "id": "01-variables-declarations-var-let-const-29",
-  "title": "let block if",
-  "starterCode": "if (true) {\n  let x = 5\n  console.log(x)\n}\nconsole.log(typeof x)",
-  "solution": "if (true) {\n  let x = 5\n  console.log(x)\n}\nconsole.log(typeof x)",
+  "title": "Arrow function scope",
+  "starterCode": "const obj = {\n  value: 42,\n  getValue: () => this.value\n}\nreturn obj.getValue()\n",
+  "solution": "const obj = {\n  value: 42,\n  getValue: () => this.value\n}\nreturn obj.getValue()",
   "tests": [
     {
-      "input": [],
-      "expected": "5\nundefined"
+      "input": []
     }
   ],
   "hints": [
-    "let is block-scoped"
+    "Arrow function ka apna this nahi hota",
+    "Global this se value undefined"
   ]
 }

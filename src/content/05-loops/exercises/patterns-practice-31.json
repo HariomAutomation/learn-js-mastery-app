@@ -1,16 +1,23 @@
 {
-  "id": "05-loops-patterns-practice-31",
-  "title": "Nested Loop Pattern",
-  "starterCode": "for (let i = 1; i <= 4; i++) {\n  let row = '';\n  for (let j = 1; j <= i; j++) {\n    row += j;\n  }\n  console.log(row);\n}",
-  "solution": "for (let i = 1; i <= 4; i++) {\n  let row = '';\n  for (let j = 1; j <= i; j++) {\n    row += j;\n  }\n  console.log(row);\n}",
+  "id": "05-03-patterns-practice-31",
+  "title": "Array ke consecutive elements dhundho",
+  "starterCode": "function longestConsecutive(arr) {\n  // TODO: longest consecutive sequence ki length do\n  // [100,4,200,1,3,2] -> 4 (1,2,3,4)\n}",
+  "solution": "function longestConsecutive(arr) {\n  const set = new Set(arr);\n  let maxLen = 0;\n  for (const num of set) {\n    if (!set.has(num - 1)) {\n      let len = 1;\n      while (set.has(num + len)) len++;\n      maxLen = Math.max(maxLen, len);\n    }\n  }\n  return maxLen;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "1\n12\n123\n1234"
+      "input": [
+        100,
+        4,
+        200,
+        1,
+        3,
+        2
+      ],
+      "expected": 4
     }
   ],
   "hints": [
-    "Inner loop up to i",
-    "Append j"
+    "Set use karo O(1) lookup ke liye",
+    "Sequence ka start dhundho (num-1 exist nahi karta)"
   ]
 }

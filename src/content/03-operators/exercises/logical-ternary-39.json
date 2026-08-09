@@ -1,16 +1,16 @@
 {
-  "id": "03-operators-logical-ternary-39",
-  "title": "Optional chaining array out of bounds",
-  "starterCode": "const users = [];\nconst result = users?.[0]?.name;\nconsole.log(result);",
-  "solution": "const users = [];\nconst result = users?.[0]?.name;\nconsole.log(result);",
+  "id": "03-operators-02-logical-ternary-39",
+  "title": "Logical in reduce",
+  "starterCode": "// Numbers ka product nikalo (0 ho to skip karo)\nconst nums = [1, 2, 3, 0, 4, 5]\n// TODO: product without zeros\n",
+  "solution": "const nums = [1, 2, 3, 0, 4, 5]\nconst product = nums.filter(n => n !== 0).reduce((acc, n) => acc * n, 1)\nreturn product",
   "tests": [
     {
       "input": [],
-      "expected": "undefined"
+      "expected": 120
     }
   ],
   "hints": [
-    "?. safely returns undefined",
-    "users[0] is undefined"
+    "filter se zeros hatao",
+    "reduce se product nikalo"
   ]
 }

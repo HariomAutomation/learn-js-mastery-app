@@ -1,16 +1,24 @@
 {
-  "id": "05-loops-for-of-for-in-19",
-  "title": "For...In Skip Prototype",
-  "starterCode": "const obj = {a: 1, b: 2};\nfor (const key in obj) {\n  if (obj.hasOwnProperty(key)) {\n    console.log(key + ':' + obj[key]);\n  }\n}",
-  "solution": "const obj = {a: 1, b: 2};\nfor (const key in obj) {\n  if (obj.hasOwnProperty(key)) {\n    console.log(key + ':' + obj[key]);\n  }\n}",
+  "id": "05-02-for-of-for-in-19",
+  "title": "For-of se array me element count karo by category",
+  "starterCode": "function countCategories(arr, categorize) {\n  // TODO: function se category nikalo aur count karo\n}",
+  "solution": "function countCategories(arr, categorize) {\n  const counts = {};\n  for (const item of arr) {\n    const cat = categorize(item);\n    counts[cat] = (counts[cat] || 0) + 1;\n  }\n  return counts;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "a:1\nb:2"
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4
+        ],
+        null
+      ],
+      "expected": "{\"odd\":2,\"even\":2}"
     }
   ],
   "hints": [
-    "hasOwnProperty filters prototypes",
-    "Safe way to iterate"
+    "Categorize function se key nikalo",
+    "Count object me track karo"
   ]
 }

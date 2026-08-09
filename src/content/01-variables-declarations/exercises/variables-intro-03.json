@@ -1,15 +1,19 @@
 {
   "id": "01-variables-declarations-variables-intro-03",
-  "title": "Swap two variables",
-  "starterCode": "let a = 1, b = 2\n// swap a and b\nconsole.log(a, b)",
-  "solution": "let a = 1, b = 2\n[a, b] = [b, a]\nconsole.log(a, b)",
+  "title": "Swap variables bina temp ke",
+  "starterCode": "let a = 10\nlet b = 20\n// a aur b ki values swap karo (bina third variable ke)\n// Hint: array destructuring use karo\n",
+  "solution": "let a = 10\nlet b = 20\n[a, b] = [b, a]\nreturn { a, b }",
   "tests": [
     {
       "input": [],
-      "expected": "2 1"
+      "expected": {
+        "a": 20,
+        "b": 10
+      }
     }
   ],
   "hints": [
-    "Use destructuring"
+    "[a, b] = [b, a] se swap hota hai",
+    "Array destructuring ka trick hai ye"
   ]
 }

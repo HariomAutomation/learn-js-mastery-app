@@ -1,16 +1,48 @@
 {
-  "id": "04-control-flow-if-else-switch-20",
-  "title": "If with undefined check",
-  "starterCode": "const value = undefined;\nif (value !== undefined) {\n  console.log('defined');\n} else {\n  console.log('undefined');\n}",
-  "solution": "const value = undefined;\nif (value !== undefined) {\n  console.log('defined');\n} else {\n  console.log('undefined');\n}",
+  "id": "04-control-flow-01-if-else-switch-20",
+  "title": "Age group categorize karo",
+  "starterCode": "// function ageGroup(age) mein number do\n// 0-1: \"Infant\", 2-5: \"Toddler\", 6-12: \"Child\", 13-17: \"Teen\", 18-64: \"Adult\", 65+: \"Senior\"\n",
+  "solution": "function ageGroup(age) {\n  if (age <= 1) return \"Infant\"\n  else if (age <= 5) return \"Toddler\"\n  else if (age <= 12) return \"Child\"\n  else if (age <= 17) return \"Teen\"\n  else if (age <= 64) return \"Adult\"\n  else return \"Senior\"\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "undefined"
+      "input": [
+        0
+      ],
+      "expected": "Infant"
+    },
+    {
+      "input": [
+        3
+      ],
+      "expected": "Toddler"
+    },
+    {
+      "input": [
+        10
+      ],
+      "expected": "Child"
+    },
+    {
+      "input": [
+        15
+      ],
+      "expected": "Teen"
+    },
+    {
+      "input": [
+        30
+      ],
+      "expected": "Adult"
+    },
+    {
+      "input": [
+        70
+      ],
+      "expected": "Senior"
     }
   ],
   "hints": [
-    "undefined !== undefined is false",
-    "else block executes"
+    "Age <= se check karo ranges",
+    "Order ascending mein rakho"
   ]
 }

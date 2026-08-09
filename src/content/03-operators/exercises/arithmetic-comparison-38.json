@@ -1,15 +1,19 @@
 {
-  "id": "03-operators-arithmetic-comparison-38",
-  "title": "Compound subtraction (-=)",
-  "starterCode": "let x = 20;\nx -= 8;\nconsole.log(x);",
-  "solution": "let x = 20;\nx -= 8;\nconsole.log(x);",
+  "id": "03-operators-01-arithmetic-comparison-38",
+  "title": "toFixed se decimal format",
+  "starterCode": "// Price ko 2 decimal places mein format karo\nconst price = 199.9\nconst tax = 35.982\n// TODO: toFixed use karo\n",
+  "solution": "const price = 199.9\nconst tax = 35.982\nreturn {\n  formattedPrice: price.toFixed(2),\n  formattedTax: tax.toFixed(2)\n}",
   "tests": [
     {
       "input": [],
-      "expected": "12"
+      "expected": {
+        "formattedPrice": "199.90",
+        "formattedTax": "35.98"
+      }
     }
   ],
   "hints": [
-    "x -= 8 is the same as x = x - 8"
+    "toFixed(n) n decimal places deta hai",
+    "String return hota hai, number nahi"
   ]
 }

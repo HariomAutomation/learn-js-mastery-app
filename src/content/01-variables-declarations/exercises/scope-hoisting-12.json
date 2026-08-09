@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-scope-hoisting-12",
-  "title": "Function block scope",
-  "starterCode": "if (true) {\n  function test() { return 10 }\n}\ntry {\n  console.log(test())\n} catch(e) {\n  console.log(\"error\")\n}",
-  "solution": "if (true) {\n  function test() { return 10 }\n}\ntry {\n  console.log(test())\n} catch(e) {\n  console.log(\"error\")\n}",
+  "title": "Hoisting order: function then var",
+  "starterCode": "var x = \"var\"\nfunction x() { return \"function\" }\nreturn typeof x\n",
+  "solution": "var x = \"var\"\nfunction x() { return \"function\" }\nreturn typeof x",
   "tests": [
     {
       "input": [],
-      "expected": "error"
+      "expected": "string"
     }
   ],
   "hints": [
-    "Function hoisting varies by environment"
+    "Function declaration hoisted first, then var assignment overwrites",
+    "x becomes string \"var\""
   ]
 }

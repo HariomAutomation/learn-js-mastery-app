@@ -1,16 +1,22 @@
 {
-  "id": "05-loops-for-while-28",
-  "title": "Reverse Number",
-  "starterCode": "let num = 123;\nlet rev = 0;\nwhile (num > 0) {\n  rev = rev * 10 + num % 10;\n  num = Math.floor(num / 10);\n}\nconsole.log(rev);",
-  "solution": "let num = 123;\nlet rev = 0;\nwhile (num > 0) {\n  rev = rev * 10 + num % 10;\n  num = Math.floor(num / 10);\n}\nconsole.log(rev);",
+  "id": "05-01-for-while-28",
+  "title": "For loop se array ke sabse bade element ka index dhundho",
+  "starterCode": "function maxIndex(arr) {\n  // TODO: sabse bade element ka pehla index do\n}",
+  "solution": "function maxIndex(arr) {\n  if (arr.length === 0) return -1;\n  let maxIdx = 0;\n  for (let i = 1; i < arr.length; i++) {\n    if (arr[i] > arr[maxIdx]) maxIdx = i;\n  }\n  return maxIdx;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "321"
+      "input": [
+        1,
+        5,
+        3,
+        5,
+        2
+      ],
+      "expected": 1
     }
   ],
   "hints": [
-    "Multiply rev by 10",
-    "Add last digit"
+    "Pehle index 0 maano max ka",
+    "Har element ko current max se compare karo"
   ]
 }

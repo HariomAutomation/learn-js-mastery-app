@@ -1,15 +1,24 @@
 {
   "id": "01-variables-declarations-variables-intro-35",
-  "title": "Promise.allSettled",
-  "starterCode": "Promise.allSettled([Promise.resolve(\"ok\"), Promise.reject(\"err\")]).then(r => console.log(r.length))",
-  "solution": "Promise.allSettled([Promise.resolve(\"ok\"), Promise.reject(\"err\")]).then(r => console.log(r.length))",
+  "title": "Camel case converter",
+  "starterCode": "// String ko camel case mein convert karo\n// \"hello world\" = \"helloWorld\"\n// \"foo bar baz\" = \"fooBarBaz\"\nfunction camelCase(str) {\n  // TODO\n}",
+  "solution": "function camelCase(str) {\n  return str.toLowerCase().split(\" \").map((word, i) =>\n    i === 0 ? word : word[0].toUpperCase() + word.slice(1)\n  ).join(\"\")\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "2"
+      "input": [
+        "hello world"
+      ],
+      "expected": "helloWorld"
+    },
+    {
+      "input": [
+        "foo bar baz"
+      ],
+      "expected": "fooBarBaz"
     }
   ],
   "hints": [
-    "allSettled never rejects"
+    "split se words alag karo",
+    "Pehla word lowercase, baaki ke first letter uppercase"
   ]
 }

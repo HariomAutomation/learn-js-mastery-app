@@ -1,16 +1,20 @@
 {
-  "id": "02-data-types-reference-types-typeof-28",
-  "title": "typeof undefined",
-  "starterCode": "let x;\nconsole.log();",
-  "solution": "let x;\nconsole.log(typeof x);",
+  "id": "02-data-types-02-reference-types-typeof-28",
+  "title": "Destructuring with rename",
+  "starterCode": "const user = { name: \"Hariom\", age: 25, city: \"Jaipur\" }\nconst { name: userName, age: userAge, country = \"India\" } = user\nreturn { userName, userAge, country }\n",
+  "solution": "const user = { name: \"Hariom\", age: 25, city: \"Jaipur\" }\nconst { name: userName, age: userAge, country = \"India\" } = user\nreturn { userName, userAge, country }",
   "tests": [
     {
       "input": [],
-      "expected": "undefined"
+      "expected": {
+        "userName": "Hariom",
+        "userAge": 25,
+        "country": "India"
+      }
     }
   ],
   "hints": [
-    "typeof undefined returns 'undefined'",
-    "This is the correct behavior"
+    "oldName: newName se rename hota hai",
+    "Default value = sign se set hoti hai"
   ]
 }

@@ -1,16 +1,18 @@
 {
-  "id": "05-loops-for-of-for-in-03",
-  "title": "For...Of Maps",
-  "starterCode": "const map = new Map([['a', 1], ['b', 2]]);\nfor (const [key, value] of map) {\n  console.log(key + ': ' + value);\n}",
-  "solution": "const map = new Map([['a', 1], ['b', 2]]);\nfor (const [key, value] of map) {\n  console.log(key + ': ' + value);\n}",
+  "id": "05-02-for-of-for-in-03",
+  "title": "For-of se string ke har character pe check karo",
+  "starterCode": "function hasAllVowels(str) {\n  // TODO: string me sab vowels hain ya nahi check karo\n}",
+  "solution": "function hasAllVowels(str) {\n  const vowels = new Set(\"aeiou\");\n  const found = new Set();\n  for (const char of str.toLowerCase()) {\n    if (vowels.has(char)) found.add(char);\n  }\n  return found.size === 5;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "a: 1\nb: 2"
+      "input": [
+        "education"
+      ],
+      "expected": "true"
     }
   ],
   "hints": [
-    "Map entries are [key, value]",
-    "Destructure in loop"
+    "Set use karo unique vowels track karne ke liye",
+    "5 vowels mil gayi toh true"
   ]
 }

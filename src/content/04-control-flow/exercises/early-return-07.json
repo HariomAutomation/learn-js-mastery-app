@@ -1,16 +1,35 @@
 {
-  "id": "04-control-flow-early-return-07",
-  "title": "Multiple exit points",
-  "starterCode": "function getRole(user) {\n  if (!user) return 'anonymous';\n  if (user.isAdmin) return 'admin';\n  if (user.isMod) return 'moderator';\n  return 'user';\n}\nconsole.log(getRole({ isAdmin: true }));",
-  "solution": "function getRole(user) {\n  if (!user) return 'anonymous';\n  if (user.isAdmin) return 'admin';\n  if (user.isMod) return 'moderator';\n  return 'user';\n}\nconsole.log(getRole({ isAdmin: true }));",
+  "id": "04-control-flow-02-early-return-07",
+  "title": "Early return for object property",
+  "starterCode": "// function getPrice(product) mein object do\n// Agar product ya product.price nahi: 0\n// Warna product.price return karo\n",
+  "solution": "function getPrice(product) {\n  if (!product || typeof product.price !== \"number\") return 0\n  return product.price\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "admin"
+      "input": [
+        {
+          "name": "Item",
+          "price": 100
+        }
+      ],
+      "expected": 100
+    },
+    {
+      "input": [
+        {
+          "name": "Item"
+        }
+      ],
+      "expected": 0
+    },
+    {
+      "input": [
+        null
+      ],
+      "expected": 0
     }
   ],
   "hints": [
-    "user is truthy",
-    "isAdmin is true, returns 'admin'"
+    "Optional chaining jaisa guard clause use karo",
+    "typeof se number type verify karo"
   ]
 }

@@ -1,16 +1,36 @@
 {
-  "id": "04-control-flow-early-return-04",
-  "title": "Guard clause returns 0",
-  "starterCode": "function getDiscount(price, isVIP) {\n  if (price <= 0) return 0;\n  return isVIP ? price * 0.2 : price * 0.1;\n}\nconsole.log(getDiscount(-50, true));",
-  "solution": "function getDiscount(price, isVIP) {\n  if (price <= 0) return 0;\n  return isVIP ? price * 0.2 : price * 0.1;\n}\nconsole.log(getDiscount(-50, true));",
+  "id": "04-control-flow-02-early-return-04",
+  "title": "Guard clause for string processing",
+  "starterCode": "// function capitalize(str) mein string do\n// Agar string nahi hai ya empty: \"\"\n// Warna pehla character uppercase, baaki lowercase\n",
+  "solution": "function capitalize(str) {\n  if (typeof str !== \"string\" || str.length === 0) return \"\"\n  return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "0"
+      "input": [
+        "hello"
+      ],
+      "expected": "Hello"
+    },
+    {
+      "input": [
+        "HELLO"
+      ],
+      "expected": "Hello"
+    },
+    {
+      "input": [
+        ""
+      ],
+      "expected": ""
+    },
+    {
+      "input": [
+        null
+      ],
+      "expected": ""
     }
   ],
   "hints": [
-    "price is -50, which is <= 0",
-    "Guard clause returns 0"
+    "charAt(0) se pehla character milta hai",
+    "slice(1) se baaki string milti hai"
   ]
 }

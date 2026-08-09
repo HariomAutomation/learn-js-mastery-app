@@ -1,16 +1,26 @@
 {
-  "id": "02-data-types-primitive-types-24",
-  "title": "Explicitly assign null",
-  "starterCode": "const val = ;\nconsole.log(val);",
-  "solution": "const val = null;\nconsole.log(val);",
+  "id": "02-data-types-01-primitive-types-24",
+  "title": "Coerce to boolean",
+  "starterCode": "const values = [0, 1, \"\", \"hello\", null, undefined, NaN, [], {}]\nreturn values.map(v => !!v)\n",
+  "solution": "const values = [0, 1, \"\", \"hello\", null, undefined, NaN, [], {}]\nreturn values.map(v => !!v)",
   "tests": [
     {
       "input": [],
-      "expected": "null"
+      "expected": [
+        false,
+        true,
+        false,
+        true,
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
     }
   ],
   "hints": [
-    "null represents intentional absence",
-    "It's its own type of value"
+    "!!value se boolean milta hai",
+    "Empty values false, objects/arrays true"
   ]
 }

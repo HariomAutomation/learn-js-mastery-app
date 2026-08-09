@@ -1,16 +1,22 @@
 {
-  "id": "05-loops-for-of-for-in-45",
-  "title": "For...Of Generator",
-  "starterCode": "function* range(start, end) {\n  for (let i = start; i <= end; i++) {\n    yield i;\n  }\n}\nfor (const num of range(1, 5)) {\n  console.log(num);\n}",
-  "solution": "function* range(start, end) {\n  for (let i = start; i <= end; i++) {\n    yield i;\n  }\n}\nfor (const num of range(1, 5)) {\n  console.log(num);\n}",
+  "id": "05-02-for-of-for-in-45",
+  "title": "For-of se array ke elements ko Promise me wrap karo",
+  "starterCode": "async function wrapPromises(arr) {\n  // TODO: har element ko Promise.resolve me wrap karo\n}",
+  "solution": "async function wrapPromises(arr) {\n  const promises = [];\n  for (const item of arr) {\n    promises.push(Promise.resolve(item));\n  }\n  return Promise.all(promises);\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "1\n2\n3\n4\n5"
+      "input": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": "1,2,3"
     }
   ],
   "hints": [
-    "Generator yields values",
-    "for...of works with generators"
+    "Promise.resolve se wrap karo",
+    "Promise.all se sab resolve karo"
   ]
 }

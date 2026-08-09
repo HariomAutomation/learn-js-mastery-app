@@ -1,16 +1,22 @@
 {
-  "id": "02-data-types-primitive-types-40",
-  "title": "Pad a string to length",
-  "starterCode": "const str = \"5\";\nconsole.log();",
-  "solution": "const str = \"5\";\nconsole.log(str.padStart(3, \"0\"));",
+  "id": "02-data-types-01-primitive-types-40",
+  "title": "Primitive wrapper objects",
+  "starterCode": "const str = \"hello\"\nreturn {\n  upper: str.toUpperCase(),\n  includes: str.includes(\"ell\"),\n  slice: str.slice(1, 4),\n  startsWith: str.startsWith(\"he\"),\n  endsWith: str.endsWith(\"lo\")\n}\n",
+  "solution": "const str = \"hello\"\nreturn {\n  upper: str.toUpperCase(),\n  includes: str.includes(\"ell\"),\n  slice: str.slice(1, 4),\n  startsWith: str.startsWith(\"he\"),\n  endsWith: str.endsWith(\"lo\")\n}",
   "tests": [
     {
       "input": [],
-      "expected": "005"
+      "expected": {
+        "upper": "HELLO",
+        "includes": true,
+        "slice": "ell",
+        "startsWith": true,
+        "endsWith": true
+      }
     }
   ],
   "hints": [
-    "padStart adds characters to the beginning",
-    "Second argument is the padding character"
+    "Primitive strings temporary wrapper object create karte hain",
+    "Methods call hote hain wrapper pe, phir wrapper discard hota hai"
   ]
 }

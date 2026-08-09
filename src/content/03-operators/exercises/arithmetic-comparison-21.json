@@ -1,16 +1,16 @@
 {
-  "id": "03-operators-arithmetic-comparison-21",
-  "title": "Not equal (!=)",
-  "starterCode": "const result = 5 != 3;\nconsole.log(result);",
-  "solution": "const result = 5 != 3;\nconsole.log(result);",
+  "id": "03-operators-01-arithmetic-comparison-21",
+  "title": "Greater or equal comparison",
+  "starterCode": "// Check karo: score passing marks ke barabar ya usse zyada hai\nconst score = 40\nconst passingMarks = 40\n// TODO: >= operator use karo\n",
+  "solution": "const score = 40\nconst passingMarks = 40\nreturn score >= passingMarks",
   "tests": [
     {
       "input": [],
-      "expected": "true"
+      "expected": true
     }
   ],
   "hints": [
-    "!= checks inequality",
-    "5 is not equal to 3"
+    ">= greater than or equal check karta hai",
+    "40 >= 40 = true"
   ]
 }

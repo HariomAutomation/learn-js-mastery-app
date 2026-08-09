@@ -1,16 +1,26 @@
 {
-  "id": "05-loops-patterns-practice-32",
-  "title": "Sum Array Loop",
-  "starterCode": "const arr = [10, 20, 30, 40, 50];\nlet total = 0;\nfor (let i = 0; i < arr.length; i++) {\n  total += arr[i];\n}\nconsole.log(total);",
-  "solution": "const arr = [10, 20, 30, 40, 50];\nlet total = 0;\nfor (let i = 0; i < arr.length; i++) {\n  total += arr[i];\n}\nconsole.log(total);",
+  "id": "05-03-patterns-practice-32",
+  "title": "Array ko k groups me divide karo equally",
+  "starterCode": "function divideInGroups(arr, k) {\n  // TODO: array ko k equal(ish) groups me todo\n}",
+  "solution": "function divideInGroups(arr, k) {\n  const groups = Array.from({ length: k }, () => []);\n  for (let i = 0; i < arr.length; i++) {\n    groups[i % k].push(arr[i]);\n  }\n  return groups;\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "150"
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        3
+      ],
+      "expected": "1,4,2,5,3,6"
     }
   ],
   "hints": [
-    "Initialize total",
-    "Add each element"
+    "Modulo se round-robin assignment karo",
+    "Har element ko uske group me push karo"
   ]
 }

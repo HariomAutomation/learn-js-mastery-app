@@ -1,16 +1,20 @@
 {
-  "id": "02-data-types-primitive-types-27",
-  "title": "Check type of a boolean with typeof",
-  "starterCode": "const flag = true;\nconsole.log();",
-  "solution": "const flag = true;\nconsole.log(typeof flag);",
+  "id": "02-data-types-01-primitive-types-27",
+  "title": "WeakMap basic usage",
+  "starterCode": "const weakMap = new WeakMap()\nconst obj1 = { name: \"user1\" }\nconst obj2 = { name: \"user2\" }\nweakMap.set(obj1, \"data1\")\nweakMap.set(obj2, \"data2\")\nreturn {\n  data1: weakMap.get(obj1),\n  data2: weakMap.get(obj2),\n  hasObj1: weakMap.has(obj1)\n}\n",
+  "solution": "const weakMap = new WeakMap()\nconst obj1 = { name: \"user1\" }\nconst obj2 = { name: \"user2\" }\nweakMap.set(obj1, \"data1\")\nweakMap.set(obj2, \"data2\")\nreturn {\n  data1: weakMap.get(obj1),\n  data2: weakMap.get(obj2),\n  hasObj1: weakMap.has(obj1)\n}",
   "tests": [
     {
       "input": [],
-      "expected": "boolean"
+      "expected": {
+        "data1": "data1",
+        "data2": "data2",
+        "hasObj1": true
+      }
     }
   ],
   "hints": [
-    "typeof returns the type as a string",
-    "Booleans return 'boolean'"
+    "WeakMap mein sirf objects keys ho sakte hain",
+    "set(), get(), has() methods hain"
   ]
 }

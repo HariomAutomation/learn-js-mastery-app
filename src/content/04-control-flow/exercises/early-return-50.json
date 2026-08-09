@@ -1,17 +1,52 @@
 {
-  "id": "04-control-flow-early-return-50",
-  "title": "Early return with array method",
-  "starterCode": "function sumPositive(arr) {\n  if (!Array.isArray(arr)) return 0;\n  return arr.filter(n => n > 0).reduce((sum, n) => sum + n, 0);\n}\nconsole.log(sumPositive([-1, 2, -3, 4]));",
-  "solution": "function sumPositive(arr) {\n  if (!Array.isArray(arr)) return 0;\n  return arr.filter(n => n > 0).reduce((sum, n) => sum + n, 0);\n}\nconsole.log(sumPositive([-1, 2, -3, 4]));",
+  "id": "04-control-flow-02-early-return-50",
+  "title": "Guard for complex data processing",
+  "starterCode": "// function processData(data) mein object do\n// Agar data nahi: null\n// Agar data.users nahi: null\n// Agar data.users array nahi: null\n// Warna users ki names array return karo\n",
+  "solution": "function processData(data) {\n  if (!data) return null\n  if (!data.users) return null\n  if (!Array.isArray(data.users)) return null\n  return data.users.map(u => u.name).filter(Boolean)\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "6"
+      "input": [
+        {
+          "users": [
+            {
+              "name": "Hariom"
+            },
+            {
+              "name": "Amit"
+            }
+          ]
+        }
+      ],
+      "expected": [
+        "Hariom",
+        "Amit"
+      ]
+    },
+    {
+      "input": [
+        {
+          "users": null
+        }
+      ],
+      "expected": null
+    },
+    {
+      "input": [
+        null
+      ],
+      "expected": null
+    },
+    {
+      "input": [
+        {
+          "users": "not array"
+        }
+      ],
+      "expected": null
     }
   ],
   "hints": [
-    "arr is an array",
-    "filter keeps positive numbers",
-    "reduce sums them"
+    "Har level pe null/undefined check karo",
+    "Array.isArray() se type verify karo"
   ]
 }

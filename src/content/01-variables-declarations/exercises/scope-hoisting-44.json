@@ -1,0 +1,16 @@
+{
+  "id": "01-variables-declarations-scope-hoisting-44",
+  "title": "Async/await scope",
+  "starterCode": "async function getData() {\n  const data = await Promise.resolve(\"hello\")\n  return data\n}\nreturn await getData()\n",
+  "solution": "async function getData() {\n  const data = await Promise.resolve(\"hello\")\n  return data\n}\nreturn await getData()",
+  "tests": [
+    {
+      "input": [],
+      "expected": "hello"
+    }
+  ],
+  "hints": [
+    "async function returns a Promise",
+    "await unwraps the Promise value"
+  ]
+}

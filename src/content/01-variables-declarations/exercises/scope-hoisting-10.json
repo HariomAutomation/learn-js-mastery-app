@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-scope-hoisting-10",
-  "title": "Nested scope",
-  "starterCode": "function a() {\n  function b() {\n    function c() {\n      console.log(\"deep\")\n    }\n    c()\n  }\n  b()\n}\na()",
-  "solution": "function a() {\n  function b() {\n    function c() {\n      console.log(\"deep\")\n    }\n    c()\n  }\n  b()\n}\na()",
+  "title": "Scope chain: inner sees outer",
+  "starterCode": "const x = \"global\"\nfunction outer() {\n  const y = \"outer\"\n  function inner() {\n    return x + \" \" + y\n  }\n  return inner()\n}\nreturn outer()\n",
+  "solution": "const x = \"global\"\nfunction outer() {\n  const y = \"outer\"\n  function inner() {\n    return x + \" \" + y\n  }\n  return inner()\n}\nreturn outer()",
   "tests": [
     {
       "input": [],
-      "expected": "deep"
+      "expected": "global outer"
     }
   ],
   "hints": [
-    "Functions can nest arbitrarily"
+    "Inner function can access all outer scopes",
+    "Scope chain goes from inner to global"
   ]
 }

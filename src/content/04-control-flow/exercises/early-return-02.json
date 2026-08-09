@@ -1,16 +1,34 @@
 {
-  "id": "04-control-flow-early-return-02",
-  "title": "Early return on divide by zero",
-  "starterCode": "function divide(a, b) {\n  if (b === 0) return 'Cannot divide by zero';\n  return a / b;\n}\nconsole.log(divide(10, 0));",
-  "solution": "function divide(a, b) {\n  if (b === 0) return 'Cannot divide by zero';\n  return a / b;\n}\nconsole.log(divide(10, 0));",
+  "id": "04-control-flow-02-early-return-02",
+  "title": "Guard clause for array length",
+  "starterCode": "// function firstElement(arr) mein array do\n// Agar array empty ya invalid hai: null\n// Warna pehla element return karo\n",
+  "solution": "function firstElement(arr) {\n  if (!Array.isArray(arr) || arr.length === 0) return null\n  return arr[0]\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "Cannot divide by zero"
+      "input": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "input": [
+        []
+      ],
+      "expected": null
+    },
+    {
+      "input": [
+        null
+      ],
+      "expected": null
     }
   ],
   "hints": [
-    "b is 0, guard clause triggers",
-    "Returns early before division"
+    "Array.isArray() pehle check karo",
+    "Length zero hai to null return karo"
   ]
 }

@@ -1,15 +1,16 @@
 {
   "id": "01-variables-declarations-var-let-const-25",
-  "title": "var in function param",
-  "starterCode": "function test(x) {\n  var x = 10\n  console.log(x)\n}\ntest(5)",
-  "solution": "function test(x) {\n  var x = 10\n  console.log(x)\n}\ntest(5)",
+  "title": "Hoisting order: function > var",
+  "starterCode": "console.log(typeof a)\nvar a = 1\nfunction a() { return 2 }\nconsole.log(typeof a)\nreturn typeof a\n",
+  "solution": "console.log(typeof a)\nvar a = 1\nfunction a() { return 2 }\nconsole.log(typeof a)\nreturn typeof a",
   "tests": [
     {
       "input": [],
-      "expected": "10"
+      "expected": "number"
     }
   ],
   "hints": [
-    "var shadows parameter"
+    "Function declaration hoisted first, then var",
+    "But var assignment overrides function"
   ]
 }

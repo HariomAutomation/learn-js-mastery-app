@@ -1,16 +1,18 @@
 {
-  "id": "05-loops-for-of-for-in-15",
-  "title": "For...Of With Arguments",
-  "starterCode": "function sum() {\n  let total = 0;\n  for (const num of arguments) {\n    total += num;\n  }\n  return total;\n}\nconsole.log(sum(1, 2, 3));",
-  "solution": "function sum() {\n  let total = 0;\n  for (const num of arguments) {\n    total += num;\n  }\n  return total;\n}\nconsole.log(sum(1, 2, 3));",
+  "id": "05-02-for-of-for-in-15",
+  "title": "For-of se string ke words reverse karo",
+  "starterCode": "function reverseWords(str) {\n  // TODO: for-of use karke words ko reverse karo\n}",
+  "solution": "function reverseWords(str) {\n  return str.split(\" \").reverse().join(\" \");\n}",
   "tests": [
     {
-      "input": [],
-      "expected": "6"
+      "input": [
+        "hello world"
+      ],
+      "expected": "world hello"
     }
   ],
   "hints": [
-    "arguments is array-like",
-    "Use for...of on it"
+    "Split se words array banao",
+    "Reverse karo aur join karo"
   ]
 }
