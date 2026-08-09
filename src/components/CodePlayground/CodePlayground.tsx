@@ -177,7 +177,19 @@ export function CodePlayground({
   exerciseId,
   theme = "dark",
 }: CodePlaygroundProps) {
-  const [code, setCode] = useState(starterCode)
+  const stripComments = (s: string) =>
+    s
+      .split("\n")
+      .filter((line) => !line.trim().startsWith("//"))
+      .join("\n")
+      .trim()
+
+  const revealsSolution =
+    solution.length > 0 &&
+    stripComments(starterCode).length > 0 &&
+    stripComments(starterCode) === stripComments(solution)
+
+  const [code, setCode] = useState(revealsSolution ? "" : starterCode)
   const [showHints, setShowHints] = useState(false)
   const [showSolution, setShowSolution] = useState(false)
   const [consoleHistory, setConsoleHistory] = useState<ConsoleEntry[]>([])
@@ -192,13 +204,13 @@ export function CodePlayground({
   const isCompleted = exerciseId ? completedExercises.includes(exerciseId) : false
 
   useEffect(() => {
-    setCode(starterCode)
+    setCode(revealsSolution ? "" : starterCode)
     setConsoleHistory([])
     setExecutionTime(null)
     setShowSolution(false)
     setShowHints(false)
     setShowConsole(false)
-  }, [starterCode])
+  }, [starterCode, revealsSolution])
 
   const addConsoleEntry = useCallback((text: string, type: ConsoleEntry["type"] = "log") => {
     consoleIdRef.current++
@@ -249,11 +261,11 @@ export function CodePlayground({
   }, [code, addConsoleEntry, tests, exerciseId, isCompleted, completeExercise])
 
   const resetCode = useCallback(() => {
-    setCode(starterCode)
+    setCode(revealsSolution ? "" : starterCode)
     setConsoleHistory([])
     setExecutionTime(null)
     setShowSolution(false)
-  }, [starterCode])
+  }, [starterCode, revealsSolution])
 
   useEffect(() => {
     function handleKeyDown(e: KeyboardEvent) {
