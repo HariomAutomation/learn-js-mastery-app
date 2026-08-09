@@ -316,7 +316,7 @@ export function CodePlayground({
     function handleKeyDown(e: KeyboardEvent) {
       if ((e.ctrlKey || e.metaKey) && e.key === "Enter") {
         e.preventDefault()
-        if (e.shiftKey) {
+        if (tests.length > 0) {
           runTests()
         } else {
           runCode()
@@ -325,7 +325,7 @@ export function CodePlayground({
     }
     window.addEventListener("keydown", handleKeyDown)
     return () => window.removeEventListener("keydown", handleKeyDown)
-  }, [runCode, runTests])
+  }, [runCode, runTests, tests.length])
 
   const passedCount = testResults?.filter((t) => t.passed).length ?? 0
   const allPassed = testResults !== null && passedCount === testResults.length && testResults.length > 0
@@ -378,21 +378,11 @@ export function CodePlayground({
         <span className="playground-editor-label">Your Code</span>
         <div className="playground-shortcuts">
           <kbd>Ctrl+Enter</kbd> Run
-          <kbd>Ctrl+Shift+Enter</kbd> Tests
         </div>
         <div className="playground-actions">
-          {tests.length > 0 && (
-            <button
-              className="btn btn-success"
-              onClick={runTests}
-              disabled={isRunning || !code.trim()}
-            >
-              {isRunning ? "⏳ Running..." : "▶ Run Tests"}
-            </button>
-          )}
           <button
             className="btn btn-primary"
-            onClick={runCode}
+            onClick={() => (tests.length > 0 ? runTests() : runCode())}
             disabled={isRunning || !code.trim()}
           >
             {isRunning ? "⏳ Running..." : "▶ Run"}
