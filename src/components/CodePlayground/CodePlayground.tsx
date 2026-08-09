@@ -20,14 +20,6 @@ interface CodePlaygroundProps {
   theme?: "dark" | "light"
 }
 
-interface TestResult {
-  index: number
-  input: string
-  expected: string
-  actual: string
-  passed: boolean
-}
-
 interface ConsoleEntry {
   id: number
   text: string
@@ -186,7 +178,6 @@ export function CodePlayground({
   theme = "dark",
 }: CodePlaygroundProps) {
   const [code, setCode] = useState(starterCode)
-  const [testResults, setTestResults] = useState<TestResult[] | null>(null)
   const [showHints, setShowHints] = useState(false)
   const [showSolution, setShowSolution] = useState(false)
   const [consoleHistory, setConsoleHistory] = useState<ConsoleEntry[]>([])
@@ -202,7 +193,6 @@ export function CodePlayground({
 
   useEffect(() => {
     setCode(starterCode)
-    setTestResults(null)
     setConsoleHistory([])
     setExecutionTime(null)
     setShowSolution(false)
@@ -219,7 +209,7 @@ export function CodePlayground({
     setConsoleHistory([])
   }, [])
 
-  const runCode = useCallback(async () => {
+  const run = useCallback(async () => {
     if (!code.trim()) return
     setIsRunning(true)
     setConsoleHistory([])
@@ -243,70 +233,23 @@ export function CodePlayground({
       addConsoleEntry("=> " + resultStr, "result")
     }
 
-    setIsRunning(false)
-  }, [code, addConsoleEntry])
-
-  const runTests = useCallback(async () => {
-    if (tests.length === 0 || !code.trim()) return
-    setIsRunning(true)
-    setConsoleHistory([])
-    setShowConsole(true)
-
-    const startTime = performance.now()
-    const results: TestResult[] = []
-
-    for (let i = 0; i < tests.length; i++) {
-      const test = tests[i]
-      try {
-        const executionResult = await executeCode(code)
-
-        if (executionResult.error) {
-          results.push({
-            index: i,
-            input: "N/A",
-            expected: String(test.expected),
-            actual: `Error: ${executionResult.error}`,
-            passed: false,
-          })
-        } else {
-          const actualOutput = executionResult.logs.join("\n")
-          const expectedStr = String(test.expected)
-          const passed = normalizeOutput(actualOutput) === normalizeOutput(expectedStr)
-
-          results.push({
-            index: i,
-            input: "N/A",
-            expected: expectedStr,
-            actual: actualOutput || "No output",
-            passed,
-          })
-        }
-      } catch (err) {
-        results.push({
-          index: i,
-          input: "N/A",
-          expected: String(test.expected),
-          actual: `Error: ${String(err)}`,
-          passed: false,
-        })
+    if (!result.error && tests.length > 0) {
+      const actualOutput = normalizeOutput(result.logs.join("\n"))
+      const allPassed = tests.every(
+        (test) => actualOutput === normalizeOutput(String(test.expected))
+      )
+      if (allPassed && exerciseId && !isCompleted) {
+        completeExercise(exerciseId)
+        setShowXPNotification(true)
+        setTimeout(() => setShowXPNotification(false), 3000)
       }
     }
 
-    const endTime = performance.now()
-    setExecutionTime(Math.round(endTime - startTime))
-    setTestResults(results)
     setIsRunning(false)
-
-    const passed = results.filter((r) => r.passed).length
-    addConsoleEntry(
-      `Tests: ${passed}/${results.length} passed`,
-      passed === results.length ? "result" : "error"
-    )
-  }, [tests, code, addConsoleEntry])
+  }, [code, addConsoleEntry, tests, exerciseId, isCompleted, completeExercise])
 
   const resetCode = useCallback(() => {
     setCode(starterCode)
-    setTestResults(null)
     setConsoleHistory([])
     setExecutionTime(null)
     setShowSolution(false)
@@ -316,28 +259,12 @@ export function CodePlayground({
     function handleKeyDown(e: KeyboardEvent) {
       if ((e.ctrlKey || e.metaKey) && e.key === "Enter") {
         e.preventDefault()
-        if (tests.length > 0) {
-          runTests()
-        } else {
-          runCode()
-        }
+        run()
       }
     }
     window.addEventListener("keydown", handleKeyDown)
     return () => window.removeEventListener("keydown", handleKeyDown)
-  }, [runCode, runTests, tests.length])
-
-  const passedCount = testResults?.filter((t) => t.passed).length ?? 0
-  const allPassed = testResults !== null && passedCount === testResults.length && testResults.length > 0
-
-  useEffect(() => {
-    if (allPassed && exerciseId && !isCompleted) {
-      completeExercise(exerciseId)
-      setShowXPNotification(true)
-      const timer = setTimeout(() => setShowXPNotification(false), 3000)
-      return () => clearTimeout(timer)
-    }
-  }, [allPassed, exerciseId, isCompleted, completeExercise])
+  }, [run])
 
   const taskInstructions = starterCode
     .split("\n")
@@ -382,7 +309,7 @@ export function CodePlayground({
         <div className="playground-actions">
           <button
             className="btn btn-primary"
-            onClick={() => (tests.length > 0 ? runTests() : runCode())}
+            onClick={run}
             disabled={isRunning || !code.trim()}
           >
             {isRunning ? "⏳ Running..." : "▶ Run"}
@@ -410,42 +337,6 @@ export function CodePlayground({
           }}
         />
       </div>
-
-      {testResults && (
-        <div className={`test-results ${allPassed ? "all-pass" : ""}`}>
-          <div className="test-summary">
-            <span className="test-score">
-              {passedCount}/{testResults.length} tests passed
-            </span>
-            {allPassed && (
-              <span className="test-win">All tests passed! Concept clear hai!</span>
-            )}
-            {!allPassed && (
-              <span className="test-hint-text">
-                Kuch tests fail — hints dekho ya try karte raho!
-              </span>
-            )}
-          </div>
-          {testResults.map((tr) => (
-            <div key={tr.index} className={`test-case ${tr.passed ? "passed" : "failed"}`}>
-              <div className="test-case-head">
-                <span className="test-case-icon">{tr.passed ? "✓" : "✗"}</span>
-                <span className="test-case-name">Test {tr.index + 1}</span>
-              </div>
-              <div className="test-case-body">
-                <div className="test-line">
-                  <span className="test-label">Expected</span>
-                  <code>{tr.expected}</code>
-                </div>
-                <div className="test-line">
-                  <span className="test-label">Got</span>
-                  <code className={tr.passed ? "ok" : "bad"}>{tr.actual}</code>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
 
       {consoleHistory.length > 0 && (
         <div className="console-section">
