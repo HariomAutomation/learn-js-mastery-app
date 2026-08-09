@@ -39,6 +39,19 @@ function normalizeOutput(output: string): string {
     .replace(/\s+$/gm, "")
 }
 
+function formatValue(value: unknown): string {
+  if (value === undefined) return "undefined"
+  if (typeof value === "function") return String(value)
+  if (typeof value === "object" && value !== null) {
+    try {
+      return JSON.stringify(value)
+    } catch {
+      return String(value)
+    }
+  }
+  return String(value)
+}
+
 const WORKER_TIMEOUT_MS = 8000
 
 const WORKER_CODE = `
@@ -222,7 +235,6 @@ export function CodePlayground({
   }, [])
 
   const run = useCallback(async () => {
-    if (!code.trim()) return
     setIsRunning(true)
     setConsoleHistory([])
     setShowConsole(true)
@@ -238,17 +250,16 @@ export function CodePlayground({
     if (result.error) {
       addConsoleEntry(result.error, "error")
     } else if (result.result !== undefined) {
-      const resultStr =
-        typeof result.result === "object" && result.result !== null
-          ? JSON.stringify(result.result, null, 2)
-          : String(result.result)
-      addConsoleEntry("=> " + resultStr, "result")
+      addConsoleEntry("=> " + formatValue(result.result), "result")
+    } else {
+      addConsoleEntry("✔ Code ran successfully — no output", "log")
     }
 
     if (!result.error && tests.length > 0) {
-      const actualOutput = normalizeOutput(result.logs.join("\n"))
-      const allPassed = tests.every(
-        (test) => actualOutput === normalizeOutput(String(test.expected))
+      const candidates = result.logs.length > 0 ? [normalizeOutput(result.logs.join("\n"))] : []
+      candidates.push(normalizeOutput(formatValue(result.result)))
+      const allPassed = tests.every((test) =>
+        candidates.includes(normalizeOutput(formatValue(test.expected)))
       )
       if (allPassed && exerciseId && !isCompleted) {
         completeExercise(exerciseId)
@@ -322,7 +333,7 @@ export function CodePlayground({
           <button
             className="btn btn-primary"
             onClick={run}
-            disabled={isRunning || !code.trim()}
+            disabled={isRunning}
           >
             {isRunning ? "⏳ Running..." : "▶ Run"}
           </button>
