@@ -9,7 +9,7 @@ export default defineConfig({
       "@": path.resolve(__dirname, "src"),
     },
   },
-  base: "./",
+  base: "/learn-js-mastery-app/",
   build: {
     chunkSizeWarningLimit: 5000,
   },
